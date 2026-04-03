@@ -28,7 +28,7 @@ export default function GuideServiceDetailScreen() {
   const { data: service, isLoading } = useQuery({
     queryKey: ["guide-service", id],
     queryFn: async () => {
-      const res = await api.get(`/guiding/services/${id}/`);
+      const res = await api.get(`/guide-services/${id}/`);
       return res.data;
     },
   });

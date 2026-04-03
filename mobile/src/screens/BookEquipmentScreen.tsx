@@ -26,18 +26,17 @@ export default function BookEquipmentScreen() {
   const { data: listing, isLoading } = useQuery({
     queryKey: ["listing", id],
     queryFn: async () => {
-      const res = await api.get(`/equipment/listings/${id}/`);
+      const res = await api.get(`/listings/${id}/`);
       return res.data;
     },
   });
 
   const bookMutation = useMutation({
     mutationFn: async () => {
-      return api.post("/equipment/bookings/", {
-        listing: id,
+      return api.post("/bookings/", {
+        gear_item: id,
         start_date: startDate,
         end_date: endDate,
-        message,
       });
     },
     onSuccess: () => {

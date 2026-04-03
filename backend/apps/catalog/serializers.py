@@ -17,18 +17,27 @@ class GearPhotoSerializer(serializers.ModelSerializer):
 
 class GearItemListSerializer(serializers.ModelSerializer):
     photos = GearPhotoSerializer(many=True, read_only=True)
+    images = GearPhotoSerializer(source="photos", many=True, read_only=True)
     category_name = serializers.CharField(source="category.name", read_only=True, default="")
     category_group = serializers.CharField(source="category.group", read_only=True, default="")
     owner_name = serializers.CharField(source="owner.profile.display_name", read_only=True, default="")
+    owner_display_name = serializers.CharField(source="owner.profile.display_name", read_only=True, default="")
+    owner_username = serializers.CharField(source="owner.username", read_only=True, default="")
+    owner_profile_photo = serializers.ImageField(source="owner.profile.profile_photo", read_only=True)
+    # Frontend aliases
+    price_per_day = serializers.DecimalField(source="daily_rate", max_digits=8, decimal_places=2, read_only=True)
+    condition_display = serializers.CharField(source="get_condition_display", read_only=True)
     is_wishlisted = serializers.SerializerMethodField()
 
     class Meta:
         model = GearItem
         fields = (
             "id", "title", "description", "category", "category_name", "category_group",
-            "brand", "condition", "daily_rate", "deposit_amount",
-            "city", "state", "image_url", "is_active", "owner", "owner_name",
-            "photos", "is_wishlisted", "created_at",
+            "brand", "condition", "condition_display", "daily_rate", "price_per_day",
+            "deposit_amount",
+            "city", "state", "image_url", "is_active",
+            "owner", "owner_name", "owner_display_name", "owner_username", "owner_profile_photo",
+            "photos", "images", "is_wishlisted", "created_at",
         )
         read_only_fields = ("id", "owner", "created_at")
 

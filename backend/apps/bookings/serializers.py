@@ -4,6 +4,7 @@ from .models import Booking
 
 class BookingSerializer(serializers.ModelSerializer):
     gear_item_title = serializers.CharField(source="gear_item.title", read_only=True)
+    listing_title = serializers.CharField(source="gear_item.title", read_only=True)
     renter_name = serializers.CharField(source="renter.profile.display_name", read_only=True, default="")
     owner_name = serializers.CharField(source="owner.profile.display_name", read_only=True, default="")
     gear_item_photo = serializers.SerializerMethodField()
@@ -11,7 +12,7 @@ class BookingSerializer(serializers.ModelSerializer):
     class Meta:
         model = Booking
         fields = (
-            "id", "gear_item", "gear_item_title", "gear_item_photo",
+            "id", "gear_item", "gear_item_title", "listing_title", "gear_item_photo",
             "renter", "renter_name", "owner", "owner_name",
             "start_date", "end_date", "status",
             "daily_rate_at_booking", "deposit_amount_at_booking",

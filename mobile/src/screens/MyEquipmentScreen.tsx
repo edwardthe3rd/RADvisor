@@ -14,7 +14,7 @@ export default function MyEquipmentScreen() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["my-listings"],
     queryFn: async () => {
-      const res = await api.get("/equipment/listings/mine/");
+      const res = await api.get("/listings/mine/");
       return res.data.results ?? res.data;
     },
   });

@@ -22,7 +22,7 @@ export default function BecomeGuideScreen() {
 
   const applyMutation = useMutation({
     mutationFn: async () => {
-      return api.post("/guiding/apply/", form);
+      return api.post("/guides/", form);
     },
     onSuccess: async () => {
       await refreshUser();

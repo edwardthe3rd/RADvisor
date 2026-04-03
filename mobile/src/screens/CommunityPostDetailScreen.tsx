@@ -26,7 +26,7 @@ export default function CommunityPostDetailScreen() {
   const { data: post, isLoading } = useQuery({
     queryKey: ["post", id],
     queryFn: async () => {
-      const res = await api.get(`/community/posts/${id}/`);
+      const res = await api.get(`/community/${id}/`);
       return res.data;
     },
   });
@@ -34,14 +34,14 @@ export default function CommunityPostDetailScreen() {
   const { data: comments = [] } = useQuery({
     queryKey: ["post-comments", id],
     queryFn: async () => {
-      const res = await api.get(`/community/posts/${id}/comments/`);
+      const res = await api.get(`/community/${id}/comments/`);
       return res.data.results ?? res.data;
     },
   });
 
   const addComment = useMutation({
     mutationFn: async () => {
-      await api.post(`/community/posts/${id}/comments/`, { body: comment });
+      await api.post(`/community/${id}/comments/`, { body: comment });
     },
     onSuccess: () => {
       setComment("");

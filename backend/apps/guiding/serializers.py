@@ -35,20 +35,37 @@ class GuideAvailabilitySerializer(serializers.ModelSerializer):
 class GuideServiceListSerializer(serializers.ModelSerializer):
     photos = GuideServicePhotoSerializer(many=True, read_only=True)
     guide_name = serializers.CharField(source="guide.profile.display_name", read_only=True, default="")
+    guide_display_name = serializers.CharField(source="guide.profile.display_name", read_only=True, default="")
     guide_photo = serializers.ImageField(source="guide.profile.profile_photo", read_only=True)
     activity_name = serializers.CharField(source="activity_type.name", read_only=True, default="")
+    # Frontend aliases
+    price_per_day = serializers.DecimalField(source="price_per_person", max_digits=8, decimal_places=2, read_only=True)
+    max_group_size = serializers.IntegerField(source="max_participants", read_only=True)
+    cover_image = serializers.SerializerMethodField()
     next_available = serializers.SerializerMethodField()
 
     class Meta:
         model = GuideService
         fields = (
-            "id", "guide", "guide_name", "guide_photo", "title", "description",
-            "activity_type", "activity_name", "duration_hours", "max_participants",
-            "price_per_person", "difficulty_level", "location_name", "city", "state",
-            "includes", "requirements", "photos", "next_available",
+            "id", "guide", "guide_name", "guide_display_name", "guide_photo",
+            "title", "description",
+            "activity_type", "activity_name", "duration_hours",
+            "max_participants", "max_group_size",
+            "price_per_person", "price_per_day",
+            "difficulty_level", "location_name", "city", "state",
+            "includes", "requirements", "photos", "cover_image", "next_available",
             "is_active", "created_at",
         )
         read_only_fields = ("id", "guide", "created_at")
+
+    def get_cover_image(self, obj):
+        photo = obj.photos.first()
+        if photo and photo.image:
+            request = self.context.get("request")
+            if request:
+                return request.build_absolute_uri(photo.image.url)
+            return photo.image.url
+        return None
 
     def get_next_available(self, obj):
         slot = obj.availability_slots.filter(spots_remaining__gt=0).order_by("date").first()
@@ -60,10 +77,12 @@ class GuideServiceListSerializer(serializers.ModelSerializer):
 class GuideServiceDetailSerializer(GuideServiceListSerializer):
     availability_slots = GuideAvailabilitySerializer(many=True, read_only=True)
     guide_profile = serializers.SerializerMethodField()
+    guide_bio = serializers.CharField(source="guide.profile.bio", read_only=True, default="")
 
     class Meta(GuideServiceListSerializer.Meta):
         fields = GuideServiceListSerializer.Meta.fields + (
-            "latitude", "longitude", "availability_slots", "guide_profile", "updated_at",
+            "latitude", "longitude", "availability_slots", "guide_profile",
+            "guide_bio", "updated_at",
         )
 
     def get_guide_profile(self, obj):

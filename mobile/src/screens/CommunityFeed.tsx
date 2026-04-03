@@ -14,7 +14,7 @@ export default function CommunityFeed() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["posts"],
     queryFn: async () => {
-      const res = await api.get("/community/posts/");
+      const res = await api.get("/community/");
       return res.data.results ?? res.data;
     },
   });
@@ -23,7 +23,7 @@ export default function CommunityFeed() {
 
   const toggleLike = async (id: number) => {
     try {
-      await api.post(`/community/posts/${id}/like/`);
+      await api.post(`/community/${id}/like/`);
       refetch();
     } catch {}
   };

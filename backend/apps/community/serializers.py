@@ -18,17 +18,21 @@ class CommunityCommentSerializer(serializers.ModelSerializer):
 
 class CommunityPostListSerializer(serializers.ModelSerializer):
     author_name = serializers.CharField(source="author.profile.display_name", read_only=True, default="")
+    author_display_name = serializers.CharField(source="author.profile.display_name", read_only=True, default="")
+    author_username = serializers.CharField(source="author.username", read_only=True, default="")
     author_photo = serializers.ImageField(source="author.profile.profile_photo", read_only=True)
     category_name = serializers.CharField(source="category.name", read_only=True, default="")
     comment_count = serializers.IntegerField(source="comments.count", read_only=True)
     is_liked = serializers.SerializerMethodField()
+    liked = serializers.SerializerMethodField()
 
     class Meta:
         model = CommunityPost
         fields = (
-            "id", "author", "author_name", "author_photo", "title", "body",
+            "id", "author", "author_name", "author_display_name", "author_username",
+            "author_photo", "title", "body",
             "post_type", "category", "category_name", "location_name",
-            "image", "like_count", "comment_count", "is_liked", "created_at",
+            "image", "like_count", "comment_count", "is_liked", "liked", "created_at",
         )
         read_only_fields = ("id", "author", "like_count", "created_at")
 
@@ -37,6 +41,9 @@ class CommunityPostListSerializer(serializers.ModelSerializer):
         if not request or not request.user.is_authenticated:
             return False
         return CommunityLike.objects.filter(post=obj, user=request.user).exists()
+
+    def get_liked(self, obj) -> bool:
+        return self.get_is_liked(obj)
 
 
 class CommunityPostDetailSerializer(CommunityPostListSerializer):

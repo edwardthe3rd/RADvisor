@@ -17,7 +17,7 @@ export default function GuidingFeed() {
     queryFn: async () => {
       const params: any = {};
       if (search) params.search = search;
-      const res = await api.get("/guiding/services/", { params });
+      const res = await api.get("/guide-services/", { params });
       return res.data.results ?? res.data;
     },
   });

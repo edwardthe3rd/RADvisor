@@ -26,19 +26,17 @@ export default function BookGuideScreen() {
   const { data: service, isLoading } = useQuery({
     queryKey: ["guide-service", id],
     queryFn: async () => {
-      const res = await api.get(`/guiding/services/${id}/`);
+      const res = await api.get(`/guide-services/${id}/`);
       return res.data;
     },
   });
 
   const bookMutation = useMutation({
     mutationFn: async () => {
-      return api.post("/guiding/bookings/", {
+      return api.post("/guide-bookings/", {
         service: id,
-        start_date: startDate,
-        end_date: endDate,
-        group_size: parseInt(groupSize) || 1,
-        message,
+        date: startDate,
+        participants: parseInt(groupSize) || 1,
       });
     },
     onSuccess: () => {

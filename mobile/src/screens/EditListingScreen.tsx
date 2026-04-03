@@ -27,7 +27,7 @@ export default function EditListingScreen() {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    price_per_day: "",
+    daily_rate: "",
     city: "",
     state: "",
     condition: "good",
@@ -38,7 +38,7 @@ export default function EditListingScreen() {
   const { data: listing, isLoading } = useQuery({
     queryKey: ["listing", id],
     queryFn: async () => {
-      const res = await api.get(`/equipment/listings/${id}/`);
+      const res = await api.get(`/listings/${id}/`);
       return res.data;
     },
   });
@@ -48,7 +48,7 @@ export default function EditListingScreen() {
       setForm({
         title: listing.title || "",
         description: listing.description || "",
-        price_per_day: String(listing.price_per_day || ""),
+        daily_rate: String(listing.daily_rate || ""),
         city: listing.city || "",
         state: listing.state || "",
         condition: listing.condition || "good",
@@ -78,7 +78,7 @@ export default function EditListingScreen() {
         const name = uri.split("/").pop() || `photo_${i}.jpg`;
         fd.append("uploaded_images", { uri, name, type: "image/jpeg" } as any);
       });
-      return api.patch(`/equipment/listings/${id}/`, fd, {
+      return api.patch(`/listings/${id}/`, fd, {
         headers: { "Content-Type": "multipart/form-data" },
       });
     },
@@ -98,7 +98,7 @@ export default function EditListingScreen() {
   });
 
   const deleteMutation = useMutation({
-    mutationFn: async () => api.delete(`/equipment/listings/${id}/`),
+    mutationFn: async () => api.delete(`/listings/${id}/`),
     onSuccess: () => {
       qc.invalidateQueries({ queryKey: ["listings"] });
       qc.invalidateQueries({ queryKey: ["my-listings"] });
@@ -128,7 +128,7 @@ export default function EditListingScreen() {
     >
       <Input label="Title" value={form.title} onChangeText={set("title")} placeholder="Listing title" />
       <Input label="Description" value={form.description} onChangeText={set("description")} placeholder="Description" multiline style={{ height: 100, textAlignVertical: "top" }} />
-      <Input label="Price per Day ($)" value={form.price_per_day} onChangeText={set("price_per_day")} placeholder="25" keyboardType="decimal-pad" leftIcon="cash-outline" />
+      <Input label="Price per Day ($)" value={form.daily_rate} onChangeText={set("daily_rate")} placeholder="25" keyboardType="decimal-pad" leftIcon="cash-outline" />
       <Input label="City" value={form.city} onChangeText={set("city")} placeholder="City" />
       <Input label="State" value={form.state} onChangeText={set("state")} placeholder="State" />
 
