@@ -1,0 +1,29 @@
+{
+  "expo": {
+    "name": "RADvisor",
+    "slug": "radvisor",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#FF5A5F"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.radvisor.app"
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FF5A5F"
+      },
+      "package": "com.radvisor.app"
+    },
+    "plugins": [
+      "expo-image-picker"
+    ]
+  }
+}
