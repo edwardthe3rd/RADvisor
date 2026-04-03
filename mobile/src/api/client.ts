@@ -1,7 +1,43 @@
 import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import Constants from "expo-constants";
 
-const API_BASE = process.env.EXPO_PUBLIC_API_BASE_URL || "http://localhost:8000/api/v1";
+function normalizeBase(url: string): string {
+  return url.replace(/\/+$/, "");
+}
+
+/** Host running Metro (same machine as Django in local dev). */
+function devHostFromExpo(): string | null {
+  const raw =
+    Constants.expoConfig?.hostUri ??
+    (Constants as { manifest?: { debuggerHost?: string } }).manifest?.debuggerHost;
+  if (!raw) return null;
+  const host = String(raw).split(":")[0]?.trim();
+  if (!host) return null;
+  return host;
+}
+
+/**
+ * In dev, `EXPO_PUBLIC_API_BASE_URL=auto` (or unset) uses the same LAN host as Metro → Django on :8000.
+ * Set an explicit URL to override.
+ */
+export function resolveApiBase(): string {
+  const rawEnv = process.env.EXPO_PUBLIC_API_BASE_URL?.trim() ?? "";
+  const wantsAuto = !rawEnv || rawEnv.toLowerCase() === "auto";
+
+  if (__DEV__ && wantsAuto) {
+    const host = devHostFromExpo();
+    if (host) return normalizeBase(`http://${host}:8000/api/v1`);
+  }
+
+  if (rawEnv && rawEnv.toLowerCase() !== "auto") {
+    return normalizeBase(rawEnv);
+  }
+
+  return normalizeBase("http://localhost:8000/api/v1");
+}
+
+const API_BASE = resolveApiBase();
 
 const api = axios.create({
   baseURL: API_BASE,
