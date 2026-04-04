@@ -64,7 +64,7 @@ export default function GuideCard({
         </View>
         <Text style={styles.price}>
           ${parseFloat(price_per_day).toFixed(0)}{" "}
-          <Text style={styles.perDay}>/ day</Text>
+          <Text style={styles.perDay}>/ person</Text>
         </Text>
       </View>
     </TouchableOpacity>

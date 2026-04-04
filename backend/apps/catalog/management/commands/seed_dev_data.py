@@ -54,10 +54,11 @@ class Command(BaseCommand):
             ("sleeping-pads", "Sleeping Pads", "Camp"),
             ("stoves", "Stoves", "Camp"),
             ("water-purification", "Water Purification", "Camp"),
-            # Dirt/Rock
-            ("climbing", "Climbing", "Dirt/Rock"),
-            ("motorsports", "Motorsports", "Dirt/Rock"),
-            ("mtb", "MTB", "Dirt/Rock"),
+            # Rock (climbing)
+            ("climbing", "Climbing", "Rock"),
+            # Dirt (wheels & motors)
+            ("motorsports", "Motorsports", "Dirt"),
+            ("mtb", "MTB", "Dirt"),
             # Snow
             ("ice-climbing", "Ice Climbing", "Snow"),
             ("skiing", "Skiing", "Snow"),
@@ -121,19 +122,19 @@ class Command(BaseCommand):
              "https://images.unsplash.com/photo-1495774539583-885e02cca8c2?w=600&h=600&fit=crop"),
             ("bob", "MSR Guardian Gravity Purifier", "water-purification", "MSR", "good", 8, 15, "Denver", "CO",
              "https://images.unsplash.com/photo-1532978379173-523e16f371f2?w=600&h=600&fit=crop"),
-            # ── Dirt/Rock > Climbing ──
+            # ── Rock > Climbing ──
             ("alice", "Black Diamond Momentum Harness", "climbing", "Black Diamond", "like_new", 12, 25, "Boulder", "CO",
              "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=600&h=600&fit=crop"),
             ("dan", "La Sportiva Solution Comp Shoes", "climbing", "La Sportiva", "good", 10, 20, "Salt Lake City", "UT",
              "https://images.unsplash.com/photo-1564769662533-4f00a87b4056?w=600&h=600&fit=crop"),
             ("alice", "Metolius Session II Crash Pad", "climbing", "Metolius", "good", 15, 30, "Boulder", "CO",
              "https://images.unsplash.com/photo-1601024445121-e5b82f020549?w=600&h=600&fit=crop"),
-            # ── Dirt/Rock > Motorsports ──
+            # ── Dirt > Motorsports ──
             ("bob", "Honda CRF250 Dirt Bike", "motorsports", "Honda", "good", 120, 500, "Denver", "CO",
              "https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&h=600&fit=crop"),
             ("emma", "Kawasaki KLX300 Dual Sport", "motorsports", "Kawasaki", "like_new", 95, 400, "Bend", "OR",
              "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=600&h=600&fit=crop"),
-            # ── Dirt/Rock > MTB ──
+            # ── Dirt > MTB ──
             ("emma", "Trek Fuel EX 7 Mountain Bike", "mtb", "Trek", "good", 60, 150, "Bend", "OR",
              "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=600&h=600&fit=crop"),
             ("bob", "Santa Cruz Hightower C S", "mtb", "Santa Cruz", "like_new", 75, 200, "Denver", "CO",

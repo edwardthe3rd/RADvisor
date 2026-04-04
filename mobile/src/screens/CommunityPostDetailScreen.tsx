@@ -26,7 +26,7 @@ export default function CommunityPostDetailScreen() {
   const { data: post, isLoading } = useQuery({
     queryKey: ["post", id],
     queryFn: async () => {
-      const res = await api.get(`/community/posts/${id}/`);
+      const res = await api.get(`/community/${id}/`);
       return res.data;
     },
   });
@@ -34,19 +34,20 @@ export default function CommunityPostDetailScreen() {
   const { data: comments = [] } = useQuery({
     queryKey: ["post-comments", id],
     queryFn: async () => {
-      const res = await api.get(`/community/posts/${id}/comments/`);
+      const res = await api.get(`/community/${id}/comments/`);
       return res.data.results ?? res.data;
     },
   });
 
   const addComment = useMutation({
     mutationFn: async () => {
-      await api.post(`/community/posts/${id}/comments/`, { body: comment });
+      await api.post(`/community/${id}/comments/`, { body: comment });
     },
     onSuccess: () => {
       setComment("");
       qc.invalidateQueries({ queryKey: ["post-comments", id] });
       qc.invalidateQueries({ queryKey: ["post", id] });
+      qc.invalidateQueries({ queryKey: ["posts"] });
     },
   });
 
@@ -66,9 +67,9 @@ export default function CommunityPostDetailScreen() {
         ListHeaderComponent={
           <View style={styles.postSection}>
             <View style={styles.authorRow}>
-              <Avatar uri={post.author_photo} name={post.author_display_name || post.author_username} size="md" />
+              <Avatar uri={post.author_photo} name={post.author_name || post.author_display_name || post.author_username} size="md" />
               <View>
-                <Text style={styles.authorName}>{post.author_display_name || post.author_username}</Text>
+                <Text style={styles.authorName}>{post.author_name || post.author_display_name || post.author_username}</Text>
                 <Text style={styles.time}>{new Date(post.created_at).toLocaleDateString()}</Text>
               </View>
             </View>
@@ -81,9 +82,9 @@ export default function CommunityPostDetailScreen() {
         }
         renderItem={({ item }: { item: any }) => (
           <View style={styles.commentRow}>
-            <Avatar uri={item.author_photo} name={item.author_display_name || item.author_username} size="sm" />
+            <Avatar uri={item.author_photo} name={item.author_name || item.author_display_name || item.author_username} size="sm" />
             <View style={styles.commentBody}>
-              <Text style={styles.commentAuthor}>{item.author_display_name || item.author_username}</Text>
+              <Text style={styles.commentAuthor}>{item.author_name || item.author_display_name || item.author_username}</Text>
               <Text style={styles.commentText}>{item.body}</Text>
             </View>
           </View>

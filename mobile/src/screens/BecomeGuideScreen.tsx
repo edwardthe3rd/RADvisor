@@ -22,7 +22,21 @@ export default function BecomeGuideScreen() {
 
   const applyMutation = useMutation({
     mutationFn: async () => {
-      return api.post("/guiding/apply/", form);
+      const specs = form.specialties
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean);
+      const certs = form.certifications
+        .split(/[\n,]+/)
+        .map((s) => s.trim())
+        .filter(Boolean);
+      return api.post("/guides/", {
+        headline: form.experience_summary.slice(0, 200),
+        specialties: specs,
+        certifications: certs,
+        languages: [],
+        experience_years: 0,
+      });
     },
     onSuccess: async () => {
       await refreshUser();

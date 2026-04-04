@@ -13,11 +13,11 @@ export default function GuidingFeed() {
   const { search } = useExploreSearch();
 
   const { data, isLoading, refetch } = useQuery({
-    queryKey: ["guides", search],
+    queryKey: ["guide-services", search],
     queryFn: async () => {
       const params: any = {};
       if (search) params.search = search;
-      const res = await api.get("/guiding/services/", { params });
+      const res = await api.get("/guide-services/", { params: { ...params, page_size: 100 } });
       return res.data.results ?? res.data;
     },
   });
@@ -25,14 +25,19 @@ export default function GuidingFeed() {
   const services = data ?? [];
 
   const renderItem = useCallback(
-    ({ item }: { item: any }) => (
-      <GuideCard
-        {...item}
-        guide_name={item.guide_display_name || "Guide"}
-        guide_photo={item.guide_photo}
-        onPress={() => nav.navigate("GuideServiceDetail", { id: item.id })}
-      />
-    ),
+    ({ item }: { item: any }) => {
+      const cover = item.photos?.[0]?.image as string | undefined;
+      return (
+        <GuideCard
+          {...item}
+          guide_name={item.guide_name || "Guide"}
+          guide_photo={item.guide_photo}
+          price_per_day={String(item.price_per_person ?? item.price_per_day ?? 0)}
+          cover_image={cover}
+          onPress={() => nav.navigate("GuideServiceDetail", { id: item.id })}
+        />
+      );
+    },
     [nav]
   );
 

@@ -35,7 +35,7 @@ export default function MyTripsScreen() {
   const { data: guideBookings, isLoading: gLoading, refetch: gRefetch } = useQuery({
     queryKey: ["my-guide-bookings"],
     queryFn: async () => {
-      const res = await api.get("/guiding/bookings/");
+      const res = await api.get("/guide-bookings/");
       return res.data.results ?? res.data;
     },
   });
