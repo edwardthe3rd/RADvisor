@@ -47,6 +47,8 @@ cd landing && python3 -m http.server 5500
 
 Then visit `http://localhost:5500`. The form posts to `http://localhost:8000` by default (`data-api-base` on `<body>` in `landing/index.html`). For production, add your marketing site origin to `CORS_ALLOWED_ORIGINS` when `DJANGO_DEBUG` is false. Waitlist emails appear in Django admin under **Waitlist emails**.
 
+New waitlist signups trigger a notification to `WAITLIST_NOTIFY_EMAIL` (default `halickiec@gmail.com`). With `DJANGO_DEBUG=True`, messages are printed to the API console (`EMAIL_BACKEND` console). For real email in production, set `DJANGO_DEBUG=False`, `EMAIL_BACKEND=django.core.mail.backends.smtp.EmailBackend`, and SMTP variables (`EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_HOST_USER`, `EMAIL_HOST_PASSWORD`, `DEFAULT_FROM_EMAIL`).
+
 ### Test Accounts
 
 | Email | Password |
