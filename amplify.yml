@@ -1,11 +1,20 @@
+# Publishes only landing/ as the site. Copy avoids monorepo "app root" resolving mobile/landing.
+# Console: set branch build spec from repo; clear AMPLIFY_MONOREPO_APP_ROOT unless it is "." or empty.
 version: 1
 frontend:
   phases:
     build:
       commands:
-        - python3 "$CODEBUILD_SRC_DIR/scripts/inject_waitlist_api_base.py"
-        - echo "Deploy static landing"
+        - |
+          set -e
+          ROOT="${CODEBUILD_SRC_DIR:-$PWD}"
+          OUT="$ROOT/.amplify-hosting"
+          python3 "$ROOT/scripts/inject_waitlist_api_base.py"
+          rm -rf "$OUT"
+          mkdir -p "$OUT"
+          cp -a "$ROOT/landing/." "$OUT/"
+          echo "Static landing staged to .amplify-hosting"
   artifacts:
-    baseDirectory: landing
+    baseDirectory: .amplify-hosting
     files:
       - "**/*"

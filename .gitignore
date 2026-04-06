@@ -29,5 +29,8 @@ dist/
 # Docker
 pgdata/
 
+# Amplify CI staging (landing-only deploy)
+.amplify-hosting/
+
 # Claude Code worktrees
 .claude/worktrees/
