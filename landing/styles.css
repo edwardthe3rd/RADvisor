@@ -76,12 +76,14 @@ body {
   justify-content: flex-start;
 }
 
-.logo {
-  display: block;
-  width: min(100%, 880px);
-  max-width: 100%;
-  height: auto;
-  background: transparent;
+.logo-wordmark {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: clamp(2.5rem, 10vw, 4.5rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--color-accent);
 }
 
 main {

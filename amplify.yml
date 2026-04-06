@@ -1,16 +1,11 @@
 version: 1
 frontend:
   phases:
-    preBuild:
-      commands:
-        - cd "$CODEBUILD_SRC_DIR/mobile" && npm ci
     build:
       commands:
-        - cd "$CODEBUILD_SRC_DIR/mobile" && npx expo export -p web
+        - python3 "$CODEBUILD_SRC_DIR/scripts/inject_waitlist_api_base.py"
+        - echo "Deploy static landing"
   artifacts:
-    baseDirectory: mobile/dist
+    baseDirectory: landing
     files:
       - "**/*"
-  cache:
-    paths:
-      - mobile/node_modules/**/*
