@@ -1,4 +1,4 @@
-# Ship only landing/. Finds project dir when CODEBUILD_SRC_DIR is parent of the app folder.
+# Static landing: find the folder that contains amplify.yml and landing/, stage to .amplify-hosting.
 version: 1
 frontend:
   phases:
@@ -8,20 +8,22 @@ frontend:
           set -e
           shopt -s nullglob
           cd "${CODEBUILD_SRC_DIR:-.}"
-          STAGE="$PWD/.amplify-hosting"
-          REPO="$PWD"
-          if [ ! -f "$REPO/landing/index.html" ]; then
+          BUILD_ROOT="$PWD"
+          REPO="$BUILD_ROOT"
+          if [ ! -f "$REPO/amplify.yml" ]; then
             for d in "$REPO"/*/; do
-              [ -f "${d}landing/index.html" ] || continue
+              [ -f "${d}amplify.yml" ] || continue
               REPO="$(cd "${d%/}" && pwd)"
               break
             done
           fi
-          if [ ! -f "$REPO/landing/index.html" ]; then
-            echo "Could not find landing/index.html under ${CODEBUILD_SRC_DIR:-.}" >&2
+          if [ ! -f "$REPO/amplify.yml" ] || [ ! -f "$REPO/landing/index.html" ]; then
+            echo "Could not find amplify.yml + landing/ under ${CODEBUILD_SRC_DIR:-.}" >&2
             ls -la
             exit 1
           fi
+          # baseDirectory is relative to CODEBUILD_SRC_DIR, not REPO (when REPO is nested).
+          STAGE="$BUILD_ROOT/.amplify-hosting"
           if [ -n "${WAITLIST_API_BASE:-}" ]; then
             export RADV_INJECT_BASE="$WAITLIST_API_BASE"
             export RADV_INJECT_HTML="$REPO/landing/index.html"
@@ -31,7 +33,7 @@ frontend:
           mkdir -p "$STAGE"
           cp -a "$REPO/landing/." "$STAGE/"
           rm -f "$STAGE/_amplify_waitlist_inject.py"
-          echo "Static landing staged at .amplify-hosting"
+          echo "Staged to $STAGE"
   artifacts:
     baseDirectory: .amplify-hosting
     files:
