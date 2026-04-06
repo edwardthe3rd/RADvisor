@@ -12,6 +12,7 @@ urlpatterns = [
     path("api/v1/", include("apps.reviews.urls")),
     path("api/v1/", include("apps.guiding.urls")),
     path("api/v1/", include("apps.community.urls")),
+    path("api/v1/", include("apps.waitlist.urls")),
 ]
 
 if settings.DEBUG:

@@ -18,20 +18,10 @@ const CATEGORY_GROUPS = [
   { key: "Water", icon: "water-outline" as const },
 ];
 
-/** Map API category_group (+ name) to a top-level equipment section. Handles legacy "Dirt/Rock". */
-function equipmentSectionKey(item: { category_group?: string; category_name?: string }): string | null {
+function equipmentSectionKey(item: { category_group?: string }): string | null {
   const g = (item.category_group || "").trim();
-  const name = (item.category_name || "").toLowerCase();
-
-  if (g === "Dirt" || g === "Rock") return g;
-  if (g === "Dirt/Rock") {
-    if (name.includes("climb")) return "Rock";
-    return "Dirt";
-  }
-
   const keys = CATEGORY_GROUPS.map((c) => c.key);
-  if (keys.includes(g)) return g;
-  return null;
+  return keys.includes(g) ? g : null;
 }
 
 export default function EquipmentFeed() {
