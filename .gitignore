@@ -28,3 +28,6 @@ dist/
 
 # Docker
 pgdata/
+
+# Claude Code
+.claude/
