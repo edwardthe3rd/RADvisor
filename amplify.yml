@@ -6,7 +6,7 @@ frontend:
         - cd mobile && npm ci
     build:
       commands:
-        - npx expo export --platform web
+        - cd mobile && npx expo export --platform web
   artifacts:
     baseDirectory: mobile/dist
     files:
