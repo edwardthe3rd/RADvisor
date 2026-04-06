@@ -1,4 +1,4 @@
-# Publishes only landing/ as the site. REPO root via git (CODEBUILD_SRC_DIR may be parent of clone folder).
+# Ship only landing/. Finds project dir when CODEBUILD_SRC_DIR is parent of the app folder.
 version: 1
 frontend:
   phases:
@@ -6,15 +6,32 @@ frontend:
       commands:
         - |
           set -e
+          shopt -s nullglob
           cd "${CODEBUILD_SRC_DIR:-.}"
-          REPO="$(git rev-parse --show-toplevel 2>/dev/null || echo "$PWD")"
-          OUT="$REPO/.amplify-hosting"
-          python3 "$REPO/landing/inject_api_base.py"
-          rm -rf "$OUT"
-          mkdir -p "$OUT"
-          cp -a "$REPO/landing/." "$OUT/"
-          rm -f "$OUT/inject_api_base.py"
-          echo "Static landing staged to .amplify-hosting"
+          STAGE="$PWD/.amplify-hosting"
+          REPO="$PWD"
+          if [ ! -f "$REPO/landing/index.html" ]; then
+            for d in "$REPO"/*/; do
+              [ -f "${d}landing/index.html" ] || continue
+              REPO="$(cd "${d%/}" && pwd)"
+              break
+            done
+          fi
+          if [ ! -f "$REPO/landing/index.html" ]; then
+            echo "Could not find landing/index.html under ${CODEBUILD_SRC_DIR:-.}" >&2
+            ls -la
+            exit 1
+          fi
+          if [ -n "${WAITLIST_API_BASE:-}" ]; then
+            export RADV_INJECT_BASE="$WAITLIST_API_BASE"
+            export RADV_INJECT_HTML="$REPO/landing/index.html"
+            python3 "$REPO/landing/_amplify_waitlist_inject.py"
+          fi
+          rm -rf "$STAGE"
+          mkdir -p "$STAGE"
+          cp -a "$REPO/landing/." "$STAGE/"
+          rm -f "$STAGE/_amplify_waitlist_inject.py"
+          echo "Static landing staged at .amplify-hosting"
   artifacts:
     baseDirectory: .amplify-hosting
     files:
