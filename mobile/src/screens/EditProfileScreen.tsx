@@ -64,7 +64,7 @@ export default function EditProfileScreen() {
         const name = photo.split("/").pop() || "profile.jpg";
         fd.append("profile_photo", { uri: photo, name, type: "image/jpeg" } as any);
       }
-      return api.patch(`/auth/profiles/${profile?.id}/`, fd, {
+      return api.patch("/auth/profile/", fd, {
         headers: { "Content-Type": "multipart/form-data" },
       });
     },

@@ -37,6 +37,7 @@ export default function BecomeGuideScreen() {
         languages: [],
         experience_years: 0,
       });
+      return api.post("/guides/", form);
     },
     onSuccess: async () => {
       await refreshUser();

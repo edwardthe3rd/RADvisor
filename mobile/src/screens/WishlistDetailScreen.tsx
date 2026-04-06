@@ -15,7 +15,7 @@ export default function WishlistDetailScreen() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["wishlist", id],
     queryFn: async () => {
-      const res = await api.get(`/equipment/wishlists/${id}/`);
+      const res = await api.get(`/wishlists/${id}/`);
       return res.data;
     },
   });

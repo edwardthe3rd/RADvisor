@@ -28,7 +28,7 @@ export default function ThreadDetailScreen() {
   const { data: messages = [], refetch } = useQuery({
     queryKey: ["thread-messages", id],
     queryFn: async () => {
-      const res = await api.get(`/messaging/threads/${id}/messages/`);
+      const res = await api.get(`/threads/${id}/messages/`);
       return res.data.results ?? res.data;
     },
     refetchInterval: 5000,
@@ -36,7 +36,7 @@ export default function ThreadDetailScreen() {
 
   const sendMutation = useMutation({
     mutationFn: async () => {
-      return api.post(`/messaging/threads/${id}/messages/`, { body: text });
+      return api.post(`/threads/${id}/messages/`, { body: text });
     },
     onSuccess: () => {
       setText("");

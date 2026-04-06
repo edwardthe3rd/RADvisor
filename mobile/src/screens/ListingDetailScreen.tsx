@@ -28,7 +28,7 @@ export default function ListingDetailScreen() {
   const { data: listing, isLoading } = useQuery({
     queryKey: ["listing", id],
     queryFn: async () => {
-      const res = await api.get(`/equipment/listings/${id}/`);
+      const res = await api.get(`/listings/${id}/`);
       return res.data;
     },
   });

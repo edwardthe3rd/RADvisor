@@ -15,6 +15,7 @@ export default function CommunityFeed() {
     queryKey: ["posts"],
     queryFn: async () => {
       const res = await api.get("/community/", { params: { page_size: 100 } });
+      const res = await api.get("/community/");
       return res.data.results ?? res.data;
     },
   });

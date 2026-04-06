@@ -18,6 +18,7 @@ export default function GuidingFeed() {
       const params: any = {};
       if (search) params.search = search;
       const res = await api.get("/guide-services/", { params: { ...params, page_size: 100 } });
+      const res = await api.get("/guide-services/", { params });
       return res.data.results ?? res.data;
     },
   });

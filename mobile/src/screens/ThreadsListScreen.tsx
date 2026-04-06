@@ -22,7 +22,7 @@ export default function ThreadsListScreen() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["threads"],
     queryFn: async () => {
-      const res = await api.get("/messaging/threads/");
+      const res = await api.get("/threads/");
       return res.data.results ?? res.data;
     },
   });

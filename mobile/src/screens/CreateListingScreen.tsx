@@ -23,7 +23,7 @@ export default function CreateListingScreen() {
   const [form, setForm] = useState({
     title: "",
     description: "",
-    price_per_day: "",
+    daily_rate: "",
     city: "",
     state: "",
     condition: "good",
@@ -55,7 +55,7 @@ export default function CreateListingScreen() {
           type: "image/jpeg",
         } as any);
       });
-      return api.post("/equipment/listings/", fd, {
+      return api.post("/listings/", fd, {
         headers: { "Content-Type": "multipart/form-data" },
       });
     },
@@ -82,7 +82,7 @@ export default function CreateListingScreen() {
     >
       <Input label="Title" value={form.title} onChangeText={set("title")} placeholder="e.g. Rossignol Experience 88 Skis" />
       <Input label="Description" value={form.description} onChangeText={set("description")} placeholder="Describe your gear..." multiline style={{ height: 100, textAlignVertical: "top" }} />
-      <Input label="Price per Day ($)" value={form.price_per_day} onChangeText={set("price_per_day")} placeholder="25" keyboardType="decimal-pad" leftIcon="cash-outline" />
+      <Input label="Price per Day ($)" value={form.daily_rate} onChangeText={set("daily_rate")} placeholder="25" keyboardType="decimal-pad" leftIcon="cash-outline" />
       <Input label="City" value={form.city} onChangeText={set("city")} placeholder="Boulder" />
       <Input label="State" value={form.state} onChangeText={set("state")} placeholder="CO" />
 
@@ -109,7 +109,7 @@ export default function CreateListingScreen() {
         title="Create Listing"
         onPress={() => createMutation.mutate()}
         loading={createMutation.isPending}
-        disabled={!form.title || !form.price_per_day}
+        disabled={!form.title || !form.daily_rate}
         fullWidth
         style={{ marginTop: spacing.xl }}
       />

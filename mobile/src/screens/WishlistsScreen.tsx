@@ -27,7 +27,7 @@ export default function WishlistsScreen() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["wishlists"],
     queryFn: async () => {
-      const res = await api.get("/equipment/wishlists/");
+      const res = await api.get("/wishlists/");
       return res.data.results ?? res.data;
     },
   });
@@ -36,7 +36,7 @@ export default function WishlistsScreen() {
 
   const createWishlist = useMutation({
     mutationFn: async (name: string) => {
-      return api.post("/equipment/wishlists/", { name });
+      return api.post("/wishlists/", { name });
     },
     onSuccess: () => qc.invalidateQueries({ queryKey: ["wishlists"] }),
   });

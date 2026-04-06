@@ -35,6 +35,8 @@ export default function BookGuideScreen() {
         service: id,
         date: tripDate,
         participants: parseInt(groupSize, 10) || 1,
+        date: startDate,
+        participants: parseInt(groupSize) || 1,
       });
     },
     onSuccess: () => {
