@@ -2,6 +2,7 @@
   "expo": {
     "name": "RADvisor",
     "slug": "radvisor",
+    "scheme": "radvisor",
     "version": "2.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",

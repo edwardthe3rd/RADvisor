@@ -33,6 +33,20 @@ npm install
 npx expo start -c
 ```
 
+### Marketing landing
+
+Static site in `landing/` (hero, synopsis, waitlist form). With the backend running, serve the folder on another port and open `index.html` in the browser:
+
+```bash
+# Terminal 1: API (see Backend above)
+cd backend && source .venv/bin/activate && python manage.py runserver 0.0.0.0:8000
+
+# Terminal 2: landing
+cd landing && python3 -m http.server 5500
+```
+
+Then visit `http://localhost:5500`. The form posts to `http://localhost:8000` by default (`data-api-base` on `<body>` in `landing/index.html`). For production, add your marketing site origin to `CORS_ALLOWED_ORIGINS` when `DJANGO_DEBUG` is false. Waitlist emails appear in Django admin under **Waitlist emails**.
+
 ### Test Accounts
 
 | Email | Password |

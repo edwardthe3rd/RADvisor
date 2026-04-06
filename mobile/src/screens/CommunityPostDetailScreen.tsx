@@ -47,6 +47,7 @@ export default function CommunityPostDetailScreen() {
       setComment("");
       qc.invalidateQueries({ queryKey: ["post-comments", id] });
       qc.invalidateQueries({ queryKey: ["post", id] });
+      qc.invalidateQueries({ queryKey: ["posts"] });
     },
   });
 
@@ -66,9 +67,9 @@ export default function CommunityPostDetailScreen() {
         ListHeaderComponent={
           <View style={styles.postSection}>
             <View style={styles.authorRow}>
-              <Avatar uri={post.author_photo} name={post.author_display_name || post.author_username} size="md" />
+              <Avatar uri={post.author_photo} name={post.author_name || post.author_display_name || post.author_username} size="md" />
               <View>
-                <Text style={styles.authorName}>{post.author_display_name || post.author_username}</Text>
+                <Text style={styles.authorName}>{post.author_name || post.author_display_name || post.author_username}</Text>
                 <Text style={styles.time}>{new Date(post.created_at).toLocaleDateString()}</Text>
               </View>
             </View>
@@ -81,9 +82,9 @@ export default function CommunityPostDetailScreen() {
         }
         renderItem={({ item }: { item: any }) => (
           <View style={styles.commentRow}>
-            <Avatar uri={item.author_photo} name={item.author_display_name || item.author_username} size="sm" />
+            <Avatar uri={item.author_photo} name={item.author_name || item.author_display_name || item.author_username} size="sm" />
             <View style={styles.commentBody}>
-              <Text style={styles.commentAuthor}>{item.author_display_name || item.author_username}</Text>
+              <Text style={styles.commentAuthor}>{item.author_name || item.author_display_name || item.author_username}</Text>
               <Text style={styles.commentText}>{item.body}</Text>
             </View>
           </View>

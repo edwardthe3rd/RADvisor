@@ -25,11 +25,12 @@ export default function CreateGuideServiceScreen() {
   const createMutation = useMutation({
     mutationFn: async () => {
       const payload: any = { ...form };
+      if (form.max_group_size) payload.max_group_size = parseInt(form.max_group_size);
       if (form.max_participants) payload.max_participants = parseInt(form.max_participants);
       return api.post("/guide-services/", payload);
     },
     onSuccess: () => {
-      qc.invalidateQueries({ queryKey: ["guides"] });
+      qc.invalidateQueries({ queryKey: ["guide-services"] });
       Alert.alert("Success", "Your guide service has been created!", [
         { text: "OK", onPress: () => nav.goBack() },
       ]);

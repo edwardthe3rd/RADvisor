@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>RADvisor — Real Adventures Daily</title>
+    <meta
+      name="description"
+      content="RADvisor is the marketplace for outdoor gear, guided adventures, and community around Lake Tahoe and beyond."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body data-api-base="http://localhost:8000">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="site-header">
+      <h1 class="sr-only">RADvisor — Real Adventures Daily</h1>
+      <div class="header-inner">
+        <img
+          class="logo"
+          src="assets/header-logo.png"
+          width="2384"
+          height="1384"
+          alt=""
+          role="presentation"
+        />
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section synopsis" aria-labelledby="synopsis-heading">
+        <div class="synopsis-copy">
+          <h2 id="synopsis-heading">What is RADvisor?</h2>
+          <p>
+            RADvisor is a marketplace built for people who live for the outdoors. Rent
+            quality adventure equipment from locals, book guided experiences on the
+            mountain and on the water, and connect with a community that shares trip
+            reports, tips, and events around <strong>Lake Tahoe</strong> and the Sierra.
+          </p>
+          <p>
+            Whether you are after skis, a paddleboard, a backcountry setup, or a guide
+            who knows the terrain, RADvisor helps you spend less time planning and more
+            time outside.
+          </p>
+          <p class="synopsis-lede">
+            Gear, guides, and community — <em>one place</em> for real adventures, daily.
+          </p>
+        </div>
+      </section>
+
+      <section class="section notify" aria-labelledby="notify-heading">
+        <div class="notify-card">
+          <h2 id="notify-heading">Get notified when we launch</h2>
+          <p class="notify-lede">
+            Leave your email and we will let you know when RADvisor is live. No spam —
+            just launch news.
+          </p>
+          <form id="waitlist-form" class="waitlist-form" novalidate>
+            <label class="sr-only" for="waitlist-email">Email address</label>
+            <input
+              id="waitlist-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="you@example.com"
+              required
+            />
+            <button type="submit" class="btn-primary">Notify me</button>
+          </form>
+          <p id="waitlist-message" class="waitlist-message" role="status" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p class="footer-copy">&copy; RADvisor</p>
+    </footer>
+
+    <script src="main.js"></script>
+  </body>
+</html>

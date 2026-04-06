@@ -12,7 +12,9 @@ import { colors } from "../../theme/colors";
 import { spacing, radius } from "../../theme/spacing";
 
 const SCREEN_WIDTH = Dimensions.get("window").width;
-const CARD_SIZE = (SCREEN_WIDTH - spacing.lg * 2 - spacing.md * 4) / 5;
+const CATEGORY_COUNT = 6;
+const CARD_SIZE =
+  (SCREEN_WIDTH - spacing.lg * 2 - spacing.md * (CATEGORY_COUNT - 1)) / CATEGORY_COUNT;
 
 interface Category {
   key: string;
@@ -27,9 +29,14 @@ const CATEGORIES: Category[] = [
     image: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=300&h=300&fit=crop",
   },
   {
-    key: "Dirt/Rock",
-    label: "Dirt/Rock",
+    key: "Dirt",
+    label: "Dirt",
     image: "https://images.unsplash.com/photo-1544191696-102dbdaeeaa0?w=300&h=300&fit=crop",
+  },
+  {
+    key: "Rock",
+    label: "Rock",
+    image: "https://images.unsplash.com/photo-1522163182402-834f871fd851?w=300&h=300&fit=crop",
   },
   {
     key: "Snow",

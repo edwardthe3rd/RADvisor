@@ -19,6 +19,7 @@ function devHostFromExpo(): string | null {
 
 /**
  * In dev, `EXPO_PUBLIC_API_BASE_URL=auto` (or unset) uses the same LAN host as Metro → Django on :8000.
+ * Set an explicit URL to override.
  * Set an explicit URL (e.g. staging) to override.
  */
 export function resolveApiBase(): string {

@@ -44,8 +44,8 @@ export default function GuideServiceDetailScreen() {
   return (
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
-        {service.cover_image && (
-          <Image source={{ uri: service.cover_image }} style={styles.cover} />
+        {service.photos?.[0]?.image && (
+          <Image source={{ uri: service.photos[0].image }} style={styles.cover} />
         )}
 
         <View style={styles.body}>
@@ -58,7 +58,7 @@ export default function GuideServiceDetailScreen() {
 
           {service.avg_rating > 0 && (
             <View style={styles.ratingRow}>
-              <StarRating rating={service.avg_rating} count={service.review_count} />
+              <StarRating rating={service.avg_rating} count={service.review_count ?? 0} />
             </View>
           )}
 
@@ -67,15 +67,15 @@ export default function GuideServiceDetailScreen() {
           <View style={styles.guideRow}>
             <Avatar
               uri={service.guide_photo}
-              name={service.guide_display_name}
+              name={service.guide_name}
               size="lg"
             />
             <View style={styles.guideInfo}>
               <Text style={styles.guideLabel}>Your Guide</Text>
-              <Text style={styles.guideName}>{service.guide_display_name}</Text>
-              {service.guide_bio && (
-                <Text style={styles.guideBio} numberOfLines={2}>{service.guide_bio}</Text>
-              )}
+              <Text style={styles.guideName}>{service.guide_name}</Text>
+              {service.guide_profile?.headline ? (
+                <Text style={styles.guideBio} numberOfLines={2}>{service.guide_profile.headline}</Text>
+              ) : null}
             </View>
           </View>
 
@@ -84,16 +84,16 @@ export default function GuideServiceDetailScreen() {
           <Text style={styles.sectionTitle}>About this experience</Text>
           <Text style={styles.description}>{service.description}</Text>
 
-          {service.activity_type && (
+          {!!service.activity_name && (
             <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Activity</Text>
-              <Text style={styles.detailValue}>{service.activity_type}</Text>
+              <Text style={styles.detailValue}>{service.activity_name}</Text>
             </View>
           )}
-          {service.max_group_size && (
+          {!!service.max_participants && (
             <View style={styles.detailRow}>
               <Text style={styles.detailLabel}>Max group size</Text>
-              <Text style={styles.detailValue}>{service.max_group_size} people</Text>
+              <Text style={styles.detailValue}>{service.max_participants} people</Text>
             </View>
           )}
         </View>
@@ -102,8 +102,8 @@ export default function GuideServiceDetailScreen() {
       <View style={[styles.footer, shadow.md]}>
         <View>
           <Text style={styles.price}>
-            ${parseFloat(service.price_per_day).toFixed(0)}{" "}
-            <Text style={styles.perDay}>/ day</Text>
+            ${parseFloat(String(service.price_per_person ?? service.price_per_day ?? 0)).toFixed(0)}{" "}
+            <Text style={styles.perDay}>/ person</Text>
           </Text>
         </View>
         <Button

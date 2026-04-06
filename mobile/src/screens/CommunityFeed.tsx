@@ -14,6 +14,7 @@ export default function CommunityFeed() {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ["posts"],
     queryFn: async () => {
+      const res = await api.get("/community/", { params: { page_size: 100 } });
       const res = await api.get("/community/");
       return res.data.results ?? res.data;
     },
@@ -32,8 +33,9 @@ export default function CommunityFeed() {
     ({ item }: { item: any }) => (
       <PostCard
         {...item}
-        author_name={item.author_display_name || item.author_username || "User"}
+        author_name={item.author_name || item.author_display_name || item.author_username || "User"}
         author_photo={item.author_photo}
+        liked={item.is_liked}
         onPress={() => nav.navigate("CommunityPostDetail", { id: item.id })}
         onLike={() => toggleLike(item.id)}
       />

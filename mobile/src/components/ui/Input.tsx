@@ -39,15 +39,33 @@ export default function Input({
     ? colors.brand.primary
     : colors.surface.border;
 
+  const isMultiline = !!props.multiline;
+
   return (
     <View style={[styles.container, containerStyle]}>
       {label && <Text style={styles.label}>{label}</Text>}
-      <View style={[styles.inputWrap, { borderColor }]}>
+      <View
+        style={[
+          styles.inputWrap,
+          isMultiline ? styles.inputWrapMultiline : styles.inputWrapSingleLine,
+          { borderColor },
+        ]}
+      >
         {leftIcon && (
-          <Ionicons name={leftIcon} size={20} color={colors.text.tertiary} style={styles.leftIcon} />
+          <Ionicons
+            name={leftIcon}
+            size={20}
+            color={colors.text.tertiary}
+            style={[styles.leftIcon, isMultiline && styles.leftIconMultiline]}
+          />
         )}
         <TextInput
-          style={[styles.input, leftIcon && { paddingLeft: 0 }, style]}
+          style={[
+            styles.input,
+            leftIcon && { paddingLeft: 0 },
+            isMultiline && styles.inputMultiline,
+            style,
+          ]}
           placeholderTextColor={colors.text.tertiary}
           onFocus={(e) => {
             setFocused(true);
@@ -82,19 +100,31 @@ const styles = StyleSheet.create({
   },
   inputWrap: {
     flexDirection: "row",
-    alignItems: "center",
     borderWidth: 1.5,
     borderRadius: radius.md,
     paddingHorizontal: spacing.lg,
     backgroundColor: colors.surface.background,
+  },
+  inputWrapSingleLine: {
     height: 52,
+    alignItems: "center",
+  },
+  inputWrapMultiline: {
+    alignItems: "flex-start",
+    paddingVertical: spacing.md,
   },
   leftIcon: { marginRight: spacing.sm },
+  leftIconMultiline: { marginTop: 2 },
   input: {
     flex: 1,
     fontSize: 16,
     color: colors.text.primary,
     paddingVertical: 0,
+  },
+  inputMultiline: {
+    textAlignVertical: "top",
+    paddingTop: 0,
+    paddingBottom: 0,
   },
   error: {
     fontSize: 12,

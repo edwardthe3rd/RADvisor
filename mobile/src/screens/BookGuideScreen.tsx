@@ -18,10 +18,8 @@ export default function BookGuideScreen() {
   const nav = useNavigation<any>();
   const { id } = route.params;
 
-  const [startDate, setStartDate] = useState("");
-  const [endDate, setEndDate] = useState("");
+  const [tripDate, setTripDate] = useState("");
   const [groupSize, setGroupSize] = useState("1");
-  const [message, setMessage] = useState("");
 
   const { data: service, isLoading } = useQuery({
     queryKey: ["guide-service", id],
@@ -35,6 +33,8 @@ export default function BookGuideScreen() {
     mutationFn: async () => {
       return api.post("/guide-bookings/", {
         service: id,
+        date: tripDate,
+        participants: parseInt(groupSize, 10) || 1,
         date: startDate,
         participants: parseInt(groupSize) || 1,
       });
@@ -61,15 +61,9 @@ export default function BookGuideScreen() {
     );
   }
 
-  const dayCount = (() => {
-    if (!startDate || !endDate) return 0;
-    const s = new Date(startDate);
-    const e = new Date(endDate);
-    const diff = Math.ceil((e.getTime() - s.getTime()) / 86400000);
-    return diff > 0 ? diff : 0;
-  })();
-
-  const total = dayCount * parseFloat(service.price_per_day);
+  const participants = parseInt(groupSize, 10) || 1;
+  const price = parseFloat(String(service.price_per_person ?? service.price_per_day ?? 0));
+  const estimatedTotal = participants * price;
 
   return (
     <KeyboardView
@@ -78,57 +72,42 @@ export default function BookGuideScreen() {
     >
       <Card elevated style={styles.summaryCard}>
         <Text style={styles.serviceTitle}>{service.title}</Text>
-        <Text style={styles.guideName}>with {service.guide_display_name}</Text>
+        <Text style={styles.guideName}>with {service.guide_name}</Text>
         <Text style={styles.priceText}>
-          ${parseFloat(service.price_per_day).toFixed(0)} / day
+          ${price.toFixed(0)} / person
         </Text>
       </Card>
 
       <Input
-        label="Start Date"
-        value={startDate}
-        onChangeText={setStartDate}
+        label="Trip date"
+        value={tripDate}
+        onChangeText={setTripDate}
         placeholder="YYYY-MM-DD"
         leftIcon="calendar-outline"
       />
       <Input
-        label="End Date"
-        value={endDate}
-        onChangeText={setEndDate}
-        placeholder="YYYY-MM-DD"
-        leftIcon="calendar-outline"
-      />
-      <Input
-        label="Group Size"
+        label="Group size"
         value={groupSize}
         onChangeText={setGroupSize}
         placeholder="1"
         keyboardType="number-pad"
         leftIcon="people-outline"
       />
-      <Input
-        label="Message to Guide (optional)"
-        value={message}
-        onChangeText={setMessage}
-        placeholder="Any special requests?"
-        multiline
-        style={{ height: 80, textAlignVertical: "top" }}
-      />
 
-      {dayCount > 0 && (
+      {tripDate ? (
         <View style={styles.totalRow}>
           <Text style={styles.totalLabel}>
-            ${parseFloat(service.price_per_day).toFixed(0)} x {dayCount} day{dayCount > 1 ? "s" : ""}
+            ${price.toFixed(0)} × {participants} {participants === 1 ? "person" : "people"} (estimate)
           </Text>
-          <Text style={styles.totalValue}>${total.toFixed(0)}</Text>
+          <Text style={styles.totalValue}>${estimatedTotal.toFixed(0)}</Text>
         </View>
-      )}
+      ) : null}
 
       <Button
         title="Request Booking"
         onPress={() => bookMutation.mutate()}
         loading={bookMutation.isPending}
-        disabled={!startDate || !endDate}
+        disabled={!tripDate}
         fullWidth
       />
     </KeyboardView>

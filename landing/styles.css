@@ -1,0 +1,235 @@
+:root {
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f7;
+  --color-border: #e0e0e0;
+  --color-text: #1a1a1a;
+  --color-muted: #5c5c5c;
+  --color-accent: #a51d24;
+  --color-accent-hover: #c42831;
+  --font-sans: "Roboto", system-ui, sans-serif;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --max-width: 1120px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.site-header {
+  padding: 2.5rem 1.5rem 2rem;
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.logo {
+  display: block;
+  width: min(100%, 880px);
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 3.5rem 0;
+}
+
+.synopsis h2 {
+  margin: 0 0 1.25rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.synopsis-copy p {
+  margin: 0 0 1rem;
+  color: var(--color-muted);
+  max-width: 38rem;
+}
+
+.synopsis-copy strong {
+  color: var(--color-text);
+  font-weight: 700;
+}
+
+.synopsis-lede {
+  margin-top: 1.5rem !important;
+  font-size: 1.1rem;
+  color: var(--color-text) !important;
+}
+
+.notify {
+  padding-bottom: 4rem;
+}
+
+.notify-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+.notify h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+}
+
+.notify-lede {
+  margin: 0 0 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  max-width: 36rem;
+}
+
+.waitlist-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 520px) {
+  .waitlist-form {
+    flex-direction: row;
+    align-items: stretch;
+    max-width: 32rem;
+  }
+}
+
+.waitlist-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: var(--color-text);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.waitlist-form input[type="email"]::placeholder {
+  color: #888;
+}
+
+.waitlist-form input[type="email"]:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+
+.btn-primary {
+  padding: 0.85rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary:hover {
+  background: var(--color-accent-hover);
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waitlist-message {
+  margin: 1rem 0 0;
+  min-height: 1.5em;
+  font-size: 0.95rem;
+}
+
+.waitlist-message.is-success {
+  color: #1e7e34;
+}
+
+.waitlist-message.is-error {
+  color: #c0392b;
+}
+
+.site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}

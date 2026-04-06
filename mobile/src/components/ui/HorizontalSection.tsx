@@ -30,6 +30,8 @@ interface HorizontalSectionProps {
   items: Item[];
   onItemPress: (id: number) => void;
   icon?: keyof typeof Ionicons.glyphMap;
+  /** When set, section header still shows if there are no items (e.g. category rails). */
+  emptyHint?: string;
 }
 
 function HorizontalCard({ item, onPress }: { item: Item; onPress: () => void }) {
@@ -90,8 +92,9 @@ export default function HorizontalSection({
   items,
   onItemPress,
   icon,
+  emptyHint,
 }: HorizontalSectionProps) {
-  if (items.length === 0) return null;
+  if (items.length === 0 && !emptyHint) return null;
 
   return (
     <View style={styles.section}>
@@ -101,16 +104,20 @@ export default function HorizontalSection({
         )}
         <Text style={styles.title}>{title}</Text>
       </View>
-      <FlatList
-        data={items}
-        keyExtractor={(item) => String(item.id)}
-        renderItem={({ item }) => (
-          <HorizontalCard item={item} onPress={() => onItemPress(item.id)} />
-        )}
-        horizontal
-        showsHorizontalScrollIndicator={false}
-        contentContainerStyle={styles.list}
-      />
+      {items.length === 0 ? (
+        <Text style={styles.emptyHint}>{emptyHint}</Text>
+      ) : (
+        <FlatList
+          data={items}
+          keyExtractor={(item) => String(item.id)}
+          renderItem={({ item }) => (
+            <HorizontalCard item={item} onPress={() => onItemPress(item.id)} />
+          )}
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          contentContainerStyle={styles.list}
+        />
+      )}
     </View>
   );
 }
@@ -130,5 +137,11 @@ const styles = StyleSheet.create({
   },
   list: {
     paddingHorizontal: spacing.lg,
+  },
+  emptyHint: {
+    paddingHorizontal: spacing.lg,
+    paddingBottom: spacing.sm,
+    fontSize: 14,
+    color: colors.text.tertiary,
   },
 });
