@@ -1,12 +1,12 @@
 :root {
-  /* Light surfaces (inputs, contrast on cards) */
-  --color-bg: #f2f7fc;
+  /* Blue–green: cool blues with teal accents */
+  --color-bg: #ecf6f5;
   --color-surface: rgba(255, 255, 255, 0.82);
-  --color-border: rgba(30, 55, 85, 0.16);
-  --color-text: #1a1a1a;
-  --color-muted: #4a5a6e;
-  --color-accent: #a51d24;
-  --color-accent-hover: #c42831;
+  --color-border: rgba(20, 75, 88, 0.16);
+  --color-text: #14221f;
+  --color-muted: #3d5c5a;
+  --color-accent: #0d7a72;
+  --color-accent-hover: #0f9488;
   --font-sans: "Roboto", system-ui, sans-serif;
   --radius: 12px;
   --radius-lg: 20px;
@@ -30,20 +30,19 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-text);
-  /* Same cool, airy family as the notify card / --color-bg */
-  background-color: #e8f0f8;
+  background-color: #e4f3f1;
   background-image:
     radial-gradient(ellipse 100% 55% at 50% -8%, rgba(255, 255, 255, 0.95) 0%, transparent 52%),
-    radial-gradient(ellipse 78% 46% at 92% 14%, rgba(210, 232, 252, 0.75) 0%, transparent 48%),
-    radial-gradient(ellipse 72% 50% at 8% 32%, rgba(190, 218, 248, 0.4) 0%, transparent 46%),
+    radial-gradient(ellipse 78% 46% at 92% 14%, rgba(186, 230, 253, 0.55) 0%, transparent 48%),
+    radial-gradient(ellipse 72% 50% at 8% 32%, rgba(167, 243, 208, 0.35) 0%, transparent 46%),
     linear-gradient(
       168deg,
-      #fbfdff 0%,
-      #f2f7fc 24%,
-      #e9f1f9 50%,
-      #dfeaf5 74%,
-      #d8e5f2 90%,
-      #eef4fb 100%
+      #f8fdfc 0%,
+      #ecf6f5 22%,
+      #e3f2f0 48%,
+      #d8eef0 72%,
+      #d0e8ec 88%,
+      #e8f6f4 100%
     );
   -webkit-font-smoothing: antialiased;
 }
@@ -79,7 +78,7 @@ body {
 
 .site-header {
   padding: 0 1.5rem 2rem;
-  border-bottom: 1px solid rgba(30, 55, 85, 0.1);
+  border-bottom: 1px solid rgba(20, 75, 88, 0.1);
   background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -96,7 +95,7 @@ body {
 
 .logo {
   display: block;
-  width: min(100%, 1200px);
+  width: min(100%, 1000px);
   max-width: 100%;
   height: auto;
   background: transparent;
@@ -142,17 +141,17 @@ main {
 }
 
 .notify-card {
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(20, 75, 88, 0.12);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
   box-shadow:
-    0 1px 0 rgba(255, 255, 255, 0.9) inset,
-    0 2px 4px rgba(30, 55, 85, 0.04),
-    0 12px 40px rgba(25, 55, 95, 0.12),
-    0 28px 72px rgba(20, 45, 80, 0.08);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 2px 6px rgba(20, 75, 88, 0.05),
+    0 14px 44px rgba(15, 90, 95, 0.09),
+    0 26px 64px rgba(12, 70, 78, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .notify h2 {
@@ -189,7 +188,7 @@ main {
   padding: 0.85rem 1rem;
   font: inherit;
   color: var(--color-text);
-  background: var(--color-bg);
+  background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
@@ -238,7 +237,7 @@ main {
 }
 
 .waitlist-message.is-success {
-  color: #1e7e34;
+  color: #0f6b52;
 }
 
 .waitlist-message.is-error {
@@ -249,7 +248,7 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
-  border-top: 1px solid rgba(30, 55, 85, 0.1);
+  border-top: 1px solid rgba(20, 75, 88, 0.1);
 }
 
 .footer-copy {
