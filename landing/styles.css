@@ -1,10 +1,10 @@
 :root {
   /* Light surfaces (inputs, contrast on cards) */
-  --color-bg: #f6f8f6;
-  --color-surface: rgba(255, 255, 255, 0.78);
-  --color-border: rgba(35, 55, 45, 0.14);
+  --color-bg: #f2f7fc;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-border: rgba(30, 55, 85, 0.16);
   --color-text: #1a1a1a;
-  --color-muted: #4a5548;
+  --color-muted: #4a5a6e;
   --color-accent: #a51d24;
   --color-accent-hover: #c42831;
   --font-sans: "Roboto", system-ui, sans-serif;
@@ -30,19 +30,20 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: #5a7a6a;
+  /* Same cool, airy family as the notify card / --color-bg */
+  background-color: #e8f0f8;
   background-image:
-    radial-gradient(ellipse 90% 55% at 50% -8%, rgba(255, 236, 210, 0.55) 0%, transparent 52%),
-    radial-gradient(ellipse 70% 45% at 92% 18%, rgba(186, 228, 255, 0.45) 0%, transparent 48%),
-    radial-gradient(ellipse 65% 50% at 8% 35%, rgba(255, 200, 140, 0.2) 0%, transparent 45%),
+    radial-gradient(ellipse 100% 55% at 50% -8%, rgba(255, 255, 255, 0.95) 0%, transparent 52%),
+    radial-gradient(ellipse 78% 46% at 92% 14%, rgba(210, 232, 252, 0.75) 0%, transparent 48%),
+    radial-gradient(ellipse 72% 50% at 8% 32%, rgba(190, 218, 248, 0.4) 0%, transparent 46%),
     linear-gradient(
       168deg,
-      #a8d4ee 0%,
-      #7eb8d4 18%,
-      #5c9b8f 38%,
-      #4d7d68 58%,
-      #5a6f5c 78%,
-      #c5d4c4 100%
+      #fbfdff 0%,
+      #f2f7fc 24%,
+      #e9f1f9 50%,
+      #dfeaf5 74%,
+      #d8e5f2 90%,
+      #eef4fb 100%
     );
   -webkit-font-smoothing: antialiased;
 }
@@ -78,8 +79,8 @@ body {
 
 .site-header {
   padding: 2.5rem 1.5rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(255, 255, 255, 0.22);
+  border-bottom: 1px solid rgba(30, 55, 85, 0.1);
+  background: rgba(255, 255, 255, 0.45);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
 }
@@ -140,13 +141,15 @@ main {
 }
 
 .notify-card {
-  background: var(--color-surface);
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  background: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
   box-shadow:
-    0 4px 24px rgba(20, 45, 35, 0.12),
-    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+    0 1px 0 rgba(255, 255, 255, 0.9) inset,
+    0 2px 4px rgba(30, 55, 85, 0.04),
+    0 12px 40px rgba(25, 55, 95, 0.12),
+    0 28px 72px rgba(20, 45, 80, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
@@ -245,12 +248,11 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(30, 55, 85, 0.1);
 }
 
 .footer-copy {
   margin: 0;
   font-size: 0.85rem;
-  color: rgba(30, 40, 32, 0.72);
-  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: var(--color-muted);
 }
