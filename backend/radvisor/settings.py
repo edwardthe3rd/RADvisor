@@ -121,9 +121,15 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    "CORS_ALLOWED_ORIGINS", "http://localhost:8081,http://localhost:19006"
-).split(",")
+CORS_ALLOWED_ORIGINS = [
+    o.strip()
+    for o in os.environ.get(
+        "CORS_ALLOWED_ORIGINS",
+        "http://localhost:8081,http://localhost:19006,"
+        "http://localhost:5500,http://127.0.0.1:5500",
+    ).split(",")
+    if o.strip()
+]
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 

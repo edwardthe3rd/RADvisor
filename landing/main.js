@@ -1,7 +1,6 @@
 (function () {
   var body = document.body;
   var form = document.getElementById("waitlist-form");
-  var fullNameInput = document.getElementById("waitlist-full-name");
   var emailInput = document.getElementById("waitlist-email");
   var messageEl = document.getElementById("waitlist-message");
 
@@ -36,7 +35,7 @@
     }
   }
 
-  if (!form || !fullNameInput || !emailInput || !messageEl) {
+  if (!form || !emailInput || !messageEl) {
     return;
   }
 
@@ -44,13 +43,7 @@
     e.preventDefault();
     setMessage("");
 
-    var fullName = fullNameInput.value.trim();
     var email = emailInput.value.trim();
-    if (!fullName) {
-      setMessage("Please enter your full name.", "is-error");
-      fullNameInput.focus();
-      return;
-    }
     if (!email) {
       setMessage("Please enter your email address.", "is-error");
       emailInput.focus();
@@ -64,9 +57,7 @@
 
     var gatewayUrl = waitlistGatewayUrl();
     var url = gatewayUrl || apiBase() + "/api/v1/waitlist/";
-    var payload = gatewayUrl
-      ? JSON.stringify({ fullName: fullName, email: email })
-      : JSON.stringify({ email: email, full_name: fullName });
+    var payload = JSON.stringify({ email: email });
 
     fetch(url, {
       method: "POST",
@@ -96,7 +87,6 @@
             msg = result.data.detail;
           }
           setMessage(msg, "is-success");
-          fullNameInput.value = "";
           emailInput.value = "";
           return;
         }
@@ -112,13 +102,26 @@
         }
         setMessage(errMsg, "is-error");
       })
-      .catch(function () {
-        setMessage(
-          gatewayUrl
-            ? "Could not reach the signup service. Check data-waitlist-notify-url or your connection."
-            : "Could not reach the server. Is the API running? Check the address in data-api-base.",
-          "is-error"
-        );
+      .catch(function (err) {
+        var baseHint =
+          "Is the API running? For local Django: cd backend && source .venv/bin/activate && python manage.py runserver 0.0.0.0:8000. ";
+        if (window.location.protocol === "file:") {
+          baseHint =
+            "Do not open this page as a file. Run: cd landing && python3 -m http.server 5500 then visit http://localhost:5500. ";
+        }
+        var corsHint =
+          "If the API is up, the browser may be blocking the request (CORS): add this page’s origin to CORS_ALLOWED_ORIGINS on the server when DEBUG is false. ";
+        var msg =
+          (gatewayUrl
+            ? "Could not reach the signup URL. Check data-waitlist-notify-url, HTTPS, and API Gateway CORS. "
+            : "Could not reach the server. " + baseHint + corsHint) +
+          "Tried: " +
+          url +
+          (err && err.message ? " (" + err.message + ")" : "");
+        setMessage(msg, "is-error");
+        if (typeof console !== "undefined" && console.warn) {
+          console.warn("Waitlist fetch failed", err);
+        }
       })
       .finally(function () {
         if (submitBtn) {

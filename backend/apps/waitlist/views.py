@@ -22,7 +22,7 @@ def _notify_owner_new_waitlist_signup(full_name: str, signup_email: str) -> None
     subject = f"RADvisor waitlist: {signup_email}"
     body = (
         "Someone signed up for the RADvisor launch waitlist.\n\n"
-        f"Full name: {full_name}\n"
+        f"Full name: {full_name or '(not provided)'}\n"
         f"Email: {signup_email}\n"
     )
     try:
