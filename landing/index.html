@@ -16,6 +16,7 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
+  <!-- For production: set data-waitlist-notify-url on body to API Gateway WaitlistNotifyEndpoint (POST). -->
   <body data-api-base="http://localhost:8000">
     <a class="skip-link" href="#main">Skip to content</a>
 
@@ -42,16 +43,29 @@
             just launch news.
           </p>
           <form id="waitlist-form" class="waitlist-form" novalidate>
-            <label class="sr-only" for="waitlist-email">Email address</label>
-            <input
-              id="waitlist-email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button type="submit" class="btn-primary">Notify me</button>
+            <div class="waitlist-form-inner">
+              <label class="sr-only" for="waitlist-full-name">Full name</label>
+              <input
+                id="waitlist-full-name"
+                name="full_name"
+                type="text"
+                autocomplete="name"
+                placeholder="Your full name"
+                required
+              />
+              <div class="waitlist-form-row">
+                <label class="sr-only" for="waitlist-email">Email address</label>
+                <input
+                  id="waitlist-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <button type="submit" class="btn-primary">Notify me</button>
+              </div>
+            </div>
           </form>
           <p id="waitlist-message" class="waitlist-message" role="status" aria-live="polite"></p>
         </div>

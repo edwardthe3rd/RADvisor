@@ -1,0 +1,71 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: RADvisor waitlist owner notify — Lambda + HTTP API (API Gateway)
+
+Parameters:
+  NotifyTo:
+    Type: String
+    Description: Inbox that receives waitlist notifications
+    Default: halickiec@gmail.com
+  FromEmail:
+    Type: String
+    Description: Verified SES From address (plain or "Name <addr@domain>")
+    Default: "RADvisor <noreply@radvisor.app>"
+
+Globals:
+  Function:
+    Timeout: 15
+    Runtime: python3.12
+    Architectures:
+      - arm64
+
+Resources:
+  WaitlistHttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: $default
+      CorsConfiguration:
+        AllowMethods:
+          - POST
+          - OPTIONS
+        AllowOrigins:
+          - "*"
+        AllowHeaders:
+          - Content-Type
+        MaxAge: 300
+
+  WaitlistNotifyFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub "${AWS::StackName}-waitlist-notify"
+      Handler: handler.handler
+      CodeUri: .
+      MemorySize: 128
+      Environment:
+        Variables:
+          NOTIFY_TO: !Ref NotifyTo
+          FROM_EMAIL: !Ref FromEmail
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - ses:SendEmail
+              Resource: "*"
+      Events:
+        NotifyPost:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref WaitlistHttpApi
+            Path: /waitlist/notify
+            Method: POST
+
+Outputs:
+  HttpApiUrl:
+    Description: API Gateway base URL (HTTP API)
+    Value: !Sub "https://${WaitlistHttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/"
+  WaitlistNotifyEndpoint:
+    Description: POST JSON body {"fullName","email"} or {"full_name","email"}
+    Value: !Sub "https://${WaitlistHttpApi}.execute-api.${AWS::Region}.${AWS::URLSuffix}/waitlist/notify"
+  WaitlistNotifyFunctionArn:
+    Description: Pass to Django as WAITLIST_NOTIFY_LAMBDA_ARN for direct invoke
+    Value: !GetAtt WaitlistNotifyFunction.Arn

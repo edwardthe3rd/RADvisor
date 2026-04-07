@@ -129,6 +129,8 @@ OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
 
 # Waitlist: notify this address when someone new joins (see apps.waitlist.views).
 WAITLIST_NOTIFY_EMAIL = os.environ.get("WAITLIST_NOTIFY_EMAIL", "halickiec@gmail.com")
+# Optional: async invoke this Lambda (full ARN) with {"fullName","email"}; uses SES inside Lambda.
+WAITLIST_NOTIFY_LAMBDA_ARN = os.environ.get("WAITLIST_NOTIFY_LAMBDA_ARN", "").strip()
 
 DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "RADvisor <noreply@radvisor.app>")
 
