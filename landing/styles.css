@@ -208,7 +208,7 @@ main {
   font: inherit;
   font-weight: 600;
   color: #fff;
-  background: var(--color-accent);
+  background: rgba(220, 38, 38, 0.69);
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -217,7 +217,7 @@ main {
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
+  background: rgba(220, 38, 38, 0.85);
 }
 
 .btn-primary:active {
