@@ -1,9 +1,10 @@
 :root {
-  --color-bg: #ffffff;
-  --color-surface: #f7f7f7;
-  --color-border: #e0e0e0;
+  /* Light surfaces (inputs, contrast on cards) */
+  --color-bg: #f6f8f6;
+  --color-surface: rgba(255, 255, 255, 0.78);
+  --color-border: rgba(35, 55, 45, 0.14);
   --color-text: #1a1a1a;
-  --color-muted: #5c5c5c;
+  --color-muted: #4a5548;
   --color-accent: #a51d24;
   --color-accent-hover: #c42831;
   --font-sans: "Roboto", system-ui, sans-serif;
@@ -29,7 +30,20 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-text);
-  background: var(--color-bg);
+  background-color: #5a7a6a;
+  background-image:
+    radial-gradient(ellipse 90% 55% at 50% -8%, rgba(255, 236, 210, 0.55) 0%, transparent 52%),
+    radial-gradient(ellipse 70% 45% at 92% 18%, rgba(186, 228, 255, 0.45) 0%, transparent 48%),
+    radial-gradient(ellipse 65% 50% at 8% 35%, rgba(255, 200, 140, 0.2) 0%, transparent 45%),
+    linear-gradient(
+      168deg,
+      #a8d4ee 0%,
+      #7eb8d4 18%,
+      #5c9b8f 38%,
+      #4d7d68 58%,
+      #5a6f5c 78%,
+      #c5d4c4 100%
+    );
   -webkit-font-smoothing: antialiased;
 }
 
@@ -64,8 +78,10 @@ body {
 
 .site-header {
   padding: 2.5rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--color-border);
-  background: var(--color-bg);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .header-inner {
@@ -125,10 +141,14 @@ main {
 
 .notify-card {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 1px solid rgba(255, 255, 255, 0.45);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 4px 24px rgba(20, 45, 35, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .notify h2 {
@@ -225,11 +245,12 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .footer-copy {
   margin: 0;
   font-size: 0.85rem;
-  color: var(--color-muted);
+  color: rgba(30, 40, 32, 0.72);
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
 }
