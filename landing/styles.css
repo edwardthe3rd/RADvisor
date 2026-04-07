@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: #d0e8ec;
 }
 
 body {
@@ -30,20 +32,21 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-text);
-  background-color: #e4f3f1;
+  background-color: #d0e8ec;
   background-image:
-    radial-gradient(ellipse 100% 55% at 50% -8%, rgba(255, 255, 255, 0.95) 0%, transparent 52%),
-    radial-gradient(ellipse 78% 46% at 92% 14%, rgba(186, 230, 253, 0.55) 0%, transparent 48%),
-    radial-gradient(ellipse 72% 50% at 8% 32%, rgba(167, 243, 208, 0.35) 0%, transparent 46%),
+    radial-gradient(ellipse 120% 70% at 50% 0%, rgba(255, 255, 255, 0.14) 0%, transparent 58%),
+    radial-gradient(ellipse 90% 55% at 92% 8%, rgba(186, 230, 253, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 88% 55% at 8% 18%, rgba(167, 243, 208, 0.2) 0%, transparent 62%),
     linear-gradient(
-      168deg,
-      #f8fdfc 0%,
-      #ecf6f5 22%,
-      #e3f2f0 48%,
-      #d8eef0 72%,
-      #d0e8ec 88%,
+      to bottom,
+      #d4eaed 0%,
+      #d2e9eb 14%,
+      #d0e8ec 32%,
+      #cfe7eb 55%,
+      #d2e9ea 72%,
       #e8f6f4 100%
     );
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 
