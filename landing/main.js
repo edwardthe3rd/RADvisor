@@ -12,7 +12,7 @@
     if (fromData && fromData.trim()) {
       return fromData.trim().replace(/\/$/, "");
     }
-    return "http://localhost:8000";
+    return "http://127.0.0.1:8000";
   }
 
   /** Full URL to API Gateway POST (…/waitlist/notify). Empty → use Django /api/v1/waitlist/ */
@@ -108,6 +108,9 @@
         if (window.location.protocol === "file:") {
           baseHint =
             "Do not open this page as a file. Run: cd landing && python3 -m http.server 5500 then visit http://localhost:5500. ";
+        } else if (window.location.protocol === "https:" && /^http:\/\//i.test(url)) {
+          baseHint =
+            "This page is HTTPS but the API URL is HTTP — the browser blocks that (mixed content). Use an HTTPS API URL, or test the landing over HTTP (e.g. local http.server, not Amplify), or proxy API under the same host. ";
         }
         var corsHint =
           "If the API is up, the browser may be blocking the request (CORS): add this page’s origin to CORS_ALLOWED_ORIGINS on the server when DEBUG is false. ";

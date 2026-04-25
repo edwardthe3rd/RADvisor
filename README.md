@@ -22,7 +22,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py seed_dev_data
-python manage.py runserver 0.0.0.0:8000
+python manage.py runserver "[::]:8000"
 ```
 
 ### Frontend
@@ -39,13 +39,15 @@ Static site in `landing/` (hero, synopsis, waitlist form). With the backend runn
 
 ```bash
 # Terminal 1: API (see Backend above)
-cd backend && source .venv/bin/activate && python manage.py runserver 0.0.0.0:8000
+cd backend && source .venv/bin/activate && python manage.py runserver "[::]:8000"
 
 # Terminal 2: landing
 cd landing && python3 -m http.server 5500
 ```
 
 Then visit `http://localhost:5500`. The form posts to `http://localhost:8000` by default (`data-api-base` on `<body>` in `landing/index.html`). For production, add your marketing site origin to `CORS_ALLOWED_ORIGINS` when `DJANGO_DEBUG` is false. Waitlist signups appear in Django admin under **Waitlist emails**.
+
+> **macOS/Safari note:** bind the dev server to `"[::]:8000"` (IPv6 dual-stack) rather than `0.0.0.0:8000`. `python3 -m http.server` listens on `::`, so Safari resolves `localhost` to `::1`; if Django is IPv4-only, the browser fails the waitlist `fetch()` with `Load failed` (connection refused on `[::1]:8000`).
 
 **Recommended (database + one email):** Leave `data-waitlist-notify-url` unset. The form POSTs to Django `/api/v1/waitlist/` with **full name** and **email**. Set `WAITLIST_NOTIFY_LAMBDA_ARN` to your Lambda’s full ARN (from `sam deploy` output **`WaitlistNotifyFunctionArn`**); Django saves the row and invokes Lambda once. Lambda sends via SES (`NOTIFY_TO`, `FROM_EMAIL` on the function). Grant the Django host `lambda:InvokeFunction` on that ARN. If the ARN is unset, Django uses `send_mail` / SMTP or the console when `DJANGO_DEBUG=True`. The Lambda code is [`infra/lambda/waitlist-notify/handler.py`](infra/lambda/waitlist-notify/handler.py). In the SES **sandbox**, verify sender and recipient; production removes the recipient restriction.
 
