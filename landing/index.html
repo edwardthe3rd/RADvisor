@@ -16,8 +16,15 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <!-- For production: set data-waitlist-notify-url on body to API Gateway WaitlistNotifyEndpoint (POST). -->
-  <body data-api-base="http://127.0.0.1:8000">
+  <!--
+    data-api-base               local dev only: where Django runs.
+    data-waitlist-notify-url    production: API Gateway WaitlistNotifyEndpoint (browser → Lambda → SES).
+                                When set (non-empty), the form posts here and bypasses Django (no DB row).
+  -->
+  <body
+    data-api-base="http://127.0.0.1:8000"
+    data-waitlist-notify-url="https://n9on65rkp2.execute-api.us-west-1.amazonaws.com/waitlist/notify"
+  >
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">

@@ -29,10 +29,16 @@ Resources:
           - POST
           - OPTIONS
         AllowOrigins:
-          - "*"
+          - "https://radvisor.app"
+          - "https://www.radvisor.app"
+          - "http://localhost:5500"
+          - "http://127.0.0.1:5500"
         AllowHeaders:
           - Content-Type
         MaxAge: 300
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 5
+        ThrottlingRateLimit: 2
 
   WaitlistNotifyFunction:
     Type: AWS::Serverless::Function
@@ -51,6 +57,9 @@ Resources:
               Action:
                 - ses:SendEmail
               Resource: "*"
+              Condition:
+                StringLike:
+                  ses:FromAddress: "*@radvisor.app"
       Events:
         NotifyPost:
           Type: HttpApi
