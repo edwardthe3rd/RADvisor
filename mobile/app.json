@@ -23,6 +23,18 @@
       },
       "package": "com.radvisor.app"
     },
+    "web": {
+      "bundler": "metro",
+      "output": "single",
+      "favicon": "./assets/icon.png",
+      "name": "RADvisor",
+      "shortName": "RADvisor",
+      "lang": "en",
+      "description": "Rent adventure gear, book local guides, and join the outdoor community.",
+      "themeColor": "#FF5A5F",
+      "backgroundColor": "#FFFFFF",
+      "display": "standalone"
+    },
     "plugins": [
       "expo-image-picker"
     ]

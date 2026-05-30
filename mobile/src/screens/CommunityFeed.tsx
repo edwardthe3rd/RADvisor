@@ -6,6 +6,7 @@ import { Ionicons } from "@expo/vector-icons";
 import api from "../api/client";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
+import { responsiveStyles } from "../theme/responsive";
 import { PostCard, EmptyState } from "../components/ui";
 
 export default function CommunityFeed() {
@@ -48,7 +49,7 @@ export default function CommunityFeed() {
         data={posts}
         keyExtractor={(item) => String(item.id)}
         renderItem={renderItem}
-        contentContainerStyle={styles.list}
+        contentContainerStyle={[styles.list, responsiveStyles.centeredContent]}
         refreshControl={<RefreshControl refreshing={isLoading} onRefresh={refetch} tintColor={colors.brand.primary} />}
         ListEmptyComponent={
           !isLoading ? (

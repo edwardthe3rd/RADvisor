@@ -4,6 +4,7 @@ export { default as Card } from "./Card";
 export { default as Avatar } from "./Avatar";
 export { default as SearchBar } from "./SearchBar";
 export { default as ListingCard } from "./ListingCard";
+export { default as BusinessCard } from "./BusinessCard";
 export { default as GuideCard } from "./GuideCard";
 export { default as PostCard } from "./PostCard";
 export { StatusBadge, Tag } from "./Badge";

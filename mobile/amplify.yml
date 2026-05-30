@@ -1,0 +1,26 @@
+# Amplify Hosting build spec for the RADvisor web app (Expo Web SPA).
+#
+# Use this for the Amplify app serving the APP SUBDOMAIN (e.g. app.radvisor.com).
+# The repo-root amplify.yml stays as-is for the marketing site (landing/) at the
+# root domain. In the app's Amplify console, set monorepo appRoot to "mobile"
+# (or point its build spec at this file) and add the SPA rewrite documented in
+# the README so client-side routes resolve on refresh/deep-link.
+#
+# Required Amplify environment variable:
+#   EXPO_PUBLIC_API_BASE_URL=https://<your-django-api-host>/api/v1
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - npm ci
+    build:
+      commands:
+        - npx expo export -p web
+  artifacts:
+    baseDirectory: dist
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

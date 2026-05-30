@@ -4,11 +4,14 @@ from . import views
 
 router = DefaultRouter()
 router.register("categories", views.CategoryViewSet, basename="category")
+router.register("businesses", views.BusinessViewSet, basename="business")
+router.register("equipment", views.EquipmentViewSet, basename="equipment")
 router.register("listings", views.GearItemViewSet, basename="listing")
 router.register("wishlists", views.WishlistViewSet, basename="wishlist")
 
 urlpatterns = [
     path("", include(router.urls)),
+    path("recommend/", views.RecommendView.as_view(), name="recommend"),
     path("listings/<int:gear_item_pk>/photos/", views.GearPhotoUploadView.as_view(), name="listing-photo-upload"),
     path("wishlist/toggle/", views.WishlistToggleView.as_view(), name="wishlist-toggle"),
     path("listings/ai-describe/", views.AIDescribeView.as_view(), name="ai-describe"),

@@ -6,15 +6,15 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
-  Dimensions,
+  useWindowDimensions,
 } from "react-native";
 import { colors } from "../../theme/colors";
 import { spacing, radius } from "../../theme/spacing";
+import { MAX_CONTENT_WIDTH } from "../../theme/responsive";
 
-const SCREEN_WIDTH = Dimensions.get("window").width;
 const CATEGORY_COUNT = 6;
-const CARD_SIZE =
-  (SCREEN_WIDTH - spacing.lg * 2 - spacing.md * (CATEGORY_COUNT - 1)) / CATEGORY_COUNT;
+/** Keep category tiles from ballooning on wide screens. */
+const CATEGORY_TILE_MAX = 96;
 
 interface Category {
   key: string;
@@ -61,6 +61,13 @@ interface CategoryStripProps {
 }
 
 export default function CategoryStrip({ selected, onSelect }: CategoryStripProps) {
+  const { width } = useWindowDimensions();
+  const contentWidth = Math.min(width, MAX_CONTENT_WIDTH);
+  const cardSize = Math.min(
+    (contentWidth - spacing.lg * 2 - spacing.md * (CATEGORY_COUNT - 1)) / CATEGORY_COUNT,
+    CATEGORY_TILE_MAX,
+  );
+
   return (
     <View style={styles.wrapper}>
       <ScrollView
@@ -75,9 +82,15 @@ export default function CategoryStrip({ selected, onSelect }: CategoryStripProps
               key={cat.key}
               activeOpacity={0.8}
               onPress={() => onSelect(active ? null : cat.key)}
-              style={styles.item}
+              style={[styles.item, { width: cardSize }]}
             >
-              <View style={[styles.imageWrap, active && styles.imageWrapActive]}>
+              <View
+                style={[
+                  styles.imageWrap,
+                  { width: cardSize, height: cardSize },
+                  active && styles.imageWrapActive,
+                ]}
+              >
                 <Image source={{ uri: cat.image }} style={styles.image} />
                 {!active && <View style={styles.overlay} />}
               </View>
@@ -100,11 +113,8 @@ const styles = StyleSheet.create({
   },
   item: {
     alignItems: "center",
-    width: CARD_SIZE,
   },
   imageWrap: {
-    width: CARD_SIZE,
-    height: CARD_SIZE,
     borderRadius: radius.lg,
     overflow: "hidden",
     borderWidth: 2,

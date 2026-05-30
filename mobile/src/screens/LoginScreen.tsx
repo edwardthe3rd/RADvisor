@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAuth } from "../contexts/AuthContext";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
+import { responsiveStyles } from "../theme/responsive";
 import { Button, Input, KeyboardView } from "../components/ui";
 
 export default function LoginScreen() {
@@ -34,7 +35,7 @@ export default function LoginScreen() {
   return (
     <KeyboardView
       style={{ backgroundColor: colors.surface.background }}
-      contentStyle={[styles.content, { paddingTop: insets.top + spacing.xxl }]}
+      contentStyle={[styles.content, responsiveStyles.formColumn, { paddingTop: insets.top + spacing.xxl }]}
     >
       <Text style={styles.title}>Welcome back</Text>
       <Text style={styles.subtitle}>Log in to your RADvisor account</Text>

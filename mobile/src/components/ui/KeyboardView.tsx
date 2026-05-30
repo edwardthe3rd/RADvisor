@@ -4,13 +4,14 @@ import {
   Platform,
   ScrollView,
   StyleSheet,
+  StyleProp,
   ViewStyle,
 } from "react-native";
 
 interface KeyboardViewProps {
   children: React.ReactNode;
-  style?: ViewStyle;
-  contentStyle?: ViewStyle;
+  style?: StyleProp<ViewStyle>;
+  contentStyle?: StyleProp<ViewStyle>;
   scrollEnabled?: boolean;
 }
 

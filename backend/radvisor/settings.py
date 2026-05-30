@@ -121,17 +121,24 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
+# Origins allowed to call the API in production. The Expo web build is served
+# from the app subdomain; override via the CORS_ALLOWED_ORIGINS env var.
 CORS_ALLOWED_ORIGINS = [
     o.strip()
     for o in os.environ.get(
         "CORS_ALLOWED_ORIGINS",
         "http://localhost:8081,http://localhost:19006,"
-        "http://localhost:5500,http://127.0.0.1:5500",
+        "http://localhost:5500,http://127.0.0.1:5500,"
+        "https://app.radvisor.com",
     ).split(",")
     if o.strip()
 ]
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+
+# Google Places API (New) key used by `sync_reno_businesses` to gather rental
+# businesses. Keep this restricted (Places API only) and out of source control.
+GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")
 
 # Waitlist: notify this address when someone new joins (see apps.waitlist.views).
 WAITLIST_NOTIFY_EMAIL = os.environ.get("WAITLIST_NOTIFY_EMAIL", "halickiec@gmail.com")

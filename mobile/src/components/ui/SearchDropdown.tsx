@@ -7,15 +7,12 @@ import {
   TouchableOpacity,
   Modal,
   Keyboard,
-  Dimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { colors } from "../../theme/colors";
 import { spacing, radius } from "../../theme/spacing";
 import { shadow } from "../../theme";
-
-const { height: SCREEN_HEIGHT } = Dimensions.get("window");
 
 type SearchTab = "Equipment" | "Guiding";
 

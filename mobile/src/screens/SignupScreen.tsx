@@ -5,6 +5,7 @@ import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAuth } from "../contexts/AuthContext";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
+import { responsiveStyles } from "../theme/responsive";
 import { Button, Input, KeyboardView } from "../components/ui";
 
 export default function SignupScreen() {
@@ -42,7 +43,7 @@ export default function SignupScreen() {
   return (
     <KeyboardView
       style={{ backgroundColor: colors.surface.background }}
-      contentStyle={[styles.content, { paddingTop: insets.top + spacing.xxl }]}
+      contentStyle={[styles.content, responsiveStyles.formColumn, { paddingTop: insets.top + spacing.xxl }]}
     >
       <Text style={styles.title}>Create account</Text>
       <Text style={styles.subtitle}>Join the RADvisor community</Text>

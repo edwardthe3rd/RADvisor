@@ -1,11 +1,12 @@
-import React, { useCallback } from "react";
-import { View, FlatList, StyleSheet, TouchableOpacity, RefreshControl } from "react-native";
+import React from "react";
+import { View, ScrollView, StyleSheet, TouchableOpacity, RefreshControl } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { useQuery } from "@tanstack/react-query";
 import { Ionicons } from "@expo/vector-icons";
 import api from "../api/client";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
+import { responsiveStyles } from "../theme/responsive";
 import { ListingCard, EmptyState } from "../components/ui";
 
 export default function MyEquipmentScreen() {
@@ -31,26 +32,13 @@ export default function MyEquipmentScreen() {
     });
   }, [nav]);
 
-  const renderItem = useCallback(
-    ({ item }: { item: any }) => (
-      <ListingCard
-        {...item}
-        fullWidth
-        onPress={() => nav.navigate("EditListing", { id: item.id })}
-      />
-    ),
-    [nav]
-  );
-
   return (
     <View style={styles.container}>
-      <FlatList
-        data={listings}
-        keyExtractor={(item: any) => String(item.id)}
-        renderItem={renderItem}
-        contentContainerStyle={styles.list}
+      <ScrollView
+        contentContainerStyle={[styles.list, responsiveStyles.centeredContent]}
         refreshControl={<RefreshControl refreshing={isLoading} onRefresh={refetch} tintColor={colors.brand.primary} />}
-        ListEmptyComponent={
+      >
+        {listings.length === 0 ? (
           !isLoading ? (
             <EmptyState
               icon="cube-outline"
@@ -60,8 +48,18 @@ export default function MyEquipmentScreen() {
               onAction={() => nav.navigate("CreateListing")}
             />
           ) : null
-        }
-      />
+        ) : (
+          <View style={responsiveStyles.grid}>
+            {listings.map((item: any) => (
+              <ListingCard
+                key={item.id}
+                {...item}
+                onPress={() => nav.navigate("EditListing", { id: item.id })}
+              />
+            ))}
+          </View>
+        )}
+      </ScrollView>
     </View>
   );
 }

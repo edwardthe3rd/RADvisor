@@ -1,11 +1,53 @@
 from rest_framework import serializers
-from .models import Category, GearItem, GearPhoto, Wishlist, WishlistItem
+from .models import Business, Category, Equipment, GearItem, GearPhoto, Wishlist, WishlistItem
 
 
 class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = ("id", "name", "slug", "group", "icon")
+
+
+class BusinessSerializer(serializers.ModelSerializer):
+    categories = CategorySerializer(many=True, read_only=True)
+    category_groups = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Business
+        fields = (
+            "id", "name", "slug", "address", "city", "state",
+            "latitude", "longitude", "phone", "website",
+            "google_rating", "google_rating_count", "price_level",
+            "hours", "photo_url", "categories", "category_groups",
+            "is_active", "last_synced_at",
+        )
+
+    def get_category_groups(self, obj) -> list[str]:
+        seen: list[str] = []
+        for cat in obj.categories.all():
+            if cat.group and cat.group not in seen:
+                seen.append(cat.group)
+        return seen
+
+
+class BusinessSummarySerializer(serializers.ModelSerializer):
+    """Lightweight business reference embedded in equipment payloads."""
+
+    class Meta:
+        model = Business
+        fields = ("id", "name", "slug", "city", "state", "phone", "website", "google_rating")
+
+
+class EquipmentSerializer(serializers.ModelSerializer):
+    business = BusinessSummarySerializer(read_only=True)
+    category = CategorySerializer(read_only=True)
+
+    class Meta:
+        model = Equipment
+        fields = (
+            "id", "name", "brand", "description", "price", "price_unit",
+            "sizes", "image_url", "is_available", "business", "category",
+        )
 
 
 class GearPhotoSerializer(serializers.ModelSerializer):

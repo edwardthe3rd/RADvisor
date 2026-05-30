@@ -33,6 +33,36 @@ npm install
 npx expo start -c
 ```
 
+### Web app (Expo Web)
+
+The `mobile/` app is the same codebase for web and native. It uses `react-native-web`, is responsive across phone/tablet/desktop, and has real URLs via the React Navigation linking config in [`mobile/src/navigation/linking.ts`](mobile/src/navigation/linking.ts) (e.g. `/explore`, `/listing/:id`).
+
+Run it in a browser locally:
+
+```bash
+cd mobile
+npx expo start --web
+```
+
+Build a production static SPA (outputs `mobile/dist/`):
+
+```bash
+cd mobile
+EXPO_PUBLIC_API_BASE_URL=https://<your-django-api-host>/api/v1 npx expo export -p web
+```
+
+**Deploy to Amplify (app subdomain).** Keep the existing root [`amplify.yml`](amplify.yml) serving `landing/` at the root domain. For the web app, create a second Amplify app on a subdomain (e.g. `app.radvisor.com`):
+
+1. Point it at this repo with monorepo `appRoot` = `mobile` (build spec: [`mobile/amplify.yml`](mobile/amplify.yml)).
+2. Set the environment variable `EXPO_PUBLIC_API_BASE_URL` to your deployed Django API (`https://.../api/v1`).
+3. Add a **SPA rewrite** under *Rewrites and redirects* so client-side routes resolve on refresh/deep-link (`output: single` produces one `index.html`):
+
+   | Source | Target | Type |
+   |--------|--------|------|
+   | `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|jpeg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|otf\|map\|json)$)([^.]+$)/>` | `/index.html` | `200 (Rewrite)` |
+
+4. Add the app origin to the API's CORS allowlist. `https://app.radvisor.com` is in the default `CORS_ALLOWED_ORIGINS` in [`backend/radvisor/settings.py`](backend/radvisor/settings.py); override the `CORS_ALLOWED_ORIGINS` env var for a different domain.
+
 ### Marketing landing
 
 Static site in `landing/` (hero, synopsis, waitlist form). With the backend running, serve the folder on another port and open `index.html` in the browser:
