@@ -12,3 +12,13 @@ export const shadow: Record<string, ViewStyle> = {
 export const theme = { colors, spacing, radius, typography, shadow };
 export type Theme = typeof theme;
 export { colors, spacing, radius, typography };
+export {
+  useResponsive,
+  getDeviceClass,
+  gridCardWidth,
+  responsiveStyles,
+  breakpoints,
+  MAX_CONTENT_WIDTH,
+  FORM_MAX_WIDTH,
+} from "./responsive";
+export type { DeviceClass, ResponsiveInfo } from "./responsive";

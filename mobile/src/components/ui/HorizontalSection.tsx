@@ -6,15 +6,14 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  Dimensions,
+  useWindowDimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../../theme/colors";
 import { spacing, radius } from "../../theme/spacing";
 
-const SCREEN_WIDTH = Dimensions.get("window").width;
-const CARD_WIDTH = SCREEN_WIDTH * 0.4;
-const CARD_IMAGE_HEIGHT = CARD_WIDTH * 1.05;
+/** Rail cards scale with width but stay readable instead of huge on desktop. */
+const RAIL_CARD_MAX = 200;
 
 interface Item {
   id: number;
@@ -35,6 +34,10 @@ interface HorizontalSectionProps {
 }
 
 function HorizontalCard({ item, onPress }: { item: Item; onPress: () => void }) {
+  const { width } = useWindowDimensions();
+  const cardWidth = Math.min(width * 0.4, RAIL_CARD_MAX);
+  const cardImageHeight = cardWidth * 1.05;
+
   const imageUri =
     (item.photos && item.photos[0]?.image) ||
     item.image_url ||
@@ -46,8 +49,12 @@ function HorizontalCard({ item, onPress }: { item: Item; onPress: () => void }) 
       : item.title;
 
   return (
-    <TouchableOpacity onPress={onPress} activeOpacity={0.9} style={cardStyles.card}>
-      <View style={cardStyles.imageWrap}>
+    <TouchableOpacity
+      onPress={onPress}
+      activeOpacity={0.9}
+      style={[cardStyles.card, { width: cardWidth }]}
+    >
+      <View style={[cardStyles.imageWrap, { width: cardWidth, height: cardImageHeight }]}>
         <Image source={{ uri: imageUri }} style={cardStyles.image} />
       </View>
       <View style={cardStyles.info}>
@@ -71,10 +78,8 @@ function HorizontalCard({ item, onPress }: { item: Item; onPress: () => void }) 
 }
 
 const cardStyles = StyleSheet.create({
-  card: { width: CARD_WIDTH, marginRight: spacing.md },
+  card: { marginRight: spacing.md },
   imageWrap: {
-    width: CARD_WIDTH,
-    height: CARD_IMAGE_HEIGHT,
     borderRadius: radius.lg,
     overflow: "hidden",
     backgroundColor: colors.surface.muted,

@@ -1,3 +1,6 @@
+# AWS SAM
+.aws-sam/
+
 # Python
 __pycache__/
 *.py[cod]
@@ -28,9 +31,6 @@ dist/
 
 # Docker
 pgdata/
-
-# Amplify CI staging (next to amplify.yml)
-.amplify-hosting/
 
 # Claude Code
 .claude/

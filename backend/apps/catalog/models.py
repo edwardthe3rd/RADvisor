@@ -25,6 +25,82 @@ class Category(models.Model):
         return self.name
 
 
+class Business(models.Model):
+    """A real outdoor-gear rental business, sourced from the Google Places API.
+
+    `google_place_id` is the stable cache/de-dupe key: ingestion upserts on it so
+    the sync command is safely re-runnable. Phase-2 equipment listings attach to
+    a Business via a foreign key.
+    """
+
+    google_place_id = models.CharField(max_length=255, unique=True)
+    name = models.CharField(max_length=200)
+    slug = models.SlugField(max_length=220, unique=True)
+    address = models.CharField(max_length=300, blank=True, default="")
+    city = models.CharField(max_length=100, blank=True, default="")
+    state = models.CharField(max_length=100, blank=True, default="")
+    latitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    longitude = models.DecimalField(max_digits=9, decimal_places=6, null=True, blank=True)
+    phone = models.CharField(max_length=40, blank=True, default="")
+    website = models.URLField(max_length=500, blank=True, default="")
+    google_rating = models.DecimalField(max_digits=2, decimal_places=1, null=True, blank=True)
+    google_rating_count = models.PositiveIntegerField(default=0)
+    # Google price level: 0 (free) - 4 (very expensive). Coarse budget proxy.
+    price_level = models.PositiveSmallIntegerField(null=True, blank=True)
+    hours = models.JSONField(default=dict, blank=True)
+    photo_url = models.URLField(max_length=500, blank=True, default="")
+    categories = models.ManyToManyField(Category, blank=True, related_name="businesses")
+    is_active = models.BooleanField(default=True)
+    last_synced_at = models.DateTimeField(null=True, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["name"]
+        verbose_name_plural = "businesses"
+
+    def __str__(self) -> str:
+        return self.name
+
+
+PRICE_UNIT_CHOICES = [
+    ("hour", "Per hour"),
+    ("half_day", "Per half day"),
+    ("day", "Per day"),
+    ("week", "Per week"),
+    ("session", "Per session"),
+]
+
+
+class Equipment(models.Model):
+    """A curated rentable item offered by a Business (Phase 2, manually entered).
+
+    Distinct from the legacy P2P `GearItem`. Powers the category -> equipment ->
+    business discovery flow and the walkthrough recommender.
+    """
+
+    business = models.ForeignKey(Business, on_delete=models.CASCADE, related_name="equipment")
+    category = models.ForeignKey(Category, on_delete=models.PROTECT, related_name="equipment")
+    name = models.CharField(max_length=200)
+    brand = models.CharField(max_length=120, blank=True, default="")
+    description = models.TextField(blank=True, default="")
+    price = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
+    price_unit = models.CharField(max_length=20, choices=PRICE_UNIT_CHOICES, default="day")
+    # Free-form size/spec hints (e.g. ["S", "M", "L"] or ["165cm", "170cm"]).
+    sizes = models.JSONField(default=list, blank=True)
+    image_url = models.URLField(max_length=500, blank=True, default="")
+    is_available = models.BooleanField(default=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["category__group", "name"]
+        verbose_name_plural = "equipment"
+
+    def __str__(self) -> str:
+        return f"{self.name} @ {self.business.name}"
+
+
 class GearItem(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="gear_items")
     title = models.CharField(max_length=200)

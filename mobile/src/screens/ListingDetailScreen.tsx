@@ -5,7 +5,7 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  Dimensions,
+  useWindowDimensions,
   ActivityIndicator,
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
@@ -15,14 +15,15 @@ import api from "../api/client";
 import { colors } from "../theme/colors";
 import { spacing, radius } from "../theme/spacing";
 import { shadow } from "../theme";
+import { MAX_CONTENT_WIDTH } from "../theme/responsive";
 import { Button, Avatar, Card } from "../components/ui";
 import { StarRating } from "../components/ui/ReviewStars";
-
-const { width: SCREEN_W } = Dimensions.get("window");
 
 export default function ListingDetailScreen() {
   const route = useRoute<any>();
   const nav = useNavigation<any>();
+  const { width } = useWindowDimensions();
+  const contentWidth = Math.min(width, MAX_CONTENT_WIDTH);
   const { id } = route.params;
 
   const { data: listing, isLoading } = useQuery({
@@ -45,18 +46,22 @@ export default function ListingDetailScreen() {
 
   return (
     <View style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.scrollContent}
+      >
+        <View style={[styles.column, { width: contentWidth }]}>
         <ScrollView
           horizontal
           pagingEnabled
           showsHorizontalScrollIndicator={false}
-          style={styles.carousel}
+          style={[styles.carousel, { width: contentWidth }]}
         >
           {images.map((img: any, i: number) => (
-            <Image key={i} source={{ uri: img.image }} style={styles.heroImage} />
+            <Image key={i} source={{ uri: img.image }} style={[styles.heroImage, { width: contentWidth }]} />
           ))}
           {images.length === 0 && (
-            <View style={[styles.heroImage, styles.placeholder]}>
+            <View style={[styles.heroImage, styles.placeholder, { width: contentWidth }]}>
               <Ionicons name="image-outline" size={48} color={colors.text.tertiary} />
             </View>
           )}
@@ -111,20 +116,23 @@ export default function ListingDetailScreen() {
             </View>
           )}
         </View>
+        </View>
       </ScrollView>
 
       <View style={[styles.footer, shadow.md]}>
-        <View>
-          <Text style={styles.price}>
-            ${parseFloat(listing.price_per_day).toFixed(0)}{" "}
-            <Text style={styles.perDay}>/ day</Text>
-          </Text>
+        <View style={[styles.footerInner, { width: contentWidth }]}>
+          <View>
+            <Text style={styles.price}>
+              ${parseFloat(listing.price_per_day).toFixed(0)}{" "}
+              <Text style={styles.perDay}>/ day</Text>
+            </Text>
+          </View>
+          <Button
+            title="Book Now"
+            onPress={() => nav.navigate("BookEquipment", { id: listing.id })}
+            size="md"
+          />
         </View>
-        <Button
-          title="Book Now"
-          onPress={() => nav.navigate("BookEquipment", { id: listing.id })}
-          size="md"
-        />
       </View>
     </View>
   );
@@ -133,8 +141,10 @@ export default function ListingDetailScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.surface.background },
   loader: { flex: 1, justifyContent: "center", alignItems: "center" },
+  scrollContent: { alignItems: "center" },
+  column: { alignSelf: "center" },
   carousel: { height: 300 },
-  heroImage: { width: SCREEN_W, height: 300 },
+  heroImage: { height: 300 },
   placeholder: {
     backgroundColor: colors.surface.muted,
     justifyContent: "center",
@@ -166,14 +176,18 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    alignItems: "center",
+    backgroundColor: colors.surface.card,
+    borderTopWidth: 1,
+    borderTopColor: colors.surface.borderLight,
+  },
+  footerInner: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: colors.surface.card,
+    alignSelf: "center",
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.lg,
-    borderTopWidth: 1,
-    borderTopColor: colors.surface.borderLight,
   },
   price: { fontSize: 20, fontWeight: "800", color: colors.text.primary },
   perDay: { fontSize: 14, fontWeight: "400", color: colors.text.secondary },

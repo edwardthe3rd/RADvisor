@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
+import { responsiveStyles } from "../theme/responsive";
 import { Button } from "../components/ui";
 
 export default function WelcomeScreen() {
@@ -18,7 +19,7 @@ export default function WelcomeScreen() {
           Rent adventure gear.{"\n"}Book local guides.{"\n"}Join the community.
         </Text>
       </View>
-      <View style={styles.actions}>
+      <View style={[styles.actions, responsiveStyles.formColumn]}>
         <Button title="Log In" onPress={() => nav.navigate("Login")} fullWidth />
         <Button
           title="Create Account"

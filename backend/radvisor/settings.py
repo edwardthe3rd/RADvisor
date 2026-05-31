@@ -36,8 +36,8 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "django.contrib.sessions.middleware.SessionMiddleware",
     "corsheaders.middleware.CorsMiddleware",
+    "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -121,8 +121,42 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
-CORS_ALLOWED_ORIGINS = os.environ.get(
-    "CORS_ALLOWED_ORIGINS", "http://localhost:8081,http://localhost:19006"
-).split(",")
+# Origins allowed to call the API in production. The Expo web build is served
+# from the app subdomain; override via the CORS_ALLOWED_ORIGINS env var.
+CORS_ALLOWED_ORIGINS = [
+    o.strip()
+    for o in os.environ.get(
+        "CORS_ALLOWED_ORIGINS",
+        "http://localhost:8081,http://localhost:19006,"
+        "http://localhost:5500,http://127.0.0.1:5500,"
+        "https://app.radvisor.com",
+    ).split(",")
+    if o.strip()
+]
 
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY", "")
+
+# Google Places API (New) key used by `sync_reno_businesses` to gather rental
+# businesses. Keep this restricted (Places API only) and out of source control.
+GOOGLE_PLACES_API_KEY = os.environ.get("GOOGLE_PLACES_API_KEY", "")
+
+# Waitlist: notify this address when someone new joins (see apps.waitlist.views).
+WAITLIST_NOTIFY_EMAIL = os.environ.get("WAITLIST_NOTIFY_EMAIL", "halickiec@gmail.com")
+# Optional: async invoke this Lambda (full ARN) with {"fullName","email"}; uses SES inside Lambda.
+WAITLIST_NOTIFY_LAMBDA_ARN = os.environ.get("WAITLIST_NOTIFY_LAMBDA_ARN", "").strip()
+
+DEFAULT_FROM_EMAIL = os.environ.get("DEFAULT_FROM_EMAIL", "RADvisor <noreply@radvisor.app>")
+
+EMAIL_BACKEND = os.environ.get(
+    "EMAIL_BACKEND",
+    (
+        "django.core.mail.backends.console.EmailBackend"
+        if DEBUG
+        else "django.core.mail.backends.smtp.EmailBackend"
+    ),
+)
+EMAIL_HOST = os.environ.get("EMAIL_HOST", "localhost")
+EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
+EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "true").lower() in ("true", "1", "yes")
+EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
+EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")

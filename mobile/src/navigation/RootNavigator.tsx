@@ -3,11 +3,11 @@ import { ActivityIndicator, View, StyleSheet } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import { Ionicons } from "@expo/vector-icons";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { useAuth } from "../contexts/AuthContext";
 import { ExploreSearchProvider, useExploreSearch } from "../contexts/ExploreSearchContext";
+import { linking } from "./linking";
 import { navigationTheme } from "../theme/navigationTheme";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
@@ -17,29 +17,27 @@ import WelcomeScreen from "../screens/WelcomeScreen";
 import LoginScreen from "../screens/LoginScreen";
 import SignupScreen from "../screens/SignupScreen";
 import EquipmentFeed from "../screens/EquipmentFeed";
-import GuidingFeed from "../screens/GuidingFeed";
-import CommunityFeed from "../screens/CommunityFeed";
+import BusinessDetailScreen from "../screens/BusinessDetailScreen";
+import ComingSoonScreen from "../screens/ComingSoonScreen";
 import ListingDetailScreen from "../screens/ListingDetailScreen";
 import GuideServiceDetailScreen from "../screens/GuideServiceDetailScreen";
 import CommunityPostDetailScreen from "../screens/CommunityPostDetailScreen";
 import BookEquipmentScreen from "../screens/BookEquipmentScreen";
 import BookGuideScreen from "../screens/BookGuideScreen";
-import WishlistsScreen from "../screens/WishlistsScreen";
 import WishlistDetailScreen from "../screens/WishlistDetailScreen";
 import MyEquipmentScreen from "../screens/MyEquipmentScreen";
 import CreateListingScreen from "../screens/CreateListingScreen";
 import EditListingScreen from "../screens/EditListingScreen";
 import CreateGuideServiceScreen from "../screens/CreateGuideServiceScreen";
-import ThreadsListScreen from "../screens/ThreadsListScreen";
 import ThreadDetailScreen from "../screens/ThreadDetailScreen";
 import ProfileScreen from "../screens/ProfileScreen";
 import EditProfileScreen from "../screens/EditProfileScreen";
-import MyTripsScreen from "../screens/MyTripsScreen";
 import BecomeGuideScreen from "../screens/BecomeGuideScreen";
 
 export type RootStackParamList = {
   Auth: undefined;
   Main: undefined;
+  BusinessDetail: { slug: string };
   ListingDetail: { id: number };
   GuideServiceDetail: { id: number };
   CommunityPostDetail: { id: number };
@@ -58,16 +56,10 @@ export type RootStackParamList = {
 const Stack = createNativeStackNavigator<RootStackParamList>();
 const AuthStack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
-const TopTab = createMaterialTopTabNavigator();
 
 function ExploreContent() {
   const insets = useSafeAreaInsets();
   const { search, setSearch } = useExploreSearch();
-  const topTabRef = React.useRef<any>(null);
-
-  const handleSearchSubmit = (query: string, tab: "Equipment" | "Guiding") => {
-    setSearch(query);
-  };
 
   return (
     <View style={exploreStyles.container}>
@@ -75,23 +67,11 @@ function ExploreContent() {
         <SearchDropdown
           value={search}
           onChangeText={setSearch}
-          onSubmit={handleSearchSubmit}
-          placeholder="Start your adventure"
+          onSubmit={(query: string) => setSearch(query)}
+          placeholder="Find outdoor gear rentals"
         />
       </View>
-      <TopTab.Navigator
-        screenOptions={{
-          tabBarActiveTintColor: colors.brand.primary,
-          tabBarInactiveTintColor: colors.text.tertiary,
-          tabBarIndicatorStyle: { backgroundColor: colors.brand.primary, height: 3 },
-          tabBarLabelStyle: { fontWeight: "600", fontSize: 13, textTransform: "none" },
-          tabBarStyle: { elevation: 0, shadowOpacity: 0 },
-        }}
-      >
-        <TopTab.Screen name="Equipment" component={EquipmentFeed} />
-        <TopTab.Screen name="Guiding" component={GuidingFeed} />
-        <TopTab.Screen name="Community" component={CommunityFeed} />
-      </TopTab.Navigator>
+      <EquipmentFeed />
     </View>
   );
 }
@@ -130,9 +110,9 @@ function MainTabs() {
       })}
     >
       <Tab.Screen name="Explore" component={ExploreTabs} />
-      <Tab.Screen name="Wishlists" component={WishlistsScreen} />
-      <Tab.Screen name="Upcoming" component={MyTripsScreen} />
-      <Tab.Screen name="Messages" component={ThreadsListScreen} />
+      <Tab.Screen name="Wishlists" component={ComingSoonScreen} />
+      <Tab.Screen name="Upcoming" component={ComingSoonScreen} />
+      <Tab.Screen name="Messages" component={ComingSoonScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>
   );
@@ -160,10 +140,23 @@ export default function RootNavigator() {
   }
 
   return (
-    <NavigationContainer theme={navigationTheme}>
+    <NavigationContainer
+      theme={navigationTheme}
+      linking={linking}
+      documentTitle={{
+        formatter: (options) =>
+          options?.title ? `${options.title} · RADvisor` : "RADvisor",
+      }}
+      fallback={
+        <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+          <ActivityIndicator size="large" color={colors.brand.primary} />
+        </View>
+      }
+    >
       <Stack.Navigator screenOptions={{ headerBackButtonDisplayMode: "minimal", headerTintColor: colors.text.primary }}>
         <Stack.Screen name="Main" component={MainTabs} options={{ headerShown: false }} />
         <Stack.Screen name="Auth" component={AuthScreens} options={{ headerShown: false }} />
+        <Stack.Screen name="BusinessDetail" component={BusinessDetailScreen} options={{ title: "" }} />
         <Stack.Screen name="ListingDetail" component={ListingDetailScreen} options={{ title: "" }} />
         <Stack.Screen name="GuideServiceDetail" component={GuideServiceDetailScreen} options={{ title: "" }} />
         <Stack.Screen name="CommunityPostDetail" component={CommunityPostDetailScreen} options={{ title: "Post" }} />

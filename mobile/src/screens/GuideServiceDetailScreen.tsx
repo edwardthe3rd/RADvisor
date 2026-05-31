@@ -5,7 +5,7 @@ import {
   Image,
   ScrollView,
   StyleSheet,
-  Dimensions,
+  useWindowDimensions,
   ActivityIndicator,
 } from "react-native";
 import { useRoute, useNavigation } from "@react-navigation/native";
@@ -15,14 +15,15 @@ import api from "../api/client";
 import { colors } from "../theme/colors";
 import { spacing } from "../theme/spacing";
 import { shadow } from "../theme";
+import { MAX_CONTENT_WIDTH } from "../theme/responsive";
 import { Button, Avatar } from "../components/ui";
 import { StarRating } from "../components/ui/ReviewStars";
-
-const { width: SCREEN_W } = Dimensions.get("window");
 
 export default function GuideServiceDetailScreen() {
   const route = useRoute<any>();
   const nav = useNavigation<any>();
+  const { width } = useWindowDimensions();
+  const contentWidth = Math.min(width, MAX_CONTENT_WIDTH);
   const { id } = route.params;
 
   const { data: service, isLoading } = useQuery({
@@ -43,9 +44,13 @@ export default function GuideServiceDetailScreen() {
 
   return (
     <View style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.scrollContent}
+      >
+        <View style={[styles.column, { width: contentWidth }]}>
         {service.photos?.[0]?.image && (
-          <Image source={{ uri: service.photos[0].image }} style={styles.cover} />
+          <Image source={{ uri: service.photos[0].image }} style={[styles.cover, { width: contentWidth }]} />
         )}
 
         <View style={styles.body}>
@@ -97,20 +102,23 @@ export default function GuideServiceDetailScreen() {
             </View>
           )}
         </View>
+        </View>
       </ScrollView>
 
       <View style={[styles.footer, shadow.md]}>
-        <View>
-          <Text style={styles.price}>
-            ${parseFloat(String(service.price_per_person ?? service.price_per_day ?? 0)).toFixed(0)}{" "}
-            <Text style={styles.perDay}>/ person</Text>
-          </Text>
+        <View style={[styles.footerInner, { width: contentWidth }]}>
+          <View>
+            <Text style={styles.price}>
+              ${parseFloat(String(service.price_per_person ?? service.price_per_day ?? 0)).toFixed(0)}{" "}
+              <Text style={styles.perDay}>/ person</Text>
+            </Text>
+          </View>
+          <Button
+            title="Book Guide"
+            onPress={() => nav.navigate("BookGuide", { id: service.id })}
+            size="md"
+          />
         </View>
-        <Button
-          title="Book Guide"
-          onPress={() => nav.navigate("BookGuide", { id: service.id })}
-          size="md"
-        />
       </View>
     </View>
   );
@@ -119,7 +127,9 @@ export default function GuideServiceDetailScreen() {
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: colors.surface.background },
   loader: { flex: 1, justifyContent: "center", alignItems: "center" },
-  cover: { width: SCREEN_W, height: 260 },
+  scrollContent: { alignItems: "center" },
+  column: { alignSelf: "center" },
+  cover: { height: 260 },
   body: { paddingHorizontal: spacing.xl, paddingTop: spacing.xl, paddingBottom: 120 },
   title: { fontSize: 24, fontWeight: "800", color: colors.text.primary, marginBottom: spacing.sm },
   metaRow: { flexDirection: "row", alignItems: "center", gap: 4, marginBottom: spacing.sm },
@@ -147,14 +157,18 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
+    alignItems: "center",
+    backgroundColor: colors.surface.card,
+    borderTopWidth: 1,
+    borderTopColor: colors.surface.borderLight,
+  },
+  footerInner: {
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: "center",
-    backgroundColor: colors.surface.card,
+    alignSelf: "center",
     paddingHorizontal: spacing.xl,
     paddingVertical: spacing.lg,
-    borderTopWidth: 1,
-    borderTopColor: colors.surface.borderLight,
   },
   price: { fontSize: 20, fontWeight: "800", color: colors.text.primary },
   perDay: { fontSize: 14, fontWeight: "400", color: colors.text.secondary },

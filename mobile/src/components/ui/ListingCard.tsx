@@ -5,14 +5,15 @@ import {
   Image,
   StyleSheet,
   TouchableOpacity,
-  Dimensions,
+  useWindowDimensions,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import { colors } from "../../theme/colors";
 import { spacing, radius } from "../../theme/spacing";
+import { getDeviceClass, gridCardWidth, MAX_CONTENT_WIDTH } from "../../theme/responsive";
 
-const SCREEN_WIDTH = Dimensions.get("window").width;
-const CARD_WIDTH = (SCREEN_WIDTH - spacing.xl * 2 - spacing.lg) / 2;
+/** Cap the single-column ("full width") card so it doesn't stretch on desktop. */
+const FULL_WIDTH_CARD_MAX = 520;
 
 interface ListingCardProps {
   id: number;
@@ -46,8 +47,14 @@ export default function ListingCard({
   wishlisted = false,
   fullWidth = false,
 }: ListingCardProps) {
-  const cardW = fullWidth ? SCREEN_WIDTH - spacing.xl * 2 : CARD_WIDTH;
-  const imgH = fullWidth ? 200 : 140;
+  const { width } = useWindowDimensions();
+  const contentWidth = Math.min(width, MAX_CONTENT_WIDTH);
+  const columns =
+    getDeviceClass(width) === "desktop" ? 4 : getDeviceClass(width) === "tablet" ? 3 : 2;
+  const cardW = fullWidth
+    ? Math.min(contentWidth - spacing.xl * 2, FULL_WIDTH_CARD_MAX)
+    : gridCardWidth(contentWidth, columns);
+  const imgH = fullWidth ? 220 : Math.round(cardW * 0.72);
   const allImages = photos || images || [];
   const imageUri = allImages[0]?.image || image_url || "https://via.placeholder.com/300";
   const displayRate = daily_rate || price_per_day || "0";

@@ -4,10 +4,13 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from django_filters.rest_framework import DjangoFilterBackend
 from django.conf import settings
+from django.db.models import Q
 
-from .models import Category, GearItem, GearPhoto, Wishlist, WishlistItem
+from .models import Business, Category, Equipment, GearItem, GearPhoto, Wishlist, WishlistItem
 from .serializers import (
+    BusinessSerializer,
     CategorySerializer,
+    EquipmentSerializer,
     GearItemListSerializer,
     GearItemDetailSerializer,
     GearItemCreateSerializer,
@@ -17,7 +20,7 @@ from .serializers import (
     AIDescribeRequestSerializer,
     AIDescribeResponseSerializer,
 )
-from .filters import GearItemFilter
+from .filters import BusinessFilter, EquipmentFilter, GearItemFilter
 
 
 class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
@@ -25,6 +28,105 @@ class CategoryViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = CategorySerializer
     permission_classes = [permissions.AllowAny]
     pagination_class = None
+
+
+class BusinessViewSet(viewsets.ReadOnlyModelViewSet):
+    """Public, read-only directory of outdoor-rental businesses (Phase 1)."""
+
+    serializer_class = BusinessSerializer
+    permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = BusinessFilter
+    search_fields = ["name", "city", "address"]
+    ordering_fields = ["google_rating", "google_rating_count", "name"]
+    ordering = ["-google_rating", "name"]
+    lookup_field = "slug"
+
+    def get_queryset(self):
+        return (
+            Business.objects.filter(is_active=True)
+            .prefetch_related("categories")
+            .distinct()
+        )
+
+
+class EquipmentViewSet(viewsets.ReadOnlyModelViewSet):
+    """Public, read-only catalog of curated equipment (Phase 2)."""
+
+    serializer_class = EquipmentSerializer
+    permission_classes = [permissions.AllowAny]
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_class = EquipmentFilter
+    search_fields = ["name", "brand", "business__name"]
+    ordering_fields = ["price", "name"]
+    ordering = ["category__group", "name"]
+
+    def get_queryset(self):
+        return (
+            Equipment.objects.filter(is_available=True, business__is_active=True)
+            .select_related("business", "category")
+        )
+
+
+class RecommendView(APIView):
+    """Walkthrough recommender (Phase 3 seed).
+
+    POST body (all optional):
+      activity     -> category slug or group keyword
+      max_price    -> upper bound on equipment price
+      max_price_level -> coarse business budget cap (0-4)
+
+    Returns matching equipment ranked by business rating, plus the businesses
+    that offer them. Skill level / duration are accepted but only used as soft
+    hints until per-item data is richer.
+    """
+
+    permission_classes = [permissions.AllowAny]
+
+    def post(self, request):
+        activity = (request.data.get("activity") or "").strip().lower()
+        max_price = request.data.get("max_price")
+        max_price_level = request.data.get("max_price_level")
+
+        equipment = (
+            Equipment.objects.filter(is_available=True, business__is_active=True)
+            .select_related("business", "category")
+        )
+
+        if activity:
+            equipment = equipment.filter(
+                Q(category__slug=activity)
+                | Q(category__group__iexact=activity)
+                | Q(category__name__icontains=activity)
+            )
+        if max_price not in (None, ""):
+            try:
+                equipment = equipment.filter(price__lte=float(max_price))
+            except (TypeError, ValueError):
+                pass
+        if max_price_level not in (None, ""):
+            try:
+                equipment = equipment.filter(business__price_level__lte=int(max_price_level))
+            except (TypeError, ValueError):
+                pass
+
+        equipment = equipment.order_by("-business__google_rating", "price")[:50]
+        eq_data = EquipmentSerializer(equipment, many=True).data
+
+        business_ids = list({e["business"]["id"] for e in eq_data if e.get("business")})
+        businesses = (
+            Business.objects.filter(id__in=business_ids)
+            .prefetch_related("categories")
+            .order_by("-google_rating")
+        )
+
+        return Response(
+            {
+                "count": len(eq_data),
+                "equipment": eq_data,
+                "businesses": BusinessSerializer(businesses, many=True).data,
+            }
+        )
 
 
 class GearItemViewSet(viewsets.ModelViewSet):

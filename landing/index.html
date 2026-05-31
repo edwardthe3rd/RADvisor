@@ -16,17 +16,32 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body data-api-base="http://localhost:8000">
+  <!--
+    data-api-base               local dev only: where Django runs.
+    data-waitlist-notify-url    production: API Gateway WaitlistNotifyEndpoint (browser → Lambda → SES).
+                                When set (non-empty), the form posts here and bypasses Django (no DB row).
+  -->
+  <body
+    data-api-base="http://127.0.0.1:8000"
+    data-waitlist-notify-url="https://n9on65rkp2.execute-api.us-west-1.amazonaws.com/waitlist/notify"
+  >
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header">
       <h1 class="sr-only">RADvisor — Real Adventures Daily</h1>
       <div class="header-inner">
-        <p class="logo-wordmark" aria-hidden="true">RADvisor</p>
+        <img
+        class="logo"
+        src="assets/header-logo.png"
+        width="6473"
+        height="3697"
+        alt=""
+        role="presentation"
+      />
       </div>
     </header>
 
-
+    <main id="main">
       <section class="section notify" aria-labelledby="notify-heading">
         <div class="notify-card">
           <h2 id="notify-heading">Get notified when we launch</h2>
@@ -35,16 +50,20 @@
             just launch news.
           </p>
           <form id="waitlist-form" class="waitlist-form" novalidate>
-            <label class="sr-only" for="waitlist-email">Email address</label>
-            <input
-              id="waitlist-email"
-              name="email"
-              type="email"
-              autocomplete="email"
-              placeholder="you@example.com"
-              required
-            />
-            <button type="submit" class="btn-primary">Notify me</button>
+            <div class="waitlist-form-inner">
+              <div class="waitlist-form-row">
+                <label class="sr-only" for="waitlist-email">Email address</label>
+                <input
+                  id="waitlist-email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="you@example.com"
+                  required
+                />
+                <button type="submit" class="btn-primary">Notify me</button>
+              </div>
+            </div>
           </form>
           <p id="waitlist-message" class="waitlist-message" role="status" aria-live="polite"></p>
         </div>
@@ -52,7 +71,7 @@
     </main>
 
     <footer class="site-footer">
-      <p class="footer-copy">&copy; RADvisor</p>
+      <p class="footer-copy">&copy; RADvisor LLC</p>
     </footer>
 
     <script src="main.js"></script>

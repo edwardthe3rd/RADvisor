@@ -1,11 +1,12 @@
 :root {
-  --color-bg: #ffffff;
-  --color-surface: #f7f7f7;
-  --color-border: #e0e0e0;
-  --color-text: #1a1a1a;
-  --color-muted: #5c5c5c;
-  --color-accent: #a51d24;
-  --color-accent-hover: #c42831;
+  /* Blue–green: cool blues with teal accents */
+  --color-bg: #ecf6f5;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-border: rgba(20, 75, 88, 0.16);
+  --color-text: #14221f;
+  --color-muted: #3d5c5a;
+  --color-accent: #0d7a72;
+  --color-accent-hover: #0f9488;
   --font-sans: "Roboto", system-ui, sans-serif;
   --radius: 12px;
   --radius-lg: 20px;
@@ -20,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: #d0e8ec;
 }
 
 body {
@@ -29,7 +32,21 @@ body {
   font-size: 1.05rem;
   line-height: 1.6;
   color: var(--color-text);
-  background: var(--color-bg);
+  background-color: #d0e8ec;
+  background-image:
+    radial-gradient(ellipse 120% 70% at 50% 0%, rgba(255, 255, 255, 0.14) 0%, transparent 58%),
+    radial-gradient(ellipse 90% 55% at 92% 8%, rgba(186, 230, 253, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 88% 55% at 8% 18%, rgba(167, 243, 208, 0.2) 0%, transparent 62%),
+    linear-gradient(
+      to bottom,
+      #d4eaed 0%,
+      #d2e9eb 14%,
+      #d0e8ec 32%,
+      #cfe7eb 55%,
+      #d2e9ea 72%,
+      #e8f6f4 100%
+    );
+  background-repeat: no-repeat;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -63,27 +80,28 @@ body {
 }
 
 .site-header {
-  padding: 2.5rem 1.5rem 2rem;
-  border-bottom: 1px solid var(--color-border);
-  background: var(--color-bg);
+  padding: 0 1.5rem 2rem;
+  border-bottom: 1px solid rgba(20, 75, 88, 0.1);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .header-inner {
-  max-width: var(--max-width);
+  max-width: none;
+  width: 100%;
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
-.logo-wordmark {
-  margin: 0;
-  font-family: var(--font-sans);
-  font-size: clamp(2.5rem, 10vw, 4.5rem);
-  font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.05;
-  color: var(--color-accent);
+.logo {
+  display: block;
+  width: min(100%, 1000px);
+  max-width: 100%;
+  height: auto;
+  background: transparent;
 }
 
 main {
@@ -126,11 +144,17 @@ main {
 }
 
 .notify-card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(20, 75, 88, 0.12);
   border-radius: var(--radius-lg);
   padding: 2rem 1.75rem;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 2px 6px rgba(20, 75, 88, 0.05),
+    0 14px 44px rgba(15, 90, 95, 0.09),
+    0 26px 64px rgba(12, 70, 78, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 }
 
 .notify h2 {
@@ -148,34 +172,47 @@ main {
 }
 
 .waitlist-form {
+  max-width: 32rem;
+}
+
+.waitlist-form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.waitlist-form-row {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
 }
 
 @media (min-width: 520px) {
-  .waitlist-form {
+  .waitlist-form-row {
     flex-direction: row;
     align-items: stretch;
-    max-width: 32rem;
   }
 }
 
+.waitlist-form input[type="text"],
 .waitlist-form input[type="email"] {
   flex: 1;
   min-width: 0;
+  width: 100%;
   padding: 0.85rem 1rem;
   font: inherit;
   color: var(--color-text);
-  background: var(--color-bg);
+  background: #fff;
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
 }
 
+.waitlist-form input[type="text"]::placeholder,
 .waitlist-form input[type="email"]::placeholder {
   color: #888;
 }
 
+.waitlist-form input[type="text"]:focus,
 .waitlist-form input[type="email"]:focus {
   outline: 2px solid var(--color-accent);
   outline-offset: 2px;
@@ -187,7 +224,7 @@ main {
   font: inherit;
   font-weight: 600;
   color: #fff;
-  background: var(--color-accent);
+  background: rgba(220, 38, 38, 0.69);
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -196,7 +233,7 @@ main {
 }
 
 .btn-primary:hover {
-  background: var(--color-accent-hover);
+  background: rgba(220, 38, 38, 0.85);
 }
 
 .btn-primary:active {
@@ -216,7 +253,7 @@ main {
 }
 
 .waitlist-message.is-success {
-  color: #1e7e34;
+  color: #0f6b52;
 }
 
 .waitlist-message.is-error {
@@ -227,7 +264,7 @@ main {
   max-width: var(--max-width);
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(20, 75, 88, 0.1);
 }
 
 .footer-copy {
