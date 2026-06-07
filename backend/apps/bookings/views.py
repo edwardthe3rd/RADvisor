@@ -2,8 +2,8 @@ from django.db import models
 from rest_framework import viewsets, permissions, status
 from rest_framework.decorators import action
 from rest_framework.response import Response
-from .models import Booking
-from .serializers import BookingSerializer
+from .models import Booking, ReservationRequest
+from .serializers import BookingSerializer, ReservationRequestSerializer
 
 
 class BookingViewSet(viewsets.ModelViewSet):
@@ -64,3 +64,32 @@ class BookingViewSet(viewsets.ModelViewSet):
         booking.status = "canceled"
         booking.save()
         return Response(BookingSerializer(booking).data)
+
+
+class ReservationRequestViewSet(viewsets.ModelViewSet):
+    """Consumer reservation requests against directory businesses.
+
+    Reservation-first: creating a request stores a lead on the user's account.
+    No owner-approval workflow and no payment (Stripe deferred).
+    """
+
+    serializer_class = ReservationRequestSerializer
+    permission_classes = [permissions.IsAuthenticated]
+    http_method_names = ["get", "post", "delete", "head", "options"]
+
+    def get_queryset(self):
+        return ReservationRequest.objects.filter(
+            user=self.request.user
+        ).select_related("business", "equipment")
+
+    @action(detail=True, methods=["post"])
+    def cancel(self, request, pk=None):
+        reservation = self.get_object()
+        if reservation.status in ("closed", "canceled"):
+            return Response(
+                {"error": "Cannot cancel this reservation."},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+        reservation.status = "canceled"
+        reservation.save()
+        return Response(ReservationRequestSerializer(reservation).data)

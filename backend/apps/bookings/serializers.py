@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Booking
+from .models import Booking, ReservationRequest
 
 
 class BookingSerializer(serializers.ModelSerializer):
@@ -39,3 +39,31 @@ class BookingSerializer(serializers.ModelSerializer):
         booking.full_clean()
         booking.save()
         return booking
+
+
+class ReservationRequestSerializer(serializers.ModelSerializer):
+    business_name = serializers.CharField(source="business.name", read_only=True)
+    business_slug = serializers.CharField(source="business.slug", read_only=True)
+    equipment_name = serializers.CharField(source="equipment.name", read_only=True, default="")
+
+    class Meta:
+        model = ReservationRequest
+        fields = (
+            "id", "business", "business_name", "business_slug",
+            "equipment", "equipment_name",
+            "start_date", "end_date", "party_size", "message",
+            "contact_email", "contact_phone", "status",
+            "created_at", "updated_at",
+        )
+        read_only_fields = ("id", "status", "created_at", "updated_at")
+
+    def create(self, validated_data):
+        request = self.context["request"]
+        user = request.user
+        validated_data["user"] = user
+        if not validated_data.get("contact_email"):
+            validated_data["contact_email"] = user.email
+        reservation = ReservationRequest(**validated_data)
+        reservation.full_clean()
+        reservation.save()
+        return reservation
