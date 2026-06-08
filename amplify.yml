@@ -1,6 +1,46 @@
+# Monorepo build spec for AWS Amplify Hosting.
+# Each Amplify app must set AMPLIFY_MONOREPO_APP_ROOT to match one appRoot below
+# (landing | web | mobile). See README.md for deploy notes per app.
 version: 1
-frontend:
-  artifacts:
-    baseDirectory: landing
-    files:
-      - '**/*'
+applications:
+  - appRoot: landing
+    frontend:
+      artifacts:
+        baseDirectory: .
+        files:
+          - '**/*'
+
+  - appRoot: web
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npm run build
+      artifacts:
+        baseDirectory: .next
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*
+          - .next/cache/**/*
+
+  - appRoot: mobile
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - npm ci
+        build:
+          commands:
+            - npx expo export -p web
+      artifacts:
+        baseDirectory: dist
+        files:
+          - '**/*'
+      cache:
+        paths:
+          - node_modules/**/*

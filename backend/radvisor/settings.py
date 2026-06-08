@@ -131,7 +131,8 @@ CORS_ALLOWED_ORIGINS = [
         "http://localhost:3000,http://127.0.0.1:3000,"
         "http://localhost:8081,http://localhost:19006,"
         "http://localhost:5500,http://127.0.0.1:5500,"
-        "https://app.radvisor.com,https://radvisor.com,https://www.radvisor.com",
+        "https://app.radvisor.com,https://radvisor.com,https://www.radvisor.com,"
+        "https://theradvisor.com,https://www.theradvisor.com",
     ).split(",")
     if o.strip()
 ]
