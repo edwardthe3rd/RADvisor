@@ -20,6 +20,49 @@ class RelevanceTests(SimpleTestCase):
     def test_rejects_retail_bike_shop(self):
         self.assertFalse(is_relevant("Joe's Bike Shop"))
 
+    def test_rejects_stopped_gear_rental_operator(self):
+        reason, slugs = evaluate_business(
+            name="Action Water Sports of Incline Village",
+            website="",
+            state="CA",
+            city="Incline Village",
+            lat=39.2510,
+            lng=-119.9530,
+            types=["marina", "sporting_goods_store"],
+            query="kayak rental",
+            source_slug="kayak",
+        )
+        self.assertEqual(reason, "excluded:stopped_gear_rental")
+        self.assertEqual(slugs, set())
+
+    def test_accepts_scheels(self):
+        reason, slugs = evaluate_business(
+            name="Scheels",
+            website="",
+            state="NV",
+            lat=39.5260,
+            lng=-119.8100,
+            types=["sporting_goods_store"],
+            query="ski rental",
+            source_slug="ski",
+        )
+        self.assertIsNone(reason)
+        self.assertIn("ski", slugs)
+
+    def test_rejects_bass_pro_shops(self):
+        reason, slugs = evaluate_business(
+            name="Bass Pro Shops",
+            website="https://www.basspro.com",
+            state="NV",
+            lat=39.5260,
+            lng=-119.8100,
+            types=["sporting_goods_store"],
+            query="outdoor gear rental",
+            source_slug="air",
+        )
+        self.assertEqual(reason, "excluded:retail_chain")
+        self.assertEqual(slugs, set())
+
     def test_classify_tags_from_curated_query(self):
         slugs = classify("Tahoe Dave's", query="ski rental", source_slug="ski")
         self.assertIn("ski", slugs)
@@ -102,6 +145,77 @@ class RelevanceTests(SimpleTestCase):
 
     def test_still_rejects_school_only(self):
         self.assertFalse(is_relevant("Reno Driving School"))
+
+    def test_rejects_bike_park(self):
+        reason, slugs = evaluate_business(
+            name="Auburn Bike Park",
+            website="",
+            state="CA",
+            city="Auburn",
+            lat=38.8966,
+            lng=-121.0769,
+            query="mountain bike rental",
+            source_slug="mountain-bike",
+        )
+        self.assertEqual(reason, "excluded:bike_park")
+        self.assertEqual(slugs, set())
+
+    def test_accepts_truckee_bike_park(self):
+        """Truckee Bike Park rents bikes — unlike municipal parks-only sites."""
+        reason, slugs = evaluate_business(
+            name="Truckee Bike Park",
+            website="",
+            state="CA",
+            city="Truckee",
+            lat=39.3280,
+            lng=-120.1833,
+            query="mountain bike rental",
+            source_slug="mountain-bike",
+        )
+        self.assertIsNone(reason)
+        self.assertIn("mountain-bike", slugs)
+
+    def test_rejects_home_medical_mobility(self):
+        reason, slugs = evaluate_business(
+            name="Accellence Home Medical",
+            website="",
+            state="NV",
+            lat=39.5296,
+            lng=-119.8138,
+            query="e-scooter rental",
+            source_slug="e-scooter",
+        )
+        self.assertEqual(reason, "excluded:home medical")
+        self.assertEqual(slugs, set())
+
+    def test_rejects_rv_rental(self):
+        reason, slugs = evaluate_business(
+            name="Western Skies RV",
+            website="",
+            state="CA",
+            lat=39.3280,
+            lng=-120.1833,
+            query="camping gear rental",
+            source_slug="camping",
+        )
+        self.assertEqual(reason, "deferred:rv")
+        self.assertEqual(slugs, set())
+
+    def test_rejects_vacation_rental_listing(self):
+        """Airbnb-style titles mention ski resorts but are not gear shops."""
+        name = "4 Mi to Downhill Ski Resort! Spacious Family Haven"
+        self.assertFalse(is_relevant(name))
+        reason, slugs = evaluate_business(
+            name=name,
+            website="",
+            state="CA",
+            lat=39.3280,
+            lng=-120.1833,
+            query="ski rental",
+            source_slug="ski",
+        )
+        self.assertEqual(reason, "excluded:vacation_rental")
+        self.assertEqual(slugs, set())
 
     def test_still_rejects_hotel_from_rental_query(self):
         reason, _slugs = evaluate_business(
