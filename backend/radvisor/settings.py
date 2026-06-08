@@ -121,15 +121,18 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOW_ALL_ORIGINS = DEBUG
-# Origins allowed to call the API in production. The Expo web build is served
-# from the app subdomain; override via the CORS_ALLOWED_ORIGINS env var.
+# Origins allowed to call the API in production. The Next.js web app proxies
+# most traffic server-side (BFF), so CORS only matters for direct client fetches.
+# The Next dev server runs on :3000; override via the CORS_ALLOWED_ORIGINS env var.
 CORS_ALLOWED_ORIGINS = [
     o.strip()
     for o in os.environ.get(
         "CORS_ALLOWED_ORIGINS",
+        "http://localhost:3000,http://127.0.0.1:3000,"
         "http://localhost:8081,http://localhost:19006,"
         "http://localhost:5500,http://127.0.0.1:5500,"
-        "https://app.radvisor.com",
+        "https://app.radvisor.com,https://radvisor.com,https://www.radvisor.com,"
+        "https://theradvisor.com,https://www.theradvisor.com",
     ).split(",")
     if o.strip()
 ]

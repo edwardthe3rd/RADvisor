@@ -56,3 +56,52 @@ class Booking(models.Model):
         self.subtotal = self.daily_rate_at_booking * days
         self.total_price = self.subtotal + self.deposit_amount_at_booking
         super().save(*args, **kwargs)
+
+
+RESERVATION_STATUS_CHOICES = [
+    ("pending", "Pending"),
+    ("contacted", "Contacted"),
+    ("confirmed", "Confirmed"),
+    ("closed", "Closed"),
+    ("canceled", "Canceled"),
+]
+
+
+class ReservationRequest(models.Model):
+    """A consumer's request to reserve gear from a directory Business.
+
+    Unlike `Booking` (legacy P2P, tied to a user-owned GearItem), directory
+    businesses are external Google-sourced records with no owner account and no
+    online payment. A reservation is a lead the signed-in user submits; it is
+    stored on their account and followed up out-of-band. No payment is taken.
+    """
+
+    user = models.ForeignKey(
+        settings.AUTH_USER_MODEL, on_delete=models.CASCADE, related_name="reservation_requests"
+    )
+    business = models.ForeignKey(
+        "catalog.Business", on_delete=models.CASCADE, related_name="reservation_requests"
+    )
+    equipment = models.ForeignKey(
+        "catalog.Equipment", on_delete=models.SET_NULL, null=True, blank=True,
+        related_name="reservation_requests",
+    )
+    start_date = models.DateField()
+    end_date = models.DateField()
+    party_size = models.PositiveSmallIntegerField(default=1)
+    message = models.TextField(blank=True, default="")
+    contact_email = models.EmailField(blank=True, default="")
+    contact_phone = models.CharField(max_length=40, blank=True, default="")
+    status = models.CharField(max_length=20, choices=RESERVATION_STATUS_CHOICES, default="pending")
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ["-created_at"]
+
+    def __str__(self) -> str:
+        return f"Reservation #{self.pk} - {self.business.name}"
+
+    def clean(self):
+        if self.end_date < self.start_date:
+            raise ValidationError("End date must be on or after start date.")

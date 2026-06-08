@@ -33,35 +33,48 @@ npm install
 npx expo start -c
 ```
 
-### Web app (Expo Web)
+### Web app (Next.js 14)
 
-The `mobile/` app is the same codebase for web and native. It uses `react-native-web`, is responsive across phone/tablet/desktop, and has real URLs via the React Navigation linking config in [`mobile/src/navigation/linking.ts`](mobile/src/navigation/linking.ts) (e.g. `/explore`, `/listing/:id`).
+The primary product is the SEO-focused web app in [`web/`](web), a Next.js 14 (App Router) site that renders the Reno/Tahoe outdoor-rental **business directory** on the server (SSR/ISR) for search visibility. It reads the unchanged Django REST API in [`backend/`](backend) and uses an httpOnly-cookie auth BFF (no JWT in client JS).
 
-Run it in a browser locally:
+**Architecture**
+
+- **Public SEO pages** (server-rendered, ISR `revalidate=3600`): `/` (discovery, grouped by category), `/category/[group]`, `/business/[slug]` (with `generateStaticParams` + `LocalBusiness` JSON-LD), `/search`. Plus `app/sitemap.ts`, `app/robots.ts`, and an `opengraph-image`.
+- **Auth BFF**: route handlers under [`web/app/api/auth/*`](web/app/api/auth) proxy Django Simple JWT login/refresh into `httpOnly` cookies (`rv_access`, `rv_refresh`). [`web/middleware.ts`](web/middleware.ts) guards `/account` and `/reserve/*`.
+- **Reservation flow** (B2C, request-to-reserve, no payment): `/reserve/[slug]` posts to the [`/api/reservations`](web/app/api/reservations) BFF, which forwards to the new Django `ReservationRequest` API (`/api/v1/reservations/`). Requests appear on `/account` and in Django admin.
+
+**Run locally**
 
 ```bash
-cd mobile
-npx expo start --web
+# Terminal 1: Django API (see Backend above), serving http://localhost:8000
+cd backend && source .venv/bin/activate && python manage.py runserver 127.0.0.1:8000
+
+# Terminal 2: Next.js web app on http://localhost:3000
+cd web
+cp .env.example .env.local   # defaults point at http://localhost:8000/api/v1
+npm install
+npm run dev
 ```
 
-Build a production static SPA (outputs `mobile/dist/`):
+Populate the directory first by running the business sync on the backend (`python manage.py sync_reno_businesses`); otherwise the discovery page shows an empty state.
+
+**Production build**
 
 ```bash
-cd mobile
-EXPO_PUBLIC_API_BASE_URL=https://<your-django-api-host>/api/v1 npx expo export -p web
+cd web
+API_BASE_URL=https://<django-api-host>/api/v1 \
+NEXT_PUBLIC_API_BASE_URL=https://<django-api-host>/api/v1 \
+NEXT_PUBLIC_SITE_URL=https://<web-host> \
+npm run build
 ```
 
-**Deploy to Amplify (app subdomain).** Keep the existing root [`amplify.yml`](amplify.yml) serving `landing/` at the root domain. For the web app, create a second Amplify app on a subdomain (e.g. `app.radvisor.com`):
+**Deploy to AWS Amplify Hosting (Next.js SSR).** Create an Amplify app pointed at this repo with monorepo `appRoot` = `web` (build spec: [`web/amplify.yml`](web/amplify.yml)). Amplify detects Next.js and provisions an SSR runtime (do **not** use a static export).
 
-1. Point it at this repo with monorepo `appRoot` = `mobile` (build spec: [`mobile/amplify.yml`](mobile/amplify.yml)).
-2. Set the environment variable `EXPO_PUBLIC_API_BASE_URL` to your deployed Django API (`https://.../api/v1`).
-3. Add a **SPA rewrite** under *Rewrites and redirects* so client-side routes resolve on refresh/deep-link (`output: single` produces one `index.html`):
+1. Set environment variables: `API_BASE_URL` and `NEXT_PUBLIC_API_BASE_URL` (your deployed Django API, `https://.../api/v1`) and `NEXT_PUBLIC_SITE_URL` (the public web origin).
+2. Point your domain (e.g. `radvisor.com`) at the Amplify app. No SPA rewrite is needed — Next.js handles routing server-side.
+3. Add the web origin to the API's CORS allowlist. `https://radvisor.com`, `https://www.radvisor.com`, and `https://app.radvisor.com` are in the default `CORS_ALLOWED_ORIGINS` in [`backend/radvisor/settings.py`](backend/radvisor/settings.py); override the `CORS_ALLOWED_ORIGINS` env var for a different domain. (Most traffic is server-side via the BFF and does not need CORS.)
 
-   | Source | Target | Type |
-   |--------|--------|------|
-   | `</^[^.]+$\|\.(?!(css\|gif\|ico\|jpg\|jpeg\|js\|png\|txt\|svg\|woff\|woff2\|ttf\|otf\|map\|json)$)([^.]+$)/>` | `/index.html` | `200 (Rewrite)` |
-
-4. Add the app origin to the API's CORS allowlist. `https://app.radvisor.com` is in the default `CORS_ALLOWED_ORIGINS` in [`backend/radvisor/settings.py`](backend/radvisor/settings.py); override the `CORS_ALLOWED_ORIGINS` env var for a different domain.
+> The legacy Expo app in [`mobile/`](mobile) is retained for the future native release. It is no longer the web target.
 
 ### Marketing landing
 
