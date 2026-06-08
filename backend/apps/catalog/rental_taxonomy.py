@@ -52,6 +52,10 @@ HARD_EXCLUDE_KEYWORDS: tuple[str, ...] = (
     "motel",
     "hostel",
     "airbnb",
+    "vrbo",
+    "homeaway",
+    "vacation rental",
+    "vacation home",
     "restaurant",
     " bar ",
     "grill",
@@ -67,6 +71,19 @@ HARD_EXCLUDE_KEYWORDS: tuple[str, ...] = (
     "hospital",
     "pharmacy",
     "gas station",
+    "home medical",
+    "medical equipment",
+    "medical supply",
+    "medical rental",
+    "durable medical",
+    "mobility scooter",
+    "power wheelchair",
+    "wheelchair rental",
+    "home health",
+    "oxygen rental",
+    "skate park",
+    "skatepark",
+    "pump track",
 )
 
 # Mixed-use names — lodging, cafe, school, etc. alongside outdoor rental.
@@ -92,6 +109,9 @@ HARD_EXCLUDE_PLACE_TYPES: tuple[str, ...] = (
     "beauty_salon",
     "real_estate_agency",
     "storage",
+    "medical_supply",
+    "doctor",
+    "physiotherapist",
 )
 
 SOFT_EXCLUDE_PLACE_TYPES: tuple[str, ...] = (
@@ -115,8 +135,9 @@ OUTDOOR_RENTAL_NAME_MARKERS: tuple[str, ...] = (
     "boat",
     "marina",
     "kayak",
-    "bike",
-    "bicycle",
+    "mountain bike",
+    "bike rental",
+    "bicycle rental",
     "outfitter",
     "rental",
     "rentals",
@@ -128,6 +149,63 @@ OUTDOOR_RENTAL_NAME_MARKERS: tuple[str, ...] = (
 )
 
 ALLOWED_STATES: tuple[str, ...] = ("NV", "CA")
+
+# Airbnb/VRBO-style property titles (often surfaced by gear-rental queries).
+VACATION_RENTAL_NAME_PATTERNS: tuple[str, ...] = (
+    "holiday rental",
+    "short term rental",
+    "short-term rental",
+    " mi to ",
+    " miles to ",
+    "sleeps ",
+    "family haven",
+    "spacious family",
+    "private retreat",
+    "lakefront cabin",
+    "mountain cabin",
+    "cozy cabin",
+    "chalet rental",
+)
+
+
+def is_vacation_rental_listing(name: str, *, website: str = "") -> bool:
+    """True for short-term home/cabin listings, not outdoor gear rental shops."""
+    blob = f"{name} {website}".lower()
+    if any(p in blob for p in VACATION_RENTAL_NAME_PATTERNS):
+        return True
+    return any(kw in blob for kw in ("vacation rental", "vacation home", "vrbo", "homeaway", "airbnb"))
+
+
+# Big-box outdoor retailers (sell gear; do not rent). REI and Scheels omitted — rent at many stores.
+RETAIL_OUTDOOR_CHAIN_NAMES: tuple[str, ...] = (
+    "bass pro",
+    "cabela's",
+    "cabelas",
+    "academy sports",
+    "dick's sporting",
+    "dicks sporting",
+    "sportsman's warehouse",
+    "sportsmans warehouse",
+    "big 5 sporting",
+)
+
+
+def is_retail_outdoor_chain(name: str, *, website: str = "") -> bool:
+    blob = f"{name} {website}".lower()
+    return any(chain in blob for chain in RETAIL_OUTDOOR_CHAIN_NAMES)
+
+
+# Known operators that no longer rent outdoor gear (may still run tours, storage, etc.).
+STOPPED_GEAR_RENTAL_NAME_PATTERNS: tuple[str, ...] = (
+    "action water sports of incline village",
+    "action watersports of incline village",
+)
+
+
+def is_stopped_gear_rental_operator(name: str, *, website: str = "") -> bool:
+    blob = f"{name} {website}".lower()
+    return any(pattern in blob for pattern in STOPPED_GEAR_RENTAL_NAME_PATTERNS)
+
 
 # Reno / Lake Tahoe is the target region; queries are scoped geographically by
 # the ingestion command's location restriction, so phrases stay generic.
@@ -209,11 +287,6 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     ),
     # --- Vehicles ---------------------------------------------------------
     CategoryDef(
-        "rv-camper", "RV & Camper Van", "Vehicles", "\U0001f69a",
-        queries=("RV rental", "camper van rental", "motorhome rental"),
-        keywords=("rv ", "motorhome", "camper van", "campervan", "recreational vehicle"),
-    ),
-    CategoryDef(
         "trailer", "Trailers", "Vehicles", "\U0001f6fb",
         queries=("utility trailer rental", "cargo trailer rental"),
         keywords=("trailer rental", "utility trailer", "cargo trailer", "equipment trailer"),
@@ -227,7 +300,7 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "e-scooter", "E-Scooter & Personal EV", "E-Transport", "\U0001f6f4",
         queries=("electric scooter rental", "e-scooter rental"),
-        keywords=("scooter", "e-scooter", "personal electric"),
+        keywords=("e-scooter", "e scooter", "electric scooter", "personal electric"),
     ),
     # --- Air / Other ------------------------------------------------------
     CategoryDef(
@@ -236,6 +309,59 @@ CATEGORIES: tuple[CategoryDef, ...] = (
         keywords=("paraglid", "hang glid", "parasail", "balloon"),
     ),
 )
+
+# RV & camper van — deferred; re-append to CATEGORIES when ready to launch.
+DEFERRED_CATEGORIES: tuple[CategoryDef, ...] = (
+    CategoryDef(
+        "rv-camper", "RV & Camper Van", "Vehicles", "\U0001f69a",
+        queries=("RV rental", "camper van rental", "motorhome rental"),
+        keywords=("rv ", "motorhome", "camper van", "campervan", "recreational vehicle"),
+    ),
+)
+
+RV_RENTAL_EXCLUDE_KEYWORDS: tuple[str, ...] = (
+    "rv rental",
+    "rv rentals",
+    "motorhome",
+    "camper van",
+    "campervan",
+    "recreational vehicle",
+    " rv ",
+    "rvs ",
+    "travel trailer rental",
+)
+
+
+def is_rv_rental_business(name: str, *, website: str = "") -> bool:
+    blob = f"{name} {website}".lower()
+    return any(kw in blob for kw in RV_RENTAL_EXCLUDE_KEYWORDS)
+
+
+# Bike parks that rent gear despite the "park" name (curated exceptions).
+RENTING_BIKE_PARK_NAMES: tuple[str, ...] = (
+    "truckee bike park",
+)
+
+BIKE_PARK_RENTAL_NAME_MARKERS: tuple[str, ...] = (
+    "rental",
+    "rentals",
+    " rent ",
+    "bike shop",
+    "cycle shop",
+    "outfitter",
+)
+
+
+def is_non_rental_bike_park(name: str, *, website: str = "") -> bool:
+    """True for municipal/skate-style bike parks that do not rent gear."""
+    blob = f"{name} {website}".lower()
+    if "bike park" not in blob and "bmx park" not in blob:
+        return False
+    if any(allowed in blob for allowed in RENTING_BIKE_PARK_NAMES):
+        return False
+    if any(marker in blob for marker in BIKE_PARK_RENTAL_NAME_MARKERS):
+        return False
+    return True
 
 
 CATEGORIES_BY_SLUG: dict[str, CategoryDef] = {c.slug: c for c in CATEGORIES}
@@ -296,6 +422,9 @@ def classify(name: str, query: str = "", source_slug: str | None = None) -> set[
     was discovered via that category's curated Google search phrase. Name-only
     keyword cross-matching avoids tagging unrelated rows from incidental query text.
     """
+    if is_vacation_rental_listing(name) or is_rv_rental_business(name):
+        return set()
+
     name_blob = (name or "").lower()
     slugs: set[str] = set()
 

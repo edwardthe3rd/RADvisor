@@ -20,6 +20,11 @@ from apps.catalog.rental_taxonomy import (
     SOFT_EXCLUDE_PLACE_TYPES,
     classify,
     is_curated_rental_query,
+    is_non_rental_bike_park,
+    is_retail_outdoor_chain,
+    is_rv_rental_business,
+    is_stopped_gear_rental_operator,
+    is_vacation_rental_listing,
     query_matches_category,
 )
 
@@ -137,6 +142,16 @@ def passes_hard_filters(
     types: list[str] | None = None,
 ) -> str | None:
     """Return rejection reason for geo-agnostic hard excludes, or None."""
+    if is_vacation_rental_listing(name, website=website):
+        return "excluded:vacation_rental"
+    if is_rv_rental_business(name, website=website):
+        return "deferred:rv"
+    if is_non_rental_bike_park(name, website=website):
+        return "excluded:bike_park"
+    if is_retail_outdoor_chain(name, website=website):
+        return "excluded:retail_chain"
+    if is_stopped_gear_rental_operator(name, website=website):
+        return "excluded:stopped_gear_rental"
     blob = _blob(name, website)
     if hit := _has_exclude_keyword(blob):
         return hit
