@@ -17,7 +17,7 @@ Each category defines:
 
 from __future__ import annotations
 
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
@@ -30,6 +30,105 @@ class CategoryDef:
     keywords: tuple[str, ...] = ()
 
 
+RENTAL_INTENT_KEYWORDS: tuple[str, ...] = (
+    "rental",
+    "rentals",
+    " rent ",
+    "rent ",
+    "rent-a-",
+    "rent a ",
+    " hire ",
+    "outfitter",
+    "outfitters",
+    "gear",
+    "equipment",
+    "sports",
+    "adventures",
+)
+
+# Always reject — clear non-rental verticals.
+HARD_EXCLUDE_KEYWORDS: tuple[str, ...] = (
+    "hotel",
+    "motel",
+    "hostel",
+    "airbnb",
+    "restaurant",
+    " bar ",
+    "grill",
+    "pizza",
+    "brewery",
+    "storage",
+    "real estate",
+    "realtor",
+    "insurance",
+    "salon",
+    "gym",
+    "church",
+    "hospital",
+    "pharmacy",
+    "gas station",
+)
+
+# Mixed-use names — lodging, cafe, school, etc. alongside outdoor rental.
+SOFT_EXCLUDE_KEYWORDS: tuple[str, ...] = (
+    "resort",
+    " lodge",
+    " inn",
+    "cafe",
+    "coffee",
+    "school",
+)
+
+EXCLUDE_KEYWORDS: tuple[str, ...] = HARD_EXCLUDE_KEYWORDS + SOFT_EXCLUDE_KEYWORDS
+
+HARD_EXCLUDE_PLACE_TYPES: tuple[str, ...] = (
+    "restaurant",
+    "bar",
+    "gas_station",
+    "hospital",
+    "pharmacy",
+    "church",
+    "gym",
+    "beauty_salon",
+    "real_estate_agency",
+    "storage",
+)
+
+SOFT_EXCLUDE_PLACE_TYPES: tuple[str, ...] = (
+    "lodging",
+    "hotel",
+    "motel",
+    "cafe",
+    "school",
+)
+
+EXCLUDE_PLACE_TYPES: tuple[str, ...] = HARD_EXCLUDE_PLACE_TYPES + SOFT_EXCLUDE_PLACE_TYPES
+
+# Name markers that override soft excludes when outdoor rental/lessons are implied.
+OUTDOOR_RENTAL_NAME_MARKERS: tuple[str, ...] = (
+    "mountain sports",
+    "sports center",
+    "ski",
+    "water ski",
+    "wakeboard",
+    "snowboard",
+    "boat",
+    "marina",
+    "kayak",
+    "bike",
+    "bicycle",
+    "outfitter",
+    "rental",
+    "rentals",
+    "gear",
+    "equipment",
+    "watercraft",
+    "paddle",
+    "campground",
+)
+
+ALLOWED_STATES: tuple[str, ...] = ("NV", "CA")
+
 # Reno / Lake Tahoe is the target region; queries are scoped geographically by
 # the ingestion command's location restriction, so phrases stay generic.
 CATEGORIES: tuple[CategoryDef, ...] = (
@@ -37,12 +136,12 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "ski", "Ski", "Snow", "\u26f7",
         queries=("ski rental", "ski rental shop", "downhill ski rental"),
-        keywords=("ski", "alpine"),
+        keywords=("ski", "skis", "alpine"),
     ),
     CategoryDef(
         "snowboard", "Snowboard", "Snow", "\U0001f3c2",
         queries=("snowboard rental", "snowboard rental shop"),
-        keywords=("snowboard", "board shop"),
+        keywords=("snowboard",),
     ),
     CategoryDef(
         "nordic", "Cross-Country & Snowshoe", "Snow", "\U0001f3d4",
@@ -84,7 +183,7 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "mountain-bike", "Mountain Bike", "Bike", "\U0001f6b5",
         queries=("mountain bike rental", "MTB rental"),
-        keywords=("mountain bike", "mtb", "bike shop", "bicycle"),
+        keywords=("mountain bike", "mtb"),
     ),
     CategoryDef(
         "road-bike", "Road & Gravel Bike", "Bike", "\U0001f6b2",
@@ -117,7 +216,7 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "trailer", "Trailers", "Vehicles", "\U0001f6fb",
         queries=("utility trailer rental", "cargo trailer rental"),
-        keywords=("trailer rental", "trailer"),
+        keywords=("trailer rental", "utility trailer", "cargo trailer", "equipment trailer"),
     ),
     CategoryDef(
         "offroad", "ATV, UTV & Off-Road", "Vehicles", "\U0001f3cd",
@@ -154,18 +253,59 @@ def all_search_queries() -> list[tuple[str, str]]:
     return pairs
 
 
-def classify(text: str, source_slug: str | None = None) -> set[str]:
+# Normalized curated queries -> category slug (every taxonomy query is rental-focused).
+_CURATED_QUERY_TO_SLUG: dict[str, str] = {
+    q.strip().lower(): slug for q, slug in all_search_queries()
+}
+
+
+def query_matches_category(query: str, slug: str | None) -> bool:
+    """True when `query` is one of the taxonomy search phrases for `slug`."""
+    if not query or not slug or slug not in CATEGORIES_BY_SLUG:
+        return False
+    normalized = query.strip().lower()
+    return normalized in {q.lower() for q in CATEGORIES_BY_SLUG[slug].queries}
+
+
+def is_curated_rental_query(query: str) -> bool:
+    """True when the place was surfaced by one of our ingestion search phrases."""
+    return query.strip().lower() in _CURATED_QUERY_TO_SLUG if query else False
+
+
+def slug_for_curated_query(query: str) -> str | None:
+    return _CURATED_QUERY_TO_SLUG.get(query.strip().lower()) if query else None
+
+
+def _has_rental_intent_in_name(name: str) -> bool:
+    blob = f" {(name or '').lower()} "
+    lowered = (name or "").lower()
+    return any(kw in blob or kw.strip() in lowered for kw in RENTAL_INTENT_KEYWORDS)
+
+
+def _name_matches_category(name: str, cat: CategoryDef) -> bool:
+    blob = (name or "").lower()
+    if any(kw in blob for kw in cat.keywords):
+        return True
+    return _has_rental_intent_in_name(name)
+
+
+def classify(name: str, query: str = "", source_slug: str | None = None) -> set[str]:
     """Tag a business with category slugs.
 
-    `text` should be a lowercased blob of the business name plus the search query
-    that surfaced it. `source_slug` is the category whose query found the place and
-    is always included (it is the strongest signal).
+    Applies `source_slug` when the name matches that category or when the business
+    was discovered via that category's curated Google search phrase. Name-only
+    keyword cross-matching avoids tagging unrelated rows from incidental query text.
     """
-    blob = (text or "").lower()
+    name_blob = (name or "").lower()
     slugs: set[str] = set()
+
     if source_slug and source_slug in CATEGORIES_BY_SLUG:
-        slugs.add(source_slug)
+        cat = CATEGORIES_BY_SLUG[source_slug]
+        if _name_matches_category(name, cat) or query_matches_category(query, source_slug):
+            slugs.add(source_slug)
+
     for cat in CATEGORIES:
-        if any(kw in blob for kw in cat.keywords):
+        if any(kw in name_blob for kw in cat.keywords):
             slugs.add(cat.slug)
+
     return slugs

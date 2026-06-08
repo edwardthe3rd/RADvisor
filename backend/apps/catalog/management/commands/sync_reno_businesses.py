@@ -13,11 +13,14 @@ Usage:
     export GOOGLE_PLACES_API_KEY=...        # restricted key
     python manage.py sync_reno_businesses --dry-run
     python manage.py sync_reno_businesses
+    python manage.py prune_reno_businesses --dry-run   # clean existing rows
 """
 
 from __future__ import annotations
 
+import json
 import time
+from collections import Counter
 from decimal import Decimal
 
 import requests
@@ -26,15 +29,12 @@ from django.core.management.base import BaseCommand, CommandError
 from django.utils import timezone
 from django.utils.text import slugify
 
+from apps.catalog.business_filters import evaluate_business, region_diagnostic
+from apps.catalog.geo import SEARCH_CENTER_LAT, SEARCH_CENTER_LNG, search_viewport_payload
 from apps.catalog.models import Business, Category
-from apps.catalog.rental_taxonomy import all_search_queries, classify
+from apps.catalog.rental_taxonomy import all_search_queries
 
 PLACES_SEARCH_URL = "https://places.googleapis.com/v1/places:searchText"
-
-# Default search center: downtown Reno, NV. 50 km reaches most of the Tahoe basin.
-RENO_LAT = 39.5296
-RENO_LNG = -119.8138
-DEFAULT_RADIUS_M = 50000.0
 
 FIELD_MASK = ",".join(
     [
@@ -50,8 +50,35 @@ FIELD_MASK = ",".join(
         "places.websiteUri",
         "places.regularOpeningHours",
         "places.businessStatus",
+        "places.primaryType",
+        "places.types",
     ]
 )
+
+def _places_api_key_error(exc: requests.RequestException) -> str | None:
+    """Return a short fatal error message when the API key is invalid or missing."""
+    resp = getattr(exc, "response", None)
+    if resp is None:
+        return None
+    try:
+        payload = resp.json()
+    except (json.JSONDecodeError, ValueError):
+        return None
+    err = payload.get("error") or {}
+    message = (err.get("message") or "").lower()
+    details = err.get("details") or []
+    reasons = {
+        (d.get("reason") or "")
+        for d in details
+        if isinstance(d, dict) and d.get("@type", "").endswith("ErrorInfo")
+    }
+    if "API_KEY_INVALID" in reasons or "api key" in message or "unregistered callers" in message:
+        return (
+            "Google Places API key is invalid or expired. Create a new key in Google Cloud "
+            "Console (enable Places API New), then export GOOGLE_PLACES_API_KEY and retry."
+        )
+    return None
+
 
 _PRICE_LEVEL_MAP = {
     "PRICE_LEVEL_FREE": 0,
@@ -68,9 +95,18 @@ class Command(BaseCommand):
     def add_arguments(self, parser):
         parser.add_argument("--dry-run", action="store_true", help="Preview without writing to the DB.")
         parser.add_argument("--max-pages", type=int, default=2, help="Max Text Search pages per query (cost cap).")
-        parser.add_argument("--radius", type=float, default=DEFAULT_RADIUS_M, help="Search radius in meters (<=50000).")
-        parser.add_argument("--lat", type=float, default=RENO_LAT)
-        parser.add_argument("--lng", type=float, default=RENO_LNG)
+        parser.add_argument(
+            "--lat",
+            type=float,
+            default=SEARCH_CENTER_LAT,
+            help="Google search center latitude (does not change SERVICE_REGION box).",
+        )
+        parser.add_argument(
+            "--lng",
+            type=float,
+            default=SEARCH_CENTER_LNG,
+            help="Google search center longitude (does not change SERVICE_REGION box).",
+        )
 
     def handle(self, *args, **options):
         api_key = settings.GOOGLE_PLACES_API_KEY
@@ -79,44 +115,97 @@ class Command(BaseCommand):
                 "GOOGLE_PLACES_API_KEY is not set. Export it (see backend/.env.example) and retry."
             )
 
-        radius = min(float(options["radius"]), 50000.0)
         max_pages = max(1, int(options["max_pages"]))
         dry_run = options["dry_run"]
 
-        # place_id -> {"place": <raw>, "slugs": set()}
+        # place_id -> {"place": <raw>, "slugs": set(), "query": str, "source_slug": str}
         found: dict[str, dict] = {}
+        rejected: list[tuple[str, str, str]] = []
+        reject_counts: Counter[str] = Counter()
         query_count = 0
 
         for query, source_slug in all_search_queries():
             query_count += 1
             try:
-                places = self._search(api_key, query, options["lat"], options["lng"], radius, max_pages)
+                places = self._search(api_key, query, options["lat"], options["lng"], max_pages)
             except requests.RequestException as exc:
+                if key_err := _places_api_key_error(exc):
+                    raise CommandError(key_err) from exc
                 self.stderr.write(self.style.ERROR(f"  ! '{query}' failed: {exc}"))
                 continue
 
+            accepted_this_query = 0
             for place in places:
                 pid = place.get("id")
                 if not pid:
                     continue
-                entry = found.setdefault(pid, {"place": place, "slugs": set()})
-                entry["place"] = place
                 name = (place.get("displayName") or {}).get("text", "")
-                entry["slugs"].update(classify(f"{name} {query}", source_slug))
+                comp = self._address_parts(place.get("addressComponents", []))
+                loc = place.get("location") or {}
+                lat = loc.get("latitude")
+                lng = loc.get("longitude")
+                website = place.get("websiteUri") or ""
 
-            self.stdout.write(f"  {query!r}: {len(places)} results (running unique: {len(found)})")
+                reason, slugs = evaluate_business(
+                    name=name,
+                    website=website,
+                    state=comp.get("state", ""),
+                    city=comp.get("city", ""),
+                    county=comp.get("county", ""),
+                    address=(place.get("formattedAddress") or ""),
+                    lat=lat,
+                    lng=lng,
+                    types=place.get("types"),
+                    business_status=place.get("businessStatus"),
+                    query=query,
+                    source_slug=source_slug,
+                )
+                if reason:
+                    reject_counts[reason] += 1
+                    geo = region_diagnostic(
+                        lat,
+                        lng,
+                        city=comp.get("city", ""),
+                        county=comp.get("county", ""),
+                        state=comp.get("state", ""),
+                        address=(place.get("formattedAddress") or ""),
+                    )
+                    rejected.append((name or "?", reason, geo))
+                    continue
+
+                accepted_this_query += 1
+                entry = found.setdefault(
+                    pid,
+                    {"place": place, "slugs": set(), "query": query, "source_slug": source_slug},
+                )
+                entry["place"] = place
+                entry["slugs"].update(slugs)
+
+            self.stdout.write(
+                f"  {query!r}: {len(places)} raw, {accepted_this_query} passed filter "
+                f"(running unique: {len(found)})"
+            )
 
         self.stdout.write(
             self.style.HTTP_INFO(
-                f"\n{query_count} queries -> {len(found)} unique businesses."
+                f"\n{query_count} queries -> {len(found)} accepted, {len(rejected)} rejected."
             )
         )
+        if reject_counts:
+            self.stdout.write("Rejections: " + ", ".join(f"{k}={v}" for k, v in reject_counts.most_common()))
 
         if dry_run:
-            for pid, entry in sorted(found.items(), key=lambda kv: (kv[1]["place"].get("displayName") or {}).get("text", "")):
+            for pid, entry in sorted(
+                found.items(),
+                key=lambda kv: (kv[1]["place"].get("displayName") or {}).get("text", ""),
+            ):
                 name = (entry["place"].get("displayName") or {}).get("text", "?")
                 slugs = ", ".join(sorted(entry["slugs"])) or "(uncategorized)"
-                self.stdout.write(f"   - {name}  [{slugs}]")
+                self.stdout.write(self.style.SUCCESS(f"   + {name}  [{slugs}]"))
+            for name, reason, geo in sorted(rejected, key=lambda r: r[0])[:100]:
+                self.stdout.write(self.style.WARNING(f"   - {name}  ({reason}; {geo})"))
+            if len(rejected) > 100:
+                self.stdout.write(f"   ... and {len(rejected) - 100} more rejections")
             self.stdout.write(self.style.WARNING("\nDry run: nothing written."))
             return
 
@@ -140,21 +229,23 @@ class Command(BaseCommand):
 
         self.stdout.write(
             self.style.SUCCESS(
-                f"Done. {created} created, {updated} updated. Total businesses: {Business.objects.count()}."
+                f"Done. {created} created, {updated} updated. "
+                f"Active businesses: {Business.objects.filter(is_active=True).count()}."
             )
         )
 
-    def _search(self, api_key, text_query, lat, lng, radius, max_pages):
+    def _search(self, api_key, text_query, lat, lng, max_pages):
         headers = {
             "Content-Type": "application/json",
             "X-Goog-Api-Key": api_key,
             "X-Goog-FieldMask": FIELD_MASK + ",nextPageToken",
         }
+        # locationBias (not locationRestriction): Google only allows restriction for
+        # categorical queries ("restaurants"); rental phrases are non-categorical.
+        # We enforce SERVICE_REGION in evaluate_business after fetch.
         body = {
             "textQuery": text_query,
-            "locationBias": {
-                "circle": {"center": {"latitude": lat, "longitude": lng}, "radius": radius}
-            },
+            "locationBias": search_viewport_payload(),
             "pageSize": 20,
         }
         results: list[dict] = []
@@ -162,14 +253,21 @@ class Command(BaseCommand):
         for page in range(max_pages):
             if page_token:
                 body["pageToken"] = page_token
+            else:
+                body.pop("pageToken", None)
             resp = requests.post(PLACES_SEARCH_URL, headers=headers, json=body, timeout=20)
-            resp.raise_for_status()
+            if not resp.ok:
+                detail = resp.text.strip()[:500] or resp.reason
+                raise requests.HTTPError(
+                    f"{resp.status_code} {resp.reason}: {detail}",
+                    response=resp,
+                )
             data = resp.json()
             results.extend(data.get("places", []))
             page_token = data.get("nextPageToken")
             if not page_token:
                 break
-            time.sleep(1.0)  # small courtesy delay between pages
+            time.sleep(1.0)
         return results
 
     def _upsert(self, place, pid):
@@ -192,6 +290,7 @@ class Command(BaseCommand):
             "google_rating_count": int(place.get("userRatingCount") or 0),
             "price_level": _PRICE_LEVEL_MAP.get(place.get("priceLevel")),
             "hours": {"weekday": hours} if hours else {},
+            "is_active": True,
             "last_synced_at": timezone.now(),
         }
         return Business.objects.update_or_create(google_place_id=pid, defaults=defaults)
@@ -203,6 +302,8 @@ class Command(BaseCommand):
             types = c.get("types", [])
             if "locality" in types:
                 out["city"] = (c.get("longText") or c.get("shortText") or "")[:100]
+            elif "administrative_area_level_2" in types:
+                out["county"] = (c.get("longText") or c.get("shortText") or "")[:100]
             elif "administrative_area_level_1" in types:
                 out["state"] = (c.get("shortText") or c.get("longText") or "")[:100]
         return out
