@@ -23,13 +23,13 @@ prefer solutions that ship fast and preserve runway.
 
 ## Migration context
 
-The repo currently contains a legacy Django + SQLite/PostgreSQL backend 
-(`backend/`, `sync_reno_businesses`). This is transitional infrastructure 
-only. **Do not extend it, pattern-match against it, or treat it as 
-authoritative for architecture decisions.** The target stack is Next.js 14 
-App Router + Supabase (Postgres) as defined in `instructions/00_overview.md`. 
-All new code goes in `web/`. Schema authority is `instructions/01_data_model.md`, 
-not the Django models.
+The migration to Next.js 14 App Router + Supabase is **complete**: `web/`
+reads exclusively from Supabase (anon key + RLS for consumer pages, service
+role for `/admin` server actions). The legacy Django backend (`backend/`,
+`sync_reno_businesses`) remains only as the Google Places data pipeline that
+feeds `supabase/seed/`. **Do not extend it, pattern-match against it, or
+treat it as authoritative.** All new code goes in `web/`. Schema authority is
+`instructions/01_data_model.md`, mirrored by `supabase/migrations/`.
 
 ## Read first
 
@@ -44,9 +44,6 @@ Before non-trivial work, consult `instructions/`:
 - `instructions/06_operator_dashboard.md` — admin dashboard spec
 - `instructions/07_api_strategy.md` — inventory sync strategy
 - `instructions/08_merch.md` — merch spec (Phase 2, stub only)
-- `instructions/local_dev.md` — env, sync_reno_businesses, prune, local apps
-- `instructions/production_directory.md` — theradvisor.com, API deploy, prod sync
-- `instructions/amplify_and_landing.md` — Amplify monorepo, waitlist/Lambda
 
 `README.md` is public GitHub documentation only. Operational detail belongs in `instructions/`.
 
@@ -54,22 +51,26 @@ Before non-trivial work, consult `instructions/`:
 
 | Path | Role |
 |------|------|
-| `backend/apps/catalog/` | Business model, Google sync, filters (`rental_taxonomy.py`, `business_filters.py`, `geo.py`) |
-| `web/` | Next.js SSR directory; Amplify `AMPLIFY_MONOREPO_APP_ROOT=web` |
-| `mobile/` | Expo marketplace (Phase 2+ features) |
+| `web/` | Next.js 14 + Supabase app — all product code; Amplify `AMPLIFY_MONOREPO_APP_ROOT=web` |
+| `web/lib/config/` | Static config: categories taxonomy, geo, quiz steps, locations |
+| `web/lib/search/buildQuery.ts` | Shared Filters type + Supabase query builder (search/browse/quiz) |
+| `supabase/migrations/` | Schema (mirrors `01_data_model.md`) |
+| `supabase/seed/` | `export_django.py` (Django → JSON) and `import.ts` (JSON → Supabase) |
+| `backend/apps/catalog/` | Legacy Google sync pipeline (`rental_taxonomy.py`, `business_filters.py`, `geo.py`) |
+| `mobile/` | Expo marketplace (parked, Phase 2+) |
 | `landing/` | Static marketing + waitlist form |
 | `infra/lambda/waitlist-notify/` | SES waitlist email Lambda (SAM) |
 
 ## Conventions
 
 - Minimize scope; match existing patterns in the app you are editing.
-- Never commit `.env`, API keys, or secrets.
-- Rental **businesses** come from `sync_reno_businesses`, not `seed_dev_data`.
-- Local dev uses SQLite by default; production uses PostgreSQL — sync must run on the prod host for the live site.
-- Filter changes: update `rental_taxonomy.py` / `business_filters.py`, add tests in `test_rental_relevance.py`, then dry-run sync + prune.
-- Bind Django dev server to `"[::]:8000"` on macOS (Safari/localhost IPv6).
+- Never commit `.env`, API keys, or secrets; never expose `SUPABASE_SERVICE_ROLE_KEY` or use it outside server actions.
+- Categories are stable `snake_case` slugs from `web/lib/config/categories.ts` — never invent new ones in code.
+- `quantity_available = null` means "unknown", never zero; never imply real-time availability (Tier 1 posture, `07_api_strategy.md`).
+- Operator data refresh: run `supabase/seed/export_django.py` then `supabase/seed/import.ts` (idempotent upserts on slug).
+- Sync-filter changes still live in the Django pipeline: `rental_taxonomy.py` / `business_filters.py` + `test_rental_relevance.py`.
 
 ## Common pitfalls
 
-- theradvisor.com empty while local works → production API missing or `API_BASE_URL` unset in Amplify; local sync does not feed prod.
-- Homepage shows “No rental businesses yet” on API errors too (`web/app/page.tsx` catch block) — verify prod API with `curl` before blaming filters.
+- Empty site → check `NEXT_PUBLIC_SUPABASE_URL` / `NEXT_PUBLIC_SUPABASE_ANON_KEY` in Amplify env; the data layer returns empty arrays on query errors by design.
+- `/admin` writes fail → `SUPABASE_SERVICE_ROLE_KEY` or `ADMIN_SECRET` missing from server env.

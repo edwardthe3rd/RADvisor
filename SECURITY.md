@@ -20,8 +20,9 @@
 ## Next.js (web)
 
 - Security headers set globally in `next.config.mjs` (HSTS, nosniff, frame-deny, referrer policy, permissions policy); `X-Powered-By` disabled.
-- Auth JWTs live in `httpOnly`, `secure` (in prod), `SameSite=Lax` cookies — never in `localStorage` or client JS.
-- Calls to Django for protected data go through server-side route handlers (BFF pattern); tokens never reach the browser.
+- No consumer accounts in v1 (out of scope per `instructions/00_overview.md` §7) — no session handling on public pages.
+- `/admin` is gated by `ADMIN_SECRET` (server env): the login action compares with a constant-time check and issues an `httpOnly`, `secure` (in prod), `SameSite=Lax` cookie containing a hash of the secret, scoped to `/admin`. All admin mutations re-assert the cookie server-side.
+- `/admin` is `noindex` and disallowed in robots.txt.
 
 ## Supabase
 

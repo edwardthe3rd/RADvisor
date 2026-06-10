@@ -1,0 +1,14 @@
+# Django REST API base. Used server-side (SSR + auth BFF route handlers).
+API_BASE_URL=http://localhost:8000/api/v1
+
+# Same API base, exposed to the browser for client-side fetches.
+# In production this origin must be in the Django CORS_ALLOWED_ORIGINS allowlist.
+NEXT_PUBLIC_API_BASE_URL=http://localhost:8000/api/v1
+
+# Public site origin (used for canonical URLs, sitemap, OpenGraph).
+NEXT_PUBLIC_SITE_URL=http://localhost:3000
+
+# Supabase
+NEXT_PUBLIC_SUPABASE_URL=https://<project-ref>.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<anon-key>
+# SUPABASE_SERVICE_ROLE_KEY=<service-role-key — server-side only, never expose to client>
