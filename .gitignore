@@ -20,6 +20,8 @@ dist/
 
 # Environment
 .env
+.env.local
+.env*.local
 !.env.example
 
 # IDE

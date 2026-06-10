@@ -7,6 +7,7 @@ from django.conf import settings
 from django.core.mail import send_mail
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
+from rest_framework.throttling import ScopedRateThrottle
 
 from .models import WaitlistEmail
 from .serializers import WaitlistSignupSerializer
@@ -66,6 +67,8 @@ def _notify_owner(full_name: str, signup_email: str) -> None:
 class WaitlistSignupView(generics.GenericAPIView):
     permission_classes = [permissions.AllowAny]
     serializer_class = WaitlistSignupSerializer
+    throttle_classes = [ScopedRateThrottle]
+    throttle_scope = "waitlist"
 
     def post(self, request, *args, **kwargs):
         serializer = self.get_serializer(data=request.data)
