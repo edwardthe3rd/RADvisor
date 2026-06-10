@@ -2,16 +2,42 @@ import os
 from pathlib import Path
 from datetime import timedelta
 
+from django.core.exceptions import ImproperlyConfigured
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.environ.get(
-    "DJANGO_SECRET_KEY",
-    "django-insecure-dev-key-change-in-production",
-)
+# Load backend/.env for local runs (docker-compose and prod inject real env
+# vars, which always win — override=False).
+try:
+    from dotenv import load_dotenv
 
-DEBUG = os.environ.get("DJANGO_DEBUG", "True").lower() in ("true", "1", "yes")
+    load_dotenv(BASE_DIR / ".env", override=False)
+except ImportError:
+    pass
 
-ALLOWED_HOSTS = os.environ.get("DJANGO_ALLOWED_HOSTS", "*").split(",")
+_INSECURE_DEV_KEY = "django-insecure-dev-key-change-in-production"
+
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", _INSECURE_DEV_KEY)
+
+DEBUG = os.environ.get("DJANGO_DEBUG", "False").lower() in ("true", "1", "yes")
+
+if not DEBUG and SECRET_KEY == _INSECURE_DEV_KEY:
+    raise ImproperlyConfigured(
+        "DJANGO_SECRET_KEY must be set to a strong unique value when DJANGO_DEBUG is off."
+    )
+
+ALLOWED_HOSTS = [
+    h.strip()
+    for h in os.environ.get(
+        "DJANGO_ALLOWED_HOSTS",
+        "localhost,127.0.0.1" if DEBUG else "",
+    ).split(",")
+    if h.strip()
+]
+if not DEBUG and not ALLOWED_HOSTS:
+    raise ImproperlyConfigured(
+        "DJANGO_ALLOWED_HOSTS must be set when DJANGO_DEBUG is off."
+    )
 
 INSTALLED_APPS = [
     "django.contrib.admin",
@@ -112,6 +138,15 @@ REST_FRAMEWORK = {
     ],
     "DEFAULT_PAGINATION_CLASS": "radvisor.pagination.StandardPagination",
     "PAGE_SIZE": 20,
+    "DEFAULT_THROTTLE_CLASSES": [
+        "rest_framework.throttling.AnonRateThrottle",
+        "rest_framework.throttling.UserRateThrottle",
+    ],
+    "DEFAULT_THROTTLE_RATES": {
+        "anon": os.environ.get("THROTTLE_ANON", "100/min"),
+        "user": os.environ.get("THROTTLE_USER", "300/min"),
+        "waitlist": os.environ.get("THROTTLE_WAITLIST", "10/hour"),
+    },
 }
 
 SIMPLE_JWT = {
@@ -163,3 +198,22 @@ EMAIL_PORT = int(os.environ.get("EMAIL_PORT", "587"))
 EMAIL_USE_TLS = os.environ.get("EMAIL_USE_TLS", "true").lower() in ("true", "1", "yes")
 EMAIL_HOST_USER = os.environ.get("EMAIL_HOST_USER", "")
 EMAIL_HOST_PASSWORD = os.environ.get("EMAIL_HOST_PASSWORD", "")
+
+# Browser security headers (set by SecurityMiddleware in all environments).
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_REFERRER_POLICY = "strict-origin-when-cross-origin"
+X_FRAME_OPTIONS = "DENY"
+
+# Production TLS/cookie hardening. App runs behind a TLS-terminating proxy
+# (Amplify/ALB), so trust X-Forwarded-Proto for the https check.
+if not DEBUG:
+    SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+    # Set DJANGO_SECURE_SSL_REDIRECT=false only if the proxy already forces https.
+    SECURE_SSL_REDIRECT = os.environ.get(
+        "DJANGO_SECURE_SSL_REDIRECT", "true"
+    ).lower() in ("true", "1", "yes")
+    SESSION_COOKIE_SECURE = True
+    CSRF_COOKIE_SECURE = True
+    SECURE_HSTS_SECONDS = 60 * 60 * 24 * 30  # 30 days; raise once stable
+    SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+    SECURE_HSTS_PRELOAD = False
