@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
-import { getBusinesses } from "@/lib/api";
-import { GROUP_ORDER, groupToSlug } from "@/lib/format";
+import { CATEGORIES } from "@/lib/config/categories";
+import { getAllOperatorSlugs } from "@/lib/data";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000";
 
@@ -10,25 +10,21 @@ export const revalidate = 3600;
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const staticEntries: MetadataRoute.Sitemap = [
     { url: `${siteUrl}/`, changeFrequency: "daily", priority: 1 },
-    ...GROUP_ORDER.map((g) => ({
-      url: `${siteUrl}/category/${groupToSlug(g)}`,
+    { url: `${siteUrl}/find`, changeFrequency: "monthly", priority: 0.7 },
+    ...CATEGORIES.map((c) => ({
+      url: `${siteUrl}/discover/${c.slug}`,
       changeFrequency: "weekly" as const,
       priority: 0.8,
     })),
   ];
 
-  let businessEntries: MetadataRoute.Sitemap = [];
-  try {
-    const businesses = await getBusinesses();
-    businessEntries = businesses.map((b) => ({
-      url: `${siteUrl}/business/${b.slug}`,
-      lastModified: b.last_synced_at ? new Date(b.last_synced_at) : undefined,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    }));
-  } catch {
-    // If the API is down at generation time, still return the static entries.
-  }
+  const operators = await getAllOperatorSlugs();
+  const operatorEntries: MetadataRoute.Sitemap = operators.map((o) => ({
+    url: `${siteUrl}/operators/${o.slug}`,
+    lastModified: o.updated_at ? new Date(o.updated_at) : undefined,
+    changeFrequency: "weekly",
+    priority: 0.6,
+  }));
 
-  return [...staticEntries, ...businessEntries];
+  return [...staticEntries, ...operatorEntries];
 }

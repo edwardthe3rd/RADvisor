@@ -1,63 +1,45 @@
 # RADvisor
 
-Marketplace for outdoor adventure equipment rentals, guided experiences, and community — with a public rental-business directory for Reno & Lake Tahoe.
+Discovery platform connecting outdoor enthusiasts with gear-rental operators in the Reno–Tahoe region — every rental operator within 50 miles of Reno, browsable by category, guided quiz, and search.
 
 ## Repo
 
 | Path | What |
 |------|------|
-| [`backend/`](backend/) | Django REST API |
-| [`web/`](web/) | Next.js directory site ([theradvisor.com](https://theradvisor.com)) |
-| [`mobile/`](mobile/) | Expo app (iOS, Android, web) |
-| [`landing/`](landing/) | Marketing site and waitlist |
+| [`web/`](web/) | Next.js 14 + Supabase app ([theradvisor.com](https://theradvisor.com)) — **all product code lives here** |
+| [`supabase/`](supabase/) | SQL migrations (schema source of truth) and seed scripts |
+| [`instructions/`](instructions/) | Product specs — scope, data model, feature contracts |
+| [`backend/`](backend/) | Legacy Django API — transitional; used only as the Google Places sync pipeline |
+| [`landing/`](landing/) | Static marketing site and waitlist |
+| [`mobile/`](mobile/) | Expo app (parked; Phase 2+) |
 
 ## Quick start
 
-**API** — from `backend/`:
+From `web/`:
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env   # add GOOGLE_PLACES_API_KEY
-python manage.py migrate
-python manage.py runserver "[::]:8000"
+npm install
+cp .env.example .env.local   # add Supabase keys (dashboard → Settings → API)
+npm run dev
 ```
 
-**Web directory** — from `web/` (API must be running on port 8000):
+Open [http://localhost:3000](http://localhost:3000). No other services required — data comes from Supabase.
+
+### Admin dashboard
+
+Set `ADMIN_SECRET` and `SUPABASE_SERVICE_ROLE_KEY` in `web/.env.local`, then visit `/admin`.
+
+### Re-seeding operators
+
+The operator directory was seeded from the legacy Django sync. To refresh:
 
 ```bash
-npm install && npm run dev
+cd backend && .venv/bin/python ../supabase/seed/export_django.py   # Django DB → operators.json
+cd ../web && SUPABASE_SERVICE_ROLE_KEY=... npx tsx ../supabase/seed/import.ts
 ```
-
-Open [http://localhost:3000](http://localhost:3000).
-
-**Mobile** — from `mobile/`:
-
-```bash
-npm install && npx expo start
-```
-
-To populate the rental directory locally, see [instructions/01_local_dev.md](instructions/01_local_dev.md).
 
 ## Documentation
 
-Detailed setup, sync workflow, production deploy, and Amplify notes live in [`instructions/`](instructions/):
-
-| Doc | Contents |
-|-----|----------|
-| [00_overview.md](instructions/00_overview.md) | Architecture, phases, repo map |
-| [01_local_dev.md](instructions/01_local_dev.md) | Env, Google sync, prune, local apps |
-| [02_production_directory.md](instructions/02_production_directory.md) | Live site, API deploy, troubleshooting |
-| [03_amplify_and_landing.md](instructions/03_amplify_and_landing.md) | Amplify monorepo, waitlist |
+The product is specified in [`instructions/`](instructions/) — read `00_overview.md` first. `01_data_model.md` is the single source of truth for the schema. Security practices are in [SECURITY.md](SECURITY.md).
 
 **Cursor / AI agents:** project instructions are in [`.cursorrules`](.cursorrules) and `instructions/` — not in this README.
-
-## Test accounts
-
-| Email | Password |
-|-------|----------|
-| alice@example.com | testpass123 |
-| bob@example.com | testpass123 |
-| cara@example.com | testpass123 |
-| dan@example.com | testpass123 |
-| emma@example.com | testpass123 |

@@ -1,53 +1,74 @@
-import type { Business } from "./types";
+import type { Equipment, Operator } from "@/lib/supabase/types";
+import { PRICE_TIER_COLUMNS, type PriceTier } from "@/lib/search/buildQuery";
 
-// High-level discovery groups, in display order (mirrors the backend taxonomy
-// in backend/apps/catalog/rental_taxonomy.py).
-export const GROUP_ORDER = [
-  "Snow",
-  "Water",
-  "Bike",
-  "Climb",
-  "Camp",
-  "Vehicles",
-  "E-Transport",
-  "Air/Other",
-] as const;
-
-/** Coarse budget label from Google price level (0-4). */
-export function priceLabel(level: number | null): string {
-  if (level === null || level === undefined) return "";
-  return "$".repeat(Math.max(1, Math.min(4, level + 1)));
+export function formatPrice(value: number | null | undefined): string | null {
+  if (value === null || value === undefined) return null;
+  return `$${Number(value) % 1 === 0 ? Number(value) : Number(value).toFixed(2)}`;
 }
 
-export function ratingLabel(rating: string | null): string | null {
-  if (!rating) return null;
+const TIER_SUFFIX: Record<PriceTier, string> = {
+  hourly: "/hr",
+  half_day: "/half day",
+  full_day: "/day",
+  multi_day: "/day (multi)",
+  weekly: "/week",
+};
+
+/**
+ * Resolve the price to display for a chosen tier, falling back to the next
+ * available tier (04 §3 Step 4 — note the fallback to the user).
+ */
+export function pickPrice(
+  item: Equipment,
+  tier: PriceTier = "full_day",
+): { value: number; tier: PriceTier; isFallback: boolean } | null {
+  const order: PriceTier[] = [
+    tier,
+    "full_day",
+    "multi_day",
+    "half_day",
+    "weekly",
+    "hourly",
+  ];
+  for (const t of order) {
+    const value = item[PRICE_TIER_COLUMNS[t] as keyof Equipment] as number | null;
+    if (value !== null && value !== undefined) {
+      return { value: Number(value), tier: t, isFallback: t !== tier };
+    }
+  }
+  return null;
+}
+
+export function priceWithSuffix(value: number, tier: PriceTier): string {
+  return `${formatPrice(value)}${TIER_SUFFIX[tier]}`;
+}
+
+/** Freshness rule (03 §5): stale when last_verified is over 90 days old. */
+export function isStale(lastVerified: string | null): boolean {
+  if (!lastVerified) return true;
+  const age = Date.now() - new Date(lastVerified).getTime();
+  return age > 90 * 24 * 3600 * 1000;
+}
+
+export function ratingLabel(rating: number | null): string | null {
+  if (rating === null || rating === undefined) return null;
   return Number(rating).toFixed(1);
 }
 
-export function locationLabel(b: Pick<Business, "city" | "state">): string {
-  return [b.city, b.state].filter(Boolean).join(", ");
+export function locationLabel(
+  o: Pick<Operator, "city" | "state">,
+): string {
+  return [o.city, o.state].filter(Boolean).join(", ");
 }
 
-export function mapsUrl(b: Business): string {
-  if (b.latitude && b.longitude) {
-    return `https://www.google.com/maps/search/?api=1&query=${b.latitude},${b.longitude}`;
+export function mapsUrl(o: Operator): string {
+  if (o.lat && o.lng) {
+    return `https://www.google.com/maps/search/?api=1&query=${o.lat},${o.lng}`;
   }
-  const q = encodeURIComponent([b.name, b.address].filter(Boolean).join(" "));
+  const q = encodeURIComponent([o.name, o.address].filter(Boolean).join(" "));
   return `https://www.google.com/maps/search/?api=1&query=${q}`;
 }
 
-/** Slugify a group name for URLs, e.g. "E-Transport" -> "e-transport". */
-export function groupToSlug(group: string): string {
-  return group.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
-}
-
-export function slugToGroup(slug: string): string | null {
-  return GROUP_ORDER.find((g) => groupToSlug(g) === slug) ?? null;
-}
-
-/** Order a set of present groups by the canonical order, extras alphabetical. */
-export function orderGroups(present: string[]): string[] {
-  const known = GROUP_ORDER.filter((g) => present.includes(g));
-  const extra = present.filter((g) => !GROUP_ORDER.includes(g as never)).sort();
-  return [...known, ...extra];
+export function formatDistance(miles: number): string {
+  return miles < 10 ? `${miles.toFixed(1)} mi` : `${Math.round(miles)} mi`;
 }

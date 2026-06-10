@@ -17,6 +17,8 @@ backend/staticfiles/
 node_modules/
 .expo/
 dist/
+.next/
+*.tsbuildinfo
 
 # Environment
 .env
