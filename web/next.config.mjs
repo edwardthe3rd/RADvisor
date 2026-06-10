@@ -26,6 +26,8 @@ const nextConfig = {
     return [
       // The discovery experience renders at the root; keep one canonical URL.
       { source: "/discover", destination: "/", permanent: true },
+      // Waitlist landing (migrated from radvisor.com).
+      { source: "/app", destination: "/app/waitlist", permanent: false },
       // Legacy Django-era routes (slugs are unchanged across the migration).
       { source: "/business/:slug", destination: "/operators/:slug", permanent: true },
       { source: "/category/:group", destination: "/", permanent: true },

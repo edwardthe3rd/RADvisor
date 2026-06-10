@@ -1,15 +1,11 @@
 # Monorepo build spec for AWS Amplify Hosting.
 # Each Amplify app must set AMPLIFY_MONOREPO_APP_ROOT to match one appRoot below
-# (landing | web | mobile). See README.md for deploy notes per app.
+# (web | mobile). See README.md for deploy notes per app.
+#
+# landing/ is deprecated — waitlist is served from web/ at /app/waitlist.
+# Remove the landing Amplify app in the console after radvisor.com redirects are live.
 version: 1
 applications:
-  - appRoot: landing
-    frontend:
-      artifacts:
-        baseDirectory: .
-        files:
-          - '**/*'
-
   - appRoot: web
     frontend:
       phases:

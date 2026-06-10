@@ -8,7 +8,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       // Keep crawlers off the query endpoint and internal tooling.
-      disallow: ["/search", "/admin"],
+      disallow: ["/search", "/admin", "/app"],
     },
     sitemap: `${siteUrl}/sitemap.xml`,
   };
