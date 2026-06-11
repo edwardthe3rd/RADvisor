@@ -5416,13 +5416,13 @@
    "sun": "Closed"
   },
   "categories": [
-   "gear_demos"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 90,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory demo program (not rentals)",
+  "notes_internal": "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory alpine ski demo program",
   "is_active": true,
   "last_verified": "2026-06-11"
  },

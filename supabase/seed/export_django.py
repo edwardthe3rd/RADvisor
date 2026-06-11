@@ -59,12 +59,12 @@ CATEGORY_MAP = {
 
 # Verified corrections applied on export (founder-verified; survives Django re-sync).
 OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
-    # Factory demo program — listed under gear_demos, not snow_sports rentals.
+    # Factory demo program — snow_sports operator; demo subcategory on equipment row.
     "moment-skis": {
         "is_active": True,
-        "categories": ["gear_demos"],
+        "categories": ["snow_sports"],
         "notes_internal": (
-            "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory demo program (not rentals)"
+            "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory alpine ski demo program"
         ),
     },
 }

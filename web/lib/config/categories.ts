@@ -20,6 +20,7 @@ export const CATEGORIES = [
     icon: "snowflake",
     subcategories: [
       { slug: "alpine_ski", label: "Alpine Skis" },
+      { slug: "alpine_ski_demo", label: "Alpine Ski Demo" },
       { slug: "snowboard", label: "Snowboards" },
       { slug: "cross_country_ski", label: "Cross-Country Skis" },
       { slug: "splitboard", label: "Splitboards" },
@@ -148,17 +149,6 @@ export const CATEGORIES = [
     subcategories: [
       { slug: "paraglider", label: "Paragliding Gear" },
       { slug: "wingsuit", label: "Wingsuits" },
-    ],
-  },
-  {
-    slug: "gear_demos",
-    label: "Gear Demos",
-    icon: "demo",
-    subcategories: [
-      { slug: "alpine_ski", label: "Alpine Ski Demo" },
-      { slug: "snowboard", label: "Snowboard Demo" },
-      { slug: "cross_country_ski", label: "Cross-Country Ski Demo" },
-      { slug: "trail_bike", label: "Mountain Bike Demo" },
     ],
   },
 ] as const satisfies readonly Category[];

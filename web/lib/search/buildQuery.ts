@@ -130,7 +130,7 @@ export function filtersToSearchParams(filters: Filters): URLSearchParams {
 }
 
 const OPERATOR_SUMMARY =
-  "id, name, slug, city, state, lat, lng, phone, website, booking_url" as const;
+  "id, name, slug, city, state, lat, lng, phone, website, booking_url, rating_external, rating_external_count" as const;
 
 export const EQUIPMENT_WITH_OPERATOR = `*, operators!inner(${OPERATOR_SUMMARY})` as const;
 
