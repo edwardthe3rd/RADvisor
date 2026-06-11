@@ -209,12 +209,6 @@ export default async function OperatorPage({
               <h2 className="mb-3 text-lg font-bold text-ink-primary">
                 Contact to confirm availability
               </h2>
-              {operator.offers_delivery && (
-                <p className="mb-3 text-sm text-ink-secondary">
-                  Delivery service available — ask about areas and fees when you
-                  reach out.
-                </p>
-              )}
               <div className="flex flex-col gap-2">
                 {operator.booking_url && (
                   <a
