@@ -23,6 +23,8 @@ export type OperatorSummary = Pick<
   | "phone"
   | "website"
   | "booking_url"
+  | "rating_external"
+  | "rating_external_count"
 >;
 
 export type EquipmentWithOperator = Equipment & { operators: OperatorSummary };
@@ -64,7 +66,7 @@ export async function getPopularEquipment(): Promise<EquipmentWithOperator[]> {
   const db = supabaseServer();
   const { data, error } = await db
     .from("equipment")
-    .select("*, operators!inner(id, name, slug, city, state, lat, lng, phone, website, booking_url)")
+    .select("*, operators!inner(id, name, slug, city, state, lat, lng, phone, website, booking_url, rating_external, rating_external_count)")
     .eq("is_active", true)
     .eq("is_popular", true)
     .limit(200);

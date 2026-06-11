@@ -23,7 +23,7 @@ export default function SortControls({
   const pathname = usePathname();
   const options = mode === "search" ? SEARCH_SORT_OPTIONS : BROWSE_SORT_OPTIONS;
   const current =
-    filters.sort ?? (mode === "search" ? "relevance" : "distance");
+    filters.sort ?? (mode === "search" ? "relevance" : "popular");
   const showLocation =
     current === "distance" || filters.location !== undefined;
 

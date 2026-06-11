@@ -97,7 +97,7 @@ export function getSteps(answers: QuizAnswers): QuizStep[] {
     options: REGION_SPOTS.map((s) => ({ value: s.slug, label: s.label })),
   });
 
-  if (activity !== "not_sure" && activity !== "gear_demos") {
+  if (activity !== "not_sure") {
     steps.push({
       id: "duration",
       question: "How long do you need it?",

@@ -16,10 +16,10 @@ export function resolveSortPoint(filters: Filters): { lat: number; lng: number }
   return spot ?? REGION_CENTER;
 }
 
-/** Default browse = nearest; default search = relevance (05 §4). */
+/** Default browse = popular; default search = relevance (05 §4). */
 export function effectiveSort(filters: Filters): SortOption {
   if (filters.sort) return filters.sort;
-  return filters.q ? "relevance" : "distance";
+  return filters.q ? "relevance" : "popular";
 }
 
 function operatorDistance(
