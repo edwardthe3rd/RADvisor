@@ -30,11 +30,26 @@ export const PRICE_TIER_LABELS: Record<PriceTier, string> = {
 
 export type SortOption =
   | "relevance"
+  | "popular"
   | "price_asc"
   | "price_desc"
   | "distance"
   | "verified"
+  | "rating"
   | "alpha";
+
+export const SORT_OPTIONS: { value: SortOption; label: string }[] = [
+  { value: "distance", label: "Nearest" },
+  { value: "popular", label: "Popular" },
+  { value: "alpha", label: "A–Z" },
+  { value: "price_asc", label: "Price: low to high" },
+  { value: "price_desc", label: "Price: high to low" },
+  { value: "rating", label: "Top rated" },
+  { value: "verified", label: "Recently verified" },
+  { value: "relevance", label: "Relevance" },
+];
+
+const SORT_VALUES = new Set(SORT_OPTIONS.map((o) => o.value));
 
 export interface Filters {
   q?: string;
@@ -91,7 +106,9 @@ export function filtersFromSearchParams(
     hasPhoto: get("hasPhoto") === "1" || undefined,
     verifiedRecently: get("verified") === "1" || undefined,
     location: get("location") || undefined,
-    sort: (get("sort") as SortOption) || undefined,
+    sort: SORT_VALUES.has(get("sort") as SortOption)
+      ? (get("sort") as SortOption)
+      : undefined,
   };
 }
 
@@ -176,9 +193,12 @@ export function buildEquipmentQuery(
     case "alpha":
       query = query.order("name", { ascending: true });
       break;
-    // relevance/distance: PostgREST order is a coarse pass; callers re-rank in JS.
-    default:
+    case "popular":
       query = query.order("is_popular", { ascending: false });
+      break;
+    // distance, rating, relevance: callers re-rank in JS after fetch.
+    default:
+      query = query.order("name", { ascending: true });
   }
 
   return query;

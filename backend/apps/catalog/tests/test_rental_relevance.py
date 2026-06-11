@@ -71,6 +71,17 @@ class RelevanceTests(SimpleTestCase):
         slugs = classify("Tahoe Boat Rentals", query="boat rental", source_slug="boat")
         self.assertIn("boat", slugs)
 
+    def test_classify_ski_shop_not_tagged_from_other_queries(self):
+        """Name keywords win over incidental Places hits (Moment Skis case)."""
+        name = "Moment Skis"
+        for query, source_slug in (
+            ("rock climbing gear rental", "climbing"),
+            ("snowboard rental", "snowboard"),
+            ("nordic ski rental", "nordic"),
+        ):
+            slugs = classify(name, query=query, source_slug=source_slug)
+            self.assertEqual(slugs, {"ski"}, msg=f"query={query!r}")
+
     def test_accepts_brand_name_from_rental_query(self):
         reason, slugs = evaluate_business(
             name="Tahoe Dave's",

@@ -10,6 +10,7 @@ import {
   type PriceTier,
 } from "@/lib/search/buildQuery";
 import type { SkillLevel } from "@/lib/supabase/types";
+import SortControls from "./SortControls";
 
 const SKILL_OPTIONS: SkillLevel[] = ["beginner", "intermediate", "advanced"];
 
@@ -23,11 +24,13 @@ export default function FilterPanel({
   brands = [],
   resultCount,
   lockedCategory,
+  sortMode = "browse",
 }: {
   filters: Filters;
   brands?: string[];
   resultCount: number;
   lockedCategory?: string;
+  sortMode?: "browse" | "search";
 }) {
   const router = useRouter();
   const pathname = usePathname();
@@ -104,7 +107,9 @@ export default function FilterPanel({
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="flex flex-wrap items-center gap-2">
+      <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center sm:justify-between">
+        <SortControls filters={filters} mode={sortMode} />
+        <div className="flex flex-wrap items-center gap-2">
         <button
           type="button"
           onClick={() => setOpen((v) => !v)}
@@ -137,6 +142,7 @@ export default function FilterPanel({
             Clear all
           </button>
         )}
+        </div>
       </div>
 
       {open && (

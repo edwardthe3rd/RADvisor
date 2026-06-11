@@ -57,6 +57,18 @@ CATEGORY_MAP = {
     "climbing": "rock_climbing",
 }
 
+# Verified corrections applied on export (founder-verified; survives Django re-sync).
+OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
+    # Factory demo program — listed under gear_demos, not snow_sports rentals.
+    "moment-skis": {
+        "is_active": True,
+        "categories": ["gear_demos"],
+        "notes_internal": (
+            "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory demo program (not rentals)"
+        ),
+    },
+}
+
 DAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
@@ -108,32 +120,32 @@ def main():
                 skipped_radius.append((b.slug, round(dist)))
                 continue
 
-        operators.append(
-            {
-                "name": b.name,
-                "slug": b.slug,
-                "address": b.address or None,
-                "city": b.city or None,
-                "state": b.state or "NV",
-                "lat": lat,
-                "lng": lng,
-                "phone": b.phone or None,
-                "website": b.website or None,
-                "hours": normalize_hours(b.hours),
-                "categories": cats,
-                "photos": [b.photo_url] if b.photo_url else None,
-                "rating_external": float(b.google_rating) if b.google_rating else None,
-                "rating_external_count": b.google_rating_count or None,
-                "inventory_sync_type": "manual",
-                "notes_internal": f"google_place_id:{b.google_place_id}",
-                "is_active": True,
-                "last_verified": (
-                    b.last_synced_at.date().isoformat()
-                    if b.last_synced_at
-                    else date.today().isoformat()
-                ),
-            }
-        )
+        row = {
+            "name": b.name,
+            "slug": b.slug,
+            "address": b.address or None,
+            "city": b.city or None,
+            "state": b.state or "NV",
+            "lat": lat,
+            "lng": lng,
+            "phone": b.phone or None,
+            "website": b.website or None,
+            "hours": normalize_hours(b.hours),
+            "categories": cats,
+            "photos": [b.photo_url] if b.photo_url else None,
+            "rating_external": float(b.google_rating) if b.google_rating else None,
+            "rating_external_count": b.google_rating_count or None,
+            "inventory_sync_type": "manual",
+            "notes_internal": f"google_place_id:{b.google_place_id}",
+            "is_active": True,
+            "last_verified": (
+                b.last_synced_at.date().isoformat()
+                if b.last_synced_at
+                else date.today().isoformat()
+            ),
+        }
+        row.update(OPERATOR_EXPORT_OVERRIDES.get(b.slug, {}))
+        operators.append(row)
 
     out_path.write_text(json.dumps(operators, indent=1, ensure_ascii=False))
     print(f"exported: {len(operators)} operators -> {out_path}")

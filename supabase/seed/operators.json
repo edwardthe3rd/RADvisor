@@ -5416,16 +5416,15 @@
    "sun": "Closed"
   },
   "categories": [
-   "rock_climbing",
-   "snow_sports"
+   "gear_demos"
   ],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 90,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM",
+  "notes_internal": "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory demo program (not rentals)",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-11"
  },
  {
   "name": "Moon Rocks",
