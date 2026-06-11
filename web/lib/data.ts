@@ -9,6 +9,7 @@ import {
   buildOperatorSearchQuery,
   type Filters,
 } from "@/lib/search/buildQuery";
+import { sortEquipment } from "@/lib/search/sortResults";
 
 export type OperatorSummary = Pick<
   Operator,
@@ -78,7 +79,7 @@ export async function searchEquipment(
   const db = supabaseServer();
   const { data, error } = await buildEquipmentQuery(db, filters).limit(limit);
   if (error || !data) return [];
-  return data as unknown as EquipmentWithOperator[];
+  return sortEquipment(data as unknown as EquipmentWithOperator[], filters);
 }
 
 export async function searchOperators(q: string): Promise<OperatorSummary[]> {
@@ -97,7 +98,7 @@ export async function getOperatorsByCategory(
     .select("*")
     .eq("is_active", true)
     .contains("categories", [category])
-    .order("rating_external", { ascending: false, nullsFirst: false });
+    .order("name", { ascending: true });
   if (error || !data) return [];
   return data;
 }
@@ -109,13 +110,18 @@ export async function getOperatorsByCategory(
  */
 export async function getOperatorIdsWithEquipment(
   category: string,
+  subcategories?: string[],
 ): Promise<Set<string>> {
   const db = supabaseServer();
-  const { data, error } = await db
+  let query = db
     .from("equipment")
     .select("operator_id")
     .eq("is_active", true)
     .eq("category", category);
+  if (subcategories?.length) {
+    query = query.in("subcategory", subcategories);
+  }
+  const { data, error } = await query;
   if (error || !data) return new Set();
   return new Set(data.map((row) => row.operator_id));
 }

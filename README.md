@@ -51,7 +51,7 @@ Push refreshed data into Supabase for the web app:
 
 ```bash
 python ../supabase/seed/export_django.py
-cd ../web && SUPABASE_SERVICE_ROLE_KEY=... npx tsx ../supabase/seed/import.ts
+cd ../web && SUPABASE_SERVICE_ROLE_KEY=... npm run seed
 ```
 
 See [SECURITY.md](SECURITY.md) for API key restrictions and quota guidance.

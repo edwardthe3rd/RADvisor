@@ -1,0 +1,14 @@
+[
+  {
+    "operator_slug": "moment-skis",
+    "category": "gear_demos",
+    "subcategory": "alpine_ski",
+    "name": "Alpine Ski Demo",
+    "brand": "Moment",
+    "description": "Try Moment skis at the Reno factory before you buy. Contact for demo availability, models, and any program fees.",
+    "skill_level": "all",
+    "quantity_available": null,
+    "is_active": true,
+    "last_verified": "2026-06-11"
+  }
+]

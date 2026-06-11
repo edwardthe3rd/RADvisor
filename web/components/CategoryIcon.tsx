@@ -7,6 +7,7 @@ const ICONS: Record<string, string> = {
   mountain: "⛰️",
   zap: "⚡",
   wind: "🪂",
+  demo: "🎯",
 };
 
 export default function CategoryIcon({

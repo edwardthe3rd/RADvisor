@@ -11,6 +11,7 @@ import {
   searchEquipment,
 } from "@/lib/data";
 import { filtersFromSearchParams } from "@/lib/search/buildQuery";
+import { effectiveSort, sortOperators } from "@/lib/search/sortResults";
 
 export const revalidate = 300;
 
@@ -41,12 +42,22 @@ export default async function CategoryPage({
     ...filtersFromSearchParams(searchParams),
     categories: [category.slug],
   };
-  const [items, operators, brands, operatorIdsWithEquipment] = await Promise.all([
+  const subcategories = filters.subcategories;
+  const [items, allOperators, brands, operatorIdsWithEquipment] = await Promise.all([
     searchEquipment(filters),
     getOperatorsByCategory(category.slug),
     getDistinctBrands(),
-    getOperatorIdsWithEquipment(category.slug),
+    getOperatorIdsWithEquipment(category.slug, subcategories),
   ]);
+  const filteredOperators =
+    subcategories?.length ?
+      allOperators.filter((op) => operatorIdsWithEquipment.has(op.id))
+    : allOperators;
+  const { sorted: operators, distances: operatorDistances } = sortOperators(
+    filteredOperators,
+    filters,
+  );
+  const showOperatorDistance = effectiveSort(filters) === "distance";
 
   return (
     <>
@@ -92,6 +103,11 @@ export default async function CategoryPage({
                   key={operator.id}
                   operator={operator}
                   hasInventory={operatorIdsWithEquipment.has(operator.id)}
+                  distanceMiles={
+                    showOperatorDistance ?
+                      operatorDistances.get(operator.id)
+                    : undefined
+                  }
                 />
               ))}
             </div>

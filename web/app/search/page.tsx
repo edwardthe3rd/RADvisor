@@ -32,7 +32,12 @@ export default async function SearchPage({
           {filters.q ? `Results for “${filters.q}”` : "Search gear"}
         </h1>
 
-        <FilterPanel filters={filters} brands={brands} resultCount={items.length} />
+        <FilterPanel
+          filters={filters}
+          brands={brands}
+          resultCount={items.length}
+          sortMode="search"
+        />
 
         {operators.length > 0 && (
           <section className="mt-6">

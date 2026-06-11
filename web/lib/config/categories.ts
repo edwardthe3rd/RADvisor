@@ -150,6 +150,17 @@ export const CATEGORIES = [
       { slug: "wingsuit", label: "Wingsuits" },
     ],
   },
+  {
+    slug: "gear_demos",
+    label: "Gear Demos",
+    icon: "demo",
+    subcategories: [
+      { slug: "alpine_ski", label: "Alpine Ski Demo" },
+      { slug: "snowboard", label: "Snowboard Demo" },
+      { slug: "cross_country_ski", label: "Cross-Country Ski Demo" },
+      { slug: "trail_bike", label: "Mountain Bike Demo" },
+    ],
+  },
 ] as const satisfies readonly Category[];
 
 export type CategorySlug = (typeof CATEGORIES)[number]["slug"];

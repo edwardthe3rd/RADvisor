@@ -17,6 +17,7 @@ Each category defines:
 
 from __future__ import annotations
 
+import re
 from dataclasses import dataclass
 
 
@@ -200,7 +201,6 @@ STOPPED_GEAR_RENTAL_NAME_PATTERNS: tuple[str, ...] = (
     "action water sports of incline village",
     "action watersports of incline village",
 )
-
 
 def is_stopped_gear_rental_operator(name: str, *, website: str = "") -> bool:
     blob = f"{name} {website}".lower()
@@ -408,33 +408,68 @@ def _has_rental_intent_in_name(name: str) -> bool:
     return any(kw in blob or kw.strip() in lowered for kw in RENTAL_INTENT_KEYWORDS)
 
 
+SNOW_DISCIPLINE_SLUGS: frozenset[str] = frozenset({"ski", "snowboard", "nordic"})
+
+
+def _category_name_hit(name_blob: str, cat: CategoryDef) -> bool:
+    """True when the business name signals this category (not incidental query text)."""
+    if cat.slug == "ski":
+        if "alpine" in name_blob:
+            return True
+        if "water ski" in name_blob or "waterski" in name_blob:
+            return False
+        return bool(re.search(r"\bskis?\b", name_blob))
+    return any(kw in name_blob for kw in cat.keywords)
+
+
 def _name_matches_category(name: str, cat: CategoryDef) -> bool:
     blob = (name or "").lower()
-    if any(kw in blob for kw in cat.keywords):
+    if _category_name_hit(blob, cat):
         return True
     return _has_rental_intent_in_name(name)
+
+
+def _name_keyword_slugs(name: str) -> set[str]:
+    name_blob = (name or "").lower()
+    return {cat.slug for cat in CATEGORIES if _category_name_hit(name_blob, cat)}
+
+
+def _allow_query_slug(name_slugs: set[str], source_slug: str) -> bool:
+    """Whether a curated search phrase may tag when the name already signals gear type."""
+    if not name_slugs:
+        return True
+    if source_slug in name_slugs:
+        return True
+    # Alpine vs snowboard vs nordic are mutually exclusive when the name picks one.
+    if (name_slugs & SNOW_DISCIPLINE_SLUGS) and source_slug in SNOW_DISCIPLINE_SLUGS:
+        return False
+    source_cat = CATEGORIES_BY_SLUG.get(source_slug)
+    if not source_cat:
+        return False
+    name_groups = {CATEGORIES_BY_SLUG[s].group for s in name_slugs if s in CATEGORIES_BY_SLUG}
+    return source_cat.group in name_groups
 
 
 def classify(name: str, query: str = "", source_slug: str | None = None) -> set[str]:
     """Tag a business with category slugs.
 
-    Applies `source_slug` when the name matches that category or when the business
-    was discovered via that category's curated Google search phrase. Name-only
-    keyword cross-matching avoids tagging unrelated rows from incidental query text.
+    Name keywords win for snow disciplines and cross-domain hits. Query-only
+    tagging still applies for generic names (e.g. "Tahoe Dave's") and for
+    compatible gear in the same group (marina name + kayak search).
     """
     if is_vacation_rental_listing(name) or is_rv_rental_business(name):
         return set()
 
-    name_blob = (name or "").lower()
-    slugs: set[str] = set()
+    name_slugs = _name_keyword_slugs(name)
+    slugs = set(name_slugs)
 
     if source_slug and source_slug in CATEGORIES_BY_SLUG:
         cat = CATEGORIES_BY_SLUG[source_slug]
-        if _name_matches_category(name, cat) or query_matches_category(query, source_slug):
+        if _name_matches_category(name, cat):
             slugs.add(source_slug)
-
-    for cat in CATEGORIES:
-        if any(kw in name_blob for kw in cat.keywords):
-            slugs.add(cat.slug)
+        elif query_matches_category(query, source_slug) and _allow_query_slug(
+            name_slugs, source_slug
+        ):
+            slugs.add(source_slug)
 
     return slugs
