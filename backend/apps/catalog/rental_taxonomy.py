@@ -250,7 +250,18 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "boat", "Boats & Jet Ski", "Water", "\U0001f6a4",
         queries=("boat rental", "jet ski rental", "pontoon rental", "watercraft rental"),
-        keywords=("boat", "jet ski", "jetski", "pontoon", "watercraft", "marina", "pwc"),
+        keywords=(
+            "boat",
+            "jet ski",
+            "jetski",
+            "pontoon",
+            "watercraft",
+            "marina",
+            "pwc",
+            "water ski",
+            "waterski",
+            "wakeboard",
+        ),
     ),
     CategoryDef(
         "watersports-gear", "Wetsuits & Snorkel", "Water", "\U0001f93f",
@@ -287,11 +298,6 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     ),
     # --- Vehicles ---------------------------------------------------------
     CategoryDef(
-        "trailer", "Trailers", "Vehicles", "\U0001f6fb",
-        queries=("utility trailer rental", "cargo trailer rental"),
-        keywords=("trailer rental", "utility trailer", "cargo trailer", "equipment trailer"),
-    ),
-    CategoryDef(
         "offroad", "ATV, UTV & Off-Road", "Vehicles", "\U0001f3cd",
         queries=("ATV rental", "UTV rental", "side by side rental", "dirt bike rental"),
         keywords=("atv", "utv", "side by side", "off-road", "dirt bike", "polaris", "razor"),
@@ -310,12 +316,18 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     ),
 )
 
-# RV & camper van — deferred; re-append to CATEGORIES when ready to launch.
+# Camper vans, RVs, and utility trailers — out of Sprint 1 scope; not synced via
+# Places. Re-append to CATEGORIES (and web/lib/config/categories.ts) when ready.
 DEFERRED_CATEGORIES: tuple[CategoryDef, ...] = (
     CategoryDef(
         "rv-camper", "RV & Camper Van", "Vehicles", "\U0001f69a",
         queries=("RV rental", "camper van rental", "motorhome rental"),
         keywords=("rv ", "motorhome", "camper van", "campervan", "recreational vehicle"),
+    ),
+    CategoryDef(
+        "trailer", "Trailers", "Vehicles", "\U0001f6fb",
+        queries=("utility trailer rental", "cargo trailer rental"),
+        keywords=("trailer rental", "utility trailer", "cargo trailer", "equipment trailer"),
     ),
 )
 
@@ -335,6 +347,43 @@ RV_RENTAL_EXCLUDE_KEYWORDS: tuple[str, ...] = (
 def is_rv_rental_business(name: str, *, website: str = "") -> bool:
     blob = f"{name} {website}".lower()
     return any(kw in blob for kw in RV_RENTAL_EXCLUDE_KEYWORDS)
+
+
+# Standard airport / chain auto rentals — not outdoor personal EV (e-scooter, e-bike).
+STANDARD_CAR_RENTAL_NAME_PATTERNS: tuple[str, ...] = (
+    "rent a car",
+    "rent-a-car",
+    "rentacar",
+    "car rental",
+    "car rentals",
+)
+
+STANDARD_CAR_RENTAL_BRANDS: tuple[str, ...] = (
+    "alamo rent",
+    "avis ",
+    "avis car",
+    "budget car rental",
+    "budget rent a car",
+    "dollar car rental",
+    "dollar rent a car",
+    "enterprise car",
+    "enterprise rent",
+    "europcar",
+    "fox rent a car",
+    "hertz",
+    "national car rental",
+    "payless car",
+    "sixt rent",
+    "thrifty car",
+    "advantage rent a car",
+)
+
+
+def is_standard_car_rental_business(name: str, *, website: str = "") -> bool:
+    blob = f"{name} {website}".lower()
+    if any(p in blob for p in STANDARD_CAR_RENTAL_NAME_PATTERNS):
+        return True
+    return any(brand in blob for brand in STANDARD_CAR_RENTAL_BRANDS)
 
 
 # Bike parks that rent gear despite the "park" name (curated exceptions).
@@ -418,20 +467,89 @@ def _category_name_hit(name_blob: str, cat: CategoryDef) -> bool:
             return True
         if "water ski" in name_blob or "waterski" in name_blob:
             return False
+        if "jet ski" in name_blob or "jetski" in name_blob or "jet-ski" in name_blob:
+            return False
+        # "Ski Run" is a common Tahoe street/place name, not alpine skiing.
+        if re.search(r"\bski run\b", name_blob):
+            return False
         return bool(re.search(r"\bskis?\b", name_blob))
     return any(kw in name_blob for kw in cat.keywords)
 
 
 def _name_matches_category(name: str, cat: CategoryDef) -> bool:
-    blob = (name or "").lower()
-    if _category_name_hit(blob, cat):
-        return True
-    return _has_rental_intent_in_name(name)
+    """True only when the business name signals this category (not rental intent alone)."""
+    return _category_name_hit((name or "").lower(), cat)
+
+
+def _name_signals_ski_and_bike(name_blob: str) -> bool:
+    return bool(
+        re.search(
+            r"\bskis?\b.{0,24}\b(bike|bikes|cycle|cycles)\b|"
+            r"\b(bike|bikes|cycle|cycles)\b.{0,24}\bskis?\b",
+            name_blob,
+        )
+    )
+
+
+def _name_signals_cycle_shop(name_blob: str) -> bool:
+    if "motorcycle" in name_blob or " motor " in name_blob:
+        return False
+    return bool(
+        re.search(r"\b(cycle works|cycle shop|ski & cycle|skis? & cycle)\b", name_blob)
+    )
 
 
 def _name_keyword_slugs(name: str) -> set[str]:
     name_blob = (name or "").lower()
-    return {cat.slug for cat in CATEGORIES if _category_name_hit(name_blob, cat)}
+    slugs = {cat.slug for cat in CATEGORIES if _category_name_hit(name_blob, cat)}
+    if _name_signals_ski_and_bike(name_blob):
+        slugs.add("mountain-bike")
+    elif _name_signals_cycle_shop(name_blob):
+        slugs.add("road-bike")
+    return slugs
+
+
+# Django / taxonomy slug -> canonical top-level category (instructions/01_data_model.md §3).
+TAXONOMY_SLUG_TO_TOP_LEVEL: dict[str, str] = {
+    "watersports-gear": "water_sports",
+    "boat": "water_sports",
+    "raft": "water_sports",
+    "kayak": "water_sports",
+    "paddleboard": "water_sports",
+    "camping": "camping",
+    "ski": "snow_sports",
+    "nordic": "snow_sports",
+    "snowboard": "snow_sports",
+    "offroad": "off_road",
+    "snowmobile": "off_road",
+    "road-bike": "road_cycling",
+    "air": "aerial",
+    "e-bike": "electric_transport",
+    "e-scooter": "electric_transport",
+    "mountain-bike": "mountain_biking",
+    "climbing": "rock_climbing",
+}
+
+
+def reconcile_top_level_categories(name: str, categories: list[str]) -> list[str]:
+    """Drop query-only categories that conflict with clear name-keyword signals."""
+    name_slugs = _name_keyword_slugs(name)
+    if not name_slugs:
+        return sorted(set(categories))
+
+    implied = {
+        TAXONOMY_SLUG_TO_TOP_LEVEL[s]
+        for s in name_slugs
+        if s in TAXONOMY_SLUG_TO_TOP_LEVEL
+    }
+    kept: set[str] = set()
+    for top in categories:
+        slugs_for_top = [
+            s for s, mapped in TAXONOMY_SLUG_TO_TOP_LEVEL.items() if mapped == top
+        ]
+        if any(_allow_query_slug(name_slugs, s) for s in slugs_for_top):
+            kept.add(top)
+    return sorted(kept | implied)
 
 
 def _allow_query_slug(name_slugs: set[str], source_slug: str) -> bool:
@@ -457,7 +575,11 @@ def classify(name: str, query: str = "", source_slug: str | None = None) -> set[
     tagging still applies for generic names (e.g. "Tahoe Dave's") and for
     compatible gear in the same group (marina name + kayak search).
     """
-    if is_vacation_rental_listing(name) or is_rv_rental_business(name):
+    if (
+        is_vacation_rental_listing(name)
+        or is_rv_rental_business(name)
+        or is_standard_car_rental_business(name)
+    ):
         return set()
 
     name_slugs = _name_keyword_slugs(name)

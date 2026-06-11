@@ -1,5 +1,17 @@
+import {
+  DEMO_ONLY_NAME_SUFFIX,
+  DEMO_ONLY_OPERATOR_SLUGS,
+} from "@/lib/config/demo-operators";
 import type { Equipment, Operator } from "@/lib/supabase/types";
 import { PRICE_TIER_COLUMNS, type PriceTier } from "@/lib/search/buildQuery";
+
+export function operatorDisplayName(
+  operator: Pick<Operator, "name" | "slug">,
+): string {
+  if (!DEMO_ONLY_OPERATOR_SLUGS.has(operator.slug)) return operator.name;
+  if (operator.name.endsWith(DEMO_ONLY_NAME_SUFFIX)) return operator.name;
+  return `${operator.name}${DEMO_ONLY_NAME_SUFFIX}`;
+}
 
 export function formatPrice(value: number | null | undefined): string | null {
   if (value === null || value === undefined) return null;

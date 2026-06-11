@@ -1,10 +1,10 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 import ItemCard from "@/components/ItemCard";
 import FilterPanel from "@/components/FilterPanel";
 import { getDistinctBrands, searchEquipment, searchOperators } from "@/lib/data";
 import { filtersFromSearchParams } from "@/lib/search/buildQuery";
-import { locationLabel } from "@/lib/format";
+import { locationLabel, operatorDisplayName } from "@/lib/format";
 
 export const metadata = {
   title: "Search gear rentals",
@@ -20,13 +20,12 @@ export default async function SearchPage({
   const filters = filtersFromSearchParams(searchParams);
   const [items, operators, brands] = await Promise.all([
     searchEquipment(filters),
-    filters.q ? searchOperators(filters.q) : Promise.resolve([]),
+    filters.q ? searchOperators(filters.q, filters) : Promise.resolve([]),
     getDistinctBrands(),
   ]);
 
   return (
-    <>
-      <SiteHeader search={filters.q} />
+    <SiteShell search={filters.q}>
       <main className="mx-auto max-w-content px-4 py-8">
         <h1 className="mb-6 text-2xl font-extrabold text-ink-primary">
           {filters.q ? `Results for “${filters.q}”` : "Search gear"}
@@ -51,7 +50,7 @@ export default async function SearchPage({
                   href={`/operators/${op.slug}`}
                   className="rounded-full border border-surface-border px-4 py-2 text-sm font-semibold text-ink-primary hover:border-brand-gold hover:text-brand-goldDark"
                 >
-                  {op.name}
+                  {operatorDisplayName(op)}
                   {locationLabel(op) ? (
                     <span className="ml-1 font-normal text-ink-tertiary">
                       · {locationLabel(op)}
@@ -81,6 +80,6 @@ export default async function SearchPage({
           </p>
         )}
       </main>
-    </>
+    </SiteShell>
   );
 }

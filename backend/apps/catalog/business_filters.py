@@ -23,6 +23,7 @@ from apps.catalog.rental_taxonomy import (
     is_non_rental_bike_park,
     is_retail_outdoor_chain,
     is_rv_rental_business,
+    is_standard_car_rental_business,
     is_stopped_gear_rental_operator,
     is_vacation_rental_listing,
     query_matches_category,
@@ -146,6 +147,8 @@ def passes_hard_filters(
         return "excluded:vacation_rental"
     if is_rv_rental_business(name, website=website):
         return "deferred:rv"
+    if is_standard_car_rental_business(name, website=website):
+        return "excluded:car_rental"
     if is_non_rental_bike_park(name, website=website):
         return "excluded:bike_park"
     if is_retail_outdoor_chain(name, website=website):

@@ -61,6 +61,7 @@ function operatorFromForm(formData: FormData) {
       | "scrape"
       | "none",
     notes_internal: str(formData, "notes_internal"),
+    offers_delivery: formData.get("offers_delivery") === "on",
     is_active: formData.get("is_active") === "on",
   };
 }

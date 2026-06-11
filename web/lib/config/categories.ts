@@ -81,17 +81,6 @@ export const CATEGORIES = [
     ],
   },
   {
-    slug: "camping_vehicles",
-    label: "Camper Vans & RVs",
-    icon: "caravan",
-    subcategories: [
-      { slug: "camper_van", label: "Camper Vans" },
-      { slug: "rv", label: "RVs & Motorhomes" },
-      { slug: "travel_trailer", label: "Travel Trailers" },
-      { slug: "rooftop_tent", label: "Rooftop Tents & Overland" },
-    ],
-  },
-  {
     slug: "off_road",
     label: "Off-Road & Powersports",
     icon: "mountain",

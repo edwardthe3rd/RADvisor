@@ -23,12 +23,14 @@ export default function FilterPanel({
   filters,
   brands = [],
   resultCount,
+  resultLabel = "results",
   lockedCategory,
   sortMode = "browse",
 }: {
   filters: Filters;
   brands?: string[];
   resultCount: number;
+  resultLabel?: string;
   lockedCategory?: string;
   sortMode?: "browse" | "search";
 }) {
@@ -104,6 +106,12 @@ export default function FilterPanel({
       remove: () => apply({ ...filters, verifiedRecently: undefined }),
     });
   }
+  if (filters.delivery) {
+    chips.push({
+      label: "Delivery service",
+      remove: () => apply({ ...filters, delivery: undefined }),
+    });
+  }
 
   return (
     <div className="flex flex-col gap-3">
@@ -118,7 +126,7 @@ export default function FilterPanel({
           Filters{chips.length > 0 ? ` (${chips.length})` : ""}
         </button>
         <span className="text-sm text-ink-secondary">
-          {resultCount} result{resultCount === 1 ? "" : "s"}
+          {resultCount} {resultLabel}
         </span>
         {chips.map((chip) => (
           <button
@@ -270,6 +278,19 @@ export default function FilterPanel({
                 }
               />
               Verified in the last 90 days
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="checkbox"
+                checked={filters.delivery ?? false}
+                onChange={(e) =>
+                  apply({
+                    ...filters,
+                    delivery: e.target.checked || undefined,
+                  })
+                }
+              />
+              Delivery service
             </label>
           </div>
         </div>

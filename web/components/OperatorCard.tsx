@@ -1,7 +1,12 @@
 import Link from "next/link";
 import type { Operator } from "@/lib/supabase/types";
 import { categoryLabel } from "@/lib/config/categories";
-import { locationLabel, ratingLabel, formatDistance } from "@/lib/format";
+import {
+  locationLabel,
+  operatorDisplayName,
+  ratingLabel,
+  formatDistance,
+} from "@/lib/format";
 
 export default function OperatorCard({
   operator,
@@ -24,6 +29,7 @@ export default function OperatorCard({
   const telHref = operator.phone
     ? `tel:${operator.phone.replace(/[^+\d]/g, "")}`
     : null;
+  const displayName = operatorDisplayName(operator);
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-lg border border-surface-borderLight bg-white transition hover:shadow-md">
@@ -32,7 +38,7 @@ export default function OperatorCard({
           // eslint-disable-next-line @next/next/no-img-element
           <img
             src={photo}
-            alt={operator.name}
+            alt={displayName}
             className="h-24 w-full object-cover"
             loading="lazy"
           />
@@ -45,7 +51,7 @@ export default function OperatorCard({
         )}
         <div className="flex flex-col gap-1 p-3 pb-0">
           <h3 className="truncate font-bold text-ink-primary group-hover:text-brand-goldDark">
-            {operator.name}
+            {displayName}
           </h3>
           <div className="flex items-center gap-3 text-sm text-ink-secondary">
             {rating ? (
@@ -87,7 +93,7 @@ export default function OperatorCard({
       <div className="flex flex-1 flex-col gap-2 p-3 pt-2">
         {!hasInventory && (
           <p className="rounded-md bg-brand-secondaryLight px-2 py-1.5 text-xs font-semibold text-ink-primary">
-            Unable to provide inventory — please contact {operator.name}{" "}
+            Unable to provide inventory — please contact {displayName}{" "}
             directly.
           </p>
         )}

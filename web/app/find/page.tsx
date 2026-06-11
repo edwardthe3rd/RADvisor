@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 import ItemCard from "@/components/ItemCard";
 import OperatorCard from "@/components/OperatorCard";
 import QuizFlow from "@/components/find/QuizFlow";
@@ -48,6 +48,9 @@ function answersToFilters(answers: QuizAnswers): Filters {
   if (answers.budget && answers.budget !== "none") {
     filters.priceMax = Number(answers.budget);
   }
+  if (answers.delivery === "yes") {
+    filters.delivery = true;
+  }
   return filters;
 }
 
@@ -76,12 +79,19 @@ async function getResults(answers: QuizAnswers): Promise<QuizResults> {
     relaxed.push("gear type");
     items = await searchEquipment(filters);
   }
+  if (items.length === 0 && filters.delivery) {
+    filters = { ...filters, delivery: undefined };
+    relaxed.push("delivery");
+    items = await searchEquipment(filters);
+  }
 
   // Ultimate fallback: the operators that rent this kind of gear. Honest
   // Tier-1 posture (07 §2) — the directory always has something to offer.
   let operators: Operator[] = [];
   if (items.length === 0 && answers.activity && answers.activity !== "not_sure") {
-    operators = await getOperatorsByCategory(answers.activity);
+    operators = await getOperatorsByCategory(answers.activity, {
+      delivery: filters.delivery,
+    });
   }
 
   return { items, operators, relaxed };
@@ -161,12 +171,11 @@ export default async function FindPage({
       : searchParams.step;
     const initialStep = stepParam ? Math.max(0, Number(stepParam) || 0) : 0;
     return (
-      <>
-        <SiteHeader />
+      <SiteShell>
         <main className="mx-auto max-w-content px-4 py-10">
           <QuizFlow initialAnswers={answers} initialStep={initialStep} />
         </main>
-      </>
+      </SiteShell>
     );
   }
 
@@ -178,8 +187,7 @@ export default async function FindPage({
   const chips = summaryChips(answers);
 
   return (
-    <>
-      <SiteHeader />
+    <SiteShell>
       <main className="mx-auto max-w-content px-4 py-8">
         <div className="mb-6 flex flex-wrap items-center gap-2">
           {chips.map((chip) => (
@@ -259,6 +267,6 @@ export default async function FindPage({
           </p>
         )}
       </main>
-    </>
+    </SiteShell>
   );
 }

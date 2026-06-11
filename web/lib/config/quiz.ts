@@ -16,6 +16,7 @@ export interface QuizAnswers {
   subtype?: string; // subcategory slug or "any"
   skill?: string; // skill_level or "all"
   location?: string; // spot slug
+  delivery?: "yes";
   duration?: PriceTier;
   budget?: string; // max $/day or "none"
 }
@@ -97,6 +98,15 @@ export function getSteps(answers: QuizAnswers): QuizStep[] {
     options: REGION_SPOTS.map((s) => ({ value: s.slug, label: s.label })),
   });
 
+  steps.push({
+    id: "delivery",
+    question: "Do you need gear delivered?",
+    options: [
+      { value: "any", label: "No preference" },
+      { value: "yes", label: "Yes — delivery service" },
+    ],
+  });
+
   if (activity !== "not_sure") {
     steps.push({
       id: "duration",
@@ -126,6 +136,7 @@ export function answersFromSearchParams(
     subtype: get("subtype"),
     skill: get("skill"),
     location: get("location"),
+    delivery: get("delivery") === "yes" ? "yes" : undefined,
     duration: get("duration") as PriceTier | undefined,
     budget: get("budget"),
   };
@@ -134,7 +145,8 @@ export function answersFromSearchParams(
 export function answersToSearchParams(answers: QuizAnswers): URLSearchParams {
   const params = new URLSearchParams();
   for (const [k, v] of Object.entries(answers)) {
-    if (v) params.set(k, v);
+    if (!v || (k === "delivery" && v !== "yes")) continue;
+    params.set(k, v);
   }
   return params;
 }

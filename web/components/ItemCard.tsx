@@ -3,7 +3,12 @@ import CategoryIcon from "./CategoryIcon";
 import FreshnessNote from "./FreshnessNote";
 import type { EquipmentWithOperator } from "@/lib/data";
 import { getCategory } from "@/lib/config/categories";
-import { pickPrice, priceWithSuffix, formatDistance } from "@/lib/format";
+import {
+  formatDistance,
+  operatorDisplayName,
+  pickPrice,
+  priceWithSuffix,
+} from "@/lib/format";
 import type { PriceTier } from "@/lib/search/buildQuery";
 
 /**
@@ -51,7 +56,7 @@ export default function ItemCard({
           </p>
         )}
         <p className="truncate text-sm text-ink-tertiary">
-          {item.operators.name}
+          {operatorDisplayName(item.operators)}
           {distanceMiles !== undefined ? ` · ${formatDistance(distanceMiles)}` : ""}
         </p>
         <div className="mt-auto flex items-baseline justify-between pt-1">

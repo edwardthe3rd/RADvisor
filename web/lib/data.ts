@@ -84,23 +84,28 @@ export async function searchEquipment(
   return sortEquipment(data as unknown as EquipmentWithOperator[], filters);
 }
 
-export async function searchOperators(q: string): Promise<OperatorSummary[]> {
+export async function searchOperators(
+  q: string,
+  filters: Pick<Filters, "delivery"> = {},
+): Promise<OperatorSummary[]> {
   const db = supabaseServer();
-  const { data, error } = await buildOperatorSearchQuery(db, q);
+  const { data, error } = await buildOperatorSearchQuery(db, q, filters);
   if (error || !data) return [];
   return data;
 }
 
 export async function getOperatorsByCategory(
   category: string,
+  options: Pick<Filters, "delivery"> = {},
 ): Promise<Operator[]> {
   const db = supabaseServer();
-  const { data, error } = await db
+  let query = db
     .from("operators")
     .select("*")
     .eq("is_active", true)
-    .contains("categories", [category])
-    .order("name", { ascending: true });
+    .contains("categories", [category]);
+  if (options.delivery) query = query.eq("offers_delivery", true);
+  const { data, error } = await query.order("name", { ascending: true });
   if (error || !data) return [];
   return data;
 }
