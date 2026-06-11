@@ -6,7 +6,7 @@ resolve_s3 = true
 s3_prefix = "radvisor-waitlist-notify"
 region = "us-west-1"
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "NotifyTo=\"edward@radvisor.app\" FromEmail=\"edward@radvisor.app\""
+parameter_overrides = "NotifyTo=\"halickiec@gmail.com\" FromEmail=\"RADvisor <noreply@theradvisor.com>\""
 image_repositories = []
 
 [default.global.parameters]

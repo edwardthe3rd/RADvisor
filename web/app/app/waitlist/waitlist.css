@@ -1,0 +1,243 @@
+.waitlist-layout {
+  --color-bg: #ecf6f5;
+  --color-surface: rgba(255, 255, 255, 0.82);
+  --color-border: rgba(20, 75, 88, 0.16);
+  --color-text: #14221f;
+  --color-muted: #3d5c5a;
+  --color-accent: #0d7a72;
+  --color-accent-hover: #0f9488;
+  --font-sans: var(--font-roboto), system-ui, sans-serif;
+  --radius: 12px;
+  --radius-lg: 20px;
+  --max-width: 1120px;
+
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: #d0e8ec;
+  background-image:
+    radial-gradient(ellipse 120% 70% at 50% 0%, rgba(255, 255, 255, 0.14) 0%, transparent 58%),
+    radial-gradient(ellipse 90% 55% at 92% 8%, rgba(186, 230, 253, 0.28) 0%, transparent 62%),
+    radial-gradient(ellipse 88% 55% at 8% 18%, rgba(167, 243, 208, 0.2) 0%, transparent 62%),
+    linear-gradient(
+      to bottom,
+      #d4eaed 0%,
+      #d2e9eb 14%,
+      #d0e8ec 32%,
+      #cfe7eb 55%,
+      #d2e9ea 72%,
+      #e8f6f4 100%
+    );
+  background-repeat: no-repeat;
+  -webkit-font-smoothing: antialiased;
+}
+
+.waitlist-layout .skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  padding: 0.75rem 1rem;
+  background: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.waitlist-layout .skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+}
+
+.waitlist-layout .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.waitlist-layout .site-header {
+  padding: 0 1.5rem 2rem;
+  border-bottom: 1px solid rgba(20, 75, 88, 0.1);
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.waitlist-layout .header-inner {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.waitlist-layout .logo {
+  display: block;
+  width: min(100%, 1000px);
+  max-width: 100%;
+  height: auto;
+  background: transparent;
+}
+
+.waitlist-layout main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.waitlist-layout .section {
+  padding: 3.5rem 0;
+}
+
+.waitlist-layout .notify {
+  padding-bottom: 4rem;
+}
+
+.waitlist-layout .notify-card {
+  background: rgba(255, 255, 255, 0.48);
+  border: 1px solid rgba(20, 75, 88, 0.12);
+  border-radius: var(--radius-lg);
+  padding: 2rem 1.75rem;
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 2px 6px rgba(20, 75, 88, 0.05),
+    0 14px 44px rgba(15, 90, 95, 0.09),
+    0 26px 64px rgba(12, 70, 78, 0.06);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+.waitlist-layout .notify h2 {
+  margin: 0 0 0.5rem;
+  font-family: var(--font-sans);
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 700;
+}
+
+.waitlist-layout .notify-lede {
+  margin: 0 0 1.5rem;
+  color: var(--color-muted);
+  font-size: 0.98rem;
+  max-width: 36rem;
+}
+
+.waitlist-layout .browse-link {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.waitlist-layout .browse-link:hover {
+  color: var(--color-accent-hover);
+}
+
+.waitlist-layout .waitlist-form {
+  max-width: 32rem;
+}
+
+.waitlist-layout .waitlist-form-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.waitlist-layout .waitlist-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+@media (min-width: 520px) {
+  .waitlist-layout .waitlist-form-row {
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
+
+.waitlist-layout .waitlist-form input[type="email"] {
+  flex: 1;
+  min-width: 0;
+  width: 100%;
+  padding: 0.85rem 1rem;
+  font: inherit;
+  color: var(--color-text);
+  background: #fff;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+}
+
+.waitlist-layout .waitlist-form input[type="email"]::placeholder {
+  color: #888;
+}
+
+.waitlist-layout .waitlist-form input[type="email"]:focus {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-color: var(--color-accent);
+}
+
+.waitlist-layout .btn-primary {
+  padding: 0.85rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: rgba(220, 38, 38, 0.69);
+  border: none;
+  border-radius: var(--radius);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.waitlist-layout .btn-primary:hover {
+  background: rgba(220, 38, 38, 0.85);
+}
+
+.waitlist-layout .btn-primary:active {
+  transform: scale(0.98);
+}
+
+.waitlist-layout .btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waitlist-layout .waitlist-message {
+  margin: 1rem 0 0;
+  min-height: 1.5em;
+  font-size: 0.95rem;
+}
+
+.waitlist-layout .waitlist-message.is-success {
+  color: #0f6b52;
+}
+
+.waitlist-layout .waitlist-message.is-error {
+  color: #c0392b;
+}
+
+.waitlist-layout .site-footer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+  border-top: 1px solid rgba(20, 75, 88, 0.1);
+}
+
+.waitlist-layout .footer-copy {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
