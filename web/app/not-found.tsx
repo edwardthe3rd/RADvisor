@@ -1,10 +1,9 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 
 export default function NotFound() {
   return (
-    <>
-      <SiteHeader />
+    <SiteShell>
       <main className="mx-auto flex max-w-content flex-col items-center px-4 py-24 text-center">
         <h1 className="text-4xl font-extrabold text-ink-primary">Not found</h1>
         <p className="mt-3 text-ink-secondary">
@@ -17,6 +16,6 @@ export default function NotFound() {
           Back to discovery
         </Link>
       </main>
-    </>
+    </SiteShell>
   );
 }

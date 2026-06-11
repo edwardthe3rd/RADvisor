@@ -228,6 +228,14 @@ export default async function AdminOperatorPage({
           <input type="checkbox" name="is_active" defaultChecked={operator?.is_active ?? true} />
           Active (visible to the public)
         </label>
+        <label className="col-span-2 flex items-center gap-2 text-xs font-semibold text-ink-secondary">
+          <input
+            type="checkbox"
+            name="offers_delivery"
+            defaultChecked={operator?.offers_delivery ?? false}
+          />
+          Offers delivery service
+        </label>
         <label className={`${label} col-span-2 sm:col-span-4`}>
           Description
           <textarea

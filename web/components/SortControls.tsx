@@ -7,6 +7,8 @@ import {
   SEARCH_SORT_OPTIONS,
 } from "@/lib/search/sortResults";
 import {
+  DEFAULT_BROWSE_SORT,
+  DEFAULT_SEARCH_SORT,
   filtersToSearchParams,
   type Filters,
   type SortOption,
@@ -23,7 +25,7 @@ export default function SortControls({
   const pathname = usePathname();
   const options = mode === "search" ? SEARCH_SORT_OPTIONS : BROWSE_SORT_OPTIONS;
   const current =
-    filters.sort ?? (mode === "search" ? "relevance" : "popular");
+    filters.sort ?? (mode === "search" ? DEFAULT_SEARCH_SORT : DEFAULT_BROWSE_SORT);
   const showLocation =
     current === "distance" || filters.location !== undefined;
 

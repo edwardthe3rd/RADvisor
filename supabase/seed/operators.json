@@ -18,15 +18,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJJwhmciI_mYAR_5-RXECvubQ",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -130,15 +128,13 @@
   "phone": "(775) 342-4233",
   "website": "https://acestrailer.com/",
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJrb1o0QQ_mYARmD-hZ5vceHI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -161,8 +157,6 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
-   "off_road",
    "water_sports"
   ],
   "photos": null,
@@ -193,7 +187,6 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -374,15 +367,13 @@
    "sat": "6:00 AM – 12:00 AM",
    "sun": "6:00 AM – 12:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.3,
   "rating_external_count": 600,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPTd88Ho_mYARXQ5aijn1QIg",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -404,15 +395,13 @@
    "sat": "8:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 585,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ07qIFkY_mYARufQVHTU-UmI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -446,7 +435,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Alpenglow Sports",
+  "name": "Alpenglow Sports (Demo Only)",
   "slug": "alpenglow-sports",
   "address": "415 N Lake Blvd, Tahoe City, CA 96145, USA",
   "city": "Tahoe City",
@@ -465,16 +454,13 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
-   "camping",
-   "rock_climbing",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 197,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfwaAbXZ9mYARDUP7ClnaRuk",
+  "notes_internal": "google_place_id:ChIJfwaAbXZ9mYARDUP7ClnaRuk; alpine ski demos only — no rentals",
   "is_active": true,
   "last_verified": "2026-06-08"
  },
@@ -609,15 +595,13 @@
   "phone": "(775) 324-6366",
   "website": null,
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.8,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJgYg1pTRBmYARky1WkgfayME",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -639,15 +623,13 @@
    "sat": "7:00 AM – 12:00 AM",
    "sun": "7:00 AM – 12:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.0,
   "rating_external_count": 1798,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJVVVVVSU-mYARubJ_sUgxWsA",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -669,15 +651,13 @@
    "sat": "8:00 AM – 3:00 PM",
    "sun": "11:00 AM – 3:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.1,
   "rating_external_count": 52,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJt7dLZRAVmYARlzvnomRBUrU",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -699,15 +679,13 @@
    "sat": "8:00 AM – 4:00 PM",
    "sun": "8:00 AM – 12:30 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.3,
   "rating_external_count": 57,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ0b9Y4hk_mYARikvUAdm1Nu4",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -942,15 +920,13 @@
    "sat": "9:00 AM – 1:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 323,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJQybdtw4TmYARW0sntKcJ0wU",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -1118,6 +1094,7 @@
   "rating_external_count": 156,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJB2hw9tJhmYARAOxZjb7NGRU",
+  "offers_delivery": true,
   "is_active": true,
   "last_verified": "2026-06-07"
  },
@@ -1269,7 +1246,6 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -1329,15 +1305,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-b5e7aI_mYARwcpE6e0842Q",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1359,15 +1333,13 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 82,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJK92yJO1HmYARkgZkEpUSu7k",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1389,15 +1361,13 @@
    "sat": "7:00 AM – 12:00 AM",
    "sun": "7:00 AM – 12:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 2.8,
   "rating_external_count": 1077,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJGdMkj3A_mYARRfV7GFK36mQ",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1419,15 +1389,13 @@
    "sat": "8:00 AM – 4:00 PM",
    "sun": "8:00 AM – 12:30 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.6,
   "rating_external_count": 112,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-XAi4xk_mYARCrkoHbceAO0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1449,15 +1417,13 @@
    "sat": "8:00 AM – 3:00 PM",
    "sun": "11:00 AM – 3:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.7,
   "rating_external_count": 57,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJu6JRlfE_mYARIL_00r4QC_4",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1479,15 +1445,13 @@
    "sat": "7:00 AM – 3:00 PM",
    "sun": "8:00 AM – 12:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 2.4,
   "rating_external_count": 60,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJxXznDodAmYARMN81CkNtuSI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -1509,15 +1473,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 32,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJYdyNBzw_mYARzfX58iqPISA",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -1601,7 +1563,6 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "camping",
    "water_sports"
   ],
   "photos": null,
@@ -1665,8 +1626,7 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "camping",
-   "camping_vehicles"
+   "camping"
   ],
   "photos": null,
   "rating_external": 4.0,
@@ -1695,15 +1655,13 @@
    "sat": "9:00 AM – 3:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 34,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJRQpxofcJmYARq-TAe6VgFWY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -2237,15 +2195,13 @@
    "sat": "9:00 AM – 12:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 107,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJnZWXOOALmYARKCTjfG1c9YE",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -2501,15 +2457,13 @@
    "sat": "7:00 AM – 1:00 AM",
    "sun": "7:00 AM – 1:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 2.7,
   "rating_external_count": 272,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ_YRx5jagmYARFygcPMhQCDc",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -2788,7 +2742,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -2941,15 +2894,13 @@
    "sat": "6:00 AM – 12:00 AM",
    "sun": "6:00 AM – 12:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 1415,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJqfzLx3A_mYARQSrlvQ1UiWI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -2971,15 +2922,13 @@
    "sat": "8:00 AM – 12:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.0,
   "rating_external_count": 39,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJJxoayTVHmYAR46XHc8jMPKY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3001,15 +2950,13 @@
    "sat": "9:00 AM – 12:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 197,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-wINgP4_mYARw73AZe9Y5LM",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3031,15 +2978,13 @@
    "sat": "8:00 AM – 3:00 PM",
    "sun": "8:00 AM – 3:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 1026,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJBd3mPGg_mYARenO7kmuXtFg",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3061,15 +3006,13 @@
    "sat": "8:00 AM – 12:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.3,
   "rating_external_count": 67,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJBd3mPGg_mYARHNpJTYYCQLU",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -3091,15 +3034,13 @@
    "sat": "8:00 AM – 12:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 20,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJXSt9sNahmYARktvERiFv1tQ",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -3211,15 +3152,13 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 67,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJERUULFY_mYARI4GAeKxWhhg",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -3241,15 +3180,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "7:00 AM – 7:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJDehs38wVnmYR-hZIlY2iPbE",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3271,15 +3208,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJuzAMW-M_mYARpvj4ef8K_co",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3394,8 +3329,7 @@
    "sun": "Closed"
   },
   "categories": [
-   "snow_sports",
-   "water_sports"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 5.0,
@@ -3579,15 +3513,13 @@
    "sat": "8:00 AM – 5:00 PM",
    "sun": "8:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 21,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJD2D48X4_mYARoWVtwWtWTSk",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3610,7 +3542,6 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -3787,15 +3718,13 @@
   "phone": "(844) 497-7949",
   "website": null,
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ5aKDpslAmYARpLGfxAKTHHo",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3968,15 +3897,13 @@
    "sat": "7:00 AM – 1:00 AM",
    "sun": "7:00 AM – 1:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.2,
   "rating_external_count": 681,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJM8iGv2Y_mYARCxSHEBDhIao",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -3998,15 +3925,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 2.9,
   "rating_external_count": 202,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJM8iGv2Y_mYARzamED4LFPKk",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -4121,7 +4046,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -4331,15 +4255,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 61,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ1cpZirtHmYARuQx1YBn98lM",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -5114,8 +5036,6 @@
    "sun": "10:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
-   "camping",
    "water_sports"
   ],
   "photos": null,
@@ -5167,15 +5087,13 @@
    "sat": "7:00 AM – 10:00 PM",
    "sun": "8:00 AM – 10:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 145,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJAQAAAPBEmYARGJFSr_C1mDI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -5310,7 +5228,6 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "camping",
    "rock_climbing"
   ],
   "photos": null,
@@ -5397,7 +5314,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "Moment Skis",
+  "name": "Moment Skis (Demo Only)",
   "slug": "moment-skis",
   "address": "1085 Bible Wy, Reno, NV 89502, USA",
   "city": "Reno",
@@ -5613,7 +5530,6 @@
   "website": "http://www.mtnmikeslaketahoe.com/",
   "hours": null,
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -5665,15 +5581,13 @@
    "sat": "8:30 AM – 4:30 PM",
    "sun": "8:30 AM – 4:30 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.5,
   "rating_external_count": 83,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJF2DJKU0_mYARi8mGQ1258tk",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -5730,15 +5644,13 @@
    "sat": "6:00 AM – 12:00 AM",
    "sun": "6:00 AM – 12:00 AM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 802,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPTd88Ho_mYARpBvypSOsFNM",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -5844,15 +5756,13 @@
    "sat": "7:00 AM – 6:00 PM",
    "sun": "7:00 AM – 6:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 17,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJfXhqnD0VmYARKinwJEBgClI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -6197,7 +6107,6 @@
    "sun": "8:00 AM – 7:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -6290,8 +6199,8 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
+   "mountain_biking",
    "road_cycling",
-   "rock_climbing",
    "snow_sports"
   ],
   "photos": null,
@@ -6321,15 +6230,13 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 114,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ_QJxJJE6SwARrGt5Glhst-0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -6688,7 +6595,6 @@
   "categories": [
    "electric_transport",
    "mountain_biking",
-   "off_road",
    "road_cycling"
   ],
   "photos": null,
@@ -6718,15 +6624,13 @@
    "sat": "8:00 AM – 6:00 PM",
    "sun": "8:00 AM – 6:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.3,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJI_6crw03mYAR2D98NQaiqC4",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -6779,7 +6683,6 @@
    "sun": "9:00 AM – 8:30 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -6840,7 +6743,6 @@
    "sun": "9:00 AM – 8:30 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -6892,15 +6794,13 @@
   "phone": "(775) 358-7974",
   "website": "http://www.praterelms.com/",
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.9,
   "rating_external_count": 17,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJmYmtxkw_mYAR6XVTuq8-SMk",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -6952,15 +6852,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJLZpQ8qchmYARvTRdtPq8lRc",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -6982,15 +6880,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJuRHHOO0-mYAROD35nTh_PCI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -7013,7 +6909,6 @@
    "sun": "7:00 AM – 6:00 PM"
   },
   "categories": [
-   "camping",
    "water_sports"
   ],
   "photos": null,
@@ -7199,16 +7094,13 @@
    "sat": "6:00 AM – 12:00 AM",
    "sun": "6:00 AM – 10:00 PM"
   },
-  "categories": [
-   "camping_vehicles",
-   "electric_transport"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.0,
   "rating_external_count": 1858,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJz9cTLdc-mYAROUgg_t9aBf4",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7230,15 +7122,13 @@
    "sat": "8:30 AM – 6:00 PM",
    "sun": "10:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.0,
   "rating_external_count": 417,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJnw1_Y24_mYARjIkrVc2uiqk",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7260,15 +7150,13 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 48,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJEdoJa_o_mYARKo1q1HG6S1k",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7351,15 +7239,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.8,
   "rating_external_count": 186,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ7fsaQII4mYARAD2sw94i9bY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7463,15 +7349,13 @@
   "phone": "(775) 587-1367",
   "website": null,
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 78,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJjyQmVIBAmYARUHhvAjKeXf8",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7515,15 +7399,13 @@
   "phone": "(775) 406-7162",
   "website": null,
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 40,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ7yGE2bNHmYARbIeRGyaFttU",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7545,15 +7427,13 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 913,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ5YUpwno_mYARfkLbBWaU2-w",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7605,15 +7485,13 @@
    "sat": "9:00 AM – 3:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 345,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJta3ByIBAmYARMwqbNFMU2e4",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7635,15 +7513,13 @@
    "sat": "6:00 AM – 8:00 PM",
    "sun": "7:00 AM – 8:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 16,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJofjcJ-ahmYARkknQInqbAvc",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -7665,15 +7541,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 146,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ3-J6Qz0VmYARHxOTx23jJUY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -7819,8 +7693,7 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "snow_sports",
-   "water_sports"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.9,
@@ -7910,8 +7783,7 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "electric_transport",
-   "off_road"
+   "electric_transport"
   ],
   "photos": null,
   "rating_external": 4.8,
@@ -7992,15 +7864,13 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtzabQblBmYARbjYlXXV5SUw",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -8022,15 +7892,13 @@
    "sat": "7:00 AM – 10:00 PM",
    "sun": "7:00 AM – 10:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 55,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJt3k8YoFBmYARs5TWnG6sx_w",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -8475,15 +8343,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.3,
   "rating_external_count": 29,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJP6uBkfI-mYARK3m-W-8A-FQ",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -8509,9 +8375,7 @@
    "electric_transport",
    "mountain_biking",
    "road_cycling",
-   "rock_climbing",
-   "snow_sports",
-   "water_sports"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.8,
@@ -8570,15 +8434,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtyr7vYZAmYAR9mdy9qhX3PY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -8600,15 +8462,13 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 11,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJu4Kk-u1HmYAR9-MXOHUcfDM",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -8630,15 +8490,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.1,
   "rating_external_count": 83,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJO9gHHqc4mYARbBZqqrUXV8Q",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -8660,15 +8518,13 @@
    "sat": "9:00 AM – 2:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 391,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJTzGmCfFJmYAR_VHW1C995m0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -8781,7 +8637,6 @@
    "sun": "10:00 AM – 6:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -8970,7 +8825,6 @@
   "categories": [
    "electric_transport",
    "mountain_biking",
-   "off_road",
    "road_cycling"
   ],
   "photos": null,
@@ -8993,8 +8847,7 @@
   "website": "https://www.southpassageoutfittersllc.com/",
   "hours": null,
   "categories": [
-   "camping",
-   "water_sports"
+   "camping"
   ],
   "photos": null,
   "rating_external": 5.0,
@@ -9294,15 +9147,13 @@
   "phone": "(775) 826-5356",
   "website": "https://www.mhvillage.com/parks/50713",
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.3,
   "rating_external_count": 18,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJh3kG3oM_mYARfMXnQpFr044",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -9470,7 +9321,6 @@
    "sun": "8:30 AM – 5:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -9552,15 +9402,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 53,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJO1VBruY-mYARsmu5an3MEA0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -9878,9 +9726,7 @@
    "sun": "11:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
-   "snow_sports",
-   "water_sports"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.9,
@@ -9910,7 +9756,6 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -10790,7 +10635,6 @@
    "sun": "9:00 AM – 7:00 PM"
   },
   "categories": [
-   "camping",
    "water_sports"
   ],
   "photos": null,
@@ -10821,7 +10665,6 @@
    "sun": "9:00 AM – 8:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -10911,15 +10754,13 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJFZUotRh9mYARsUISZaR0W9M",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -11570,15 +11411,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.0,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJrx_NKfM5mYARya8MRhu7Mpw",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11600,15 +11439,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-4jsaHI5mYARIjBufh-_RRA",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11630,15 +11467,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.1,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ20-7PjVBmYARIcZNxkh6CSs",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11660,15 +11495,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJMzSOhFkVmYAR_YugaKkPhEE",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11690,15 +11523,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.0,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ73RSYqELmYAR-XtCYYnXzuo",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11720,15 +11551,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJpTXJYeQ3mYAR7mkHb44t7AI",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11742,15 +11571,13 @@
   "phone": "(775) 849-2400",
   "website": "https://www.bigtextrailerworld.com/location/reno/",
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJAQAkuA4TmYARLPZBXe3YM-0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -11772,15 +11599,13 @@
    "sat": "9:00 AM – 12:00 PM, 1:00 – 6:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 427,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJpVEsswsTmYAROngWSNhMAx0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -11802,15 +11627,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.5,
   "rating_external_count": 20,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJb0eJFIA_mYARX50FQhYC5ew",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12126,15 +11949,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ2ZzCVFoVmYAReWASYj5ZlCE",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12156,15 +11977,13 @@
    "sat": "9:00 AM – 4:30 PM",
    "sun": "9:00 AM – 4:30 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJiXIq2I8UmYAR2UaPUsqGsNU",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12186,15 +12005,13 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.0,
   "rating_external_count": 25,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJz0bZEPznmIARKuYPEkD6Q5I",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12216,15 +12033,13 @@
    "sat": "11:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtR7Z9xNHmYARsLjJCbY3IUc",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12246,15 +12061,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.1,
   "rating_external_count": 61,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJKYhevX1AmYARqdzINEKFyIM",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12276,15 +12089,13 @@
    "sat": "7:00 AM – 7:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.4,
   "rating_external_count": 404,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJOTcAOZ05mYARuEqMwRwExKY",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12336,15 +12147,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.1,
   "rating_external_count": 39,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJJUe0GCM_mYARrWg2J82g8ec",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12398,7 +12207,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -12450,15 +12258,13 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 44,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJk2CIOSpHmYARwkLSD0MlBQc",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-08"
  },
  {
@@ -12513,7 +12319,6 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -12636,15 +12441,13 @@
    "sat": "9:00 AM – 6:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJhagXR-Y-mYAR4EPCCuWcVl0",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {
@@ -12783,15 +12586,13 @@
   "phone": "(775) 346-5578",
   "website": "http://www.wheelercarrental.com/",
   "hours": null,
-  "categories": [
-   "camping_vehicles"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 93,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtbUuN_BHmYARZ8tIEu1xl9M",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-07"
  },
  {

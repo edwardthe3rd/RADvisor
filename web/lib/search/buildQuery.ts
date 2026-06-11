@@ -51,6 +51,15 @@ export const SORT_OPTIONS: { value: SortOption; label: string }[] = [
 
 const SORT_VALUES = new Set(SORT_OPTIONS.map((o) => o.value));
 
+/** Restore to `"popular"` after operator/seed fine-tuning (05 §4). */
+export const DEFAULT_BROWSE_SORT: SortOption = "alpha";
+export const DEFAULT_SEARCH_SORT: SortOption = "relevance";
+
+export function resolveSort(filters: Filters): SortOption {
+  if (filters.sort) return filters.sort;
+  return filters.q ? DEFAULT_SEARCH_SORT : DEFAULT_BROWSE_SORT;
+}
+
 export interface Filters {
   q?: string;
   categories?: string[];
@@ -63,6 +72,8 @@ export interface Filters {
   operatorIds?: string[];
   hasPhoto?: boolean;
   verifiedRecently?: boolean;
+  /** When true, only operators that offer gear delivery. */
+  delivery?: boolean;
   /** Spot slug from lib/config/locations.ts — proximity sort, never a hard filter. */
   location?: string;
   sort?: SortOption;
@@ -105,11 +116,27 @@ export function filtersFromSearchParams(
     operatorIds: list("operatorIds"),
     hasPhoto: get("hasPhoto") === "1" || undefined,
     verifiedRecently: get("verified") === "1" || undefined,
+    delivery: get("delivery") === "1" || undefined,
     location: get("location") || undefined,
     sort: SORT_VALUES.has(get("sort") as SortOption)
       ? (get("sort") as SortOption)
       : undefined,
   };
+}
+
+/** True when the user narrowed beyond a category landing page (03 §2). */
+export function hasBrowseRefinement(filters: Filters): boolean {
+  return !!(
+    filters.subcategories?.length ||
+    filters.skill?.length ||
+    filters.brands?.length ||
+    filters.priceMin !== undefined ||
+    filters.priceMax !== undefined ||
+    filters.hasPhoto ||
+    filters.verifiedRecently ||
+    filters.operatorIds?.length ||
+    filters.delivery
+  );
 }
 
 export function filtersToSearchParams(filters: Filters): URLSearchParams {
@@ -124,6 +151,7 @@ export function filtersToSearchParams(filters: Filters): URLSearchParams {
   if (filters.priceMax !== undefined) params.set("priceMax", String(filters.priceMax));
   if (filters.hasPhoto) params.set("hasPhoto", "1");
   if (filters.verifiedRecently) params.set("verified", "1");
+  if (filters.delivery) params.set("delivery", "1");
   if (filters.location) params.set("location", filters.location);
   if (filters.sort) params.set("sort", filters.sort);
   return params;
@@ -159,6 +187,7 @@ export function buildEquipmentQuery(
   if (filters.brands?.length) query = query.in("brand", filters.brands);
   if (filters.operatorIds?.length)
     query = query.in("operator_id", filters.operatorIds);
+  if (filters.delivery) query = query.eq("operators.offers_delivery", true);
   if (filters.hasPhoto) query = query.not("image_url", "is", null);
   if (filters.verifiedRecently) {
     const cutoff = new Date(Date.now() - 90 * 24 * 3600 * 1000)
@@ -180,7 +209,7 @@ export function buildEquipmentQuery(
     }
   }
 
-  switch (filters.sort) {
+  switch (resolveSort(filters)) {
     case "price_asc":
       query = query.order(tierColumn, { ascending: true, nullsFirst: false });
       break;
@@ -208,12 +237,14 @@ export function buildEquipmentQuery(
 export function buildOperatorSearchQuery(
   db: SupabaseClient<Database>,
   q: string,
+  filters: Pick<Filters, "delivery"> = {},
 ) {
   const term = escapeLike(q);
-  return db
+  let query = db
     .from("operators")
     .select(OPERATOR_SUMMARY)
     .eq("is_active", true)
-    .ilike("name", `%${term}%`)
-    .limit(8);
+    .ilike("name", `%${term}%`);
+  if (filters.delivery) query = query.eq("offers_delivery", true);
+  return query.limit(8);
 }

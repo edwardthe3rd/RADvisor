@@ -2,7 +2,7 @@ from django.test import SimpleTestCase
 
 from apps.catalog.business_filters import evaluate_business, is_relevant, rejection_reason
 from apps.catalog.geo import search_viewport_payload, within_service_area, within_service_region
-from apps.catalog.rental_taxonomy import classify
+from apps.catalog.rental_taxonomy import DEFERRED_CATEGORIES, all_search_queries, classify
 
 
 class RelevanceTests(SimpleTestCase):
@@ -137,6 +137,38 @@ class RelevanceTests(SimpleTestCase):
     def test_still_rejects_cafe_only(self):
         self.assertFalse(is_relevant("Sierra Mountain Cafe"))
 
+    def test_jet_ski_shop_not_tagged_alpine_ski(self):
+        name = "Uplyft Tahoe Jet Ski Rentals"
+        slugs = classify(name, query="ski rental", source_slug="ski")
+        self.assertNotIn("ski", slugs)
+        self.assertIn("boat", slugs)
+
+    def test_water_ski_school_not_tagged_alpine_ski(self):
+        name = "High Sierra Water Ski School"
+        slugs = classify(name, query="ski rental", source_slug="ski")
+        self.assertNotIn("ski", slugs)
+        self.assertIn("boat", slugs)
+
+    def test_ski_run_marina_not_tagged_alpine_ski(self):
+        name = "Ski Run Marina"
+        slugs = classify(name, query="ski rental", source_slug="ski")
+        self.assertNotIn("ski", slugs)
+        self.assertIn("boat", slugs)
+
+    def test_ski_and_bike_shop_gets_both_slugs(self):
+        slugs = classify("Olympic Valley Ski & Bike", query="ski rental", source_slug="ski")
+        self.assertIn("ski", slugs)
+        self.assertIn("mountain-bike", slugs)
+
+    def test_reconcile_drops_cross_group_query_tags(self):
+        from apps.catalog.rental_taxonomy import reconcile_top_level_categories
+
+        fixed = reconcile_top_level_categories(
+            "Obexer's Boat Company",
+            ["snow_sports", "water_sports"],
+        )
+        self.assertEqual(fixed, ["water_sports"])
+
     def test_accepts_water_ski_school(self):
         """Ski/wakeboard schools often rent gear despite 'school' in the name."""
         self.assertTrue(is_relevant("High Sierra Water Ski School"))
@@ -212,6 +244,21 @@ class RelevanceTests(SimpleTestCase):
         self.assertEqual(reason, "deferred:rv")
         self.assertEqual(slugs, set())
 
+    def test_rejects_standard_car_rental_from_ev_query(self):
+        """Airport car rentals are not electric_transport (e-scooter / e-bike)."""
+        self.assertFalse(is_relevant("RNO Rent a Car Center"))
+        reason, slugs = evaluate_business(
+            name="RNO Rent a Car Center",
+            website="https://www.renoconrac.com/",
+            state="NV",
+            lat=39.5067,
+            lng=-119.7784,
+            query="electric scooter rental",
+            source_slug="e-scooter",
+        )
+        self.assertEqual(reason, "excluded:car_rental")
+        self.assertEqual(slugs, set())
+
     def test_rejects_vacation_rental_listing(self):
         """Airbnb-style titles mention ski resorts but are not gear shops."""
         name = "4 Mi to Downhill Ski Resort! Spacious Family Haven"
@@ -239,6 +286,14 @@ class RelevanceTests(SimpleTestCase):
             source_slug="boat",
         )
         self.assertTrue(reason and reason.startswith("excluded:"))
+
+    def test_rv_and_trailer_queries_not_in_places_sync(self):
+        """Camper vans / RVs / utility trailers are deferred — not searched."""
+        active = {slug for _, slug in all_search_queries()}
+        deferred = {cat.slug for cat in DEFERRED_CATEGORIES}
+        self.assertIn("rv-camper", deferred)
+        self.assertIn("trailer", deferred)
+        self.assertFalse(active & deferred)
 
 
 class GeoTests(SimpleTestCase):

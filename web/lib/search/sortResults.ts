@@ -2,7 +2,7 @@ import { REGION_CENTER, haversineMiles } from "@/lib/config/geo";
 import { REGION_SPOTS } from "@/lib/config/locations";
 import { pickPrice } from "@/lib/format";
 import type { Equipment, Operator } from "@/lib/supabase/types";
-import type { Filters, SortOption } from "./buildQuery";
+import { resolveSort, type Filters, type SortOption } from "./buildQuery";
 
 type SortableEquipment = Equipment & {
   operators: Pick<
@@ -16,10 +16,9 @@ export function resolveSortPoint(filters: Filters): { lat: number; lng: number }
   return spot ?? REGION_CENTER;
 }
 
-/** Default browse = popular; default search = relevance (05 §4). */
+/** Effective sort including browse/search defaults (05 §4). */
 export function effectiveSort(filters: Filters): SortOption {
-  if (filters.sort) return filters.sort;
-  return filters.q ? "relevance" : "popular";
+  return resolveSort(filters);
 }
 
 function operatorDistance(

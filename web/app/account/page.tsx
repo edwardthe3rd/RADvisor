@@ -1,5 +1,5 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 
 export const metadata = {
   title: "Account",
@@ -8,8 +8,7 @@ export const metadata = {
 
 export default function AccountPage() {
   return (
-    <>
-      <SiteHeader />
+    <SiteShell>
       <main className="mx-auto max-w-content px-4 py-12 text-center">
         <h1 className="text-2xl font-bold text-ink-primary">Your profile</h1>
         <p className="mx-auto mt-2 max-w-md text-ink-secondary">
@@ -31,6 +30,6 @@ export default function AccountPage() {
           </Link>
         </div>
       </main>
-    </>
+    </SiteShell>
   );
 }

@@ -1,10 +1,9 @@
 import Link from "next/link";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 import CategoryCard from "@/components/CategoryCard";
 import ItemCard from "@/components/ItemCard";
 import { CATEGORIES } from "@/lib/config/categories";
 import {
-  getEquipmentCategoryCounts,
   getOperatorCategoryCounts,
   getPopularEquipment,
   type EquipmentWithOperator,
@@ -19,8 +18,7 @@ export const metadata = {
 };
 
 export default async function DiscoverPage() {
-  const [equipmentCounts, operatorCounts, popular] = await Promise.all([
-    getEquipmentCategoryCounts(),
+  const [operatorCounts, popular] = await Promise.all([
     getOperatorCategoryCounts(),
     getPopularEquipment(),
   ]);
@@ -33,17 +31,14 @@ export default async function DiscoverPage() {
     popularByCategory.set(item.category, list);
   }
 
-  // Item count when gear is listed; operator count keeps the directory
-  // browsable while SKU seeding is in progress. Hide truly empty categories.
+  // Category cards show operator counts; hide categories with none.
   const visibleCategories = CATEGORIES.map((category) => {
-    const items = equipmentCounts.get(category.slug) ?? 0;
     const operators = operatorCounts.get(category.slug) ?? 0;
-    return { category, items, operators };
-  }).filter(({ items, operators }) => items > 0 || operators > 0);
+    return { category, operators };
+  }).filter(({ operators }) => operators > 0);
 
   return (
-    <>
-      <SiteHeader />
+    <SiteShell>
       <main className="mx-auto max-w-content px-4 py-8">
         <section className="mb-10 rounded-xl bg-hero-lake px-6 py-10 text-center sm:py-14">
           <h1 className="text-balance text-3xl font-extrabold text-ink-primary sm:text-4xl">
@@ -56,7 +51,7 @@ export default async function DiscoverPage() {
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
               href="/find"
-              className="w-full rounded-lg bg-brand-primary px-6 py-3 font-bold text-white transition hover:bg-brand-primaryDark sm:w-auto"
+              className="w-full rounded-lg bg-brand-primarySoft/90 px-6 py-3 font-bold text-white transition hover:bg-brand-primarySoftDark/95 sm:w-auto"
             >
               Take the quiz
             </Link>
@@ -73,16 +68,35 @@ export default async function DiscoverPage() {
           <h2 className="mb-4 text-2xl font-bold text-ink-primary">
             Browse by category
           </h2>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {visibleCategories.map(({ category, items, operators }) => (
-              <CategoryCard
-                key={category.slug}
-                category={category}
-                count={items > 0 ? items : operators}
-                countLabel={items > 0 ? "items" : "operators"}
-              />
-            ))}
-          </div>
+          {visibleCategories.length > 0 ? (
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {visibleCategories.map(({ category, operators }) => (
+                <CategoryCard
+                  key={category.slug}
+                  category={category}
+                  count={operators}
+                  countLabel="operators"
+                />
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-lg border border-feedback-warning/30 bg-brand-primaryLight p-6 text-ink-secondary">
+              <p className="font-semibold text-ink-primary">
+                No operator data loaded
+              </p>
+              <p className="mt-2 text-sm">
+                Check{" "}
+                <code className="rounded bg-white px-1">NEXT_PUBLIC_SUPABASE_URL</code>{" "}
+                and{" "}
+                <code className="rounded bg-white px-1">
+                  NEXT_PUBLIC_SUPABASE_ANON_KEY
+                </code>{" "}
+                in <code className="rounded bg-white px-1">web/.env.local</code>{" "}
+                (paste keys directly — no angle brackets), then restart{" "}
+                <code className="rounded bg-white px-1">npm run dev</code>.
+              </p>
+            </div>
+          )}
         </section>
 
         {CATEGORIES.filter((c) => popularByCategory.has(c.slug)).map(
@@ -110,6 +124,6 @@ export default async function DiscoverPage() {
           ),
         )}
       </main>
-    </>
+    </SiteShell>
   );
 }

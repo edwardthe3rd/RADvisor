@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import SiteHeader from "@/components/SiteHeader";
+import SiteShell from "@/components/SiteShell";
 import FreshnessNote from "@/components/FreshnessNote";
 import CategoryIcon from "@/components/CategoryIcon";
 import { categoryLabel, getCategory, subcategoryLabel } from "@/lib/config/categories";
@@ -8,6 +8,7 @@ import { getOperatorBySlug } from "@/lib/data";
 import {
   locationLabel,
   mapsUrl,
+  operatorDisplayName,
   pickPrice,
   priceWithSuffix,
   ratingLabel,
@@ -34,11 +35,12 @@ export async function generateMetadata({
   const data = await getOperatorBySlug(params.slug);
   if (!data) return {};
   const { operator } = data;
+  const displayName = operatorDisplayName(operator);
   return {
-    title: `${operator.name} — gear rentals in ${locationLabel(operator) || "Reno–Tahoe"}`,
+    title: `${displayName} — gear rentals in ${locationLabel(operator) || "Reno–Tahoe"}`,
     description:
       operator.description ??
-      `Rental gear, pricing and contact info for ${operator.name}.`,
+      `Rental gear, pricing and contact info for ${displayName}.`,
   };
 }
 
@@ -50,6 +52,7 @@ export default async function OperatorPage({
   const data = await getOperatorBySlug(params.slug);
   if (!data) notFound();
   const { operator, equipment } = data;
+  const displayName = operatorDisplayName(operator);
 
   const rating = ratingLabel(operator.rating_external);
   const hours =
@@ -65,21 +68,20 @@ export default async function OperatorPage({
   }
 
   return (
-    <>
-      <SiteHeader />
+    <SiteShell>
       <main className="mx-auto max-w-content px-4 py-8">
         <nav className="mb-4 text-sm text-ink-tertiary">
           <Link href="/" className="hover:underline">
             Discover
           </Link>
           {" / "}
-          <span className="text-ink-secondary">{operator.name}</span>
+          <span className="text-ink-secondary">{displayName}</span>
         </nav>
 
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="min-w-0 flex-1">
             <h1 className="text-3xl font-extrabold text-ink-primary">
-              {operator.name}
+              {displayName}
             </h1>
             <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-ink-secondary">
               {rating && (
@@ -115,6 +117,15 @@ export default async function OperatorPage({
               </p>
             )}
             <FreshnessNote lastVerified={operator.last_verified} />
+            {operator.offers_delivery && (
+              <div className="mt-4 rounded-lg border border-surface-borderLight bg-surface-muted px-4 py-3 text-sm text-ink-secondary">
+                <p className="font-semibold text-ink-primary">Delivery service</p>
+                <p className="mt-1">
+                  This operator delivers rental gear to your lodging or other
+                  location. Contact them for delivery areas, timing, and fees.
+                </p>
+              </div>
+            )}
 
             <section className="mt-10">
               <h2 className="mb-4 text-2xl font-bold text-ink-primary">
@@ -122,7 +133,7 @@ export default async function OperatorPage({
               </h2>
               {equipment.length === 0 ? (
                 <p className="rounded-lg border border-surface-borderLight bg-brand-secondaryLight p-6 font-semibold text-ink-primary">
-                  Unable to provide inventory — please contact {operator.name}{" "}
+                  Unable to provide inventory — please contact {displayName}{" "}
                   directly. They rent{" "}
                   {(operator.categories ?? [])
                     .map((c) => categoryLabel(c).toLowerCase())
@@ -198,6 +209,12 @@ export default async function OperatorPage({
               <h2 className="mb-3 text-lg font-bold text-ink-primary">
                 Contact to confirm availability
               </h2>
+              {operator.offers_delivery && (
+                <p className="mb-3 text-sm text-ink-secondary">
+                  Delivery service available — ask about areas and fees when you
+                  reach out.
+                </p>
+              )}
               <div className="flex flex-col gap-2">
                 {operator.booking_url && (
                   <a
@@ -256,6 +273,6 @@ export default async function OperatorPage({
           </aside>
         </div>
       </main>
-    </>
+    </SiteShell>
   );
 }

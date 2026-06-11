@@ -14,6 +14,9 @@ const config: Config = {
         brand: {
           primary: "#FF5A5F",
           primaryDark: "#E04850",
+          /** Muted red for hero quiz CTA — between primary and the darker soft red. */
+          primarySoft: "#D45256",
+          primarySoftDark: "#BE484C",
           primaryLight: "#FDF6E3",
           gold: "#EAB321",
           goldDark: "#C99510",

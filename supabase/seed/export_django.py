@@ -29,6 +29,7 @@ import django
 django.setup()
 
 from apps.catalog.models import Business  # noqa: E402
+from apps.catalog.rental_taxonomy import reconcile_top_level_categories  # noqa: E402
 
 # Keep in sync with web/lib/config/geo.ts
 REGION_CENTER = (39.5296, -119.8138)
@@ -47,8 +48,6 @@ CATEGORY_MAP = {
     "snowboard": "snow_sports",
     "offroad": "off_road",
     "snowmobile": "off_road",
-    "rv-camper": "camping_vehicles",
-    "trailer": "camping_vehicles",
     "road-bike": "road_cycling",
     "air": "aerial",
     "e-bike": "electric_transport",
@@ -62,10 +61,25 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
     # Factory demo program — snow_sports operator; demo subcategory on equipment row.
     "moment-skis": {
         "is_active": True,
+        "name": "Moment Skis (Demo Only)",
         "categories": ["snow_sports"],
         "notes_internal": (
             "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory alpine ski demo program"
         ),
+    },
+    "uplyft-tahoe-jet-ski-rentals": {
+        "categories": ["water_sports"],
+    },
+    # Retail shop — alpine ski demos only, no gear rentals.
+    "alpenglow-sports": {
+        "name": "Alpenglow Sports (Demo Only)",
+        "categories": ["snow_sports"],
+        "notes_internal": (
+            "google_place_id:ChIJfwaAbXZ9mYARDUP7ClnaRuk; alpine ski demos only — no rentals"
+        ),
+    },
+    "black-tie-ski-rentals-of-north-lake-tahoe": {
+        "offers_delivery": True,
     },
 }
 
@@ -131,7 +145,7 @@ def main():
             "phone": b.phone or None,
             "website": b.website or None,
             "hours": normalize_hours(b.hours),
-            "categories": cats,
+            "categories": reconcile_top_level_categories(b.name, cats),
             "photos": [b.photo_url] if b.photo_url else None,
             "rating_external": float(b.google_rating) if b.google_rating else None,
             "rating_external_count": b.google_rating_count or None,

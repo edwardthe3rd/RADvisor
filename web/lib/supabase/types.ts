@@ -127,6 +127,7 @@ export type Database = {
           logo_url: string | null
           name: string
           notes_internal: string | null
+          offers_delivery: boolean
           phone: string | null
           photos: string[] | null
           rating_external: number | null
@@ -157,6 +158,7 @@ export type Database = {
           logo_url?: string | null
           name: string
           notes_internal?: string | null
+          offers_delivery?: boolean
           phone?: string | null
           photos?: string[] | null
           rating_external?: number | null
@@ -187,6 +189,7 @@ export type Database = {
           logo_url?: string | null
           name?: string
           notes_internal?: string | null
+          offers_delivery?: boolean
           phone?: string | null
           photos?: string[] | null
           rating_external?: number | null
