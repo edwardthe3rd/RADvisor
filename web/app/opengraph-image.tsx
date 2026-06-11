@@ -17,10 +17,10 @@ export default function OpengraphImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #FFE8E9 0%, #ffffff 60%)",
+          background: "linear-gradient(135deg, #FDF6E3 0%, #E3F2F7 55%, #ffffff 100%)",
         }}
       >
-        <div style={{ fontSize: 84, fontWeight: 800, color: "#FF5A5F" }}>
+        <div style={{ fontSize: 84, fontWeight: 800, color: "#EAB321" }}>
           RADvisor
         </div>
         <div

@@ -37,20 +37,20 @@ export default function OperatorCard({
             loading="lazy"
           />
         ) : (
-          <div className="flex h-24 items-center justify-center gap-2 bg-brand-primaryLight">
+          <div className="flex h-24 items-center justify-center gap-2 bg-brand-goldLight">
             <span className="text-3xl" aria-hidden="true">
               🏪
             </span>
           </div>
         )}
         <div className="flex flex-col gap-1 p-3 pb-0">
-          <h3 className="truncate font-bold text-ink-primary group-hover:text-brand-primaryDark">
+          <h3 className="truncate font-bold text-ink-primary group-hover:text-brand-goldDark">
             {operator.name}
           </h3>
           <div className="flex items-center gap-3 text-sm text-ink-secondary">
             {rating ? (
               <span className="flex items-center gap-1">
-                <span className="text-brand-tertiary" aria-hidden="true">
+                <span className="text-brand-gold" aria-hidden="true">
                   ★
                 </span>
                 {rating}
@@ -86,7 +86,7 @@ export default function OperatorCard({
 
       <div className="flex flex-1 flex-col gap-2 p-3 pt-2">
         {!hasInventory && (
-          <p className="rounded-md bg-brand-primaryLight px-2 py-1.5 text-xs font-semibold text-ink-primary">
+          <p className="rounded-md bg-brand-secondaryLight px-2 py-1.5 text-xs font-semibold text-ink-primary">
             Unable to provide inventory — please contact {operator.name}{" "}
             directly.
           </p>

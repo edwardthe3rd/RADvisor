@@ -45,13 +45,13 @@ export default async function DiscoverPage() {
     <>
       <SiteHeader />
       <main className="mx-auto max-w-content px-4 py-8">
-        <section className="mb-10 rounded-xl bg-brand-primaryLight px-6 py-10 text-center sm:py-14">
+        <section className="mb-10 rounded-xl bg-hero-lake px-6 py-10 text-center sm:py-14">
           <h1 className="text-balance text-3xl font-extrabold text-ink-primary sm:text-4xl">
-            Find your next adventure&rsquo;s gear
+            Find the right gear for your next adventure
           </h1>
           <p className="mx-auto mt-2 max-w-2xl text-lg text-ink-secondary">
-            Every outdoor rental operator within 50 miles of Reno — skis,
-            kayaks, bikes, camping gear, RVs and more.
+            Every outdoor rental operator within 50 miles of Lake Tahoe — paddleboards,
+            e-bikes, camping gear, climbing gear, UTVs and more.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link
@@ -62,9 +62,9 @@ export default async function DiscoverPage() {
             </Link>
             <Link
               href="/search"
-              className="w-full rounded-lg border border-ink-primary px-6 py-3 font-bold text-ink-primary transition hover:bg-surface-muted sm:w-auto"
+              className="w-full rounded-lg border border-brand-secondary bg-surface-background px-6 py-3 font-bold text-brand-secondary transition hover:bg-white sm:w-auto"
             >
-              Search gear
+              Advanced search
             </Link>
           </div>
         </section>

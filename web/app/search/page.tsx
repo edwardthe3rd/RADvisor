@@ -44,7 +44,7 @@ export default async function SearchPage({
                 <Link
                   key={op.id}
                   href={`/operators/${op.slug}`}
-                  className="rounded-full border border-surface-border px-4 py-2 text-sm font-semibold text-ink-primary hover:border-brand-primary hover:text-brand-primaryDark"
+                  className="rounded-full border border-surface-border px-4 py-2 text-sm font-semibold text-ink-primary hover:border-brand-gold hover:text-brand-goldDark"
                 >
                   {op.name}
                   {locationLabel(op) ? (

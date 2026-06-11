@@ -21,7 +21,7 @@ export default function SearchBar({
 
   return (
     <form onSubmit={submit} className="w-full max-w-xl" role="search">
-      <div className="flex items-center gap-2 rounded-full border border-surface-border bg-white px-4 py-2 shadow-sm focus-within:border-brand-primary">
+      <div className="flex items-center gap-2 rounded-full border border-surface-border bg-white px-4 py-2 shadow-sm focus-within:border-brand-gold">
         <svg
           width="18"
           height="18"
