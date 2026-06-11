@@ -2,11 +2,12 @@ version = 0.1
 
 [default.deploy.parameters]
 stack_name = "radvisor-waitlist-notify"
-resolve_s3 = true
+resolve_s3 = false
+s3_bucket = "radvisor-sam-deploy-334321697715"
 s3_prefix = "radvisor-waitlist-notify"
 region = "us-west-1"
 capabilities = "CAPABILITY_IAM"
-parameter_overrides = "NotifyTo=\"edward@radvisor.app\" FromEmail=\"edward@radvisor.app\""
+parameter_overrides = "NotifyTo=\"halickiec@gmail.com\" FromEmail=\"RADvisor <noreply@theradvisor.com>\""
 image_repositories = []
 
 [default.global.parameters]
