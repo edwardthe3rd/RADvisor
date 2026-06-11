@@ -201,7 +201,7 @@ export default async function FindPage({
         </div>
 
         {results.relaxed.length > 0 && (
-          <p className="mb-4 rounded-lg bg-brand-tertiaryLight px-4 py-3 text-sm text-ink-primary">
+          <p className="mb-4 rounded-lg bg-brand-goldLight px-4 py-3 text-sm text-ink-primary">
             We couldn&rsquo;t find exact matches, so we widened the{" "}
             {results.relaxed.join(" and ")} to show you the closest options.
           </p>

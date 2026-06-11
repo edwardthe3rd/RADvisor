@@ -19,14 +19,26 @@ export default function SiteHeader({ search }: { search?: string }) {
         <div className="flex-1">
           <SearchBar initialValue={search} />
         </div>
-        <nav className="flex items-center gap-4 text-sm font-semibold text-ink-primary">
-          <Link href="/" className="hover:text-brand-primaryDark">
-            Browse
-          </Link>
-          <Link href="/find" className="hover:text-brand-primaryDark">
-            Gear quiz
-          </Link>
-        </nav>
+        <Link
+          href="/account"
+          aria-label="Profile"
+          className="flex h-10 w-10 shrink-0 items-center justify-center self-end rounded-full border border-surface-border text-ink-secondary transition hover:border-ink-primary hover:text-ink-primary sm:self-center"
+        >
+          <svg
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            aria-hidden
+          >
+            <path d="M20 21a8 8 0 0 0-16 0" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        </Link>
       </div>
     </header>
   );

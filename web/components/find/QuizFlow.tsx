@@ -53,7 +53,7 @@ export default function QuizFlow({
       </p>
       <div className="mb-6 h-1.5 overflow-hidden rounded-full bg-surface-muted">
         <div
-          className="h-full rounded-full bg-brand-primary transition-all"
+          className="h-full rounded-full bg-brand-gold transition-all"
           style={{ width: `${((stepIndex + 1) / steps.length) * 100}%` }}
         />
       </div>
@@ -68,9 +68,9 @@ export default function QuizFlow({
             key={option.value}
             type="button"
             onClick={() => select(option.value)}
-            className={`rounded-lg border px-4 py-4 text-left font-semibold transition hover:border-brand-primary hover:bg-brand-primaryLight ${
+            className={`rounded-lg border px-4 py-4 text-left font-semibold transition hover:border-brand-gold hover:bg-brand-goldLight ${
               answers[step.id] === option.value
-                ? "border-brand-primary bg-brand-primaryLight text-brand-primaryDark"
+                ? "border-brand-gold bg-brand-goldLight text-brand-goldDark"
                 : "border-surface-border bg-white text-ink-primary"
             }`}
           >

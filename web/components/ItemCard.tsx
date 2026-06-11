@@ -37,12 +37,12 @@ export default function ItemCard({
           loading="lazy"
         />
       ) : (
-        <div className="flex h-32 items-center justify-center bg-brand-primaryLight">
+        <div className="flex h-32 items-center justify-center bg-brand-goldLight">
           <CategoryIcon icon={category?.icon ?? "mountain"} className="text-4xl" />
         </div>
       )}
       <div className="flex flex-1 flex-col gap-1 p-3">
-        <h3 className="line-clamp-2 font-bold text-ink-primary group-hover:text-brand-primaryDark">
+        <h3 className="line-clamp-2 font-bold text-ink-primary group-hover:text-brand-goldDark">
           {item.name ?? category?.label ?? "Rental item"}
         </h3>
         {(item.brand || item.model) && (

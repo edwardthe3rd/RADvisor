@@ -1,7 +1,7 @@
 import type { Config } from "tailwindcss";
 
-// Design tokens ported from the former Expo app (mobile/src/theme/colors.ts,
-// spacing.ts) so the web app keeps brand parity.
+// Brand palette aligned with radvisor-logo.png: gold yellow, lake blue, forest green.
+// brand-primary (red) is reserved for primary CTAs — e.g. "Take the quiz".
 const config: Config = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,35 +14,44 @@ const config: Config = {
         brand: {
           primary: "#FF5A5F",
           primaryDark: "#E04850",
-          primaryLight: "#FFE8E9",
-          secondary: "#00A699",
-          secondaryLight: "#E0F7F5",
-          tertiary: "#FC642D",
-          tertiaryLight: "#FFF0EB",
+          primaryLight: "#FDF6E3",
+          gold: "#EAB321",
+          goldDark: "#C99510",
+          goldLight: "#FDF6E3",
+          secondary: "#1A7B9E",
+          secondaryDark: "#145F7A",
+          secondaryLight: "#E3F2F7",
+          tertiary: "#2D8B57",
+          tertiaryLight: "#E8F5EE",
           accent: "#1B6B4A",
           accentLight: "#E8F5EE",
         },
         surface: {
           DEFAULT: "#FFFFFF",
-          background: "#FFFFFF",
-          backgroundAlt: "#F7F7F7",
+          background: "#FAFCFD",
+          backgroundAlt: "#F4F8FA",
           card: "#FFFFFF",
-          border: "#DDDDDD",
-          borderLight: "#EBEBEB",
-          muted: "#F5F5F5",
+          border: "#D4E2E8",
+          borderLight: "#E8F0F4",
+          muted: "#F0F5F7",
+        },
+        hero: {
+          gold: "#F0DFA0",
+          lake: "#8EC5DA",
+          pine: "#C8E6D4",
         },
         ink: {
-          primary: "#222222",
-          secondary: "#717171",
-          tertiary: "#B0B0B0",
+          primary: "#1A2B33",
+          secondary: "#5C6F7A",
+          tertiary: "#9AABB5",
           inverse: "#FFFFFF",
-          link: "#008489",
+          link: "#1A7B9E",
         },
         feedback: {
-          success: "#008A05",
+          success: "#2D8B57",
           warning: "#E07912",
           danger: "#C13515",
-          info: "#428BFF",
+          info: "#1A7B9E",
         },
       },
       borderRadius: {

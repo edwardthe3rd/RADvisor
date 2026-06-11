@@ -84,7 +84,7 @@ export default async function OperatorPage({
             <div className="mt-2 flex flex-wrap items-center gap-3 text-sm text-ink-secondary">
               {rating && (
                 <span className="flex items-center gap-1">
-                  <span className="text-brand-tertiary" aria-hidden="true">
+                  <span className="text-brand-gold" aria-hidden="true">
                     ★
                   </span>
                   {rating}
@@ -121,7 +121,7 @@ export default async function OperatorPage({
                 Rental inventory
               </h2>
               {equipment.length === 0 ? (
-                <p className="rounded-lg border border-surface-borderLight bg-brand-primaryLight p-6 font-semibold text-ink-primary">
+                <p className="rounded-lg border border-surface-borderLight bg-brand-secondaryLight p-6 font-semibold text-ink-primary">
                   Unable to provide inventory — please contact {operator.name}{" "}
                   directly. They rent{" "}
                   {(operator.categories ?? [])
