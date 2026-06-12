@@ -476,7 +476,6 @@
   "website": "https://www.thealpinistas.com/",
   "hours": null,
   "categories": [
-   "aerial",
    "camping",
    "rock_climbing"
   ],
@@ -486,7 +485,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ8Xm0sOZBmYARAFonC28TGws",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Anderson Powersports Reno",
@@ -1118,9 +1117,10 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
-   "camping",
-   "snow_sports"
+   "electric_transport",
+   "road_cycling",
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.2,
@@ -1128,7 +1128,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJdWSt3M-hmYARaK4ho-Iv6rQ",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "BlueZone Sports - South Lake Tahoe",
@@ -1150,9 +1150,8 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
-   "camping",
-   "rock_climbing",
+   "electric_transport",
+   "road_cycling",
    "snow_sports",
    "water_sports"
   ],
@@ -1162,7 +1161,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJD8M1RrqPmYARqqE-H3snqWg",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "BlueZone Sports - Tahoe City",
@@ -1184,8 +1183,9 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
-   "camping",
+   "electric_transport",
+   "road_cycling",
+   "snow_sports",
    "water_sports"
   ],
   "photos": null,
@@ -1194,7 +1194,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPVNwMnt9mYARjCm76sJdqbE",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "BlueZone Sports - Team Sales Office",
@@ -1223,8 +1223,8 @@
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkybnjNaimYARc1faFTjIs50",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Bobo's Ski & Patio",
@@ -1245,6 +1245,7 @@
    "sat": "9:00 AM – 6:00 PM",
    "sun": "9:00 AM – 6:00 PM"
   },
+  "description": "Also listed on Google as Mogul Mouse — same business and location.",
   "categories": [
    "snow_sports"
   ],
@@ -1252,9 +1253,9 @@
   "rating_external": 4.5,
   "rating_external_count": 590,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqyv1rH9AmYARtgff-7iWsyQ",
+  "notes_internal": "google_place_id:ChIJqyv1rH9AmYARtgff-7iWsyQ; duplicate Google listing: mogul-mouse",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Bouncing Around",
@@ -1502,7 +1503,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -1511,7 +1511,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJRwzm8KuQmYARyjfiJy1ABWs",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Camelot Party Rentals",
@@ -1593,10 +1593,8 @@
    "sun": "9:00 AM – 5:30 PM"
   },
   "categories": [
-   "camping",
-   "mountain_biking",
-   "road_cycling",
-   "snow_sports"
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 3.8,
@@ -1604,7 +1602,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ87kKrIuFmYARe1NNd8uMRh8",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Camping World - Reno",
@@ -1935,27 +1933,26 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Coalition Snow",
+  "name": "Coalition Snow (Demo Only)",
   "slug": "coalition-snow",
   "address": "299 E Plumb Ln Suite 162, Reno, NV 89502, USA",
   "city": "Reno",
   "state": "NV",
   "lat": 39.506883,
   "lng": -119.801,
-  "phone": null,
+  "phone": "(775) 525-8136",
   "website": "https://www.coalitionsnow.com/",
   "hours": null,
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ6S-mQiVHmYARb2odeGBcd2U",
+  "notes_internal": "google_place_id:ChIJ6S-mQiVHmYARb2odeGBcd2U; snow sports demos only — no rentals",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Coldstream Adventures Tours",
@@ -2567,16 +2564,18 @@
    "sat": "8:00 AM – 5:00 PM",
    "sun": "8:00 AM – 5:00 PM"
   },
+  "description": "Paddleboard rentals for Serene Lakes residents only — choose Serene Lakes as your location to find this offering. The lakes are private and not open to the general public.",
   "categories": [
-   "snow_sports"
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 49,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqcC_TFfom4ARrt8jKoleVz0",
+  "notes_internal": "google_place_id:ChIJqcC_TFfom4ARrt8jKoleVz0; serene_lakes_paddleboards_residents_only",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "E-Bike Hub",
@@ -2711,7 +2710,6 @@
    "sun": "8:00 AM – 8:30 PM"
   },
   "categories": [
-   "aerial",
    "water_sports"
   ],
   "photos": null,
@@ -2720,7 +2718,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtSGtrj5xmYARX_nBebLphFw",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Elevated Boat Club Lake Tahoe",
@@ -3069,9 +3067,9 @@
   "rating_external": 5.0,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJF7-iSEXXm4ARZ44Y30OtY1A",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJF7-iSEXXm4ARZ44Y30OtY1A; retail only — no gear rentals",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Exposure Photo Booths",
@@ -3335,9 +3333,9 @@
   "rating_external": 5.0,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ_XOgTKNHmYARQ5f51RcNl2g",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ_XOgTKNHmYARQ5f51RcNl2g; no gear rentals",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Full Access Tahoe",
@@ -3451,7 +3449,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
@@ -3460,7 +3457,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJp9AGVYRrmYARHvdI49jldr4",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Gear Hut",
@@ -3482,7 +3479,6 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "rock_climbing"
   ],
@@ -3492,7 +3488,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJOZet7oxBmYARFkEseucIW5Q",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Go Rentals",
@@ -3542,15 +3538,17 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
+   "electric_transport",
+   "road_cycling",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.2,
   "rating_external_count": 56,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJy9ppqHeQmYARudCSM07YImA",
+  "notes_internal": "google_place_id:ChIJy9ppqHeQmYARudCSM07YImA; cruiser and e-bike rentals (not MTB)",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Grand Event Rental Reno-Tahoe",
@@ -3631,19 +3629,20 @@
    "sat": "10:00 AM – 6:00 PM",
    "sun": "10:00 AM – 6:00 PM"
   },
+  "description": "Part of the BlueZone Sports retail network — same rental gear as BlueZone's Carson City, South Lake Tahoe, and Tahoe City stores.",
   "categories": [
-   "aerial",
-   "camping",
-   "rock_climbing",
-   "snow_sports"
+   "electric_transport",
+   "road_cycling",
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 220,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJmVK1sDPem4AROEdsc6xHzUo",
+  "notes_internal": "google_place_id:ChIJmVK1sDPem4AROEdsc6xHzUo; bluezone_retail_network",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Gravity Haus Gear Rental - Haus Quiver - Truckee",
@@ -3665,7 +3664,7 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": null,
@@ -3673,7 +3672,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJiZahgDrfm4ARG93950wDe4I",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Great Basin Bicycles",
@@ -3806,6 +3805,7 @@
    "sat": "10:00 AM – 8:00 PM",
    "sun": "10:00 AM – 6:00 PM"
   },
+  "description": "Snow sports rentals and alpine ski demos.",
   "categories": [
    "snow_sports"
   ],
@@ -3813,9 +3813,9 @@
   "rating_external": 4.5,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv-yKNHaQmYARw929njJWAu4",
+  "notes_internal": "google_place_id:ChIJv-yKNHaQmYARw929njJWAu4; snow sports rentals and demos",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Heavenly Sports - Marriott",
@@ -3836,6 +3836,7 @@
    "sat": "10:00 AM – 7:00 PM",
    "sun": "10:00 AM – 6:00 PM"
   },
+  "description": "Snow sports rentals and alpine ski demos.",
   "categories": [
    "snow_sports"
   ],
@@ -3843,9 +3844,9 @@
   "rating_external": 4.2,
   "rating_external_count": 150,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJx83JvkSQmYAR37b1G_O0P5E",
+  "notes_internal": "google_place_id:ChIJx83JvkSQmYAR37b1G_O0P5E; snow sports rentals and demos",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Heavenly Sports - Tamarack Lodge",
@@ -3867,7 +3868,6 @@
    "sun": "10:00 AM – 8:00 PM"
   },
   "categories": [
-   "aerial",
    "camping"
   ],
   "photos": null,
@@ -3876,7 +3876,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPRErSHaQmYAR6GJasIPw_so",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Hertz Car Rental - Reno - Reno-tahoe International Airport (RNO)",
@@ -5286,9 +5286,9 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJz1ZizON8mYARvqTqpXTsVYw",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJz1ZizON8mYARvqTqpXTsVYw; vacation rental listing — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Mogul Mouse",
@@ -5302,16 +5302,15 @@
   "website": "https://www.bobos.com/",
   "hours": null,
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJkW3Hrn9AmYARSTxL7AQZDxk",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJkW3Hrn9AmYARSTxL7AQZDxk; duplicate of bobos-ski-patio (same business)",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Moment Skis (Demo Only)",
@@ -5514,21 +5513,29 @@
   "rating_external": 4.4,
   "rating_external_count": 62,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJL0PZlOrZm4ARCLy9I1WG14U",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJL0PZlOrZm4ARCLy9I1WG14U; renamed to olympic-valley-ski-bike — duplicate listing",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
-  "name": "Mountain Mike's Tees and Skis",
+  "name": "Mountain Mikes / Snowshoe Thompson's",
   "slug": "mountain-mikes-tees-and-skis",
   "address": "1219 Emerald Bay Rd, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
   "state": "CA",
   "lat": 38.906467,
   "lng": -120.000005,
-  "phone": null,
+  "phone": "(530) 544-4783",
   "website": "http://www.mtnmikeslaketahoe.com/",
-  "hours": null,
+  "hours": {
+   "mon": "8:00 AM – 6:00 PM",
+   "tue": "8:00 AM – 6:00 PM",
+   "wed": "8:00 AM – 6:00 PM",
+   "thu": "8:00 AM – 6:00 PM",
+   "fri": "8:00 AM – 6:00 PM",
+   "sat": "8:00 AM – 6:00 PM",
+   "sun": "8:00 AM – 6:00 PM"
+  },
   "categories": [
    "snow_sports"
   ],
@@ -5536,9 +5543,9 @@
   "rating_external": 4.0,
   "rating_external_count": 22,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJE1amPXSQmYAR0IbbbnD6ocI",
+  "notes_internal": "google_place_id:ChIJE1amPXSQmYAR0IbbbnD6ocI; duplicate Google listing: snowshoe-thompsons-ski-and-snowboard-rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Mountain Vibes Specialty Rentals",
@@ -5610,11 +5617,6 @@
    "sun": "Closed"
   },
   "categories": [
-   "aerial",
-   "camping",
-   "mountain_biking",
-   "road_cycling",
-   "rock_climbing",
    "snow_sports"
   ],
   "photos": null,
@@ -5623,7 +5625,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJz9w2VrePmYARDBJh0xkdUUc",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "National Car Rental",
@@ -5703,9 +5705,9 @@
   "rating_external": 5.0,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv39nHstvmYARRthSt17BGyA",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJv39nHstvmYARRthSt17BGyA; trail association — no gear rentals (refers to Tahoe Multisport)",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "New & Used Tahoe Sports",
@@ -5727,15 +5729,15 @@
    "sun": "11:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 117,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJtYQxeHZ9mYARNYamcYRoFNY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJtYQxeHZ9mYARNYamcYRoFNY; consignment retail — no gear rentals",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Next Move Rentals",
@@ -5927,7 +5929,7 @@
    "sun": "9:00 AM – 12:00 PM"
   },
   "categories": [
-   "aerial"
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.4,
@@ -5935,7 +5937,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJfzHSBHV9mYARIT8np-2e_4A",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "North Tahoe Watersports Inc",
@@ -6190,14 +6192,15 @@
   "phone": "(530) 581-4707",
   "website": "https://olympicvalleyskiandbike.com/",
   "hours": {
-   "mon": "9:00 AM – 5:00 PM",
-   "tue": "9:00 AM – 5:00 PM",
-   "wed": "9:00 AM – 5:00 PM",
-   "thu": "9:00 AM – 5:00 PM",
-   "fri": "9:00 AM – 5:00 PM",
-   "sat": "9:00 AM – 5:00 PM",
-   "sun": "9:00 AM – 5:00 PM"
+   "mon": "8:00 AM – 5:00 PM",
+   "tue": "8:00 AM – 5:00 PM",
+   "wed": "8:00 AM – 5:00 PM",
+   "thu": "8:00 AM – 5:00 PM",
+   "fri": "8:00 AM – 5:00 PM",
+   "sat": "8:00 AM – 5:00 PM",
+   "sun": "8:00 AM – 5:00 PM"
   },
+  "description": "Snow sports and bike rentals, plus ski and bike demos. Formerly Mountain Mike's Sports.",
   "categories": [
    "mountain_biking",
    "road_cycling",
@@ -6207,9 +6210,9 @@
   "rating_external": 4.6,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec",
+  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; snow/bike rentals and demos; former name: Mountain Mike's Sports (ChIJL0PZlOrZm4ARCLy9I1WG14U)",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "On The Go Trailer Rentals",
@@ -6380,6 +6383,7 @@
    "sat": "8:00 AM – 5:00 PM",
    "sun": "8:00 AM – 5:00 PM"
   },
+  "description": "Snow sports rentals and gear demos.",
   "categories": [
    "snow_sports"
   ],
@@ -6387,9 +6391,9 @@
   "rating_external": 4.0,
   "rating_external_count": 79,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJN83rWezZm4ARtHEgfKt-QPs",
+  "notes_internal": "google_place_id:ChIJN83rWezZm4ARtHEgfKt-QPs; snow sports rentals and demos",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Parallel Mountain Sports",
@@ -6410,17 +6414,17 @@
    "sat": "8:00 AM – 6:00 PM",
    "sun": "8:00 AM – 5:00 PM"
   },
+  "description": "Snow sports rentals and gear demos.",
   "categories": [
-   "aerial",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 3.9,
   "rating_external_count": 32,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJzUBQ9uzZm4ARv8ZP7EJ-tgE",
+  "notes_internal": "google_place_id:ChIJzUBQ9uzZm4ARv8ZP7EJ-tgE; snow sports rentals and demos",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Party Palace",
@@ -6653,7 +6657,7 @@
    "sun": "10:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.4,
@@ -6661,10 +6665,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJieyd0sShmYARH6v55ShV9oM",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
-  "name": "Powder House Ski & Board: Pro Snow",
+  "name": "Powder House Ski & Board: Pro Snow (Demo Only)",
   "slug": "powder-house-ski-board-pro-snow",
   "address": "1001 Heavenly Village Way, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -6682,6 +6686,7 @@
    "sat": "9:00 AM – 9:00 PM",
    "sun": "9:00 AM – 8:30 PM"
   },
+  "description": "Snow sports demos only — no gear rentals. Part of the Powder House network; visit Main Store, Gondola, Express, or Zalanta for rentals.",
   "categories": [
    "snow_sports"
   ],
@@ -6689,9 +6694,9 @@
   "rating_external": 4.5,
   "rating_external_count": 35,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ03PeAneQmYARisbooJUWr4c",
+  "notes_internal": "google_place_id:ChIJ03PeAneQmYARisbooJUWr4c; snow sports demos only — no rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Powder House Ski and Snowboard At The Gondola",
@@ -6712,16 +6717,19 @@
    "sat": "9:00 AM – 9:00 PM",
    "sun": "9:00 AM – 8:30 PM"
   },
+  "description": "Ski and bike rentals at Heavenly Village. Part of the Powder House rental network — five South Lake Tahoe locations.",
   "categories": [
+   "mountain_biking",
+   "road_cycling",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 3.6,
   "rating_external_count": 102,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqbAd6naQmYARzmDmLE2LviY",
+  "notes_internal": "google_place_id:ChIJqbAd6naQmYARzmDmLE2LviY; ski and bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Powder House Ski and Snowboard Main Store",
@@ -6742,16 +6750,19 @@
    "sat": "9:00 AM – 9:00 PM",
    "sun": "9:00 AM – 8:30 PM"
   },
+  "description": "Snow sports and bike rentals. Part of the Powder House rental network — five South Lake Tahoe locations.",
   "categories": [
+   "mountain_biking",
+   "road_cycling",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 3.4,
   "rating_external_count": 172,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJNd1MfXaQmYARGUhCfr5Mou8",
+  "notes_internal": "google_place_id:ChIJNd1MfXaQmYARGUhCfr5Mou8; snow and bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Powder House Stateline at Zalanta",
@@ -6772,6 +6783,7 @@
    "sat": "9:00 AM – 9:00 PM",
    "sun": "9:00 AM – 8:30 PM"
   },
+  "description": "Ski rentals only. Part of the Powder House rental network — five South Lake Tahoe locations.",
   "categories": [
    "snow_sports"
   ],
@@ -6779,9 +6791,42 @@
   "rating_external": 2.6,
   "rating_external_count": 14,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJuYGQMXaQmYARCO9oO_RTRQQ",
+  "notes_internal": "google_place_id:ChIJuYGQMXaQmYARCO9oO_RTRQQ; ski rentals only",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
+ },
+ {
+  "name": "Powder House Express",
+  "slug": "powder-house-express",
+  "address": "3668 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+  "city": "South Lake Tahoe",
+  "state": "CA",
+  "lat": 38.948057,
+  "lng": -119.956927,
+  "phone": "(530) 541-6422",
+  "website": "http://www.tahoepowderhouse.com/powder-house-express",
+  "hours": {
+   "mon": "8:00 AM – 8:00 PM",
+   "tue": "8:00 AM – 8:00 PM",
+   "wed": "8:00 AM – 8:00 PM",
+   "thu": "8:00 AM – 8:00 PM",
+   "fri": "8:00 AM – 8:00 PM",
+   "sat": "8:00 AM – 8:00 PM",
+   "sun": "8:00 AM – 8:00 PM"
+  },
+  "description": "Ski and bike rentals year-round. Part of the Powder House rental network — five South Lake Tahoe locations.",
+  "categories": [
+   "mountain_biking",
+   "road_cycling",
+   "snow_sports"
+  ],
+  "photos": null,
+  "rating_external": null,
+  "rating_external_count": null,
+  "inventory_sync_type": "manual",
+  "notes_internal": "founder_verified; ski and bike rentals",
+  "is_active": true,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Prater Elms Mobile Home Community",
@@ -6812,7 +6857,7 @@
   "lat": 39.247799,
   "lng": -119.956657,
   "phone": "(775) 413-9061",
-  "website": "https://www.praxisskis.com/pages/customer-service/contact-us.html",
+  "website": "https://www.praxisskis.com/",
   "hours": {
    "mon": "10:00 AM – 6:00 PM",
    "tue": "10:00 AM – 6:00 PM",
@@ -6822,16 +6867,18 @@
    "sat": "12:00 – 5:00 PM",
    "sun": "12:00 – 5:00 PM"
   },
+  "description": "Snow sports rentals and Praxis ski demos — pickup in Incline Village. Lift foil demos and rentals (eFoil, wing, wake, downwind) booked through Praxis; Lift is the foil brand they carry, not a separate shop. eFoil sessions launch from Adrift Tahoe in Kings Beach.",
   "categories": [
-   "snow_sports"
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 5.0,
   "rating_external_count": 8,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ__-P0xBwmYARBwqqmQYJZvQ",
+  "notes_internal": "google_place_id:ChIJ__-P0xBwmYARBwqqmQYJZvQ; snow and foil rentals; lift_foils_dealer",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Premier Trailer Leasing - Reno, NV",
@@ -6999,7 +7046,6 @@
    "sun": "10:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "rock_climbing",
    "water_sports"
@@ -7010,7 +7056,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJyTEMtn0_mYARwkrufB2t4Fc",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "REI Bike Shop",
@@ -8065,7 +8111,6 @@
    "sun": "9:00 AM – 7:00 PM"
   },
   "categories": [
-   "aerial",
    "mountain_biking",
    "road_cycling",
    "snow_sports"
@@ -8076,7 +8121,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Showcase - Heavenly",
@@ -8188,7 +8233,6 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "off_road",
    "rock_climbing",
@@ -8200,7 +8244,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkYDDOMtAmYAR3MpEhhvlzMo",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Sierra Bicycle Supply",
@@ -8777,9 +8821,9 @@
   "rating_external": 4.6,
   "rating_external_count": 121,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ9YtcA7WPmYARBsx33yY9tLI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ9YtcA7WPmYARBsx33yY9tLI; duplicate of mountain-mikes-tees-and-skis (same location)",
+  "is_active": false,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Soaring NV",
@@ -9120,7 +9164,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "electric_transport",
    "mountain_biking",
@@ -9134,7 +9177,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Starlight Mobile Home Park",
@@ -10211,7 +10254,6 @@
    "sun": "10:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "rock_climbing",
    "snow_sports",
@@ -10223,7 +10265,30 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJKZmdmSt7mYARgLmE0wQXf9c",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
+ },
+ {
+  "name": "Tahoe XC",
+  "slug": "tahoe-xc",
+  "address": "925 Country Club Dr, Tahoe City, CA 96145, USA",
+  "city": "Tahoe City",
+  "state": "CA",
+  "lat": 39.1937,
+  "lng": -120.1039,
+  "phone": "(530) 583-5475",
+  "website": "https://tahoexc.org/",
+  "description": "Cross-country ski and snowshoe rentals at Dollar Point — home of the historic Tahoe Nordic Center.",
+  "hours": null,
+  "categories": [
+   "snow_sports"
+  ],
+  "photos": null,
+  "rating_external": null,
+  "rating_external_count": null,
+  "inventory_sync_type": "manual",
+  "notes_internal": "founder_verified; xc/nordic rentals — replaces mis-tagged vacation listing near Nordic Center",
+  "is_active": true,
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Tahoe Multisport - E-Bike Kayak Stand Up Paddle Board - Rentals & Tours",
@@ -10563,7 +10628,6 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "mountain_biking",
    "rock_climbing",
@@ -10576,7 +10640,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Tahoe Sports Ltd.",
@@ -10598,7 +10662,6 @@
    "sun": "9:00 AM – 8:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "electric_transport",
    "mountain_biking",
@@ -10613,7 +10676,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "Tahoe Sports Ltd. Kayak & Fish",
@@ -11084,7 +11147,6 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "aerial",
    "camping",
    "mountain_biking",
    "road_cycling",
@@ -11097,7 +11159,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJcWCd2jPem4ARMrf4Ao6HBUw",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "The Biggest Little ATV/UTV Shop",
@@ -12500,7 +12562,6 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
-   "aerial",
    "mountain_biking",
    "off_road",
    "road_cycling",
@@ -12513,7 +12574,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-12"
  },
  {
   "name": "West Shore Sports",

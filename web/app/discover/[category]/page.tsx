@@ -49,7 +49,10 @@ export default async function CategoryPage({
   const showCatalog = hasBrowseRefinement(filters);
   const [items, allOperators, brands, operatorIdsWithEquipment] = await Promise.all([
     showCatalog ? searchEquipment(filters) : Promise.resolve([]),
-    getOperatorsByCategory(category.slug, { delivery: filters.delivery }),
+    getOperatorsByCategory(category.slug, {
+      delivery: filters.delivery,
+      location: filters.location,
+    }),
     getDistinctBrands(),
     getOperatorIdsWithEquipment(category.slug, subcategories),
   ]);

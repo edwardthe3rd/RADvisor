@@ -50,8 +50,8 @@ python manage.py prune_reno_businesses --dry-run
 Push refreshed data into Supabase for the web app:
 
 ```bash
-python ../supabase/seed/export_django.py
-cd ../web && SUPABASE_SERVICE_ROLE_KEY=... npm run seed
+cd web
+SUPABASE_SERVICE_ROLE_KEY='your-key-from-.env.local' npm run seed
 ```
 
 See [SECURITY.md](SECURITY.md) for API key restrictions and quota guidance.

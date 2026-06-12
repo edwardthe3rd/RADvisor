@@ -91,6 +91,7 @@ async function getResults(answers: QuizAnswers): Promise<QuizResults> {
   if (items.length === 0 && answers.activity && answers.activity !== "not_sure") {
     operators = await getOperatorsByCategory(answers.activity, {
       delivery: filters.delivery,
+      location: answers.location,
     });
   }
 

@@ -14,7 +14,7 @@ export const revalidate = 300;
 export const metadata = {
   title: "Discover gear rentals near Reno & Lake Tahoe",
   description:
-    "Browse outdoor gear rentals by category — skis, kayaks, bikes, camping gear, RVs and more from local Reno–Tahoe rental operators.",
+    "Browse outdoor gear rentals by category — paddleboards, e-bikes, camping gear, climbing gear, UTVs and more from local Reno–Tahoe rental operators.",
 };
 
 export default async function DiscoverPage() {

@@ -4,6 +4,7 @@ import SiteShell from "@/components/SiteShell";
 import FreshnessNote from "@/components/FreshnessNote";
 import CategoryIcon from "@/components/CategoryIcon";
 import { categoryLabel, getCategory, subcategoryLabel } from "@/lib/config/categories";
+import { operatorVisibleForCategoryBrowse } from "@/lib/config/operator-category-gates";
 import { getOperatorBySlug } from "@/lib/data";
 import {
   locationLabel,
@@ -98,9 +99,15 @@ export default async function OperatorPage({
               )}
               {locationLabel(operator) && <span>{locationLabel(operator)}</span>}
             </div>
-            {(operator.categories ?? []).length > 0 && (
+            {(operator.categories ?? []).some((slug) =>
+              operatorVisibleForCategoryBrowse(operator, slug),
+            ) && (
               <div className="mt-3 flex flex-wrap gap-1">
-                {(operator.categories ?? []).map((slug) => (
+                {(operator.categories ?? [])
+                  .filter((slug) =>
+                    operatorVisibleForCategoryBrowse(operator, slug),
+                  )
+                  .map((slug) => (
                   <Link
                     key={slug}
                     href={`/discover/${slug}`}

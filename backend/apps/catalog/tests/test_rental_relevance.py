@@ -2,7 +2,12 @@ from django.test import SimpleTestCase
 
 from apps.catalog.business_filters import evaluate_business, is_relevant, rejection_reason
 from apps.catalog.geo import search_viewport_payload, within_service_area, within_service_region
-from apps.catalog.rental_taxonomy import DEFERRED_CATEGORIES, all_search_queries, classify
+from apps.catalog.rental_taxonomy import (
+    CATEGORIES,
+    DEFERRED_CATEGORIES,
+    all_search_queries,
+    classify,
+)
 
 
 class RelevanceTests(SimpleTestCase):
@@ -169,6 +174,39 @@ class RelevanceTests(SimpleTestCase):
         )
         self.assertEqual(fixed, ["water_sports"])
 
+    def test_outdoor_gear_rental_not_air_query(self):
+        """Catch-all outdoor query falsely tagged ski/bike shops as aerial."""
+        air = next(c for c in CATEGORIES if c.slug == "air")
+        self.assertNotIn("outdoor gear rental", air.queries)
+
+    def test_classify_generic_sports_shop_not_aerial(self):
+        slugs = classify(
+            "Tahoe Sports Ltd.",
+            query="outdoor gear rental",
+            source_slug="air",
+        )
+        self.assertNotIn("air", slugs)
+
+    def test_filter_aerial_drops_mis_tagged_retail(self):
+        from apps.catalog.rental_taxonomy import filter_aerial_category
+
+        fixed = filter_aerial_category(
+            "REI",
+            ["aerial", "camping", "snow_sports"],
+            website="https://www.rei.com/",
+        )
+        self.assertEqual(fixed, ["camping", "snow_sports"])
+
+    def test_filter_aerial_keeps_hang_gliding_operator(self):
+        from apps.catalog.rental_taxonomy import filter_aerial_category
+
+        fixed = filter_aerial_category(
+            "Hang Gliding Tahoe",
+            ["aerial", "snow_sports"],
+            website="http://hangglidingtahoe.com/",
+        )
+        self.assertIn("aerial", fixed)
+
     def test_accepts_water_ski_school(self):
         """Ski/wakeboard schools often rent gear despite 'school' in the name."""
         self.assertTrue(is_relevant("High Sierra Water Ski School"))
@@ -257,6 +295,23 @@ class RelevanceTests(SimpleTestCase):
             source_slug="e-scooter",
         )
         self.assertEqual(reason, "excluded:car_rental")
+        self.assertEqual(slugs, set())
+
+    def test_rejects_ski_lease_vacation_listing(self):
+        name = (
+            "Modern House Ski Lease or short term, New Hot Tub, by Nordic Center"
+        )
+        self.assertFalse(is_relevant(name))
+        reason, slugs = evaluate_business(
+            name=name,
+            website="",
+            state="CA",
+            lat=39.1912,
+            lng=-120.1097,
+            query="ski rental",
+            source_slug="ski",
+        )
+        self.assertEqual(reason, "excluded:vacation_rental")
         self.assertEqual(slugs, set())
 
     def test_rejects_vacation_rental_listing(self):

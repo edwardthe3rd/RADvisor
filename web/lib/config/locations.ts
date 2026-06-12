@@ -19,6 +19,7 @@ export const REGION_SPOTS: RegionSpot[] = [
   { slug: "pyramid-lake", label: "Pyramid Lake", lat: 39.9907, lng: -119.5859 },
   { slug: "carson-river", label: "Carson River", lat: 39.1638, lng: -119.7674 },
   { slug: "donner", label: "Donner Lake", lat: 39.3247, lng: -120.2655 },
+  { slug: "serene-lakes", label: "Serene Lakes", lat: 39.3058, lng: -120.3584 },
   { slug: "carson-city", label: "Carson City", lat: 39.1638, lng: -119.7674 },
   { slug: "sparks", label: "Sparks", lat: 39.5349, lng: -119.7527 },
 ];
