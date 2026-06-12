@@ -38,3 +38,4 @@ pgdata/
 
 # Claude Code
 .claude/
+instructions/
