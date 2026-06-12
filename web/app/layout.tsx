@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | RADvisor",
   },
   description:
-    "Discover outdoor adventure equipment rentals near Reno and Lake Tahoe - skis, kayaks, bikes, camping gear, RVs and more from local rental businesses.",
+    "Discover outdoor adventure equipment rentals near Reno and Lake Tahoe — paddleboards, e-bikes, camping gear, climbing gear, UTVs and more from local rental businesses.",
   openGraph: {
     type: "website",
     siteName: "RADvisor",

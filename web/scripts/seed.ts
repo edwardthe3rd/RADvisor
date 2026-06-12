@@ -4,8 +4,8 @@
  * JSON lives in supabase/seed/; this script runs from web/ so dependencies
  * resolve from web/node_modules.
  *
- *   cd web && npm run seed
- *   SUPABASE_SERVICE_ROLE_KEY=... npm run seed
+ *   cd web
+ *   SUPABASE_SERVICE_ROLE_KEY='your-key-from-.env.local' npm run seed
  */
 import { createClient } from "@supabase/supabase-js";
 import { readFileSync, existsSync } from "node:fs";

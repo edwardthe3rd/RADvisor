@@ -154,8 +154,11 @@ ALLOWED_STATES: tuple[str, ...] = ("NV", "CA")
 # Airbnb/VRBO-style property titles (often surfaced by gear-rental queries).
 VACATION_RENTAL_NAME_PATTERNS: tuple[str, ...] = (
     "holiday rental",
+    "ski lease",
     "short term rental",
     "short-term rental",
+    "short term,",
+    "short term ",
     " mi to ",
     " miles to ",
     "sleeps ",
@@ -311,7 +314,8 @@ CATEGORIES: tuple[CategoryDef, ...] = (
     # --- Air / Other ------------------------------------------------------
     CategoryDef(
         "air", "Air & Other Adventures", "Air/Other", "\U0001fa82",
-        queries=("paragliding rental", "hang gliding rental", "outdoor gear rental"),
+        # Narrow queries only — "outdoor gear rental" falsely tagged ski/bike shops.
+        queries=("paragliding rental", "hang gliding rental"),
         keywords=("paraglid", "hang glid", "parasail", "balloon"),
     ),
 )
@@ -529,6 +533,36 @@ TAXONOMY_SLUG_TO_TOP_LEVEL: dict[str, str] = {
     "mountain-bike": "mountain_biking",
     "climbing": "rock_climbing",
 }
+
+
+# Name/website markers for legitimate aerial operators (paragliding, hang gliding, etc.).
+AERIAL_BUSINESS_SIGNALS: tuple[str, ...] = (
+    "paraglid",
+    "hang glid",
+    "parasail",
+    "balloon",
+    "soaring",
+    "sport aviation",
+)
+
+
+def business_signals_aerial(name: str, *, website: str = "") -> bool:
+    blob = f"{name or ''} {website or ''}".lower()
+    return any(kw in blob for kw in AERIAL_BUSINESS_SIGNALS)
+
+
+def filter_aerial_category(
+    name: str,
+    categories: list[str],
+    *,
+    website: str = "",
+) -> list[str]:
+    """Drop aerial unless the business name or website signals air sports."""
+    if "aerial" not in categories:
+        return categories
+    if business_signals_aerial(name, website=website):
+        return categories
+    return [c for c in categories if c != "aerial"]
 
 
 def reconcile_top_level_categories(name: str, categories: list[str]) -> list[str]:

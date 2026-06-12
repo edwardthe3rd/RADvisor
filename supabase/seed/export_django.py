@@ -29,7 +29,10 @@ import django
 django.setup()
 
 from apps.catalog.models import Business  # noqa: E402
-from apps.catalog.rental_taxonomy import reconcile_top_level_categories  # noqa: E402
+from apps.catalog.rental_taxonomy import (  # noqa: E402
+    filter_aerial_category,
+    reconcile_top_level_categories,
+)
 
 # Keep in sync with web/lib/config/geo.ts
 REGION_CENTER = (39.5296, -119.8138)
@@ -56,6 +59,14 @@ CATEGORY_MAP = {
     "climbing": "rock_climbing",
 }
 
+# BlueZone retail stores — founder-verified (road/e-bike, water, snow; not MTB).
+BLUEZONE_RETAIL_CATEGORIES = [
+    "electric_transport",
+    "road_cycling",
+    "snow_sports",
+    "water_sports",
+]
+
 # Verified corrections applied on export (founder-verified; survives Django re-sync).
 OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
     # Factory demo program — snow_sports operator; demo subcategory on equipment row.
@@ -80,6 +91,275 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
     },
     "black-tie-ski-rentals-of-north-lake-tahoe": {
         "offers_delivery": True,
+    },
+    "bluezone-sports-carson-city": {
+        "categories": BLUEZONE_RETAIL_CATEGORIES,
+    },
+    "bluezone-sports-south-lake-tahoe": {
+        "categories": BLUEZONE_RETAIL_CATEGORIES,
+    },
+    "bluezone-sports-tahoe-city": {
+        "categories": BLUEZONE_RETAIL_CATEGORIES,
+    },
+    "granite-chief-powered-by-bluezone-sports": {
+        "categories": BLUEZONE_RETAIL_CATEGORIES,
+        "description": (
+            "Part of the BlueZone Sports retail network — same rental gear as "
+            "BlueZone's Carson City, South Lake Tahoe, and Tahoe City stores."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJmVK1sDPem4AROEdsc6xHzUo; bluezone_retail_network"
+        ),
+    },
+    "bluezone-sports-team-sales-office": {
+        "is_active": False,
+    },
+    "camp-richardson-mountain-sports-center": {
+        "categories": ["snow_sports", "water_sports"],
+    },
+    "coalition-snow": {
+        "name": "Coalition Snow (Demo Only)",
+        "phone": "(775) 525-8136",
+        "categories": ["snow_sports"],
+        "notes_internal": (
+            "google_place_id:ChIJ6S-mQiVHmYARb2odeGBcd2U; "
+            "snow sports demos only — no rentals"
+        ),
+    },
+    "cv-sports": {
+        "categories": ["snow_sports"],
+    },
+    "estelle-sports": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJF7-iSEXXm4ARZ44Y30OtY1A; retail only — no gear rentals"
+        ),
+    },
+    "forward-ski-system": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJ_XOgTKNHmYARQ5f51RcNl2g; no gear rentals"
+        ),
+    },
+    "heavenly-sports-cecils-plaza": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports rentals and alpine ski demos.",
+        "notes_internal": (
+            "google_place_id:ChIJv-yKNHaQmYARw929njJWAu4; "
+            "snow sports rentals and demos"
+        ),
+    },
+    "bobos-ski-patio": {
+        "description": (
+            "Also listed on Google as Mogul Mouse — same business and location."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJqyv1rH9AmYARtgff-7iWsyQ; "
+            "duplicate Google listing: mogul-mouse"
+        ),
+    },
+    "mogul-mouse": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJkW3Hrn9AmYARSTxL7AQZDxk; "
+            "duplicate of bobos-ski-patio (same business)"
+        ),
+    },
+    "mountain-mikes-tees-and-skis": {
+        "name": "Mountain Mikes / Snowshoe Thompson's",
+        "phone": "(530) 544-4783",
+        "notes_internal": (
+            "google_place_id:ChIJE1amPXSQmYAR0IbbbnD6ocI; "
+            "duplicate Google listing: snowshoe-thompsons-ski-and-snowboard-rentals"
+        ),
+    },
+    "snowshoe-thompsons-ski-and-snowboard-rentals": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJ9YtcA7WPmYARBsx33yY9tLI; "
+            "duplicate of mountain-mikes-tees-and-skis (same location)"
+        ),
+    },
+    "mountain-west": {
+        "categories": ["snow_sports"],
+    },
+    "nevada-nordic": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJv39nHstvmYARRthSt17BGyA; "
+            "trail association — no gear rentals (refers to Tahoe Multisport)"
+        ),
+    },
+    "new-used-tahoe-sports": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJtYQxeHZ9mYARNYamcYRoFNY; "
+            "consignment retail — no gear rentals"
+        ),
+    },
+    "mountain-mikes-sports": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJL0PZlOrZm4ARCLy9I1WG14U; "
+            "renamed to olympic-valley-ski-bike — duplicate listing"
+        ),
+    },
+    "parallel-mountain-sports": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports rentals and gear demos.",
+        "notes_internal": (
+            "google_place_id:ChIJzUBQ9uzZm4ARv8ZP7EJ-tgE; "
+            "snow sports rentals and demos"
+        ),
+    },
+    "palisades-tahoe-ski-snowboard-rental": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports rentals and gear demos.",
+        "notes_internal": (
+            "google_place_id:ChIJN83rWezZm4ARtHEgfKt-QPs; "
+            "snow sports rentals and demos"
+        ),
+    },
+    "olympic-valley-ski-bike": {
+        "name": "Olympic Valley Ski & Bike",
+        "categories": ["mountain_biking", "road_cycling", "snow_sports"],
+        "description": (
+            "Snow sports and bike rentals, plus ski and bike demos. "
+            "Formerly Mountain Mike's Sports."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; "
+            "snow/bike rentals and demos; "
+            "former name: Mountain Mike's Sports (ChIJL0PZlOrZm4ARCLy9I1WG14U)"
+        ),
+    },
+    "modern-house-ski-lease-or-short-term-new-hot-tubgas-insert-by-nordic-center": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJz1ZizON8mYARvqTqpXTsVYw; "
+            "vacation rental listing — not a gear operator"
+        ),
+    },
+    "tahoe-xc": {
+        "name": "Tahoe XC",
+        "categories": ["snow_sports"],
+        "description": (
+            "Cross-country ski and snowshoe rentals at Dollar Point — "
+            "home of the historic Tahoe Nordic Center."
+        ),
+        "phone": "(530) 583-5475",
+        "website": "https://tahoexc.org/",
+        "address": "925 Country Club Dr, Tahoe City, CA 96145, USA",
+        "city": "Tahoe City",
+        "state": "CA",
+        "lat": 39.1937,
+        "lng": -120.1039,
+        "notes_internal": (
+            "founder_verified; xc/nordic rentals — replaces mis-tagged vacation "
+            "listing near Nordic Center"
+        ),
+    },
+    "heavenly-sports-marriott": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports rentals and alpine ski demos.",
+        "notes_internal": (
+            "google_place_id:ChIJx83JvkSQmYAR37b1G_O0P5E; "
+            "snow sports rentals and demos"
+        ),
+    },
+    "gondola-ski-sports": {
+        "categories": ["electric_transport", "road_cycling", "snow_sports"],
+        "notes_internal": (
+            "google_place_id:ChIJy9ppqHeQmYARudCSM07YImA; "
+            "cruiser and e-bike rentals (not MTB)"
+        ),
+    },
+    "donner-ski-shop": {
+        "categories": ["snow_sports", "water_sports"],
+        "description": (
+            "Paddleboard rentals for Serene Lakes residents only — choose "
+            "Serene Lakes as your location to find this offering. The lakes "
+            "are private and not open to the general public."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJqcC_TFfom4ARrt8jKoleVz0; "
+            "serene_lakes_paddleboards_residents_only"
+        ),
+    },
+    "powder-house-ski-board-pro-snow": {
+        "name": "Powder House Ski & Board: Pro Snow (Demo Only)",
+        "categories": ["snow_sports"],
+        "description": (
+            "Snow sports demos only — no gear rentals. Part of the Powder "
+            "House network; visit Main Store, Gondola, Express, or Zalanta "
+            "for rentals."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJ03PeAneQmYARisbooJUWr4c; "
+            "snow sports demos only — no rentals"
+        ),
+    },
+    "powder-house-ski-and-snowboard-main-store": {
+        "categories": ["mountain_biking", "road_cycling", "snow_sports"],
+        "description": (
+            "Snow sports and bike rentals. Part of the Powder House rental "
+            "network — five South Lake Tahoe locations."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJNd1MfXaQmYARGUhCfr5Mou8; "
+            "snow and bike rentals"
+        ),
+    },
+    "powder-house-ski-and-snowboard-at-the-gondola": {
+        "categories": ["mountain_biking", "road_cycling", "snow_sports"],
+        "description": (
+            "Ski and bike rentals at Heavenly Village. Part of the Powder "
+            "House rental network — five South Lake Tahoe locations."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJqbAd6naQmYARzmDmLE2LviY; "
+            "ski and bike rentals"
+        ),
+    },
+    "powder-house-stateline-at-zalanta": {
+        "categories": ["snow_sports"],
+        "description": (
+            "Ski rentals only. Part of the Powder House rental network — "
+            "five South Lake Tahoe locations."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJuYGQMXaQmYARCO9oO_RTRQQ; ski rentals only"
+        ),
+    },
+    "praxis-skis": {
+        "categories": ["snow_sports", "water_sports"],
+        "website": "https://www.praxisskis.com/",
+        "description": (
+            "Snow sports rentals and Praxis ski demos — pickup in Incline Village. "
+            "Lift foil demos and rentals (eFoil, wing, wake, downwind) booked "
+            "through Praxis; Lift is the foil brand they carry, not a separate "
+            "shop. eFoil sessions launch from Adrift Tahoe in Kings Beach."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJ__-P0xBwmYARBwqqmQYJZvQ; "
+            "snow and foil rentals; lift_foils_dealer"
+        ),
+    },
+    "powder-house-express": {
+        "name": "Powder House Express",
+        "categories": ["mountain_biking", "road_cycling", "snow_sports"],
+        "description": (
+            "Ski and bike rentals year-round. Part of the Powder House rental "
+            "network — five South Lake Tahoe locations."
+        ),
+        "phone": "(530) 541-6422",
+        "website": "http://www.tahoepowderhouse.com/powder-house-express",
+        "address": "3668 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "city": "South Lake Tahoe",
+        "state": "CA",
+        "lat": 38.948057,
+        "lng": -119.956927,
+        "notes_internal": "founder_verified; ski and bike rentals",
     },
 }
 
@@ -145,7 +425,11 @@ def main():
             "phone": b.phone or None,
             "website": b.website or None,
             "hours": normalize_hours(b.hours),
-            "categories": reconcile_top_level_categories(b.name, cats),
+            "categories": filter_aerial_category(
+                b.name,
+                reconcile_top_level_categories(b.name, cats),
+                website=b.website or "",
+            ),
             "photos": [b.photo_url] if b.photo_url else None,
             "rating_external": float(b.google_rating) if b.google_rating else None,
             "rating_external_count": b.google_rating_count or None,

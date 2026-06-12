@@ -9,6 +9,7 @@ import {
   buildOperatorSearchQuery,
   type Filters,
 } from "@/lib/search/buildQuery";
+import { operatorVisibleForCategoryBrowse } from "@/lib/config/operator-category-gates";
 import { sortEquipment } from "@/lib/search/sortResults";
 
 export type OperatorSummary = Pick<
@@ -34,12 +35,13 @@ export async function getOperatorCategoryCounts(): Promise<Map<string, number>> 
   const db = supabaseServer();
   const { data, error } = await db
     .from("operators")
-    .select("categories")
+    .select("slug, categories")
     .eq("is_active", true);
   if (error || !data) return new Map();
   const counts = new Map<string, number>();
   for (const row of data) {
     for (const c of row.categories ?? []) {
+      if (!operatorVisibleForCategoryBrowse(row, c)) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
     }
   }
@@ -96,7 +98,7 @@ export async function searchOperators(
 
 export async function getOperatorsByCategory(
   category: string,
-  options: Pick<Filters, "delivery"> = {},
+  options: Pick<Filters, "delivery" | "location"> = {},
 ): Promise<Operator[]> {
   const db = supabaseServer();
   let query = db
@@ -107,7 +109,9 @@ export async function getOperatorsByCategory(
   if (options.delivery) query = query.eq("offers_delivery", true);
   const { data, error } = await query.order("name", { ascending: true });
   if (error || !data) return [];
-  return data;
+  return data.filter((op) =>
+    operatorVisibleForCategoryBrowse(op, category, options.location),
+  );
 }
 
 /**

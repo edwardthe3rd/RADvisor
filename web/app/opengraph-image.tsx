@@ -1,11 +1,18 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 export const alt = "RADvisor - outdoor gear rentals near Reno & Lake Tahoe";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const logoData = await readFile(
+    join(process.cwd(), "public/images/radvisor-logo.png"),
+  );
+  const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -17,15 +24,15 @@ export default function OpengraphImage() {
           alignItems: "flex-start",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(135deg, #FDF6E3 0%, #E3F2F7 55%, #ffffff 100%)",
+          background:
+            "linear-gradient(135deg, #FDF6E3 0%, #E3F2F7 55%, #ffffff 100%)",
         }}
       >
-        <div style={{ fontSize: 84, fontWeight: 800, color: "#EAB321" }}>
-          RADvisor
-        </div>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logoSrc} alt="RADvisor" height={140} />
         <div
           style={{
-            marginTop: 24,
+            marginTop: 32,
             fontSize: 40,
             fontWeight: 600,
             color: "#222222",
@@ -35,7 +42,7 @@ export default function OpengraphImage() {
           Outdoor gear rentals near Reno &amp; Lake Tahoe
         </div>
         <div style={{ marginTop: 16, fontSize: 28, color: "#717171" }}>
-          Skis · Kayaks · Bikes · Camping · RVs &amp; more
+          paddleboards, e-bikes, camping gear, climbing gear, UTVs and more.
         </div>
       </div>
     ),
