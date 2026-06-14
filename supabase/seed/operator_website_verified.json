@@ -1,0 +1,534 @@
+{
+  "pyramid-peak-sports-bike-rentals": {
+    "name": "Pyramid Peak Ski and Snowboard Rentals",
+    "categories": ["snow_sports"],
+    "source": "https://www.pyramidpeak.ski/",
+    "verified_at": "2026-06-13"
+  },
+  "around-tahoe-tours-talbot-fine-art-gallery": {
+    "name": "Around Tahoe Tours",
+    "is_active": false,
+    "categories": [],
+    "source": "https://aroundtahoe.com/",
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; guided tour company — no gear rentals"
+  },
+  "eagle-ridge-snowmobile-tours": {
+    "name": "Eagle Ridge Snowmobile Tours",
+    "categories": ["off_road"],
+    "source": "https://eagleridgesnowmobiling.com/",
+    "verified_at": "2026-06-13"
+  },
+  "high-line-adventures": {
+    "name": "High Line Adventures",
+    "categories": ["off_road"],
+    "source": "http://hlatours.com/",
+    "verified_at": "2026-06-13"
+  },
+  "paddle-to-you": {
+    "name": "Paddle To You",
+    "categories": ["water_sports"],
+    "source": "http://www.paddletoyoutahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-reel-power-paddle": {
+    "name": "Tahoe Reel, Power & Paddle",
+    "categories": ["water_sports"],
+    "source": "https://adventuretahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoeparadiseboatrental": {
+    "name": "Tahoe Paradise Boat Rentals",
+    "categories": ["water_sports"],
+    "source": "http://tahoeparadiseboatrentals.com/",
+    "verified_at": "2026-06-13"
+  },
+  "rolling-freedom-motorcycles-lake-tahoe-slingshots-motorcycles-moped-scooters-e-bike-rentals-eaglerider-tours": {
+    "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+    "categories": ["electric_transport", "off_road"],
+    "source": "http://www.rolltahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "black-tie-adventure-rentals-north-tahoe": {
+    "name": "Black Tie Bike Rentals North Tahoe",
+    "categories": ["electric_transport", "mountain_biking", "road_cycling"],
+    "source": "https://www.blacktiesummer.com/north-tahoe/",
+    "verified_at": "2026-06-13"
+  },
+  "mountain-mikes-tees-and-skis": {
+    "name": "Snowshoe Thompson's Ski and Snowboard Rentals",
+    "categories": ["snow_sports"],
+    "source": "http://www.mtnmikeslaketahoe.com/",
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; also known as Mountain Mike's Tees & Skis at same location"
+  },
+  "cv-sports": {
+    "name": "CV Sports",
+    "categories": ["snow_sports"],
+    "source": "https://cvsports.biz/",
+    "verified_at": "2026-06-13"
+  },
+  "dannys-party-rental-llc": {
+    "name": "Danny's Party Rental",
+    "is_active": false,
+    "categories": [],
+    "source": "https://dannyspartyrental.com/",
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event/party rental — not outdoor gear"
+  },
+  "lake-side-tahoe-wprivate-beach-pool-next-to-heavenly-2-bedroom-townhouse-by-redawning": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; vacation rental listing — not a gear operator"
+  },
+  "ski-shop-explore-walkable-midtown-reno-oasis-boqou6ii": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; vacation rental listing — not a gear operator"
+  },
+  "utv-addiction": {
+    "name": "UTV Addiction",
+    "categories": ["off_road"],
+    "source": "http://www.utvaddiction.com/",
+    "verified_at": "2026-06-13"
+  },
+  "totally-board": {
+    "name": "Totally Board",
+    "categories": ["snow_sports"],
+    "source": "http://www.totallyboardtahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-multisport-e-bike-kayak-stand-up-paddle-board-rentals-tours": {
+    "name": "Tahoe Multisport",
+    "categories": ["electric_transport", "water_sports"],
+    "source": "http://tahoemultisport.com/",
+    "verified_at": "2026-06-13"
+  },
+  "east-shore-e-bikes-tours-rentals": {
+    "name": "Tahoe Multisport — East Shore",
+    "categories": ["electric_transport", "water_sports"],
+    "source": "https://tahoemultisport.com/",
+    "verified_at": "2026-06-13"
+  },
+  "irie-rafting-company-inc": {
+    "name": "IRIE Rafting Company",
+    "categories": ["water_sports"],
+    "source": "http://www.raftirie.com/",
+    "verified_at": "2026-06-13"
+  },
+  "sierra-adventures-activities-reno-tahoe-llc": {
+    "name": "Sierra Adventures",
+    "categories": ["camping", "off_road", "rock_climbing", "water_sports"],
+    "source": "https://m.wildsierra.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-paddle-sports-sand-harbor-clear-kayaking": {
+    "name": "Tahoe Paddle Sports — Sand Harbor",
+    "categories": ["water_sports"],
+    "source": "https://tahoepaddlesports.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-paddle-sports-clear-kayak-adventures-near-south-lake-tahoe-ca": {
+    "name": "Tahoe Paddle Sports",
+    "categories": ["water_sports"],
+    "source": "https://tahoepaddlesports.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-jet-boats": {
+    "name": "Tahoe Jet Boats",
+    "categories": ["water_sports"],
+    "source": "https://tahoejetboats.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoejetboats": {
+    "name": "Tahoe Jet Boats",
+    "categories": ["water_sports"],
+    "source": "https://www.tahoejetboats.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoejetboats-iqpkeslm": {
+    "name": "Tahoe Jet Boats",
+    "categories": ["water_sports"],
+    "source": "https://www.tahoejetboats.com/",
+    "verified_at": "2026-06-13"
+  },
+  "endless-wave-charters": {
+    "name": "Endless Wave Charters",
+    "categories": ["water_sports"],
+    "source": "https://www.endlesswavecharters.com/",
+    "verified_at": "2026-06-13"
+  },
+  "sup-tahoe-stand-up-paddle": {
+    "name": "SUP South Lake Tahoe",
+    "categories": ["water_sports"],
+    "source": "http://www.supsouthlaketahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "coldstream-adventures-tours": {
+    "name": "Coldstream Adventures",
+    "categories": ["off_road"],
+    "source": "https://www.coldstreamadventures.com/",
+    "verified_at": "2026-06-13"
+  },
+  "obexers-water-sports": {
+    "name": "Obexer's Water Sports",
+    "categories": ["water_sports"],
+    "source": "https://www.obexersboat.com/water-sports.html",
+    "verified_at": "2026-06-13"
+  },
+  "bikepath-e-bike-rentals": {
+    "name": "Pedego Electric Bikes Reno",
+    "categories": ["electric_transport"],
+    "source": "http://www.pedegoreno.com/",
+    "verified_at": "2026-06-13"
+  },
+  "lake-tahoe-bike-rentals": {
+    "name": "Powder House — Lake Tahoe Bike Rentals",
+    "categories": ["electric_transport", "mountain_biking", "road_cycling"],
+    "source": "http://tahoepowderhouse.com/",
+    "verified_at": "2026-06-13"
+  },
+  "lake-tahoe-boat-rentals": {
+    "name": "Tahoe Adventure Rentals",
+    "categories": ["water_sports"],
+    "source": "https://tahoeadventurerentals.com/",
+    "verified_at": "2026-06-13"
+  },
+  "lake-tahoe-lsp-boat-rentals": {
+    "name": "Lake Tahoe LSP Boat Rentals",
+    "categories": ["water_sports"],
+    "source": "http://www.laketahoe-boatrentals.com/",
+    "verified_at": "2026-06-13"
+  },
+  "zephyr-cove-snowmobiling-tours": {
+    "name": "Zephyr Cove Snowmobile Tours",
+    "categories": ["off_road"],
+    "source": "https://www.zephyrcove.com/snowmobiles/tahoe-snowmobiling-experience",
+    "verified_at": "2026-06-13"
+  },
+  "soaring-nv": {
+    "name": "Soaring NV",
+    "categories": ["aerial"],
+    "source": "http://soaringnv.com/",
+    "verified_at": "2026-06-13"
+  },
+  "north-shore-parasail": {
+    "name": "North Shore Parasail",
+    "categories": ["aerial"],
+    "source": "https://californiaparasail.com/",
+    "verified_at": "2026-06-13"
+  },
+  "gravity-haus-gear-rental-haus-quiver-truckee": {
+    "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
+    "categories": ["snow_sports"],
+    "source": "http://gravityhaus.com/",
+    "verified_at": "2026-06-13"
+  },
+  "battle-born-powersports": {
+    "name": "Battle Born Powersports",
+    "categories": ["off_road"],
+    "source": "http://www.battlebornpowersports.com/",
+    "verified_at": "2026-06-13"
+  },
+  "adventure-lake-tahoe": {
+    "name": "Adventure Lake Tahoe",
+    "categories": ["off_road"],
+    "source": "http://adventureslaketahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-toys-adventures-llc": {
+    "name": "Tahoe Toys & Adventures",
+    "categories": ["off_road"],
+    "source": "http://tahoetoysadventures.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tributary-whitewater-tours-truckee-river-outpost-guided-rafting-trips": {
+    "name": "Tributary Whitewater Tours",
+    "categories": ["water_sports"],
+    "source": "https://whitewatertours.com/lake-tahoe-truckee-river-rafting/",
+    "verified_at": "2026-06-13"
+  },
+  "katoma-llc-boat-rental-lake-tahoe": {
+    "name": "Katoma Boat Rentals",
+    "categories": ["water_sports"],
+    "source": "http://boatrentalslaketahoe.com/",
+    "verified_at": "2026-06-13"
+  },
+  "lake-tahoe-diving-environmental-llc": {
+    "name": "Lake Tahoe Diving & Environmental",
+    "categories": ["water_sports"],
+    "source": "https://www.laketahoedivingenvironmentalllc.com/",
+    "verified_at": "2026-06-13"
+  },
+  "lake-tahoe-snowmobile-tours-inc": {
+    "name": "Lake Tahoe Snowmobile Tours",
+    "categories": ["off_road"],
+    "source": "https://laketahoesnowmobile.com/",
+    "verified_at": "2026-06-13"
+  },
+  "north-tahoe-watersports-inc": {
+    "name": "North Tahoe Watersports",
+    "categories": ["water_sports"],
+    "source": "https://www.northtahoewatersports.com/",
+    "verified_at": "2026-06-13"
+  },
+  "chulas-party-rentals-llc": {
+    "name": "Chula's Party Rentals",
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event/party rental — not outdoor gear"
+  },
+  "adrenaline-connection-inc": {
+    "name": "Adrenaline Connection",
+    "categories": ["off_road", "water_sports"],
+    "verified_at": "2026-06-13"
+  },
+  "sport-aviation-center-llc": {
+    "name": "Sport Aviation Center",
+    "categories": ["aerial"],
+    "verified_at": "2026-06-13"
+  },
+  "reno-mobility-inc": {
+    "name": "Reno Mobility",
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; medical mobility equipment — not outdoor gear"
+  },
+  "toms-snowmobiles-services": {
+    "name": "Tom's Snowmobile & Service",
+    "categories": ["off_road"],
+    "source": "https://tomssnowmobile.com/",
+    "verified_at": "2026-06-13"
+  },
+  "mountain-west": {
+    "name": "Mountain West",
+    "is_active": true,
+    "categories": ["snow_sports"],
+    "source": "https://mountainwestonline.com/pages/rentals",
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; demo ski/snowboard and snowshoe rentals"
+  },
+  "play-it-again-sports": {
+    "is_active": true,
+    "categories": ["snow_sports"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; could not confirm absence of rentals — manual review"
+  },
+  "west-marine": {
+    "is_active": true,
+    "categories": ["water_sports"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; could not confirm absence of rentals — manual review"
+  },
+  "emerald-bay-visitor-center": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; state park visitor center — not a gear operator"
+  },
+  "sparks-marina-park": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; public park — not a gear operator"
+  },
+  "little-truckee-summit-ohvsnowmobile-staging-area": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; USFS staging area — not a gear operator"
+  },
+  "rock-rat-adventures": {
+    "is_active": true,
+    "categories": ["off_road"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; could not confirm absence of rentals — manual review"
+  },
+  "love-your-life-backcountry": {
+    "is_active": true,
+    "categories": ["off_road"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; site under construction — could not confirm absence of rentals"
+  },
+  "the-bounce-house-guy": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; bounce house party rental — not outdoor gear"
+  },
+  "bouncing-around": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; bounce house party rental — not outdoor gear"
+  },
+  "camelot-party-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event/party rental — not outdoor gear"
+  },
+  "celebrations-event-rentals": {
+    "name": "Celebrations! Party Rentals",
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event/party rental — not outdoor gear"
+  },
+  "creative-coverings": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event linen/tent rental — not outdoor gear"
+  },
+  "desert-sage-events-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event rental — not outdoor gear"
+  },
+  "desert-southwest-event-rentals-of-lake-tahoe": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event rental — not outdoor gear"
+  },
+  "exposure-photo-booths": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; photo booth rental — not outdoor gear"
+  },
+  "fiesta-rental-central-in-reno": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; party supply rental — not outdoor gear"
+  },
+  "fun-events-nv-one-stop-shop-for-all-events-party-rentals-entertainment-reno-nevada": {
+    "name": "Fun Events NV",
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event/party rental — not outdoor gear"
+  },
+  "grand-event-rental-reno-tahoe": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event rental — not outdoor gear"
+  },
+  "juanitos-party-rental": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; party rental — not outdoor gear"
+  },
+  "party-palace": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; party rental — not outdoor gear"
+  },
+  "reno-city-portables-porta-potty-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; porta potty rental — not outdoor gear"
+  },
+  "reno-tahoe-party-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; party rental — not outdoor gear"
+  },
+  "roundabout-catering-party-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; catering/party rental — not outdoor gear"
+  },
+  "special-event-party-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; party rental — not outdoor gear"
+  },
+  "tahoe-event-rentals": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; event rental — not outdoor gear"
+  },
+  "hunter-creek-trailhead": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; public trailhead — not a gear operator"
+  },
+  "oxbow-nature-study-area": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; public park — not a gear operator"
+  },
+  "speedboat-beach": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; public beach — not a gear operator"
+  },
+  "moana-springs-community-aquatics-and-fitness-center": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; municipal aquatics center — not a gear operator"
+  },
+  "diverobotix": {
+    "name": "Diverobotix",
+    "is_active": true,
+    "categories": ["water_sports"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; could not confirm absence of consumer gear rentals — manual review"
+  },
+  "technical-equipment-cleaners": {
+    "is_active": true,
+    "categories": ["camping"],
+    "verified_at": "2026-06-13",
+    "notes_internal": "reactivated; could not confirm absence of rentals — manual review"
+  },
+  "the-golf-mart": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; golf retail — not outdoor gear rental"
+  },
+  "cruise-planners-debbie-allen": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; travel agency — not a gear operator"
+  },
+  "riverwalk-merchants-association": {
+    "is_active": false,
+    "categories": [],
+    "verified_at": "2026-06-13",
+    "notes_internal": "website_verified; merchants association — not a gear operator"
+  },
+  "tahoe-wake-tubing-boat-rentals": {
+    "name": "Lake Tahoe Luxury Waketubing",
+    "categories": ["water_sports"],
+    "source": "https://www.tahoewaketubing.com/",
+    "verified_at": "2026-06-13"
+  },
+  "tahoe-jacks-adventure-authority": {
+    "name": "Tahoe Jack's Adventure Authority",
+    "categories": ["rock_climbing", "snow_sports", "water_sports"],
+    "source": "https://www.tahoejacks.com/",
+    "verified_at": "2026-06-13"
+  }
+}

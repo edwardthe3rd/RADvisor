@@ -363,6 +363,15 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
     },
 }
 
+# Website-verified corrections (instructions/02 §9). Merged on export so re-sync
+# preserves name/category fixes checked against operator websites.
+_verified_path = Path(__file__).resolve().parent / "operator_website_verified.json"
+if _verified_path.exists():
+    _website_verified = json.loads(_verified_path.read_text())
+    for _slug, _patch in _website_verified.items():
+        _export_patch = {k: v for k, v in _patch.items() if k not in ("verified_at", "source")}
+        OPERATOR_EXPORT_OVERRIDES.setdefault(_slug, {}).update(_export_patch)
+
 DAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
