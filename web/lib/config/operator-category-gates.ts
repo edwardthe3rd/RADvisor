@@ -6,7 +6,9 @@ export const CATEGORY_LOCATION_GATES: Record<
   string,
   Partial<Record<string, readonly string[]>>
 > = {
+  // Serene Lakes residents only — gate every category it appears in.
   "donner-ski-shop": {
+    snow_sports: ["serene-lakes"],
     water_sports: ["serene-lakes"],
   },
 };

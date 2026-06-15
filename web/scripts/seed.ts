@@ -11,6 +11,9 @@ import { createClient } from "@supabase/supabase-js";
 import { readFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadEnvLocal } from "./load-env-local";
+
+loadEnvLocal();
 
 const seedDir = join(dirname(fileURLToPath(import.meta.url)), "../../supabase/seed");
 
@@ -25,30 +28,50 @@ if (!serviceKey) {
 
 const db = createClient(url, serviceKey, { auth: { persistSession: false } });
 
-async function operatorsTableHasOffersDelivery(): Promise<boolean> {
-  const { error } = await db.from("operators").select("offers_delivery").limit(1);
+async function operatorsTableHasColumn(column: string): Promise<boolean> {
+  const { error } = await db.from("operators").select(column).limit(1);
   if (!error) return true;
-  if (error.message.includes("offers_delivery")) return false;
+  if (error.message.includes(column)) return false;
   throw new Error(`operators schema probe failed: ${error.message}`);
 }
 
 function sanitizeOperatorBatch(
   batch: Record<string, unknown>[],
-  includeOffersDelivery: boolean,
+  columns: {
+    offersDelivery: boolean;
+    offersSeasonLease: boolean;
+    offersRental: boolean;
+    offersDemo: boolean;
+    subcategories: boolean;
+  },
 ): Record<string, unknown>[] {
-  if (!includeOffersDelivery) {
-    return batch.map(({ offers_delivery: _ignored, ...rest }) => rest);
-  }
-  return batch.map((row) => ({
-    ...row,
-    offers_delivery: row.offers_delivery === true,
-  }));
+  return batch.map((row) => {
+    const next = { ...row };
+    if (!columns.offersDelivery) delete next.offers_delivery;
+    else next.offers_delivery = row.offers_delivery === true;
+    if (!columns.offersSeasonLease) delete next.offers_season_lease;
+    else next.offers_season_lease = row.offers_season_lease === true;
+    // offers_rental defaults to true in the DB, so only override when explicitly set.
+    if (!columns.offersRental) delete next.offers_rental;
+    else next.offers_rental = row.offers_rental !== false;
+    if (!columns.offersDemo) delete next.offers_demo;
+    else next.offers_demo = row.offers_demo === true;
+    if (!columns.subcategories) delete next.subcategories;
+    else next.subcategories = Array.isArray(row.subcategories)
+      ? row.subcategories
+      : [];
+    return next;
+  });
 }
 
 async function importOperators(): Promise<Map<string, string>> {
   const path = join(seedDir, "operators.json");
   const rows = JSON.parse(readFileSync(path, "utf8"));
-  const includeOffersDelivery = await operatorsTableHasOffersDelivery();
+  const includeOffersDelivery = await operatorsTableHasColumn("offers_delivery");
+  const includeOffersSeasonLease = await operatorsTableHasColumn("offers_season_lease");
+  const includeOffersRental = await operatorsTableHasColumn("offers_rental");
+  const includeOffersDemo = await operatorsTableHasColumn("offers_demo");
+  const includeSubcategories = await operatorsTableHasColumn("subcategories");
   if (!includeOffersDelivery) {
     console.warn(
       "warn: operators.offers_delivery column missing — run `npm run migrate` " +
@@ -56,12 +79,30 @@ async function importOperators(): Promise<Map<string, string>> {
         "Supabase SQL editor), then re-seed to import delivery flags.",
     );
   }
+  if (!includeOffersSeasonLease) {
+    console.warn(
+      "warn: operators.offers_season_lease column missing — run `npm run migrate` " +
+        "(or paste supabase/migrations/0004_operators_offers_season_lease.sql in the " +
+        "Supabase SQL editor), then re-seed to import season lease flags.",
+    );
+  }
+  if (!includeOffersRental || !includeOffersDemo || !includeSubcategories) {
+    console.warn(
+      "warn: operators.offers_rental/offers_demo/subcategories column(s) missing — " +
+        "run `npm run migrate` (or paste " +
+        "supabase/migrations/0005_operators_acquisition_subcategories.sql in the " +
+        "Supabase SQL editor), then re-seed to import acquisition flags + subcategories.",
+    );
+  }
   let upserted = 0;
   for (let i = 0; i < rows.length; i += 100) {
-    const batch = sanitizeOperatorBatch(
-      rows.slice(i, i + 100),
-      includeOffersDelivery,
-    );
+    const batch = sanitizeOperatorBatch(rows.slice(i, i + 100), {
+      offersDelivery: includeOffersDelivery,
+      offersSeasonLease: includeOffersSeasonLease,
+      offersRental: includeOffersRental,
+      offersDemo: includeOffersDemo,
+      subcategories: includeSubcategories,
+    });
     const { error } = await db
       .from("operators")
       .upsert(batch, { onConflict: "slug" });

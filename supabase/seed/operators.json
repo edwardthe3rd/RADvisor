@@ -28,7 +28,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "AROUND TAHOE TOURS / TALBOT FINE ART GALLERY",
+  "name": "Around Tahoe Tours",
   "slug": "around-tahoe-tours-talbot-fine-art-gallery",
   "address": "889 Tahoe Blvd C, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -46,16 +46,14 @@
    "sat": "12:00 – 7:00 PM",
    "sun": "12:00 – 6:00 PM"
   },
-  "categories": [
-   "off_road"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 38,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJxxotdBdwmYARTk4xdGJPMPA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; guided tour company — no gear rentals",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "ASC Training Center (formerly Auburn Ski Club)",
@@ -110,7 +108,7 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 56,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJQ6zXvkJFkIAR9uPXtF-EQ2E",
@@ -163,9 +161,15 @@
   "rating_external": 4.3,
   "rating_external_count": 507,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJz27tiZ-amYARUgJHvRMubbg",
+  "notes_internal": "google_place_id:ChIJz27tiZ-amYARUgJHvRMubbg; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Action Watersports at Timber Cove Marina",
@@ -193,12 +197,18 @@
   "rating_external": 3.9,
   "rating_external_count": 72,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJQc7aFQSQmYAR-OvmOAaFzzk",
+  "notes_internal": "google_place_id:ChIJQc7aFQSQmYAR-OvmOAaFzzk; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
-  "name": "Adrenaline Connection, Inc.",
+  "name": "Adrenaline Connection",
   "slug": "adrenaline-connection-inc",
   "address": "10117 E River St, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -226,7 +236,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJI_KoU5Xfm4ARF823vGxcmmI",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Adrift Tahoe",
@@ -254,9 +264,15 @@
   "rating_external": 4.8,
   "rating_external_count": 39,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJFZUMgCx7mYARHHrlmZXu1t0",
+  "notes_internal": "google_place_id:ChIJFZUMgCx7mYARHHrlmZXu1t0; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Advanced Marine",
@@ -281,12 +297,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJRWjPCgAJmYARWBinAeZhgLg",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJRWjPCgAJmYARWBinAeZhgLg; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Adventure Lake Tahoe",
@@ -316,7 +333,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJI4L6yJGRmYARfBLy5H-ZHGY",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv"
+  ]
  },
  {
   "name": "Adventure Scuba Center",
@@ -344,9 +364,12 @@
   "rating_external": 4.9,
   "rating_external_count": 71,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ7zT543dAmYAROJg-2K9kqGA",
+  "notes_internal": "google_place_id:ChIJ7zT543dAmYAROJg-2K9kqGA; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wetsuit"
+  ]
  },
  {
   "name": "Alamo Rent A Car",
@@ -435,7 +458,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Alpenglow Sports (Demo Only)",
+  "name": "Alpenglow Sports",
   "slug": "alpenglow-sports",
   "address": "415 N Lake Blvd, Tahoe City, CA 96145, USA",
   "city": "Tahoe City",
@@ -462,7 +485,9 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJfwaAbXZ9mYARDUP7ClnaRuk; alpine ski demos only — no rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-08",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
   "name": "Alpinistas",
@@ -483,9 +508,10 @@
   "rating_external": 4.2,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ8Xm0sOZBmYARAFonC28TGws",
-  "is_active": true,
-  "last_verified": "2026-06-12"
+  "notes_internal": "google_place_id:ChIJ8Xm0sOZBmYARAFonC28TGws; website_verified; deactivated — founder review: location now a coffee shop per Galena Sports owner; possibly relocated — deactivated pending verification",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Anderson Powersports Reno",
@@ -513,9 +539,10 @@
   "rating_external": 4.5,
   "rating_external_count": 355,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJzWvvvHhAmYARWuyG43MMyYM",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJzWvvvHhAmYARWuyG43MMyYM; website_verified; deactivated — powersports dealer, sales-only (Bucket 2 unmentioned)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Anderson's Bicycle Rental",
@@ -539,16 +566,19 @@
   "categories": [
    "electric_transport",
    "mountain_biking",
-   "off_road",
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 287,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJD5DUGp-PmYARqD8tvPx1aHE",
+  "notes_internal": "google_place_id:ChIJD5DUGp-PmYARqD8tvPx1aHE; founder_verified; no off-road or powersports rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kids_bike"
+  ]
  },
  {
   "name": "Another Bike Shop Reno",
@@ -572,16 +602,23 @@
   "categories": [
    "electric_transport",
    "mountain_biking",
-   "off_road",
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 462,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ87o1B6NFmYARWznGWV_cHh8",
+  "notes_internal": "google_place_id:ChIJ87o1B6NFmYARWznGWV_cHh8; founder_verified; no off-road or powersports rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "downhill_bike",
+   "e_bike_city",
+   "ebike_mtb",
+   "gravel_bike",
+   "kids_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Arrowhead Mobile Home Park",
@@ -624,7 +661,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 1798,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJVVVVVSU-mYARubJ_sUgxWsA",
@@ -713,9 +750,13 @@
   "rating_external": 4.7,
   "rating_external_count": 36,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJNXFuBOCFmYARtl4ApM3dPTI",
+  "notes_internal": "google_place_id:ChIJNXFuBOCFmYARtl4ApM3dPTI; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Battle Born Boat Rentals",
@@ -743,9 +784,15 @@
   "rating_external": 4.9,
   "rating_external_count": 107,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJsXRiAIV9mYAREG8b5Eb_UG4",
+  "notes_internal": "google_place_id:ChIJsXRiAIV9mYAREG8b5Eb_UG4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Battle Born Powersports",
@@ -770,12 +817,16 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 167,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJx0JixluZmYARnFheZMbToY4",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "utv"
+  ]
  },
  {
   "name": "BayWatch Boat Charters",
@@ -800,12 +851,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 119,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJs4FODOuPmYARFnBRKZVmBJ8",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJs4FODOuPmYARFnBRKZVmBJ8; website_verified; deactivated — captained boat charter — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Bicycle Service Center",
@@ -827,16 +879,16 @@
    "sun": "Closed"
   },
   "categories": [
-   "electric_transport",
-   "mountain_biking"
+   "burning_man_bikes"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJTXYPIfxHmYARV7PRV5mpUq8",
+  "notes_internal": "google_place_id:ChIJTXYPIfxHmYARV7PRV5mpUq8; founder_verified; Burning Man bike rentals only — no e-transport or mountain biking rentals",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "description": "Burning Man playa bike rentals."
  },
  {
   "name": "Big Blue Bike Rentals and Tours",
@@ -865,9 +917,14 @@
   "rating_external": 4.6,
   "rating_external_count": 173,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJjap9hHRxmYARaDQX4il7rik",
+  "notes_internal": "google_place_id:ChIJjap9hHRxmYARaDQX4il7rik; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kids_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Big Daddy's Bike & Brew",
@@ -896,9 +953,12 @@
   "rating_external": 4.5,
   "rating_external_count": 63,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ6dq1GMS9mYAR6bc--rU3SVk",
+  "notes_internal": "google_place_id:ChIJ6dq1GMS9mYAR6bc--rU3SVk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Big Tex Trailer World - Reno",
@@ -953,12 +1013,13 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ10cbLMCbmYARSrr1-uIogYI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ10cbLMCbmYARSrr1-uIogYI; duplicate of Clearly Tahoe (same shop) — deactivated; canonical record is clearly-tahoe-bikes",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Bike Truckee",
@@ -985,15 +1046,20 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 91,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJIetiKMDfm4ARMau5JRoa_EU",
+  "notes_internal": "google_place_id:ChIJIetiKMDfm4ARMau5JRoa_EU; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb",
+   "kids_bike"
+  ]
  },
  {
-  "name": "Bikepath E-Bike Rentals",
+  "name": "Pedego Electric Bikes Reno",
   "slug": "bikepath-e-bike-rentals",
   "address": "3316 S McCarran Blvd, Reno, NV 89502, USA",
   "city": "Reno",
@@ -1012,7 +1078,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJLfhCPFg_mYARYH9oMiSQ3_M",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Black Rock Bicycles",
@@ -1045,7 +1114,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Black Tie Adventure Rentals North Tahoe",
+  "name": "Black Tie Bike Rentals North Tahoe",
   "slug": "black-tie-adventure-rentals-north-tahoe",
   "address": "12219 Business Park Dr STE 6, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -1064,15 +1133,20 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "off_road"
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJJ1bqK9BhmYAR0mLvJWN5JUo",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Black Tie Ski Rentals of North Lake Tahoe",
@@ -1126,9 +1200,18 @@
   "rating_external": 4.2,
   "rating_external_count": 76,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJdWSt3M-hmYARaK4ho-Iv6rQ",
+  "notes_internal": "google_place_id:ChIJdWSt3M-hmYARaK4ho-Iv6rQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "gravel_bike",
+   "kayak",
+   "paddleboard",
+   "road_bike",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "BlueZone Sports - South Lake Tahoe",
@@ -1159,9 +1242,18 @@
   "rating_external": 4.5,
   "rating_external_count": 174,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJD8M1RrqPmYARqqE-H3snqWg",
+  "notes_internal": "google_place_id:ChIJD8M1RrqPmYARqqE-H3snqWg; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "gravel_bike",
+   "kayak",
+   "paddleboard",
+   "road_bike",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "BlueZone Sports - Tahoe City",
@@ -1189,12 +1281,21 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 28,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJPVNwMnt9mYARjCm76sJdqbE",
+  "notes_internal": "google_place_id:ChIJPVNwMnt9mYARjCm76sJdqbE; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "gravel_bike",
+   "kayak",
+   "paddleboard",
+   "road_bike",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "BlueZone Sports - Team Sales Office",
@@ -1219,7 +1320,7 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkybnjNaimYARc1faFTjIs50",
@@ -1276,16 +1377,14 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 83,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ4SI45Rk3mYARrUTt_tbOm9w",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; bounce house party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Boxwheel Trailer Leasing",
@@ -1308,7 +1407,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-b5e7aI_mYARwcpE6e0842Q",
@@ -1532,16 +1631,14 @@
    "sat": "9:00 AM – 2:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 53,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJCR2Tax0_mYARFTQneIZ1XiE",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Camp Richardson Marina",
@@ -1569,9 +1666,15 @@
   "rating_external": 4.5,
   "rating_external_count": 505,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARPZsnLzFwDFs",
+  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARPZsnLzFwDFs; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Camp Richardson Mountain Sports Center",
@@ -1600,9 +1703,13 @@
   "rating_external": 3.8,
   "rating_external_count": 34,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARe1NNd8uMRh8",
+  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARe1NNd8uMRh8; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Camping World - Reno",
@@ -1627,12 +1734,13 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 864,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJBSRht_oVmYARaToiq4-KMLA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJBSRht_oVmYARaToiq4-KMLA; website_verified; deactivated — RV dealer/retail — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Carson City Trailer",
@@ -1663,7 +1771,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Celebrations Event Rentals",
+  "name": "Celebrations! Party Rentals",
   "slug": "celebrations-event-rentals",
   "address": "230-A Coney Island Dr, Sparks, NV 89431, USA",
   "city": "Sparks",
@@ -1681,19 +1789,17 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 15,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ0QGtlag_mYARyoq16DanUaY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
-  "name": "Chulas Party Rentals LLC",
+  "name": "Chula's Party Rentals",
   "slug": "chulas-party-rentals-llc",
   "address": "151 Richard Springs Blvd, Sparks, NV 89436, USA",
   "city": "Sparks",
@@ -1711,16 +1817,14 @@
    "sat": "8:00 AM – 4:00 PM",
    "sun": "8:00 AM – 4:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfSy64A43mYAREWSv7u3MJ98",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Clean Up the Lake 501(c)3",
@@ -1745,12 +1849,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJm5EaxSObmYARkxCUQQKTOSg",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJm5EaxSObmYARkxCUQQKTOSg; website_verified; deactivated — lake-cleanup nonprofit — not a gear-rental operator",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Clearly Tahoe",
@@ -1778,9 +1883,14 @@
   "rating_external": 4.8,
   "rating_external_count": 279,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJPTg0tSKbmYARgDzXqwNGgqo",
+  "notes_internal": "google_place_id:ChIJPTg0tSKbmYARgDzXqwNGgqo; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Clearly Tahoe",
@@ -1808,12 +1918,17 @@
   "rating_external": 4.9,
   "rating_external_count": 209,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJY9svMahxmYARM1p7-_L3-TA",
+  "notes_internal": "google_place_id:ChIJY9svMahxmYARM1p7-_L3-TA; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
-  "name": "Clearly Tahoe Bikes",
+  "name": "Clearly Tahoe",
   "slug": "clearly-tahoe-bikes",
   "address": "212 Elks Point Rd Suite 443, Zephyr Cove, NV 89448, USA",
   "city": "Zephyr Cove",
@@ -1832,15 +1947,19 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "road_cycling"
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling",
+   "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJlfkixIebmYARzsYK3x_HyfI",
+  "notes_internal": "google_place_id:ChIJlfkixIebmYARzsYK3x_HyfI; founder review: rents bikes and watersports; merged duplicate bike-lake-tahoe",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_rental": true
  },
  {
   "name": "Clearly Tahoe Kayak Rentals at Sand Harbor",
@@ -1868,9 +1987,14 @@
   "rating_external": 4.8,
   "rating_external_count": 319,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJT2-7fvtxmYARWSzaVmVTCq4",
+  "notes_internal": "google_place_id:ChIJT2-7fvtxmYARWSzaVmVTCq4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Clearly Tahoe Keys Marina",
@@ -1898,9 +2022,14 @@
   "rating_external": 4.8,
   "rating_external_count": 162,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ_ZaKcwOPmYAR-d2lx9V-6vQ",
+  "notes_internal": "google_place_id:ChIJ_ZaKcwOPmYAR-d2lx9V-6vQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Cloud of Goods Reno",
@@ -1928,12 +2057,16 @@
   "rating_external": 4.8,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJlesyeO9NNSIR4-yHkkq9kkU",
+  "notes_internal": "google_place_id:ChIJlesyeO9NNSIR4-yHkkq9kkU; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "e_scooter"
+  ]
  },
  {
-  "name": "Coalition Snow (Demo Only)",
+  "name": "Coalition Snow",
   "slug": "coalition-snow",
   "address": "299 E Plumb Ln Suite 162, Reno, NV 89502, USA",
   "city": "Reno",
@@ -1947,15 +2080,17 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ6S-mQiVHmYARb2odeGBcd2U; snow sports demos only — no rentals",
-  "is_active": true,
-  "last_verified": "2026-06-12"
+  "notes_internal": "google_place_id:ChIJ6S-mQiVHmYARb2odeGBcd2U; website_verified; business closed (\"After 12 years, we are saying goodbye\") — deactivated",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
-  "name": "Coldstream Adventures Tours",
+  "name": "Coldstream Adventures",
   "slug": "coldstream-adventures-tours",
   "address": "877 Cabin Creek Rd, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -1982,7 +2117,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJqXFkczDem4AR7b6Aqfody8M",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "snowmobile"
+  ]
  },
  {
   "name": "College Cyclery",
@@ -2012,9 +2150,10 @@
   "rating_external": 3.8,
   "rating_external_count": 86,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv_LEordAmYAR2Byih3bLqRA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJv_LEordAmYAR2Byih3bLqRA; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Cook EFoiling",
@@ -2031,7 +2170,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 102,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ9UsF5i7fm4ARAGHBIGAM_Hc",
@@ -2057,16 +2196,14 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 13,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJU-YPoOI-mYAR0XlUUDVc59c",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; event linen/tent rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Cruise Planners - Debbie Allen",
@@ -2087,16 +2224,14 @@
    "sat": "10:00 AM – 3:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv07bGUg3mYAR26-Wo1P73Jw",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; travel agency — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Cruisers Academy",
@@ -2113,12 +2248,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 101,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ45T7dlp9mYARkLmSIVwT7J4",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJ45T7dlp9mYARkLmSIVwT7J4; website_verified; deactivated — boating school — not a gear-rental operator",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Custom Concepts NV",
@@ -2135,12 +2271,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJH1WQcCi_mYAR2OMl8JlKElY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJH1WQcCi_mYAR2OMl8JlKElY; website_verified; deactivated — founder review: cabinet shop, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "CyclePaths BikeShop",
@@ -2169,9 +2306,16 @@
   "rating_external": 4.8,
   "rating_external_count": 43,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKx4AZMvfm4ARYXTbCQnZlWk",
+  "notes_internal": "google_place_id:ChIJKx4AZMvfm4ARYXTbCQnZlWk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "e_scooter",
+   "ebike_mtb",
+   "enduro_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "D1-Trailers | Sales and Rentals",
@@ -2202,7 +2346,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Dannys Party Rental LLC",
+  "name": "Danny's Party Rental",
   "slug": "dannys-party-rental-llc",
   "address": "1815 Dream Catcher Rd, Sun Valley, NV 89433, USA",
   "city": "Sun Valley",
@@ -2220,16 +2364,14 @@
    "sat": "6:00 AM – 10:00 PM",
    "sun": "7:30 AM – 8:30 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJFSc40LNHmYAR14L8LUqZynw",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Day Go Adventures",
@@ -2257,9 +2399,13 @@
   "rating_external": 4.6,
   "rating_external_count": 34,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJf7buvpGamYARP8xoDRlvlWI",
+  "notes_internal": "google_place_id:ChIJf7buvpGamYARP8xoDRlvlWI; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Deep Abliss Diveshop",
@@ -2284,12 +2430,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 25,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJxPM4N-bmYARIJTP7vf24oQ",
+  "notes_internal": "google_place_id:ChIJJxPM4N-bmYARIJTP7vf24oQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wetsuit"
+  ]
  },
  {
   "name": "Desert Sage Events & Rentals",
@@ -2310,16 +2459,14 @@
    "sat": "9:00 AM – 6:00 PM",
    "sun": "9:00 AM – 6:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ7aytrG-9mYARgLuwZ91McbI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Desert Southwest Event Rentals of Lake Tahoe",
@@ -2340,16 +2487,14 @@
    "sat": "11:00 AM – 3:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 8,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ-czLcgB7mYARDMTVL1KyqCQ",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Dirt Gypsy Adventures",
@@ -2368,12 +2513,18 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 41,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYXYrLonfm4AR9xfL-eRx0VU",
+  "notes_internal": "google_place_id:ChIJYXYrLonfm4AR9xfL-eRx0VU; scan_verified; road_cycling gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "ebike_mtb",
+   "gravel_bike",
+   "kids_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Diverobotix",
@@ -2398,12 +2549,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ0Q86SQC5mYARfMN6nvVSiiM",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; deactivated — commercial/robotic diving services — not consumer rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Doing It Big Rentals",
@@ -2603,12 +2755,15 @@
   "rating_external": 4.9,
   "rating_external_count": 259,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJFXp61JZBmYARLPCUVD4_9J0",
+  "notes_internal": "google_place_id:ChIJFXp61JZBmYARLPCUVD4_9J0; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
-  "name": "EAGLE RIDGE SNOWMOBILE TOURS",
+  "name": "Eagle Ridge Snowmobile Tours",
   "slug": "eagle-ridge-snowmobile-tours",
   "address": "89 Jackson Meadows Rd, Sierraville, CA 96126, USA",
   "city": "Sierraville",
@@ -2633,12 +2788,13 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJrXu2zeT7m4AR-VvTGDK4_Os",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJrXu2zeT7m4AR-VvTGDK4_Os; website_verified; deactivated — guided snowmobile tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
-  "name": "East Shore E-Bikes Tours & Rentals",
+  "name": "Tahoe Multisport — East Shore",
   "slug": "east-shore-e-bikes-tours-rentals",
   "address": "UPPER, LOT, 797 Southwood Blvd #10, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -2657,7 +2813,8 @@
    "sun": "7:00 AM – 7:00 PM"
   },
   "categories": [
-   "electric_transport"
+   "electric_transport",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
@@ -2665,7 +2822,12 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJm_OOpPdxmYAR1VliycpjzoA",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Eastlake Ebike Rentals",
@@ -2686,9 +2848,12 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJgbTQoZkNmYARqAZOEzPZ2qc",
+  "notes_internal": "google_place_id:ChIJgbTQoZkNmYARqAZOEzPZ2qc; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Efoil Tahoe",
@@ -2713,12 +2878,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 72,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJtSGtrj5xmYARX_nBebLphFw",
+  "notes_internal": "google_place_id:ChIJtSGtrj5xmYARX_nBebLphFw; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "jet_ski",
+   "wetsuit"
+  ]
  },
  {
   "name": "Elevated Boat Club Lake Tahoe",
@@ -2746,9 +2915,10 @@
   "rating_external": 3.1,
   "rating_external_count": 21,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ98uN8zpxmYAR6Lo4aW7z85o",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJ98uN8zpxmYAR6Lo4aW7z85o; website_verified; deactivated — membership boat club — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Elevation Surf Charters",
@@ -2773,12 +2943,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 16,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJoxkdpYVlmYARbWvsipu9vwY",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJoxkdpYVlmYARbWvsipu9vwY; website_verified; deactivated — captained surf/boat charter — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Emerald Bay Bikes",
@@ -2809,9 +2980,12 @@
   "rating_external": 4.6,
   "rating_external_count": 18,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJbzu7vXSPmYAROH1u0aSqiBg",
+  "notes_internal": "google_place_id:ChIJbzu7vXSPmYAROH1u0aSqiBg; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Emerald Bay Visitor Center",
@@ -2832,16 +3006,14 @@
    "sat": "10:00 AM – 4:30 PM",
    "sun": "10:00 AM – 4:30 PM"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 40,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJdV8ICoiHmYARW_JU1kaFdM4",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; state park visitor center — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Endless Wave Charters",
@@ -2866,12 +3038,18 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 48,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ8atHbUdlmYART4wRbng-hVc",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "wakeboard"
+  ]
  },
  {
   "name": "Enterprise Rent-A-Car",
@@ -2922,7 +3100,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 39,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJJxoayTVHmYAR46XHc8jMPKY",
@@ -3064,7 +3242,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJF7-iSEXXm4ARZ44Y30OtY1A; retail only — no gear rentals",
@@ -3090,16 +3268,14 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 11,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ--mKYFwVmYARgBqJWOJo4L0",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; photo booth rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Fallen Leaf Lake Store, Cafe and Marina",
@@ -3127,9 +3303,13 @@
   "rating_external": 4.6,
   "rating_external_count": 291,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJrZ0a2NKOmYARplzx7FF4nrQ",
+  "notes_internal": "google_place_id:ChIJrZ0a2NKOmYARplzx7FF4nrQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "kayak"
+  ]
  },
  {
   "name": "Featherlite of Reno",
@@ -3180,7 +3360,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJDehs38wVnmYR-hZIlY2iPbE",
@@ -3208,7 +3388,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJuzAMW-M_mYARpvj4ef8K_co",
@@ -3234,16 +3414,14 @@
    "sat": "9:00 AM – 8:00 PM",
    "sun": "9:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJXeFVzDc_mYARuEWfdb99QAM",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; party supply rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Floater with a Motor",
@@ -3268,12 +3446,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 31,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJXzlju-Pnm4ARLtrc5m-supY",
+  "notes_internal": "google_place_id:ChIJXzlju-Pnm4ARLtrc5m-supY; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat"
+  ]
  },
  {
   "name": "Flume Trail Bikes",
@@ -3303,9 +3484,16 @@
   "rating_external": 4.9,
   "rating_external_count": 1168,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ4-IvaAZxmYARtBPCc8shjVI",
+  "notes_internal": "google_place_id:ChIJ4-IvaAZxmYARtBPCc8shjVI; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb",
+   "kids_bike",
+   "trail_bike",
+   "xc_bike"
+  ]
  },
  {
   "name": "Forward Ski System",
@@ -3330,7 +3518,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ_XOgTKNHmYARQ5f51RcNl2g; no gear rentals",
@@ -3360,12 +3548,16 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 172,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJV_LJMpCbmYARqs2mHwt-ZA4",
+  "notes_internal": "google_place_id:ChIJV_LJMpCbmYARqs2mHwt-ZA4; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "snowmobile",
+   "utv"
+  ]
  },
  {
   "name": "Full Throttle Tahoe",
@@ -3391,15 +3583,21 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 42,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJP0bKrdJkmYARfFNNkdWSgZ4",
+  "notes_internal": "google_place_id:ChIJP0bKrdJkmYARfFNNkdWSgZ4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
-  "name": "Fun Events NV, One Stop Shop For All Events, Party Rentals & Entertainment Reno Nevada",
+  "name": "Fun Events NV",
   "slug": "fun-events-nv-one-stop-shop-for-all-events-party-rentals-entertainment-reno-nevada",
   "address": "4935 Energy Way, Reno, NV 89502, USA",
   "city": "Reno",
@@ -3417,17 +3615,14 @@
    "sat": "8:00 AM – 8:00 PM",
    "sun": "8:00 AM – 8:00 PM"
   },
-  "categories": [
-   "camping",
-   "rock_climbing"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.8,
   "rating_external_count": 17,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJpyw94lM_mYAR1vBTjcuyw98",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Galena Sports",
@@ -3479,16 +3674,23 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "camping",
-   "rock_climbing"
+   "camping"
   ],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 227,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJOZet7oxBmYARFkEseucIW5Q",
+  "notes_internal": "google_place_id:ChIJOZet7oxBmYARFkEseucIW5Q; founder_verified; bear bin rentals — consignment retail otherwise",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Consignment retail plus bear canister rentals for backpacking and camping.",
+  "subcategories": [
+   "backpack",
+   "camp_furniture",
+   "cooking",
+   "sleep_system",
+   "tent"
+  ]
  },
  {
   "name": "Go Rentals",
@@ -3511,7 +3713,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 21,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJD2D48X4_mYARoWVtwWtWTSk",
@@ -3546,9 +3748,12 @@
   "rating_external": 4.2,
   "rating_external_count": 56,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJy9ppqHeQmYARudCSM07YImA; cruiser and e-bike rentals (not MTB)",
+  "notes_internal": "google_place_id:ChIJy9ppqHeQmYARudCSM07YImA; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Grand Event Rental Reno-Tahoe",
@@ -3569,16 +3774,14 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJCX5BwLw_mYARxWPBHNVkz28",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Grand Tahoe Charters",
@@ -3603,12 +3806,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 18,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJK_VySspkmYARqifFho-Rgb0",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJK_VySspkmYARqifFho-Rgb0; website_verified; deactivated — captained boat charter — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Granite Chief Powered by BlueZone Sports",
@@ -3640,12 +3844,21 @@
   "rating_external": 4.5,
   "rating_external_count": 220,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJmVK1sDPem4AROEdsc6xHzUo; bluezone_retail_network",
+  "notes_internal": "google_place_id:ChIJmVK1sDPem4AROEdsc6xHzUo; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "gravel_bike",
+   "kayak",
+   "paddleboard",
+   "road_bike",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
-  "name": "Gravity Haus Gear Rental - Haus Quiver - Truckee",
+  "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
   "slug": "gravity-haus-gear-rental-haus-quiver-truckee",
   "address": "10918 Brockway Rd, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -3672,7 +3885,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJiZahgDrfm4ARG93950wDe4I",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Great Basin Bicycles",
@@ -3702,9 +3915,14 @@
   "rating_external": 4.7,
   "rating_external_count": 105,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJW4N6f1AVmYAR0Cc66XyOOng",
+  "notes_internal": "google_place_id:ChIJW4N6f1AVmYAR0Cc66XyOOng; scan_verified; road_cycling gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "enduro_bike",
+   "gravel_bike",
+   "road_bike"
+  ]
  },
  {
   "name": "Gypsy Getaway Wagons",
@@ -3727,7 +3945,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "HIGH LINE ADVENTURES",
+  "name": "High Line Adventures",
   "slug": "high-line-adventures",
   "address": "53010 Donner Pass Rd, Soda Springs, CA 95728, USA",
   "city": "Soda Springs",
@@ -3749,12 +3967,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 33,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqVkqMwDrm4ARQgoMMQY9vOw",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJqVkqMwDrm4ARQgoMMQY9vOw; website_verified; deactivated — guided adventure tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Hang Gliding Tahoe",
@@ -3782,9 +4001,10 @@
   "rating_external": 4.7,
   "rating_external_count": 32,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJcXAV8V4KmYARAPbqtfMZhN8",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJcXAV8V4KmYARAPbqtfMZhN8; website_verified; deactivated — tandem hang gliding experience — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Heavenly Sports - Cecil's Plaza",
@@ -3813,9 +4033,15 @@
   "rating_external": 4.5,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv-yKNHaQmYARw929njJWAu4; snow sports rentals and demos",
+  "notes_internal": "google_place_id:ChIJv-yKNHaQmYARw929njJWAu4; founder review: Google shows rent+demo; Epic Mountain Rentals booking-only site",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard"
+  ]
  },
  {
   "name": "Heavenly Sports - Marriott",
@@ -3844,9 +4070,15 @@
   "rating_external": 4.2,
   "rating_external_count": 150,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJx83JvkSQmYAR37b1G_O0P5E; snow sports rentals and demos",
+  "notes_internal": "google_place_id:ChIJx83JvkSQmYAR37b1G_O0P5E; founder review: Epic Mountain Rentals booking-only site; Google shows rent+demo",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard"
+  ]
  },
  {
   "name": "Heavenly Sports - Tamarack Lodge",
@@ -3871,7 +4103,7 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 28,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPRErSHaQmYAR6GJasIPw_so",
@@ -3960,9 +4192,10 @@
   "rating_external": 4.7,
   "rating_external_count": 421,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJq_29_hhwmYARgr4y5k_WRGY",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJq_29_hhwmYARgr4y5k_WRGY; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "High Altitude Fitness Truckee",
@@ -3990,9 +4223,10 @@
   "rating_external": 4.5,
   "rating_external_count": 521,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ8VqbFKjfm4ARDsS8vK9unJA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJ8VqbFKjfm4ARDsS8vK9unJA; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "High Sierra Cycling",
@@ -4022,9 +4256,14 @@
   "rating_external": 4.4,
   "rating_external_count": 84,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJr81lwVkUmYARghRuPDYLA60",
+  "notes_internal": "google_place_id:ChIJr81lwVkUmYARghRuPDYLA60; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "gravel_bike",
+   "road_bike"
+  ]
  },
  {
   "name": "High Sierra Water Ski School",
@@ -4052,9 +4291,16 @@
   "rating_external": 4.9,
   "rating_external_count": 46,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ1WuLO_N9mYARa9axpI-c0e8",
+  "notes_internal": "google_place_id:ChIJ1WuLO_N9mYARa9axpI-c0e8; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Hunter Creek Trailhead",
@@ -4075,19 +4321,17 @@
    "sat": "8:00 AM – 7:00 PM",
    "sun": "8:00 AM – 7:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 551,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ84COv-9DmYARAaHE3BXMLks",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; public trailhead — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
-  "name": "IRIE Rafting Company Inc",
+  "name": "IRIE Rafting Company",
   "slug": "irie-rafting-company-inc",
   "address": "7320 River Rd, Olympic Valley, CA 96146, USA",
   "city": "Olympic Valley",
@@ -4112,9 +4356,10 @@
   "rating_external": 4.6,
   "rating_external_count": 65,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ42ZPWIbfm4ARuH_EEWnjqJ0",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ42ZPWIbfm4ARuH_EEWnjqJ0; website_verified; deactivated — founder review: guided tours only, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Infiniti Diving Services",
@@ -4142,9 +4387,10 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfc-d59lamYARPrGmtGJZ30c",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJfc-d59lamYARPrGmtGJZ30c; website_verified; deactivated — commercial diving services — not consumer rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "JR Powersports",
@@ -4169,12 +4415,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJkYK66hsEmYARxIWj4AhWjYw",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJkYK66hsEmYARxIWj4AhWjYw; website_verified; deactivated — powersports dealer, sales-only (Bucket 2 unmentioned)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Juanitos Party Rental",
@@ -4195,16 +4442,14 @@
    "sat": "5:30 AM – 10:30 PM",
    "sun": "6:00 AM – 10:30 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJcTJ2LO9JmYARd9xANmNUUZI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Just So Scuba",
@@ -4257,7 +4502,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 61,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ1cpZirtHmYARuQx1YBn98lM",
@@ -4265,7 +4510,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "Katoma LLC boat rental Lake Tahoe",
+  "name": "Katoma Boat Rentals",
   "slug": "katoma-llc-boat-rental-lake-tahoe",
   "address": "pb 5442, 1109 Hwy 50, Zephyr Cove, NV 89448, USA",
   "city": "Zephyr Cove",
@@ -4292,7 +4537,11 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJZSQyrBqbmYARCOrt-c8l9Yc",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard"
+  ]
  },
  {
   "name": "Kawasaki Yamaha of Reno",
@@ -4321,9 +4570,10 @@
   "rating_external": 4.7,
   "rating_external_count": 417,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJh9PHTWc_mYARVC3YDBKB97I",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJh9PHTWc_mYARVC3YDBKB97I; website_verified; deactivated — powersports dealer, sales-only (Bucket 2 unmentioned)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Kayak Tahoe- Pope Beach",
@@ -4351,9 +4601,13 @@
   "rating_external": 4.7,
   "rating_external_count": 20,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJcwZv5SiFmYARPiMfMm6tk_c",
+  "notes_internal": "google_place_id:ChIJcwZv5SiFmYARPiMfMm6tk_c; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Kiwanis Activity Center and Bike Program",
@@ -4383,9 +4637,10 @@
   "rating_external": 4.8,
   "rating_external_count": 131,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKfp1JQ5HmYARSPVLMInMi3U",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJKfp1JQ5HmYARSPVLMInMi3U; website_verified; deactivated — charity bike program — not a rental operator",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Knee Walker Rental Reno",
@@ -4462,12 +4717,18 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJpcL9nNfnm4ARJwMQXYtfUbI",
+  "notes_internal": "google_place_id:ChIJpcL9nNfnm4ARJwMQXYtfUbI; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "LS Boat Rentals - Tahoe",
@@ -4492,12 +4753,18 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqSpsKJFxmYARcscdz11UktE",
+  "notes_internal": "google_place_id:ChIJqSpsKJFxmYARcscdz11UktE; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Lake Level Surf Charters",
@@ -4522,12 +4789,17 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 123,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ8b6JVa6HDG8R4ciI6hKk4yg",
+  "notes_internal": "google_place_id:ChIJ8b6JVa6HDG8R4ciI6hKk4yg; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Lake Shore Boats Tahoe",
@@ -4555,9 +4827,13 @@
   "rating_external": 4.3,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJoTZS5hhvmYARbh-OUipfjiQ",
+  "notes_internal": "google_place_id:ChIJoTZS5hhvmYARbh-OUipfjiQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "paddleboard"
+  ]
  },
  {
   "name": "Lake Tahoe Adventure OHV Tours",
@@ -4582,12 +4858,17 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJSdktC4ejmYARTXMmqopyWjU",
+  "notes_internal": "google_place_id:ChIJSdktC4ejmYARTXMmqopyWjU; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "snowmobile",
+   "utv"
+  ]
  },
  {
   "name": "Lake Tahoe Adventures",
@@ -4615,12 +4896,17 @@
   "rating_external": 4.5,
   "rating_external_count": 508,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfy2gDdKNmYARkg65MPDmlQ4",
+  "notes_internal": "google_place_id:ChIJfy2gDdKNmYARkg65MPDmlQ4; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "snowmobile",
+   "utv"
+  ]
  },
  {
-  "name": "Lake Tahoe Bike Rentals",
+  "name": "Powder House — Lake Tahoe Bike Rentals",
   "slug": "lake-tahoe-bike-rentals",
   "address": "1001 Heavenly Village Way, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -4631,7 +4917,9 @@
   "website": "http://tahoepowderhouse.com/",
   "hours": null,
   "categories": [
-   "electric_transport"
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling"
   ],
   "photos": null,
   "rating_external": 3.1,
@@ -4639,10 +4927,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJWRQo6XaQmYARPFU-QgLAS9Y",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
-  "name": "Lake Tahoe Boat Rentals",
+  "name": "Tahoe Adventure Rentals",
   "slug": "lake-tahoe-boat-rentals",
   "address": "1060 Tahoe Blvd, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -4664,12 +4955,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 37,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ2QgACRZwmYARMOCQpl2hsXQ",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat"
+  ]
  },
  {
   "name": "Lake Tahoe Boat Rides",
@@ -4697,12 +4991,18 @@
   "rating_external": 4.9,
   "rating_external_count": 433,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJVWZBYYOPmYAR_xt0WYQON0k",
+  "notes_internal": "google_place_id:ChIJVWZBYYOPmYAR_xt0WYQON0k; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "paddleboard",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
-  "name": "Lake Tahoe Diving & Environmental LLC",
+  "name": "Lake Tahoe Diving & Environmental",
   "slug": "lake-tahoe-diving-environmental-llc",
   "address": "100 Mcfaul Way, Zephyr Cove, NV 89448, USA",
   "city": "Zephyr Cove",
@@ -4727,9 +5027,10 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJx9_Js8CbmYARYODaATHHCtI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJx9_Js8CbmYARYODaATHHCtI; website_verified; deactivated — environmental diving services — not consumer rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Lake Tahoe Floats",
@@ -4754,7 +5055,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJjfXtAQrrX2AR9WWeV3ST9hg",
@@ -4787,9 +5088,10 @@
   "rating_external": 3.5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJjd5fF--amYARD7l8Pvhdr5Q",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJjd5fF--amYARD7l8Pvhdr5Q; website_verified; deactivated — guided jeep tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Lake Tahoe LSP Boat Rentals",
@@ -4819,7 +5121,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJXVHrZwSQmYAR1rciIWM8e6k",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat"
+  ]
  },
  {
   "name": "Lake Tahoe Luxury Boat Rentals",
@@ -4847,9 +5152,16 @@
   "rating_external": 4.9,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+  "notes_internal": "google_place_id:ChIJHUtqcWFxmYAR1Wfw0__0ydc; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Lake Tahoe Pontoons",
@@ -4874,12 +5186,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 53,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHWLlJEyRmYARmnqvJTlgRBo",
+  "notes_internal": "google_place_id:ChIJHWLlJEyRmYARmnqvJTlgRBo; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "paddleboard"
+  ]
  },
  {
   "name": "Lake Tahoe Slingshots",
@@ -4905,7 +5221,7 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJpbhRufabmYAR70RxWUMaBPA",
@@ -4913,7 +5229,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Lake Tahoe Snowmobile Tours, Inc.",
+  "name": "Lake Tahoe Snowmobile Tours",
   "slug": "lake-tahoe-snowmobile-tours-inc",
   "address": "Brockway Summit, CA-267, Tahoe Vista, CA 96148, USA",
   "city": "Tahoe Vista",
@@ -4938,9 +5254,10 @@
   "rating_external": 4.8,
   "rating_external_count": 311,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJK_S0ZKNjmYARflMVD1YFGjY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJK_S0ZKNjmYARflMVD1YFGjY; website_verified; deactivated — guided snowmobile tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Lake Tahoe Tours And Rentals",
@@ -4960,9 +5277,14 @@
   "rating_external": 4.9,
   "rating_external_count": 275,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLUbndgCbmYARXvDGdiF1IDg",
+  "notes_internal": "google_place_id:ChIJLUbndgCbmYARXvDGdiF1IDg; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Lake Tahoe Watersports",
@@ -4987,12 +5309,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARYZX7DPDfuPc",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJ87kKrIuFmYARYZX7DPDfuPc; website_verified; deactivated — founder review: school, not rentals (note: earlier scan suggested boat/jetski rental — deferring to manual review)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Lake-side Tahoe W/private Beach, Pool & Next To Heavenly! 2 Bedroom Townhouse by RedAwning",
@@ -5005,16 +5328,14 @@
   "phone": null,
   "website": "https://voyabay.com/rentals/lp1b368a",
   "hours": null,
-  "categories": [
-   "off_road"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ3wlsFA-QmYARA_h9XXEGXj0",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; vacation rental listing — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Lakeshore Paddleboard Co.",
@@ -5042,9 +5363,10 @@
   "rating_external": 4.6,
   "rating_external_count": 11,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJO1eBm2AVmYAR5zBLIu_Vo64",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJO1eBm2AVmYAR5zBLIu_Vo64; website_verified; deactivated — founder review: direct-to-consumer purchase only, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Little Truckee Summit OHV/Snowmobile Staging Area",
@@ -5057,16 +5379,14 @@
   "phone": null,
   "website": "http://www.fs.usda.gov/recarea/tahoe/recarea/?recid=55800",
   "hours": null,
-  "categories": [
-   "off_road"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 22,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJgaUvNQj7m4ARV1Vl8dLoADA",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; USFS staging area — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Loading Helpers",
@@ -5114,9 +5434,9 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJDcmw20Lfm4AR-s610pn0oOE",
+  "notes_internal": "reactivated; site under construction — could not confirm absence of rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Marine Taxonomic Services, Ltd. - Tahoe",
@@ -5144,9 +5464,10 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJU1qnrCmOmYARGbx399C45pE",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJU1qnrCmOmYARGbx399C45pE; website_verified; deactivated — aquatic research/diving services — not consumer rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Mark Fore and Strike",
@@ -5174,9 +5495,10 @@
   "rating_external": 4.3,
   "rating_external_count": 222,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ29xY-Vc_mYARES9CKWKeUFU",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ29xY-Vc_mYARES9CKWKeUFU; website_verified; deactivated — clothing retail — sells, does not rent",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Medtech Services",
@@ -5257,16 +5579,14 @@
    "sat": "6:00 AM – 7:00 PM",
    "sun": "10:00 AM – 6:30 PM"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 157,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJsz_t0WJAmYARMxPtIP-lYAA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; municipal aquatics center — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Modern House Ski Lease or short term, New Hot TubGas Insert, by Nordic Center",
@@ -5305,7 +5625,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkW3Hrn9AmYARSTxL7AQZDxk; duplicate of bobos-ski-patio (same business)",
@@ -5313,7 +5633,7 @@
   "last_verified": "2026-06-12"
  },
  {
-  "name": "Moment Skis (Demo Only)",
+  "name": "Moment Skis",
   "slug": "moment-skis",
   "address": "1085 Bible Wy, Reno, NV 89502, USA",
   "city": "Reno",
@@ -5335,12 +5655,14 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 90,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJfbp-qiI_mYARD0_70XarbPM; factory alpine ski demo program",
   "is_active": true,
-  "last_verified": "2026-06-11"
+  "last_verified": "2026-06-11",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
   "name": "Moon Rocks",
@@ -5420,9 +5742,10 @@
   "rating_external": 4.5,
   "rating_external_count": 13,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJSWQ4Mejfm4ARSC_A8BYbK0c",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJSWQ4Mejfm4ARSC_A8BYbK0c; website_verified; deactivated — powersports dealer, sales-only (Bucket 2 unmentioned)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Mountain Dog Cycling",
@@ -5450,9 +5773,10 @@
   "rating_external": 4.9,
   "rating_external_count": 220,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJhS0NsNBFmYAR3M35xixz2VA",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJhS0NsNBFmYAR3M35xixz2VA; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Mountain Hardware & Sports",
@@ -5474,16 +5798,16 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "camping",
-   "rock_climbing"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 919,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJEX5qpzPem4AR2kiYG4noB9Q",
+  "notes_internal": "google_place_id:ChIJEX5qpzPem4AR2kiYG4noB9Q; founder_verified; snowshoe rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Hardware and sporting goods retail plus snowshoe rentals."
  },
  {
   "name": "Mountain Mike's Sports",
@@ -5540,12 +5864,12 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 22,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJE1amPXSQmYAR0IbbbnD6ocI; duplicate Google listing: snowshoe-thompsons-ski-and-snowboard-rentals",
+  "notes_internal": "website_verified; dual brand — mtnmikeslaketahoe.com uses both names at same location",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Mountain Vibes Specialty Rentals",
@@ -5562,12 +5886,15 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 13,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJnzI8DmBHmYARDq0dG8ELWJI",
+  "notes_internal": "google_place_id:ChIJnzI8DmBHmYARDq0dG8ELWJI; scan_verified; camping gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "tent"
+  ]
  },
  {
   "name": "Mountain Vistas Mobile Home Park",
@@ -5623,9 +5950,9 @@
   "rating_external": 4.9,
   "rating_external_count": 54,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJz9w2VrePmYARDBJh0xkdUUc",
+  "notes_internal": "website_verified; demo ski/snowboard and snowshoe rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "National Car Rental",
@@ -5683,9 +6010,19 @@
   "rating_external": 4.8,
   "rating_external_count": 162,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJT1VlrfNEmYARl0q7P6hBVgk",
+  "notes_internal": "google_place_id:ChIJT1VlrfNEmYARl0q7P6hBVgk; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "cooking",
+   "dirt_bike",
+   "harness",
+   "rope_hardware",
+   "sleep_system",
+   "tent",
+   "utv"
+  ]
  },
  {
   "name": "Nevada Nordic",
@@ -5702,7 +6039,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJv39nHstvmYARRthSt17BGyA; trail association — no gear rentals (refers to Tahoe Multisport)",
@@ -5760,7 +6097,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 17,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJfXhqnD0VmYARKinwJEBgClI",
@@ -5782,12 +6119,13 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHxjQfeWRmYARyToyxaz5rzk",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJHxjQfeWRmYARyToyxaz5rzk; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "North Lake Tahoe Boat Rental",
@@ -5812,12 +6150,17 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1450,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJBxU-wIxgmYARsSke3Ez3MXo",
+  "notes_internal": "google_place_id:ChIJBxU-wIxgmYARsSke3Ez3MXo; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "wakeboard"
+  ]
  },
  {
   "name": "North Shore Boat Rentals - Incline Village NV",
@@ -5845,9 +6188,13 @@
   "rating_external": 4.2,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJuzZL3f9xmYARrktxdNGB5D4",
+  "notes_internal": "google_place_id:ChIJuzZL3f9xmYARrktxdNGB5D4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard"
+  ]
  },
  {
   "name": "North Shore Parasail",
@@ -5875,9 +6222,10 @@
   "rating_external": 3.9,
   "rating_external_count": 128,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJmyuXjix7mYARCT8BNIAOv1k",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJmyuXjix7mYARCT8BNIAOv1k; website_verified; deactivated — parasail rides — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "North Tahoe Paddle",
@@ -5902,12 +6250,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 479,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ8_oCjqZkmYARLdFYqALP_u8",
+  "notes_internal": "google_place_id:ChIJ8_oCjqZkmYARLdFYqALP_u8; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "North Tahoe Watersports",
@@ -5935,12 +6287,19 @@
   "rating_external": 4.4,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfzHSBHV9mYARIT8np-2e_4A",
+  "notes_internal": "google_place_id:ChIJfzHSBHV9mYARIT8np-2e_4A; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
-  "name": "North Tahoe Watersports Inc",
+  "name": "North Tahoe Watersports",
   "slug": "north-tahoe-watersports-inc",
   "address": "State Recreation Area, 8400 N Lake Blvd, Kings Beach, CA 96143, USA",
   "city": "Kings Beach",
@@ -5967,7 +6326,14 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJSTGEgyx7mYARpkagCc9TK8A",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "North Tahoe Watersports Tahoe City Boat Rentals",
@@ -5995,9 +6361,16 @@
   "rating_external": 4.7,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ1S2uDXV9mYARl_oxHYjBsPA",
+  "notes_internal": "google_place_id:ChIJ1S2uDXV9mYARl_oxHYjBsPA; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "North Tahoe Winter Adventures",
@@ -6025,9 +6398,10 @@
   "rating_external": 4.7,
   "rating_external_count": 38,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYV1LEL1kmYARoubcysA5OkY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJYV1LEL1kmYARoubcysA5OkY; website_verified; deactivated — guided winter tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Northstar Cross-Country, Telemark, and Snowshoe Center",
@@ -6085,9 +6459,10 @@
   "rating_external": 4.6,
   "rating_external_count": 103,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJwWVulw0_mYARviqfn69LYF4",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJwWVulw0_mYARviqfn69LYF4; website_verified; deactivated — medical mobility (wheelchairs) — not consumer gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Obexer's Boat Company",
@@ -6147,7 +6522,12 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJSVwePtZ_mYARHh8lr4sJEcU",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "jet_ski",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Olympic Bike Shop",
@@ -6177,9 +6557,17 @@
   "rating_external": 4.7,
   "rating_external_count": 166,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ07CIU3R9mYARTEdAY-tT9Tg",
+  "notes_internal": "google_place_id:ChIJ07CIU3R9mYARTEdAY-tT9Tg; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "downhill_bike",
+   "e_bike_city",
+   "gravel_bike",
+   "kids_bike",
+   "road_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Olympic Valley Ski & Bike",
@@ -6210,9 +6598,12 @@
   "rating_external": 4.6,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; snow/bike rentals and demos; former name: Mountain Mike's Sports (ChIJL0PZlOrZm4ARCLy9I1WG14U)",
+  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; scan_verified; mountain_biking gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kids_bike"
+  ]
  },
  {
   "name": "On The Go Trailer Rentals",
@@ -6235,7 +6626,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 114,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ_QJxJJE6SwARrGt5Glhst-0",
@@ -6261,19 +6652,17 @@
    "sat": "8:00 AM – 8:00 PM",
    "sun": "8:00 AM – 8:00 PM"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 158,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJp4JZkNJGmYARUonJvHmqtMI",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; public park — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
-  "name": "PADDLE TO YOU",
+  "name": "Paddle To You",
   "slug": "paddle-to-you",
   "address": "State Hwy 28 at Highway 267, Tahoe Vista, CA 96148, USA",
   "city": "Tahoe Vista",
@@ -6300,7 +6689,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJmx4eaMdZoKcRy2nZmnvjmj4",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Pacific Crest Snowcats",
@@ -6328,9 +6717,10 @@
   "rating_external": 4.8,
   "rating_external_count": 54,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ41T2aT1wmYARZhLS4WhuZSY",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ41T2aT1wmYARZhLS4WhuZSY; website_verified; deactivated — snowcat skiing tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Pacos Truckee",
@@ -6388,7 +6778,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 79,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJN83rWezZm4ARtHEgfKt-QPs; snow sports rentals and demos",
@@ -6445,16 +6835,14 @@
    "sat": "12:00 – 5:00 PM",
    "sun": "12:00 – 5:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 3.7,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJL1sphLxAmYARVI1qVk3tuzs",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Patagonia",
@@ -6482,9 +6870,10 @@
   "rating_external": 4.7,
   "rating_external_count": 46,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLeqjOjFimYARNK0OnSfFaiY",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJLeqjOjFimYARNK0OnSfFaiY; website_verified; deactivated — apparel retail — sells, does not rent",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Patagonia Outlet",
@@ -6513,9 +6902,10 @@
   "rating_external": 4.3,
   "rating_external_count": 797,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJBZcd8AtEmYARx_aUHcBwAFQ",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJBZcd8AtEmYARx_aUHcBwAFQ; website_verified; deactivated — apparel retail outlet — sells, does not rent",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Pedal Sports Reno-Sparks",
@@ -6573,9 +6963,12 @@
   "rating_external": 4.9,
   "rating_external_count": 235,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJEYfb0JkVmYAR9btp1bOWetQ",
+  "notes_internal": "google_place_id:ChIJEYfb0JkVmYAR9btp1bOWetQ; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Pine Nut Ebike Rentals South Lake Tahoe",
@@ -6602,12 +6995,18 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 605,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJOTMlK0mPmYARuUiisyT708U",
+  "notes_internal": "google_place_id:ChIJOTMlK0mPmYARuUiisyT708U; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "e_scooter",
+   "ebike_mtb",
+   "kids_bike"
+  ]
  },
  {
   "name": "Pinnacle Trailer Rentals",
@@ -6663,12 +7062,12 @@
   "rating_external": 4.4,
   "rating_external_count": 109,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJieyd0sShmYARH6v55ShV9oM",
+  "notes_internal": "reactivated; could not confirm absence of rentals — manual review",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-13"
  },
  {
-  "name": "Powder House Ski & Board: Pro Snow (Demo Only)",
+  "name": "Powder House Ski & Board: Pro Snow",
   "slug": "powder-house-ski-board-pro-snow",
   "address": "1001 Heavenly Village Way, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -6694,9 +7093,19 @@
   "rating_external": 4.5,
   "rating_external_count": 35,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ03PeAneQmYARisbooJUWr4c; snow sports demos only — no rentals",
+  "notes_internal": "google_place_id:ChIJ03PeAneQmYARisbooJUWr4c; website_verified; full rental shop + season leases + demos (\"largest ski & snowboard rental shop in South Lake Tahoe\")",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": true,
+  "offers_season_lease": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard",
+   "cross_country_ski",
+   "snowshoe",
+   "apparel_snow"
+  ]
  },
  {
   "name": "Powder House Ski and Snowboard At The Gondola",
@@ -6873,12 +7282,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 8,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ__-P0xBwmYARBwqqmQYJZvQ; snow and foil rentals; lift_foils_dealer",
+  "notes_internal": "google_place_id:ChIJ__-P0xBwmYARBwqqmQYJZvQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wakeboard"
+  ]
  },
  {
   "name": "Premier Trailer Leasing - Reno, NV",
@@ -6901,7 +7313,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJLZpQ8qchmYARvTRdtPq8lRc",
@@ -6929,7 +7341,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJuRHHOO0-mYAROD35nTh_PCI",
@@ -6967,7 +7379,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "Pyramid Peak Sports& Bike rentals",
+  "name": "Pyramid Peak Ski and Snowboard Rentals",
   "slug": "pyramid-peak-sports-bike-rentals",
   "address": "3433 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -6994,7 +7406,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ2YMdXQSQmYARX77l7FKok-A",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Quiver Sports",
@@ -7019,7 +7431,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 8,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJn62LLHMVmYARbArYbQtB6N4",
@@ -7054,9 +7466,23 @@
   "rating_external": 4.3,
   "rating_external_count": 458,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJyTEMtn0_mYARwkrufB2t4Fc",
+  "notes_internal": "google_place_id:ChIJyTEMtn0_mYARwkrufB2t4Fc; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "backpack",
+   "camp_furniture",
+   "climbing_shoes",
+   "cooking",
+   "crash_pad",
+   "harness",
+   "kayak",
+   "paddleboard",
+   "rope_hardware",
+   "sleep_system",
+   "tent",
+   "wetsuit"
+  ]
  },
  {
   "name": "REI Bike Shop",
@@ -7087,9 +7513,20 @@
   "rating_external": 4.6,
   "rating_external_count": 16,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJd4Jcuaw_mYAR7m4Neb2imh0",
+  "notes_internal": "google_place_id:ChIJd4Jcuaw_mYAR7m4Neb2imh0; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "backpack",
+   "camp_furniture",
+   "cooking",
+   "e_bike_city",
+   "ebike_mtb",
+   "gravel_bike",
+   "kids_bike",
+   "sleep_system",
+   "tent"
+  ]
  },
  {
   "name": "RMU Truckee Ski Shop",
@@ -7111,15 +7548,18 @@
    "sun": "12:00 – 8:00 PM"
   },
   "categories": [
-   "snow_sports"
+   "snow_sports",
+   "mountain_biking"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJN6x_Hdvfm4ARs2OsVqqpEyw",
+  "notes_internal": "google_place_id:ChIJN6x_Hdvfm4ARs2OsVqqpEyw; google_crosscheck: Maps lists ski/bike demos; Places API has no summary; website silent — demo only",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-13",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
   "name": "RNO Rent a Car Center",
@@ -7142,7 +7582,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 1858,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJz9cTLdc-mYAROUgg_t9aBf4",
@@ -7170,7 +7610,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 417,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJnw1_Y24_mYARjIkrVc2uiqk",
@@ -7231,9 +7671,10 @@
   "rating_external": 4.6,
   "rating_external_count": 233,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJj16Gj0tHmYARBmHrNf9BE1M",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJj16Gj0tHmYARBmHrNf9BE1M; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Reno Brew Bike",
@@ -7313,16 +7754,14 @@
    "sat": "7:00 AM – 9:00 PM",
    "sun": "7:00 AM – 8:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJC032vhNHmYARLYiOBRJZYU0",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; porta potty rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Reno Harley Davidson",
@@ -7344,15 +7783,20 @@
    "sun": "Closed"
   },
   "categories": [
-   "electric_transport"
+   "motorcycles"
   ],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 1097,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ1RQns2A_mYARdvNiaevNSrc",
+  "notes_internal": "google_place_id:ChIJ1RQns2A_mYARdvNiaevNSrc; founder review: rents motorcycles — recategorized to motorcycles",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": false,
+  "subcategories": [
+   "street_moto"
+  ]
  },
  {
   "name": "Reno Hexayurt",
@@ -7380,9 +7824,15 @@
   "rating_external": 4.9,
   "rating_external_count": 86,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJT8gOyzRHmYAR_pIFikqKxJE",
+  "notes_internal": "google_place_id:ChIJT8gOyzRHmYAR_pIFikqKxJE; scan_verified; camping gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "camp_furniture",
+   "cooking",
+   "full_kit",
+   "tent"
+  ]
  },
  {
   "name": "Reno MHC",
@@ -7405,7 +7855,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "Reno Mobility Inc.",
+  "name": "Reno Mobility",
   "slug": "reno-mobility-inc",
   "address": "5580 Mill St Suite 1100, Reno, NV 89502, USA",
   "city": "Reno",
@@ -7423,16 +7873,14 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "electric_transport"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJnSoo8sQ_mYAR4SGT0sWItAE",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; medical mobility equipment — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Reno Sierra Mobile Estates (South)",
@@ -7475,7 +7923,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 913,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ5YUpwno_mYARfkLbBWaU2-w",
@@ -7501,16 +7949,14 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 23,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ6aQor253uo8RDEohBxTKGO0",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Rent-A-Wreck",
@@ -7619,7 +8065,7 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 102,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJUwKFTX6RmYARqvQmPZ0vfAA",
@@ -7651,12 +8097,16 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJi--nu62NmYARJiuXEQuXRIk",
+  "notes_internal": "google_place_id:ChIJi--nu62NmYARJiuXEQuXRIk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb"
+  ]
  },
  {
   "name": "Rip N Willies Ski & Snowboard Rental Shop",
@@ -7707,17 +8157,14 @@
    "sat": "Open 24 hours",
    "sun": "Open 24 hours"
   },
-  "categories": [
-   "road_cycling",
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.4,
   "rating_external_count": 112,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJdSEc18pAmYARj3K0Wh6XszQ",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; merchants association — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Rock House Discount Ski & Snowboard Rentals",
@@ -7775,9 +8222,10 @@
   "rating_external": 3.7,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv9UaMlUOmYAR5MobnpOqrdk",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; deactivated — founder review: guided tours only, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Rock Trax UTV",
@@ -7802,15 +8250,16 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJRUwh9A8LmYARCx11z-qglYM",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJRUwh9A8LmYARCx11z-qglYM; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
-  "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots - Motorcycles, Moped Scooters, E-Bike Rentals & EagleRider Tours",
+  "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
   "slug": "rolling-freedom-motorcycles-lake-tahoe-slingshots-motorcycles-moped-scooters-e-bike-rentals-eaglerider-tours",
   "address": "152 US-50 #1, Stateline, NV 89449, USA",
   "city": "Stateline",
@@ -7829,7 +8278,8 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "electric_transport"
+   "electric_transport",
+   "off_road"
   ],
   "photos": null,
   "rating_external": 4.8,
@@ -7837,7 +8287,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ59MHV2WbmYARHl_0nG6nCDI",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "dirt_bike",
+   "e_bike_city",
+   "e_scooter",
+   "utv"
+  ]
  },
  {
   "name": "Roundabout Catering & Party Rentals",
@@ -7858,16 +8314,14 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.3,
   "rating_external_count": 102,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKaXcJ-Y_mYARGWjckC10tx0",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; catering/party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "S.c.u.b.a",
@@ -7884,7 +8338,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJSZeyEoVAmYAR4R3w-L7T59o",
@@ -7948,7 +8402,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "SUP Tahoe - Stand Up Paddle",
+  "name": "SUP South Lake Tahoe",
   "slug": "sup-tahoe-stand-up-paddle",
   "address": "871 Emerald Bay Rd, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -7975,7 +8429,11 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJxVubU7qPmYARw4wCdUiXjLg",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "SWA Watersports - Lake Tahoe Boat Rentals",
@@ -8003,9 +8461,15 @@
   "rating_external": 4.7,
   "rating_external_count": 67,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ2ytQ03_Vm4AReD4NW1wne_4",
+  "notes_internal": "google_place_id:ChIJ2ytQ03_Vm4AReD4NW1wne_4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Sand Harbor State Park",
@@ -8025,9 +8489,14 @@
   "rating_external": 4.8,
   "rating_external_count": 9352,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJUf-fYiqcmYARR_qq5LMc4tE",
+  "notes_internal": "google_place_id:ChIJUf-fYiqcmYARR_qq5LMc4tE; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Scheels",
@@ -8057,9 +8526,10 @@
   "rating_external": 4.6,
   "rating_external_count": 3526,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHefXBOs-mYARYT-GUi8dUKU",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJHefXBOs-mYARYT-GUi8dUKU; website_verified; deactivated — big-box sporting goods retail — sells, does not rent",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Scuba Mask Defog",
@@ -8084,12 +8554,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ8QD9nXS5mYARLd5aEr9DpzA",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ8QD9nXS5mYARLd5aEr9DpzA; website_verified; deactivated — product listing, not an operator location",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Shoreline of Tahoe",
@@ -8119,9 +8590,14 @@
   "rating_external": 4.9,
   "rating_external_count": 136,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k",
+  "notes_internal": "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k; founder_verified; e-bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Ski, snowboard, bike, and e-bike rentals plus gear service.",
+  "subcategories": [
+   "kids_bike",
+   "road_bike"
+  ]
  },
  {
   "name": "Showcase - Heavenly",
@@ -8149,9 +8625,15 @@
   "rating_external": 4.8,
   "rating_external_count": 85,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJPRErSHaQmYARa7QpkWhOUO0",
+  "notes_internal": "google_place_id:ChIJPRErSHaQmYARa7QpkWhOUO0; founder review: Epic Mountain Rentals booking-only site; Google shows rent+demo",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard"
+  ]
  },
  {
   "name": "Showcase - Northstar",
@@ -8179,9 +8661,15 @@
   "rating_external": 4.9,
   "rating_external_count": 15,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHy3S4TBimYAR8wZL0zU3DRk",
+  "notes_internal": "google_place_id:ChIJHy3S4TBimYAR8wZL0zU3DRk; founder review: Epic Mountain Rentals booking-only site; Google shows rent+demo",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard"
+  ]
  },
  {
   "name": "Sidestreet Boutique",
@@ -8214,7 +8702,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Sierra Adventures / Activities Reno Tahoe, LLC",
+  "name": "Sierra Adventures",
   "slug": "sierra-adventures-activities-reno-tahoe-llc",
   "address": "135 N Sierra St, Reno, NV 89501, USA",
   "city": "Reno",
@@ -8244,7 +8732,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkYDDOMtAmYAR3MpEhhvlzMo",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "kayak",
+   "paddleboard",
+   "raft"
+  ]
  },
  {
   "name": "Sierra Bicycle Supply",
@@ -8269,7 +8763,7 @@
    "electric_transport"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 125,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJxf5jrKM_mYARnVfpd7z3YCg",
@@ -8304,9 +8798,11 @@
   "rating_external": 4.8,
   "rating_external_count": 355,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ9WJuI_w_mYAR23aOhUAK3sA",
+  "notes_internal": "google_place_id:ChIJ9WJuI_w_mYAR23aOhUAK3sA; founder review: bike demos, not rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
   "name": "Sierra Diving Center",
@@ -8364,9 +8860,13 @@
   "rating_external": 4.1,
   "rating_external_count": 68,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJlZtzS5VxmYARr41aqf9Kn-s",
+  "notes_internal": "google_place_id:ChIJlZtzS5VxmYARr41aqf9Kn-s; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski"
+  ]
  },
  {
   "name": "Sierra Rental & Transport",
@@ -8425,9 +8925,14 @@
   "rating_external": 4.8,
   "rating_external_count": 95,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+  "notes_internal": "google_place_id:ChIJrWqLVgSQmYAR0Q2mUtnaIDM; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "road_bike",
+   "xc_bike"
+  ]
  },
  {
   "name": "Sierra Surf House",
@@ -8452,12 +8957,17 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 70,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJVbCLr9ttmA8RTDCg_LwdzV0",
+  "notes_internal": "google_place_id:ChIJVbCLr9ttmA8RTDCg_LwdzV0; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Sierra Vista MHP",
@@ -8508,7 +9018,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 11,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJu4Kk-u1HmYAR9-MXOHUcfDM",
@@ -8564,7 +9074,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 391,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJTzGmCfFJmYAR_VHW1C995m0",
@@ -8594,12 +9104,14 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 169,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJjU5vgAOQmYARZWhfi_FXn7A",
+  "notes_internal": "google_place_id:ChIJjU5vgAOQmYARZWhfi_FXn7A; founder_verified; delivery service",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_delivery": true,
+  "description": "Ski and snowboard rentals with delivery to your lodging."
  },
  {
   "name": "Ski Butlers Northstar/Palisades Tahoe",
@@ -8627,9 +9139,11 @@
   "rating_external": 4.9,
   "rating_external_count": 125,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJA2VHWIbfm4ARyNqBs2-GAEU",
+  "notes_internal": "google_place_id:ChIJA2VHWIbfm4ARyNqBs2-GAEU; founder_verified; delivery service",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "offers_delivery": true,
+  "description": "Ski and snowboard rentals with delivery to your lodging."
  },
  {
   "name": "Ski Pro",
@@ -8651,15 +9165,23 @@
    "sun": "11:00 AM – 5:00 PM"
   },
   "categories": [
-   "snow_sports"
+   "snow_sports",
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 126,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJX19jQLs_mYAR1rSMr9FQlCg",
+  "notes_internal": "google_place_id:ChIJX19jQLs_mYAR1rSMr9FQlCg; founder_verified; snow and water sports rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Snow sports and water sports gear rentals.",
+  "subcategories": [
+   "kayak",
+   "paddleboard",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Ski Run Marina",
@@ -8687,9 +9209,15 @@
   "rating_external": 4.5,
   "rating_external_count": 1326,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ97RGLQmQmYARoMZiCJbBYBs",
+  "notes_internal": "google_place_id:ChIJ97RGLQmQmYARoMZiCJbBYBs; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Ski, Shop & Explore: Walkable Midtown Reno Oasis!",
@@ -8702,16 +9230,14 @@
   "phone": null,
   "website": "http://g.rentalsunited.com/gate.aspx?uid=554691&url=1&pid=3102599&lc=google",
   "hours": null,
-  "categories": [
-   "snow_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJ3XZVchAmYARu6RBOqou6iI",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; vacation rental listing — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Slide Mountain Hang Glider Landing Zone",
@@ -8731,9 +9257,10 @@
   "rating_external": 4.4,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ_xXqzGdtmYARFvI2dcH-GWU",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJ_xXqzGdtmYARFvI2dcH-GWU; website_verified; deactivated — hang glider landing zone — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "SnoVentures Activity Zone",
@@ -8788,7 +9315,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 91,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJYRj0wmPZm4ARnFQfBfRclvg",
@@ -8843,9 +9370,10 @@
   "rating_external": 4.7,
   "rating_external_count": 29,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfZ2FjTq9mYARptenUALpaf4",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJfZ2FjTq9mYARptenUALpaf4; website_verified; deactivated — soaring/glider flights — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "South Lake E-bikes",
@@ -8872,12 +9400,15 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 283,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJudG9snaPmYARa7fYKkuik4s",
+  "notes_internal": "google_place_id:ChIJudG9snaPmYARa7fYKkuik4s; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "South Passage Outfitters",
@@ -8894,7 +9425,7 @@
    "camping"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJcSPRLpBgmYAREYSvBo1hns8",
@@ -8929,9 +9460,13 @@
   "rating_external": 4.8,
   "rating_external_count": 126,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ693RXLqPmYARmhjcHSJaFis",
+  "notes_internal": "google_place_id:ChIJ693RXLqPmYARmhjcHSJaFis; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "road_bike"
+  ]
  },
  {
   "name": "South Tahoe Ebike Rentals - Margaritaville",
@@ -8957,12 +9492,15 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 51,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJG0Si6IBJ06MR7bsVTLyVQaI",
+  "notes_internal": "google_place_id:ChIJG0Si6IBJ06MR7bsVTLyVQaI; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "South Tahoe Kayak and Paddleboard",
@@ -8990,9 +9528,14 @@
   "rating_external": 4.8,
   "rating_external_count": 33,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJB2pWdNaPmYARsJbG6fsk5Ms",
+  "notes_internal": "google_place_id:ChIJB2pWdNaPmYARsJbG6fsk5Ms; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Sparks Marina Paddle",
@@ -9017,7 +9560,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ-SmG4to5mYARSyK09zKl24c",
@@ -9043,16 +9586,14 @@
    "sat": "6:00 AM – 10:00 PM",
    "sun": "6:00 AM – 10:00 PM"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 3712,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLVp878I-mYARYLEaJBzjspU",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; public park — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Special Event Party Rentals",
@@ -9073,16 +9614,14 @@
    "sat": "9:00 AM – 5:00 PM",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 11,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJdbUphSJBmYARxt5rt9PTo8M",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Speedboat Beach",
@@ -9103,19 +9642,17 @@
    "sat": "8:00 AM – 6:00 PM",
    "sun": "8:00 AM – 6:00 PM"
   },
-  "categories": [
-   "water_sports"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 351,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJs_Huhuh6mYARmK4uzYKbtXg",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; public beach — not a gear operator",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
-  "name": "Sport Aviation Center LLC",
+  "name": "Sport Aviation Center",
   "slug": "sport-aviation-center-llc",
   "address": "2640 College Pkwy, Carson City, NV 89706, USA",
   "city": "Carson City",
@@ -9140,9 +9677,10 @@
   "rating_external": 4.1,
   "rating_external_count": 10,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJNbcsTMI6b4cRm5x6JwJRZOE",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJNbcsTMI6b4cRm5x6JwJRZOE; website_verified; deactivated — aviation center (retail) — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Sports Ltd. Rentals",
@@ -9175,9 +9713,22 @@
   "rating_external": 4.3,
   "rating_external_count": 59,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ",
+  "notes_internal": "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ; founder_verified; rentals plus snow sports demos",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Gear rentals across listed categories, plus alpine ski and snowboard demos.",
+  "subcategories": [
+   "backpack",
+   "camp_furniture",
+   "climbing_shoes",
+   "cooking",
+   "crash_pad",
+   "e_bike_city",
+   "road_bike",
+   "rope_hardware",
+   "sleep_system",
+   "tent"
+  ]
  },
  {
   "name": "Starlight Mobile Home Park",
@@ -9219,16 +9770,22 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "mountain_biking",
-   "snow_sports"
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 130,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJtW7Egsvfm4ARpLAHoUHGvuI",
+  "notes_internal": "google_place_id:ChIJtW7Egsvfm4ARpLAHoUHGvuI; founder_verified; MTB and e-MTB rentals plus demos; no snow rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Mountain bike and e-MTB rentals and demos — no snow sports rentals.",
+  "subcategories": [
+   "ebike_mtb",
+   "enduro_bike",
+   "kids_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Stealth Tahoe",
@@ -9258,9 +9815,16 @@
   "rating_external": 4.8,
   "rating_external_count": 43,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJvy_6Wobfm4AR0Ly51UvuIAM",
+  "notes_internal": "google_place_id:ChIJvy_6Wobfm4AR0Ly51UvuIAM; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "dirt_bike",
+   "e_bike_city",
+   "gravel_bike",
+   "onewheel",
+   "road_bike"
+  ]
  },
  {
   "name": "Street Rider of Reno",
@@ -9288,9 +9852,10 @@
   "rating_external": 4.7,
   "rating_external_count": 196,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJCR1fZF4_mYAR9CSFQuFbMZA",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJCR1fZF4_mYAR9CSFQuFbMZA; website_verified; deactivated — powersports dealer, sales-only (Bucket 2 unmentioned)",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Sugar Bowl Rental Shop",
@@ -9315,7 +9880,7 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJIQrNtvjnm4ARnGa4pfILydA",
@@ -9337,12 +9902,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJd7pgcu99mYARiQNx1QipnMc",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJd7pgcu99mYARiQNx1QipnMc; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Sunnyside Marina & Watersport Rentals",
@@ -9370,9 +9936,17 @@
   "rating_external": 4.8,
   "rating_external_count": 614,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJO7BF1vZ9mYARZxfHHeZiCXs",
+  "notes_internal": "google_place_id:ChIJO7BF1vZ9mYARZxfHHeZiCXs; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Synergy Wetsuits",
@@ -9400,12 +9974,16 @@
   "rating_external": 3.3,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJkf2Q10u9mYAR5lhJ7iEIZwE",
+  "notes_internal": "google_place_id:ChIJkf2Q10u9mYAR5lhJ7iEIZwE; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "paddleboard",
+   "wetsuit"
+  ]
  },
  {
-  "name": "TAHOE REEL, POWER, & PADDLE",
+  "name": "Tahoe Reel, Power & Paddle",
   "slug": "tahoe-reel-power-paddle",
   "address": "1900 Jameson Beach Rd, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -9424,7 +10002,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJr8KGILqFmYAR9Io5VfHLwyg",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "TEC Equipment - Reno Trailers",
@@ -9455,7 +10039,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "TOTALLY BOARD",
+  "name": "Totally Board",
   "slug": "totally-board",
   "address": "10060 Bridge St, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -9480,9 +10064,15 @@
   "rating_external": 4.8,
   "rating_external_count": 101,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJHdwDUcDfm4AReKIJrkARduU",
+  "notes_internal": "google_place_id:ChIJHdwDUcDfm4AReKIJrkARduU; founder review: snowboard rentals and demos",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Snow sports gear rentals and alpine ski and snowboard demos.",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "snowboard"
+  ]
  },
  {
   "name": "Tahoe Adventure Company",
@@ -9510,9 +10100,13 @@
   "rating_external": 4.8,
   "rating_external_count": 207,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJX18lP8pkmYARUAWMlFu8qbI",
+  "notes_internal": "google_place_id:ChIJX18lP8pkmYARUAWMlFu8qbI; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Adventure Rentals",
@@ -9529,7 +10123,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJKR1iarZlmYARNAKF-L4g-ro",
@@ -9562,9 +10156,12 @@
   "rating_external": 4.3,
   "rating_external_count": 56,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJL7wHjix7mYARRPWyDUf7lI0",
+  "notes_internal": "google_place_id:ChIJL7wHjix7mYARRPWyDUf7lI0; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "jet_ski"
+  ]
  },
  {
   "name": "Tahoe Beach Company",
@@ -9592,9 +10189,14 @@
   "rating_external": 4.7,
   "rating_external_count": 43,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ29aIoVN7mYARNwACnbaZVTY",
+  "notes_internal": "google_place_id:ChIJ29aIoVN7mYARNwACnbaZVTY; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Bike Company",
@@ -9624,9 +10226,13 @@
   "rating_external": 4.8,
   "rating_external_count": 162,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLwHVPcePmYARl-yj-NLAYTY",
+  "notes_internal": "google_place_id:ChIJLwHVPcePmYARl-yj-NLAYTY; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "road_bike"
+  ]
  },
  {
   "name": "Tahoe Blue Boat Rentals",
@@ -9654,9 +10260,12 @@
   "rating_external": 4.9,
   "rating_external_count": 85,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJlbrt8Q9wmYARYruixzJunF0",
+  "notes_internal": "google_place_id:ChIJlbrt8Q9wmYARYruixzJunF0; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat"
+  ]
  },
  {
   "name": "Tahoe City Kayak & Paddleboard Beach Rental",
@@ -9684,9 +10293,13 @@
   "rating_external": 4.4,
   "rating_external_count": 29,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJzyZuiZl9mYARNyV5iLZ93n4",
+  "notes_internal": "google_place_id:ChIJzyZuiZl9mYARNyV5iLZ93n4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe City Kayak and Paddleboard Shop",
@@ -9714,9 +10327,14 @@
   "rating_external": 4.7,
   "rating_external_count": 200,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJi0eh0nV9mYARmCTlc5MfYik",
+  "notes_internal": "google_place_id:ChIJi0eh0nV9mYARmCTlc5MfYik; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Dave's Boardshop",
@@ -9738,16 +10356,15 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
-   "snow_sports",
-   "water_sports"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 45,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJc-6tR-yOmYARNxSXTGmhdsQ",
+  "notes_internal": "google_place_id:ChIJc-6tR-yOmYARNxSXTGmhdsQ; founder_verified; no water sports rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14"
  },
  {
   "name": "Tahoe Dave's Skis & Boards",
@@ -9832,12 +10449,17 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 47,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYbJ4aiXem4ARgHw0k0IyyiU",
+  "notes_internal": "google_place_id:ChIJYbJ4aiXem4ARgHw0k0IyyiU; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "dirt_bike",
+   "snowmobile",
+   "utv"
+  ]
  },
  {
   "name": "Tahoe Dive Center",
@@ -9865,9 +10487,12 @@
   "rating_external": 4.6,
   "rating_external_count": 37,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJF11O4DebmYARdLerJ-Le_s8",
+  "notes_internal": "google_place_id:ChIJF11O4DebmYARdLerJ-Le_s8; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wetsuit"
+  ]
  },
  {
   "name": "Tahoe Donner Beach Club Marina",
@@ -9895,9 +10520,13 @@
   "rating_external": 4.6,
   "rating_external_count": 156,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJWyo7Xhvem4AR9Udo4zpnGtQ",
+  "notes_internal": "google_place_id:ChIJWyo7Xhvem4AR9Udo4zpnGtQ; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Donner Bikeworks",
@@ -9927,9 +10556,15 @@
   "rating_external": 4.9,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJZ37pmCrnm4ARZSL7KmoQYw8",
+  "notes_internal": "google_place_id:ChIJZ37pmCrnm4ARZSL7KmoQYw8; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb",
+   "gravel_bike",
+   "road_bike"
+  ]
  },
  {
   "name": "Tahoe Ebikes",
@@ -9959,9 +10594,13 @@
   "rating_external": 4.8,
   "rating_external_count": 51,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ_0j1GpdlmYARXQTkQJyQp44",
+  "notes_internal": "google_place_id:ChIJ_0j1GpdlmYARXQTkQJyQp44; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb"
+  ]
  },
  {
   "name": "Tahoe Electric Bike Rental",
@@ -9989,9 +10628,12 @@
   "rating_external": 4.9,
   "rating_external_count": 28,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYztGswQ_mYAR-1DoiY39h3s",
+  "notes_internal": "google_place_id:ChIJYztGswQ_mYAR-1DoiY39h3s; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
   "name": "Tahoe Event Rentals",
@@ -10012,16 +10654,14 @@
    "sat": "Closed",
    "sun": "Closed"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 68,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJBbLkaLqbmYARbFRTUkYG8oI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; event rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Tahoe Family Adventures",
@@ -10046,12 +10686,15 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 3.0,
+  "rating_external": 3,
   "rating_external_count": 76,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJZRK_PHNlmYARCC9Jif-vstA",
+  "notes_internal": "google_place_id:ChIJZRK_PHNlmYARCC9Jif-vstA; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "snowmobile"
+  ]
  },
  {
   "name": "Tahoe Family Adventures",
@@ -10076,7 +10719,7 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 2.0,
+  "rating_external": 2,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJCdoQFwBfmYARXNSvg1ibWZ4",
@@ -10104,15 +10747,16 @@
   },
   "categories": [
    "rock_climbing",
+   "snow_sports",
    "water_sports"
   ],
   "photos": null,
   "rating_external": 3.9,
   "rating_external_count": 38,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJF3o2J4SamYARi10rkwciOeI",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJF3o2J4SamYARi10rkwciOeI; founder_verified; guided adventures only — no standalone gear rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14"
  },
  {
   "name": "Tahoe Jet Boats",
@@ -10142,7 +10786,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJXXG-t3R9mYARhlQxfLkRAss",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Tahoe Luxury",
@@ -10167,12 +10817,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJg2bLLoQLmYAR4zouuu4xk_8",
+  "notes_internal": "google_place_id:ChIJg2bLLoQLmYAR4zouuu4xk_8; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski"
+  ]
  },
  {
   "name": "Tahoe Marine Supply",
@@ -10200,9 +10854,13 @@
   "rating_external": 4.3,
   "rating_external_count": 13,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJH4LWWHR9mYARuTdZVvZ9k_c",
+  "notes_internal": "google_place_id:ChIJH4LWWHR9mYARuTdZVvZ9k_c; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Tahoe Mountain Life",
@@ -10227,12 +10885,12 @@
    "snow_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 8,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJw8H_AiLfm4AREgoERMP4snM",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJw8H_AiLfm4AREgoERMP4snM; founder_verified; no gear rentals — retail/events space under Tahoe Mountain Sports",
+  "is_active": false,
+  "last_verified": "2026-06-14"
  },
  {
   "name": "Tahoe Mountain Sports",
@@ -10263,9 +10921,18 @@
   "rating_external": 4.8,
   "rating_external_count": 162,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKZmdmSt7mYARgLmE0wQXf9c",
+  "notes_internal": "google_place_id:ChIJKZmdmSt7mYARgLmE0wQXf9c; founder_verified; snow/camp/climb rentals plus tri wetsuit",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Rentals for snow sports, backpacking/camping, hiking, rock climbing, and triathlon wetsuits.",
+  "subcategories": [
+   "backpack",
+   "cooking",
+   "harness",
+   "rope_hardware",
+   "sleep_system",
+   "tent"
+  ]
  },
  {
   "name": "Tahoe XC",
@@ -10277,21 +10944,22 @@
   "lng": -120.1039,
   "phone": "(530) 583-5475",
   "website": "https://tahoexc.org/",
-  "description": "Cross-country ski and snowshoe rentals at Dollar Point — home of the historic Tahoe Nordic Center.",
+  "description": "Cross-country ski, snowshoe, and mountain bike rentals at the Tahoe Nordic Center.",
   "hours": null,
   "categories": [
+   "mountain_biking",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "founder_verified; xc/nordic rentals — replaces mis-tagged vacation listing near Nordic Center",
+  "notes_internal": "founder_verified; snow sports and mountain bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14"
  },
  {
-  "name": "Tahoe Multisport - E-Bike Kayak Stand Up Paddle Board - Rentals & Tours",
+  "name": "Tahoe Multisport",
   "slug": "tahoe-multisport-e-bike-kayak-stand-up-paddle-board-rentals-tours",
   "address": "UPPER LOT, 797 Southwood Blvd unit #10, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -10319,7 +10987,12 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJbYhgbxtwmYAR_mdxFLQOQZE",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Outdoor Adventures",
@@ -10346,12 +11019,13 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 337,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJn84-xYuPmYAR0Q_y8E3-ejo",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJn84-xYuPmYAR0Q_y8E3-ejo; founder review: rentals only paired with guided experiences — deactivated for now, revisit with guided-tours section",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Tahoe Outdoor Adventures and Rentals",
@@ -10368,7 +11042,7 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJvwYAcgCPmYARLz32N5pYwvg",
@@ -10393,9 +11067,10 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJWxq69W1bwI8Rcrn6-Ug_SAw",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJWxq69W1bwI8Rcrn6-Ug_SAw; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Tahoe Paddle & Oar",
@@ -10423,9 +11098,13 @@
   "rating_external": 4.8,
   "rating_external_count": 120,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJG6LalSx7mYARRoeW-38NlmA",
+  "notes_internal": "google_place_id:ChIJG6LalSx7mYARRoeW-38NlmA; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Paddle & Oar: Rentals",
@@ -10453,12 +11132,16 @@
   "rating_external": 3.7,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLy5Db-t7mYARsxOK-nAhXm0",
+  "notes_internal": "google_place_id:ChIJLy5Db-t7mYARsxOK-nAhXm0; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
-  "name": "Tahoe Paddle Sports - Sand Harbor Clear Kayaking",
+  "name": "Tahoe Paddle Sports — Sand Harbor",
   "slug": "tahoe-paddle-sports-sand-harbor-clear-kayaking",
   "address": "201 Village Blvd, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -10477,18 +11160,24 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "water_sports"
+   "water_sports",
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 55,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJySseGz9xmYARtuM4OmGK1G4",
+  "notes_internal": "google_place_id:ChIJySseGz9xmYARtuM4OmGK1G4; founder_verified; kayak and e-bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Kayak rentals and e-bike rentals at Sand Harbor.",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
-  "name": "Tahoe Paddle Sports Clear Kayak Adventures near South Lake Tahoe, CA",
+  "name": "Tahoe Paddle Sports",
   "slug": "tahoe-paddle-sports-clear-kayak-adventures-near-south-lake-tahoe-ca",
   "address": "177 Hwy 50, Stateline, NV 89449, USA",
   "city": "Stateline",
@@ -10507,15 +11196,21 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "water_sports"
+   "water_sports",
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 91,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJcZ34aSbmYARL8AlRsXZDuU",
+  "notes_internal": "google_place_id:ChIJJcZ34aSbmYARL8AlRsXZDuU; founder_verified; kayak and e-bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Kayak rentals and e-bike rentals near South Lake Tahoe.",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Paradise Boat Rentals",
@@ -10540,12 +11235,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 14,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJb-b8_CxxmYAR8pbPESGXLFM",
+  "notes_internal": "google_place_id:ChIJb-b8_CxxmYAR8pbPESGXLFM; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard"
+  ]
  },
  {
   "name": "Tahoe Sled School",
@@ -10570,12 +11269,15 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 15,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ1YNUPVyhmYARFTF88U7uXd0",
+  "notes_internal": "google_place_id:ChIJ1YNUPVyhmYARFTF88U7uXd0; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "snowmobile"
+  ]
  },
  {
   "name": "Tahoe Snowbike Rental",
@@ -10601,12 +11303,15 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 35,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJ0Wml7nnm4ARQzYJGGA5H-Y",
+  "notes_internal": "google_place_id:ChIJJ0Wml7nnm4ARQzYJGGA5H-Y; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "dirt_bike"
+  ]
  },
  {
   "name": "Tahoe Sports Hub",
@@ -10629,6 +11334,7 @@
   },
   "categories": [
    "camping",
+   "electric_transport",
    "mountain_biking",
    "rock_climbing",
    "snow_sports",
@@ -10638,9 +11344,16 @@
   "rating_external": 4.5,
   "rating_external_count": 374,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w",
+  "notes_internal": "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w; founder_verified; e-bike rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Outdoor gear rentals including e-bikes, snow sports, camping, climbing, and water sports.",
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "paddleboard",
+   "raft"
+  ]
  },
  {
   "name": "Tahoe Sports Ltd.",
@@ -10674,9 +11387,25 @@
   "rating_external": 4.3,
   "rating_external_count": 275,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE",
+  "notes_internal": "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE; founder_verified; seasonal snow sports leases",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Outdoor gear rentals plus seasonal snow sports gear leases.",
+  "offers_season_lease": true,
+  "subcategories": [
+   "climbing_shoes",
+   "cooking",
+   "crash_pad",
+   "e_bike_city",
+   "gravel_bike",
+   "harness",
+   "kayak",
+   "kids_bike",
+   "onewheel",
+   "road_bike",
+   "rope_hardware",
+   "tent"
+  ]
  },
  {
   "name": "Tahoe Sports Ltd. Kayak & Fish",
@@ -10704,9 +11433,12 @@
   "rating_external": 3.7,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ96DFVwORmYARXV1Vb5U0MyM",
+  "notes_internal": "google_place_id:ChIJ96DFVwORmYARXV1Vb5U0MyM; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak"
+  ]
  },
  {
   "name": "Tahoe Sports Ski Run Boat Company",
@@ -10731,12 +11463,20 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 658,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ97RGLQmQmYAR4yblqbMOXbI",
+  "notes_internal": "google_place_id:ChIJ97RGLQmQmYAR4yblqbMOXbI; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "canoe",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Tahoe Sports Tahoe Keys Boat Rental",
@@ -10764,12 +11504,19 @@
   "rating_external": 4.1,
   "rating_external_count": 357,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ0_Pg0Y2PmYARaruB5PP2M5Q",
+  "notes_internal": "google_place_id:ChIJ0_Pg0Y2PmYARaruB5PP2M5Q; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
-  "name": "Tahoe Toys & Adventures LLC",
+  "name": "Tahoe Toys & Adventures",
   "slug": "tahoe-toys-adventures-llc",
   "address": "308 Dorla Ct, Stateline, NV 89449, USA",
   "city": "Stateline",
@@ -10796,7 +11543,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJDaVqy8ObmYARzHjV519rv7c",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Tahoe Trailer Rental",
@@ -10852,9 +11599,9 @@
   "rating_external": 3.8,
   "rating_external_count": 117,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJH7RaLsePmYARwBArVqhm0CM",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJH7RaLsePmYARwBArVqhm0CM; founder_verified; used gear retail only — no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14"
  },
  {
   "name": "Tahoe Via Ferrata",
@@ -10909,15 +11656,18 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJRcfOInJ9mYARp_5N2hBFBm4",
+  "notes_internal": "google_place_id:ChIJRcfOInJ9mYARp_5N2hBFBm4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wakeboard"
+  ]
  },
  {
-  "name": "Tahoe Wake Tubing Boat Rentals",
+  "name": "Lake Tahoe Luxury Waketubing",
   "slug": "tahoe-wake-tubing-boat-rentals",
   "address": "1046 Al Tahoe Blvd #18969, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -10939,12 +11689,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJl8-H1OGPmYARrRJCYDUCkE4",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "wakeboard"
+  ]
  },
  {
   "name": "Tahoe Waterman's Landing",
@@ -10966,16 +11720,20 @@
    "sun": "7:30 AM – 3:00 PM"
   },
   "categories": [
-   "snow_sports",
    "water_sports"
   ],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 326,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJpWVWCE1jmYARGULCKQg4sJ0",
+  "notes_internal": "google_place_id:ChIJpWVWCE1jmYARGULCKQg4sJ0; founder_verified; no snow sports rentals",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Tahoe Waves Boat Rental",
@@ -11003,9 +11761,16 @@
   "rating_external": 4.9,
   "rating_external_count": 18,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ16lWevLhm4ARS1iyzJGWud4",
+  "notes_internal": "google_place_id:ChIJ16lWevLhm4ARS1iyzJGWud4; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
   "name": "Tahoe Whitewater Tours - Truckee River",
@@ -11033,12 +11798,13 @@
   "rating_external": 4.9,
   "rating_external_count": 167,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJY_QMc5Tfm4AR5_WhguVRINs",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJY_QMc5Tfm4AR5_WhguVRINs; website_verified; deactivated — guided whitewater tours — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
-  "name": "TahoeJetBoats",
+  "name": "Tahoe Jet Boats",
   "slug": "tahoejetboats",
   "address": "930 Tahoe Blvd #802, Incline Village, NV 89451, USA",
   "city": "Incline Village",
@@ -11065,10 +11831,16 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJc7xrQz1wmYARNoqosr-SE3U",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
-  "name": "TahoeJetBoats",
+  "name": "Tahoe Jet Boats",
   "slug": "tahoejetboats-iqpkeslm",
   "address": "1046 Al Tahoe Blvd #18969, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -11095,7 +11867,13 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJl8-H1OGPmYARSzMIQpKESLM",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "paddleboard",
+   "wakeboard"
+  ]
  },
  {
   "name": "Technical Equipment Cleaners",
@@ -11123,9 +11901,10 @@
   "rating_external": 4.9,
   "rating_external_count": 81,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJe_1ZJbjfm4ARDr_pEqcpRzc",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "website_verified; deactivated — equipment cleaning service — not a rental operator",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "The BackCountry",
@@ -11147,19 +11926,24 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "camping",
+   "electric_transport",
    "mountain_biking",
    "road_cycling",
-   "rock_climbing",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.9,
   "rating_external_count": 1581,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJcWCd2jPem4ARMrf4Ao6HBUw",
+  "notes_internal": "google_place_id:ChIJcWCd2jPem4ARMrf4Ao6HBUw; founder_verified; e-transport rentals; no camping or rock climbing rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "description": "Bike and snow sports rentals plus electric transportation rentals.",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb",
+   "kids_bike"
+  ]
  },
  {
   "name": "The Biggest Little ATV/UTV Shop",
@@ -11184,12 +11968,16 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 56,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJObtsOwQ_mYARHt237sJUrG4",
+  "notes_internal": "google_place_id:ChIJObtsOwQ_mYARHt237sJUrG4; scan_verified; off_road gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "utv"
+  ]
  },
  {
   "name": "The Bike Shop",
@@ -11217,9 +12005,10 @@
   "rating_external": 4.6,
   "rating_external_count": 9,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJCcyG3hpwmYARrEh-q3-C4t0",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJCcyG3hpwmYARrEh-q3-C4t0; website_verified; deactivated — founder review: business could not be found",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "The Bounce house Guy",
@@ -11240,16 +12029,14 @@
    "sat": "6:00 AM – 1:00 AM",
    "sun": "6:00 AM – 1:00 AM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 20,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJw4IO6vA_mYARJeIG0ONTalw",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; bounce house party rental — not outdoor gear",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "The Golf Mart",
@@ -11270,16 +12057,14 @@
    "sat": "9:00 AM – 6:00 PM",
    "sun": "10:00 AM – 5:00 PM"
   },
-  "categories": [
-   "camping"
-  ],
+  "categories": [],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 189,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJRaNS4XdAmYARaEj_jq-1BFY",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; golf retail — not outdoor gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-13"
  },
  {
   "name": "The Home Depot",
@@ -11307,9 +12092,12 @@
   "rating_external": 4.1,
   "rating_external_count": 2196,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ4VTFvZ44mYARShou2cYdePI",
+  "notes_internal": "google_place_id:ChIJ4VTFvZ44mYARShou2cYdePI; scan_verified; rock_climbing gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "rope_hardware"
+  ]
  },
  {
   "name": "The Pits",
@@ -11329,9 +12117,10 @@
   "rating_external": 4.8,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJzxqSeelfmYAR6ORBbEfv2_g",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJzxqSeelfmYAR6ORBbEfv2_g; website_verified; deactivated — founder review: a place not a business, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "The Sierra Sled Shop",
@@ -11356,12 +12145,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJv5J2cDjfm4ARNZ2sm6gEQ2Y",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "google_place_id:ChIJv5J2cDjfm4ARNZ2sm6gEQ2Y; website_verified; deactivated — founder review: repair shop, no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "The Ski Renter",
@@ -11413,19 +12203,19 @@
    "sun": "Closed"
   },
   "categories": [
-   "rock_climbing",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.5,
   "rating_external_count": 152,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJWWOPcw-QmYARhEoevVFqLRs",
+  "notes_internal": "google_place_id:ChIJWWOPcw-QmYARhEoevVFqLRs; founder_verified; snow sports rentals plus demos; no rock climbing rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Snow sports gear rentals and alpine ski and snowboard demos."
  },
  {
-  "name": "Tom's Snowmobiles & Services",
+  "name": "Tom's Snowmobile & Service",
   "slug": "toms-snowmobiles-services",
   "address": "630 S Lincoln St, Sierraville, CA 96126, USA",
   "city": "Sierraville",
@@ -11452,7 +12242,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJO6xfu5p2nIARSfmYM7MSauQ",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "Trailer Hitches at U-Haul",
@@ -11475,7 +12265,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 3.0,
+  "rating_external": 3,
   "rating_external_count": 5,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJrx_NKfM5mYARya8MRhu7Mpw",
@@ -11559,7 +12349,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 3,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJMzSOhFkVmYAR_YugaKkPhEE",
@@ -11587,7 +12377,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 3.0,
+  "rating_external": 3,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ73RSYqELmYAR-XtCYYnXzuo",
@@ -11699,7 +12489,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "Tributary Whitewater Tours - Truckee River Outpost (Guided Rafting Trips)",
+  "name": "Tributary Whitewater Tours",
   "slug": "tributary-whitewater-tours-truckee-river-outpost-guided-rafting-trips",
   "address": "10068 Hirschdale Rd, Truckee, CA 96161, USA",
   "city": "Truckee",
@@ -11726,7 +12516,10 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJPSpYtzPem4AR8LInuHOEDeU",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "raft"
+  ]
  },
  {
   "name": "Truckee Bike Park",
@@ -11816,9 +12609,13 @@
   "rating_external": 4.4,
   "rating_external_count": 48,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJG08rYgJ9mYARK7QUK0ob7SE",
+  "notes_internal": "google_place_id:ChIJG08rYgJ9mYARK7QUK0ob7SE; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kids_bike"
+  ]
  },
  {
   "name": "Truckee River Raft Co.",
@@ -11928,9 +12725,15 @@
   "rating_external": 4.5,
   "rating_external_count": 25,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJRba-n9pBmYARi1LS3KoTYOg",
+  "notes_internal": "google_place_id:ChIJRba-n9pBmYARi1LS3KoTYOg; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "canoe",
+   "kayak",
+   "paddleboard",
+   "raft"
+  ]
  },
  {
   "name": "TrueNorth - Northstar Village",
@@ -11958,9 +12761,12 @@
   "rating_external": 3.8,
   "rating_external_count": 50,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJy_eG4DBimYARKG5IS_ziWW4",
+  "notes_internal": "google_place_id:ChIJy_eG4DBimYARKG5IS_ziWW4; founder_verified; demo only — no rentals",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "description": "Alpine ski and snowboard demos only — no gear rentals.",
+  "offers_rental": false,
+  "offers_demo": true
  },
  {
   "name": "TrueNorth - Ritz Carlton",
@@ -11988,9 +12794,16 @@
   "rating_external": 4.7,
   "rating_external_count": 12,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJfTRnuRxjmYARfCI5ES3Jhes",
+  "notes_internal": "google_place_id:ChIJfTRnuRxjmYARfCI5ES3Jhes; founder review: Epic Mountain Rentals booking-only site; Google shows rent+demo",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-14",
+  "description": "Snow sports gear rentals and alpine ski and snowboard demos.",
+  "offers_rental": true,
+  "offers_demo": true,
+  "subcategories": [
+   "alpine_ski",
+   "snowboard"
+  ]
  },
  {
   "name": "U-Box at U-Haul",
@@ -12013,7 +12826,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ2ZzCVFoVmYAReWASYj5ZlCE",
@@ -12069,7 +12882,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 25,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJz0bZEPznmIARKuYPEkD6Q5I",
@@ -12097,7 +12910,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtR7Z9xNHmYARsLjJCbY3IUc",
@@ -12161,7 +12974,7 @@
   "last_verified": "2026-06-07"
  },
  {
-  "name": "UTV ADDICTION",
+  "name": "UTV Addiction",
   "slug": "utv-addiction",
   "address": "2175 Market St A, Reno, NV 89502, USA",
   "city": "Reno",
@@ -12188,7 +13001,7 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJwY4uJahAmYAR20WhysQC8GM",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  },
  {
   "name": "United Rentals",
@@ -12242,12 +13055,13 @@
    "rock_climbing"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 29,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYa4VWaPnm4ARDZV0frrN70w",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJYa4VWaPnm4ARDZV0frrN70w; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Uplyft Tahoe Jet Ski Rentals",
@@ -12272,12 +13086,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 33,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKWiUL7BlmYARCMYFwnzatRY",
+  "notes_internal": "google_place_id:ChIJKWiUL7BlmYARCMYFwnzatRY; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "jet_ski"
+  ]
  },
  {
   "name": "Uprising Paragliding",
@@ -12294,12 +13111,13 @@
    "aerial"
   ],
   "photos": null,
-  "rating_external": 3.0,
+  "rating_external": 3,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYSOKtIXfm4ARlQCAtnInFKo",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJYSOKtIXfm4ARlQCAtnInFKo; website_verified; deactivated — paragliding flights/lessons — not gear rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Utility Trailer Sales",
@@ -12357,9 +13175,10 @@
   "rating_external": 4.9,
   "rating_external_count": 252,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJCUzMMIpAmYARavO2I270_68",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJCUzMMIpAmYARavO2I270_68; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Village Ski Loft",
@@ -12381,15 +13200,26 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 302,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJaY2NIBtwmYARTpUYiTNrn8w",
+  "notes_internal": "google_place_id:ChIJaY2NIBtwmYARTpUYiTNrn8w; founder_verified; snow sports, mountain bikes, road bikes, and e-transport rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Snow sports, mountain bike, road bike, and electric transportation rentals.",
+  "subcategories": [
+   "e_bike_city",
+   "ebike_mtb",
+   "kids_bike",
+   "road_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Virginia City off road Experience",
@@ -12414,12 +13244,13 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 146,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJSd31rEIPmYARLDXTr9G-coI",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJSd31rEIPmYARLDXTr9G-coI; website_verified; deactivated — guided off-road experience — not equipment rental",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Vista Trail Bikes",
@@ -12446,12 +13277,18 @@
    "road_cycling"
   ],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 1779,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJxblwNxvmYARwEeMhNlwCmg",
+  "notes_internal": "google_place_id:ChIJJxblwNxvmYARwEeMhNlwCmg; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city",
+   "kids_bike",
+   "road_bike",
+   "trail_bike"
+  ]
  },
  {
   "name": "Watta Bike Shop",
@@ -12505,7 +13342,7 @@
   },
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 6,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJhagXR-Y-mYAR4EPCCuWcVl0",
@@ -12538,15 +13375,16 @@
   "rating_external": 4.3,
   "rating_external_count": 117,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ3W82Nlw_mYAR-vmmwEdDv7Q",
-  "is_active": true,
-  "last_verified": "2026-06-07"
+  "notes_internal": "website_verified; deactivated — boating retail chain — sells, does not rent",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "West Shore Sports",
   "slug": "west-shore-sports",
-  "address": "5395 W Lake Blvd, Homewood, CA 96141, USA",
-  "city": "Homewood",
+  "address": "5395 West Lake Boulevard, Tahoe City, CA 96141, USA",
+  "city": "Tahoe City",
   "state": "CA",
   "lat": 39.08114,
   "lng": -120.158204,
@@ -12562,8 +13400,8 @@
    "sun": "9:00 AM – 5:00 PM"
   },
   "categories": [
+   "electric_transport",
    "mountain_biking",
-   "off_road",
    "road_cycling",
    "snow_sports",
    "water_sports"
@@ -12572,14 +13410,23 @@
   "rating_external": 4.6,
   "rating_external_count": 112,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc",
+  "notes_internal": "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc; founder_verified; Homewood location; seasonal snow sports leases; no off-road or powersports rentals",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-14",
+  "offers_season_lease": true,
+  "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "kids_bike",
+   "paddleboard",
+   "road_bike"
+  ]
  },
  {
   "name": "West Shore Sports",
   "slug": "west-shore-sports-qmz5wvbk",
-  "address": "Ca State Park Rd, Tahoma, CA 96142, USA",
+  "address": "Sugar Pine Point State Park, North Side of Ehrman Mansion, Tahoma, CA 96142, USA",
   "city": "Tahoma",
   "state": "CA",
   "lat": 39.054543,
@@ -12596,15 +13443,63 @@
    "sun": "10:00 AM – 5:00 PM"
   },
   "categories": [
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling",
+   "snow_sports",
    "water_sports"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 16,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJQzRtOC2AmYARJIZqMz5Wvbk",
+  "notes_internal": "google_place_id:ChIJQzRtOC2AmYARJIZqMz5Wvbk; founder_verified; Sugar Pine Point location; seasonal snow sports leases; no off-road or powersports rentals",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
+  "offers_season_lease": true,
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "kids_bike",
+   "paddleboard",
+   "road_bike"
+  ]
+ },
+ {
+  "name": "West Shore Sports",
+  "slug": "west-shore-sports-sunnyside",
+  "address": "1785 West Lake Boulevard, Tahoe City, CA 96145, USA",
+  "city": "Tahoe City",
+  "state": "CA",
+  "lat": 39.14047,
+  "lng": -120.154782,
+  "phone": "(530) 583-9920",
+  "website": "http://www.westshoresports.com/",
+  "hours": null,
+  "categories": [
+   "electric_transport",
+   "mountain_biking",
+   "road_cycling",
+   "snow_sports",
+   "water_sports"
+  ],
+  "photos": null,
+  "rating_external": null,
+  "rating_external_count": null,
+  "inventory_sync_type": "manual",
+  "notes_internal": "founder_verified; Sunnyside location; seasonal snow sports leases; no off-road or powersports rentals",
+  "is_active": true,
+  "last_verified": "2026-06-14",
+  "offers_season_lease": true,
+  "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
+  "subcategories": [
+   "e_bike_city",
+   "kayak",
+   "kids_bike",
+   "paddleboard",
+   "road_bike"
+  ]
  },
  {
   "name": "Wetsuit Outlet",
@@ -12629,12 +13524,15 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 3.0,
+  "rating_external": 3,
   "rating_external_count": 2,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJMVZD8je9mYARn7oz3NB9fps",
+  "notes_internal": "google_place_id:ChIJMVZD8je9mYARn7oz3NB9fps; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "wetsuit"
+  ]
  },
  {
   "name": "Wheeler Car Rental",
@@ -12649,7 +13547,7 @@
   "hours": null,
   "categories": [],
   "photos": null,
-  "rating_external": 5.0,
+  "rating_external": 5,
   "rating_external_count": 93,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJtbUuN_BHmYARZ8tIEu1xl9M",
@@ -12671,12 +13569,16 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 176,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJgTYWEC17mYARj2AvyfF7434",
+  "notes_internal": "google_place_id:ChIJgTYWEC17mYARj2AvyfF7434; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "kayak",
+   "paddleboard"
+  ]
  },
  {
   "name": "Wilderbike",
@@ -12704,9 +13606,10 @@
   "rating_external": 4.4,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJK2lJSmo_mYARDD2srSNJJWQ",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJK2lJSmo_mYARDD2srSNJJWQ; website_verified; deactivated — founder review: no rentals",
+  "is_active": false,
+  "last_verified": "2026-06-14",
+  "offers_rental": false
  },
  {
   "name": "Winter Wonderland Ski Shop",
@@ -12761,7 +13664,7 @@
    "water_sports"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 33,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJkQ1gOu-amYAR0I8pSTnlfJ8",
@@ -12794,12 +13697,20 @@
   "rating_external": 4.6,
   "rating_external_count": 1136,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJq6qqnhebmYARgppW84gBCww",
+  "notes_internal": "google_place_id:ChIJq6qqnhebmYARgppW84gBCww; scan_verified; water_sports gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "boat",
+   "jet_ski",
+   "kayak",
+   "paddleboard",
+   "wakeboard",
+   "wetsuit"
+  ]
  },
  {
-  "name": "Zephyr Cove Snowmobiling Tours",
+  "name": "Zephyr Cove Snowmobile Tours",
   "slug": "zephyr-cove-snowmobiling-tours",
   "address": "760 US-50, Zephyr Cove, NV 89448, USA",
   "city": "Zephyr Cove",
@@ -12821,12 +13732,17 @@
    "off_road"
   ],
   "photos": null,
-  "rating_external": 4.0,
+  "rating_external": 4,
   "rating_external_count": 51,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJ7dvAtqubmYARB5Qvm7DHvUE",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "atv",
+   "snowmobile",
+   "utv"
+  ]
  },
  {
   "name": "evo Tahoe City",
@@ -12857,12 +13773,15 @@
   "rating_external": 4.7,
   "rating_external_count": 31,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJea4sRnh9mYARc91N6W9sWDk",
+  "notes_internal": "google_place_id:ChIJea4sRnh9mYARc91N6W9sWDk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-14",
+  "subcategories": [
+   "e_bike_city"
+  ]
  },
  {
-  "name": "tahoeparadiseboatrental",
+  "name": "Tahoe Paradise Boat Rentals",
   "slug": "tahoeparadiseboatrental",
   "address": "2183 Lucca Ln, Sparks, NV 89434, USA",
   "city": "Sparks",
@@ -12889,6 +13808,6 @@
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJgRu3rMQ_mYARkVW9PH_qKV4",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-13"
  }
 ]

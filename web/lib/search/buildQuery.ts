@@ -4,13 +4,15 @@
 
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Database, SkillLevel } from "@/lib/supabase/types";
+import { applyAcquisitionToFilters } from "@/lib/search/acquisition-search";
 
 export type PriceTier =
   | "hourly"
   | "half_day"
   | "full_day"
   | "multi_day"
-  | "weekly";
+  | "weekly"
+  | "season";
 
 export const PRICE_TIER_COLUMNS: Record<PriceTier, string> = {
   hourly: "price_hourly",
@@ -18,6 +20,7 @@ export const PRICE_TIER_COLUMNS: Record<PriceTier, string> = {
   full_day: "price_full_day",
   multi_day: "price_multi_day",
   weekly: "price_weekly",
+  season: "price_weekly",
 };
 
 export const PRICE_TIER_LABELS: Record<PriceTier, string> = {
@@ -26,6 +29,7 @@ export const PRICE_TIER_LABELS: Record<PriceTier, string> = {
   full_day: "Full day",
   multi_day: "Multi-day (per day)",
   weekly: "Weekly",
+  season: "Full season",
 };
 
 export type SortOption =
@@ -157,8 +161,8 @@ export function filtersToSearchParams(filters: Filters): URLSearchParams {
   return params;
 }
 
-const OPERATOR_SUMMARY =
-  "id, name, slug, city, state, lat, lng, phone, website, booking_url, rating_external, rating_external_count" as const;
+export const OPERATOR_SUMMARY =
+  "id, name, slug, city, state, lat, lng, phone, website, booking_url, rating_external, rating_external_count, offers_demo, offers_rental" as const;
 
 export const EQUIPMENT_WITH_OPERATOR = `*, operators!inner(${OPERATOR_SUMMARY})` as const;
 
@@ -174,34 +178,38 @@ export function buildEquipmentQuery(
   db: SupabaseClient<Database>,
   filters: Filters,
 ) {
+  const effective = applyAcquisitionToFilters(filters);
+
   let query = db
     .from("equipment")
     .select(EQUIPMENT_WITH_OPERATOR)
     .eq("is_active", true);
 
-  if (filters.categories?.length) query = query.in("category", filters.categories);
-  if (filters.subcategories?.length)
-    query = query.in("subcategory", filters.subcategories);
-  if (filters.skill?.length)
-    query = query.in("skill_level", [...filters.skill, "all"]);
-  if (filters.brands?.length) query = query.in("brand", filters.brands);
-  if (filters.operatorIds?.length)
-    query = query.in("operator_id", filters.operatorIds);
-  if (filters.delivery) query = query.eq("operators.offers_delivery", true);
-  if (filters.hasPhoto) query = query.not("image_url", "is", null);
-  if (filters.verifiedRecently) {
+  if (effective.categories?.length) query = query.in("category", effective.categories);
+  if (effective.subcategories?.length)
+    query = query.in("subcategory", effective.subcategories);
+  if (effective.skill?.length)
+    query = query.in("skill_level", [...effective.skill, "all"]);
+  if (effective.brands?.length) query = query.in("brand", effective.brands);
+  if (effective.operatorIds?.length)
+    query = query.in("operator_id", effective.operatorIds);
+  if (effective.delivery) query = query.eq("operators.offers_delivery", true);
+  if (effective.hasPhoto) query = query.not("image_url", "is", null);
+  if (effective.verifiedRecently) {
     const cutoff = new Date(Date.now() - 90 * 24 * 3600 * 1000)
       .toISOString()
       .slice(0, 10);
     query = query.gte("last_verified", cutoff);
   }
 
-  const tierColumn = PRICE_TIER_COLUMNS[filters.tier ?? "full_day"];
-  if (filters.priceMin !== undefined) query = query.gte(tierColumn, filters.priceMin);
-  if (filters.priceMax !== undefined) query = query.lte(tierColumn, filters.priceMax);
+  const tierColumn = PRICE_TIER_COLUMNS[effective.tier ?? "full_day"];
+  if (effective.tier !== "season") {
+    if (effective.priceMin !== undefined) query = query.gte(tierColumn, effective.priceMin);
+    if (effective.priceMax !== undefined) query = query.lte(tierColumn, effective.priceMax);
+  }
 
-  if (filters.q) {
-    const term = escapeLike(filters.q);
+  if (effective.q) {
+    const term = escapeLike(effective.q);
     if (term) {
       query = query.or(
         `name.ilike.%${term}%,brand.ilike.%${term}%,model.ilike.%${term}%,category.ilike.%${term}%,subcategory.ilike.%${term}%`,
@@ -209,7 +217,7 @@ export function buildEquipmentQuery(
     }
   }
 
-  switch (resolveSort(filters)) {
+  switch (resolveSort(effective)) {
     case "price_asc":
       query = query.order(tierColumn, { ascending: true, nullsFirst: false });
       break;
@@ -244,7 +252,7 @@ export function buildOperatorSearchQuery(
     .from("operators")
     .select(OPERATOR_SUMMARY)
     .eq("is_active", true)
-    .ilike("name", `%${term}%`);
+    .or(`name.ilike.%${term}%,description.ilike.%${term}%`);
   if (filters.delivery) query = query.eq("offers_delivery", true);
-  return query.limit(8);
+  return query.limit(20);
 }

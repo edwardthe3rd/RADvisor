@@ -89,6 +89,29 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
             "google_place_id:ChIJfwaAbXZ9mYARDUP7ClnaRuk; alpine ski demos only — no rentals"
         ),
     },
+    "andersons-bicycle-rental": {
+        "categories": ["electric_transport", "mountain_biking", "road_cycling"],
+        "notes_internal": (
+            "google_place_id:ChIJD5DUGp-PmYARqD8tvPx1aHE; "
+            "founder_verified; no off-road or powersports rentals"
+        ),
+    },
+    "another-bike-shop-reno": {
+        "categories": ["electric_transport", "mountain_biking", "road_cycling"],
+        "notes_internal": (
+            "google_place_id:ChIJ87o1B6NFmYARWznGWV_cHh8; "
+            "founder_verified; no off-road or powersports rentals"
+        ),
+    },
+    "bicycle-service-center": {
+        "categories": ["burning_man_bikes"],
+        "description": "Burning Man playa bike rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJTXYPIfxHmYARV7PRV5mpUq8; "
+            "founder_verified; Burning Man bike rentals only — "
+            "no e-transport or mountain biking rentals"
+        ),
+    },
     "black-tie-ski-rentals-of-north-lake-tahoe": {
         "offers_delivery": True,
     },
@@ -242,10 +265,10 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
     },
     "tahoe-xc": {
         "name": "Tahoe XC",
-        "categories": ["snow_sports"],
+        "categories": ["mountain_biking", "snow_sports"],
         "description": (
-            "Cross-country ski and snowshoe rentals at Dollar Point — "
-            "home of the historic Tahoe Nordic Center."
+            "Cross-country ski, snowshoe, and mountain bike rentals at the "
+            "Tahoe Nordic Center."
         ),
         "phone": "(530) 583-5475",
         "website": "https://tahoexc.org/",
@@ -255,8 +278,7 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
         "lat": 39.1937,
         "lng": -120.1039,
         "notes_internal": (
-            "founder_verified; xc/nordic rentals — replaces mis-tagged vacation "
-            "listing near Nordic Center"
+            "founder_verified; snow sports and mountain bike rentals"
         ),
     },
     "heavenly-sports-marriott": {
@@ -345,6 +367,285 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
             "snow and foil rentals; lift_foils_dealer"
         ),
     },
+    "rmu-truckee-ski-shop": {
+        "name": "RMU Truckee Ski Shop (Demo Only)",
+        "categories": ["snow_sports", "mountain_biking"],
+        "description": "Alpine ski and bike demos only — no gear rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJN6x_Hdvfm4ARs2OsVqqpEyw; "
+            "snow/bike demos only — no rentals; google_maps_services"
+        ),
+    },
+    "gear-hut": {
+        "categories": ["camping"],
+        "description": (
+            "Consignment retail plus bear canister rentals for backpacking and camping."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJOZet7oxBmYARFkEseucIW5Q; "
+            "founder_verified; bear bin rentals"
+        ),
+    },
+    "tahoe-mountain-sports": {
+        "categories": ["camping", "rock_climbing", "snow_sports", "water_sports"],
+        "description": (
+            "Rentals for snow sports, backpacking/camping, hiking, rock climbing, "
+            "and triathlon wetsuits."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJKZmdmSt7mYARgLmE0wQXf9c; "
+            "founder_verified; snow/camp/climb + tri wetsuit"
+        ),
+    },
+    "mountain-hardware-sports": {
+        "categories": ["snow_sports"],
+        "description": "Hardware and sporting goods retail plus snowshoe rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJEX5qpzPem4AR2kiYG4noB9Q; "
+            "founder_verified; snowshoe rentals"
+        ),
+    },
+    "tahoe-paddle-sports-sand-harbor-clear-kayaking": {
+        "categories": ["water_sports", "mountain_biking"],
+        "description": "Kayak rentals and e-bike rentals at Sand Harbor.",
+        "notes_internal": "founder_verified; kayak and e-bike rentals",
+    },
+    "tahoe-paddle-sports-clear-kayak-adventures-near-south-lake-tahoe-ca": {
+        "categories": ["water_sports", "mountain_biking"],
+        "description": "Kayak rentals and e-bike rentals near South Lake Tahoe.",
+        "notes_internal": "founder_verified; kayak and e-bike rentals",
+    },
+    "west-shore-sports-qmz5wvbk": {
+        "is_active": True,
+        "categories": [
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "snow_sports",
+            "water_sports",
+        ],
+        "offers_season_lease": True,
+        "address": "Sugar Pine Point State Park, North Side of Ehrman Mansion, Tahoma, CA 96142, USA",
+        "description": (
+            "Outdoor gear rentals including snow sports with full-season leases, "
+            "mountain and road bikes, water sports, and electric transportation."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJQzRtOC2AmYARJIZqMz5Wvbk; "
+            "founder_verified; Sugar Pine Point location; "
+            "seasonal snow sports leases; no off-road or powersports rentals"
+        ),
+    },
+    "west-shore-sports": {
+        "categories": [
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "snow_sports",
+            "water_sports",
+        ],
+        "offers_season_lease": True,
+        "address": "5395 West Lake Boulevard, Tahoe City, CA 96141, USA",
+        "city": "Tahoe City",
+        "description": (
+            "Outdoor gear rentals including snow sports with full-season leases, "
+            "mountain and road bikes, water sports, and electric transportation."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc; "
+            "founder_verified; Homewood location; "
+            "seasonal snow sports leases; no off-road or powersports rentals"
+        ),
+    },
+    "shoreline-of-tahoe": {
+        "categories": ["mountain_biking", "road_cycling", "snow_sports"],
+        "description": "Ski, snowboard, bike, and e-bike rentals plus gear service.",
+        "notes_internal": (
+            "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k; "
+            "founder_verified; e-bike rentals"
+        ),
+    },
+    "ski-butlers-heavenlysouth-lake-tahoe": {
+        "offers_delivery": True,
+        "description": "Ski and snowboard rentals with delivery to your lodging.",
+        "notes_internal": (
+            "google_place_id:ChIJjU5vgAOQmYARZWhfi_FXn7A; "
+            "founder_verified; delivery service"
+        ),
+    },
+    "ski-butlers-northstarpalisades-tahoe": {
+        "offers_delivery": True,
+        "description": "Ski and snowboard rentals with delivery to your lodging.",
+        "notes_internal": (
+            "google_place_id:ChIJA2VHWIbfm4ARyNqBs2-GAEU; "
+            "founder_verified; delivery service"
+        ),
+    },
+    "ski-pro": {
+        "categories": ["snow_sports", "water_sports"],
+        "description": "Snow sports and water sports gear rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJX19jQLs_mYAR1rSMr9FQlCg; "
+            "founder_verified; snow and water sports rentals"
+        ),
+    },
+    "sports-ltd-rentals": {
+        "name": "Sports Ltd. Rentals",
+        "categories": [
+            "camping",
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "rock_climbing",
+            "snow_sports",
+        ],
+        "description": (
+            "Gear rentals across listed categories, plus alpine ski and snowboard demos."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ; "
+            "founder_verified; rentals plus snow sports demos"
+        ),
+    },
+    "start-haus-ski-bike": {
+        "categories": ["mountain_biking"],
+        "description": (
+            "Mountain bike and e-MTB rentals and demos — no snow sports rentals."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJtW7Egsvfm4ARpLAHoUHGvuI; "
+            "founder_verified; MTB and e-MTB rentals plus demos; no snow rentals"
+        ),
+    },
+    "tahoe-daves-boardshop": {
+        "categories": ["snow_sports"],
+        "notes_internal": (
+            "google_place_id:ChIJc-6tR-yOmYARNxSXTGmhdsQ; "
+            "founder_verified; no water sports rentals"
+        ),
+    },
+    "tahoe-jacks-adventure-authority": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJF3o2J4SamYARi10rkwciOeI; "
+            "founder_verified; guided adventures only — no standalone gear rentals"
+        ),
+    },
+    "tahoe-mountain-life": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJw8H_AiLfm4AREgoERMP4snM; "
+            "founder_verified; no gear rentals"
+        ),
+    },
+    "tahoe-sports-hub": {
+        "categories": [
+            "camping",
+            "electric_transport",
+            "mountain_biking",
+            "rock_climbing",
+            "snow_sports",
+            "water_sports",
+        ],
+        "description": (
+            "Outdoor gear rentals including e-bikes, snow sports, camping, "
+            "climbing, and water sports."
+        ),
+        "notes_internal": (
+            "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w; "
+            "founder_verified; e-bike rentals"
+        ),
+    },
+    "tahoe-sports-ltd": {
+        "categories": [
+            "camping",
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "rock_climbing",
+            "snow_sports",
+            "water_sports",
+        ],
+        "offers_season_lease": True,
+        "description": "Outdoor gear rentals plus seasonal snow sports gear leases.",
+        "notes_internal": (
+            "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE; "
+            "founder_verified; seasonal snow sports leases"
+        ),
+    },
+    "tahoe-used-ski-and-snowboard": {
+        "is_active": False,
+        "notes_internal": (
+            "google_place_id:ChIJH7RaLsePmYARwBArVqhm0CM; "
+            "founder_verified; used gear retail only — no rentals"
+        ),
+    },
+    "tahoe-watermans-landing": {
+        "categories": ["water_sports"],
+        "notes_internal": (
+            "google_place_id:ChIJpWVWCE1jmYARGULCKQg4sJ0; "
+            "founder_verified; no snow sports rentals"
+        ),
+    },
+    "the-backcountry": {
+        "categories": [
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "snow_sports",
+        ],
+        "description": "Bike and snow sports rentals plus electric transportation rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJcWCd2jPem4ARMrf4Ao6HBUw; "
+            "founder_verified; e-transport rentals; no camping or rock climbing rentals"
+        ),
+    },
+    "the-village-board-shop": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports gear rentals and alpine ski and snowboard demos.",
+        "notes_internal": (
+            "google_place_id:ChIJWWOPcw-QmYARhEoevVFqLRs; "
+            "founder_verified; snow sports rentals plus demos; no rock climbing rentals"
+        ),
+    },
+    "totally-board": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports gear rentals and alpine ski and snowboard demos.",
+        "notes_internal": (
+            "google_place_id:ChIJHdwDUcDfm4AReKIJrkARduU; "
+            "founder_verified; snow sports rentals plus demos"
+        ),
+    },
+    "truenorth-northstar-village": {
+        "name": "TrueNorth - Northstar Village (Demo Only)",
+        "categories": ["snow_sports"],
+        "description": "Alpine ski and snowboard demos only — no gear rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJy_eG4DBimYARKG5IS_ziWW4; "
+            "founder_verified; demo only — no rentals"
+        ),
+    },
+    "truenorth-ritz-carlton": {
+        "categories": ["snow_sports"],
+        "description": "Snow sports gear rentals and alpine ski and snowboard demos.",
+        "notes_internal": (
+            "google_place_id:ChIJfTRnuRxjmYARfCI5ES3Jhes; "
+            "founder_verified; snow sports rentals plus demos"
+        ),
+    },
+    "village-ski-loft": {
+        "categories": [
+            "electric_transport",
+            "mountain_biking",
+            "road_cycling",
+            "snow_sports",
+        ],
+        "description": "Snow sports, mountain bike, road bike, and electric transportation rentals.",
+        "notes_internal": (
+            "google_place_id:ChIJaY2NIBtwmYARTpUYiTNrn8w; "
+            "founder_verified; snow sports, mountain bikes, road bikes, and e-transport rentals"
+        ),
+    },
     "powder-house-express": {
         "name": "Powder House Express",
         "categories": ["mountain_biking", "road_cycling", "snow_sports"],
@@ -362,6 +663,15 @@ OPERATOR_EXPORT_OVERRIDES: dict[str, dict] = {
         "notes_internal": "founder_verified; ski and bike rentals",
     },
 }
+
+# Website-verified corrections (instructions/02 §9). Merged on export so re-sync
+# preserves name/category fixes checked against operator websites.
+_verified_path = Path(__file__).resolve().parent / "operator_website_verified.json"
+if _verified_path.exists():
+    _website_verified = json.loads(_verified_path.read_text())
+    for _slug, _patch in _website_verified.items():
+        _export_patch = {k: v for k, v in _patch.items() if k not in ("verified_at", "source")}
+        OPERATOR_EXPORT_OVERRIDES.setdefault(_slug, {}).update(_export_patch)
 
 DAY_KEYS = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"]
 DAY_NAMES = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]

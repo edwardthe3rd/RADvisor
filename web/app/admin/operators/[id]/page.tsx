@@ -236,6 +236,30 @@ export default async function AdminOperatorPage({
           />
           Offers delivery service
         </label>
+        <label className="col-span-2 flex items-center gap-2 text-xs font-semibold text-ink-secondary">
+          <input
+            type="checkbox"
+            name="offers_rental"
+            defaultChecked={operator?.offers_rental ?? true}
+          />
+          Offers rentals
+        </label>
+        <label className="col-span-2 flex items-center gap-2 text-xs font-semibold text-ink-secondary">
+          <input
+            type="checkbox"
+            name="offers_demo"
+            defaultChecked={operator?.offers_demo ?? false}
+          />
+          Offers demos / tryouts
+        </label>
+        <label className="col-span-2 flex items-center gap-2 text-xs font-semibold text-ink-secondary">
+          <input
+            type="checkbox"
+            name="offers_season_lease"
+            defaultChecked={operator?.offers_season_lease ?? false}
+          />
+          Offers season gear leases
+        </label>
         <label className={`${label} col-span-2 sm:col-span-4`}>
           Description
           <textarea
@@ -257,6 +281,42 @@ export default async function AdminOperatorPage({
                 />
                 {c.label}
               </label>
+            ))}
+          </div>
+        </fieldset>
+        <fieldset className="col-span-2 sm:col-span-4">
+          <legend className="mb-1 text-xs font-semibold text-ink-secondary">
+            Subcategories (specific equipment types offered)
+          </legend>
+          <div className="flex flex-col gap-2">
+            {CATEGORIES.map((c) => (
+              <div key={c.slug}>
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-ink-tertiary">
+                  {c.label}
+                </p>
+                <div className="flex flex-wrap gap-3">
+                  {c.subcategories
+                    .filter(
+                      (s) =>
+                        !s.slug.endsWith("_demo") && !s.slug.endsWith("_lease"),
+                    )
+                    .map((s) => (
+                      <label
+                        key={s.slug}
+                        className="flex items-center gap-1 text-sm"
+                      >
+                        <input
+                          type="checkbox"
+                          name={`subcategory_${s.slug}`}
+                          defaultChecked={(
+                            operator?.subcategories ?? []
+                          ).includes(s.slug)}
+                        />
+                        {s.label}
+                      </label>
+                    ))}
+                </div>
+              </div>
             ))}
           </div>
         </fieldset>

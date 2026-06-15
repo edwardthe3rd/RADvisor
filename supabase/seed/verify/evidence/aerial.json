@@ -1,0 +1,293 @@
+{
+  "category": "aerial",
+  "gatheredAt": "2026-06-14T21:23:47.503Z",
+  "results": [
+    {
+      "slug": "hang-gliding-tahoe",
+      "name": "Hang Gliding Tahoe",
+      "website": "http://hangglidingtahoe.com/",
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://hangglidingtahoe.com/"
+      ],
+      "googleOverview": "Hang Gliding Tahoe",
+      "snippet": "Hang Gliding Tahoe &#x2d; Hang Gliding In Lake Tahoe Skip to content Prices &#038; Packages Gift Certificates The Experience Questions Testimonials About Us Contact Driving Directions Call 775-772-8232 0 items Prices &#0",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "north-shore-parasail",
+      "name": "North Shore Parasail",
+      "website": "https://californiaparasail.com/",
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://californiaparasail.com/",
+        "https://californiaparasail.com/shop/"
+      ],
+      "googleOverview": "North Shore Parasail",
+      "snippet": "California Parasail - Parasailing in Catalina Island, Lake Tahoe, Newport Beach & Long Beach Home Parasailing Long Beach Catalina Island Lake Tahoe Newport Beach Santa Barbara View All Locations Seal &#038; Dolphin Tours",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "slide-mountain-hang-glider-landing-zone",
+      "name": "Slide Mountain Hang Glider Landing Zone",
+      "website": null,
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Slide Mountain Hang Glider Landing Zone",
+      "snippet": "Slide Mountain Hang Glider Landing Zone  airport point_of_interest transportation_service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "soaring-nv",
+      "name": "Soaring NV",
+      "website": "http://soaringnv.com/",
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://soaringnv.com/",
+        "https://soaringnv.com/our-services/",
+        "https://soaringnv.com/services/rides-brief/",
+        "https://soaringnv.com/services_group/team/",
+        "https://soaringnv.com/services/learn-to-fly-gliders/",
+        "https://soaringnv.com/services/glider-tows/"
+      ],
+      "googleOverview": "Soaring NV",
+      "snippet": "SoaringNV &#8211; Glider Rides & Towing Services Skip to content Skip to footer Home Glider Rides Tahoe Sky Ride Big Sky Ride Emerald Bay Adventure Learn to Fly Pilots Weather &#038; Planning Sectional Chart Online Windy Soaring Forecast Slide Mtn Data Soundin",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "sport-aviation-center-llc",
+      "name": "Sport Aviation Center",
+      "website": "http://sportaviationcenter.com/",
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": true,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sportaviationcenter.com/"
+      ],
+      "googleOverview": "Sport Aviation Center LLC",
+      "snippet": "Our instructors are seasoned pilots teaching full time and not &#8220;time building&#8221; to move onto the airlines.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)",
+        "looks retail-only — review for deactivation"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "uprising-paragliding",
+      "name": "Uprising Paragliding",
+      "website": null,
+      "category": "aerial",
+      "current": {
+        "categories": [
+          "aerial"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "paraglider"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Uprising Paragliding",
+      "snippet": "Uprising Paragliding  educational_institution point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: paraglider"
+      ]
+    }
+  ]
+}

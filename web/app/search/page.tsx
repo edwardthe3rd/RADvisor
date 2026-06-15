@@ -3,6 +3,7 @@ import SiteShell from "@/components/SiteShell";
 import ItemCard from "@/components/ItemCard";
 import FilterPanel from "@/components/FilterPanel";
 import { getDistinctBrands, searchEquipment, searchOperators } from "@/lib/data";
+import { applyAcquisitionToFilters, acquisitionSearchLabel, parseAcquisitionSearchQuery } from "@/lib/search/acquisition-search";
 import { filtersFromSearchParams } from "@/lib/search/buildQuery";
 import { locationLabel, operatorDisplayName } from "@/lib/format";
 
@@ -17,31 +18,47 @@ export default async function SearchPage({
 }: {
   searchParams: Record<string, string | string[] | undefined>;
 }) {
-  const filters = filtersFromSearchParams(searchParams);
+  const rawFilters = filtersFromSearchParams(searchParams);
+  const filters = applyAcquisitionToFilters(rawFilters);
+  const acquisitionIntent = rawFilters.q ? parseAcquisitionSearchQuery(rawFilters.q) : null;
+  const acquisitionLabel = acquisitionIntent
+    ? acquisitionSearchLabel(acquisitionIntent)
+    : null;
   const [items, operators, brands] = await Promise.all([
     searchEquipment(filters),
-    filters.q ? searchOperators(filters.q, filters) : Promise.resolve([]),
+    rawFilters.q ? searchOperators(rawFilters.q, filters) : Promise.resolve([]),
     getDistinctBrands(),
   ]);
 
   return (
-    <SiteShell search={filters.q}>
+    <SiteShell search={rawFilters.q}>
       <main className="mx-auto max-w-content px-4 py-8">
         <h1 className="mb-6 text-2xl font-extrabold text-ink-primary">
-          {filters.q ? `Results for “${filters.q}”` : "Search gear"}
+          {rawFilters.q ? `Results for “${rawFilters.q}”` : "Search gear"}
         </h1>
+        {acquisitionLabel && (
+          <p className="mb-6 text-sm text-ink-secondary">
+            Showing {acquisitionLabel.toLowerCase()} — filter by gear type below
+            to narrow further.
+          </p>
+        )}
 
         <FilterPanel
           filters={filters}
           brands={brands}
-          resultCount={items.length}
+          resultCount={
+            items.length > 0 ? items.length : operators.length
+          }
+          resultLabel={items.length > 0 ? "results" : "operators"}
           sortMode="search"
         />
 
         {operators.length > 0 && (
           <section className="mt-6">
             <h2 className="mb-3 text-lg font-bold text-ink-primary">
-              Rental shops matching your search
+              {acquisitionLabel
+                ? `${acquisitionLabel} matching your search`
+                : "Rental shops matching your search"}
             </h2>
             <div className="flex flex-wrap gap-2">
               {operators.map((op) => (
@@ -68,10 +85,17 @@ export default async function SearchPage({
               <ItemCard key={item.id} item={item} tier={filters.tier} />
             ))}
           </div>
+        ) : operators.length > 0 ? (
+          acquisitionLabel ? (
+            <p className="mt-6 text-sm text-ink-secondary">
+              No individual gear listings yet — contact the operators above for
+              program details and pricing.
+            </p>
+          ) : null
         ) : (
           <p className="mt-6 rounded-lg border border-surface-borderLight bg-surface-muted p-6 text-ink-secondary">
-            {filters.q
-              ? "No gear matched your search. Try a broader term, or "
+            {rawFilters.q
+              ? "No gear matched your search. Try a broader term, search for “demo” or “season lease”, or "
               : "No gear listings match these filters yet. "}
             <Link href="/" className="font-semibold text-ink-link hover:underline">
               browse operators by category
