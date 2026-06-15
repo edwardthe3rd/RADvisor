@@ -26,6 +26,7 @@ export const DURATION_OPTIONS: { value: PriceTier; label: string }[] = [
   { value: "full_day", label: "Full day" },
   { value: "multi_day", label: "2–3 days" },
   { value: "weekly", label: "Week+" },
+  { value: "season", label: "Full season" },
 ];
 
 export const BUDGET_OPTIONS: QuizOption[] = [

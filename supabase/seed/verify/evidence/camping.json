@@ -1,0 +1,1390 @@
+{
+  "category": "camping",
+  "gatheredAt": "2026-06-14T21:21:58.596Z",
+  "results": [
+    {
+      "slug": "azco-rustic-designs-and-rentals",
+      "name": "AZCO Rustic Designs and Rentals",
+      "website": "http://www.azcorusticdesigns.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.azcorusticdesigns.com/",
+        "https://www.azcorusticdesigns.com/wedding-event-rentals-reno-tahoe-carson",
+        "https://www.azcorusticdesigns.com/new-page"
+      ],
+      "googleOverview": "AZCO Rustic Designs and Rentals",
+      "snippet": "AZCO - Wedding & Event Rentals for Northern Nevada Skip to Content Open Menu Close Menu Home Our Story Rentals Event Lighting Photo Booths Audio Guest Book AZCO Store Blog Contact 0 0 Open Menu Close Menu Home Our Story Rentals Event Lighting Photo Booths Audi",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "alpinistas",
+      "name": "Alpinistas",
+      "website": "https://www.thealpinistas.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://thealpinistas.com/",
+        "https://thealpinistas.com/collections/alpinistas",
+        "https://thealpinistas.com/products/patagonia-diamond-quilted-bomber-hoody",
+        "https://thealpinistas.com/",
+        "https://thealpinistas.com/collections",
+        "https://thealpinistas.com/collections/team-picks/products/parks-project-park-shadows-full-zip-high-pile-fleece"
+      ],
+      "googleOverview": "Alpinistas",
+      "snippet": "Filter 11 products Sort Featured Most relevant Best selling Alphabetically, A-Z Alphabetically, Z-A Price, low to high Price, high to low Date, old to new Date, new to old Sort Large Small List Quick shop Add to cart Alpinistas Good Vibes Tee $34 99 Quick shop",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: backpack, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "camping-world-reno",
+      "name": "Camping World - Reno",
+      "website": "https://rv.campingworld.com/dealer/reno-nevada",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://rv.campingworld.com/dealer/reno-nevada",
+        "https://rv.campingworld.com/signin?error=Please%20login%20to%20view%20your%20account%20page&amp;redirect_url=http://rv.campingworld.com/account/favorites",
+        "https://rv.campingworld.com/dealer/reno-nevada/rv-service-repair",
+        "https://rv.campingworld.com/dealer/reno-nevada/mobile-service",
+        "https://rv.campingworld.com/rvs-for-sale/dealer/reno-nevada",
+        "https://rv.campingworld.com/product/keystone"
+      ],
+      "googleOverview": "Camping World - Reno Store for RVs, camping equipment & other outdoor gear, plus accessories & repair services.",
+      "snippet": "; MS – A Document/Service Fee is not an official fee and is not required by law, however, it may be charged to a buyer for the preparation, handling and processing of documents and the performance of services related to the sale or lease of a motor vehicle and",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "emerald-bay-bikes",
+      "name": "Emerald Bay Bikes",
+      "website": "https://www.emeraldbaybikes.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [
+          "e_bike_city"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.emeraldbaybikes.com/",
+        "https://www.emeraldbaybikes.com/collections",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-bottom-out-bumper",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-lev-ball-for-actuator",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-lev-ball-for-clamp-anchor-alignment",
+        "https://www.emeraldbaybikes.com/products/tektro-837al-mtb-linear-pull-brake-front-or-rear-158g-silver"
+      ],
+      "googleOverview": "Emerald Bay Bikes",
+      "snippet": "Family owned and operated Welcome to Emerald Bay Bikes! Founded in 2025 by a father-son duo, started as a eBike rental shop with a simple belief: eBikes are a fun and adventurous way for everyone to explore.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "gear-hut",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.gearhutreno.com/",
+        "https://www.gearhutreno.com/rent",
+        "https://www.gearhutreno.com/resoleservices",
+        "https://www.gearhutreno.com/whatwetakesummer",
+        "https://www.gearhutreno.com/rent"
+      ],
+      "googleOverview": "Gear Hut",
+      "snippet": "Used Outdoor Gear and Consignment | Gear Hut | Reno top of page The Biggest Little Gear Shop Consignor Login Request A Check 775-219-4612 Home HOW IT WORKS Selling Options Consignment What We Take Non Profits Featured Items About Us FAQ Services Bear Can Renta",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: backpack, camp_furniture, cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "heavenly-sports-tamarack-lodge",
+      "name": "Heavenly Sports - Tamarack Lodge",
+      "website": null,
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Heavenly Sports - Tamarack Lodge",
+      "snippet": "Heavenly Sports - Tamarack Lodge  ski_resort sporting_goods_store sports_activity_location store point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "mark-fore-and-strike",
+      "name": "Mark Fore and Strike",
+      "website": "http://mark-fore-and-strike.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": true,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://mark-fore-and-strike.com/",
+        "https://mark-fore-and-strike.com/products/",
+        "https://mark-fore-and-strike.com/shop/"
+      ],
+      "googleOverview": "Mark Fore and Strike",
+      "snippet": "Mark Fore and Strike - Reno Gun Shop and Outdoor Sporting Goods 775-322-9559 info@markforestrike.com Facebook Facebook Reno&#8217;s Best Outdoor Sporting Goods Home Products About Us Contact Select Page Hunting, Fishing",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)",
+        "looks retail-only — review for deactivation"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "mountain-vibes-specialty-rentals",
+      "name": "Mountain Vibes Specialty Rentals",
+      "website": "http://mountainvibesrentals.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://mountainvibesrentals.com/",
+        "https://mountainvibesrentals.com/contact-us/",
+        "https://mountainvibesrentals.com/blog-2/",
+        "https://mountainvibesrentals.com/my-account/",
+        "https://mountainvibesrentals.com/about/",
+        "https://mountainvibesrentals.com/product-category/packages/"
+      ],
+      "googleOverview": "Mountain Vibes Specialty Rentals",
+      "snippet": "Mountain Vibes Specialty Rentals &#8211; Specialty Event Rentals Serving the Lake Tahoe Region Contact us BLOG Phone: (775) 742-4282 Phone: (775) 742-4282 Any questions mountainvibesrentals@gmail.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: tent"
+      ]
+    },
+    {
+      "slug": "nevada-adventure-rentals",
+      "name": "Nevada Adventure Rentals",
+      "website": "http://nevadaadventurerentals.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing"
+        ],
+        "subcategories": [
+          "atv",
+          "dirt_bike",
+          "utv"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://nevadaadventurerentals.com/",
+        "https://nevadaadventurerentals.com/shop/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/accessories/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/ascenders-pulleys/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/belay-devices/"
+      ],
+      "googleOverview": "Nevada Adventure Rentals",
+      "snippet": "Climbing Gear, Outdoor Equipment, Motorcycle Rentals - Reno, NV Skip to content (775) 686-3557 0 items Products search Shop Climbing Gear Accessories Ascenders & Pulleys Belay Devices Big Wall Bouldering Carabiners / Draws / Slings Chalk Chalk Bags Harnesses H",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "patagonia",
+      "name": "Patagonia",
+      "website": "http://www.patagonia.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.patagonia.com/home/",
+        "https://www.patagonia.com/shop/mens",
+        "https://www.patagonia.com/shop/womens",
+        "https://www.patagonia.com/shop/kids-baby",
+        "https://www.patagonia.com/shop/gear",
+        "https://www.patagonia.com/shop/new-arrivals"
+      ],
+      "googleOverview": "Patagonia",
+      "snippet": "Shop Food & Beer A group of climbing friends—including Tommy Caldwell, Sonnie Trotter and their families—gather between vans for an end-of-season potluck dinner in Yosemite National Park, California.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: backpack"
+      ]
+    },
+    {
+      "slug": "patagonia-outlet",
+      "name": "Patagonia Outlet",
+      "website": "https://www.patagonia.com/stores/nv/reno/130-south-center-street/store_reno.html",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.patagonia.com/stores/nv/reno/130-south-center-street/store_reno.html/",
+        "https://www.patagonia.com/shop/mens",
+        "https://www.patagonia.com/shop/womens",
+        "https://www.patagonia.com/shop/kids-baby",
+        "https://www.patagonia.com/shop/gear",
+        "https://www.patagonia.com/shop/new-arrivals"
+      ],
+      "googleOverview": "Patagonia Outlet",
+      "snippet": "Here you’ll find both current- and past-season clothing for skiing and boarding, climbing, trail running, travel, camping and just hanging out—most at outlet prices.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: backpack"
+      ]
+    },
+    {
+      "slug": "rei",
+      "name": "REI",
+      "website": "https://www.rei.com/stores/reno?y_source=1_MTQ1MzQxOC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.rei.com/stores/reno",
+        "https://www.rei.com/",
+        "https://www.rei.com/ShoppingCart",
+        "https://www.rei.com/stores/bike-shop",
+        "https://www.rei.com/s/new-running-shoes-releases",
+        "https://www.rei.com/stores/ski-snowboard-shop"
+      ],
+      "googleOverview": "REI Retail chain carrying gear, apparel & footwear for a wide range of outdoor & fitness activities.",
+      "snippet": "com Home Page Shop Clear Search Search Cancel My REI Find your store Sign In Cart Open menu Close menu My Account - Sign in or Register Camp & Hike All Camp & Hike Camp & Hike All Camp & Hike Hiking Hiking All Hiking Footwear Jackets Shirts Pants Shorts Socks ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: backpack, camp_furniture, cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "rei-bike-shop",
+      "name": "REI Bike Shop",
+      "website": "https://www.rei.com/stores/reno/bike-shop",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "ebike_mtb",
+          "gravel_bike",
+          "kids_bike"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.rei.com/stores/reno/bike-shop",
+        "https://www.rei.com/",
+        "https://www.rei.com/ShoppingCart",
+        "https://www.rei.com/stores/bike-shop",
+        "https://www.rei.com/s/new-running-shoes-releases",
+        "https://www.rei.com/stores/ski-snowboard-shop"
+      ],
+      "googleOverview": "REI Bike Shop",
+      "snippet": "com Home Page Shop Clear Search Search Cancel My REI Find your store Sign In Cart Open menu Close menu My Account - Sign in or Register Camp & Hike All Camp & Hike Camp & Hike All Camp & Hike Hiking Hiking All Hiking Footwear Jackets Shirts Pants Shorts Socks ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: backpack, camp_furniture, cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "reno-hexayurt",
+      "name": "Reno Hexayurt",
+      "website": "http://www.renohexayurt.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "camp_furniture",
+          "cooking",
+          "full_kit",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.renohexayurt.com/",
+        "https://www.renohexayurt.com/products/8-tall-hexayurt-package",
+        "https://www.renohexayurt.com/products/generator",
+        "https://www.renohexayurt.com/products/used-generator-purchase",
+        "https://www.renohexayurt.com/products/hexayurt-rental",
+        "https://www.renohexayurt.com/products/oss-original-hexayurt-h12-rental"
+      ],
+      "googleOverview": "Reno Hexayurt",
+      "snippet": "Hexayurt Shelter for Events & Festivals Reno Hexayurt Skip to content 2026 WE WILL BE PROVIDING OSS AT BURNING MAN Buy Buy Hexayurt Original Generator USED Generator OSS Rental OSS Rental H10 Hybrid (OSS) H12 Original (OSS) H15 Tall Original (OSS) Generator (O",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: camp_furniture, cooking, full_kit, tent"
+      ]
+    },
+    {
+      "slug": "rentools",
+      "name": "Rentools",
+      "website": "https://rentools.pro/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.rentools.pro/",
+        "https://www.rentools.pro/terms-of-service",
+        "https://www.rentools.pro/rental-policies-click-here",
+        "https://www.rentools.pro/products"
+      ],
+      "googleOverview": "Rentools",
+      "snippet": "Rentools You're shopping Fernley, NV Gardnerville, NV Silver Springs, NV South Lake Tahoe, CA Washoe Valley, NV Search 0 Cart Login Menu Construction Lifts Painting ALL Tools & Equipment Arbor/Tree Work Concrete Excavators & Backhoes General Equipment Landscap",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "scheels",
+      "name": "Scheels",
+      "website": "https://www.scheels.com/store/reno-sparks/074?utm_source=google&utm_medium=yext",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Scheels Chain with apparel, shoes & gear for sports & outdoor recreation, plus merchandise with team logos.",
+      "snippet": "Scheels Chain with apparel, shoes & gear for sports & outdoor recreation, plus merchandise with team logos. Visitors say this sporting goods store offers an unbeatable selection of gear for various sports and outdoor act",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "sierra-adventures-activities-reno-tahoe-llc",
+      "name": "Sierra Adventures",
+      "website": "https://m.wildsierra.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [
+          "atv",
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://m.wildsierra.com/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/"
+      ],
+      "googleOverview": "Sierra Adventures / Activities Reno Tahoe, LLC",
+      "snippet": "Sierra Adventures | Adventures in Reno &#8211; Tahoe Sierra Adventures &#8211; Adventures in Reno &#8211; Tahoe Social Sierra Adventures Adventures in Reno &#8211; Tahoe Menu Skip to content Home About Us Custom Adventure Tours Earth Adventures Wind Adventures",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "south-passage-outfitters",
+      "name": "South Passage Outfitters",
+      "website": "https://www.southpassageoutfittersllc.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "South Passage Outfitters",
+      "snippet": "South Passage Outfitters  point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "sports-ltd-rentals",
+      "name": "Sports Ltd. Rentals",
+      "website": "http://www.sportsltdrentals.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "road_bike"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sportsltdrentals.com/",
+        "https://sportsltdrentals.com/rentals/",
+        "https://sportsltdrentals.com/winter-rentals/",
+        "https://sportsltdrentals.com/summer-rentals-e-bikes-bike-rentals-south-lake-tahoe-california-electric-mountain-bike/",
+        "https://sportsltdrentals.com/25-26-demo-ski-program/",
+        "https://sportsltdrentals.com/contact-us/"
+      ],
+      "googleOverview": "Sports Ltd. Rentals",
+      "snippet": "- Sports Ltd Rentals E-Bike, Ski, Snowboard, E-Mtn Bike, Camping, & Backcountry Skip to content Sports Ltd Rentals Outdoor Equipment Rental Rentals &#038; Demos Winter Rentals Summer Rentals Book Now Demo Skis 25/26 Demo Ski Program Contact Us Trail Info &#038",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: backpack, camp_furniture, cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "tahoe-mountain-sports",
+      "name": "Tahoe Mountain Sports",
+      "website": "http://www.tahoemountainsports.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoemountainsports.com/",
+        "https://tahoemountainsports.com/collections/winter-sale-collection",
+        "https://tahoemountainsports.com/collections",
+        "https://tahoemountainsports.com/pages/rent-gear",
+        "https://tahoemountainsports.com/pages/rent-skis",
+        "https://tahoemountainsports.com/pages/rent-snowboards"
+      ],
+      "googleOverview": "Tahoe Mountain Sports",
+      "snippet": "Shop Our Winter Sale! Tahoe Mountain Sports Shop Men's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Women's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Kid's Footwear Men's Shoes Women's Shoes Winter Boots Socks Accessories Luggage",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: backpack, cooking, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-hub",
+      "name": "Tahoe Sports Hub",
+      "website": "http://www.tahoesportshub.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportshub.com/",
+        "https://www.tahoesportshub.com/services",
+        "https://www.tahoesportshub.com/bike-shop-index",
+        "https://www.tahoesportshub.com/services"
+      ],
+      "googleOverview": "Tahoe Sports Hub Store offering gear, apparel & rentals for skiing, snowboarding, paddle sports, camping & climbing.",
+      "snippet": "Tahoe Sports Hub is Truckee's ski snowboard rental and demo shop.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-ltd",
+      "name": "Tahoe Sports Ltd.",
+      "website": "http://www.tahoesportsltd.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "gravel_bike",
+          "kayak",
+          "kids_bike",
+          "onewheel",
+          "road_bike"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cooking",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportsltd.com/",
+        "https://www.tahoesportsltd.com/service/shipping-returns/",
+        "https://www.tahoesportsltd.com/shop/",
+        "https://www.tahoesportsltd.com/shop/ski/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/xc-skis/"
+      ],
+      "googleOverview": "Tahoe Sports Ltd.",
+      "snippet": "- Tahoe Sports ltd Select your language English (US) USD USD CAD Login View all results (0) No products found 0 Cart You have no items in your shopping cart Home Shop SKI Cross Country XC Skis Boots Backcountry Boots Bindings Poles Skins Alpine Ski Skis Boots ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: cooking, tent"
+      ]
+    },
+    {
+      "slug": "technical-equipment-cleaners",
+      "name": "Technical Equipment Cleaners",
+      "website": "http://www.tectahoe.com/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "backpack",
+          "sleep_system",
+          "tent"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tectahoe.com/",
+        "https://www.tectahoe.com/shop-policy",
+        "https://www.tectahoe.com/pricing-services"
+      ],
+      "googleOverview": null,
+      "snippet": "Outdoor Gear Cleaning | Technical Equipment Cleaners | Truckee top of page Keeping it clean since 2006! Home About Us Shop Policy Pricing & Services Drop Offs & Remote Repairs Contact Us More... Use tab to navigate throu",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: backpack, sleep_system, tent"
+      ]
+    },
+    {
+      "slug": "upcycled-adventures",
+      "name": "Upcycled Adventures",
+      "website": "https://upcycledadventures.square.site/",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://upcycledadventures.square.site/"
+      ],
+      "googleOverview": "Upcycled Adventures",
+      "snippet": "Used Outdoor Gear in Truckee | Upcycled Adventures",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "evo-tahoe-city",
+      "name": "evo Tahoe City",
+      "website": "https://www.evo.com/pages/locations-tahoe-city?utm_source=GMBlisting&utm_medium=organic",
+      "category": "camping",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [
+          "e_bike_city"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "evo Tahoe City",
+      "snippet": "evo Tahoe City People say this store offers a wide selection of ski boots, clothes, and e-bikes, and provides repair kits and helmets with rentals.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    }
+  ]
+}

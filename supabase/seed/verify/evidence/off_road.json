@@ -1,0 +1,2642 @@
+{
+  "category": "off_road",
+  "gatheredAt": "2026-06-14T21:19:07.207Z",
+  "results": [
+    {
+      "slug": "adrenaline-connection-inc",
+      "name": "Adrenaline Connection",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Adrenaline Connection, Inc.",
+      "snippet": "Adrenaline Connection, Inc.  car_repair service store point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "adventure-lake-tahoe",
+      "name": "Adventure Lake Tahoe",
+      "website": "http://adventureslaketahoe.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.adventureslaketahoe.com/",
+        "https://www.adventureslaketahoe.com/soap-candle-workshops",
+        "https://www.adventureslaketahoe.com/venue-rental",
+        "https://www.adventureslaketahoe.com/shop",
+        "https://www.adventureslaketahoe.com/efoil",
+        "https://www.adventureslaketahoe.com/snowbike-tour"
+      ],
+      "googleOverview": "Adventure Lake Tahoe",
+      "snippet": "LEARN MORE Electric Hydrofoil Experience the feeling of Flying over Water with Electric Hydrofoil Lessons and rentals! LEARN MORE Lake Tahoe Peak and Beach ELECTRIC Bike Adventure Explore Lake Tahoe the fun and effortless way on this guided e-bike adventure.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv"
+      ]
+    },
+    {
+      "slug": "anderson-powersports-reno",
+      "name": "Anderson Powersports Reno",
+      "website": "http://www.andersonpowersportsreno.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "dirt_bike",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.andersonpowersportsreno.com/",
+        "https://www.andersonpowersportsreno.com/shop-indian-motorcycle",
+        "https://www.andersonpowersportsreno.com/shop-polaris/timbersled",
+        "https://www.andersonpowersportsreno.com/service-repair-atvs-utvs-motorcycles-dealership--service",
+        "https://www.andersonpowersportsreno.com/service-request-atvs-utvs-motorcycles-dealership--xservice_request",
+        "https://www.andersonpowersportsreno.com/default.asp?page=xcomingsoon"
+      ],
+      "googleOverview": "Anderson Powersports Reno",
+      "snippet": "Anderson Powersports Reno - New & Used Powersports, Parts, and Service in Reno, NV, near Sun Valley and Verdi Skip to main content Reno Search Go Search Reno 775.355.8810 Toggle navigation Home Inventory Showroom All Inv",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: atv, dirt_bike, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "battle-born-powersports",
+      "name": "Battle Born Powersports",
+      "website": "http://www.battlebornpowersports.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.battlebornpowersports.com/",
+        "https://www.battlebornpowersports.com/rentals",
+        "https://www.battlebornpowersports.com/utv-2-seater-rentals",
+        "https://www.battlebornpowersports.com/utv-4-seater-rentals",
+        "https://www.battlebornpowersports.com/utv-6-seater-rentals",
+        "https://www.battlebornpowersports.com/utv-rentals"
+      ],
+      "googleOverview": "Battle Born Powersports",
+      "snippet": "UTV RZR Rentals in S.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, utv"
+      ]
+    },
+    {
+      "slug": "coldstream-adventures-tours",
+      "name": "Coldstream Adventures",
+      "website": "https://www.coldstreamadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://coldstreamadventures.com/"
+      ],
+      "googleOverview": "Coldstream Adventures Tours",
+      "snippet": "What’s Included 🏔️ Snowmobile Rental 🧭 Professional Guide 🪖 Helmet & Goggles 📋 Instruction Provided Winter gear rentals available ✔ No experience required ✔ Easy-to-ride machines ✔ Guides set the pace ✔ Family friendly adventure First time on a snowmobile?",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "custom-concepts-nv",
+      "name": "Custom Concepts NV",
+      "website": "http://www.dynamicutv.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Custom Concepts NV",
+      "snippet": "Custom Concepts NV  tire_shop sporting_goods_store auto_parts_store car_repair store point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "dirt-gypsy-adventures",
+      "name": "Dirt Gypsy Adventures",
+      "website": "http://www.dirtgypsyadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "off_road",
+          "road_cycling"
+        ],
+        "subcategories": [
+          "gravel_bike"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.dirtgypsyadventures.com/",
+        "https://www.dirtgypsyadventures.com/rentals",
+        "https://www.dirtgypsyadventures.com/rentals"
+      ],
+      "googleOverview": "Dirt Gypsy Adventures",
+      "snippet": "Dirt Gypsy Adventures - Mountain & Gravel Bike Tours, Rentals, Trailhead Shuttles & Skills Clinics - 11410 Deerfield Dive, Truckee, CA top of page Schedule A Call Contact Us 530-580-7447 TOURS Mountain Gravel One-Day MTB One-Day Gravel Multi-Day RENTALS SHUTTL",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "doing-it-big-rentals",
+      "name": "Doing It Big Rentals",
+      "website": "https://doingitbigrentals.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Doing It Big Rentals",
+      "snippet": "Doing It Big Rentals  service point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "eagle-ridge-snowmobile-tours",
+      "name": "Eagle Ridge Snowmobile Tours",
+      "website": "https://eagleridgesnowmobiling.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "EAGLE RIDGE SNOWMOBILE TOURS",
+      "snippet": "EAGLE RIDGE SNOWMOBILE TOURS  service point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "full-access-tahoe",
+      "name": "Full Access Tahoe",
+      "website": "https://fullaccesstahoe.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://fullaccesstahoe.com/",
+        "https://fullaccesstahoe.com/utv-rentals/",
+        "https://fullaccesstahoe.com/utv-rentals/genoa-peak-hourly-utv-rental/",
+        "https://fullaccesstahoe.com/utv-rentals/snow-rental-at-genoa-peak-lake-tahoe-trail/",
+        "https://fullaccesstahoe.com/utv-rentals/hourly-utv-rental/",
+        "https://fullaccesstahoe.com/utv-rentals/team-building-event-activity/"
+      ],
+      "googleOverview": "Full Access Tahoe",
+      "snippet": "Off-Roading UTV Rentals in Lake Tahoe & Carson City | Full Access Tahoe 775-309-8789 Info@fullaccesstahoe.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "full-throttle-tahoe",
+      "name": "Full Throttle Tahoe",
+      "website": "https://www.fullthrottletahoeboats.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road",
+          "water_sports"
+        ],
+        "subcategories": [
+          "boat",
+          "kayak",
+          "paddleboard",
+          "wakeboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.fullthrottletahoeboats.com/"
+      ],
+      "googleOverview": "Full Throttle Tahoe",
+      "snippet": "Full Throttle Tahoe | Lake Tahoe Boat Rental, Waverunner, Tours & More | Lake Tahoe top of page Home Activities & Rates Experience Contact us More Use tab to navigate through the menu items.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "high-line-adventures",
+      "name": "High Line Adventures",
+      "website": "http://hlatours.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.hlatours.com/"
+      ],
+      "googleOverview": "HIGH LINE ADVENTURES",
+      "snippet": "Lake Tahoe Snowmobile Tours: Unleash Winter Thrills with Us! | High Line Adventures Snowmobile Tours",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "jr-powersports",
+      "name": "JR Powersports",
+      "website": "https://www.jrpowersports.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.jrpowersports.com/"
+      ],
+      "googleOverview": "JR Powersports",
+      "snippet": "Home top of page JR Powersports Motorcycles ATV, UTV All Repair Needs All your powersports repairs in one place. ​ ​ 775-241-2530 Call today for an appointment We look forward to talking with you soon!! See our reviews o",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: atv, utv"
+      ]
+    },
+    {
+      "slug": "kawasaki-yamaha-of-reno",
+      "name": "Kawasaki Yamaha of Reno",
+      "website": "http://www.kawasakiofreno.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "dirt_bike",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://kawasakiofreno.com/",
+        "https://kawasakiofreno.com/inventory/?condition=New",
+        "https://kawasakiofreno.com/Kawasaki-For-Sale/",
+        "https://kawasakiofreno.com/service-appointments/",
+        "https://kawasakiofreno.com/service-specials/",
+        "https://kawasakiofreno.com/service-appointments/"
+      ],
+      "googleOverview": "Kawasaki Yamaha of Reno",
+      "snippet": "Here are some of the service specials that we’re currently offering: Side by Side basic service: Get your all terrain vehicles ready for the fall/winter season with our basic service starting at, $199.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: atv, dirt_bike, utv"
+      ]
+    },
+    {
+      "slug": "lake-tahoe-adventure-ohv-tours",
+      "name": "Lake Tahoe Adventure OHV Tours",
+      "website": "https://www.laketahoeadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.laketahoeadventures.com/",
+        "https://www.laketahoeadventures.com/plan/current-weather"
+      ],
+      "googleOverview": "Lake Tahoe Adventure OHV Tours",
+      "snippet": "Get inspired to embark on your own journey through Lake Tahoe's majestic landscapes! Close Modal View Full Video span; cls: uk-animation-slide-bottom-medium; delay: 500;\"> Awaken Your Wild Side Learn More Lake tahoe adventures Adventure Awaits Lake Tahoe Tours",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "lake-tahoe-adventures",
+      "name": "Lake Tahoe Adventures",
+      "website": "https://www.laketahoeadventures.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.laketahoeadventures.com/",
+        "https://www.laketahoeadventures.com/plan/current-weather"
+      ],
+      "googleOverview": "Lake Tahoe Adventures",
+      "snippet": "Get inspired to embark on your own journey through Lake Tahoe's majestic landscapes! Close Modal View Full Video span; cls: uk-animation-slide-bottom-medium; delay: 500;\"> Awaken Your Wild Side Learn More Lake tahoe adventures Adventure Awaits Lake Tahoe Tours",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "lake-tahoe-jeep-tours",
+      "name": "Lake Tahoe Jeep Tours",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Lake Tahoe Jeep Tours",
+      "snippet": "Lake Tahoe Jeep Tours  travel_agency point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "lake-tahoe-slingshots",
+      "name": "Lake Tahoe Slingshots",
+      "website": "http://laketahoeslingshotrentals.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://laketahoeslingshotrentals.com/",
+        "https://laketahoeslingshotrentals.com/shop/"
+      ],
+      "googleOverview": "Lake Tahoe Slingshots",
+      "snippet": "Home - Lake Tahoe Slingshot Rentals About Rentals Contact Roll Tahoe Book Now About Rentals Contact Roll Tahoe Book Now FOR BOOKINGS CALL 775-580-7054 Reserve Your Adventure Lake Tahoe's Premier Slingshot Rental Company Home of The 4-Seater Slingshot Lake Taho",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "lake-tahoe-snowmobile-tours-inc",
+      "name": "Lake Tahoe Snowmobile Tours",
+      "website": "https://laketahoesnowmobile.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.laketahoesnowmobile.com/"
+      ],
+      "googleOverview": "Lake Tahoe Snowmobile Tours, Inc.",
+      "snippet": "Come find us at Donner Lake Marina as we get ready to open up for boating season! @ Donnerlakemarina.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "love-your-life-backcountry",
+      "name": "Love Your Life BackCountry",
+      "website": "https://loveyourlifebackcountry.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://loveyourlifebackcountry.com/"
+      ],
+      "googleOverview": null,
+      "snippet": "Coming Soon loveyourlifebackcountry.com We re under construction. Please check back for an update soon.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "moon-rocks",
+      "name": "Moon Rocks",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "dirt_bike"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Moon Rocks",
+      "snippet": "Moon Rocks Visitors say this off-roading area offers a variety of trails for all skill levels, including rock crawling, and is a great place for dirt bikes, ATVs, and 4x4s. They also highlight the awesome rock formations",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: atv, dirt_bike"
+      ]
+    },
+    {
+      "slug": "moto-tahoe",
+      "name": "Moto Tahoe",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Moto Tahoe",
+      "snippet": "Moto Tahoe  point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "motorsport-express-truckee",
+      "name": "Motorsport Express Truckee",
+      "website": "http://motosportexpresstruckee.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "dirt_bike",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "http://motosportexpresstruckee.com/",
+        "http://motosportexpresstruckee.com/services"
+      ],
+      "googleOverview": "Motorsport Express Truckee",
+      "snippet": "Motosport Express Truckee | 530.414.3119 Home SERVICES ABOUT LOCATION 530.414.8396 Motorcycles • ATV • Snowmobiles • Watercraft REPAIR MOTORCYCLES SNOWMOBILES ATVS WATERCRAFT STREET BIKES Specializing in maintenance, par",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: atv, dirt_bike, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "nevada-adventure-rentals",
+      "name": "Nevada Adventure Rentals",
+      "website": "http://nevadaadventurerentals.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "dirt_bike",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://nevadaadventurerentals.com/",
+        "https://nevadaadventurerentals.com/shop/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/accessories/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/ascenders-pulleys/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/belay-devices/"
+      ],
+      "googleOverview": "Nevada Adventure Rentals",
+      "snippet": "Climbing Gear, Outdoor Equipment, Motorcycle Rentals - Reno, NV Skip to content (775) 686-3557 0 items Products search Shop Climbing Gear Accessories Ascenders & Pulleys Belay Devices Big Wall Bouldering Carabiners / Draws / Slings Chalk Chalk Bags Harnesses H",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, dirt_bike, utv"
+      ]
+    },
+    {
+      "slug": "north-tahoe-winter-adventures",
+      "name": "North Tahoe Winter Adventures",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "North Tahoe Winter Adventures",
+      "snippet": "North Tahoe Winter Adventures  service point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "pacific-crest-snowcats",
+      "name": "Pacific Crest Snowcats",
+      "website": "http://www.pacificcrestsnowcats.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://pacificcrestsnowcats.com/",
+        "https://pacificcrestsnowcats.com/current-conditions/"
+      ],
+      "googleOverview": "Pacific Crest Snowcats",
+      "snippet": "Only 208 days, 12 hours and 7 minutes until the st We’ve officially wrapped up operations for the sea It’s been a feast or famine type of season here in Our guides got out for some training and a snow co We’ve been taking advantage of some down time to s It’s ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "rock-rat-adventures",
+      "name": "Rock Rat Adventures",
+      "website": "http://www.rockratadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": true,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.hugedomains.com/domain_profile.cfm?d=rockratadventures.com",
+        "https://www.hugedomains.com/shopping_cart.cfm",
+        "https://www.hugedomains.com/domain_profile.cfm?d=RockRatAdventures.com",
+        "https://www.hugedomains.com/domain_profile.cfm?d=rockratadventures.com",
+        "https://www.hugedomains.com/domain_profile.cfm?d=rockratadventures.com",
+        "https://www.hugedomains.com/domain_profile.cfm?d=rockratadventures.com"
+      ],
+      "googleOverview": null,
+      "snippet": "RockRatAdventures.com is for sale | HugeDomains Skip to main content Search +1-303-893-0552 Home FAQs About us Contact us My account My favorites Shopping cart RockRatAdventures.com Buy now: $1,895 &#9656; Buy now Proces",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)",
+        "looks retail-only — review for deactivation"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "rock-trax-utv",
+      "name": "Rock Trax UTV",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Rock Trax UTV",
+      "snippet": "Rock Trax UTV  store point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: utv"
+      ]
+    },
+    {
+      "slug": "rolling-freedom-motorcycles-lake-tahoe-slingshots-motorcycles-moped-scooters-e-bike-rentals-eaglerider-tours",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "e_scooter"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://rolltahoe.com/",
+        "https://rolltahoe.com/rentals/",
+        "https://rolltahoe.com/rolling-freedom-motorcycles-reno-rentals/",
+        "https://rolltahoe.com/product-category/motorcycles/",
+        "https://rolltahoe.com/product-category/moped-scooters/",
+        "https://rolltahoe.com/product-category/e-bikes/"
+      ],
+      "googleOverview": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots - Motorcycles, Moped Scooters, E-Bike Rentals & EagleRider Tours",
+      "snippet": "Slingshot, Motorcycle, Moped, and E-Bike adventure rentals in Lake Tahoe Rentals Tahoe Rentals Reno Rentals Sales All Inventory for Sale Motorcycles Moped Scooters E-Bikes CanAM Spyder Maps About Us News Contact FAQ BOOK NOW 0 Cart 0 items Total &#36; 0.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: dirt_bike, utv"
+      ]
+    },
+    {
+      "slug": "sidestreet-boutique",
+      "name": "Sidestreet Boutique",
+      "website": "http://sidestreetboutique.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sidestreetboutique.com/",
+        "https://sidestreetboutique.com/collections/formal-wear-rental",
+        "https://sidestreetboutique.com/products/sidestreet-boutique-gift-card",
+        "https://sidestreetboutique.com/products/kyle-med",
+        "https://sidestreetboutique.com/products/52-pick-up-l-s-woven-shirt",
+        "https://sidestreetboutique.com/products/izzy-mid-rise-wide-jean"
+      ],
+      "googleOverview": "Sidestreet Boutique Expansive boutique offering casual apparel, tuxedos & dresses, plus baby & kids clothes since 1972.",
+      "snippet": "Sidestreet Boutique Skip to content Facebook Instagram WELCOME TO OUR STORE SUBSCRIBE & SAVE 10% WOMEN WOMEN Pants Shirts & Tops Tees and Tanks Dresses Skirts Sweats Jeans Sweaters New Arrivals Shorts Outerwear & Jackets Matching Sets Swimsuits Sale Pajamas & ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "sierra-adventures-activities-reno-tahoe-llc",
+      "name": "Sierra Adventures",
+      "website": "https://m.wildsierra.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://m.wildsierra.com/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/"
+      ],
+      "googleOverview": "Sierra Adventures / Activities Reno Tahoe, LLC",
+      "snippet": "Sierra Adventures | Adventures in Reno &#8211; Tahoe Sierra Adventures &#8211; Adventures in Reno &#8211; Tahoe Social Sierra Adventures Adventures in Reno &#8211; Tahoe Menu Skip to content Home About Us Custom Adventure Tours Earth Adventures Wind Adventures",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv"
+      ]
+    },
+    {
+      "slug": "snoventures-activity-zone",
+      "name": "SnoVentures Activity Zone",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "SnoVentures Activity Zone",
+      "snippet": "SnoVentures Activity Zone  ski_resort sports_activity_location point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "stealth-tahoe",
+      "name": "Stealth Tahoe",
+      "website": "http://stealthtahoe.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road",
+          "road_cycling"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "gravel_bike",
+          "onewheel",
+          "road_bike"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://stealthtahoe.com/",
+        "https://stealthtahoe.com/pages/sno-go-rental",
+        "https://stealthtahoe.com/collections/bike-gear",
+        "https://stealthtahoe.com/collections/service-parts",
+        "https://stealthtahoe.com/collections/emoto-shop",
+        "https://stealthtahoe.com/pages/service-center"
+      ],
+      "googleOverview": "Stealth Tahoe",
+      "snippet": "Stealth Tahoe Skip to content Free Shipping on orders $100+ *Some exclusions apply E-Bikes Super73 E Ride Pro Rad Power Bikes Stealth Electric Bikes Moonbikes Bike Insurance Sno-Go Sno-Go Sno-Go Rental Bike Shop Brakes Disc Brakes Brake Pads Brake Rotors Hoses",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: dirt_bike"
+      ]
+    },
+    {
+      "slug": "street-rider-of-reno",
+      "name": "Street Rider of Reno",
+      "website": "https://www.streetriderofreno.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.streetriderofreno.com/"
+      ],
+      "googleOverview": "Street Rider of Reno",
+      "snippet": "Street Rider of Reno 0 Skip to Content Street Rider of Reno Home About Open Menu Close Menu Street Rider of Reno Home About Open Menu Close Menu Home About View fullsize Street Rider of Reno Our Current Hours Monday - 9:",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "sunnyside",
+      "name": "Sunnyside",
+      "website": "https://www.sunnysidelodge.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.sunnysidelodge.com/",
+        "https://www.sunnysidelodge.com/shop/",
+        "https://www.sunnysidelodge.com/shop/"
+      ],
+      "googleOverview": "Sunnyside",
+      "snippet": "SEE OUR MENU & HOURS STAY WITH US No matter the season, you’ll find just what you dreamed Tahoe to be in our classic lakeside lodge.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "tahoe-dirt-bikes",
+      "name": "Tahoe Dirt Bikes",
+      "website": "http://tahoedirtbikes.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoedirtbikes.com/",
+        "https://www.tahoedirtbikes.com/book-now/"
+      ],
+      "googleOverview": "Tahoe Dirt Bikes",
+      "snippet": "Tahoe Dirt Bikes &#8211; Lake Tahoe&#039;s Best Adventure Rental Skip to content Tahoe Dirt Bikes Lake Tahoe&#039;s Best Adventure Rental Rental Options Photos and Testimonials Blog Contact Us FAQ Rental Options Photos and Testimonials Blog Contact Us FAQ Fill",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: dirt_bike, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "tahoe-family-adventures",
+      "name": "Tahoe Family Adventures",
+      "website": "http://tahoefamilyadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoefamilyadventures.com/"
+      ],
+      "googleOverview": "Tahoe Family Adventures",
+      "snippet": "Site is undergoing maintenance tahoefamilyadventures.com Site is undergoing maintenance Site will be available soon. Thank you for your patience.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "tahoe-family-adventures-vg1ibwz4",
+      "name": "Tahoe Family Adventures",
+      "website": "http://tahoefamilyadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoefamilyadventures.com/"
+      ],
+      "googleOverview": "Tahoe Family Adventures",
+      "snippet": "Site is undergoing maintenance tahoefamilyadventures.com Site is undergoing maintenance Site will be available soon. Thank you for your patience.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "tahoe-outdoor-adventures",
+      "name": "Tahoe Outdoor Adventures",
+      "website": "https://tahoeoutdooradventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoeoutdooradventures.com/"
+      ],
+      "googleOverview": "Tahoe Outdoor Adventures",
+      "snippet": "Explore Private Snowboarding Lessons Gain Skills Explore Safe, YEAR-ROUND Activities for all levels Tahoe Outdoor Adventures Offers Year-Round Adventures and Activities! Explore Tahoe with our seasonal tours, ranging from family-friendly outings to advanced, c",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: dirt_bike"
+      ]
+    },
+    {
+      "slug": "tahoe-outdoor-adventures-and-rentals",
+      "name": "Tahoe Outdoor Adventures and Rentals",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Tahoe Outdoor Adventures and Rentals",
+      "snippet": "Tahoe Outdoor Adventures and Rentals  tourist_attraction point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "tahoe-outdoor-dirt-bike-location",
+      "name": "Tahoe Outdoor Dirt Bike Location",
+      "website": "https://www.tahoeoutdooradventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoeoutdooradventures.com/"
+      ],
+      "googleOverview": "Tahoe Outdoor Dirt Bike Location",
+      "snippet": "Explore Private Snowboarding Lessons Gain Skills Explore Safe, YEAR-ROUND Activities for all levels Tahoe Outdoor Adventures Offers Year-Round Adventures and Activities! Explore Tahoe with our seasonal tours, ranging from family-friendly outings to advanced, c",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: dirt_bike"
+      ]
+    },
+    {
+      "slug": "tahoe-sled-school",
+      "name": "Tahoe Sled School",
+      "website": "https://www.tahoesledschool.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesledschool.com/",
+        "https://www.tahoesledschool.com/services",
+        "https://www.tahoesledschool.com/rentals"
+      ],
+      "googleOverview": "Tahoe Sled School",
+      "snippet": "Snowmobile Rentals | Tahoe Sled School | United States top of page Home Services Rentals More Use tab to navigate through the menu items.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "tahoe-snowbike-rental",
+      "name": "Tahoe Snowbike Rental",
+      "website": "http://www.tahoesnowbikerental.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "dirt_bike"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesnowbikerental.com/",
+        "https://www.tahoesnowbikerental.com/the-stable",
+        "https://www.tahoesnowbikerental.com/pricing",
+        "https://www.tahoesnowbikerental.com/terms-and-conditions",
+        "https://www.tahoesnowbikerental.com/faq",
+        "https://www.tahoesnowbikerental.com/contact-us"
+      ],
+      "googleOverview": "Tahoe Snowbike Rental",
+      "snippet": "Timbersled Rental | Tahoe Snowbike Rental | Truckee top of page Home The Stable Pricing Terms and Conditions FAQ Calendar Gift Card Contact Apparel More Use tab to navigate through the menu items.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: dirt_bike"
+      ]
+    },
+    {
+      "slug": "tahoe-toys-adventures-llc",
+      "name": "Tahoe Toys & Adventures",
+      "website": "http://tahoetoysadventures.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Tahoe Toys & Adventures LLC",
+      "snippet": "Tahoe Toys & Adventures LLC  point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "the-biggest-little-atvutv-shop",
+      "name": "The Biggest Little ATV/UTV Shop",
+      "website": "https://www.thebiggestlittleatvshop.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.thebiggestlittleatvshop.com/",
+        "https://www.thebiggestlittleatvshop.com/sand-paddle-rentals"
+      ],
+      "googleOverview": "The Biggest Little ATV/UTV Shop",
+      "snippet": "The Biggest Little ATV Shop The Biggest Little ATV Shop Home Contact Sand Paddle Rentals Photos FAQ Home Contact Sand Paddle Rentals Photos FAQ Top Rated ATV and UTV Repair in the Northern Nevada Area Founded in 2020 by a native Nevadan, The Biggest Little ATV",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, utv"
+      ]
+    },
+    {
+      "slug": "the-pits",
+      "name": "The Pits",
+      "website": null,
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "The Pits",
+      "snippet": "The Pits  point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "the-sierra-sled-shop",
+      "name": "The Sierra Sled Shop",
+      "website": "http://www.sierrasled.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowmobile"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.sierrasled.com/",
+        "https://www.sierrasled.com/book-online",
+        "https://www.sierrasled.com/services"
+      ],
+      "googleOverview": "The Sierra Sled Shop",
+      "snippet": "6795 SIERRA SLED SHOP POWERSPORTS GARAGE at Stewart's Marine Service SERVICES SERVICES TOP END REBUILDS, CLUTCH SERVICING, & PERFORMANCE Top End Repair, Full Engine Rebuild Service, Clutch Repair/Service, & Performance Tuning REPAIRS & MAINTENANCE Seasonal Mai",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowmobile"
+      ]
+    },
+    {
+      "slug": "toms-snowmobiles-services",
+      "name": "Tom's Snowmobile & Service",
+      "website": "https://tomssnowmobile.com/?utm_source=google&utm_medium=organic&utm_campaign=GMB-service",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tomssnowmobile.com/",
+        "https://www.tomssnowmobile.com/Shop-BRP/Can-Am",
+        "https://www.tomssnowmobile.com/Shop-BRP/Ski-Doo",
+        "https://www.tomssnowmobile.com/Shop-BRP/Lynx",
+        "https://www.tomssnowmobile.com/Showroom/Schedule-A-Demo",
+        "https://www.tomssnowmobile.com/Services/Service-Department"
+      ],
+      "googleOverview": "Tom's Snowmobiles & Services",
+      "snippet": "Ski-Doo Snowmobile Sales & Service CA | Sierraville, California New & Used Snowmobile Sales & Parts Dealer Toggle navigation Home Showroom All Inventory New Inventory Pre-Owned New Models Can-Am Ski-Doo Lynx Promotions Value Your Trade Schedule A Demo Services",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: atv, snowmobile, utv"
+      ]
+    },
+    {
+      "slug": "truckee-bike-park",
+      "name": "Truckee Bike Park",
+      "website": "https://www.truckeebikepark.org/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.truckeebikepark.org/",
+        "https://www.truckeebikepark.org/merch"
+      ],
+      "googleOverview": "Truckee Bike Park",
+      "snippet": "​ Closed The Park is Currently Thank you for a great 2025 season! We'll see you in 2026! ​ Check out our social media for the most up-to-date conditions when opening day approaches.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "utv-addiction",
+      "name": "UTV Addiction",
+      "website": "http://www.utvaddiction.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://utvaddiction.com/"
+      ],
+      "googleOverview": "UTV ADDICTION",
+      "snippet": "UTV Addiction - UTV Parts, Service, Installation - Reno, NV 2175 Market St STE A. 89502 775-813-8882 utvaddiction@gmail.com Select Page 775-813-8882 UTV Addiction has moved. Our new location is one half-mile west directl",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: utv"
+      ]
+    },
+    {
+      "slug": "virginia-city-off-road-experience",
+      "name": "Virginia City off road Experience",
+      "website": "https://virginiacityoffroad.com/",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Virginia City off road Experience",
+      "snippet": "Virginia City off road Experience People say this tourist attraction offers an adventurous off-road experience with beautiful views and opportunities to explore historic sites and mines. They highlight the knowledgeable",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "zephyr-cove-snowmobiling-tours",
+      "name": "Zephyr Cove Snowmobile Tours",
+      "website": "https://www.zephyrcove.com/snowmobiles/tahoe-snowmobiling-experience?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "category": "off_road",
+      "current": {
+        "categories": [
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "atv",
+          "snowmobile",
+          "utv"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.zephyrcove.com/snowmobiles/tahoe-snowmobiling-experience",
+        "https://www.zephyrcove.com/zephyr-cove-marina/watercraft-rentals",
+        "https://www.zephyrcove.com/zephyr-cove-marina/buoy-rentals",
+        "https://www.zephyrcove.com/snowmobiles/clothing-gear-rentals",
+        "https://www.zephyrcove.com/things-to-do/shopping",
+        "https://www.zephyrcove.com/zephyr-cove-marina/watercraft-rentals/powerboat-rentals"
+      ],
+      "googleOverview": "Zephyr Cove Snowmobiling Tours",
+      "snippet": "com/ Search Zephyr Cove Resort & Lake Tahoe Cruises,760 Highway 50, Zephyr Cove Nevada theme change summer theme winter theme summer theme icon winter theme icon weather - Tahoe Snowmobiling Experience &#176;F Book Now Plan History Maps & Parking Travel Tips W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: atv, snowmobile, utv"
+      ]
+    }
+  ]
+}

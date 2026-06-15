@@ -21,7 +21,9 @@ export const CATEGORIES = [
     subcategories: [
       { slug: "alpine_ski", label: "Alpine Skis" },
       { slug: "alpine_ski_demo", label: "Alpine Ski Demo" },
+      { slug: "alpine_ski_lease", label: "Season Ski Lease" },
       { slug: "snowboard", label: "Snowboards" },
+      { slug: "snowboard_lease", label: "Season Snowboard Lease" },
       { slug: "cross_country_ski", label: "Cross-Country Skis" },
       { slug: "splitboard", label: "Splitboards" },
       { slug: "snowshoe", label: "Snowshoes" },
@@ -51,6 +53,12 @@ export const CATEGORIES = [
       { slug: "gravel_bike", label: "Gravel Bikes" },
       { slug: "ebike_road", label: "Electric Road Bikes" },
     ],
+  },
+  {
+    slug: "burning_man_bikes",
+    label: "Burning Man Bikes",
+    icon: "bike",
+    subcategories: [{ slug: "playa_bike", label: "Playa Bikes" }],
   },
   {
     slug: "water_sports",

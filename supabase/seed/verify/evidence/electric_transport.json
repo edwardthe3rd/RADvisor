@@ -1,0 +1,3621 @@
+{
+  "category": "electric_transport",
+  "gatheredAt": "2026-06-14T21:13:44.495Z",
+  "results": [
+    {
+      "slug": "andersons-bicycle-rental",
+      "name": "Anderson's Bicycle Rental",
+      "website": "http://www.andersonsbicyclerental.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://andersonsbicyclerental.com/",
+        "https://andersonsbicyclerental.com/about/",
+        "https://andersonsbicyclerental.com/bicycles-rates/",
+        "https://andersonsbicyclerental.com/group-reservations/",
+        "https://andersonsbicyclerental.com/faq/",
+        "https://andersonsbicyclerental.com/blog/"
+      ],
+      "googleOverview": "Anderson's Bicycle Rental",
+      "snippet": "Home - Anderson&#039;s Bicycle Rental Bikes Are First Come, First Served Basis Only Best of Tahoe 2025 Winner Sports and Recreation ~ Best Summer Activity Anderson&#039;s Bicycle Rental Home About Us Bicycles &#038; Rates Group Reservations FAQ Activities Guid",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "another-bike-shop-reno",
+      "name": "Another Bike Shop Reno",
+      "website": "https://www.anotherbikeshop.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.anotherbikeshop.com/",
+        "https://www.anotherbikeshop.com/account.cfm",
+        "https://www.anotherbikeshop.com/storelocator/",
+        "https://www.anotherbikeshop.com/cart.cfm",
+        "https://www.anotherbikeshop.com/product-list/bikes-1253/",
+        "https://www.anotherbikeshop.com/product-list/bikes-1253/electric-1514/"
+      ],
+      "googleOverview": "Another Bike Shop Reno",
+      "snippet": "Santa Cruz Bicycles Smith Optics Specialized Shop All Specialized Bikes Frames Apparel & Acccessories Components Thule Transition Bikes Troy Lee Designs Rentals Services Bike Repair Suspension Service Gear Selection Financing Mini Service Classes About Careers",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "big-blue-bike-rentals-and-tours",
+      "name": "Big Blue Bike Rentals and Tours",
+      "website": "http://bigbluebikerentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://bigbluebikerentals.com/",
+        "https://bigbluebikerentals.com/rentals/",
+        "https://bigbluebikerentals.com/bike-trails/east-shore-trail/",
+        "https://bigbluebikerentals.com/bike-trails/flume-trail/",
+        "https://bigbluebikerentals.com/blog/",
+        "https://bigbluebikerentals.com/things-to-do-north-tahoe/"
+      ],
+      "googleOverview": "Big Blue Bike Rentals and Tours",
+      "snippet": "Lake Tahoe Bike Rentals with Big Blue Bike Rentals Skip to content Book Now Bike Rentals Rides East Shore Trail Flume Trail Blog Things to Do Visit Us in SF Contact Us Contact Us Group Rentals About Us Bike Rentals Rides East Shore Trail Flume Trail Things to ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "big-daddys-bike-brew",
+      "name": "Big Daddy's Bike & Brew",
+      "website": "https://www.bigdaddysbikeandbrew.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bigdaddysbikeandbrew.com/"
+      ],
+      "googleOverview": "Big Daddy's Bike & Brew",
+      "snippet": "From local favorites to our very own \" DIPADADDY \", Big Daddy's pours a variety of seasonal suds to soothe the soul.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "bike-lake-tahoe",
+      "name": "Bike Lake Tahoe",
+      "website": "https://bikelaketahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://bikelaketahoe.com/"
+      ],
+      "googleOverview": "Bike Lake Tahoe",
+      "snippet": "Bike Lake Tahoe  bicycle_store sporting_goods_store manufacturer store point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "bike-truckee",
+      "name": "Bike Truckee",
+      "website": "https://www.truckeebikerentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.truckeebikerentals.com/",
+        "https://www.truckeebikerentals.com/trailreport",
+        "https://www.truckeebikerentals.com/rent",
+        "https://www.truckeebikerentals.com/comfort-bikes-rent",
+        "https://www.truckeebikerentals.com/copy-of-electric-bikes-1",
+        "https://www.truckeebikerentals.com/copy-of-electric-bikes"
+      ],
+      "googleOverview": "Bike Truckee",
+      "snippet": "HOME | Bike Truckee | eBike Retailer | Bike Rentals top of page OFFERING BIKE SERVICE AND REPAIRS YEAR ROUND BOOK YOUR BIKE NOW A minimum of 24 hours' advance booking is required Walk-ins are welcome 530.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "bikepath-e-bike-rentals",
+      "name": "Pedego Electric Bikes Reno",
+      "website": "http://www.pedegoreno.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://dealers.pedegoelectricbikes.com/pages/dealers/reno"
+      ],
+      "googleOverview": "Bikepath E-Bike Rentals",
+      "snippet": "We are the region's foremost electric bike experts offering sales, rentals, accessories, and service.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "black-tie-adventure-rentals-north-tahoe",
+      "name": "Black Tie Bike Rentals North Tahoe",
+      "website": "https://www.blacktiesummer.com/north-tahoe/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.blacktiesummer.com/north-tahoe/"
+      ],
+      "googleOverview": "Black Tie Adventure Rentals North Tahoe",
+      "snippet": "North Tahoe - Black Tie Bike Rentals Summer Winter Call Us: 866.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-carson-city",
+      "name": "BlueZone Sports - Carson City",
+      "website": "http://www.bluezonesports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "wakeboard",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - Carson City",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-south-lake-tahoe",
+      "name": "BlueZone Sports - South Lake Tahoe",
+      "website": "http://www.bluezonesports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "wakeboard",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - South Lake Tahoe",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-tahoe-city",
+      "name": "BlueZone Sports - Tahoe City",
+      "website": "https://www.bluezonesports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "wakeboard",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - Tahoe City",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "cloud-of-goods-reno",
+      "name": "Cloud of Goods Reno",
+      "website": "https://www.cloudofgoods.com/reno-nv?utm_source=GMB-RNO&utm_medium=organic",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "e_scooter"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.cloudofgoods.com/reno-nv/",
+        "https://www.cloudofgoods.com/",
+        "https://www.cloudofgoods.com/product-rentals/all",
+        "https://www.cloudofgoods.com/city-rental",
+        "https://www.cloudofgoods.com/reno-nv/product-rentals/mobility-scooters",
+        "https://www.cloudofgoods.com/reno-nv/product-rentals/mobility-wheelchairs"
+      ],
+      "googleOverview": "Cloud of Goods Reno",
+      "snippet": "Reno Mobility Scooter & Wheelchair Rentals Delivered | Cloud of Goods Cloud of Goods logo Stylized white text logo on transparent background Sign in Account & orders Your cart is empty.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city, e_scooter"
+      ]
+    },
+    {
+      "slug": "college-cyclery",
+      "name": "College Cyclery",
+      "website": "http://www.collegecyclery.net/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.collegecyclery.net/",
+        "https://www.collegecyclery.net/product-list/bikes-1000/",
+        "https://www.collegecyclery.net/product-list/bikes-1000/road-gravel-1001/",
+        "https://www.collegecyclery.net/product-list/bikes-1000/mountain-1006/",
+        "https://www.collegecyclery.net/product-list/bikes-1000/commuter-urban-1017/",
+        "https://www.collegecyclery.net/product-list/bikes-1000/comfort-1020/"
+      ],
+      "googleOverview": "College Cyclery",
+      "snippet": "College Cyclery | Reno, NV | Bike Shop Skip to main content Free Parking in the Rear! Use the back lot and rear entrance for easy access! Toggle navigation Search Search Store Menu x Store Store Shop Bikes Bikes Road/Gra",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "cyclepaths-bikeshop",
+      "name": "CyclePaths BikeShop",
+      "website": "http://www.cyclepaths.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "e_scooter"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://cyclepaths.com/",
+        "https://cyclepaths.com/bike-rentals/",
+        "https://cyclepaths.com/service-repair/",
+        "https://cyclepaths.com/about-the-shop/",
+        "https://cyclepaths.com/segway-e-bikes/shop-segway-inventory/",
+        "https://cyclepaths.com/deviate-cycles/"
+      ],
+      "googleOverview": "CyclePaths BikeShop",
+      "snippet": "00 HOME SHOP Amflow eMTB Deviate Marin Bikes Murf Electric Bikes Rocky Mountain Santa Cruz Segway E-Bikes &#038; E-Scooters BIKE RENTALS SERVICE APPOINTMENT TRAIL INFO ABOUT About Us Events Refunds &#038; Returns CONTACT HOME SHOP Amflow eMTB Deviate Marin Bik",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city, e_scooter"
+      ]
+    },
+    {
+      "slug": "e-bike-hub",
+      "name": "E-Bike Hub",
+      "website": "http://e-bikehub.bike/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.e-bikehub.bike/",
+        "https://www.e-bikehub.bike/service",
+        "https://www.e-bikehub.bike/shop-LXvB3",
+        "https://www.e-bikehub.bike/rentals",
+        "https://www.e-bikehub.bike/shop-LXvB3/p/level-4-rec",
+        "https://www.e-bikehub.bike/shop-LXvB3/p/aventure-20-4rbh8-8p95x-c2f34"
+      ],
+      "googleOverview": "E-Bike Hub",
+      "snippet": "E-Bike Hub | Discover E-Biking Today Ride More! Skip to Content Open Menu Close Menu Service Shop Rentals Playa Bike Sale Login Account 0 0 Service Shop Rentals Playa Bike Sale Login Account 0 0 Open Menu Close Menu Service Shop Rentals Playa Bike Sale Login A",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "east-shore-e-bikes-tours-rentals",
+      "name": "Tahoe Multisport — East Shore",
+      "website": "https://tahoemultisport.com/home-2/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoemultisport.com/home-2/",
+        "https://tahoemultisport.com/",
+        "https://tahoemultisport.com/rad-power-bikes-e-bikes/",
+        "https://tahoemultisport.com/vacation-rentals/",
+        "https://tahoemultisport.com/safety-demonstration-videos/",
+        "https://tahoemultisport.com/cross-country-ski-rentals/"
+      ],
+      "googleOverview": "East Shore E-Bikes Tours & Rentals",
+      "snippet": "East Shore Ebikes &#8211; Tahoe Multisport Skip to content Tahoe Multisport Now offering E BIKE RENTALS Menu expanded collapsed Grab & Go Lake Tahoe Beach Sauna Tours, Rentals, and More Tours Clear Kayak Tours E-BIKE Rentals Rates Rental Delivery Retail Items ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "eastlake-ebike-rentals",
+      "name": "Eastlake Ebike Rentals",
+      "website": null,
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Eastlake Ebike Rentals",
+      "snippet": "Eastlake Ebike Rentals  service point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "emerald-bay-bikes",
+      "name": "Emerald Bay Bikes",
+      "website": "https://www.emeraldbaybikes.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.emeraldbaybikes.com/",
+        "https://www.emeraldbaybikes.com/collections",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-bottom-out-bumper",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-lev-ball-for-actuator",
+        "https://www.emeraldbaybikes.com/products/iu-kind-shock-lev-ball-for-clamp-anchor-alignment",
+        "https://www.emeraldbaybikes.com/products/tektro-837al-mtb-linear-pull-brake-front-or-rear-158g-silver"
+      ],
+      "googleOverview": "Emerald Bay Bikes",
+      "snippet": "Family owned and operated Welcome to Emerald Bay Bikes! Founded in 2025 by a father-son duo, started as a eBike rental shop with a simple belief: eBikes are a fun and adventurous way for everyone to explore.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "flume-trail-bikes",
+      "name": "Flume Trail Bikes",
+      "website": "http://www.flumetrailtahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.flumetrailtahoe.com/",
+        "https://www.flumetrailtahoe.com/mountainbikerentals",
+        "https://www.flumetrailtahoe.com/coaching"
+      ],
+      "googleOverview": "Flume Trail Bikes",
+      "snippet": "Flume Trail Bikes 0 Skip to Content Mountain Bike Rentals 2026 Shuttles Path Bike Rentals How to Get Here About Us Contact Open Menu Close Menu Mountain Bike Rentals 2026 Shuttles Path Bike Rentals How to Get Here About Us Contact Open Menu Close Menu Mountain",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "gondola-ski-sports",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://gondolaskitahoe.com/",
+        "https://gondolaskitahoe.com/rental-reservations/",
+        "https://gondolaskitahoe.com/bike-rentals/",
+        "https://gondolaskitahoe.com/snowboard-rentals/",
+        "https://gondolaskitahoe.com/ski-rentals/",
+        "https://gondolaskitahoe.com/bike-rentals/"
+      ],
+      "googleOverview": "Gondola Ski + Sports",
+      "snippet": "Home - Gondola Ski Tahoe Home Rental Reservations Bike Rentals Snowboards Skis Employment Blog Select Page Gondola Ski & Sports South Lake Tahoe Located on the Heavenly Plaza under the gondola we have the gear you need to enjoy the mountains.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "granite-chief-powered-by-bluezone-sports",
+      "name": "Granite Chief Powered by BlueZone Sports",
+      "website": "https://bluezonesports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "wakeboard",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "Granite Chief Powered by BlueZone Sports",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "great-basin-bicycles",
+      "name": "Great Basin Bicycles",
+      "website": "http://greatbasinbicycles.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.greatbasinbicycles.com/",
+        "https://www.greatbasinbicycles.com/the-shop-service"
+      ],
+      "googleOverview": "Great Basin Bicycles",
+      "snippet": "Rental of garmin Vector 3 pedals Follow this link for more info! 775-825-8258 8048 S Virginia St Reno, NV 89511 (behind the Human Bean coffee kiosk) Store Hours: M-F 10:00a – 6:00p Sat 10:00a – 5:00p Sun Closed We are open Monday through Saturday year round.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "high-sierra-cycling",
+      "name": "High Sierra Cycling",
+      "website": "http://highsierracycling.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.highsierracycling.com/",
+        "https://www.highsierracycling.com/services",
+        "https://www.highsierracycling.com/rentalbikes",
+        "https://www.highsierracycling.com/services",
+        "https://www.highsierracycling.com/shop",
+        "https://www.highsierracycling.com/services"
+      ],
+      "googleOverview": "High Sierra Cycling",
+      "snippet": "High Sierra Cycling 0 Skip to Content Home Bikes Mountain Bikes Road & Gravel Bikes E-bikes Services Service & Tune-Ups Rental Bikes Events & Rides About About Us Ride & Rider Photos Open Menu Close Menu Home Bikes Mountain Bikes Road & Gravel Bikes E-bikes Se",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "kawasaki-yamaha-of-reno",
+      "name": "Kawasaki Yamaha of Reno",
+      "website": "http://www.kawasakiofreno.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://kawasakiofreno.com/",
+        "https://kawasakiofreno.com/inventory/?condition=New",
+        "https://kawasakiofreno.com/Kawasaki-For-Sale/",
+        "https://kawasakiofreno.com/service-appointments/",
+        "https://kawasakiofreno.com/service-specials/",
+        "https://kawasakiofreno.com/service-appointments/"
+      ],
+      "googleOverview": "Kawasaki Yamaha of Reno",
+      "snippet": "Here are some of the service specials that we’re currently offering: Side by Side basic service: Get your all terrain vehicles ready for the fall/winter season with our basic service starting at, $199.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "kiwanis-activity-center-and-bike-program",
+      "name": "Kiwanis Activity Center and Bike Program",
+      "website": "http://www.kiwanisbikes.org/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.kiwanisbikes.org/"
+      ],
+      "googleOverview": "Kiwanis Activity Center and Bike Program",
+      "snippet": "Kiwanis Bike Program - Kiwanis Bike Program Home Kiwanis Bike Program Home Bikes Bike Clinics Bike Sales Clubs Rodeos Learn to repair Bike Donations Bike Consignments Bike Swaps Burning Man Bike Sales Bike Volunteer Earn",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "knee-walker-rental-reno",
+      "name": "Knee Walker Rental Reno",
+      "website": null,
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Knee Walker Rental Reno",
+      "snippet": "Knee Walker Rental Reno  service point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "knee-walker-rental-sparks",
+      "name": "Knee Walker Rental Sparks",
+      "website": null,
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Knee Walker Rental Sparks",
+      "snippet": "Knee Walker Rental Sparks  point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "lake-tahoe-bike-rentals",
+      "name": "Powder House — Lake Tahoe Bike Rentals",
+      "website": "http://tahoepowderhouse.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": "Lake Tahoe Bike Rentals",
+      "snippet": "South Lake Tahoe Ski Rentals & Snowboard Rentals Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowb",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "lake-tahoe-slingshots",
+      "name": "Lake Tahoe Slingshots",
+      "website": "http://laketahoeslingshotrentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://laketahoeslingshotrentals.com/",
+        "https://laketahoeslingshotrentals.com/shop/"
+      ],
+      "googleOverview": "Lake Tahoe Slingshots",
+      "snippet": "Home - Lake Tahoe Slingshot Rentals About Rentals Contact Roll Tahoe Book Now About Rentals Contact Roll Tahoe Book Now FOR BOOKINGS CALL 775-580-7054 Reserve Your Adventure Lake Tahoe's Premier Slingshot Rental Company Home of The 4-Seater Slingshot Lake Taho",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "medtech-services",
+      "name": "Medtech Services",
+      "website": "https://www.medtech-services.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.medtech-services.com/",
+        "https://www.medtech-services.com/store",
+        "https://www.medtech-services.com/services",
+        "https://www.medtech-services.com/rental-request",
+        "https://www.medtech-services.com/store/bath-safety-products"
+      ],
+      "googleOverview": "Medtech Services",
+      "snippet": "Medtech Services | Enhance Mobility Today! 0 Skip to Content Home Shop Services Rental Request Contact Us Blog About FAQ Financing Options Medtech Services Open Menu Close Menu Home Shop Services Rental Request Contact Us Blog About FAQ Financing Options Medte",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "numotion",
+      "name": "Numotion",
+      "website": "https://www.numotion.com/locations/reno-nv",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.numotion.com/locations/reno-nv",
+        "https://www.numotion.com/in-shop-service",
+        "https://www.numotion.com/remote-service",
+        "https://www.numotion.com/in-home-service-repair"
+      ],
+      "googleOverview": "Numotion",
+      "snippet": "Numotion Reno, NV | Numotion (800) 500-9150 (starts a phone call) Resources myNumotion App Pay your bill, track your order, get live support and more For Medical Professionals Access classes and scholarly articles from t",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "olympic-bike-shop",
+      "name": "Olympic Bike Shop",
+      "website": "http://www.olympicbikeshop.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.olympicbikeshop.com/",
+        "https://www.olympicbikeshop.com/about/location-pg141.htm",
+        "https://www.olympicbikeshop.com/account.cfm",
+        "https://www.olympicbikeshop.com/product-list/bikes-1000/",
+        "https://www.olympicbikeshop.com/product-list/bikes-1000/road-1001/",
+        "https://www.olympicbikeshop.com/product-list/bikes-1000/gravel-1244/"
+      ],
+      "googleOverview": "Olympic Bike Shop",
+      "snippet": "Olympic Bike Shop | North Lake Tahoe Skip to main content Toggle navigation Store Store Account Account Shop Menu has items Bikes Bikes Road Gravel Mountain Commuter/Urban Comfort Cruiser Fitness Hybrid Children's Other Electric Electric Bikes Wheels Wheels Pa",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "pacos-truckee",
+      "name": "Pacos Truckee",
+      "website": "http://www.pacostruckee.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.pacoscalifornia.com/",
+        "https://www.pacoscalifornia.com/product-list/bikes-1000/",
+        "https://www.pacoscalifornia.com/product-list/bikes-1000/road-1001/",
+        "https://www.pacoscalifornia.com/product-list/bikes-1000/mountain-1006/",
+        "https://www.pacoscalifornia.com/product-list/bikes-1000/cyclocross-1014/",
+        "https://www.pacoscalifornia.com/product-list/bikes-1000/commuter-urban-1017/"
+      ],
+      "googleOverview": "Pacos Truckee",
+      "snippet": "Specialized S-Works Demo 11 $11,000.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "pedego-electric-bikes-reno",
+      "name": "Pedego Electric Bikes Reno",
+      "website": "https://pedegoelectricbikes.com/dealers/reno/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://dealers.pedegoelectricbikes.com/pages/dealers/reno",
+        "https://pedegoelectricbikes.com/shop",
+        "https://pedegoelectricbikes.com/products"
+      ],
+      "googleOverview": "Pedego Electric Bikes Reno Store for sales & rentals of electric bikes, plus accessories & riding apparel.",
+      "snippet": "We are the region's foremost electric bike experts offering sales, rentals, accessories, and service.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "pine-nut-ebike-rentals-south-lake-tahoe",
+      "name": "Pine Nut Ebike Rentals South Lake Tahoe",
+      "website": "https://www.pinenutebikerentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "e_scooter"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://pinenutebikerentals.com/",
+        "https://pinenutebikerentals.com/rentals",
+        "https://pinenutebikerentals.com/south-lake-tahoe-ebike-rentals",
+        "https://pinenutebikerentals.com/pine-nut-online-store",
+        "https://pinenutebikerentals.com/rentals"
+      ],
+      "googleOverview": "Pine Nut Ebike Rentals South Lake Tahoe",
+      "snippet": "E-bike Rentals South Lake Tahoe - Best Rates and Biggest Fleet 0 Skip to Content Rates Store Info Contact About Blog book now Open Menu Close Menu book now Rates Store Info Contact About Blog Open Menu Close Menu Rates Store Folder: Info Back Contact About Blo",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city, e_scooter"
+      ]
+    },
+    {
+      "slug": "rei-bike-shop",
+      "name": "REI Bike Shop",
+      "website": "https://www.rei.com/stores/reno/bike-shop",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.rei.com/stores/reno/bike-shop",
+        "https://www.rei.com/",
+        "https://www.rei.com/ShoppingCart",
+        "https://www.rei.com/stores/bike-shop",
+        "https://www.rei.com/s/new-running-shoes-releases",
+        "https://www.rei.com/stores/ski-snowboard-shop"
+      ],
+      "googleOverview": "REI Bike Shop",
+      "snippet": "com Home Page Shop Clear Search Search Cancel My REI Find your store Sign In Cart Open menu Close menu My Account - Sign in or Register Camp & Hike All Camp & Hike Camp & Hike All Camp & Hike Hiking Hiking All Hiking Footwear Jackets Shirts Pants Shorts Socks ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "reno-bike-project",
+      "name": "Reno Bike Project",
+      "website": "http://www.renobikeproject.org/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": true,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://renobikeproject.org/",
+        "https://renobikeproject.org/services/",
+        "https://renobikeproject.org/events/after-hours-workshops/",
+        "https://renobikeproject.org/shop/",
+        "https://renobikeproject.org/services/"
+      ],
+      "googleOverview": "Reno Bike Project",
+      "snippet": "This workshop runs once per season, and will be announced as the date approaches.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)",
+        "looks retail-only — review for deactivation"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "reno-harley-davidson",
+      "name": "Reno Harley Davidson",
+      "website": "https://www.renohd.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.renohd.com/",
+        "https://www.renohd.com/service/",
+        "https://www.renohd.com/speed-shop-custom-builds/",
+        "https://www.renohd.com/biggest-little-speed-shop-menu/",
+        "https://www.renohd.com/schedule-service/",
+        "https://www.renohd.com/service-specials/"
+      ],
+      "googleOverview": "Reno Harley Davidson Legendary brand of American motorcycles, plus apparel & more at some branches.",
+      "snippet": "Reno Harley Davidson | New & Used Harley Dealer Serving Reno, Sparks & Lake Tahoe, NV Immediate Pre-Ordering Available Now! Click here to learn more! X Main 775-473-9613 Call Us Service & Parts 775-473-9618 Call Us 2315",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "ride-tahoe-rentals",
+      "name": "Ride Tahoe Rentals",
+      "website": "https://www.ridetahoerentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://ridetahoerentals.com/",
+        "https://ridetahoerentals.com/winter-rentals/"
+      ],
+      "googleOverview": "Ride Tahoe Rentals",
+      "snippet": "Ride Tahoe Rentals - High Performance MTB and E-MTB Rentals Skip to content Rentals Repairs &#038; Tuneups Trails Faqs Social Media Book Now Main Menu Rentals Repars &#038; Tuneups Trails Faqs Social Media Book Now info@ridetahoerentals.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "rolling-freedom-motorcycles-lake-tahoe-slingshots-motorcycles-moped-scooters-e-bike-rentals-eaglerider-tours",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "e_scooter"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://rolltahoe.com/",
+        "https://rolltahoe.com/rentals/",
+        "https://rolltahoe.com/rolling-freedom-motorcycles-reno-rentals/",
+        "https://rolltahoe.com/product-category/motorcycles/",
+        "https://rolltahoe.com/product-category/moped-scooters/",
+        "https://rolltahoe.com/product-category/e-bikes/"
+      ],
+      "googleOverview": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots - Motorcycles, Moped Scooters, E-Bike Rentals & EagleRider Tours",
+      "snippet": "Slingshot, Motorcycle, Moped, and E-Bike adventure rentals in Lake Tahoe Rentals Tahoe Rentals Reno Rentals Sales All Inventory for Sale Motorcycles Moped Scooters E-Bikes CanAM Spyder Maps About Us News Contact FAQ BOOK NOW 0 Cart 0 items Total &#36; 0.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city, e_scooter"
+      ]
+    },
+    {
+      "slug": "sierra-bicycle-supply",
+      "name": "Sierra Bicycle Supply",
+      "website": "https://shopbikesupply.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://shopbikesupply.com/",
+        "https://shopbikesupply.com/collections/chain-tools-shop-tools",
+        "https://shopbikesupply.com/collections/general-shop-tools",
+        "https://shopbikesupply.com/collections/tool-kits-shop-tools",
+        "https://shopbikesupply.com/collections/shop-supply",
+        "https://shopbikesupply.com/collections/shop-tools"
+      ],
+      "googleOverview": "Sierra Bicycle Supply",
+      "snippet": "Specialized | Bikes | eBikes | MTB | Road | Gravel | Commuter | Gear Sierra Bicycle Supply Skip to content LIVE Inventory - FREE shipping on orders over $99 in the US Lower 48 - Questions? Call or Text 775-355-0655 Home",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "sierra-cyclesmith-bicycle-shop",
+      "name": "Sierra Cyclesmith Bicycle Shop",
+      "website": "https://www.sierracyclesmith.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.sierracyclesmith.com/",
+        "https://www.sierracyclesmith.com/product-list/e-bikes-1268/",
+        "https://www.sierracyclesmith.com/product-list/e-bikes-1268/city-recreation-1262/",
+        "https://www.sierracyclesmith.com/product-list/e-bikes-1268/cruisers-1263/",
+        "https://www.sierracyclesmith.com/product-list/e-bikes-1268/mountain-1261/",
+        "https://www.sierracyclesmith.com/product-list/e-bikes-1268/road-1260/"
+      ],
+      "googleOverview": "Sierra Cyclesmith Bicycle Shop",
+      "snippet": "Sierra Cyclesmith | Reno, NV Skip to main content Mon - Fri: 11:00am - 6:00pm Sat: 10:00am - 5:00pm Sun: Closed Store Store Account Account Cart Cart (0) Subtotal : $ 0.00 Checkout Cart Toggle navigation Search Search Me",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "sierra-ski-cycle-works",
+      "name": "Sierra Ski & Cycle Works",
+      "website": "https://sierraskiandcycleworks.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sierraskiandcycleworks.com/",
+        "https://sierraskiandcycleworks.com/about-south-lake-tahoe-ski-bike-shop/",
+        "https://sierraskiandcycleworks.com/south-lake-tahoe-bike-shop/",
+        "https://sierraskiandcycleworks.com/south-lake-tahoe-ski-shop/",
+        "https://sierraskiandcycleworks.com/contact-south-lake-tahoe-ski-bike-shop/",
+        "https://sierraskiandcycleworks.com/about-south-lake-tahoe-ski-bike-shop/"
+      ],
+      "googleOverview": "Sierra Ski & Cycle Works",
+      "snippet": "1980 Skip to main content Menu Home About Bike Ski Spoke Junkie Contact facebook Close Search Tahoe Original Since 1980 Sierra Ski & Cycle Works specializes in service, repairs, sales and rentals.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "south-lake-e-bikes",
+      "name": "South Lake E-bikes",
+      "website": "http://southlakeebikes.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://southlakeebikes.com/",
+        "https://southlakeebikes.com/explore-lake-tahoe-e-bike-rental-faq-riding-guide/"
+      ],
+      "googleOverview": "South Lake E-bikes",
+      "snippet": "Lake Tahoe E-Bike Rentals | South Lake E-Bikes Home Make A Reservation Our E-Bikes FAQ Repair Contact Home Make A Reservation Our E-Bikes FAQ Repair Contact Reserve eBike South Lake E-Bikes offers the best Lake Tahoe e-bike rentals for exploring Emerald Bay an",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "south-shore-bikes",
+      "name": "South Shore Bikes",
+      "website": "http://www.southshorebikestahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://southshorebikestahoe.com/",
+        "https://southshorebikestahoe.com/rentals/",
+        "https://southshorebikestahoe.com/store/",
+        "https://southshorebikestahoe.com/rentals/",
+        "https://southshorebikestahoe.com/rental-waiver/",
+        "https://southshorebikestahoe.com/rental-waiver/"
+      ],
+      "googleOverview": "South Shore Bikes",
+      "snippet": "Home Page - South Shore Bikes Tahoe Skip to content 2025 Voted Tahoe's Best Bike Shop! (530) 544-7433 RIDE - OPEN 10 AM to 6 PM Home Bike Trails About Us Rentals Store Winter &#038; Snow Toggle website search Menu Close Home Bike Trails About Us Rentals Store ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "south-tahoe-ebike-rentals-margaritaville",
+      "name": "South Tahoe Ebike Rentals - Margaritaville",
+      "website": "http://southtahoeebikerentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.southtahoeebikerentals.com/"
+      ],
+      "googleOverview": "South Tahoe Ebike Rentals - Margaritaville",
+      "snippet": "South Tahoe EBike Rentals 0 Skip to Content Open Menu Close Menu Open Menu Close Menu RIDE EASY EXPLORE MORE Explore South Lake Tahoe in Style with South Tahoe Ebike Rentals! Cruise through paradise with ease—South Tahoe Ebike Rentals is your go-to spot for ad",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "sports-ltd-rentals",
+      "name": "Sports Ltd. Rentals",
+      "website": "http://www.sportsltdrentals.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sportsltdrentals.com/",
+        "https://sportsltdrentals.com/rentals/",
+        "https://sportsltdrentals.com/winter-rentals/",
+        "https://sportsltdrentals.com/summer-rentals-e-bikes-bike-rentals-south-lake-tahoe-california-electric-mountain-bike/",
+        "https://sportsltdrentals.com/25-26-demo-ski-program/",
+        "https://sportsltdrentals.com/contact-us/"
+      ],
+      "googleOverview": "Sports Ltd. Rentals",
+      "snippet": "- Sports Ltd Rentals E-Bike, Ski, Snowboard, E-Mtn Bike, Camping, & Backcountry Skip to content Sports Ltd Rentals Outdoor Equipment Rental Rentals &#038; Demos Winter Rentals Summer Rentals Book Now Demo Skis 25/26 Demo Ski Program Contact Us Trail Info &#038",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "stealth-tahoe",
+      "name": "Stealth Tahoe",
+      "website": "http://stealthtahoe.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "onewheel"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://stealthtahoe.com/",
+        "https://stealthtahoe.com/pages/sno-go-rental",
+        "https://stealthtahoe.com/collections/bike-gear",
+        "https://stealthtahoe.com/collections/service-parts",
+        "https://stealthtahoe.com/collections/emoto-shop",
+        "https://stealthtahoe.com/pages/service-center"
+      ],
+      "googleOverview": "Stealth Tahoe",
+      "snippet": "Stealth Tahoe Skip to content Free Shipping on orders $100+ *Some exclusions apply E-Bikes Super73 E Ride Pro Rad Power Bikes Stealth Electric Bikes Moonbikes Bike Insurance Sno-Go Sno-Go Sno-Go Rental Bike Shop Brakes Disc Brakes Brake Pads Brake Rotors Hoses",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city, onewheel"
+      ]
+    },
+    {
+      "slug": "tahoe-bike-company",
+      "name": "Tahoe Bike Company",
+      "website": "https://www.tahoebikeco.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoebikeco.com/",
+        "https://www.tahoebikeco.com/rentals",
+        "https://www.tahoebikeco.com/shop-repair",
+        "https://www.tahoebikeco.com/blog-posts/what-type-of-bike-rental-is-appropriate-for-you-in-south-lake-tahoe",
+        "https://www.tahoebikeco.com/blog-posts/%20affordable-things-to-do-in-south-lake-tahoe-bike-rentals-vs-skiing",
+        "https://www.tahoebikeco.com/rental/comfort-e-bike"
+      ],
+      "googleOverview": "Tahoe Bike Company",
+      "snippet": "Bike & E-Bike Rentals in South Lake Tahoe | Tahoe Bike Company Rentals Shop & Repair About Contact FAQs Book Now Book Now New Aventon Bikes Sales & Rentals New Aventon Bikes Sales & Rentals New Aventon Bikes Sales & Rentals New Aventon Bikes Sales & Rentals Ne",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-donner-bikeworks",
+      "name": "Tahoe Donner Bikeworks",
+      "website": "https://www.tahoedonner.com/amenities/amenities/bikeworks/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoedonner.com/amenities/amenities/bikeworks/",
+        "https://www.tahoedonner.com/amenities/amenities/beach-club-marina/general-information/rentals/",
+        "https://www.tahoedonner.com/amenities/amenities/beach-club-marina/general-information/shuttle-service/",
+        "https://www.tahoedonner.com/amenities/amenities/bikeworks/general-info/retail-shop/",
+        "https://www.tahoedonner.com/amenities/amenities/bikeworks/rates/",
+        "https://www.tahoedonner.com/amenities/amenities/bikeworks/repair-shop/"
+      ],
+      "googleOverview": "Tahoe Donner Bikeworks",
+      "snippet": "Bikeworks | Tahoe Donner Search site: Community Amenities Members News + Events Ski Resort XC Ski ShopTD Member Portal Bikeworks Equestrian Center Golf Course Community General About Us Vision + Mission Location Welcome FAQs General FAQs Tahoe Donner Amenities",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-ebikes",
+      "name": "Tahoe Ebikes",
+      "website": "https://tahoeebikes.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoeebikes.com/",
+        "https://www.tahoeebikes.com/rental-rates"
+      ],
+      "googleOverview": "Tahoe Ebikes",
+      "snippet": "Home | Tahoe Ebikes top of page Tahoe eBikes Home Used eBike Sale New Inventory Rental Rates The Mountain Fleet The Pavement Fleet Repair Disc Golf About Us Contact Us YouTube Channel More.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-electric-bike-rental",
+      "name": "Tahoe Electric Bike Rental",
+      "website": "http://www.tahoeelectricbikerental.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoeelectricbikerental.com/",
+        "https://tahoeelectricbikerental.com/about/",
+        "https://tahoeelectricbikerental.com/burning-man-bike-rentals/",
+        "https://tahoeelectricbikerental.com/electric-bike-styles/",
+        "https://tahoeelectricbikerental.com/faqs/",
+        "https://tahoeelectricbikerental.com/recommended-trails-in-lake-tahoe/"
+      ],
+      "googleOverview": "Tahoe Electric Bike Rental",
+      "snippet": "Tahoe Electric Bike Rental | Lake Tahoe, Reno & Carson City Ebikes Skip to content Tahoe Electric Bike Rental Brought to you by Racer Menu Home About Burning Man Bike Rentals Electric Bike Styles FAQs Recommended Trails Contact Blog Scroll down to content Home",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-multisport-e-bike-kayak-stand-up-paddle-board-rentals-tours",
+      "name": "Tahoe Multisport",
+      "website": "http://tahoemultisport.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoemultisport.com/",
+        "https://tahoemultisport.com/rad-power-bikes-e-bikes/",
+        "https://tahoemultisport.com/vacation-rentals/",
+        "https://tahoemultisport.com/safety-demonstration-videos/",
+        "https://tahoemultisport.com/cross-country-ski-rentals/",
+        "https://tahoemultisport.com/group-rentals-company-events-family-reunions/"
+      ],
+      "googleOverview": "Tahoe Multisport - E-Bike Kayak Stand Up Paddle Board - Rentals & Tours",
+      "snippet": "Tahoe Multisport &#8211; Now offering E BIKE RENTALS Skip to content Tahoe Multisport Now offering E BIKE RENTALS Menu expanded collapsed Grab & Go Lake Tahoe Beach Sauna Tours, Rentals, and More Tours Clear Kayak Tours E-BIKE Rentals Rates Rental Delivery Ret",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-snowbike-rental",
+      "name": "Tahoe Snowbike Rental",
+      "website": "http://www.tahoesnowbikerental.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "off_road"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesnowbikerental.com/",
+        "https://www.tahoesnowbikerental.com/the-stable",
+        "https://www.tahoesnowbikerental.com/pricing",
+        "https://www.tahoesnowbikerental.com/terms-and-conditions",
+        "https://www.tahoesnowbikerental.com/faq",
+        "https://www.tahoesnowbikerental.com/contact-us"
+      ],
+      "googleOverview": "Tahoe Snowbike Rental",
+      "snippet": "Timbersled Rental | Tahoe Snowbike Rental | Truckee top of page Home The Stable Pricing Terms and Conditions FAQ Calendar Gift Card Contact Apparel More Use tab to navigate through the menu items.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "tahoe-sports-hub",
+      "name": "Tahoe Sports Hub",
+      "website": "http://www.tahoesportshub.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportshub.com/",
+        "https://www.tahoesportshub.com/services",
+        "https://www.tahoesportshub.com/bike-shop-index",
+        "https://www.tahoesportshub.com/services"
+      ],
+      "googleOverview": "Tahoe Sports Hub Store offering gear, apparel & rentals for skiing, snowboarding, paddle sports, camping & climbing.",
+      "snippet": "Tahoe Sports Hub is Truckee's ski snowboard rental and demo shop.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-ltd",
+      "name": "Tahoe Sports Ltd.",
+      "website": "http://www.tahoesportsltd.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city",
+          "onewheel"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportsltd.com/",
+        "https://www.tahoesportsltd.com/service/shipping-returns/",
+        "https://www.tahoesportsltd.com/shop/",
+        "https://www.tahoesportsltd.com/shop/ski/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/xc-skis/"
+      ],
+      "googleOverview": "Tahoe Sports Ltd.",
+      "snippet": "- Tahoe Sports ltd Select your language English (US) USD USD CAD Login View all results (0) No products found 0 Cart You have no items in your shopping cart Home Shop SKI Cross Country XC Skis Boots Backcountry Boots Bindings Poles Skins Alpine Ski Skis Boots ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city, onewheel"
+      ]
+    },
+    {
+      "slug": "the-backcountry",
+      "name": "The BackCountry",
+      "website": "http://www.thebackcountry.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.thebackcountry.com/",
+        "https://www.thebackcountry.com/sale/shop-more/",
+        "https://www.thebackcountry.com/shop-more/",
+        "https://www.thebackcountry.com/shop-more/books/",
+        "https://www.thebackcountry.com/shop-more/books/bike/",
+        "https://www.thebackcountry.com/shop-more/books/climbing/"
+      ],
+      "googleOverview": "The BackCountry",
+      "snippet": "The BackCountry Shop | The BackCountry in Truckee, CA - The BackCountry Open Daily 8a-6p | 530-582-0909 | [email&#160;protected] Account Wish List Compare Go to account settings Cart 0 items Submit View all results ( ) Products Back Products SALE Back SALE All",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "truckee-river-bikes",
+      "name": "Truckee River Bikes",
+      "website": "https://truckeeriverbikes.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://truckeeriverbikes.com/",
+        "https://truckeeriverbikes.com/bike-rentals/",
+        "https://truckeeriverbikes.com/bike-rentals/e-bikes/",
+        "https://truckeeriverbikes.com/bike-rentals/reservations/",
+        "https://truckeeriverbikes.com/bike-service/"
+      ],
+      "googleOverview": "Truckee River Bikes",
+      "snippet": "Olympic Valley and North Tahoe&#039;s Best Bike Rentals - Truckee River Bikes Skip to content Call Us! (530) 581-3399 Toggle Navigation Home Bike Rentals Bike Rental Info E-Bikes Reservations Bike Sales Bike Service Local Rides Trail Map Blog Contact Call Us! ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "velo-reno",
+      "name": "Velo Reno",
+      "website": "http://www.veloreno.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "http://www.veloreno.com/",
+        "http://www.veloreno.com/services.html"
+      ],
+      "googleOverview": "Velo Reno",
+      "snippet": "Save Money Join our mailing list to find out first about our shop's seasonal sales! Clean & Easy Velo Reno has a large inventory on nutrition, tools, riding accessories and clothing.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "village-ski-loft",
+      "name": "Village Ski Loft",
+      "website": "http://www.villageskiloft.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.villageskiloft.com/",
+        "https://www.villageskiloft.com/bike-rentals",
+        "https://www.villageskiloft.com/rent-now",
+        "https://www.villageskiloft.com/services-overnight",
+        "https://www.villageskiloft.com/bikes",
+        "https://www.villageskiloft.com/shop"
+      ],
+      "googleOverview": "Village Ski Loft",
+      "snippet": "Village Ski Loft Lake Tahoe top of page The Village Ski Loft Incline Village, NV - Lake Tahoe 775-831-3537 HOME RENT NOW Bike Rentals Skis & Boards Nordic, Snowshoes, Sleds Where to Ski & Ride WINTER SERVICES Expert Boot Fitting Services Overnight Tuning and R",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "vista-trail-bikes",
+      "name": "Vista Trail Bikes",
+      "website": "https://vistatrailbikes.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://vistatrailbikes.com/",
+        "https://vistatrailbikes.com/rentals/",
+        "https://vistatrailbikes.com/blog/kids-bike-trailer-rentals-lake-tahoe/",
+        "https://vistatrailbikes.com/blog/top-6-places-to-go-snowshoeing-in-lake-tahoe/",
+        "https://vistatrailbikes.com/rentals/"
+      ],
+      "googleOverview": "Vista Trail Bikes",
+      "snippet": "Lake Tahoe Bike Rentals - Vista Trail Bikes Skip to content 1 (775) 298-7431 rides@vistatrailbikes.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "west-shore-sports",
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": "West Shore Sports",
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "west-shore-sports-qmz5wvbk",
+      "name": "West Shore Sports",
+      "website": "http://westshoresports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": "West Shore Sports",
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "west-shore-sports-sunnyside",
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "kayak",
+          "paddleboard"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": null,
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    },
+    {
+      "slug": "wilderbike",
+      "name": "Wilderbike",
+      "website": null,
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "electric_transport"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Wilderbike",
+      "snippet": "Wilderbike  bicycle_store sporting_goods_store manufacturer store point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "evo-tahoe-city",
+      "name": "evo Tahoe City",
+      "website": "https://www.evo.com/pages/locations-tahoe-city?utm_source=GMBlisting&utm_medium=organic",
+      "category": "electric_transport",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "e_bike_city"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "evo Tahoe City",
+      "snippet": "evo Tahoe City People say this store offers a wide selection of ski boots, clothes, and e-bikes, and provides repair kits and helmets with rentals.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: e_bike_city"
+      ]
+    }
+  ]
+}

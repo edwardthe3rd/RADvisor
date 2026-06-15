@@ -10,6 +10,7 @@ import {
   getOperatorsByCategory,
   searchEquipment,
 } from "@/lib/data";
+import { operatorMatchesSubcategoryBrowse } from "@/lib/config/operator-subcategory-match";
 import {
   filtersFromSearchParams,
   hasBrowseRefinement,
@@ -58,7 +59,9 @@ export default async function CategoryPage({
   ]);
   const filteredOperators =
     subcategories?.length ?
-      allOperators.filter((op) => operatorIdsWithEquipment.has(op.id))
+      allOperators.filter((op) =>
+        operatorMatchesSubcategoryBrowse(op, subcategories, operatorIdsWithEquipment),
+      )
     : allOperators;
   const { sorted: operators, distances: operatorDistances } = sortOperators(
     filteredOperators,

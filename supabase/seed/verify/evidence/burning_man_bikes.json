@@ -1,0 +1,51 @@
+{
+  "category": "burning_man_bikes",
+  "gatheredAt": "2026-06-14T21:25:36.044Z",
+  "results": [
+    {
+      "slug": "bicycle-service-center",
+      "name": "Bicycle Service Center",
+      "website": "http://bicycleservicecenter.com/",
+      "category": "burning_man_bikes",
+      "current": {
+        "categories": [
+          "burning_man_bikes"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Bicycle Service Center",
+      "snippet": "Bicycle Service Center  bicycle_store sporting_goods_store manufacturer car_repair store point_of_interest service establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    }
+  ]
+}

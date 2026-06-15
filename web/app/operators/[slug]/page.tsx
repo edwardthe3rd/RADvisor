@@ -133,6 +133,29 @@ export default async function OperatorPage({
                 </p>
               </div>
             )}
+            {operator.offers_demo && (
+              <div className="mt-4 rounded-lg border border-surface-borderLight bg-surface-muted px-4 py-3 text-sm text-ink-secondary">
+                <p className="font-semibold text-ink-primary">
+                  {operator.offers_rental
+                    ? "Demos & tryouts"
+                    : "Demos & tryouts only"}
+                </p>
+                <p className="mt-1">
+                  {operator.offers_rental
+                    ? "This operator offers demo / try-before-you-buy gear alongside rentals."
+                    : "This operator offers demo / try-before-you-buy gear, not standard rentals. Contact them for demo terms."}
+                </p>
+              </div>
+            )}
+            {operator.offers_season_lease && (
+              <div className="mt-4 rounded-lg border border-surface-borderLight bg-surface-muted px-4 py-3 text-sm text-ink-secondary">
+                <p className="font-semibold text-ink-primary">Season leases</p>
+                <p className="mt-1">
+                  This operator offers full-season snow sports gear lease
+                  programs. Contact them for pricing, pickup, and swap options.
+                </p>
+              </div>
+            )}
 
             <section className="mt-10">
               <h2 className="mb-4 text-2xl font-bold text-ink-primary">

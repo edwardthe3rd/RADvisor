@@ -11,6 +11,9 @@ import { readFileSync, readdirSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import pg from "pg";
+import { loadEnvLocal } from "./load-env-local";
+
+loadEnvLocal();
 
 const migrationsDir = join(
   dirname(fileURLToPath(import.meta.url)),

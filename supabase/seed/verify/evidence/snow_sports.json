@@ -1,0 +1,3786 @@
+{
+  "category": "snow_sports",
+  "gatheredAt": "2026-06-14T20:33:31.782Z",
+  "results": [
+    {
+      "slug": "asc-training-center-formerly-auburn-ski-club",
+      "name": "ASC Training Center (formerly Auburn Ski Club)",
+      "website": "http://asctrainingcenter.org/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://asctrainingcenter.org/"
+      ],
+      "googleOverview": "ASC Training Center (formerly Auburn Ski Club)",
+      "snippet": "ASC Training Center Undergoing Maintenance Updates Underway We are currently upgrading the ASC website as we continue building new program content and resources. During this process, many tabs and pages may be temporaril",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowboard"
+      ]
+    },
+    {
+      "slug": "alpenglow-sports",
+      "name": "Alpenglow Sports",
+      "website": "http://www.alpenglowsports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://alpenglowsports.com/",
+        "https://alpenglowsports.com/pages/apparel-kits",
+        "https://alpenglowsports.com/collections/winter-demo-gear-sale",
+        "https://alpenglowsports.com/collections/demo-ski-sale",
+        "https://alpenglowsports.com/collections/demo-splitboard-sale",
+        "https://alpenglowsports.com/collections/demo-ski-boot-sale"
+      ],
+      "googleOverview": "Alpenglow Sports",
+      "snippet": "Alpenglow Sports - Outdoor gear and expert advice Skip to content Mountain Running Club Race Ready Items Shop our Kits Mountain Running Club Race Ready Items Shop our Kits Mountain Running Club Race Ready Items Shop our Kits Mountain Running Club Race Ready It",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "black-tie-ski-rentals-of-north-lake-tahoe",
+      "name": "Black Tie Ski Rentals of North Lake Tahoe",
+      "website": "https://www.blacktieskis.com/north-tahoe/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_term=black-tie-ski-rental-of-north-tahoe&utm_content=north-tahoe",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.blacktieskis.com/north-tahoe/",
+        "https://www.blacktieskis.com/equipment/"
+      ],
+      "googleOverview": "Black Tie Ski Rentals of North Lake Tahoe",
+      "snippet": "Black Tie Skis of North Lake Tahoe - Ski Rental Delivery Summer Winter New Location: Sun Peaks ! Call us: 530.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-carson-city",
+      "name": "BlueZone Sports - Carson City",
+      "website": "http://www.bluezonesports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - Carson City",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-south-lake-tahoe",
+      "name": "BlueZone Sports - South Lake Tahoe",
+      "website": "http://www.bluezonesports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - South Lake Tahoe",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "bluezone-sports-tahoe-city",
+      "name": "BlueZone Sports - Tahoe City",
+      "website": "https://www.bluezonesports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "BlueZone Sports - Tahoe City",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "bobos-ski-patio",
+      "name": "Bobo's Ski & Patio",
+      "website": "http://www.bobos.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bobos.com/",
+        "https://www.bobos.com/Our-Ski-Snowboard-Products.html",
+        "https://www.bobos.com/Our-Patio-Products.html",
+        "https://www.bobos.com/Ski-Snowboard-Services.html",
+        "https://www.bobos.com/Tech-Shop-Services.html",
+        "https://www.bobos.com/Season-Leases.html"
+      ],
+      "googleOverview": "Bobo's Ski & Patio",
+      "snippet": "~the crew at BOBOS Get your skis/boards properly ready at BOBOS Longer days, warmer evenings, and time spent with family and friends make this the perfect season to refresh your outdoor space.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: snowboard"
+      ]
+    },
+    {
+      "slug": "cv-sports",
+      "name": "CV Sports",
+      "website": "https://cvsports.biz/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.cvsports.biz/",
+        "https://www.cvsports.biz/packagess",
+        "https://www.cvsports.biz/copy-of-contact"
+      ],
+      "googleOverview": "CV Sports",
+      "snippet": "Ski Rentals | Cvsports | South Lake Tahoe top of page RENTAL PACKAGES RENTAL PACKAGES RENTAL PACKAGES RENTAL FORM HOME ABOUT RENTALS LOCATIONS CAESARS REPUBLIC GOLDEN NUGGET BALLY&#x27;S LAKE TAHOE DAGGETT STATION CONTACT LOCATIONS COVENIENTLY LOCATED AT: SKI ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "camp-richardson-mountain-sports-center",
+      "name": "Camp Richardson Mountain Sports Center",
+      "website": "https://camprichardsonresort.com/rentals/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://camprichardsonresort.com/rentals/",
+        "https://camprichardsonresort.com/eat-drink-shop/",
+        "https://camprichardsonresort.com/shuttle-service/",
+        "https://camprichardsonresort.com/rentals/",
+        "https://camprichardsonresort.com/rentals/",
+        "https://camprichardsonresort.com/rentals/"
+      ],
+      "googleOverview": "Camp Richardson Mountain Sports Center",
+      "snippet": "Activity Rentals - Camp Richardson Resort Skip to content Camp Richardson Resort Map Area Information In The News Contact Us Hiring Our Heroes Newsletter Sign Up Book Hotels & Cabins (530) 494-2228 Book RV & Campsites Book Hotels & Cabins Stay Historic Hotel C",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, snowshoe"
+      ]
+    },
+    {
+      "slug": "coalition-snow",
+      "name": "Coalition Snow",
+      "website": "https://www.coalitionsnow.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.coalitionsnow.com/",
+        "https://www.coalitionsnow.com/pages/skis-snowboards",
+        "https://www.coalitionsnow.com/products/bachelorette-ski-snowboard-trip",
+        "https://www.coalitionsnow.com/products/cycling-safari",
+        "https://www.coalitionsnow.com/collections/all",
+        "https://www.coalitionsnow.com/products/sos"
+      ],
+      "googleOverview": "Coalition Snow",
+      "snippet": "We've drastically reduced the number of skis and snowboards we manufactured for this season.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "marked demo-only but a rental signal was found",
+        "offers_demo=true but no demo signal found"
+      ],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "donner-ski-shop",
+      "name": "Donner Ski Shop",
+      "website": "https://donnerskishop.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://donnerskishop.com/"
+      ],
+      "googleOverview": "Donner Ski Shop",
+      "snippet": "Ski Rental Services at Donner Ski Shop - Since 1961 Donner Ski Shop Donner Ski Shop Donner Ski Shop Donner Ski Shop Donner Ski Shop Donner Ski Shop Donner Ski Shop Donner Ski Shop 530-426-0739 Ski Rental Services at Donner Ski Shop - Est.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "galena-sports",
+      "name": "Galena Sports",
+      "website": null,
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Galena Sports",
+      "snippet": "Galena Sports  convenience_store food_store sporting_goods_store store food point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "gondola-ski-sports",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://gondolaskitahoe.com/",
+        "https://gondolaskitahoe.com/rental-reservations/",
+        "https://gondolaskitahoe.com/bike-rentals/",
+        "https://gondolaskitahoe.com/snowboard-rentals/",
+        "https://gondolaskitahoe.com/ski-rentals/",
+        "https://gondolaskitahoe.com/bike-rentals/"
+      ],
+      "googleOverview": "Gondola Ski + Sports",
+      "snippet": "Home - Gondola Ski Tahoe Home Rental Reservations Bike Rentals Snowboards Skis Employment Blog Select Page Gondola Ski & Sports South Lake Tahoe Located on the Heavenly Plaza under the gondola we have the gear you need to enjoy the mountains.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "granite-chief-powered-by-bluezone-sports",
+      "name": "Granite Chief Powered by BlueZone Sports",
+      "website": "https://bluezonesports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.bluezonesports.com/",
+        "https://www.bluezonesports.com/camping-and-hiking-gear",
+        "https://www.bluezonesports.com/watersports",
+        "https://www.bluezonesports.com/bikes",
+        "https://www.bluezonesports.com/snowsports",
+        "https://www.bluezonesports.com/mens-clothing-and-footwear"
+      ],
+      "googleOverview": "Granite Chief Powered by BlueZone Sports",
+      "snippet": "6486 | Email Us Use Code TRAIL for 30% Off Sitewide* FREE Shipping on Orders over $75!* The Zone My Account Manage Your Account Address Book Order History Wish List Sign In Locations SOUTH LAKE TAHOE TRUCKEE ROSEVILLE CARSON CITY TAHOE CITY ALL STORES Search W",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "gravity-haus-gear-rental-haus-quiver-truckee",
+      "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
+      "website": "http://gravityhaus.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "sled",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://gravityhaus.com/",
+        "https://gravityhaus.com/ski-butlers"
+      ],
+      "googleOverview": "Gravity Haus Gear Rental - Haus Quiver - Truckee",
+      "snippet": "Exclusive lodging rates at all Gravity Haus & partner destinations from Vail to Costa Rica Access to wellness & recovery facilities, 90+ fitness classes & heaps of partner perks Expert & community led experiences, classes & trips, coworking & networking - the ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: sled, snowboard"
+      ]
+    },
+    {
+      "slug": "heavenly-sports-cecils-plaza",
+      "name": "Heavenly Sports - Cecil's Plaza",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "Heavenly Sports - Cecil's Plaza",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "heavenly-sports-marriott",
+      "name": "Heavenly Sports - Marriott",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "Heavenly Sports - Marriott",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "moment-skis",
+      "name": "Moment Skis",
+      "website": "https://www.momentskis.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.momentskis.com/",
+        "https://www.momentskis.com/pages/product",
+        "https://www.momentskis.com/products/look-pivot-15-gw",
+        "https://www.momentskis.com/products/salomon-strive-14",
+        "https://www.momentskis.com/products/ski-bag",
+        "https://www.momentskis.com/products/ski-strap-21"
+      ],
+      "googleOverview": "Moment Skis",
+      "snippet": "00 \" > FACTORY Where the magic happens \" > NOTHING BEYOND REACH VOYAGER XIII EVO CUSTOMER SERVICE CONTACT COMPARE SKIS REQUEST A SKI PRO DEAL WARRANTY LOGIN SMS Information NEWS SHIPPING & RETURNS DEALERS DEMO LOCATIONS PRIVACY POLICY TERMS OF SERVICE FAQ THE ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "mountain-hardware-sports",
+      "name": "Mountain Hardware & Sports",
+      "website": "http://www.mountainhardwareandsports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "sled",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://mountainhardwareandsports.com/",
+        "https://mountainhardwareandsports.com/patio-yard/outdoor-cooking/seasoning/",
+        "https://mountainhardwareandsports.com/services",
+        "https://mountainhardwareandsports.com/snowshoe-rentals",
+        "https://mountainhardwareandsports.com/sports-outdoors/",
+        "https://mountainhardwareandsports.com/fishing/"
+      ],
+      "googleOverview": "Mountain Hardware & Sports Hardware store stocking household tools, garden supplies, home decor & more.",
+      "snippet": "Mountain Hardware & Sports | Tools, Paint & Stain, Grills, Outdoor Apparel, Seasonal Decor All Gifts Clearance Automotive EV Chargers Fluids & Lubricants Fuel Additives Lubricants RV Accessories Tire Chains Apparel MH&S Merch Accessories Hats Socks Fishing Fis",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: sled, snowshoe"
+      ]
+    },
+    {
+      "slug": "mountain-mikes-tees-and-skis",
+      "name": "Mountain Mikes / Snowshoe Thompson's",
+      "website": "http://www.mtnmikeslaketahoe.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "http://www.mtnmikeslaketahoe.com/",
+        "http://www.mtnmikeslaketahoe.com/rates.htm",
+        "http://www.mtnmikeslaketahoe.com/locations.htm"
+      ],
+      "googleOverview": null,
+      "snippet": "Welcome To Mountain Mike's Tees & Skis! Snowshoe Thompson's Ski and Snowboard, South Lake Tahoe, California (530) 544 4783 Home Equipment Rental Rates Our Location Tahoe Weather Road Conditions Ski Links We Are Located South of \"The Y\" junction on Hwy 50, 1219",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "mountain-west",
+      "name": "Mountain West",
+      "website": "http://mountainwestonline.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://mountainwestonline.com/",
+        "https://mountainwestonline.com/pages/rentals",
+        "https://mountainwestonline.com/products/union-juliet",
+        "https://mountainwestonline.com/products/union-ultra-8",
+        "https://mountainwestonline.com/products/union-ultra-7",
+        "https://mountainwestonline.com/products/union-ultra-6"
+      ],
+      "googleOverview": null,
+      "snippet": "Mountain West MountainWestOnline Skip to content COME VISIT OUR NEW STORE LOCATED AT 3535 LAKE TAHOE BLVD @ LAKELAND VILLAGE MAIN LODGE NEED HELP? CONTACT US - 530-600-4144 - 2052 LAKE TAHOE BLVD, SOUTH LAKE TAHOE, CA HOME MEN'S MEN'S SKING SKING MEN'S SKIS ME",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "nordic-ski-trails-at-the-lake-tahoe-community-college",
+      "name": "Nordic Ski Trails at the Lake Tahoe Community College",
+      "website": null,
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "cross_country_ski"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Nordic Ski Trails at the Lake Tahoe Community College",
+      "snippet": "Nordic Ski Trails at the Lake Tahoe Community College  ski_resort sports_activity_location point_of_interest establishment",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: cross_country_ski"
+      ]
+    },
+    {
+      "slug": "northstar-cross-country-telemark-and-snowshoe-center",
+      "name": "Northstar Cross-Country, Telemark, and Snowshoe Center",
+      "website": "http://northstarcalifornia.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.northstarcalifornia.com/",
+        "https://www.northstarcalifornia.com/explore-the-resort/the-village/shopping.aspx",
+        "https://www.northstarcalifornia.com/explore-the-resort/about-the-resort/guest-services.aspx",
+        "https://www.northstarcalifornia.com/plan-your-trip/rentals/rental-delivery.aspx"
+      ],
+      "googleOverview": "Northstar Cross-Country, Telemark, and Snowshoe Center",
+      "snippet": "North Tahoe Skiing & Snowboard | Northstar California Resort Skip to main content northstar homepage Choose a Resort Rockies Vail Website , opens in a new window Beaver Creek Website , opens in a new window Breckenridge Website , opens in a new window Park Cit",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "olympic-valley-ski-bike",
+      "name": "Olympic Valley Ski & Bike",
+      "website": "https://olympicvalleyskiandbike.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://olympicvalleyskiandbike.com/",
+        "https://olympicvalleyskiandbike.com/tahoe-bike-rentals/",
+        "https://olympicvalleyskiandbike.com/tuning-shop/",
+        "https://olympicvalleyskiandbike.com/winter/",
+        "https://olympicvalleyskiandbike.com/in-the-shop/summer/",
+        "https://olympicvalleyskiandbike.com/product/demo-ski-boots/"
+      ],
+      "googleOverview": "Olympic Valley Ski & Bike",
+      "snippet": "4707 | A full service Rental, Demo and Tuning Ski Shop 530.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, cross_country_ski, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "palisades-tahoe-ski-snowboard-rental",
+      "name": "Palisades Tahoe Ski & Snowboard Rental",
+      "website": "https://www.palisadestahoe.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.palisadestahoe.com/",
+        "https://www.palisadestahoe.com/plan-your-visit/deals-and-packages",
+        "https://www.palisadestahoe.com/events-and-activities/activity-finder/lake-tahoe-bike-rental",
+        "https://www.palisadestahoe.com/events-and-activities/shopping",
+        "https://www.palisadestahoe.com/plan-your-visit/snowboard-ski-lessons/season-long-programs",
+        "https://www.palisadestahoe.com/plan-your-visit/snowboard-ski-lessons/camps-clinics-and-seasonal-programs/kids-multi-week-ski-programs"
+      ],
+      "googleOverview": "Palisades Tahoe Ski & Snowboard Rental",
+      "snippet": "Close Menu Plan Your Visit Lodging Aerial Tram Sightseeing Bike Rentals Kids Adventure Camp Deals & Packages Travel Here Ikon Pass Benefits Mountain Information Webcams Mountain Report Hours of Operation Trail Maps Parking & Road Conditions Mountain Safety Eve",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "parallel-mountain-sports",
+      "name": "Parallel Mountain Sports",
+      "website": "https://www.palisadestahoe.com/events-and-activities/shopping/parallel",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.palisadestahoe.com/events-and-activities/shopping/parallel",
+        "https://www.palisadestahoe.com/plan-your-visit/deals-and-packages",
+        "https://www.palisadestahoe.com/events-and-activities/activity-finder/lake-tahoe-bike-rental",
+        "https://www.palisadestahoe.com/events-and-activities/shopping",
+        "https://www.palisadestahoe.com/plan-your-visit/snowboard-ski-lessons/season-long-programs",
+        "https://www.palisadestahoe.com/events-and-activities/shopping/the-ledge"
+      ],
+      "googleOverview": "Parallel Mountain Sports",
+      "snippet": "Close Menu Plan Your Visit Lodging Aerial Tram Sightseeing Bike Rentals Kids Adventure Camp Deals & Packages Travel Here Ikon Pass Benefits Mountain Information Webcams Mountain Report Hours of Operation Trail Maps Parking & Road Conditions Mountain Safety Eve",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "play-it-again-sports",
+      "name": "Play It Again Sports",
+      "website": "http://www.playitagainsportscarsoncity.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://playitagainsports.com/locations/carson-city-nv/",
+        "https://playitagainsports.com/shop-all-products/",
+        "https://playitagainsports.com/athletic-apparel/",
+        "https://playitagainsports.com/baseball-and-softball/",
+        "https://playitagainsports.com/basketball/",
+        "https://playitagainsports.com/basketball/basketball-other-products/"
+      ],
+      "googleOverview": null,
+      "snippet": "Buy & Sell Sports Gear and Fitness Equipment | Play It Again Sports Carson City, NV Skip to main content Plato's Closet Store Once Upon a Child Store Play It Again Sports Store Style Encore Store Music Go Round Store Own",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "powder-house-ski-board-pro-snow",
+      "name": "Powder House Ski & Board: Pro Snow",
+      "website": "http://www.tahoepowderhouse.com/powder-house-boot-demo-center",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/powder-house-boot-demo-center/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": "Powder House Ski & Board: Pro Snow",
+      "snippet": "Powder House Boot & Demo Center Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowboards Services Sk",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "marked demo-only but a rental signal was found"
+      ],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "powder-house-ski-and-snowboard-at-the-gondola",
+      "name": "Powder House Ski and Snowboard At The Gondola",
+      "website": "http://www.tahoepowderhouse.com/powder-house-at-the-gondola",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/powder-house-at-the-gondola/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": "Powder House Ski and Snowboard At The Gondola",
+      "snippet": "Powder House at the Gondola - Tahoe Powder House Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowb",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "powder-house-ski-and-snowboard-main-store",
+      "name": "Powder House Ski and Snowboard Main Store",
+      "website": "http://www.tahoepowderhouse.com/powder-house-main-shop",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/powder-house-main-shop/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": "Powder House Ski and Snowboard Main Store",
+      "snippet": "Powder House Main Store - Tahoe Powder House Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowboard",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "powder-house-stateline-at-zalanta",
+      "name": "Powder House Stateline at Zalanta",
+      "website": "http://tahoepowderhouse.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": "Powder House Stateline at Zalanta",
+      "snippet": "South Lake Tahoe Ski Rentals & Snowboard Rentals Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowb",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "powder-house-express",
+      "name": "Powder House Express",
+      "website": "http://www.tahoepowderhouse.com/powder-house-express",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoepowderhouse.com/powder-house-express/",
+        "https://tahoepowderhouse.com/ski-snowboard-season-leases/",
+        "https://tahoepowderhouse.com/ski-rental-rates/",
+        "https://tahoepowderhouse.com/snowboard-rental-rates/",
+        "https://tahoepowderhouse.com/cross-country-skis-snowshoes-rental-rates/",
+        "https://tahoepowderhouse.com/ski-clothing-rental-rates/"
+      ],
+      "googleOverview": null,
+      "snippet": "Powder House Express - Tahoe Powder House Rates Heavenly Village Mini Golf Ski and Snowboard Season Leases Ski Rental Rates Snowboard Rental Rates Snowshoes Rental Rates Ski Clothing Rental Rates Reservations Ski and Snowboard Sales View all Ski & Snowboards S",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "praxis-skis",
+      "name": "Praxis Skis",
+      "website": "https://www.praxisskis.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.praxisskis.com/",
+        "https://www.praxisskis.com/foil-demo/",
+        "https://www.praxisskis.com/skis/",
+        "https://www.praxisskis.com/custom-skis/",
+        "https://www.praxisskis.com/foil/",
+        "https://www.praxisskis.com/ski-bindings/"
+      ],
+      "googleOverview": "Praxis Skis",
+      "snippet": "Praxis Custom Skis | Handcrafted In The Sierra Nevada Search Sign in or Register ( ) close Sign in or Register Skis Standard Edition Skis Kids Skis Discount Skis Custom Skis Custom Order Skis Graphics Library Graphic Library Two Ski Bindings CAST Look Bindings",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "pyramid-peak-sports-bike-rentals",
+      "name": "Pyramid Peak Ski and Snowboard Rentals",
+      "website": "http://www.pyramidpeak.ski/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "http://pyramid-peak.com/",
+        "http://pyramid-peak.com/rentals/",
+        "http://pyramid-peak.com/services/"
+      ],
+      "googleOverview": "Pyramid Peak Sports& Bike rentals",
+      "snippet": "Pyramid Peak Ski and Snowboard Rentals &#8211; Premium rentals at bargain prices.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "rmu-truckee-ski-shop",
+      "name": "RMU Truckee Ski Shop",
+      "website": "https://mtnculture.com/pages/rmu-truckee",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports",
+          "mountain_biking"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "sled"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://rmumtnculture.com/pages/rmu-truckee",
+        "https://rmumtnculture.com/products/nighttrain-170mm-raw",
+        "https://rmumtnculture.com/products/nighttrain",
+        "https://rmumtnculture.com/products/2026-zephyr",
+        "https://rmumtnculture.com/products/2026-apostle-96",
+        "https://rmumtnculture.com/products/2026-apostle-96-ti"
+      ],
+      "googleOverview": "RMU Truckee Ski Shop",
+      "snippet": "RMU Truckee High Quality Handmade Skis, full service tune shop, Packs, Bar and Food Skip to content Pause slideshow Play slideshow NIGHTTRAIN - Mercury Colorway now available! FREE SHIPPING IN NORTH AMERICA icon-X Close menu BIKE NIGHTTRAIN Mercury NIGHTTRAIN ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_demo=true but no demo signal found"
+      ],
+      "proposals": [
+        "propose subcategories: sled"
+      ]
+    },
+    {
+      "slug": "rip-n-willies-ski-snowboard-rental-shop",
+      "name": "Rip N Willies Ski & Snowboard Rental Shop",
+      "website": "http://www.ripnwillies.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.ripnwillies.com/",
+        "https://www.ripnwillies.com/ski-and-snowblade-rental-rates",
+        "https://www.ripnwillies.com/snowboard-rental-rates",
+        "https://www.ripnwillies.com/ski-and-snowboard-seasonal-lease",
+        "https://www.ripnwillies.com/cross-country-ski-and-snowshoe-rental-rates",
+        "https://www.ripnwillies.com/sled-and-saucer-rental-rates"
+      ],
+      "googleOverview": "Rip N Willies Ski & Snowboard Rental Shop",
+      "snippet": "Rip N’ Willies Ski & Snowboard - South Lake Tahoe, CA - Home Winter Hours: Sun- Fri: 8am-5pm, Saturdays: 7:30- 5pm | (November March): Sun Fri: 8am 6pm Saturdays: 7:30am 6pm Summer Hours: (May October) TBD Winter Hours: (November March) : Sun Fri: 8am 6pm Satu",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "rock-house-discount-ski-snowboard-rentals",
+      "name": "Rock House Discount Ski & Snowboard Rentals",
+      "website": "http://tahoediscountskis.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoediscountskis.com/",
+        "https://tahoediscountskis.com/rates"
+      ],
+      "googleOverview": "Rock House Discount Ski & Snowboard Rentals",
+      "snippet": "Rock House Discount Ski & Snowboard Rentals 0 Skip to Content FAQ Tips & Tricks Rates Contact & Fitting Open Menu Close Menu FAQ Tips & Tricks Rates Contact & Fitting Open Menu Close Menu FAQ Tips & Tricks Rates Contact & Fitting Welcome to ROCK HOUSE SKI & SN",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "shoreline-of-tahoe",
+      "name": "Shoreline of Tahoe",
+      "website": "http://www.shorelineoftahoe.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://shorelineoftahoe.com/",
+        "https://shorelineoftahoe.com/collections/rentals",
+        "https://shorelineoftahoe.com/collections/bike-rentals/Bike-Rental",
+        "https://shorelineoftahoe.com/collections/ski-rentals/Ski-Rental",
+        "https://shorelineoftahoe.com/collections/snowboard-rentals/Snowboard-Rental",
+        "https://shorelineoftahoe.com/collections/snowshoes-rental/Snowshoe-Rental"
+      ],
+      "googleOverview": "Shoreline of Tahoe",
+      "snippet": "Parts/Tools Rentals Expand submenu Collapse submenu Rentals Bike Rentals Ski Rentals Snowboard Rentals Snowshoes Rental Brands Gift card Tech Shop Search Log in Search LOGIN Shoreline Tahoe Snowboard Snowboards Men's Snowboards Women's Snowboards Youth Snowboa",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "showcase-heavenly",
+      "name": "Showcase - Heavenly",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "Showcase - Heavenly",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "showcase-northstar",
+      "name": "Showcase - Northstar",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "Showcase - Northstar",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "sierra-ski-cycle-works",
+      "name": "Sierra Ski & Cycle Works",
+      "website": "https://sierraskiandcycleworks.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sierraskiandcycleworks.com/",
+        "https://sierraskiandcycleworks.com/about-south-lake-tahoe-ski-bike-shop/",
+        "https://sierraskiandcycleworks.com/south-lake-tahoe-bike-shop/",
+        "https://sierraskiandcycleworks.com/south-lake-tahoe-ski-shop/",
+        "https://sierraskiandcycleworks.com/contact-south-lake-tahoe-ski-bike-shop/",
+        "https://sierraskiandcycleworks.com/about-south-lake-tahoe-ski-bike-shop/"
+      ],
+      "googleOverview": "Sierra Ski & Cycle Works",
+      "snippet": "1980 Skip to main content Menu Home About Bike Ski Spoke Junkie Contact facebook Close Search Tahoe Original Since 1980 Sierra Ski & Cycle Works specializes in service, repairs, sales and rentals.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "ski-butlers-heavenlysouth-lake-tahoe",
+      "name": "Ski Butlers Heavenly/South Lake Tahoe",
+      "website": "https://www.skibutlers.com/locations/heavenly-south-lake-tahoe",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.skibutlers.com/snowboard-ski-rentals/heavenly-south-lake-tahoe",
+        "https://www.skibutlers.com/snowboard-ski-rentals/big-bear",
+        "https://www.skibutlers.com/snowboard-ski-rentals/palisades-tahoe",
+        "https://www.skibutlers.com/snowboard-ski-rentals/mammoth",
+        "https://www.skibutlers.com/snowboard-ski-rentals/limelight-mammoth",
+        "https://www.skibutlers.com/snowboard-ski-rentals/north-lake-tahoe"
+      ],
+      "googleOverview": "Ski Butlers Heavenly/South Lake Tahoe",
+      "snippet": "Snowboard & Ski Rentals | Heavenly | Ski Butlers Skip to main content Go to homepage Close Our Locations North America Europe California Big Bear Mountain Resort Heavenly Palisades Tahoe Mammoth Limelight Mammoth Northstar/Truckee Canada Blue Mountain Tremblan",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "ski-butlers-northstarpalisades-tahoe",
+      "name": "Ski Butlers Northstar/Palisades Tahoe",
+      "website": "https://www.skibutlers.com/locations/north-lake-tahoe",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.skibutlers.com/snowboard-ski-rentals/north-lake-tahoe",
+        "https://www.skibutlers.com/snowboard-ski-rentals/big-bear",
+        "https://www.skibutlers.com/snowboard-ski-rentals/heavenly-south-lake-tahoe",
+        "https://www.skibutlers.com/snowboard-ski-rentals/palisades-tahoe",
+        "https://www.skibutlers.com/snowboard-ski-rentals/mammoth",
+        "https://www.skibutlers.com/snowboard-ski-rentals/limelight-mammoth"
+      ],
+      "googleOverview": "Ski Butlers Northstar/Palisades Tahoe",
+      "snippet": "Snowboard & Ski Rentals | Northstar | Ski Butlers Skip to main content Go to homepage Close Our Locations North America Europe California Big Bear Mountain Resort Heavenly Palisades Tahoe Mammoth Limelight Mammoth Northstar/Truckee Canada Blue Mountain Trembla",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "ski-pro",
+      "name": "Ski Pro",
+      "website": "https://skipro.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://skipro.com/",
+        "https://skipro.com/pages/brands",
+        "https://skipro.com/pages/rentals",
+        "https://skipro.com/pages/repairs-sercvices",
+        "https://skipro.com/collections/sale-items?filter.p.m.global.model_year=2026",
+        "https://skipro.com/products/omen-team-flat-56w"
+      ],
+      "googleOverview": "Ski Pro Chain outfitter for sports such as skiing, snowboarding, waterskiing & wakeboarding.",
+      "snippet": "Ski Pro® Official Site | Free Shipping on Orders $99 and Up Ski Pro AZ Skip to content Shop By Brand News Events Rentals Tune Shop Contact Our Stores The Avalanche Sale Instagram Facebook Twitter TikTok Pinterest YouTube Linkedin Search Search Clear Popular se",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, splitboard"
+      ]
+    },
+    {
+      "slug": "snowshoe-tahoe",
+      "name": "Snowshoe Tahoe",
+      "website": "https://www.snowshoetahoe.net/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.snowshoetahoe.net/",
+        "https://www.snowshoetahoe.net/snowshoe-rentals"
+      ],
+      "googleOverview": "Snowshoe Tahoe",
+      "snippet": "Guided Snowshoe Tours & Rentals | Winter Hikes | Tahoe, CA top of page SNOWSHOE TAHOE Home Frequently Asked Questions All Tours Summer Tours Palisades Point Half Day Chickadee Ridge Beginner Hike Dog Friendly Snowshoe Hikes In Lake Taho Full Moon Snowshoe Tour",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: snowshoe"
+      ]
+    },
+    {
+      "slug": "sports-ltd-rentals",
+      "name": "Sports Ltd. Rentals",
+      "website": "http://www.sportsltdrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sportsltdrentals.com/",
+        "https://sportsltdrentals.com/rentals/",
+        "https://sportsltdrentals.com/winter-rentals/",
+        "https://sportsltdrentals.com/summer-rentals-e-bikes-bike-rentals-south-lake-tahoe-california-electric-mountain-bike/",
+        "https://sportsltdrentals.com/25-26-demo-ski-program/",
+        "https://sportsltdrentals.com/contact-us/"
+      ],
+      "googleOverview": "Sports Ltd. Rentals",
+      "snippet": "- Sports Ltd Rentals E-Bike, Ski, Snowboard, E-Mtn Bike, Camping, & Backcountry Skip to content Sports Ltd Rentals Outdoor Equipment Rental Rentals &#038; Demos Winter Rentals Summer Rentals Book Now Demo Skis 25/26 Demo Ski Program Contact Us Trail Info &#038",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "sugar-bowl-rental-shop",
+      "name": "Sugar Bowl Rental Shop",
+      "website": "http://www.sugarbowl.com/rentals",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "http://www.sugarbowl.com/rentals",
+        "http://www.sugarbowl.com/demos",
+        "http://www.sugarbowl.com/seasonal"
+      ],
+      "googleOverview": "Sugar Bowl Rental Shop",
+      "snippet": "Ski & Snowboard Rentals at Sugar Bowl | Tahoe Ski Gear Login Shop Plan Explore Immerse 0 \"/12hr 0 \"/12hr 0 \"/24hr 0 &quot/7 Day 317 \"/YTD Shop Season Passes Seasonal Programs Village Locker Room Lodging Summer Camp Passholder Vouchers More Season Passes Season",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "totally-board",
+      "name": "Totally Board",
+      "website": "http://www.totallyboardtahoe.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.totallyboardtahoe.com/"
+      ],
+      "googleOverview": "TOTALLY BOARD",
+      "snippet": "Totally Board | Truckee's Premier Snowboard & Skate Shop Since 1994 | totally board",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowboard"
+      ]
+    },
+    {
+      "slug": "tahoe-daves-boardshop",
+      "name": "Tahoe Dave's Boardshop",
+      "website": "http://www.tahoedaves.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoedaves.com/",
+        "https://tahoedaves.com/rentals-and-demos/",
+        "https://tahoedaves.com/kids-season-rentals/",
+        "https://tahoedaves.com/demo-ski-catalog/",
+        "https://tahoedaves.com/demo-snowboard-catalog/",
+        "https://tahoedaves.com/ski-demo-sales/"
+      ],
+      "googleOverview": "Tahoe Dave's Boardshop",
+      "snippet": "Tahoe Dave&#039;s &#8211; Skis & Boards Skip to content Tahoe Dave&#039;s Skis & Boards Rates Rentals &#038; Demos Daily ​Rentals Kids’ Seasonal Rentals Demo Ski Catalog Demo Snowboard Catalog Reserve Now Discounts Tuning &#038; Repairs Sales Ski Demo Sales Sn",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "tahoe-daves-skis-boards",
+      "name": "Tahoe Dave's Skis & Boards",
+      "website": "https://www.tahoedaves.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoedaves.com/",
+        "https://tahoedaves.com/rentals-and-demos/",
+        "https://tahoedaves.com/kids-season-rentals/",
+        "https://tahoedaves.com/demo-ski-catalog/",
+        "https://tahoedaves.com/demo-snowboard-catalog/",
+        "https://tahoedaves.com/ski-demo-sales/"
+      ],
+      "googleOverview": "Tahoe Dave's Skis & Boards",
+      "snippet": "Tahoe Dave&#039;s &#8211; Skis & Boards Skip to content Tahoe Dave&#039;s Skis & Boards Rates Rentals &#038; Demos Daily ​Rentals Kids’ Seasonal Rentals Demo Ski Catalog Demo Snowboard Catalog Reserve Now Discounts Tuning &#038; Repairs Sales Ski Demo Sales Sn",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "tahoe-daves-skis-boards-0wje-6_m",
+      "name": "Tahoe Dave's Skis & Boards",
+      "website": "http://www.tahoedaves.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoedaves.com/",
+        "https://tahoedaves.com/rentals-and-demos/",
+        "https://tahoedaves.com/kids-season-rentals/",
+        "https://tahoedaves.com/demo-ski-catalog/",
+        "https://tahoedaves.com/demo-snowboard-catalog/",
+        "https://tahoedaves.com/ski-demo-sales/"
+      ],
+      "googleOverview": "Tahoe Dave's Skis & Boards",
+      "snippet": "Tahoe Dave&#039;s &#8211; Skis & Boards Skip to content Tahoe Dave&#039;s Skis & Boards Rates Rentals &#038; Demos Daily ​Rentals Kids’ Seasonal Rentals Demo Ski Catalog Demo Snowboard Catalog Reserve Now Discounts Tuning &#038; Repairs Sales Ski Demo Sales Sn",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: alpine_ski, apparel_snow, cross_country_ski, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "tahoe-mountain-sports",
+      "name": "Tahoe Mountain Sports",
+      "website": "http://www.tahoemountainsports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "apparel_snow",
+          "cross_country_ski",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoemountainsports.com/",
+        "https://tahoemountainsports.com/collections/winter-sale-collection",
+        "https://tahoemountainsports.com/collections",
+        "https://tahoemountainsports.com/pages/rent-gear",
+        "https://tahoemountainsports.com/pages/rent-skis",
+        "https://tahoemountainsports.com/pages/rent-snowboards"
+      ],
+      "googleOverview": "Tahoe Mountain Sports",
+      "snippet": "Shop Our Winter Sale! Tahoe Mountain Sports Shop Men's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Women's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Kid's Footwear Men's Shoes Women's Shoes Winter Boots Socks Accessories Luggage",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: apparel_snow, cross_country_ski, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "tahoe-xc",
+      "name": "Tahoe XC",
+      "website": "https://tahoexc.org/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "mountain_biking",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoexc.org/",
+        "https://tahoexc.org/product-category/tickets-passes/",
+        "https://tahoexc.org/season-passes/",
+        "https://tahoexc.org/rentals-services/",
+        "https://tahoexc.org/retail-shop/",
+        "https://tahoexc.org/season-passes/"
+      ],
+      "googleOverview": null,
+      "snippet": "Visitor Info Plan Your Visit Trail Map Season Passes Conditions Clinics &#038; Lessons FAQ Trail Etiquette Accessibility Activities Bike Hike/Run Yoga Cross-Country Ski Snowshoe Day Lodge Tahoe XC Lodge Project Day Lodge Free Heel Cafe Rentals &#038; Services ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, snowshoe"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-hub",
+      "name": "Tahoe Sports Hub",
+      "website": "http://www.tahoesportshub.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportshub.com/",
+        "https://www.tahoesportshub.com/services",
+        "https://www.tahoesportshub.com/bike-shop-index",
+        "https://www.tahoesportshub.com/services"
+      ],
+      "googleOverview": "Tahoe Sports Hub Store offering gear, apparel & rentals for skiing, snowboarding, paddle sports, camping & climbing.",
+      "snippet": "Tahoe Sports Hub is Truckee's ski snowboard rental and demo shop.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-ltd",
+      "name": "Tahoe Sports Ltd.",
+      "website": "http://www.tahoesportsltd.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportsltd.com/",
+        "https://www.tahoesportsltd.com/service/shipping-returns/",
+        "https://www.tahoesportsltd.com/shop/",
+        "https://www.tahoesportsltd.com/shop/ski/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/xc-skis/"
+      ],
+      "googleOverview": "Tahoe Sports Ltd.",
+      "snippet": "- Tahoe Sports ltd Select your language English (US) USD USD CAD Login View all results (0) No products found 0 Cart You have no items in your shopping cart Home Shop SKI Cross Country XC Skis Boots Backcountry Boots Bindings Poles Skins Alpine Ski Skis Boots ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: alpine_ski, cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "the-backcountry",
+      "name": "The BackCountry",
+      "website": "http://www.thebackcountry.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "apparel_snow",
+          "cross_country_ski",
+          "sled",
+          "snowboard",
+          "snowshoe",
+          "splitboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.thebackcountry.com/",
+        "https://www.thebackcountry.com/sale/shop-more/",
+        "https://www.thebackcountry.com/shop-more/",
+        "https://www.thebackcountry.com/shop-more/books/",
+        "https://www.thebackcountry.com/shop-more/books/bike/",
+        "https://www.thebackcountry.com/shop-more/books/climbing/"
+      ],
+      "googleOverview": "The BackCountry",
+      "snippet": "The BackCountry Shop | The BackCountry in Truckee, CA - The BackCountry Open Daily 8a-6p | 530-582-0909 | [email&#160;protected] Account Wish List Compare Go to account settings Cart 0 items Submit View all results ( ) Products Back Products SALE Back SALE All",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: apparel_snow, cross_country_ski, sled, snowboard, snowshoe, splitboard"
+      ]
+    },
+    {
+      "slug": "the-ski-renter",
+      "name": "The Ski Renter",
+      "website": "http://skirenter.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://skirenter.com/",
+        "https://skirenter.com/about/",
+        "https://skirenter.com/rates-packages/",
+        "https://skirenter.com/reserve-your-gear/",
+        "https://skirenter.com/category/specials/",
+        "https://skirenter.com/testimonials/"
+      ],
+      "googleOverview": "The Ski Renter",
+      "snippet": "Ski Renter – Your ski rental place in Lake Tahoe Ski Renter Your ski rental place in Lake Tahoe On Ski Run Blvd — The Ski Renter 530.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "the-village-board-shop",
+      "name": "The Village Board Shop",
+      "website": "http://www.thevillageboardshop.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://thevillageboardshop.com/",
+        "https://thevillageboardshop.com/shop?olsPage=cart",
+        "https://thevillageboardshop.com/shop",
+        "https://thevillageboardshop.com/rentals-1",
+        "https://thevillageboardshop.com/shop"
+      ],
+      "googleOverview": "The Village Board Shop",
+      "snippet": "The Village Board Shop | South Lake Tahoe Home SHOP SKATE RENTALS More Home SHOP SKATE RENTALS Sign In My Account Signed in as: filler@godaddy.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: alpine_ski, snowboard"
+      ]
+    },
+    {
+      "slug": "truckee-boardhouse",
+      "name": "Truckee Boardhouse",
+      "website": "http://www.truckeeboardhouse.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://truckeeboardhouse.com/",
+        "https://truckeeboardhouse.com/products",
+        "https://truckeeboardhouse.com/products/32-lashed-ws-db-melancon-25-26",
+        "https://truckeeboardhouse.com/products/32-tm-2-stevens-db-25-26",
+        "https://truckeeboardhouse.com/products/capita-equalizer-25-26",
+        "https://truckeeboardhouse.com/products/gift-card-717197962"
+      ],
+      "googleOverview": "Truckee Boardhouse",
+      "snippet": "Truckee Boardhouse Skip to main content FREE STANDARD SHIPPING ON ALL ORDERS Shop Delivery Contact Us Menu MEMORIAL WEEKEND SALE Shop Now Featured Products On sale $279.99 $399.99 32 Lashed W's DB Melancon 25/26 On sale",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: snowboard"
+      ]
+    },
+    {
+      "slug": "truenorth-northstar-village",
+      "name": "TrueNorth - Northstar Village",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": false,
+        "offers_demo": true,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "TrueNorth - Northstar Village",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "marked demo-only but a rental signal was found"
+      ],
+      "proposals": [
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "truenorth-ritz-carlton",
+      "name": "TrueNorth - Ritz Carlton",
+      "website": "https://www.epicmountainrentals.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "apparel_snow",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.epicmountainrentals.com/",
+        "https://www.epicmountainrentals.com/rental-experience/summer/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/summer/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/equipment.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/winter/what-to-expect.aspx",
+        "https://www.epicmountainrentals.com/rental-experience/help/faq.aspx"
+      ],
+      "googleOverview": "TrueNorth - Ritz Carlton",
+      "snippet": "Epic Mountain Rentals | Ski Rentals | Ski Rental D | Epic Mountain Rentals Skip to main content BOOK SMARTER WITH EPIC MOUNTAIN REWARDS - Epic Pass holders save an extra 20% with Epic Mountain Rewards.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, apparel_snow, snowboard"
+      ]
+    },
+    {
+      "slug": "village-ski-loft",
+      "name": "Village Ski Loft",
+      "website": "http://www.villageskiloft.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "sled",
+          "snowboard",
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.villageskiloft.com/",
+        "https://www.villageskiloft.com/bike-rentals",
+        "https://www.villageskiloft.com/rent-now",
+        "https://www.villageskiloft.com/services-overnight",
+        "https://www.villageskiloft.com/bikes",
+        "https://www.villageskiloft.com/shop"
+      ],
+      "googleOverview": "Village Ski Loft",
+      "snippet": "Village Ski Loft Lake Tahoe top of page The Village Ski Loft Incline Village, NV - Lake Tahoe 775-831-3537 HOME RENT NOW Bike Rentals Skis & Boards Nordic, Snowshoes, Sleds Where to Ski & Ride WINTER SERVICES Expert Boot Fitting Services Overnight Tuning and R",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, sled, snowboard, snowshoe"
+      ]
+    },
+    {
+      "slug": "west-shore-sports",
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": "West Shore Sports",
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: snowshoe"
+      ]
+    },
+    {
+      "slug": "west-shore-sports-qmz5wvbk",
+      "name": "West Shore Sports",
+      "website": "http://westshoresports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": "West Shore Sports",
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: snowshoe"
+      ]
+    },
+    {
+      "slug": "west-shore-sports-sunnyside",
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "snowshoe"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://westshoresports.com/",
+        "https://westshoresports.com/home-summer/kayaks/",
+        "https://westshoresports.com/home-summer/bicycle/",
+        "https://westshoresports.com/home-summer/paddleboard/",
+        "https://westshoresports.com/home-summer/summer-rates/",
+        "https://westshoresports.com/shop/"
+      ],
+      "googleOverview": null,
+      "snippet": "Home Summer - West Shore Sports a Summer Rentals for the Whole family With 3 Locations on Tahoe’s West Shore view rentals Summer Rentals *All rentals are first come first served and require a credit or debit card deposit Kayaks view rentals Bicycle view rental",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: snowshoe"
+      ]
+    },
+    {
+      "slug": "winter-wonderland-ski-shop",
+      "name": "Winter Wonderland Ski Shop",
+      "website": "https://winterwonderlandskishop.com/",
+      "category": "snow_sports",
+      "current": {
+        "categories": [
+          "snow_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "alpine_ski",
+          "sled",
+          "snowboard"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://winterwonderlandskishop.com/",
+        "https://winterwonderlandskishop.com/rentals/",
+        "https://winterwonderlandskishop.com/ski/",
+        "https://winterwonderlandskishop.com/snowboard/",
+        "https://winterwonderlandskishop.com/lake-tahoe-equipment-rentals/",
+        "https://winterwonderlandskishop.com/reservation/"
+      ],
+      "googleOverview": "Winter Wonderland Ski Shop",
+      "snippet": "Winter Wonderland | South Lake Tahoe Ski and Board Rentals Rentals Lake Tahoe Ski Rentals Lake Tahoe Snowboard Rentals Lake Tahoe Equipment Rentals All Rentals Reservation About Us Videos Web Cams Contact More Tahoe Fun Vacation Rentals Tahoe Snowmobiles Tubin",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true",
+        "propose subcategories: alpine_ski, sled, snowboard"
+      ]
+    }
+  ]
+}

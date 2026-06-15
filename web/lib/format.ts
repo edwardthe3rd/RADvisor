@@ -1,14 +1,11 @@
-import {
-  DEMO_ONLY_NAME_SUFFIX,
-  DEMO_ONLY_OPERATOR_SLUGS,
-} from "@/lib/config/demo-operators";
+import { DEMO_ONLY_NAME_SUFFIX, isDemoOnly } from "@/lib/config/demo-operators";
 import type { Equipment, Operator } from "@/lib/supabase/types";
 import { PRICE_TIER_COLUMNS, type PriceTier } from "@/lib/search/buildQuery";
 
 export function operatorDisplayName(
-  operator: Pick<Operator, "name" | "slug">,
+  operator: Pick<Operator, "name" | "offers_demo" | "offers_rental">,
 ): string {
-  if (!DEMO_ONLY_OPERATOR_SLUGS.has(operator.slug)) return operator.name;
+  if (!isDemoOnly(operator)) return operator.name;
   if (operator.name.endsWith(DEMO_ONLY_NAME_SUFFIX)) return operator.name;
   return `${operator.name}${DEMO_ONLY_NAME_SUFFIX}`;
 }
@@ -24,6 +21,7 @@ const TIER_SUFFIX: Record<PriceTier, string> = {
   full_day: "/day",
   multi_day: "/day (multi)",
   weekly: "/week",
+  season: "/season",
 };
 
 /**

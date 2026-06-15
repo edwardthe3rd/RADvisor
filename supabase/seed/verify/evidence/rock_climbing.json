@@ -1,0 +1,1015 @@
+{
+  "category": "rock_climbing",
+  "gatheredAt": "2026-06-14T21:22:51.996Z",
+  "results": [
+    {
+      "slug": "alpenglow-expeditions",
+      "name": "Alpenglow Expeditions",
+      "website": "https://alpenglowexpeditions.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://alpenglowexpeditions.com/",
+        "https://alpenglowexpeditions.com/",
+        "https://alpenglowexpeditions.com/",
+        "https://alpenglowexpeditions.com/",
+        "https://alpenglowexpeditions.com/",
+        "https://alpenglowexpeditions.com/"
+      ],
+      "googleOverview": "Alpenglow Expeditions",
+      "snippet": "All Stories Everest Coverage: Summits begin, will chaos ensue? With the 2026 Everest season hitting its most critical stretch, Sam and Adrian are back for their third installment of armchair mountaineering coverage.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: rope_hardware"
+      ]
+    },
+    {
+      "slug": "alpinistas",
+      "name": "Alpinistas",
+      "website": "https://www.thealpinistas.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "climbing_shoes",
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://thealpinistas.com/",
+        "https://thealpinistas.com/collections/alpinistas",
+        "https://thealpinistas.com/products/patagonia-diamond-quilted-bomber-hoody",
+        "https://thealpinistas.com/",
+        "https://thealpinistas.com/collections",
+        "https://thealpinistas.com/collections/team-picks/products/parks-project-park-shadows-full-zip-high-pile-fleece"
+      ],
+      "googleOverview": "Alpinistas",
+      "snippet": "Filter 11 products Sort Featured Most relevant Best selling Alphabetically, A-Z Alphabetically, Z-A Price, low to high Price, high to low Date, old to new Date, new to old Sort Large Small List Quick shop Add to cart Alpinistas Good Vibes Tee $34 99 Quick shop",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: climbing_shoes, harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "high-altitude-fitness",
+      "name": "High Altitude Fitness",
+      "website": "http://www.highaltitudefit.net/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.highaltitudefit.net/"
+      ],
+      "googleOverview": "High Altitude Fitness",
+      "snippet": "High Altitude Fitness 0 Skip to Content Climbing Climbing Walls Climbing FAQ Youth Climbing Programs Summer Camps Truckee Location Summer Camps Incline Village Location Special Events/Groups/Private Lessons Fitness Class",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "high-altitude-fitness-truckee",
+      "name": "High Altitude Fitness Truckee",
+      "website": "https://www.highaltitudefit.net/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.highaltitudefit.net/"
+      ],
+      "googleOverview": "High Altitude Fitness Truckee",
+      "snippet": "High Altitude Fitness 0 Skip to Content Climbing Climbing Walls Climbing FAQ Youth Climbing Programs Summer Camps Truckee Location Summer Camps Incline Village Location Special Events/Groups/Private Lessons Fitness Class",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "mesa-rim-climbing-center",
+      "name": "Mesa Rim Climbing Center",
+      "website": "https://www.mesarim.com/reno",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://mesarim.com/reno/"
+      ],
+      "googleOverview": "Mesa Rim Climbing Center",
+      "snippet": "This includes everything you need to get started: Rental gear, a belay lesson and full membership for a week.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "nevada-adventure-rentals",
+      "name": "Nevada Adventure Rentals",
+      "website": "http://nevadaadventurerentals.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing"
+        ],
+        "subcategories": [
+          "atv",
+          "cooking",
+          "dirt_bike",
+          "sleep_system",
+          "tent",
+          "utv"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://nevadaadventurerentals.com/",
+        "https://nevadaadventurerentals.com/shop/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/accessories/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/ascenders-pulleys/",
+        "https://nevadaadventurerentals.com/product-category/climbing-gear/belay-devices/"
+      ],
+      "googleOverview": "Nevada Adventure Rentals",
+      "snippet": "Climbing Gear, Outdoor Equipment, Motorcycle Rentals - Reno, NV Skip to content (775) 686-3557 0 items Products search Shop Climbing Gear Accessories Ascenders & Pulleys Belay Devices Big Wall Bouldering Carabiners / Draws / Slings Chalk Chalk Bags Harnesses H",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "patagonia-outlet",
+      "name": "Patagonia Outlet",
+      "website": "https://www.patagonia.com/stores/nv/reno/130-south-center-street/store_reno.html",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.patagonia.com/stores/nv/reno/130-south-center-street/store_reno.html/",
+        "https://www.patagonia.com/shop/mens",
+        "https://www.patagonia.com/shop/womens",
+        "https://www.patagonia.com/shop/kids-baby",
+        "https://www.patagonia.com/shop/gear",
+        "https://www.patagonia.com/shop/new-arrivals"
+      ],
+      "googleOverview": "Patagonia Outlet",
+      "snippet": "Here you’ll find both current- and past-season clothing for skiing and boarding, climbing, trail running, travel, camping and just hanging out—most at outlet prices.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "rei",
+      "name": "REI",
+      "website": "https://www.rei.com/stores/reno?y_source=1_MTQ1MzQxOC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "kayak",
+          "paddleboard",
+          "sleep_system",
+          "tent",
+          "wetsuit"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "climbing_shoes",
+          "crash_pad",
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.rei.com/stores/reno",
+        "https://www.rei.com/",
+        "https://www.rei.com/ShoppingCart",
+        "https://www.rei.com/stores/bike-shop",
+        "https://www.rei.com/s/new-running-shoes-releases",
+        "https://www.rei.com/stores/ski-snowboard-shop"
+      ],
+      "googleOverview": "REI Retail chain carrying gear, apparel & footwear for a wide range of outdoor & fitness activities.",
+      "snippet": "com Home Page Shop Clear Search Search Cancel My REI Find your store Sign In Cart Open menu Close menu My Account - Sign in or Register Camp & Hike All Camp & Hike Camp & Hike All Camp & Hike Hiking Hiking All Hiking Footwear Jackets Shirts Pants Shorts Socks ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: climbing_shoes, crash_pad, harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "scheels",
+      "name": "Scheels",
+      "website": "https://www.scheels.com/store/reno-sparks/074?utm_source=google&utm_medium=yext",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "Scheels Chain with apparel, shoes & gear for sports & outdoor recreation, plus merchandise with team logos.",
+      "snippet": "Scheels Chain with apparel, shoes & gear for sports & outdoor recreation, plus merchandise with team logos. Visitors say this sporting goods store offers an unbeatable selection of gear for various sports and outdoor act",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "sierra-adventures-activities-reno-tahoe-llc",
+      "name": "Sierra Adventures",
+      "website": "https://m.wildsierra.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "off_road",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [
+          "atv",
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://m.wildsierra.com/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/",
+        "https://m.wildsierra.com/gear-rentals-lessons-clinics/"
+      ],
+      "googleOverview": "Sierra Adventures / Activities Reno Tahoe, LLC",
+      "snippet": "Sierra Adventures | Adventures in Reno &#8211; Tahoe Sierra Adventures &#8211; Adventures in Reno &#8211; Tahoe Social Sierra Adventures Adventures in Reno &#8211; Tahoe Menu Skip to content Home About Us Custom Adventure Tours Earth Adventures Wind Adventures",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": []
+    },
+    {
+      "slug": "sports-ltd-rentals",
+      "name": "Sports Ltd. Rentals",
+      "website": "http://www.sportsltdrentals.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports"
+        ],
+        "subcategories": [
+          "backpack",
+          "camp_furniture",
+          "cooking",
+          "e_bike_city",
+          "road_bike",
+          "sleep_system",
+          "tent"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": true,
+        "retailOnly": false,
+        "subcategories": [
+          "climbing_shoes",
+          "crash_pad",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": true,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://sportsltdrentals.com/",
+        "https://sportsltdrentals.com/rentals/",
+        "https://sportsltdrentals.com/winter-rentals/",
+        "https://sportsltdrentals.com/summer-rentals-e-bikes-bike-rentals-south-lake-tahoe-california-electric-mountain-bike/",
+        "https://sportsltdrentals.com/25-26-demo-ski-program/",
+        "https://sportsltdrentals.com/contact-us/"
+      ],
+      "googleOverview": "Sports Ltd. Rentals",
+      "snippet": "- Sports Ltd Rentals E-Bike, Ski, Snowboard, E-Mtn Bike, Camping, & Backcountry Skip to content Sports Ltd Rentals Outdoor Equipment Rental Rentals &#038; Demos Winter Rentals Summer Rentals Book Now Demo Skis 25/26 Demo Ski Program Contact Us Trail Info &#038",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "appears to offer a season lease → propose offers_season_lease=true",
+        "propose subcategories: climbing_shoes, crash_pad, rope_hardware"
+      ]
+    },
+    {
+      "slug": "tahoe-mountain-sports",
+      "name": "Tahoe Mountain Sports",
+      "website": "http://www.tahoemountainsports.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "backpack",
+          "cooking",
+          "sleep_system",
+          "tent"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": true
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoemountainsports.com/",
+        "https://tahoemountainsports.com/collections/winter-sale-collection",
+        "https://tahoemountainsports.com/collections",
+        "https://tahoemountainsports.com/pages/rent-gear",
+        "https://tahoemountainsports.com/pages/rent-skis",
+        "https://tahoemountainsports.com/pages/rent-snowboards"
+      ],
+      "googleOverview": "Tahoe Mountain Sports",
+      "snippet": "Shop Our Winter Sale! Tahoe Mountain Sports Shop Men's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Women's Shirts Pants Shorts Swimwear Jackets Ski Pants Base Layers Kid's Footwear Men's Shoes Women's Shoes Winter Boots Socks Accessories Luggage",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "tahoe-outdoor-adventures",
+      "name": "Tahoe Outdoor Adventures",
+      "website": "https://tahoeoutdooradventures.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "off_road",
+          "rock_climbing",
+          "water_sports"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoeoutdooradventures.com/"
+      ],
+      "googleOverview": "Tahoe Outdoor Adventures",
+      "snippet": "Explore Private Snowboarding Lessons Gain Skills Explore Safe, YEAR-ROUND Activities for all levels Tahoe Outdoor Adventures Offers Year-Round Adventures and Activities! Explore Tahoe with our seasonal tours, ranging from family-friendly outings to advanced, c",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    },
+    {
+      "slug": "tahoe-sports-hub",
+      "name": "Tahoe Sports Hub",
+      "website": "http://www.tahoesportshub.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "e_bike_city",
+          "kayak",
+          "paddleboard",
+          "raft"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": true,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": true,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportshub.com/",
+        "https://www.tahoesportshub.com/services",
+        "https://www.tahoesportshub.com/bike-shop-index",
+        "https://www.tahoesportshub.com/services"
+      ],
+      "googleOverview": "Tahoe Sports Hub Store offering gear, apparel & rentals for skiing, snowboarding, paddle sports, camping & climbing.",
+      "snippet": "Tahoe Sports Hub is Truckee's ski snowboard rental and demo shop.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "also appears to offer demos → propose offers_demo=true"
+      ]
+    },
+    {
+      "slug": "tahoe-sports-ltd",
+      "name": "Tahoe Sports Ltd.",
+      "website": "http://www.tahoesportsltd.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "electric_transport",
+          "mountain_biking",
+          "road_cycling",
+          "rock_climbing",
+          "snow_sports",
+          "water_sports"
+        ],
+        "subcategories": [
+          "cooking",
+          "e_bike_city",
+          "gravel_bike",
+          "kayak",
+          "kids_bike",
+          "onewheel",
+          "road_bike",
+          "tent"
+        ],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": true
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "climbing_shoes",
+          "crash_pad",
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://www.tahoesportsltd.com/",
+        "https://www.tahoesportsltd.com/service/shipping-returns/",
+        "https://www.tahoesportsltd.com/shop/",
+        "https://www.tahoesportsltd.com/shop/ski/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/",
+        "https://www.tahoesportsltd.com/shop/ski/cross-country/xc-skis/"
+      ],
+      "googleOverview": "Tahoe Sports Ltd.",
+      "snippet": "- Tahoe Sports ltd Select your language English (US) USD USD CAD Login View all results (0) No products found 0 Cart You have no items in your shopping cart Home Shop SKI Cross Country XC Skis Boots Backcountry Boots Bindings Poles Skins Alpine Ski Skis Boots ",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_season_lease=true but no lease signal found"
+      ],
+      "proposals": [
+        "propose subcategories: climbing_shoes, crash_pad, harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "tahoe-via-ferrata",
+      "name": "Tahoe Via Ferrata",
+      "website": "http://www.tahoevia.com/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "harness",
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://tahoevia.com/",
+        "https://tahoevia.com/",
+        "https://tahoevia.com/",
+        "https://tahoevia.com/",
+        "https://tahoevia.com/",
+        "https://tahoevia.com/"
+      ],
+      "googleOverview": "Tahoe Via Ferrata",
+      "snippet": "The Tahoe Via Ferrata operates seasonally, typically opening in late spring and running through late fall until winter snow and conditions require closure.",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": [
+        "propose subcategories: harness, rope_hardware"
+      ]
+    },
+    {
+      "slug": "the-home-depot",
+      "name": "The Home Depot",
+      "website": "https://www.homedepot.com/l/N-Reno/NV/Reno/89512/3304?emt=MSGoogleMaps",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": true,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": [
+          "rope_hardware"
+        ]
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": true,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [],
+      "googleOverview": "The Home Depot Chain home improvement retailer for tools, appliances & other products (some offer truck rentals).",
+      "snippet": "The Home Depot Chain home improvement retailer for tools, appliances & other products (some offer truck rentals).",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [],
+      "proposals": [
+        "propose subcategories: rope_hardware"
+      ]
+    },
+    {
+      "slug": "upcycled-adventures",
+      "name": "Upcycled Adventures",
+      "website": "https://upcycledadventures.square.site/",
+      "category": "rock_climbing",
+      "current": {
+        "categories": [
+          "camping",
+          "rock_climbing"
+        ],
+        "subcategories": [],
+        "offers_rental": true,
+        "offers_demo": false,
+        "offers_season_lease": false
+      },
+      "detected": {
+        "rental": false,
+        "demo": false,
+        "lease": false,
+        "retailOnly": false,
+        "subcategories": []
+      },
+      "signals": {
+        "website": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        },
+        "google": {
+          "rental": false,
+          "demo": false,
+          "lease": false,
+          "retailOnly": false
+        }
+      },
+      "pages": [
+        "https://upcycledadventures.square.site/"
+      ],
+      "googleOverview": "Upcycled Adventures",
+      "snippet": "Used Outdoor Gear in Truckee | Upcycled Adventures",
+      "reachable": true,
+      "needsAgentFetch": false,
+      "conflicts": [
+        "offers_rental=true but no rental signal (retail/tours/maintenance/JS site?)"
+      ],
+      "proposals": []
+    }
+  ]
+}

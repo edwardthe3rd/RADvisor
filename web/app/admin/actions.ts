@@ -39,6 +39,14 @@ function operatorFromForm(formData: FormData) {
   const categories = CATEGORIES.map((c) => c.slug).filter(
     (slug) => formData.get(`category_${slug}`) === "on",
   );
+  const subcategories = CATEGORIES.flatMap((c) =>
+    c.subcategories.map((s) => s.slug),
+  ).filter(
+    (slug) =>
+      !slug.endsWith("_demo") &&
+      !slug.endsWith("_lease") &&
+      formData.get(`subcategory_${slug}`) === "on",
+  );
   return {
     name: str(formData, "name") ?? "",
     slug: str(formData, "slug") ?? "",
@@ -61,7 +69,11 @@ function operatorFromForm(formData: FormData) {
       | "scrape"
       | "none",
     notes_internal: str(formData, "notes_internal"),
+    subcategories,
     offers_delivery: formData.get("offers_delivery") === "on",
+    offers_rental: formData.get("offers_rental") === "on",
+    offers_demo: formData.get("offers_demo") === "on",
+    offers_season_lease: formData.get("offers_season_lease") === "on",
     is_active: formData.get("is_active") === "on",
   };
 }

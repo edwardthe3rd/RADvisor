@@ -128,12 +128,16 @@ export type Database = {
           name: string
           notes_internal: string | null
           offers_delivery: boolean
+          offers_demo: boolean
+          offers_rental: boolean
+          offers_season_lease: boolean
           phone: string | null
           photos: string[] | null
           rating_external: number | null
           rating_external_count: number | null
           slug: string
           state: string | null
+          subcategories: string[]
           updated_at: string | null
           website: string | null
           zip: string | null
@@ -159,12 +163,16 @@ export type Database = {
           name: string
           notes_internal?: string | null
           offers_delivery?: boolean
+          offers_demo?: boolean
+          offers_rental?: boolean
+          offers_season_lease?: boolean
           phone?: string | null
           photos?: string[] | null
           rating_external?: number | null
           rating_external_count?: number | null
           slug: string
           state?: string | null
+          subcategories?: string[]
           updated_at?: string | null
           website?: string | null
           zip?: string | null
@@ -190,12 +198,16 @@ export type Database = {
           name?: string
           notes_internal?: string | null
           offers_delivery?: boolean
+          offers_demo?: boolean
+          offers_rental?: boolean
+          offers_season_lease?: boolean
           phone?: string | null
           photos?: string[] | null
           rating_external?: number | null
           rating_external_count?: number | null
           slug?: string
           state?: string | null
+          subcategories?: string[]
           updated_at?: string | null
           website?: string | null
           zip?: string | null

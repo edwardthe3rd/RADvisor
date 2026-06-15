@@ -7,8 +7,10 @@ import type { Equipment, Operator } from "@/lib/supabase/types";
 import {
   buildEquipmentQuery,
   buildOperatorSearchQuery,
+  OPERATOR_SUMMARY,
   type Filters,
 } from "@/lib/search/buildQuery";
+import { parseAcquisitionSearchQuery } from "@/lib/search/acquisition-search";
 import { operatorVisibleForCategoryBrowse } from "@/lib/config/operator-category-gates";
 import { sortEquipment } from "@/lib/search/sortResults";
 
@@ -26,6 +28,8 @@ export type OperatorSummary = Pick<
   | "booking_url"
   | "rating_external"
   | "rating_external_count"
+  | "offers_demo"
+  | "offers_rental"
 >;
 
 export type EquipmentWithOperator = Equipment & { operators: OperatorSummary };
@@ -91,9 +95,74 @@ export async function searchOperators(
   filters: Pick<Filters, "delivery"> = {},
 ): Promise<OperatorSummary[]> {
   const db = supabaseServer();
-  const { data, error } = await buildOperatorSearchQuery(db, q, filters);
-  if (error || !data) return [];
-  return data;
+  const intent = parseAcquisitionSearchQuery(q);
+  const byId = new Map<string, OperatorSummary>();
+
+  const add = (rows: OperatorSummary[] | null | undefined) => {
+    for (const row of rows ?? []) byId.set(row.id, row);
+  };
+
+  if (intent.textQuery) {
+    const { data, error } = await buildOperatorSearchQuery(
+      db,
+      intent.textQuery,
+      filters,
+    );
+    if (!error) add(data);
+  }
+
+  if (intent.demo) {
+    let demoFlag = db
+      .from("operators")
+      .select(OPERATOR_SUMMARY)
+      .eq("is_active", true)
+      .eq("offers_demo", true);
+    if (filters.delivery) demoFlag = demoFlag.eq("offers_delivery", true);
+    const { data: demoFlagRows, error: demoFlagError } = await demoFlag.order(
+      "name",
+      { ascending: true },
+    );
+    if (!demoFlagError) add(demoFlagRows);
+
+    let demoDesc = db
+      .from("operators")
+      .select(OPERATOR_SUMMARY)
+      .eq("is_active", true)
+      .ilike("description", "%demo%");
+    if (filters.delivery) demoDesc = demoDesc.eq("offers_delivery", true);
+    const { data: demoDescRows, error: demoDescError } = await demoDesc.order(
+      "name",
+      { ascending: true },
+    );
+    if (!demoDescError) add(demoDescRows);
+  }
+
+  if (intent.lease) {
+    let flagged = db
+      .from("operators")
+      .select(OPERATOR_SUMMARY)
+      .eq("is_active", true)
+      .eq("offers_season_lease", true);
+    if (filters.delivery) flagged = flagged.eq("offers_delivery", true);
+    const { data: flaggedRows, error: flaggedError } = await flagged.order(
+      "name",
+      { ascending: true },
+    );
+    if (!flaggedError) add(flaggedRows);
+
+    let leaseDesc = db
+      .from("operators")
+      .select(OPERATOR_SUMMARY)
+      .eq("is_active", true)
+      .or("description.ilike.%lease%,name.ilike.%lease%");
+    if (filters.delivery) leaseDesc = leaseDesc.eq("offers_delivery", true);
+    const { data: descRows, error: descError } = await leaseDesc.order("name", {
+      ascending: true,
+    });
+    if (!descError) add(descRows);
+  }
+
+  return Array.from(byId.values());
 }
 
 export async function getOperatorsByCategory(
@@ -105,6 +174,26 @@ export async function getOperatorsByCategory(
     .from("operators")
     .select("*")
     .eq("is_active", true)
+    .contains("categories", [category]);
+  if (options.delivery) query = query.eq("offers_delivery", true);
+  const { data, error } = await query.order("name", { ascending: true });
+  if (error || !data) return [];
+  return data.filter((op) =>
+    operatorVisibleForCategoryBrowse(op, category, options.location),
+  );
+}
+
+/** Operators with verified full-season lease programs in a category. */
+export async function getSeasonLeaseOperatorsByCategory(
+  category: string,
+  options: Pick<Filters, "delivery" | "location"> = {},
+): Promise<Operator[]> {
+  const db = supabaseServer();
+  let query = db
+    .from("operators")
+    .select("*")
+    .eq("is_active", true)
+    .eq("offers_season_lease", true)
     .contains("categories", [category]);
   if (options.delivery) query = query.eq("offers_delivery", true);
   const { data, error } = await query.order("name", { ascending: true });

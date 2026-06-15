@@ -14,9 +14,11 @@ import {
 } from "@/lib/config/quiz";
 import {
   getOperatorsByCategory,
+  getSeasonLeaseOperatorsByCategory,
   searchEquipment,
   type EquipmentWithOperator,
 } from "@/lib/data";
+import { isLeaseSubcategory } from "@/lib/config/operator-subcategory-match";
 import type { Filters } from "@/lib/search/buildQuery";
 import type { Operator } from "@/lib/supabase/types";
 import { pickPrice } from "@/lib/format";
@@ -45,7 +47,7 @@ function answersToFilters(answers: QuizAnswers): Filters {
   if (answers.skill && answers.skill !== "all") {
     filters.skill = [answers.skill as SkillLevel];
   }
-  if (answers.budget && answers.budget !== "none") {
+  if (answers.budget && answers.budget !== "none" && answers.duration !== "season") {
     filters.priceMax = Number(answers.budget);
   }
   if (answers.delivery === "yes") {
@@ -61,6 +63,23 @@ function answersToFilters(answers: QuizAnswers): Filters {
  */
 async function getResults(answers: QuizAnswers): Promise<QuizResults> {
   const relaxed: string[] = [];
+  const wantsSeasonLease =
+    answers.duration === "season" ||
+    (!!answers.subtype && isLeaseSubcategory(answers.subtype));
+
+  if (
+    wantsSeasonLease &&
+    answers.activity &&
+    answers.activity !== "not_sure"
+  ) {
+    const operators = await getSeasonLeaseOperatorsByCategory(answers.activity, {
+      delivery: answers.delivery === "yes",
+      location: answers.location,
+    });
+    const items = await searchEquipment(answersToFilters(answers));
+    return { items, operators, relaxed };
+  }
+
   let filters = answersToFilters(answers);
 
   let items = await searchEquipment(filters);
@@ -236,13 +255,20 @@ export default async function FindPage({
           <>
             <h1 className="mb-2 text-2xl font-extrabold text-ink-primary">
               {results.operators.length} operator
-              {results.operators.length === 1 ? "" : "s"} rent{" "}
-              {answers.activity ? categoryLabel(answers.activity).toLowerCase() : ""} gear
+              {results.operators.length === 1 ? "" : "s"}{" "}
+              {answers.duration === "season" ||
+              (answers.subtype && isLeaseSubcategory(answers.subtype)) ?
+                "offer season leases for"
+              : "rent"}{" "}
+              {answers.activity ? categoryLabel(answers.activity).toLowerCase() : ""}{" "}
+              gear
               near you
             </h1>
             <p className="mb-6 text-ink-secondary">
-              Individual gear listings are coming soon — contact an operator
-              directly to confirm what they have available.
+              {answers.duration === "season" ||
+              (answers.subtype && isLeaseSubcategory(answers.subtype)) ?
+                "Season lease programs are arranged directly with the operator — contact them for pricing and availability."
+              : "Individual gear listings are coming soon — contact an operator directly to confirm what they have available."}
             </p>
             <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {results.operators.map((operator) => (
