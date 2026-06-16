@@ -8,6 +8,7 @@ const ICONS: Record<string, string> = {
   zap: "⚡",
   wind: "🪂",
   demo: "🎯",
+  tag: "🏷️",
 };
 
 export default function CategoryIcon({

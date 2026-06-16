@@ -565,18 +565,17 @@
   },
   "categories": [
    "electric_transport",
-   "mountain_biking",
    "road_cycling"
   ],
   "photos": null,
   "rating_external": 5,
   "rating_external_count": 287,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJD5DUGp-PmYARqD8tvPx1aHE; founder_verified; no off-road or powersports rentals",
+  "notes_internal": "google_place_id:ChIJD5DUGp-PmYARqD8tvPx1aHE; founder_verified; no off-road or powersports rentals [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kids_bike"
   ]
  },
@@ -601,24 +600,23 @@
   },
   "categories": [
    "electric_transport",
-   "mountain_biking",
-   "road_cycling"
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 5,
   "rating_external_count": 462,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ87o1B6NFmYARWznGWV_cHh8; founder_verified; no off-road or powersports rentals",
+  "notes_internal": "google_place_id:ChIJ87o1B6NFmYARWznGWV_cHh8; founder_verified 2026-06-15; Reno + Santa Cruz. Rental/demo fleet currently full-power E-MTBs (also full-suspension MTB + electric town bike pricing). Try-before-you-buy demo program (credit toward purchase). [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "downhill_bike",
-   "e_bike_city",
    "ebike_mtb",
-   "gravel_bike",
-   "kids_bike",
-   "trail_bike"
-  ]
+   "trail_bike",
+   "ebike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true,
+  "offers_season_lease": false
  },
  {
   "name": "Arrowhead Mobile Home Park",
@@ -911,20 +909,23 @@
   },
   "categories": [
    "electric_transport",
-   "mountain_biking"
+   "road_cycling"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 173,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJjap9hHRxmYARaDQX4il7rik; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJjap9hHRxmYARaDQX4il7rik; founder_verified 2026-06-15; fleet = electric bikes (RAD), city/cruiser bikes, kids bikes + trailers/tag-alongs. Paved East Shore path rentals only — no mountain bikes. [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
-   "kids_bike",
-   "trail_bike"
-  ]
+   "ebike",
+   "cruiser_bike",
+   "kids_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "Big Daddy's Bike & Brew",
@@ -957,7 +958,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -1049,14 +1050,20 @@
   "rating_external": 5,
   "rating_external_count": 91,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJIetiKMDfm4ARMau5JRoa_EU; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJIetiKMDfm4ARMau5JRoa_EU; founder_verified 2026-06-15; rents full-suspension + hardtail MTB, electric MTB, comfort road e-bikes, comfort cruisers, kids bikes, trailers, trail-a-bikes, tandems.",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-15",
   "subcategories": [
-   "e_bike_city",
+   "trail_bike",
    "ebike_mtb",
-   "kids_bike"
-  ]
+   "ebike",
+   "cruiser_bike",
+   "kids_bike",
+   "tandem_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "Pedego Electric Bikes Reno",
@@ -1080,7 +1087,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -1103,15 +1110,22 @@
    "sun": "Closed"
   },
   "categories": [
-   "mountain_biking"
+   "burning_man_bikes"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 98,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJMaQNh15ImYARe7EyWm5l1_w",
+  "notes_internal": "google_place_id:ChIJMaQNh15ImYARe7EyWm5l1_w; wave2: Reno shop; retail MTB + Aventon e-bike DEALER (sales). Rental fleet = Burning Man fat bikes & cruisers w/ glow packages + Reno rentals. Tagged burning_man_bikes; MTB is retail-only -> dropped mountain_biking. E-bike rentals unconfirmed.",
   "is_active": true,
-  "last_verified": "2026-06-08"
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false,
+  "subcategories": [
+   "playa_bike",
+   "cruiser_bike"
+  ]
  },
  {
   "name": "Black Tie Bike Rentals North Tahoe",
@@ -1134,19 +1148,20 @@
   },
   "categories": [
    "electric_transport",
-   "mountain_biking",
-   "road_cycling"
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJ1bqK9BhmYAR0mLvJWN5JUo",
+  "notes_internal": "google_place_id:ChIJJ1bqK9BhmYAR0mLvJWN5JUo; [wave3 2026-06-16: delivery e-bikes + MTB (also SUP/kayak -> add water_sports in water wave); no road bikes -> drop road_cycling; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city"
-  ]
+   "ebike",
+   "trail_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Black Tie Ski Rentals of North Lake Tahoe",
@@ -1204,7 +1219,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "kayak",
    "paddleboard",
@@ -1246,7 +1261,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "kayak",
    "paddleboard",
@@ -1288,7 +1303,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "kayak",
    "paddleboard",
@@ -1956,10 +1971,18 @@
   "rating_external": 5,
   "rating_external_count": 1,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJlfkixIebmYARzsYK3x_HyfI; founder review: rents bikes and watersports; merged duplicate bike-lake-tahoe",
+  "notes_internal": "google_place_id:ChIJlfkixIebmYARzsYK3x_HyfI; wave2: founder_verified rents bikes + clear-kayak watersports. Bike fleet = Specialized Turbo Levo e-MTBs, pedal-assist & standard cruisers, kids bikes. Zephyr Cove. (bike-lake-tahoe = duplicate, already deactivated.)",
   "is_active": true,
-  "last_verified": "2026-06-14",
-  "offers_rental": true
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false,
+  "subcategories": [
+   "ebike_mtb",
+   "ebike",
+   "cruiser_bike",
+   "kids_bike"
+  ]
  },
  {
   "name": "Clearly Tahoe Kayak Rentals at Sand Harbor",
@@ -2061,7 +2084,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "e_scooter"
   ]
  },
@@ -2306,16 +2329,18 @@
   "rating_external": 4.8,
   "rating_external_count": 43,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJKx4AZMvfm4ARYXTbCQnZlWk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJKx4AZMvfm4ARYXTbCQnZlWk; founder_verified 2026-06-15; rents full-suspension MTB, full-suspension e-MTB (Santa Cruz Vala), Class-2 cruiser e-bikes (Murf), town e-bikes. Segway e-scooters are sold, not rented — removed e_scooter.",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-15",
   "subcategories": [
-   "e_bike_city",
-   "e_scooter",
+   "trail_bike",
    "ebike_mtb",
-   "enduro_bike",
-   "trail_bike"
-  ]
+   "ebike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "D1-Trailers | Sales and Rentals",
@@ -2509,22 +2534,26 @@
   "hours": null,
   "categories": [
    "mountain_biking",
-   "off_road",
-   "road_cycling"
+   "road_cycling",
+   "electric_transport"
   ],
   "photos": null,
   "rating_external": 5,
   "rating_external_count": 41,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJYXYrLonfm4AR9xfL-eRx0VU; scan_verified; road_cycling gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJYXYrLonfm4AR9xfL-eRx0VU; founder_verified 2026-06-15; MTB (trail+enduro), e-MTB, gravel + e-gravel (Pinarello Nytro), youth. 2026 rental fulfillment via Start Haus. Guided tours/shuttles too. [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
+   "trail_bike",
+   "enduro_bike",
    "ebike_mtb",
    "gravel_bike",
-   "kids_bike",
-   "trail_bike"
-  ]
+   "ebike"
+  ],
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "Diverobotix",
@@ -2759,7 +2788,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -2824,7 +2853,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "paddleboard"
   ]
@@ -2852,7 +2881,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -2973,18 +3002,17 @@
   "categories": [
    "camping",
    "electric_transport",
-   "mountain_biking",
    "road_cycling"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 18,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJbzu7vXSPmYAROH1u0aSqiBg; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJbzu7vXSPmYAROH1u0aSqiBg; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3b 2026-06-16: confirmed not MTB - dropped mountain_biking (e-bike rentals)]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -3488,7 +3516,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "ebike_mtb",
    "kids_bike",
    "trail_bike",
@@ -3752,7 +3780,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -3848,7 +3876,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "kayak",
    "paddleboard",
@@ -4256,14 +4284,19 @@
   "rating_external": 4.4,
   "rating_external_count": 84,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJr81lwVkUmYARghRuPDYLA60; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJr81lwVkUmYARghRuPDYLA60; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3b 2026-06-16: rentals under Services>Rental Bikes: full-sus+hardtail MTB, performance E-MTB (Heckler/ShuttleSL/Trance), road alu/carbon/Ti, hybrid e-bike; demos avail (highsierracycling.com/rentalbikes)]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
+   "trail_bike",
+   "xc_bike",
+   "ebike_mtb",
+   "road_bike",
    "gravel_bike",
-   "road_bike"
-  ]
+   "ebike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true
  },
  {
   "name": "High Sierra Water Ski School",
@@ -4918,18 +4951,17 @@
   "hours": null,
   "categories": [
    "electric_transport",
-   "mountain_biking",
    "road_cycling"
   ],
   "photos": null,
   "rating_external": 3.1,
   "rating_external_count": 7,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJWRQo6XaQmYARPFU-QgLAS9Y",
+  "notes_internal": "google_place_id:ChIJWRQo6XaQmYARPFU-QgLAS9Y; [wave3b 2026-06-16: confirmed not MTB - dropped mountain_biking (Powder House path/e-bike rentals)]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -6562,7 +6594,7 @@
   "last_verified": "2026-06-14",
   "subcategories": [
    "downhill_bike",
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "kids_bike",
    "road_bike",
@@ -6592,18 +6624,24 @@
   "categories": [
    "mountain_biking",
    "road_cycling",
+   "electric_transport",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.6,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; scan_verified; mountain_biking gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJu5xhn0HZm4ARO3ETVqLq1ec; scan_verified; mountain_biking gear-type subcategories from website+Google scan [wave3 2026-06-16: MTB (Pivot/Yeti/Scott/Kona/Norco) + e-bikes + path cruisers + kids; demos; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "kids_bike"
-  ]
+   "kids_bike",
+   "trail_bike",
+   "ebike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true
  },
  {
   "name": "On The Go Trailer Rentals",
@@ -6750,9 +6788,17 @@
   "rating_external": 4.9,
   "rating_external_count": 211,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJQTneuczfm4ARQ_PaEk5Escs",
+  "notes_internal": "google_place_id:ChIJQTneuczfm4ARQ_PaEk5Escs; wave2: rents road, mountain & e-bikes per Yelp/SierraSun/tahoe.com listings; rentals handled in-store, not surfaced on retail site — confirm fleet/sizes. Truckee loc (also Sacramento/Mill Valley, out of region).",
   "is_active": true,
-  "last_verified": "2026-06-07"
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false,
+  "subcategories": [
+   "trail_bike",
+   "road_bike",
+   "ebike"
+  ]
  },
  {
   "name": "Palisades Tahoe Ski & Snowboard Rental",
@@ -6967,7 +7013,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -7002,7 +7048,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "e_scooter",
    "ebike_mtb",
    "kids_bike"
@@ -7130,15 +7176,22 @@
   "categories": [
    "mountain_biking",
    "road_cycling",
+   "electric_transport",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 3.6,
   "rating_external_count": 102,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJqbAd6naQmYARzmDmLE2LviY; ski and bike rentals",
+  "notes_internal": "google_place_id:ChIJqbAd6naQmYARzmDmLE2LviY; wave2: year-round bike rentals at Heavenly Village gondola — cruisers, e-bikes, basic mountain bikes (+kids). Also snow rentals/leases (snow tags untouched).",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "subcategories": [
+   "xc_bike",
+   "cruiser_bike",
+   "ebike"
+  ]
  },
  {
   "name": "Powder House Ski and Snowboard Main Store",
@@ -7163,15 +7216,22 @@
   "categories": [
    "mountain_biking",
    "road_cycling",
+   "electric_transport",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": 3.4,
   "rating_external_count": 172,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJNd1MfXaQmYARGUhCfr5Mou8; snow and bike rentals",
+  "notes_internal": "google_place_id:ChIJNd1MfXaQmYARGUhCfr5Mou8; wave2: summer bike rentals (cruisers, e-bikes, basic mountain bikes). Also snow rentals/leases (snow tags untouched).",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "subcategories": [
+   "xc_bike",
+   "cruiser_bike",
+   "ebike"
+  ]
  },
  {
   "name": "Powder House Stateline at Zalanta",
@@ -7227,15 +7287,22 @@
   "categories": [
    "mountain_biking",
    "road_cycling",
+   "electric_transport",
    "snow_sports"
   ],
   "photos": null,
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "founder_verified; ski and bike rentals",
+  "notes_internal": "wave2: ski & bike rentals (cruisers, e-bikes, basic mountain bikes). Snow tags untouched.",
   "is_active": true,
-  "last_verified": "2026-06-12"
+  "last_verified": "2026-06-16",
+  "offers_rental": true,
+  "subcategories": [
+   "xc_bike",
+   "cruiser_bike",
+   "ebike"
+  ]
  },
  {
   "name": "Prater Elms Mobile Home Community",
@@ -7520,7 +7587,7 @@
    "backpack",
    "camp_furniture",
    "cooking",
-   "e_bike_city",
+   "ebike",
    "ebike_mtb",
    "gravel_bike",
    "kids_bike",
@@ -7555,11 +7622,15 @@
   "rating_external": 5,
   "rating_external_count": 4,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJN6x_Hdvfm4ARs2OsVqqpEyw; google_crosscheck: Maps lists ski/bike demos; Places API has no summary; website silent — demo only",
+  "notes_internal": "google_place_id:ChIJN6x_Hdvfm4ARs2OsVqqpEyw; google_crosscheck: Maps lists ski/bike demos; Places API has no summary; website silent — demo only [wave3b 2026-06-16: DEMO ONLY (not rental) per EC; demos own RMU Nighttrain enduro MTB + e-MTB. EC to phone-confirm.]",
   "is_active": true,
-  "last_verified": "2026-06-13",
+  "last_verified": "2026-06-16",
   "offers_rental": false,
-  "offers_demo": true
+  "offers_demo": true,
+  "subcategories": [
+   "enduro_bike",
+   "ebike_mtb"
+  ]
  },
  {
   "name": "RNO Rent a Car Center",
@@ -8073,7 +8144,7 @@
   "last_verified": "2026-06-08"
  },
  {
-  "name": "Ride Tahoe Rentals",
+  "name": "Watta Bike / Ride Tahoe",
   "slug": "ride-tahoe-rentals",
   "address": "3071 US-50, South Lake Tahoe, CA 96150, USA",
   "city": "South Lake Tahoe",
@@ -8100,13 +8171,19 @@
   "rating_external": 5,
   "rating_external_count": 30,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJi--nu62NmYARJiuXEQuXRIk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJi--nu62NmYARJiuXEQuXRIk; wave2: merged with Watta Bike Shop (co-located, Meyers, 2025). Rental fleet = Ride Tahoe high-performance MTB/E-MTB; Watta adds sales/service. Renamed per founder.",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
-   "ebike_mtb"
-  ]
+   "ebike_mtb",
+   "trail_bike",
+   "cruiser_bike",
+   "ebike",
+   "kids_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "Rip N Willies Ski & Snowboard Rental Shop",
@@ -8290,7 +8367,7 @@
   "last_verified": "2026-06-14",
   "subcategories": [
    "dirt_bike",
-   "e_bike_city",
+   "ebike",
    "e_scooter",
    "utv"
   ]
@@ -8590,14 +8667,18 @@
   "rating_external": 4.9,
   "rating_external_count": 136,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k; founder_verified; e-bike rentals",
+  "notes_internal": "google_place_id:ChIJFZ9-H4eamYARz7y9J6SiK_k; founder_verified; e-bike rentals [wave3 2026-06-16: mountain + comfort hybrid + cruiser + demo bikes; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Ski, snowboard, bike, and e-bike rentals plus gear service.",
   "subcategories": [
    "kids_bike",
-   "road_bike"
-  ]
+   "road_bike",
+   "xc_bike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true
  },
  {
   "name": "Showcase - Heavenly",
@@ -8798,11 +8879,19 @@
   "rating_external": 4.8,
   "rating_external_count": 355,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ9WJuI_w_mYAR23aOhUAK3sA; founder review: bike demos, not rentals",
+  "notes_internal": "google_place_id:ChIJ9WJuI_w_mYAR23aOhUAK3sA; wave2: founder_verified bike demos (not rentals). Demo/retail spans Pivot+Santa Cruz+Norco trail/enduro MTB, E-MTB, Specialized road/gravel. Retail+service primary.",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "offers_rental": false,
-  "offers_demo": true
+  "offers_demo": true,
+  "offers_season_lease": false,
+  "subcategories": [
+   "trail_bike",
+   "enduro_bike",
+   "ebike_mtb",
+   "road_bike",
+   "gravel_bike"
+  ]
  },
  {
   "name": "Sierra Diving Center",
@@ -8929,7 +9018,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "road_bike",
    "xc_bike"
   ]
@@ -9396,18 +9485,17 @@
   },
   "categories": [
    "electric_transport",
-   "mountain_biking",
    "road_cycling"
   ],
   "photos": null,
   "rating_external": 5,
   "rating_external_count": 283,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJudG9snaPmYARa7fYKkuik4s; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJudG9snaPmYARa7fYKkuik4s; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3b 2026-06-16: confirmed not MTB - dropped mountain_biking (e-bike rentals only)]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -9460,13 +9548,17 @@
   "rating_external": 4.8,
   "rating_external_count": 126,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJ693RXLqPmYARmhjcHSJaFis; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJ693RXLqPmYARmhjcHSJaFis; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: MTB (Pivot/Transition/Norco/Giant) + road + cruiser + e-bike + kids; backcountry shuttle; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
-   "road_bike"
-  ]
+   "ebike",
+   "road_bike",
+   "trail_bike",
+   "cruiser_bike",
+   "kids_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "South Tahoe Ebike Rentals - Margaritaville",
@@ -9499,7 +9591,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -9713,9 +9805,9 @@
   "rating_external": 4.3,
   "rating_external_count": 59,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ; founder_verified; rentals plus snow sports demos",
+  "notes_internal": "google_place_id:ChIJM967AtuRmYARFN3Q1kk8TMQ; founder_verified; rentals plus snow sports demos [wave3 2026-06-16: full-sus MTB (Stumpjumper) + E-MTB (Levo) per sportsltdrentals.com; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Gear rentals across listed categories, plus alpine ski and snowboard demos.",
   "subcategories": [
    "backpack",
@@ -9723,12 +9815,15 @@
    "climbing_shoes",
    "cooking",
    "crash_pad",
-   "e_bike_city",
+   "ebike",
    "road_bike",
    "rope_hardware",
    "sleep_system",
-   "tent"
-  ]
+   "tent",
+   "trail_bike",
+   "ebike_mtb"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Starlight Mobile Home Park",
@@ -9770,22 +9865,29 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "mountain_biking"
+   "mountain_biking",
+   "road_cycling",
+   "electric_transport"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 130,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJtW7Egsvfm4ARpLAHoUHGvuI; founder_verified; MTB and e-MTB rentals plus demos; no snow rentals",
+  "notes_internal": "google_place_id:ChIJtW7Egsvfm4ARpLAHoUHGvuI; founder_verified 2026-06-15; rents full-suspension trail/enduro MTB, e-MTB, performance gravel + e-gravel (Pinarello Nytro), youth bikes. Try-before-you-buy (rental credit toward purchase). Also fulfills Dirt Gypsy rentals. No snow rentals. [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Mountain bike and e-MTB rentals and demos — no snow sports rentals.",
   "subcategories": [
-   "ebike_mtb",
+   "trail_bike",
    "enduro_bike",
-   "kids_bike",
-   "trail_bike"
-  ]
+   "ebike_mtb",
+   "gravel_bike",
+   "ebike",
+   "kids_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true,
+  "offers_season_lease": false
  },
  {
   "name": "Stealth Tahoe",
@@ -9820,7 +9922,7 @@
   "last_verified": "2026-06-14",
   "subcategories": [
    "dirt_bike",
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "onewheel",
    "road_bike"
@@ -10218,21 +10320,25 @@
    "sun": "9:00 AM – 6:00 PM"
   },
   "categories": [
-   "electric_transport",
    "mountain_biking",
-   "road_cycling"
+   "road_cycling",
+   "electric_transport"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 162,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJLwHVPcePmYARl-yj-NLAYTY; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJLwHVPcePmYARl-yj-NLAYTY; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: performance MTB + cruisers + tandems + e-bikes (site/visitlaketahoe); categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
-   "road_bike"
-  ]
+   "ebike",
+   "road_bike",
+   "trail_bike",
+   "cruiser_bike",
+   "tandem_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Tahoe Blue Boat Rentals",
@@ -10560,7 +10666,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "ebike_mtb",
    "gravel_bike",
    "road_bike"
@@ -10598,7 +10704,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "ebike_mtb"
   ]
  },
@@ -10632,7 +10738,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city"
+   "ebike"
   ]
  },
  {
@@ -10954,9 +11060,16 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "founder_verified; snow sports and mountain bike rentals",
+  "notes_internal": "founder_verified; snow sports and mountain bike rentals [wave3b 2026-06-16: rentals under Rentals&Services tab: mountain bikes + XC ski gear + snowshoes (tahoexc.org/rentals-services)]",
   "is_active": true,
-  "last_verified": "2026-06-14"
+  "last_verified": "2026-06-16",
+  "subcategories": [
+   "xc_bike",
+   "cross_country_ski",
+   "snowshoe"
+  ],
+  "offers_rental": true,
+  "offers_demo": false
  },
  {
   "name": "Tahoe Multisport",
@@ -10989,7 +11102,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "paddleboard"
   ]
@@ -11160,16 +11273,15 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "water_sports",
-   "mountain_biking"
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.8,
   "rating_external_count": 55,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJySseGz9xmYARtuM4OmGK1G4; founder_verified; kayak and e-bike rentals",
+  "notes_internal": "google_place_id:ChIJySseGz9xmYARtuM4OmGK1G4; founder_verified; kayak and e-bike rentals [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Kayak rentals and e-bike rentals at Sand Harbor.",
   "subcategories": [
    "kayak",
@@ -11196,16 +11308,15 @@
    "sun": "8:00 AM – 8:00 PM"
   },
   "categories": [
-   "water_sports",
-   "mountain_biking"
+   "water_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 91,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJJcZ34aSbmYARL8AlRsXZDuU; founder_verified; kayak and e-bike rentals",
+  "notes_internal": "google_place_id:ChIJJcZ34aSbmYARL8AlRsXZDuU; founder_verified; kayak and e-bike rentals [2026-06-16 category synced to verified gear tags]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Kayak rentals and e-bike rentals near South Lake Tahoe.",
   "subcategories": [
    "kayak",
@@ -11344,16 +11455,21 @@
   "rating_external": 4.5,
   "rating_external_count": 374,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w; founder_verified; e-bike rentals",
+  "notes_internal": "google_place_id:ChIJA5zRfb_fm4ARX7uJFFYj08w; founder_verified; e-bike rentals [wave3 2026-06-16: full-sus MTB + E-MTB + standard bikes (rentals.tahoesportshub.com); rent+demo; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Outdoor gear rentals including e-bikes, snow sports, camping, climbing, and water sports.",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "paddleboard",
-   "raft"
-  ]
+   "raft",
+   "trail_bike",
+   "ebike_mtb",
+   "xc_bike"
+  ],
+  "offers_rental": true,
+  "offers_demo": true
  },
  {
   "name": "Tahoe Sports Ltd.",
@@ -11387,16 +11503,16 @@
   "rating_external": 4.3,
   "rating_external_count": 275,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE; founder_verified; seasonal snow sports leases",
+  "notes_internal": "google_place_id:ChIJb7h4oHaQmYAR3aCog1QfgtE; founder_verified; seasonal snow sports leases [wave3 2026-06-16: full-sus MTB (Stumpjumper) + E-MTB (Levo) per rentals.sportsltdrentals.com; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Outdoor gear rentals plus seasonal snow sports gear leases.",
   "offers_season_lease": true,
   "subcategories": [
    "climbing_shoes",
    "cooking",
    "crash_pad",
-   "e_bike_city",
+   "ebike",
    "gravel_bike",
    "harness",
    "kayak",
@@ -11404,8 +11520,11 @@
    "onewheel",
    "road_bike",
    "rope_hardware",
-   "tent"
-  ]
+   "tent",
+   "trail_bike",
+   "ebike_mtb"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Tahoe Sports Ltd. Kayak & Fish",
@@ -11940,7 +12059,7 @@
   "last_verified": "2026-06-14",
   "description": "Bike and snow sports rentals plus electric transportation rentals.",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "ebike_mtb",
    "kids_bike"
   ]
@@ -12609,13 +12728,17 @@
   "rating_external": 4.4,
   "rating_external_count": 48,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJG08rYgJ9mYARK7QUK0ob7SE; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJG08rYgJ9mYARK7QUK0ob7SE; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: comfort/off-road mountain bikes + cruisers + cruiser tandems + e-bikes + kids; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city",
-   "kids_bike"
-  ]
+   "ebike",
+   "kids_bike",
+   "xc_bike",
+   "cruiser_bike",
+   "tandem_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Truckee River Raft Co.",
@@ -13214,7 +13337,7 @@
   "last_verified": "2026-06-14",
   "description": "Snow sports, mountain bike, road bike, and electric transportation rentals.",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "ebike_mtb",
    "kids_bike",
    "road_bike",
@@ -13284,7 +13407,7 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kids_bike",
    "road_bike",
    "trail_bike"
@@ -13317,9 +13440,12 @@
   "rating_external": 4.9,
   "rating_external_count": 78,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJmzlezuOPmYARYWzhxk5kzYg",
-  "is_active": true,
-  "last_verified": "2026-06-08"
+  "notes_internal": "google_place_id:ChIJmzlezuOPmYARYWzhxk5kzYg; wave2: MERGED into ride-tahoe-rentals -> 'Watta Bike / Ride Tahoe' (same Meyers location). Deactivated to avoid duplicate listing.",
+  "is_active": false,
+  "last_verified": "2026-06-16",
+  "offers_rental": false,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "West Coast Trailers",
@@ -13410,18 +13536,21 @@
   "rating_external": 4.6,
   "rating_external_count": 112,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc; founder_verified; Homewood location; seasonal snow sports leases; no off-road or powersports rentals",
+  "notes_internal": "google_place_id:ChIJq5Q9LNZ_mYAR_7YexyN5loc; founder_verified; Homewood location; seasonal snow sports leases; no off-road or powersports rentals [wave3 2026-06-16: cruisers→mountain→road bikes; +kayak/SUP; snow lease; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "offers_season_lease": true,
   "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "kids_bike",
    "paddleboard",
-   "road_bike"
-  ]
+   "road_bike",
+   "xc_bike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "West Shore Sports",
@@ -13453,18 +13582,21 @@
   "rating_external": 4.6,
   "rating_external_count": 16,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJQzRtOC2AmYARJIZqMz5Wvbk; founder_verified; Sugar Pine Point location; seasonal snow sports leases; no off-road or powersports rentals",
+  "notes_internal": "google_place_id:ChIJQzRtOC2AmYARJIZqMz5Wvbk; founder_verified; Sugar Pine Point location; seasonal snow sports leases; no off-road or powersports rentals [wave3 2026-06-16: cruisers→mountain→road bikes; +kayak/SUP; snow lease; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
   "offers_season_lease": true,
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "kids_bike",
    "paddleboard",
-   "road_bike"
-  ]
+   "road_bike",
+   "xc_bike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "West Shore Sports",
@@ -13488,18 +13620,21 @@
   "rating_external": null,
   "rating_external_count": null,
   "inventory_sync_type": "manual",
-  "notes_internal": "founder_verified; Sunnyside location; seasonal snow sports leases; no off-road or powersports rentals",
+  "notes_internal": "founder_verified; Sunnyside location; seasonal snow sports leases; no off-road or powersports rentals [wave3 2026-06-16: cruisers→mountain→road bikes; +kayak/SUP; snow lease; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "offers_season_lease": true,
   "description": "Outdoor gear rentals including snow sports with full-season leases, mountain and road bikes, water sports, and electric transportation.",
   "subcategories": [
-   "e_bike_city",
+   "ebike",
    "kayak",
    "kids_bike",
    "paddleboard",
-   "road_bike"
-  ]
+   "road_bike",
+   "xc_bike",
+   "cruiser_bike"
+  ],
+  "offers_rental": true
  },
  {
   "name": "Wetsuit Outlet",
@@ -13766,19 +13901,22 @@
   "categories": [
    "camping",
    "electric_transport",
-   "mountain_biking",
-   "road_cycling"
+   "mountain_biking"
   ],
   "photos": null,
   "rating_external": 4.7,
   "rating_external_count": 31,
   "inventory_sync_type": "manual",
-  "notes_internal": "google_place_id:ChIJea4sRnh9mYARc91N6W9sWDk; scan_verified; electric_transport gear-type subcategories from website+Google scan",
+  "notes_internal": "google_place_id:ChIJea4sRnh9mYARc91N6W9sWDk; scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: full-sus MTB + e-MTB + hybrid; MTB demos; no road bikes -> drop road_cycling; categories synced to gear]",
   "is_active": true,
-  "last_verified": "2026-06-14",
+  "last_verified": "2026-06-16",
   "subcategories": [
-   "e_bike_city"
-  ]
+   "ebike",
+   "trail_bike",
+   "ebike_mtb"
+  ],
+  "offers_rental": true,
+  "offers_demo": true
  },
  {
   "name": "Tahoe Paradise Boat Rentals",
