@@ -18,7 +18,7 @@ From `web/`:
 
 ```bash
 npm install
-cp .env.example .env.local   # add Supabase keys (dashboard → Settings → API)
+cp .env.example .env.local
 npm run dev
 ```
 
@@ -51,7 +51,7 @@ Push refreshed data into Supabase for the web app:
 
 ```bash
 cd web
-SUPABASE_SERVICE_ROLE_KEY='your-key-from-.env.local' npm run seed
+npm run seed
 ```
 
 See [SECURITY.md](SECURITY.md) for API key restrictions and quota guidance.
