@@ -36,12 +36,16 @@ export const CATEGORIES = [
     label: "Mountain Biking",
     icon: "bike",
     subcategories: [
-      { slug: "xc_bike", label: "Cross-Country Bikes" },
-      { slug: "trail_bike", label: "Trail Bikes" },
-      { slug: "enduro_bike", label: "Enduro Bikes" },
-      { slug: "downhill_bike", label: "Downhill Bikes" },
-      { slug: "ebike_mtb", label: "Electric MTBs" },
-      { slug: "kids_bike", label: "Kids Bikes" },
+      { slug: "xc_bike", label: "Cross-Country Bike" },
+      { slug: "trail_bike", label: "Trail Bike" },
+      { slug: "enduro_bike", label: "Enduro Bike" },
+      { slug: "downhill_bike", label: "Downhill Bike" },
+      { slug: "ebike_mtb", label: "E-MTB" },
+      { slug: "kids_bike", label: "Kids Bike" },
+      // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
+      { slug: "trail_bike_demo", label: "Trail Bike Demo" },
+      { slug: "enduro_bike_demo", label: "Enduro Bike Demo" },
+      { slug: "ebike_mtb_demo", label: "E-MTB Demo" },
     ],
   },
   {
@@ -49,9 +53,15 @@ export const CATEGORIES = [
     label: "Road & Gravel Cycling",
     icon: "bike",
     subcategories: [
-      { slug: "road_bike", label: "Road Bikes" },
-      { slug: "gravel_bike", label: "Gravel Bikes" },
-      { slug: "ebike_road", label: "Electric Road Bikes" },
+      { slug: "road_bike", label: "Performance Road Bike" },
+      { slug: "gravel_bike", label: "Gravel Bike" },
+      { slug: "ebike", label: "E-Bike" },
+      { slug: "cruiser_bike", label: "Cruiser Bike" },
+      { slug: "tandem_bike", label: "Tandem Bike" },
+      { slug: "kids_bike", label: "Kids Bike" },
+      // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
+      { slug: "road_bike_demo", label: "Performance Road Bike Demo" },
+      { slug: "gravel_bike_demo", label: "Gravel Bike Demo" },
     ],
   },
   {
@@ -125,9 +135,10 @@ export const CATEGORIES = [
     label: "Electric Transportation",
     icon: "zap",
     subcategories: [
-      { slug: "e_scooter", label: "Electric Scooters" },
-      { slug: "e_bike_city", label: "City E-Bikes" },
-      { slug: "onewheel", label: "Onewheels / EUC" },
+      { slug: "ebike", label: "E-Bike" },
+      { slug: "ebike_mtb", label: "E-MTB" },
+      { slug: "e_scooter", label: "Electric Scooter" },
+      { slug: "onewheel", label: "Onewheel / EUC" },
     ],
   },
   {
@@ -148,6 +159,17 @@ export const CATEGORIES = [
       { slug: "wingsuit", label: "Wingsuits" },
     ],
   },
+  {
+    // Holding bucket for active operators that have no gear tags yet. Derived
+    // (see getOperatorsByCategory / getOperatorCategoryCounts in lib/data.ts) —
+    // an operator is "in" this category when its subcategories array is empty,
+    // and drops out automatically the moment it gets tagged. Keeps un-tagged
+    // operators discoverable without showing misleading category chips.
+    slug: "uncategorized",
+    label: "Uncategorized",
+    icon: "tag",
+    subcategories: [],
+  },
 ] as const satisfies readonly Category[];
 
 export type CategorySlug = (typeof CATEGORIES)[number]["slug"];
@@ -163,6 +185,19 @@ export function categoryLabel(slug: string): string {
 export function subcategoryLabel(category: string, sub: string): string {
   return (
     getCategory(category)?.subcategories.find((s) => s.slug === sub)?.label ??
-    sub
+    subcategoryLabelGlobal(sub)
   );
+}
+
+/**
+ * Resolve a subcategory tag label by slug across all categories. Bike tags
+ * (e.g. ebike, ebike_mtb) are intentionally cross-category, so the operator
+ * page can label a tag without knowing which browse category it came from.
+ */
+export function subcategoryLabelGlobal(sub: string): string {
+  for (const c of CATEGORIES) {
+    const found = c.subcategories.find((s) => s.slug === sub);
+    if (found) return found.label;
+  }
+  return sub;
 }

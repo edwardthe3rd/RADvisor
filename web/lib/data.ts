@@ -39,11 +39,17 @@ export async function getOperatorCategoryCounts(): Promise<Map<string, number>> 
   const db = supabaseServer();
   const { data, error } = await db
     .from("operators")
-    .select("slug, categories")
+    .select("slug, categories, subcategories")
     .eq("is_active", true);
   if (error || !data) return new Map();
   const counts = new Map<string, number>();
   for (const row of data) {
+    // Active operators with no gear tags yet are grouped under the derived
+    // "uncategorized" browse category so they stay discoverable without
+    // showing a misleading category chip on their card.
+    if (!(row.subcategories?.length)) {
+      counts.set("uncategorized", (counts.get("uncategorized") ?? 0) + 1);
+    }
     for (const c of row.categories ?? []) {
       if (!operatorVisibleForCategoryBrowse(row, c)) continue;
       counts.set(c, (counts.get(c) ?? 0) + 1);
@@ -170,6 +176,15 @@ export async function getOperatorsByCategory(
   options: Pick<Filters, "delivery" | "location"> = {},
 ): Promise<Operator[]> {
   const db = supabaseServer();
+  // "uncategorized" is a derived bucket: active operators with no gear tags
+  // yet (empty subcategories), regardless of which categories they're in.
+  if (category === "uncategorized") {
+    let q = db.from("operators").select("*").eq("is_active", true);
+    if (options.delivery) q = q.eq("offers_delivery", true);
+    const { data, error } = await q.order("name", { ascending: true });
+    if (error || !data) return [];
+    return data.filter((op) => !(op.subcategories?.length));
+  }
   let query = db
     .from("operators")
     .select("*")

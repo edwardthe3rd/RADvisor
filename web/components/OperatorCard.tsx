@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Operator } from "@/lib/supabase/types";
-import { categoryLabel } from "@/lib/config/categories";
+import { subcategoryLabelGlobal } from "@/lib/config/categories";
 import {
   locationLabel,
   operatorDisplayName,
@@ -24,7 +24,17 @@ export default function OperatorCard({
 }) {
   const rating = ratingLabel(operator.rating_external);
   const location = locationLabel(operator);
-  const categories = (operator.categories ?? []).slice(0, 3);
+  // Card chips show ONLY the operator's gear tags (subcategories), e.g.
+  // "E-MTB", "Gravel Bike". If an operator has no gear tags yet, show no chips
+  // rather than a broad category label — we never imply gear we haven't
+  // verified. Un-tagged operators surface under the "Uncategorized" browse
+  // category instead (see lib/config/categories.ts + lib/data.ts).
+  const chips = (operator.subcategories ?? []).map((slug) => ({
+    key: slug,
+    label: subcategoryLabelGlobal(slug),
+  }));
+  const visibleChips = chips.slice(0, 4);
+  const extraChipCount = chips.length - visibleChips.length;
   const photo = operator.logo_url ?? operator.photos?.[0] ?? null;
   const telHref = operator.phone
     ? `tel:${operator.phone.replace(/[^+\d]/g, "")}`
@@ -75,16 +85,21 @@ export default function OperatorCard({
           {location ? (
             <p className="truncate text-sm text-ink-tertiary">{location}</p>
           ) : null}
-          {categories.length > 0 ? (
+          {visibleChips.length > 0 ? (
             <div className="mt-1 flex flex-wrap gap-1">
-              {categories.map((slug) => (
+              {visibleChips.map((chip) => (
                 <span
-                  key={slug}
+                  key={chip.key}
                   className="rounded-full bg-surface-muted px-2 py-0.5 text-xs font-medium text-ink-secondary"
                 >
-                  {categoryLabel(slug)}
+                  {chip.label}
                 </span>
               ))}
+              {extraChipCount > 0 ? (
+                <span className="rounded-full bg-surface-muted px-2 py-0.5 text-xs font-medium text-ink-tertiary">
+                  +{extraChipCount}
+                </span>
+              ) : null}
             </div>
           ) : null}
         </div>

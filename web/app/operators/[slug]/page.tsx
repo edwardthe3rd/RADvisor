@@ -3,7 +3,12 @@ import { notFound } from "next/navigation";
 import SiteShell from "@/components/SiteShell";
 import FreshnessNote from "@/components/FreshnessNote";
 import CategoryIcon from "@/components/CategoryIcon";
-import { categoryLabel, getCategory, subcategoryLabel } from "@/lib/config/categories";
+import {
+  categoryLabel,
+  getCategory,
+  subcategoryLabel,
+  subcategoryLabelGlobal,
+} from "@/lib/config/categories";
 import { operatorVisibleForCategoryBrowse } from "@/lib/config/operator-category-gates";
 import { getOperatorBySlug } from "@/lib/data";
 import {
@@ -99,24 +104,41 @@ export default async function OperatorPage({
               )}
               {locationLabel(operator) && <span>{locationLabel(operator)}</span>}
             </div>
-            {(operator.categories ?? []).some((slug) =>
-              operatorVisibleForCategoryBrowse(operator, slug),
-            ) && (
+            {(operator.subcategories?.length ?? 0) > 0 ? (
+              // Gear-type tags (operators.subcategories). These are the
+              // classification chips users see; link to a filtered search.
               <div className="mt-3 flex flex-wrap gap-1">
-                {(operator.categories ?? [])
-                  .filter((slug) =>
-                    operatorVisibleForCategoryBrowse(operator, slug),
-                  )
-                  .map((slug) => (
+                {operator.subcategories!.map((sub) => (
                   <Link
-                    key={slug}
-                    href={`/discover/${slug}`}
+                    key={sub}
+                    href={`/search?subcategories=${sub}`}
                     className="rounded-full bg-surface-muted px-2 py-0.5 text-xs font-medium text-ink-secondary hover:bg-surface-border"
                   >
-                    {categoryLabel(slug)}
+                    {subcategoryLabelGlobal(sub)}
                   </Link>
                 ))}
               </div>
+            ) : (
+              // Fallback to browse-category chips until gear tags are seeded.
+              (operator.categories ?? []).some((slug) =>
+                operatorVisibleForCategoryBrowse(operator, slug),
+              ) && (
+                <div className="mt-3 flex flex-wrap gap-1">
+                  {(operator.categories ?? [])
+                    .filter((slug) =>
+                      operatorVisibleForCategoryBrowse(operator, slug),
+                    )
+                    .map((slug) => (
+                      <Link
+                        key={slug}
+                        href={`/discover/${slug}`}
+                        className="rounded-full bg-surface-muted px-2 py-0.5 text-xs font-medium text-ink-secondary hover:bg-surface-border"
+                      >
+                        {categoryLabel(slug)}
+                      </Link>
+                    ))}
+                </div>
+              )
             )}
             {operator.description && (
               <p className="mt-4 max-w-2xl text-ink-secondary">
@@ -165,9 +187,14 @@ export default async function OperatorPage({
                 <p className="rounded-lg border border-surface-borderLight bg-brand-secondaryLight p-6 font-semibold text-ink-primary">
                   Unable to provide inventory — please contact {displayName}{" "}
                   directly. They rent{" "}
-                  {(operator.categories ?? [])
-                    .map((c) => categoryLabel(c).toLowerCase())
-                    .join(", ") || "outdoor gear"}
+                  {((operator.subcategories?.length ?? 0) > 0
+                    ? operator.subcategories!.map((s) =>
+                        subcategoryLabelGlobal(s).toLowerCase(),
+                      )
+                    : (operator.categories ?? []).map((c) =>
+                        categoryLabel(c).toLowerCase(),
+                      )
+                  ).join(", ") || "outdoor gear"}
                   — use the contact info{" "}
                   <span className="lg:hidden">above</span>
                   <span className="hidden lg:inline">to the right</span> to

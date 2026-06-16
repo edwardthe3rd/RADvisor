@@ -66,6 +66,9 @@ const config: Config = {
       maxWidth: {
         content: "1200px",
       },
+      fontFamily: {
+        roboto: ["var(--font-roboto)", "sans-serif"],
+      },
     },
   },
   plugins: [],

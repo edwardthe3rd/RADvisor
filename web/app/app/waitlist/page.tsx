@@ -18,7 +18,7 @@ export default function WaitlistPage() {
       </a>
 
       <header className="site-header">
-        <h1 className="sr-only">RADvisor — Real Adventures Daily</h1>
+        <h1 className="sr-only">RADvisor</h1>
         <div className="header-inner">
           <Image
             className="logo"
