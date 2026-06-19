@@ -120,7 +120,7 @@ class WishlistItemSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = WishlistItem
-        fields = ("id", "gear_item", "guide_service", "gear_item_detail", "created_at")
+        fields = ("id", "gear_item", "gear_item_detail", "created_at")
         read_only_fields = ("id", "created_at")
 
 

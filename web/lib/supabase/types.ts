@@ -16,6 +16,8 @@ export type Database = {
     Tables: {
       equipment: {
         Row: {
+          addons: Json | null
+          attributes: Json | null
           brand: string | null
           category: string
           condition: Database["public"]["Enums"]["equipment_condition"] | null
@@ -39,10 +41,13 @@ export type Database = {
           quantity_total: number | null
           size: string | null
           skill_level: Database["public"]["Enums"]["skill_level"] | null
+          source_url: string | null
           subcategory: string | null
           updated_at: string | null
         }
         Insert: {
+          addons?: Json | null
+          attributes?: Json | null
           brand?: string | null
           category: string
           condition?: Database["public"]["Enums"]["equipment_condition"] | null
@@ -66,10 +71,13 @@ export type Database = {
           quantity_total?: number | null
           size?: string | null
           skill_level?: Database["public"]["Enums"]["skill_level"] | null
+          source_url?: string | null
           subcategory?: string | null
           updated_at?: string | null
         }
         Update: {
+          addons?: Json | null
+          attributes?: Json | null
           brand?: string | null
           category?: string
           condition?: Database["public"]["Enums"]["equipment_condition"] | null
@@ -93,6 +101,7 @@ export type Database = {
           quantity_total?: number | null
           size?: string | null
           skill_level?: Database["public"]["Enums"]["skill_level"] | null
+          source_url?: string | null
           subcategory?: string | null
           updated_at?: string | null
         }
@@ -115,6 +124,7 @@ export type Database = {
           created_at: string | null
           description: string | null
           email: string | null
+          extraction_status: string
           hours: Json | null
           id: string
           inventory_sync_type:
@@ -135,6 +145,7 @@ export type Database = {
           photos: string[] | null
           rating_external: number | null
           rating_external_count: number | null
+          rents_gear: boolean | null
           slug: string
           state: string | null
           subcategories: string[]
@@ -150,6 +161,7 @@ export type Database = {
           created_at?: string | null
           description?: string | null
           email?: string | null
+          extraction_status?: string
           hours?: Json | null
           id?: string
           inventory_sync_type?:
@@ -170,6 +182,7 @@ export type Database = {
           photos?: string[] | null
           rating_external?: number | null
           rating_external_count?: number | null
+          rents_gear?: boolean | null
           slug: string
           state?: string | null
           subcategories?: string[]
@@ -185,6 +198,7 @@ export type Database = {
           created_at?: string | null
           description?: string | null
           email?: string | null
+          extraction_status?: string
           hours?: Json | null
           id?: string
           inventory_sync_type?:
@@ -205,6 +219,7 @@ export type Database = {
           photos?: string[] | null
           rating_external?: number | null
           rating_external_count?: number | null
+          rents_gear?: boolean | null
           slug?: string
           state?: string | null
           subcategories?: string[]
@@ -332,6 +347,23 @@ export type Enums<
     ? DefaultSchema["Enums"][DefaultSchemaEnumNameOrOptions]
     : never
 
+export type CompositeTypes<
+  PublicCompositeTypeNameOrOptions extends
+    | keyof DefaultSchema["CompositeTypes"]
+    | { schema: keyof DatabaseWithoutInternals },
+  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+    schema: keyof DatabaseWithoutInternals
+  }
+    ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
+    : never = never,
+> = PublicCompositeTypeNameOrOptions extends {
+  schema: keyof DatabaseWithoutInternals
+}
+  ? DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"][CompositeTypeName]
+  : PublicCompositeTypeNameOrOptions extends keyof DefaultSchema["CompositeTypes"]
+    ? DefaultSchema["CompositeTypes"][PublicCompositeTypeNameOrOptions]
+    : never
+
 export const Constants = {
   public: {
     Enums: {
@@ -341,8 +373,3 @@ export const Constants = {
     },
   },
 } as const
-
-// Convenience aliases used across the app.
-export type Operator = Tables<"operators">
-export type Equipment = Tables<"equipment">
-export type SkillLevel = Database["public"]["Enums"]["skill_level"]

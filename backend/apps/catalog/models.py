@@ -155,23 +155,10 @@ class Wishlist(models.Model):
 class WishlistItem(models.Model):
     wishlist = models.ForeignKey(Wishlist, on_delete=models.CASCADE, related_name="items")
     gear_item = models.ForeignKey(GearItem, on_delete=models.CASCADE, null=True, blank=True, related_name="wishlist_items")
-    guide_service = models.ForeignKey(
-        "guiding.GuideService", on_delete=models.CASCADE, null=True, blank=True, related_name="wishlist_items"
-    )
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
         ordering = ["-created_at"]
-        constraints = [
-            models.CheckConstraint(
-                check=(
-                    models.Q(gear_item__isnull=False, guide_service__isnull=True)
-                    | models.Q(gear_item__isnull=True, guide_service__isnull=False)
-                ),
-                name="wishlist_item_exactly_one_fk",
-            ),
-        ]
 
     def __str__(self) -> str:
-        target = self.gear_item or self.guide_service
-        return f"Wishlist item: {target}"
+        return f"Wishlist item: {self.gear_item}"

@@ -38,6 +38,7 @@ Before non-trivial work, consult `instructions/`:
 - `instructions/00_overview.md` — scope authority, sprint plan, conventions
 - `instructions/01_data_model.md` — schema source of truth (check before any data work)
 - `instructions/02_database_seeding.md` — data pipeline and normalization rules
+- `instructions/extraction/` — operator data-extraction runbook (`00_general.md` + per-category files); the engine behind `02`
 - `instructions/03_discovery_page.md` — discovery page spec
 - `instructions/04_questionnaire.md` — questionnaire flow spec
 - `instructions/05_search.md` — search and filter spec
@@ -66,6 +67,7 @@ Before non-trivial work, consult `instructions/`:
 - Minimize scope; match existing patterns in the app you are editing.
 - Never commit `.env`, API keys, or secrets; never expose `SUPABASE_SERVICE_ROLE_KEY` or use it outside server actions.
 - Categories are stable `snake_case` slugs from `web/lib/config/categories.ts` — never invent new ones in code.
+- Searchable equipment attribute keys are defined per-category in `instructions/extraction/*.md`; the quiz and advanced-search filters map to those keys and the `equipment.attributes` jsonb.
 - `quantity_available = null` means "unknown", never zero; never imply real-time availability (Tier 1 posture, `07_api_strategy.md`).
 - Operator data refresh: run `supabase/seed/export_django.py` then `supabase/seed/import.ts` (idempotent upserts on slug).
 - Sync-filter changes still live in the Django pipeline: `rental_taxonomy.py` / `business_filters.py` + `test_rental_relevance.py`.
