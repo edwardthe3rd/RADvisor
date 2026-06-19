@@ -40,7 +40,7 @@
     "notes_internal": "founder_verified 2026-06-15; Reno + Santa Cruz. Rental/demo fleet currently full-power E-MTBs (also full-suspension MTB + electric town bike pricing). Try-before-you-buy demo program (credit toward purchase). [2026-06-16 category synced to verified gear tags]",
     "subcategories": [
       "ebike_mtb",
-      "trail_bike",
+      "mountain_bike",
       "ebike"
     ],
     "offers_rental": true,
@@ -127,17 +127,18 @@
   "black-tie-adventure-rentals-north-tahoe": {
     "name": "Black Tie Bike Rentals North Tahoe",
     "categories": [
-      "electric_transport",
-      "mountain_biking"
+      "snow_sports"
     ],
     "source": "https://www.blacktiesummer.com/north-tahoe/",
     "verified_at": "2026-06-16",
     "subcategories": [
-      "ebike",
-      "trail_bike"
+      "alpine_ski",
+      "snowboard"
     ],
     "offers_rental": true,
-    "notes_internal": "[wave3 2026-06-16: delivery e-bikes + MTB (also SUP/kayak -> add water_sports in water wave); no road bikes -> drop road_cycling; categories synced to gear]"
+    "notes_internal": "[wave3 2026-06-16: delivery e-bikes + MTB (also SUP/kayak -> add water_sports in water wave); no road bikes -> drop road_cycling; categories synced to gear] [2026-06-16 wave4: NOT a Tahoe bike operator: summer toggle shows no Tahoe locations in radius; only WINTER ski/snowboard delivery. Moved to snow_sports, dropped bike.]",
+    "offers_demo": false,
+    "offers_season_lease": false
   },
   "mountain-mikes-tees-and-skis": {
     "name": "Mountain Mikes / Snowshoe Thompson's",
@@ -861,7 +862,7 @@
     "offers_rental": false,
     "offers_demo": true,
     "subcategories": [
-      "enduro_bike",
+      "mountain_bike",
       "ebike_mtb"
     ]
   },
@@ -936,7 +937,7 @@
       "kids_bike",
       "paddleboard",
       "road_bike",
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike"
     ],
     "offers_rental": true
@@ -964,7 +965,7 @@
       "kids_bike",
       "paddleboard",
       "road_bike",
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike"
     ],
     "offers_rental": true
@@ -997,7 +998,7 @@
       "kids_bike",
       "paddleboard",
       "road_bike",
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike"
     ],
     "offers_rental": true
@@ -1016,7 +1017,7 @@
     "subcategories": [
       "kids_bike",
       "road_bike",
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike"
     ],
     "offers_rental": true,
@@ -1087,7 +1088,7 @@
       "rope_hardware",
       "sleep_system",
       "tent",
-      "trail_bike",
+      "mountain_bike",
       "ebike_mtb"
     ],
     "offers_rental": true
@@ -1104,8 +1105,7 @@
     "description": "Mountain bike and e-MTB rentals and demos — no snow sports rentals.",
     "notes_internal": "founder_verified 2026-06-15; rents full-suspension trail/enduro MTB, e-MTB, performance gravel + e-gravel (Pinarello Nytro), youth bikes. Try-before-you-buy (rental credit toward purchase). Also fulfills Dirt Gypsy rentals. No snow rentals. [2026-06-16 category synced to verified gear tags]",
     "subcategories": [
-      "trail_bike",
-      "enduro_bike",
+      "mountain_bike",
       "ebike_mtb",
       "gravel_bike",
       "ebike",
@@ -1149,9 +1149,8 @@
       "kayak",
       "paddleboard",
       "raft",
-      "trail_bike",
-      "ebike_mtb",
-      "xc_bike"
+      "mountain_bike",
+      "ebike_mtb"
     ],
     "offers_rental": true,
     "offers_demo": true
@@ -1185,7 +1184,7 @@
       "road_bike",
       "rope_hardware",
       "tent",
-      "trail_bike",
+      "mountain_bike",
       "ebike_mtb"
     ],
     "offers_rental": true
@@ -1221,7 +1220,7 @@
     "description": "Cross-country ski, snowshoe, and mountain bike rentals at the Tahoe Nordic Center.",
     "notes_internal": "founder_verified; snow sports and mountain bike rentals [wave3b 2026-06-16: rentals under Rentals&Services tab: mountain bikes + XC ski gear + snowshoes (tahoexc.org/rentals-services)]",
     "subcategories": [
-      "xc_bike",
+      "mountain_bike",
       "cross_country_ski",
       "snowshoe"
     ],
@@ -1302,7 +1301,7 @@
       "ebike_mtb",
       "kids_bike",
       "road_bike",
-      "trail_bike"
+      "mountain_bike"
     ]
   },
   "coalition-snow": {
@@ -2046,11 +2045,12 @@
     "subcategories": [
       "ebike",
       "cruiser_bike",
-      "kids_bike"
+      "kids_bike",
+      "bike_trailer"
     ],
     "source": "https://bigbluebikerentals.com/rentals/",
     "verified_at": "2026-06-16",
-    "notes_internal": "founder_verified 2026-06-15; fleet = electric bikes (RAD), city/cruiser bikes, kids bikes + trailers/tag-alongs. Paved East Shore path rentals only — no mountain bikes. [2026-06-16 category synced to verified gear tags]",
+    "notes_internal": "founder_verified 2026-06-15; fleet = electric bikes (RAD), city/cruiser bikes, kids bikes + trailers/tag-alongs. Paved East Shore path rentals only — no mountain bikes. [2026-06-16 category synced to verified gear tags] [2026-06-16 wave4: added bike_trailer (fleet includes trailers/tag-alongs).]",
     "offers_rental": true,
     "offers_demo": false,
     "offers_season_lease": false,
@@ -2069,19 +2069,25 @@
   },
   "bike-truckee": {
     "subcategories": [
-      "trail_bike",
+      "mountain_bike",
       "ebike_mtb",
       "ebike",
       "cruiser_bike",
       "kids_bike",
-      "tandem_bike"
+      "tandem_bike",
+      "bike_trailer"
     ],
     "source": "https://www.truckeebikerentals.com/rent",
-    "verified_at": "2026-06-15",
-    "notes_internal": "founder_verified 2026-06-15; rents full-suspension + hardtail MTB, electric MTB, comfort road e-bikes, comfort cruisers, kids bikes, trailers, trail-a-bikes, tandems.",
+    "verified_at": "2026-06-16",
+    "notes_internal": "founder_verified 2026-06-15; rents full-suspension + hardtail MTB, electric MTB, comfort road e-bikes, comfort cruisers, kids bikes, trailers, trail-a-bikes, tandems. [2026-06-16 wave4: added bike_trailer (tow-behind child trailers, per EC).]",
     "offers_rental": true,
     "offers_demo": false,
-    "offers_season_lease": false
+    "offers_season_lease": false,
+    "categories": [
+      "electric_transport",
+      "mountain_biking",
+      "road_cycling"
+    ]
   },
   "cloud-of-goods-reno": {
     "subcategories": [
@@ -2094,17 +2100,20 @@
   },
   "cyclepaths-bikeshop": {
     "subcategories": [
-      "trail_bike",
+      "mountain_bike",
       "ebike_mtb",
-      "ebike",
-      "cruiser_bike"
+      "ebike"
     ],
     "source": "https://cyclepaths.com/bike-rentals/",
-    "verified_at": "2026-06-15",
-    "notes_internal": "founder_verified 2026-06-15; rents full-suspension MTB, full-suspension e-MTB (Santa Cruz Vala), Class-2 cruiser e-bikes (Murf), town e-bikes. Segway e-scooters are sold, not rented — removed e_scooter.",
+    "verified_at": "2026-06-16",
+    "notes_internal": "founder_verified 2026-06-15; rents full-suspension MTB, full-suspension e-MTB (Santa Cruz Vala), Class-2 cruiser e-bikes (Murf), town e-bikes. Segway e-scooters are sold, not rented — removed e_scooter. [2026-06-16 wave4: removed cruiser_bike per EC (no cruiser rentals).]",
     "offers_rental": true,
     "offers_demo": false,
-    "offers_season_lease": false
+    "offers_season_lease": false,
+    "categories": [
+      "electric_transport",
+      "mountain_biking"
+    ]
   },
   "e-bike-hub": {
     "subcategories": [
@@ -2140,8 +2149,7 @@
       "ebike",
       "ebike_mtb",
       "kids_bike",
-      "trail_bike",
-      "xc_bike"
+      "mountain_bike"
     ],
     "source": "http://www.flumetrailtahoe.com/",
     "verified_at": "2026-06-14",
@@ -2157,36 +2165,46 @@
   },
   "high-sierra-cycling": {
     "subcategories": [
-      "trail_bike",
-      "xc_bike",
+      "mountain_bike",
       "ebike_mtb",
       "road_bike",
-      "gravel_bike",
-      "ebike"
+      "ebike",
+      "bike_rack"
     ],
     "source": "http://highsierracycling.com/",
     "verified_at": "2026-06-16",
-    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3b 2026-06-16: rentals under Services>Rental Bikes: full-sus+hardtail MTB, performance E-MTB (Heckler/ShuttleSL/Trance), road alu/carbon/Ti, hybrid e-bike; demos avail (highsierracycling.com/rentalbikes)]",
+    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3b 2026-06-16: rentals under Services>Rental Bikes: full-sus+hardtail MTB, performance E-MTB (Heckler/ShuttleSL/Trance), road alu/carbon/Ti, hybrid e-bike; demos avail (highsierracycling.com/rentalbikes)] [2026-06-16 wave4: rental page: full-sus+hardtail MTB, performance E-MTB, road alu/carbon/Ti, hybrid e-bike, + 4-bike hitch rack for rent. NO gravel rental -> removed gravel_bike.]",
     "categories": [
       "electric_transport",
       "mountain_biking",
       "road_cycling"
     ],
     "offers_rental": true,
-    "offers_demo": true
+    "offers_demo": true,
+    "offers_season_lease": false
   },
   "olympic-bike-shop": {
     "subcategories": [
-      "downhill_bike",
+      "mountain_bike",
       "ebike",
-      "gravel_bike",
-      "kids_bike",
+      "ebike_mtb",
       "road_bike",
-      "trail_bike"
+      "kids_bike",
+      "cruiser_bike",
+      "tandem_bike",
+      "bike_trailer"
     ],
     "source": "http://www.olympicbikeshop.com/",
-    "verified_at": "2026-06-14",
-    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan"
+    "verified_at": "2026-06-16",
+    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [2026-06-16 wave4: rental page: comfort(cruiser), comfort/cargo e-bike, deluxe full-sus MTB, E-MTB alu/carbon, deluxe road, kids, tandem, trailer/stroller; MTB demos (Specialized/Trek/Ibis/Evil). No gravel rental -> removed gravel_bike.]",
+    "categories": [
+      "electric_transport",
+      "mountain_biking",
+      "road_cycling"
+    ],
+    "offers_rental": true,
+    "offers_demo": true,
+    "offers_season_lease": false
   },
   "pedego-electric-bikes-reno": {
     "subcategories": [
@@ -2226,7 +2244,7 @@
   "ride-tahoe-rentals": {
     "subcategories": [
       "ebike_mtb",
-      "trail_bike",
+      "mountain_bike",
       "cruiser_bike",
       "ebike",
       "kids_bike"
@@ -2243,7 +2261,7 @@
     "subcategories": [
       "ebike",
       "road_bike",
-      "xc_bike"
+      "mountain_bike"
     ],
     "source": "https://sierraskiandcycleworks.com/",
     "verified_at": "2026-06-14",
@@ -2265,7 +2283,7 @@
     "subcategories": [
       "ebike",
       "road_bike",
-      "trail_bike",
+      "mountain_bike",
       "cruiser_bike",
       "kids_bike"
     ],
@@ -2303,7 +2321,7 @@
     "subcategories": [
       "ebike",
       "road_bike",
-      "trail_bike",
+      "mountain_bike",
       "cruiser_bike",
       "tandem_bike"
     ],
@@ -2349,13 +2367,14 @@
     "subcategories": [
       "ebike",
       "kids_bike",
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike",
-      "tandem_bike"
+      "tandem_bike",
+      "bike_trailer"
     ],
     "source": "https://truckeeriverbikes.com/",
     "verified_at": "2026-06-16",
-    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: comfort/off-road mountain bikes + cruisers + cruiser tandems + e-bikes + kids; categories synced to gear]",
+    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: comfort/off-road mountain bikes + cruisers + cruiser tandems + e-bikes + kids; categories synced to gear] [2026-06-16 wave4: added bike_trailer ('kids rental bikes and trailers').]",
     "categories": [
       "electric_transport",
       "mountain_biking",
@@ -2368,7 +2387,7 @@
       "ebike",
       "kids_bike",
       "road_bike",
-      "trail_bike"
+      "mountain_bike"
     ],
     "source": "https://vistatrailbikes.com/",
     "verified_at": "2026-06-14",
@@ -2376,32 +2395,36 @@
   },
   "evo-tahoe-city": {
     "subcategories": [
+      "mountain_bike",
+      "ebike_mtb",
       "ebike",
-      "trail_bike",
-      "ebike_mtb"
+      "bike_rack",
+      "alpine_ski",
+      "snowboard"
     ],
     "source": "https://www.evo.com/pages/locations-tahoe-city?utm_source=GMBlisting&utm_medium=organic",
     "verified_at": "2026-06-16",
-    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: full-sus MTB + e-MTB + hybrid; MTB demos; no road bikes -> drop road_cycling; categories synced to gear]",
+    "notes_internal": "scan_verified; electric_transport gear-type subcategories from website+Google scan [wave3 2026-06-16: full-sus MTB + e-MTB + hybrid; MTB demos; no road bikes -> drop road_cycling; categories synced to gear] [2026-06-16 wave4: full-sus MTB + e-MTB + hybrid; also rents skis & snowboards + bike racks/tailgate pads; MTB demos. Dropped camping (no evidence).]",
     "categories": [
-      "camping",
       "electric_transport",
-      "mountain_biking"
+      "mountain_biking",
+      "snow_sports"
     ],
     "offers_rental": true,
-    "offers_demo": true
+    "offers_demo": true,
+    "offers_season_lease": false
   },
   "dirt-gypsy-adventures": {
     "subcategories": [
-      "trail_bike",
-      "enduro_bike",
+      "mountain_bike",
       "ebike_mtb",
       "gravel_bike",
-      "ebike"
+      "ebike",
+      "kids_bike"
     ],
     "source": "https://www.dirtgypsyadventures.com/rentals",
     "verified_at": "2026-06-16",
-    "notes_internal": "founder_verified 2026-06-15; MTB (trail+enduro), e-MTB, gravel + e-gravel (Pinarello Nytro), youth. 2026 rental fulfillment via Start Haus. Guided tours/shuttles too. [2026-06-16 category synced to verified gear tags]",
+    "notes_internal": "founder_verified 2026-06-15; MTB (trail+enduro), e-MTB, gravel + e-gravel (Pinarello Nytro), youth. 2026 rental fulfillment via Start Haus. Guided tours/shuttles too. [2026-06-16 category synced to verified gear tags] [2026-06-16 wave4: rentals via Start Haus: full-sus MTB, e-MTB, gravel + e-gravel, YOUTH bikes (Giant STP 20/24) -> added kids_bike.]",
     "offers_rental": true,
     "offers_demo": false,
     "offers_season_lease": false,
@@ -2413,13 +2436,20 @@
   },
   "great-basin-bicycles": {
     "subcategories": [
-      "enduro_bike",
+      "mountain_bike",
       "gravel_bike",
       "road_bike"
     ],
     "source": "http://greatbasinbicycles.com/",
-    "verified_at": "2026-06-14",
-    "notes_internal": "scan_verified; road_cycling gear-type subcategories from website+Google scan"
+    "verified_at": "2026-06-16",
+    "notes_internal": "scan_verified; road_cycling gear-type subcategories from website+Google scan [2026-06-16 wave4: NOT a bike-rental operator: only rental on greatbasinbicycles.com is Garmin Vector 3 power-meter PEDALS; bikes are sales/service/fits. Prior 'rental' signal was a false positive on 'Rental of garmin Vector 3 pedals'. Deactivated.]",
+    "categories": [
+      "electric_transport",
+      "mountain_biking",
+      "road_cycling"
+    ],
+    "offers_rental": false,
+    "is_active": false
   },
   "full-access-tahoe": {
     "subcategories": [
@@ -2511,7 +2541,7 @@
   "olympic-valley-ski-bike": {
     "subcategories": [
       "kids_bike",
-      "trail_bike",
+      "mountain_bike",
       "ebike",
       "cruiser_bike"
     ],
@@ -2846,21 +2876,18 @@
     "is_active": true,
     "offers_rental": true,
     "verified_at": "2026-06-16",
-    "notes_internal": "wave2: founder_verified rents bikes + clear-kayak watersports. Bike fleet = Specialized Turbo Levo e-MTBs, pedal-assist & standard cruisers, kids bikes. Zephyr Cove. (bike-lake-tahoe = duplicate, already deactivated.)",
+    "notes_internal": "wave2: founder_verified rents bikes + clear-kayak watersports. Bike fleet = Specialized Turbo Levo e-MTBs, pedal-assist & standard cruisers, kids bikes. Zephyr Cove. (bike-lake-tahoe = duplicate, already deactivated.) [2026-06-16 wave4: clearlytahoe.com/bike-lake-tahoe: fleet = Specialized Turbo Levo (e-MTB) + e-bikes (Haul ST/LT, Como) + analog Roll. NO non-electric cruiser or kids bikes (prior cruiser/kids tags came from an unreliable search summary, not the site) -> removed.]",
     "name": "Clearly Tahoe",
     "categories": [
       "electric_transport",
       "mountain_biking",
-      "road_cycling",
       "water_sports"
     ],
     "offers_demo": false,
     "offers_season_lease": false,
     "subcategories": [
       "ebike_mtb",
-      "ebike",
-      "cruiser_bike",
-      "kids_bike"
+      "ebike"
     ],
     "source": "https://clearlytahoe.com/bike-lake-tahoe/ ; visitlaketahoe.com"
   },
@@ -2891,8 +2918,7 @@
     "notes_internal": "wave2: founder_verified bike demos (not rentals). Demo/retail spans Pivot+Santa Cruz+Norco trail/enduro MTB, E-MTB, Specialized road/gravel. Retail+service primary.",
     "offers_season_lease": false,
     "subcategories": [
-      "trail_bike",
-      "enduro_bike",
+      "mountain_bike",
       "ebike_mtb",
       "road_bike",
       "gravel_bike"
@@ -2960,7 +2986,7 @@
     "offers_demo": false,
     "offers_season_lease": false,
     "subcategories": [
-      "trail_bike",
+      "mountain_bike",
       "road_bike",
       "ebike"
     ],
@@ -3001,7 +3027,7 @@
     ],
     "offers_rental": true,
     "subcategories": [
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike",
       "ebike"
     ],
@@ -3018,7 +3044,7 @@
     ],
     "offers_rental": true,
     "subcategories": [
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike",
       "ebike"
     ],
@@ -3035,7 +3061,7 @@
     ],
     "offers_rental": true,
     "subcategories": [
-      "xc_bike",
+      "mountain_bike",
       "cruiser_bike",
       "ebike"
     ],

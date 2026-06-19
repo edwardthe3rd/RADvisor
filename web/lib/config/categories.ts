@@ -36,15 +36,10 @@ export const CATEGORIES = [
     label: "Mountain Biking",
     icon: "bike",
     subcategories: [
-      { slug: "xc_bike", label: "Cross-Country Bike" },
-      { slug: "trail_bike", label: "Trail Bike" },
-      { slug: "enduro_bike", label: "Enduro Bike" },
-      { slug: "downhill_bike", label: "Downhill Bike" },
+      { slug: "mountain_bike", label: "Mountain Bike" },
       { slug: "ebike_mtb", label: "E-MTB" },
-      { slug: "kids_bike", label: "Kids Bike" },
       // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
-      { slug: "trail_bike_demo", label: "Trail Bike Demo" },
-      { slug: "enduro_bike_demo", label: "Enduro Bike Demo" },
+      { slug: "mountain_bike_demo", label: "Mountain Bike Demo" },
       { slug: "ebike_mtb_demo", label: "E-MTB Demo" },
     ],
   },
@@ -59,6 +54,9 @@ export const CATEGORIES = [
       { slug: "cruiser_bike", label: "Cruiser Bike" },
       { slug: "tandem_bike", label: "Tandem Bike" },
       { slug: "kids_bike", label: "Kids Bike" },
+      // Accessories — shown as chips but don't drive browse-category membership.
+      { slug: "bike_trailer", label: "Bike Trailer" },
+      { slug: "bike_rack", label: "Bike Rack" },
       // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
       { slug: "road_bike_demo", label: "Performance Road Bike Demo" },
       { slug: "gravel_bike_demo", label: "Gravel Bike Demo" },
