@@ -1,10 +1,17 @@
 /**
  * Cross-check active operators against Google Places for rent vs demo signals.
  *
- *   node supabase/seed/check_google_rental_demo.mjs
+ *   node supabase/seed/check_google_rental_demo.mjs            # cached: only fetches new operators
+ *   node supabase/seed/check_google_rental_demo.mjs --no-cache # force full refresh from Google
  *
  * Requires GOOGLE_PLACES_API_KEY (backend/.env or env). Reads operators.json,
  * fetches Place Details for each google_place_id, and writes google_rental_demo_report.json.
+ *
+ * COST: each Google fetch uses Place Details (New) with atmosphere fields
+ * (editorialSummary/generativeSummary/reviewSummary) -> billed on the
+ * "Place Details Enterprise + Atmosphere" SKU ($25/1,000, 1,000 free/month).
+ * To avoid re-billing, runs reuse cached results from the previous report and
+ * only call Google for place IDs not already in it. Use --no-cache to override.
  *
  * Classification is heuristic on Google editorial/generative/review summaries +
  * display name. Review the report before applying changes.
@@ -79,6 +86,16 @@ function currentOffering(op) {
   return "unlabeled";
 }
 
+function computeMismatch(current, googleOffering, op) {
+  return (
+    (current === "demo_only_labeled" && googleOffering === "rental") ||
+    (current === "demo_only_labeled" && googleOffering === "unknown") ||
+    (current === "rental_labeled" && googleOffering === "demo") ||
+    (current === "rental_labeled" && googleOffering === "retail_only") ||
+    (current === "rental_labeled" && googleOffering === "unknown" && op.name.includes("Sports"))
+  );
+}
+
 async function fetchPlace(apiKey, placeId) {
   const url = `https://places.googleapis.com/v1/places/${placeId}`;
   const res = await fetch(url, {
@@ -133,24 +150,57 @@ const toCheck = active
   .map((op) => ({ op, placeId: extractPlaceId(op.notes_internal) }))
   .filter((x) => x.placeId);
 
-console.log(`Checking ${toCheck.length} active operators with Google place IDs…`);
+// Cost control: reuse previously fetched Google data so we don't re-bill the
+// Place Details + Atmosphere SKU for operators we already checked. Only place
+// IDs missing from the prior report (or that previously errored) hit Google.
+const noCache = process.argv.includes("--no-cache") || process.argv.includes("--refresh");
+const cache = new Map();
+if (!noCache && existsSync(reportPath)) {
+  try {
+    const prev = JSON.parse(readFileSync(reportPath, "utf8"));
+    for (const r of prev.all || []) {
+      if (r.placeId && !r.fetchError) cache.set(r.placeId, r);
+    }
+  } catch {
+    /* unreadable/old report — ignore and fetch fresh */
+  }
+}
 
+const cachedHits = toCheck.filter(({ placeId }) => cache.has(placeId)).length;
+const toFetch = toCheck.length - cachedHits;
+console.log(
+  `Checking ${toCheck.length} active operators with Google place IDs… ` +
+    `(${cachedHits} from cache, ${toFetch} to fetch from Google${noCache ? "; --no-cache" : ""})`,
+);
+
+let fetched = 0;
 const results = await pool(
   toCheck,
   async ({ op, placeId }) => {
+    const current = currentOffering(op);
+
+    const cached = cache.get(placeId);
+    if (cached) {
+      // Reuse Google-derived fields; recompute current/mismatch in case labels changed.
+      return {
+        ...cached,
+        slug: op.slug,
+        name: op.name,
+        placeId,
+        website: op.website,
+        currentOffering: current,
+        mismatch: computeMismatch(current, cached.googleOffering, op),
+        cached: true,
+      };
+    }
+
     const { place, error } = await fetchPlace(apiKey, placeId);
     if (error) {
-      return { slug: op.slug, name: op.name, placeId, fetchError: error, current: currentOffering(op) };
+      return { slug: op.slug, name: op.name, placeId, fetchError: error, current };
     }
+    fetched++;
     const googleText = collectText(place);
     const googleOffering = classifyGoogleText(googleText);
-    const current = currentOffering(op);
-    const mismatch =
-      (current === "demo_only_labeled" && googleOffering === "rental") ||
-      (current === "demo_only_labeled" && googleOffering === "unknown") ||
-      (current === "rental_labeled" && googleOffering === "demo") ||
-      (current === "rental_labeled" && googleOffering === "retail_only") ||
-      (current === "rental_labeled" && googleOffering === "unknown" && op.name.includes("Sports"));
 
     return {
       slug: op.slug,
@@ -162,7 +212,7 @@ const results = await pool(
       googlePrimaryType: place.primaryType,
       googleOffering,
       currentOffering: current,
-      mismatch,
+      mismatch: computeMismatch(current, googleOffering, op),
       googleSnippet: googleText.all.slice(0, 400),
       editorialSummary: place.editorialSummary?.text ?? place.editorialSummary?.overview ?? null,
       generativeOverview: place.generativeSummary?.overview?.text ?? null,
@@ -249,7 +299,10 @@ These need website or manual Maps review. See \`google_rental_demo_report.json\`
 
 console.log(`Review: ${reviewMdPath}`);
 
-console.log(`\nDone. ${results.length} checked, ${mismatches.length} mismatches, ${unknowns.length} unknown.`);
+console.log(
+  `\nDone. ${results.length} checked (${fetched} fetched from Google = billable, ` +
+    `${results.length - fetched} from cache), ${mismatches.length} mismatches, ${unknowns.length} unknown.`,
+);
 console.log(`Report: ${reportPath}\n`);
 console.log("Mismatches:");
 for (const r of mismatches) {
