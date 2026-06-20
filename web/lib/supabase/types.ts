@@ -373,3 +373,10 @@ export const Constants = {
     },
   },
 } as const
+
+// Convenience aliases for app code. Re-add these after running
+// `supabase gen types typescript` — the generator overwrites this file and
+// drops them, which breaks imports across web/ (e.g. the Next.js build).
+export type Operator = Tables<"operators">
+export type Equipment = Tables<"equipment">
+export type SkillLevel = Enums<"skill_level">
