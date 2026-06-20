@@ -193,7 +193,7 @@ class WishlistViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         return Wishlist.objects.filter(user=self.request.user).prefetch_related(
-            "items__gear_item__photos", "items__guide_service"
+            "items__gear_item__photos"
         )
 
 
@@ -202,7 +202,6 @@ class WishlistToggleView(APIView):
 
     def post(self, request):
         gear_item_id = request.data.get("gear_item_id")
-        guide_service_id = request.data.get("guide_service_id")
 
         wishlist, _ = Wishlist.objects.get_or_create(
             user=request.user, defaults={"name": "Saved"}
@@ -216,15 +215,7 @@ class WishlistToggleView(APIView):
             WishlistItem.objects.create(wishlist=wishlist, gear_item_id=gear_item_id)
             return Response({"status": "added"}, status=status.HTTP_201_CREATED)
 
-        if guide_service_id:
-            existing = WishlistItem.objects.filter(wishlist=wishlist, guide_service_id=guide_service_id)
-            if existing.exists():
-                existing.delete()
-                return Response({"status": "removed"})
-            WishlistItem.objects.create(wishlist=wishlist, guide_service_id=guide_service_id)
-            return Response({"status": "added"}, status=status.HTTP_201_CREATED)
-
-        return Response({"error": "Provide gear_item_id or guide_service_id"}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({"error": "Provide gear_item_id"}, status=status.HTTP_400_BAD_REQUEST)
 
 
 class AIDescribeView(APIView):

@@ -56,4 +56,4 @@ class WishlistAdmin(admin.ModelAdmin):
 
 @admin.register(WishlistItem)
 class WishlistItemAdmin(admin.ModelAdmin):
-    list_display = ("wishlist", "gear_item", "guide_service", "created_at")
+    list_display = ("wishlist", "gear_item", "created_at")

@@ -10,15 +10,9 @@ class Migration(migrations.Migration):
 
     dependencies = [
         ('catalog', '0001_initial'),
-        ('guiding', '0001_initial'),
     ]
 
     operations = [
-        migrations.AddField(
-            model_name='wishlistitem',
-            name='guide_service',
-            field=models.ForeignKey(blank=True, null=True, on_delete=django.db.models.deletion.CASCADE, related_name='wishlist_items', to='guiding.guideservice'),
-        ),
         migrations.AddField(
             model_name='wishlistitem',
             name='wishlist',

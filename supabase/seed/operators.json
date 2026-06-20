@@ -611,7 +611,7 @@
   "last_verified": "2026-06-16",
   "subcategories": [
    "ebike_mtb",
-   "trail_bike",
+   "mountain_bike",
    "ebike"
   ],
   "offers_rental": true,
@@ -921,7 +921,8 @@
   "subcategories": [
    "ebike",
    "cruiser_bike",
-   "kids_bike"
+   "kids_bike",
+   "bike_trailer"
   ],
   "offers_rental": true,
   "offers_demo": false,
@@ -1054,12 +1055,13 @@
   "is_active": true,
   "last_verified": "2026-06-15",
   "subcategories": [
-   "trail_bike",
+   "mountain_bike",
    "ebike_mtb",
    "ebike",
    "cruiser_bike",
    "kids_bike",
-   "tandem_bike"
+   "tandem_bike",
+   "bike_trailer"
   ],
   "offers_rental": true,
   "offers_demo": false,
@@ -1147,8 +1149,7 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "electric_transport",
-   "mountain_biking"
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 5,
@@ -1158,10 +1159,12 @@
   "is_active": true,
   "last_verified": "2026-06-16",
   "subcategories": [
-   "ebike",
-   "trail_bike"
+   "alpine_ski",
+   "snowboard"
   ],
-  "offers_rental": true
+  "offers_rental": true,
+  "offers_demo": false,
+  "offers_season_lease": false
  },
  {
   "name": "Black Tie Ski Rentals of North Lake Tahoe",
@@ -1964,7 +1967,6 @@
   "categories": [
    "electric_transport",
    "mountain_biking",
-   "road_cycling",
    "water_sports"
   ],
   "photos": null,
@@ -1979,9 +1981,7 @@
   "offers_season_lease": false,
   "subcategories": [
    "ebike_mtb",
-   "ebike",
-   "cruiser_bike",
-   "kids_bike"
+   "ebike"
   ]
  },
  {
@@ -2333,10 +2333,9 @@
   "is_active": true,
   "last_verified": "2026-06-15",
   "subcategories": [
-   "trail_bike",
+   "mountain_bike",
    "ebike_mtb",
-   "ebike",
-   "cruiser_bike"
+   "ebike"
   ],
   "offers_rental": true,
   "offers_demo": false,
@@ -2545,11 +2544,11 @@
   "is_active": true,
   "last_verified": "2026-06-16",
   "subcategories": [
-   "trail_bike",
-   "enduro_bike",
+   "mountain_bike",
    "ebike_mtb",
    "gravel_bike",
-   "ebike"
+   "ebike",
+   "kids_bike"
   ],
   "offers_rental": true,
   "offers_demo": false,
@@ -3519,8 +3518,7 @@
    "ebike",
    "ebike_mtb",
    "kids_bike",
-   "trail_bike",
-   "xc_bike"
+   "mountain_bike"
   ]
  },
  {
@@ -3944,13 +3942,14 @@
   "rating_external_count": 105,
   "inventory_sync_type": "manual",
   "notes_internal": "google_place_id:ChIJW4N6f1AVmYAR0Cc66XyOOng; scan_verified; road_cycling gear-type subcategories from website+Google scan",
-  "is_active": true,
+  "is_active": false,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "enduro_bike",
+   "mountain_bike",
    "gravel_bike",
    "road_bike"
-  ]
+  ],
+  "offers_rental": false
  },
  {
   "name": "Gypsy Getaway Wagons",
@@ -4288,15 +4287,15 @@
   "is_active": true,
   "last_verified": "2026-06-16",
   "subcategories": [
-   "trail_bike",
-   "xc_bike",
+   "mountain_bike",
    "ebike_mtb",
    "road_bike",
-   "gravel_bike",
-   "ebike"
+   "ebike",
+   "bike_rack"
   ],
   "offers_rental": true,
-  "offers_demo": true
+  "offers_demo": true,
+  "offers_season_lease": false
  },
  {
   "name": "High Sierra Water Ski School",
@@ -6593,13 +6592,18 @@
   "is_active": true,
   "last_verified": "2026-06-14",
   "subcategories": [
-   "downhill_bike",
+   "mountain_bike",
    "ebike",
-   "gravel_bike",
-   "kids_bike",
+   "ebike_mtb",
    "road_bike",
-   "trail_bike"
-  ]
+   "kids_bike",
+   "cruiser_bike",
+   "tandem_bike",
+   "bike_trailer"
+  ],
+  "offers_rental": true,
+  "offers_demo": true,
+  "offers_season_lease": false
  },
  {
   "name": "Olympic Valley Ski & Bike",
@@ -6636,7 +6640,7 @@
   "last_verified": "2026-06-16",
   "subcategories": [
    "kids_bike",
-   "trail_bike",
+   "mountain_bike",
    "ebike",
    "cruiser_bike"
   ],
@@ -6795,7 +6799,7 @@
   "offers_demo": false,
   "offers_season_lease": false,
   "subcategories": [
-   "trail_bike",
+   "mountain_bike",
    "road_bike",
    "ebike"
   ]
@@ -7188,7 +7192,7 @@
   "last_verified": "2026-06-16",
   "offers_rental": true,
   "subcategories": [
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike",
    "ebike"
   ]
@@ -7228,7 +7232,7 @@
   "last_verified": "2026-06-16",
   "offers_rental": true,
   "subcategories": [
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike",
    "ebike"
   ]
@@ -7299,7 +7303,7 @@
   "last_verified": "2026-06-16",
   "offers_rental": true,
   "subcategories": [
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike",
    "ebike"
   ]
@@ -7628,7 +7632,7 @@
   "offers_rental": false,
   "offers_demo": true,
   "subcategories": [
-   "enduro_bike",
+   "mountain_bike",
    "ebike_mtb"
   ]
  },
@@ -8176,7 +8180,7 @@
   "last_verified": "2026-06-16",
   "subcategories": [
    "ebike_mtb",
-   "trail_bike",
+   "mountain_bike",
    "cruiser_bike",
    "ebike",
    "kids_bike"
@@ -8674,7 +8678,7 @@
   "subcategories": [
    "kids_bike",
    "road_bike",
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike"
   ],
   "offers_rental": true,
@@ -8886,8 +8890,7 @@
   "offers_demo": true,
   "offers_season_lease": false,
   "subcategories": [
-   "trail_bike",
-   "enduro_bike",
+   "mountain_bike",
    "ebike_mtb",
    "road_bike",
    "gravel_bike"
@@ -9020,7 +9023,7 @@
   "subcategories": [
    "ebike",
    "road_bike",
-   "xc_bike"
+   "mountain_bike"
   ]
  },
  {
@@ -9554,7 +9557,7 @@
   "subcategories": [
    "ebike",
    "road_bike",
-   "trail_bike",
+   "mountain_bike",
    "cruiser_bike",
    "kids_bike"
   ],
@@ -9820,7 +9823,7 @@
    "rope_hardware",
    "sleep_system",
    "tent",
-   "trail_bike",
+   "mountain_bike",
    "ebike_mtb"
   ],
   "offers_rental": true
@@ -9878,8 +9881,7 @@
   "last_verified": "2026-06-16",
   "description": "Mountain bike and e-MTB rentals and demos — no snow sports rentals.",
   "subcategories": [
-   "trail_bike",
-   "enduro_bike",
+   "mountain_bike",
    "ebike_mtb",
    "gravel_bike",
    "ebike",
@@ -10334,7 +10336,7 @@
   "subcategories": [
    "ebike",
    "road_bike",
-   "trail_bike",
+   "mountain_bike",
    "cruiser_bike",
    "tandem_bike"
   ],
@@ -11064,7 +11066,7 @@
   "is_active": true,
   "last_verified": "2026-06-16",
   "subcategories": [
-   "xc_bike",
+   "mountain_bike",
    "cross_country_ski",
    "snowshoe"
   ],
@@ -11464,9 +11466,8 @@
    "kayak",
    "paddleboard",
    "raft",
-   "trail_bike",
-   "ebike_mtb",
-   "xc_bike"
+   "mountain_bike",
+   "ebike_mtb"
   ],
   "offers_rental": true,
   "offers_demo": true
@@ -11521,7 +11522,7 @@
    "road_bike",
    "rope_hardware",
    "tent",
-   "trail_bike",
+   "mountain_bike",
    "ebike_mtb"
   ],
   "offers_rental": true
@@ -12734,9 +12735,10 @@
   "subcategories": [
    "ebike",
    "kids_bike",
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike",
-   "tandem_bike"
+   "tandem_bike",
+   "bike_trailer"
   ],
   "offers_rental": true
  },
@@ -13341,7 +13343,7 @@
    "ebike_mtb",
    "kids_bike",
    "road_bike",
-   "trail_bike"
+   "mountain_bike"
   ]
  },
  {
@@ -13410,7 +13412,7 @@
    "ebike",
    "kids_bike",
    "road_bike",
-   "trail_bike"
+   "mountain_bike"
   ]
  },
  {
@@ -13547,7 +13549,7 @@
    "kids_bike",
    "paddleboard",
    "road_bike",
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike"
   ],
   "offers_rental": true
@@ -13593,7 +13595,7 @@
    "kids_bike",
    "paddleboard",
    "road_bike",
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike"
   ],
   "offers_rental": true
@@ -13631,7 +13633,7 @@
    "kids_bike",
    "paddleboard",
    "road_bike",
-   "xc_bike",
+   "mountain_bike",
    "cruiser_bike"
   ],
   "offers_rental": true
@@ -13899,9 +13901,9 @@
    "sun": "8:00 AM – 6:00 PM"
   },
   "categories": [
-   "camping",
    "electric_transport",
-   "mountain_biking"
+   "mountain_biking",
+   "snow_sports"
   ],
   "photos": null,
   "rating_external": 4.7,
@@ -13911,12 +13913,16 @@
   "is_active": true,
   "last_verified": "2026-06-16",
   "subcategories": [
+   "mountain_bike",
+   "ebike_mtb",
    "ebike",
-   "trail_bike",
-   "ebike_mtb"
+   "bike_rack",
+   "alpine_ski",
+   "snowboard"
   ],
   "offers_rental": true,
-  "offers_demo": true
+  "offers_demo": true,
+  "offers_season_lease": false
  },
  {
   "name": "Tahoe Paradise Boat Rentals",

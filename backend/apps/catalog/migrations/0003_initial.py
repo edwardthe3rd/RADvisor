@@ -35,8 +35,4 @@ class Migration(migrations.Migration):
             name='owner',
             field=models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, related_name='gear_items', to=settings.AUTH_USER_MODEL),
         ),
-        migrations.AddConstraint(
-            model_name='wishlistitem',
-            constraint=models.CheckConstraint(check=models.Q(models.Q(('gear_item__isnull', False), ('guide_service__isnull', True)), models.Q(('gear_item__isnull', True), ('guide_service__isnull', False)), _connector='OR'), name='wishlist_item_exactly_one_fk'),
-        ),
     ]
