@@ -18,17 +18,22 @@ export const CATEGORIES = [
     slug: "snow_sports",
     label: "Snow Sports",
     icon: "snowflake",
+    // Subcategory = discipline; gear type (ski/boots/poles/beacon/etc.) lives in
+    // equipment.attributes.gear_type. Demos & season leases are attributes.rental_type
+    // (not subcategories). Searchable attribute vocabulary: instructions/extraction/snow_sports.md.
     subcategories: [
       { slug: "alpine_ski", label: "Alpine Skis" },
-      { slug: "alpine_ski_demo", label: "Alpine Ski Demo" },
-      { slug: "alpine_ski_lease", label: "Season Ski Lease" },
-      { slug: "snowboard", label: "Snowboards" },
-      { slug: "snowboard_lease", label: "Season Snowboard Lease" },
+      { slug: "backcountry_ski", label: "Backcountry / Touring Skis" },
+      { slug: "telemark_ski", label: "Telemark Skis" },
       { slug: "cross_country_ski", label: "Cross-Country Skis" },
+      { slug: "snowboard", label: "Snowboards" },
       { slug: "splitboard", label: "Splitboards" },
       { slug: "snowshoe", label: "Snowshoes" },
       { slug: "sled", label: "Sleds & Tubes" },
+      { slug: "snowmobile", label: "Snowmobiles" }, // motorized snow; off_road is the summer powersports bucket
+      { slug: "timbersled", label: "Snow Bikes (Timbersled)" }, // motorized dirt bike + snowmobile track kit
       { slug: "apparel_snow", label: "Snow Apparel" },
+      { slug: "avalanche_safety", label: "Avalanche Safety Gear" },
     ],
   },
   {
@@ -38,6 +43,8 @@ export const CATEGORIES = [
     subcategories: [
       { slug: "mountain_bike", label: "Mountain Bike" },
       { slug: "ebike_mtb", label: "E-MTB" },
+      { slug: "fat_bike", label: "Fat Bike" }, // incl. fat-tire "snow bikes" (human/e-assist); winter `fat_bike` activity
+
       // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
       { slug: "mountain_bike_demo", label: "Mountain Bike Demo" },
       { slug: "ebike_mtb_demo", label: "E-MTB Demo" },
@@ -104,7 +111,8 @@ export const CATEGORIES = [
       { slug: "atv", label: "ATVs" },
       { slug: "utv", label: "UTVs / Side-by-Sides" },
       { slug: "dirt_bike", label: "Dirt Bikes" },
-      { slug: "snowmobile", label: "Snowmobiles" },
+      // Off-road is the SUMMER powersports category. Snowmobiles/timbersleds live in
+      // snow_sports; operators doing both are cross-tagged via the `snowmobile` activity.
     ],
   },
   {
@@ -143,9 +151,10 @@ export const CATEGORIES = [
     slug: "winter_other",
     label: "Other Winter",
     icon: "snowflake",
+    // Avalanche safety consolidated under snow_sports.avalanche_safety so the filter
+    // facet isn't split across two categories (see instructions/extraction/snow_sports.md §0).
     subcategories: [
       { slug: "ice_skates", label: "Ice Skates" },
-      { slug: "avalanche_safety", label: "Avalanche Safety Gear" },
     ],
   },
   {
