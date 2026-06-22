@@ -296,10 +296,6 @@ export default async function AdminOperatorPage({
                 </p>
                 <div className="flex flex-wrap gap-3">
                   {c.subcategories
-                    .filter(
-                      (s) =>
-                        !s.slug.endsWith("_demo") && !s.slug.endsWith("_lease"),
-                    )
                     .map((s) => (
                       <label
                         key={s.slug}

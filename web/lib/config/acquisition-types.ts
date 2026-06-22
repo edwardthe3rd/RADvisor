@@ -1,6 +1,7 @@
 // Non-purchase ways to access gear. Rentals, demos, and season leases share
-// activity categories (e.g. snow_sports); demos and leases are distinguished
-// by subcategory slugs ending in _demo or _lease when the user narrows search.
+// activity categories (e.g. snow_sports); demos and leases are distinguished by
+// the operator-level flags offers_demo / offers_season_lease (see
+// instructions/01_data_model.md §3b), not by subcategory variants.
 
 import { CATEGORIES, type CategorySlug } from "./categories";
 
@@ -10,9 +11,6 @@ export interface AcquisitionType {
   description: string;
   categorySlugs: readonly CategorySlug[];
 }
-
-export const DEMO_SUBCATEGORY_SUFFIX = "_demo";
-export const LEASE_SUBCATEGORY_SUFFIX = "_lease";
 
 export const ACQUISITION_TYPES = [
   {
@@ -25,14 +23,14 @@ export const ACQUISITION_TYPES = [
     slug: "demo",
     label: "Demos & tryouts",
     description:
-      "Try before you buy — filter by a demo subcategory (e.g. Alpine Ski Demo).",
+      "Try before you buy — operators flagged offers_demo. Search “demo” to filter.",
     categorySlugs: CATEGORIES.map((c) => c.slug),
   },
   {
     slug: "lease",
     label: "Season leases",
     description:
-      "Full-season gear programs — filter by a lease subcategory (e.g. Season Ski Lease).",
+      "Full-season gear programs — operators flagged offers_season_lease. Search “season lease” to filter.",
     categorySlugs: CATEGORIES.map((c) => c.slug),
   },
 ] as const satisfies readonly AcquisitionType[];

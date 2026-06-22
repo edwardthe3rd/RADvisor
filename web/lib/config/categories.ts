@@ -19,8 +19,9 @@ export const CATEGORIES = [
     label: "Snow Sports",
     icon: "snowflake",
     // Subcategory = discipline; gear type (ski/boots/poles/beacon/etc.) lives in
-    // equipment.attributes.gear_type. Demos & season leases are attributes.rental_type
-    // (not subcategories). Searchable attribute vocabulary: instructions/extraction/snow_sports.md.
+    // equipment.attributes.gear_type. Demos & season leases are operator-level flags
+    // (operators.offers_demo / offers_season_lease), not subcategories. Searchable
+    // attribute vocabulary: instructions/extraction/snow_sports.md.
     subcategories: [
       { slug: "alpine_ski", label: "Alpine Skis" },
       { slug: "backcountry_ski", label: "Backcountry / Touring Skis" },
@@ -34,6 +35,7 @@ export const CATEGORIES = [
       { slug: "timbersled", label: "Snow Bikes (Timbersled)" }, // motorized dirt bike + snowmobile track kit
       { slug: "apparel_snow", label: "Snow Apparel" },
       { slug: "avalanche_safety", label: "Avalanche Safety Gear" },
+      { slug: "ice_skates", label: "Ice Skates" }, // moved here from the retired winter_other category
     ],
   },
   {
@@ -44,10 +46,7 @@ export const CATEGORIES = [
       { slug: "mountain_bike", label: "Mountain Bike" },
       { slug: "ebike_mtb", label: "E-MTB" },
       { slug: "fat_bike", label: "Fat Bike" }, // incl. fat-tire "snow bikes" (human/e-assist); winter `fat_bike` activity
-
-      // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
-      { slug: "mountain_bike_demo", label: "Mountain Bike Demo" },
-      { slug: "ebike_mtb_demo", label: "E-MTB Demo" },
+      // Demos/leases are operator-level flags (offers_demo / offers_season_lease), not subcategories — see §3b.
     ],
   },
   {
@@ -64,9 +63,7 @@ export const CATEGORIES = [
       // Accessories — shown as chips but don't drive browse-category membership.
       { slug: "bike_trailer", label: "Bike Trailer" },
       { slug: "bike_rack", label: "Bike Rack" },
-      // Demo variants (try-before-you-buy). Matched via offers_demo + base tag.
-      { slug: "road_bike_demo", label: "Performance Road Bike Demo" },
-      { slug: "gravel_bike_demo", label: "Gravel Bike Demo" },
+      // Demos/leases are operator-level flags (offers_demo / offers_season_lease), not subcategories — see §3b.
     ],
   },
   {
@@ -86,6 +83,8 @@ export const CATEGORIES = [
       { slug: "raft", label: "Rafts" },
       { slug: "jet_ski", label: "Jet Skis / PWC" },
       { slug: "wakeboard", label: "Wakeboards & Water Skis" },
+      { slug: "foil", label: "Foilboards & Hydrofoils" }, // wake/surf/wind/SUP foiling boards + wings
+      { slug: "efoil", label: "eFoils (Electric)" }, // motorized electric hydrofoil boards
       { slug: "wetsuit", label: "Wetsuits & Gear" },
       { slug: "boat", label: "Boats" },
     ],
@@ -101,6 +100,22 @@ export const CATEGORIES = [
       { slug: "cooking", label: "Camp Kitchen & Stoves" },
       { slug: "camp_furniture", label: "Camp Furniture" },
       { slug: "full_kit", label: "Complete Camp Kits" },
+    ],
+  },
+  {
+    slug: "camping_vehicles",
+    label: "Overland & Vehicle Camping",
+    icon: "caravan",
+    // Overland-focused only. NO conventional travel trailers, RVs, or motorhomes —
+    // just overland-style rigs/vans, off-road expedition trailers, motorcycle
+    // overlanding, and the accessory gear that outfits them.
+    subcategories: [
+      { slug: "overland_rig", label: "Overland Rigs (Built 4x4)" },
+      { slug: "camper_van", label: "Camper Vans" },
+      { slug: "rooftop_tent", label: "Rooftop Tents" },
+      { slug: "overland_trailer", label: "Overland Trailers (Off-Road / Expedition)" },
+      { slug: "moto_overland", label: "Motorcycle Overlanding" },
+      { slug: "vehicle_accessories", label: "Vehicle Accessories (Awnings, Recovery, Fridges)" },
     ],
   },
   {
@@ -137,6 +152,56 @@ export const CATEGORIES = [
     ],
   },
   {
+    slug: "mountaineering",
+    label: "Mountaineering",
+    icon: "mountain",
+    // Non-ski alpine/glacier travel gear. Distinct from rock_climbing (crag/sport)
+    // and snow_sports (ski touring). The winter_mountaineering activity maps here.
+    subcategories: [
+      { slug: "mountaineering_boots", label: "Mountaineering Boots" },
+      { slug: "ice_axe", label: "Ice Axes" },
+      { slug: "crampons", label: "Crampons" },
+      { slug: "rope_hardware", label: "Ropes & Hardware" },
+      { slug: "helmet", label: "Helmets" },
+      { slug: "full_kit", label: "Complete Mountaineering Kits" },
+    ],
+  },
+  {
+    slug: "hunting",
+    label: "Hunting",
+    icon: "target",
+    // Gear rentals only — NO firearms (rental/liability). Archery (bows) is fine.
+    subcategories: [
+      { slug: "optics", label: "Optics (Binoculars, Spotting Scopes, Rangefinders)" },
+      { slug: "blind_treestand", label: "Blinds & Treestands" },
+      { slug: "game_cart_pack", label: "Game Carts & Packs" },
+      { slug: "archery", label: "Archery (Bows)" },
+      { slug: "accessories", label: "Accessories" },
+    ],
+  },
+  {
+    slug: "fishing",
+    label: "Fishing",
+    icon: "fish",
+    subcategories: [
+      { slug: "fly_fishing", label: "Fly Fishing" },
+      { slug: "spin_conventional", label: "Spin & Conventional" },
+      { slug: "ice_fishing", label: "Ice Fishing" },
+      { slug: "float_tube", label: "Float Tubes & Personal Watercraft" },
+      { slug: "waders", label: "Waders" },
+      { slug: "accessories", label: "Accessories" },
+    ],
+  },
+  {
+    slug: "disc_golf",
+    label: "Disc Golf",
+    icon: "disc",
+    subcategories: [
+      { slug: "disc_set", label: "Disc Sets" },
+      { slug: "basket", label: "Portable Baskets" },
+    ],
+  },
+  {
     slug: "electric_transport",
     label: "Electric Transportation",
     icon: "zap",
@@ -144,26 +209,9 @@ export const CATEGORIES = [
       { slug: "ebike", label: "E-Bike" },
       { slug: "ebike_mtb", label: "E-MTB" },
       { slug: "e_scooter", label: "Electric Scooter" },
-      { slug: "onewheel", label: "Onewheel / EUC" },
-    ],
-  },
-  {
-    slug: "winter_other",
-    label: "Other Winter",
-    icon: "snowflake",
-    // Avalanche safety consolidated under snow_sports.avalanche_safety so the filter
-    // facet isn't split across two categories (see instructions/extraction/snow_sports.md §0).
-    subcategories: [
-      { slug: "ice_skates", label: "Ice Skates" },
-    ],
-  },
-  {
-    slug: "aerial",
-    label: "Aerial Adventures",
-    icon: "wind",
-    subcategories: [
-      { slug: "paraglider", label: "Paragliding Gear" },
-      { slug: "wingsuit", label: "Wingsuits" },
+      { slug: "onewheel", label: "Onewheel" },
+      { slug: "euc", label: "Electric Unicycle (EUC)" },
+      { slug: "segway", label: "Segway" },
     ],
   },
   {

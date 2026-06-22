@@ -116,7 +116,8 @@ export const ACTIVITIES: Activity[] = [
     slug: "ice_skate",
     label: "Ice Skate",
     season: "winter",
-    categories: ["winter_other"],
+    // ice_skates moved into snow_sports (winter_other category retired).
+    categories: ["snow_sports"],
     subcategories: ["ice_skates"],
     placesSearchTerms: ["ice skate rental", "ice rink skate rental"],
     crawlEnabled: true,
@@ -125,10 +126,11 @@ export const ACTIVITIES: Activity[] = [
     slug: "winter_mountaineering",
     label: "Winter Mountaineering",
     season: "winter",
-    // No separate gear category — lives in snow_sports backcountry (gear_types
-    // ice_axe / crampons / ski_crampons). See instructions/extraction/snow_sports.md.
-    categories: ["snow_sports"],
-    subcategories: ["backcountry_ski"],
+    // Now maps to the dedicated mountaineering category, plus the snow_sports
+    // backcountry crossover for ski-mountaineering (gear_types ice_axe / crampons /
+    // ski_crampons). See instructions/extraction/mountaineering.md & snow_sports.md.
+    categories: ["mountaineering", "snow_sports"],
+    subcategories: ["ice_axe", "crampons", "rope_hardware", "full_kit", "backcountry_ski"],
     placesSearchTerms: [
       "mountaineering gear rental",
       "ice climbing gear rental",

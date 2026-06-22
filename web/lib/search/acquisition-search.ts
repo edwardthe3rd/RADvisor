@@ -1,8 +1,3 @@
-import { CATEGORIES } from "@/lib/config/categories";
-import {
-  DEMO_SUBCATEGORY_SUFFIX,
-  LEASE_SUBCATEGORY_SUFFIX,
-} from "@/lib/config/acquisition-types";
 import type { Filters } from "@/lib/search/buildQuery";
 
 const DEMO_QUERY =
@@ -15,17 +10,7 @@ export interface AcquisitionSearchIntent {
   lease: boolean;
   /** Remaining keyword text after stripping acquisition terms. */
   textQuery: string;
-  subcategories: string[];
 }
-
-function subcategoriesWithSuffix(suffix: string): string[] {
-  return CATEGORIES.flatMap((c) =>
-    c.subcategories.filter((s) => s.slug.endsWith(suffix)).map((s) => s.slug),
-  );
-}
-
-const DEMO_SUBCATEGORIES = subcategoriesWithSuffix(DEMO_SUBCATEGORY_SUFFIX);
-const LEASE_SUBCATEGORIES = subcategoriesWithSuffix(LEASE_SUBCATEGORY_SUFFIX);
 
 export function parseAcquisitionSearchQuery(q: string): AcquisitionSearchIntent {
   const demo = DEMO_QUERY.test(q);
@@ -39,28 +24,24 @@ export function parseAcquisitionSearchQuery(q: string): AcquisitionSearchIntent 
     .replace(/\s+/g, " ")
     .trim();
 
-  const subcategories = [
-    ...(demo ? DEMO_SUBCATEGORIES : []),
-    ...(lease ? LEASE_SUBCATEGORIES : []),
-  ];
-
-  return { demo, lease, textQuery, subcategories };
+  return { demo, lease, textQuery };
 }
 
-/** Merge demo/lease intent from `q` into browse/search filters. */
+/**
+ * Merge demo/lease intent from `q` into filters as operator-level flags
+ * (operators.offers_demo / offers_season_lease). This is the high-recall,
+ * cross-category signal — see instructions/01_data_model.md §3b.
+ */
 export function applyAcquisitionToFilters(filters: Filters): Filters {
   if (!filters.q?.trim()) return filters;
 
   const intent = parseAcquisitionSearchQuery(filters.q);
   if (!intent.demo && !intent.lease) return filters;
 
-  const subcategories = Array.from(
-    new Set([...(filters.subcategories ?? []), ...intent.subcategories]),
-  );
-
   return {
     ...filters,
-    subcategories: subcategories.length ? subcategories : filters.subcategories,
+    demo: intent.demo || filters.demo,
+    lease: intent.lease || filters.lease,
     q: intent.textQuery || undefined,
   };
 }
