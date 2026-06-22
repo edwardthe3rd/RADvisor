@@ -18,7 +18,7 @@
  * extraction/00_general.md. Every row carries source_url (Google Maps URL) +
  * last_verified per the provenance rule (§2A, §8).
  *
- * Requires GOOGLE_PLACES_API_KEY (env or backend/.env).
+ * Requires GOOGLE_PLACES_API_KEY (env or supabase/seed/.env).
  *
  * COST: uses Text Search (New) with websiteUri + rating + userRatingCount in the
  * field mask -> billed on the Text Search Enterprise SKU. website is needed for
@@ -50,7 +50,7 @@ const CACHE_FLUSH_EVERY = 25;   // persist cache every N completed pairs
 // ---------------------------------------------------------------------------
 function loadApiKey() {
   if (process.env.GOOGLE_PLACES_API_KEY) return process.env.GOOGLE_PLACES_API_KEY;
-  const envPath = join(seedDir, "../../backend/.env");
+  const envPath = join(seedDir, ".env");
   if (!existsSync(envPath)) return null;
   for (const line of readFileSync(envPath, "utf8").split("\n")) {
     const m = line.match(/^GOOGLE_PLACES_API_KEY=(.+)$/);
@@ -162,7 +162,7 @@ function csvCell(v) {
 // ---------------------------------------------------------------------------
 const apiKey = loadApiKey();
 if (!apiKey && !DRY_RUN) {
-  console.error("GOOGLE_PLACES_API_KEY not found (env or backend/.env).");
+  console.error("GOOGLE_PLACES_API_KEY not found (env or supabase/seed/.env).");
   process.exit(1);
 }
 

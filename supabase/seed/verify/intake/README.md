@@ -33,7 +33,7 @@ uncertain is routed to **review** rather than guessed.
    ```
    node supabase/seed/verify/intake/classify_batch.mjs --input my_batch.json
    ```
-   Needs `GOOGLE_PLACES_API_KEY` (backend/.env) + network.
+   Needs `GOOGLE_PLACES_API_KEY` (supabase/seed/.env) + network.
 
 3. Outputs land in `intake/out/`:
    - `<batch>.review.md` — keep / review / reject grouped, with reasons

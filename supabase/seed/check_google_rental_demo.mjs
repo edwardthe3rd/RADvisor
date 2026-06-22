@@ -4,7 +4,7 @@
  *   node supabase/seed/check_google_rental_demo.mjs            # cached: only fetches new operators
  *   node supabase/seed/check_google_rental_demo.mjs --no-cache # force full refresh from Google
  *
- * Requires GOOGLE_PLACES_API_KEY (backend/.env or env). Reads operators.json,
+ * Requires GOOGLE_PLACES_API_KEY (supabase/seed/.env or env). Reads operators.json,
  * fetches Place Details for each google_place_id, and writes google_rental_demo_report.json.
  *
  * COST: each Google fetch uses Place Details (New) with atmosphere fields
@@ -30,7 +30,7 @@ const DELAY_MS = 120;
 
 function loadApiKey() {
   if (process.env.GOOGLE_PLACES_API_KEY) return process.env.GOOGLE_PLACES_API_KEY;
-  const envPath = join(seedDir, "../../backend/.env");
+  const envPath = join(seedDir, ".env");
   if (!existsSync(envPath)) return null;
   for (const line of readFileSync(envPath, "utf8").split("\n")) {
     const m = line.match(/^GOOGLE_PLACES_API_KEY=(.+)$/);
@@ -140,7 +140,7 @@ async function pool(items, fn, limit) {
 
 const apiKey = loadApiKey();
 if (!apiKey) {
-  console.error("GOOGLE_PLACES_API_KEY not found (backend/.env or env).");
+  console.error("GOOGLE_PLACES_API_KEY not found (supabase/seed/.env or env).");
   process.exit(1);
 }
 
@@ -258,7 +258,7 @@ writeFileSync(
 
 Generated: ${new Date().toISOString().slice(0, 10)}
 
-Run \`node supabase/seed/check_google_rental_demo.mjs\` to refresh (requires \`GOOGLE_PLACES_API_KEY\` in \`backend/.env\`).
+Run \`node supabase/seed/check_google_rental_demo.mjs\` to refresh (requires \`GOOGLE_PLACES_API_KEY\` in \`supabase/seed/.env\`).
 
 Uses Google Places **editorialSummary**, **generativeSummary**, and **reviewSummary** when available (~half of listings). When Google returns no summary (e.g. RMU Truckee), check Maps manually — structured "Services" are not always in the API.
 

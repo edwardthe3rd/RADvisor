@@ -2,7 +2,7 @@
 
 Generated: 2026-06-14
 
-Run `node supabase/seed/check_google_rental_demo.mjs` to refresh (requires `GOOGLE_PLACES_API_KEY` in `backend/.env`).
+Run `node supabase/seed/check_google_rental_demo.mjs` to refresh (requires `GOOGLE_PLACES_API_KEY` in `supabase/seed/.env`).
 
 Uses Google Places **editorialSummary**, **generativeSummary**, and **reviewSummary** when available (~half of listings). When Google returns no summary (e.g. RMU Truckee), check Maps manually — structured "Services" are not always in the API.
 

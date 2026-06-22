@@ -86,7 +86,7 @@ export default function WaitlistForm() {
       setStatus(errMsg, "error");
     } catch (err) {
       let baseHint =
-        "Is the API running? For local Django: cd backend && source .venv/bin/activate && python manage.py runserver 0.0.0.0:8000. ";
+        "Is the waitlist API reachable? In local dev, set NEXT_PUBLIC_WAITLIST_NOTIFY_URL to your API Gateway endpoint. ";
       if (
         typeof window !== "undefined" &&
         window.location.protocol === "https:" &&
