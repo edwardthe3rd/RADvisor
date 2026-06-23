@@ -10,9 +10,6 @@ db.sqlite3
 *.sqlite3
 *.db
 
-# Django
-backend/media/
-backend/staticfiles/
 
 # Node
 node_modules/

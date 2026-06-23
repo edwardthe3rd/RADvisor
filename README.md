@@ -9,7 +9,6 @@ Discovery platform connecting outdoor enthusiasts with gear-rental operators in 
 | [`web/`](web/) | Next.js 14 + Supabase app ([theradvisor.com](https://theradvisor.com)) — **all product code lives here** |
 | [`supabase/`](supabase/) | SQL migrations (schema source of truth) and seed scripts |
 | [`instructions/`](instructions/) | Product specs — scope, data model, feature contracts |
-| [`backend/`](backend/) | Legacy Django API — transitional; used only as the Google Places sync pipeline |
 | [`mobile/`](mobile/) | Expo app (parked; Phase 2+) |
 
 ## Quick start
@@ -24,34 +23,28 @@ npm run dev
 
 Keep `npm run dev` running in that terminal, then open [http://localhost:3000](http://localhost:3000). No other services required — data comes from Supabase.
 
-## Google Places sync (operator pipeline)
+## Operator data pipeline
 
-The [`backend/`](backend/) Django app pulls rental businesses from **Google Places API (New)**, then filters out hotels, retail-only shops, out-of-region results, and other non-rental listings. Filtering lives in `backend/apps/catalog/business_filters.py` and `rental_taxonomy.py`; the ingest command is `sync_reno_businesses`.
+Operator discovery runs entirely from `supabase/seed/` against **Google Places API (New)** — no server required.
 
-**Prerequisites:** Enable **Places API (New)** in Google Cloud, restrict your key, and set `GOOGLE_PLACES_API_KEY` in `backend/.env` (see `backend/.env.example`).
-
-From `backend/`:
+**Prerequisites:** Enable **Places API (New)** in Google Cloud, restrict your key, and put `GOOGLE_PLACES_API_KEY` in `supabase/seed/.env` (see `supabase/seed/.env.example`).
 
 ```bash
-python3 -m venv .venv && source .venv/bin/activate   # first time
-pip install -r requirements.txt
-
-# Preview: calls Google, applies filters, prints accepted/rejected — no DB writes
-python manage.py sync_reno_businesses --dry-run
-
-# Write accepted businesses to local SQLite (default)
-python manage.py seed_categories   # once, if categories are missing
-python manage.py sync_reno_businesses
-
-# Re-apply filters to rows already in the DB
-python manage.py prune_reno_businesses --dry-run
+# Discovery sweep: rectangle-restricted tiles over the Reno–Tahoe AOI × query terms,
+# DISTANCE-ranked, adaptive quadtree (cap hits subdivide), dedup on place_id.
+# Resumable + cached — a rerun only bills new (tile × query) pairs.
+node supabase/seed/quadtree_sweep_coverage.mjs    # write coverage.geojson; preview the AOI in geojson.io first
+node supabase/seed/quadtree_sweep.mjs --dry-run   # print the plan + cost estimate, fetch nothing
+node supabase/seed/quadtree_sweep.mjs             # run it
 ```
 
-Push refreshed data into Supabase for the web app:
+This writes the raw operator pool to `supabase/seed/quadtree_sweep_operators.{json,csv}`. From there, triage and inventory extraction follow the gate ladder in [`instructions/extraction/00_general.md`](instructions/extraction/00_general.md) — locality, domain-relevance, and rental-evidence gates decide which operators become rows in `supabase/seed/operators.json`.
+
+Push the curated master into Supabase for the web app:
 
 ```bash
 cd web
-npm run seed
+npm run seed   # upserts supabase/seed/operators.json into the live DB
 ```
 
 See [SECURITY.md](SECURITY.md) for API key restrictions and quota guidance.
@@ -59,4 +52,33 @@ See [SECURITY.md](SECURITY.md) for API key restrictions and quota guidance.
 ## Documentation
 
 The product is specified in [`instructions/`](instructions/) — read `00_overview.md` first. `01_data_model.md` is the single source of truth for the schema. Security practices are in [SECURITY.md](SECURITY.md).
+
+### ⚠️ The spec docs live in a SEPARATE git repo
+
+The `instructions/` folder you see here is **symlinks** pointing into a different git repository:
+
+```
+/Users/echalicki/Documents/Business/RADvisor/RADvisor Instructions
+```
+
+Editing a doc in Cursor edits the real file — but **committing this code repo does NOT save doc changes.** The docs have their own repo, so they need their own commit, in their own folder. This is the #1 reason a doc edit looks "lost": it was never committed, because the commit happened in the wrong repo.
+
+**Check what changed in the docs repo:**
+
+```bash
+cd "/Users/echalicki/Documents/Business/RADvisor/RADvisor Instructions"
+git status     # "working tree clean" = everything committed; a list = uncommitted doc edits
+```
+
+**Commit doc changes:**
+
+```bash
+cd "/Users/echalicki/Documents/Business/RADvisor/RADvisor Instructions"
+git add -A instructions/          # stages both edited and brand-new doc files
+git commit -m "Update specs: <what changed>"
+```
+
+After committing, `git status` should say **"nothing to commit, working tree clean."** That clean message is the proof it saved — if files still show in red/green, it didn't go through.
+
+**Branch:** the docs repo stays on `main` — commit straight to it. There's no `Testing` branch here and you don't need one; docs don't deploy, so there's nothing to test before promoting. The `Testing` → `main` flow is **only** for *this* code repo (see [SYNC.md](SYNC.md)), because that's what protects the live site.
 

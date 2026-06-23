@@ -14,7 +14,7 @@
  *   intake/out/<basename>.review.md         keep / review / reject, grouped
  *   intake/out/<basename>.keep.seed.json     operators.json-shaped rows for KEEP
  *
- * Requires GOOGLE_PLACES_API_KEY (backend/.env) + network.
+ * Requires GOOGLE_PLACES_API_KEY (supabase/seed/.env) + network.
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "node:fs";
@@ -35,7 +35,7 @@ const inputPath = args[inIdx + 1];
 
 const apiKey = loadApiKey();
 if (!apiKey) {
-  console.error("GOOGLE_PLACES_API_KEY required (backend/.env).");
+  console.error("GOOGLE_PLACES_API_KEY required (supabase/seed/.env).");
   process.exit(1);
 }
 

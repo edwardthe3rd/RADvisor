@@ -18,7 +18,6 @@ import {
   searchEquipment,
   type EquipmentWithOperator,
 } from "@/lib/data";
-import { isLeaseSubcategory } from "@/lib/config/operator-subcategory-match";
 import type { Filters } from "@/lib/search/buildQuery";
 import type { Operator } from "@/lib/supabase/types";
 import { pickPrice } from "@/lib/format";
@@ -63,9 +62,7 @@ function answersToFilters(answers: QuizAnswers): Filters {
  */
 async function getResults(answers: QuizAnswers): Promise<QuizResults> {
   const relaxed: string[] = [];
-  const wantsSeasonLease =
-    answers.duration === "season" ||
-    (!!answers.subtype && isLeaseSubcategory(answers.subtype));
+  const wantsSeasonLease = answers.duration === "season";
 
   if (
     wantsSeasonLease &&
@@ -256,8 +253,7 @@ export default async function FindPage({
             <h1 className="mb-2 text-2xl font-extrabold text-ink-primary">
               {results.operators.length} operator
               {results.operators.length === 1 ? "" : "s"}{" "}
-              {answers.duration === "season" ||
-              (answers.subtype && isLeaseSubcategory(answers.subtype)) ?
+              {answers.duration === "season" ?
                 "offer season leases for"
               : "rent"}{" "}
               {answers.activity ? categoryLabel(answers.activity).toLowerCase() : ""}{" "}
@@ -265,8 +261,7 @@ export default async function FindPage({
               near you
             </h1>
             <p className="mb-6 text-ink-secondary">
-              {answers.duration === "season" ||
-              (answers.subtype && isLeaseSubcategory(answers.subtype)) ?
+              {answers.duration === "season" ?
                 "Season lease programs are arranged directly with the operator — contact them for pricing and availability."
               : "Individual gear listings are coming soon — contact an operator directly to confirm what they have available."}
             </p>

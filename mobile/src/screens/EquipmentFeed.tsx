@@ -9,7 +9,7 @@ import { responsiveStyles, useResponsive, gridCardWidth } from "../theme/respons
 import { BusinessCard, EmptyState } from "../components/ui";
 import { useExploreSearch } from "../contexts/ExploreSearchContext";
 
-// High-level discovery groups, in display order (mirrors backend rental_taxonomy).
+// High-level discovery groups, in display order (mirrors instructions/01_data_model.md categories).
 const GROUP_ORDER = ["Snow", "Water", "Bike", "Climb", "Camp", "Vehicles", "E-Transport", "Air/Other"];
 
 export default function EquipmentFeed() {
@@ -63,7 +63,7 @@ export default function EquipmentFeed() {
           message={
             search
               ? "Try a different search term."
-              : "Run the Reno business sync on the backend to populate the directory."
+              : "No rental businesses have been added to the directory yet."
           }
         />
       </View>

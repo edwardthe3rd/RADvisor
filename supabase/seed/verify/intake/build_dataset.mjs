@@ -20,7 +20,7 @@ const operatorsPath = join(intakeDir, "../../operators.json");
 
 const apiKey = loadApiKey();
 if (!apiKey) {
-  console.error("GOOGLE_PLACES_API_KEY required (backend/.env).");
+  console.error("GOOGLE_PLACES_API_KEY required (supabase/seed/.env).");
   process.exit(1);
 }
 

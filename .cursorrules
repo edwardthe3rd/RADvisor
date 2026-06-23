@@ -25,11 +25,11 @@ prefer solutions that ship fast and preserve runway.
 
 The migration to Next.js 14 App Router + Supabase is **complete**: `web/`
 reads exclusively from Supabase (anon key + RLS for consumer pages, service
-role for `/admin` server actions). The legacy Django backend (`backend/`,
-`sync_reno_businesses`) remains only as the Google Places data pipeline that
-feeds `supabase/seed/`. **Do not extend it, pattern-match against it, or
-treat it as authoritative.** All new code goes in `web/`. Schema authority is
-`instructions/01_data_model.md`, mirrored by `supabase/migrations/`.
+role for `/admin` server actions). The legacy Django backend has been
+**removed** — operator discovery now runs entirely from `supabase/seed/`
+(`anchor_sweep.mjs`, Google Places API New), documented in
+`instructions/extraction/00_general.md`. All new code goes in `web/`. Schema
+authority is `instructions/01_data_model.md`, mirrored by `supabase/migrations/`.
 
 ## Read first
 
@@ -56,8 +56,7 @@ Before non-trivial work, consult `instructions/`:
 | `web/lib/config/` | Static config: categories taxonomy, geo, quiz steps, locations |
 | `web/lib/search/buildQuery.ts` | Shared Filters type + Supabase query builder (search/browse/quiz) |
 | `supabase/migrations/` | Schema (mirrors `01_data_model.md`) |
-| `supabase/seed/` | `export_django.py` (Django → JSON) and `import.ts` (JSON → Supabase) |
-| `backend/apps/catalog/` | Legacy Google sync pipeline (`rental_taxonomy.py`, `business_filters.py`, `geo.py`) |
+| `supabase/seed/` | Operator discovery + seeding: `anchor_sweep.mjs` (Places sweep), `verify/` (triage), `operators.json` (master), `npm run seed` (JSON → Supabase) |
 | `mobile/` | Expo marketplace (parked, Phase 2+) |
 | `landing/` | Static marketing + waitlist form |
 | `infra/lambda/waitlist-notify/` | SES waitlist email Lambda (SAM) |

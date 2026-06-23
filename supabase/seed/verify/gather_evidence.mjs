@@ -10,7 +10,7 @@
  *   verify/evidence/<category>.json   raw signals + snippets (machine-readable)
  *   verify/<category>_worksheet.md    current-vs-detected for human/agent review
  *
- * Requires GOOGLE_PLACES_API_KEY (backend/.env). Network access required.
+ * Requires GOOGLE_PLACES_API_KEY (supabase/seed/.env). Network access required.
  * This proposes; it never edits operators.json. Conflicts are reviewed by the
  * agent/founder before anything is applied.
  */

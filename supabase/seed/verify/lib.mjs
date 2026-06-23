@@ -23,7 +23,7 @@ export const operatorsPath = join(seedDir, "operators.json");
 
 export function loadApiKey() {
   if (process.env.GOOGLE_PLACES_API_KEY) return process.env.GOOGLE_PLACES_API_KEY;
-  const envPath = join(seedDir, "../../backend/.env");
+  const envPath = join(seedDir, ".env");
   if (!existsSync(envPath)) return null;
   for (const line of readFileSync(envPath, "utf8").split("\n")) {
     const m = line.match(/^GOOGLE_PLACES_API_KEY=(.+)$/);

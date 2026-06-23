@@ -41,12 +41,7 @@ function operatorFromForm(formData: FormData) {
   );
   const subcategories = CATEGORIES.flatMap((c) =>
     c.subcategories.map((s) => s.slug),
-  ).filter(
-    (slug) =>
-      !slug.endsWith("_demo") &&
-      !slug.endsWith("_lease") &&
-      formData.get(`subcategory_${slug}`) === "on",
-  );
+  ).filter((slug) => formData.get(`subcategory_${slug}`) === "on");
   return {
     name: str(formData, "name") ?? "",
     slug: str(formData, "slug") ?? "",

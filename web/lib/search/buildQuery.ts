@@ -78,6 +78,10 @@ export interface Filters {
   verifiedRecently?: boolean;
   /** When true, only operators that offer gear delivery. */
   delivery?: boolean;
+  /** When true, only operators flagged offers_demo (§3b). Set from query intent. */
+  demo?: boolean;
+  /** When true, only operators flagged offers_season_lease (§3b). Set from query intent. */
+  lease?: boolean;
   /** Spot slug from lib/config/locations.ts — proximity sort, never a hard filter. */
   location?: string;
   sort?: SortOption;
@@ -194,6 +198,8 @@ export function buildEquipmentQuery(
   if (effective.operatorIds?.length)
     query = query.in("operator_id", effective.operatorIds);
   if (effective.delivery) query = query.eq("operators.offers_delivery", true);
+  if (effective.demo) query = query.eq("operators.offers_demo", true);
+  if (effective.lease) query = query.eq("operators.offers_season_lease", true);
   if (effective.hasPhoto) query = query.not("image_url", "is", null);
   if (effective.verifiedRecently) {
     const cutoff = new Date(Date.now() - 90 * 24 * 3600 * 1000)
