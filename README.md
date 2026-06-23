@@ -30,13 +30,15 @@ Operator discovery runs entirely from `supabase/seed/` against **Google Places A
 **Prerequisites:** Enable **Places API (New)** in Google Cloud, restrict your key, and put `GOOGLE_PLACES_API_KEY` in `supabase/seed/.env` (see `supabase/seed/.env.example`).
 
 ```bash
-# Discovery sweep: 16 Reno–Tahoe anchors × query terms, paginated, dedup on place_id.
-# Resumable + cached — a rerun only bills new (anchor × query) pairs.
-node supabase/seed/anchor_sweep.mjs --dry-run   # print the plan + cost estimate, fetch nothing
-node supabase/seed/anchor_sweep.mjs             # run it
+# Discovery sweep: rectangle-restricted tiles over the Reno–Tahoe AOI × query terms,
+# DISTANCE-ranked, adaptive quadtree (cap hits subdivide), dedup on place_id.
+# Resumable + cached — a rerun only bills new (tile × query) pairs.
+node supabase/seed/quadtree_sweep_coverage.mjs    # write coverage.geojson; preview the AOI in geojson.io first
+node supabase/seed/quadtree_sweep.mjs --dry-run   # print the plan + cost estimate, fetch nothing
+node supabase/seed/quadtree_sweep.mjs             # run it
 ```
 
-This writes the raw operator pool to `supabase/seed/anchor_sweep_operators.{json,csv}`. From there, triage and inventory extraction follow the gate ladder in [`instructions/extraction/00_general.md`](instructions/extraction/00_general.md) — locality, domain-relevance, and rental-evidence gates decide which operators become rows in `supabase/seed/operators.json`.
+This writes the raw operator pool to `supabase/seed/quadtree_sweep_operators.{json,csv}`. From there, triage and inventory extraction follow the gate ladder in [`instructions/extraction/00_general.md`](instructions/extraction/00_general.md) — locality, domain-relevance, and rental-evidence gates decide which operators become rows in `supabase/seed/operators.json`.
 
 Push the curated master into Supabase for the web app:
 
