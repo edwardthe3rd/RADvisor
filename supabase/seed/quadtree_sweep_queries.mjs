@@ -101,13 +101,16 @@ export const QUERIES = [
   { term: "mountain bike rental",           activity: "mtb",         season: "summer", tier: "core" },
   { term: "downhill bike park rental",      activity: "mtb",         season: "summer", tier: "core" },
   { term: "bike rental",                    activity: "cycling",     season: "summer", tier: "core" },
+  { term: "bicycle rental",                 activity: "cycling",     season: "summer", tier: "core" },
   { term: "bike shop",                      activity: "cycling",     season: "summer", tier: "core" },
   { term: "ebike rental",                   activity: "ebike",       season: "summer", tier: "core" },
   { term: "climbing gear rental",           activity: "climbing",    season: "summer", tier: "core" },
   { term: "camping gear rental",            activity: "camping",     season: "summer", tier: "core" },
+  { term: "camping equipment rental",       activity: "camping",     season: "summer", tier: "core" },
   { term: "tent rental",                    activity: "camping",     season: "summer", tier: "core" },
   { term: "backpacking gear rental",        activity: "backpacking", season: "summer", tier: "core" },
   { term: "disc golf rental",               activity: "disc-golf",   season: "summer", tier: "core" },
+  { term: "disc golf shop",                 activity: "disc-golf",   season: "summer", tier: "core" },
 
   // ---- SUMMER · MOTORIZED / OFF-ROAD --------------------------------------
   { term: "atv rental",                     activity: "atv",         season: "summer", tier: "core" },
@@ -123,9 +126,14 @@ export const QUERIES = [
   { term: "motocross bike rental",          activity: "dirtbike",    season: "summer", tier: "core" },
 
   // ---- FISHING (flagged gap) ----------------------------------------------
+  { term: "fly fishing guide",              activity: "fly-fishing",     season: "all",    tier: "gap" },
   { term: "fly fishing outfitter",          activity: "fly-fishing",     season: "all",    tier: "gap" },
+  { term: "fishing guide",                  activity: "fly-fishing",     season: "all",    tier: "gap" },
   { term: "fishing charter",                activity: "fishing-charter", season: "all",    tier: "gap" },
+  { term: "lake fishing charter",           activity: "fishing-charter", season: "summer", tier: "gap" },
   { term: "fishing tackle shop",            activity: "fishing-gear",    season: "all",    tier: "gap" },
+  { term: "bait and tackle shop",           activity: "fishing-gear",    season: "all",    tier: "gap" },
+  { term: "ice fishing guide",              activity: "ice-fishing",     season: "winter", tier: "gap" },
 
   // ---- HUNTING (flagged gap) ----------------------------------------------
   { term: "hunting guide outfitter",        activity: "hunting",      season: "all",    tier: "gap" },
@@ -135,6 +143,7 @@ export const QUERIES = [
   // ---- WINTER · SNOW -------------------------------------------------------
   { term: "ski rental",                     activity: "alpine-ski",      season: "winter", tier: "core" },
   { term: "ski shop",                       activity: "alpine-ski",      season: "winter", tier: "core" },
+  { term: "demo ski rental",                activity: "alpine-ski",      season: "winter", tier: "core" },
   { term: "snowboard rental",               activity: "snowboard",       season: "winter", tier: "core" },
   { term: "snowboard shop",                 activity: "snowboard",       season: "winter", tier: "core" },
   { term: "cross country ski rental",       activity: "nordic-ski",      season: "winter", tier: "core" },
@@ -143,15 +152,17 @@ export const QUERIES = [
   { term: "alpine touring ski rental",      activity: "backcountry-ski", season: "winter", tier: "core" },
   { term: "splitboard rental",              activity: "backcountry-ski", season: "winter", tier: "core" },
   { term: "snowshoe rental",                activity: "snowshoe",        season: "winter", tier: "core" },
+  { term: "snowshoe rentals",               activity: "snowshoe",        season: "winter", tier: "core" },
   { term: "avalanche safety gear rental",   activity: "avy-gear",        season: "winter", tier: "gap"  },
+  { term: "avalanche beacon rental",        activity: "avy-gear",        season: "winter", tier: "gap"  },
   { term: "snowmobile rental",              activity: "snowmobile",      season: "winter", tier: "core" },
   { term: "snowmobile tours",               activity: "snowmobile",      season: "winter", tier: "experience" },
-  { term: "snow tubing",                    activity: "snow-tube",       season: "winter", tier: "experience" },
-  { term: "sledding hill",                  activity: "snow-tube",       season: "winter", tier: "experience" },
+  { term: "snow tube rental",               activity: "snow-tube",       season: "winter", tier: "experience" },
+  { term: "sled rental",                    activity: "snow-tube",       season: "winter", tier: "experience" },
   { term: "fat bike rental",                activity: "fat-bike",        season: "winter", tier: "gap"  },
   { term: "ice skating rink",               activity: "ice-skate",       season: "winter", tier: "experience" },
   { term: "ice skate rental",               activity: "ice-skate",       season: "winter", tier: "core" },
-  { term: "ice climbing guide",             activity: "ice-climb",       season: "winter", tier: "experience" },
+  { term: "mountaineering gear rental",     activity: "ice-climb",       season: "winter", tier: "core" },
 ];
 
 // ===========================================================================

@@ -37,3 +37,5 @@ pgdata/
 # Claude Code
 .claude/
 instructions/
+CLAUDE.md
+CLAUDE.local.md
