@@ -3,6 +3,8 @@
  *
  * This file is DATA ONLY (no API calls, no cost). It defines:
  *   - SEARCH_CONFIG: pagination (full 60/query) + DISTANCE ranking.
+ *   - SERVICE_AREA_TERMS: narrow query set that gets a second
+ *     includePureServiceAreaBusinesses pass for mobile/delivery operators.
  *   - AOI_RECTS / GRID_CONFIG / seedTiles() / splitTile() / tileKm(): the v2
  *     coverage geometry — continuous rectangle corridors, one seed grid over
  *     their union, and the adaptive-quadtree split the runner uses on a cap hit.
@@ -47,6 +49,54 @@ export const SEARCH_CONFIG = {
   // yields ALL of them. RELEVANCE would instead cut the obscure local long tail.
   rankPreference: "DISTANCE",
 };
+
+// Targeted terms for businesses that serve/deliver to customers but may not
+// expose a storefront location. Each term here uses the merged
+// includePureServiceAreaBusinesses seed query instead of a separate standard
+// seed query; storefront subdivision later drops the flag.
+export const SERVICE_AREA_TERMS = new Set([
+  "kayak rental",
+  "paddleboard rental",
+  "canoe rental",
+  "boat rental",
+  "motorboat rental",
+  "pontoon rental",
+  "jet ski rental",
+  "waverunner rental",
+  "personal watercraft rental",
+  "watersports rental",
+  "efoil rental",
+  "foil board rental",
+  "river tubing rental",
+  "river float rental",
+  "mountain bike rental",
+  "bike rental",
+  "ebike rental",
+  "camping gear rental",
+  "tent rental",
+  "backpacking gear rental",
+  "atv rental",
+  "quad rental",
+  "utv rental",
+  "side by side rental",
+  "rzr rental",
+  "off road jeep rental",
+  "4x4 rental",
+  "overland vehicle rental",
+  "dirt bike rental",
+  "ski rental",
+  "snowboard rental",
+  "cross country ski rental",
+  "backcountry ski rental",
+  "alpine touring ski rental",
+  "splitboard rental",
+  "snowshoe rental",
+  "avalanche safety gear rental",
+  "snowmobile rental",
+  "fat bike rental",
+  "ice skate rental",
+  "mountaineering gear rental",
+]);
 
 // ---------------------------------------------------------------------------
 // Query terms — MULTIPLE phrasings per activity for maximum recall.

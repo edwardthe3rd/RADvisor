@@ -1,7 +1,7 @@
 /**
  * Pass A operator-discovery sweep — Reno/Tahoe basin (v2: adaptive quadtree).
  *
- *   node supabase/seed/quadtree_sweep.mjs              # resumable: skips (tile,term) pairs already cached
+ *   node supabase/seed/quadtree_sweep.mjs              # resumable: skips cached search/detail calls
  *   node supabase/seed/quadtree_sweep.mjs --refresh    # ignore cache, re-fetch everything from Google
  *   node supabase/seed/quadtree_sweep.mjs --dry-run    # print the plan (tiles/cost estimate), fetch nothing
  *   node supabase/seed/quadtree_sweep.mjs --smoke      # one live tile (~cents), print parsed results, no file writes
@@ -16,22 +16,24 @@
  * Dedups on place_id and writes:
  *   - quadtree_sweep_operators.json  (full records + run metadata + saturation report)
  *   - quadtree_sweep_operators.csv   (one row per operator, prominence-sorted)
- *   - quadtree_sweep_cache.json      (raw per-(tile,term) results, for resume / no re-bill)
+ *   - quadtree_sweep_cache.json      (raw search pairs + place details, for resume / no re-bill)
  *
- * This is DISCOVERY ONLY (existence + prominence). It does NOT decide rents_gear
- * or extract inventory — that's Pass A triage (website sweep) and Pass B, per
- * extraction/00_general.md. Every row carries source_url (Google Maps URL) +
- * last_verified per the provenance rule (§2A, §8).
+ * This is DISCOVERY + LIGHT ENRICHMENT ONLY (existence + prominence). It does
+ * NOT decide rents_gear or extract inventory — that's Pass A triage (website
+ * sweep) and Pass B, per extraction/00_general.md. Every row carries source_url
+ * (Google Maps URL) + last_verified per the provenance rule (§2A, §8).
  *
  * Requires GOOGLE_PLACES_API_KEY (env or supabase/seed/.env).
  *
- * COST: uses Text Search (New) with websiteUri + rating + userRatingCount in the
- * field mask -> billed on the Text Search Enterprise SKU. website is needed for
- * Pass B triage and rating/userRatingCount are the prominence signal extraction
- * uses to prioritize (§4, §15). The resume cache means a rerun only bills (tile,term)
- * pairs not already fetched; use --refresh to force a full re-bill.
+ * COST: Text Search uses a Pro-level discovery mask and runs once per
+ * (tile,term,mode), where mode is standard or the targeted service-area pass.
+ * Expensive website/phone/rating fields are fetched once per unique place via
+ * Place Details, not repeatedly on every overlapping tile/term search response.
+ * The versioned resume cache means a rerun only bills calls not already fetched;
+ * use --refresh to force a full re-bill.
  */
 
+import { createHash } from "node:crypto";
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -39,7 +41,9 @@ import {
   SEARCH_CONFIG,
   GRID_CONFIG,
   AOI_RECTS,
+  AOI_EXCLUDE,
   QUERIES,
+  SERVICE_AREA_TERMS,
   seedTiles,
   splitTile,
   tileKm,
@@ -61,6 +65,96 @@ const MAX_RETRIES = 4;          // network retries inside one fetchPair call
 const MAX_PAIR_ATTEMPTS = 3;    // whole-pair re-enqueues after fetchPair gives up (bounded, can't spin)
 const CACHE_FLUSH_EVERY = 25;   // persist cache every N completed pairs
 
+const DISCOVERY_FIELD_MASK = [
+  "places.id",
+  "places.displayName",
+  "places.googleMapsUri",
+  "places.primaryType",
+  "places.primaryTypeDisplayName",
+  "places.types",
+  "places.businessStatus",
+  "places.pureServiceAreaBusiness",
+  "places.location",
+  "places.formattedAddress",
+  "nextPageToken",
+].join(",");
+
+const DETAILS_FIELD_MASK = [
+  "id",
+  "displayName",
+  "websiteUri",
+  "googleMapsUri",
+  "primaryType",
+  "primaryTypeDisplayName",
+  "types",
+  "businessStatus",
+  "pureServiceAreaBusiness",
+  "rating",
+  "userRatingCount",
+  "location",
+  "formattedAddress",
+  "nationalPhoneNumber",
+].join(",");
+
+// includedType only accepts request-supported Place types. Use this conservative
+// set to avoid turning a floor-tile rescue query into invalid-request noise.
+const INCLUDED_TYPE_ALLOWLIST = new Set([
+  "adventure_sports_center",
+  "amusement_center",
+  "amusement_park",
+  "archery_range",
+  "athletic_field",
+  "bicycle_store",
+  "boat_rental",
+  "campground",
+  "community_center",
+  "diving_center",
+  "event_venue",
+  "fishing_charter",
+  "golf_course",
+  "hiking_area",
+  "ice_skating_rink",
+  "marina",
+  "national_park",
+  "park",
+  "playground",
+  "recreation_center",
+  "resort_hotel",
+  "rv_park",
+  "ski_resort",
+  "sports_activity_location",
+  "sports_club",
+  "sports_complex",
+  "sporting_goods_store",
+  "state_park",
+  "tour_agency",
+  "tourist_attraction",
+  "travel_agency",
+  "visitor_center",
+  "water_park",
+]);
+
+const MAX_TYPE_SLICES = 8; // bound the per-floor-tile fan-out
+
+const hashJson = (v) => createHash("sha256").update(JSON.stringify(v)).digest("hex").slice(0, 12);
+const SEARCH_CACHE_VERSION = hashJson({
+  kind: "text-search-discovery-v3",
+  fieldMask: DISCOVERY_FIELD_MASK,
+  searchConfig: SEARCH_CONFIG,
+  gridConfig: GRID_CONFIG,
+  aoiRects: AOI_RECTS,
+  aoiExclude: AOI_EXCLUDE,
+  maxTypeSlices: MAX_TYPE_SLICES,
+  strictTypeFilteringForSlices: true,
+  includedTypeAllowlist: [...INCLUDED_TYPE_ALLOWLIST].sort(),
+  terms: QUERIES.map((q) => q.term),
+  serviceAreaTerms: [...SERVICE_AREA_TERMS].sort(),
+});
+const DETAILS_CACHE_VERSION = hashJson({
+  kind: "place-details-enrichment-v1",
+  fieldMask: DETAILS_FIELD_MASK,
+});
+
 // ---------------------------------------------------------------------------
 function loadApiKey() {
   if (process.env.GOOGLE_PLACES_API_KEY) return process.env.GOOGLE_PLACES_API_KEY;
@@ -75,25 +169,8 @@ function loadApiKey() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const FIELD_MASK = [
-  "places.id",
-  "places.displayName",
-  "places.websiteUri",
-  "places.googleMapsUri",
-  "places.primaryType",
-  "places.primaryTypeDisplayName",
-  "places.types",
-  "places.businessStatus",
-  "places.rating",
-  "places.userRatingCount",
-  "places.location",
-  "places.formattedAddress",
-  "places.nationalPhoneNumber",
-  "nextPageToken",
-].join(",");
-
 /** One Text Search page. Returns { places, nextPageToken } or throws after retries. */
-async function searchPage(apiKey, tile, term, pageToken) {
+async function searchPage(apiKey, tile, term, includeServiceArea, pageToken, includedType) {
   const body = {
     textQuery: term,
     pageSize: SEARCH_CONFIG.pageSize,
@@ -107,6 +184,14 @@ async function searchPage(apiKey, tile, term, pageToken) {
       },
     },
   };
+  if (includeServiceArea) body.includePureServiceAreaBusinesses = true;
+  // includedType slices a floor tile that is STILL at the 60 cap into per-type
+  // sub-queries, lifting the per-call ceiling without going below the geographic
+  // floor. searchText accepts a single includedType per request.
+  if (includedType) {
+    body.includedType = includedType;
+    body.strictTypeFiltering = true;
+  }
   if (pageToken) body.pageToken = pageToken;
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
@@ -117,7 +202,7 @@ async function searchPage(apiKey, tile, term, pageToken) {
         headers: {
           "Content-Type": "application/json",
           "X-Goog-Api-Key": apiKey,
-          "X-Goog-FieldMask": FIELD_MASK,
+          "X-Goog-FieldMask": DISCOVERY_FIELD_MASK,
         },
         body: JSON.stringify(body),
       });
@@ -144,17 +229,44 @@ async function searchPage(apiKey, tile, term, pageToken) {
 }
 
 /** All pages (up to maxPages = 60 results) for one (tile,term) pair. */
-async function fetchPair(apiKey, tile, term) {
+async function fetchPair(apiKey, tile, term, includeServiceArea, includedType) {
   const collected = [];
   let token = null;
   for (let page = 0; page < SEARCH_CONFIG.maxPages; page++) {
     if (page > 0) await sleep(PAGE_DELAY_MS); // let the pageToken go live
-    const { places, nextPageToken } = await searchPage(apiKey, tile, term, token);
+    const { places, nextPageToken } = await searchPage(apiKey, tile, term, includeServiceArea, token, includedType);
     collected.push(...places);
     if (!nextPageToken) break;
     token = nextPageToken;
   }
   return collected;
+}
+
+async function fetchPlaceDetails(apiKey, placeId) {
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    let res;
+    try {
+      res = await fetch(`https://places.googleapis.com/v1/places/${placeId}`, {
+        headers: {
+          "Content-Type": "application/json",
+          "X-Goog-Api-Key": apiKey,
+          "X-Goog-FieldMask": DETAILS_FIELD_MASK,
+        },
+      });
+    } catch (e) {
+      if (attempt === MAX_RETRIES) throw new Error(`network: ${e.message}`);
+      await sleep(1000 * 2 ** attempt);
+      continue;
+    }
+    if (res.ok) return res.json();
+    if (res.status === 429 || res.status >= 500) {
+      if (attempt === MAX_RETRIES) throw new Error(`HTTP ${res.status} after ${MAX_RETRIES} retries`);
+      await sleep(1000 * 2 ** attempt);
+      continue;
+    }
+    const text = await res.text();
+    throw new Error(`HTTP ${res.status}: ${text.slice(0, 200)}`);
+  }
 }
 
 /**
@@ -190,6 +302,109 @@ function csvCell(v) {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
+function searchKey(tile, q, includeServiceArea, includedType) {
+  const mode = includeServiceArea ? "service-area" : "standard";
+  const typeSeg = includedType ? `::type:${includedType}` : "";
+  return `${SEARCH_CACHE_VERSION}::${mode}::${tile.id}::${q.term}${typeSeg}`;
+}
+
+function detailsKey(placeId) {
+  return `${DETAILS_CACHE_VERSION}::${placeId}`;
+}
+
+function displaySearchKey(tile, q, includeServiceArea, includedType) {
+  return `${tile.id}::${q.term}${includeServiceArea ? "::service-area" : ""}${includedType ? `::type:${includedType}` : ""}`;
+}
+
+// Generic Google types that match almost everything — useless as a slice axis.
+const GENERIC_TYPES = new Set([
+  "point_of_interest",
+  "establishment",
+  "store",
+  "premise",
+  "food",
+]);
+
+// activity -> a few request-valid includedType axes to ALWAYS try when a cell
+// saturates, even if absent from the truncated 60-result sample (so operators
+// whose type never appeared in the visible sample still get a slice). Every value
+// MUST be in INCLUDED_TYPE_ALLOWLIST or the slice query is rejected as invalid.
+const ACTIVITY_TYPE_HINTS = {
+  "gear-shop": ["sporting_goods_store"],
+  outfitter: ["tour_agency", "sporting_goods_store"],
+  kayak: ["boat_rental", "marina"],
+  sup: ["boat_rental", "marina"],
+  canoe: ["boat_rental", "marina"],
+  powerboat: ["boat_rental", "marina"],
+  pontoon: ["boat_rental", "marina"],
+  pwc: ["boat_rental", "marina"],
+  watersports: ["boat_rental", "marina"],
+  sailing: ["boat_rental", "marina"],
+  windsurf: ["boat_rental", "marina"],
+  kiteboard: ["boat_rental", "marina"],
+  wakeboard: ["boat_rental", "marina"],
+  efoil: ["boat_rental", "marina"],
+  "foil-surf": ["boat_rental", "marina"],
+  "river-tube": ["boat_rental", "tour_agency"],
+  rafting: ["tour_agency", "boat_rental"],
+  scuba: ["diving_center", "boat_rental"],
+  "fishing-charter": ["fishing_charter", "marina"],
+  "fly-fishing": ["tour_agency", "sporting_goods_store"],
+  "fishing-gear": ["sporting_goods_store"],
+  hunting: ["tour_agency", "sporting_goods_store"],
+  archery: ["archery_range", "sporting_goods_store"],
+  mtb: ["bicycle_store"],
+  cycling: ["bicycle_store"],
+  ebike: ["bicycle_store"],
+  "fat-bike": ["bicycle_store"],
+  climbing: ["sporting_goods_store", "adventure_sports_center"],
+  camping: ["campground", "sporting_goods_store", "rv_park"],
+  backpacking: ["sporting_goods_store", "campground"],
+  "disc-golf": ["park"],
+  atv: ["tour_agency", "sports_activity_location"],
+  utv: ["tour_agency", "sports_activity_location"],
+  "offroad-4x4": ["tour_agency", "sports_activity_location"],
+  dirtbike: ["tour_agency", "sports_activity_location"],
+  "alpine-ski": ["ski_resort", "sporting_goods_store"],
+  snowboard: ["ski_resort", "sporting_goods_store"],
+  "nordic-ski": ["ski_resort", "sporting_goods_store"],
+  "backcountry-ski": ["ski_resort", "sporting_goods_store"],
+  snowshoe: ["ski_resort", "sporting_goods_store"],
+  "avy-gear": ["sporting_goods_store"],
+  "ice-climb": ["sporting_goods_store", "adventure_sports_center"],
+  snowmobile: ["tour_agency"],
+  "snow-tube": ["ski_resort"],
+  "ice-skate": ["ice_skating_rink"],
+};
+const DEFAULT_TYPE_HINTS = ["sporting_goods_store"];
+
+/**
+ * Candidate includedType slices for a tile that is still at the 60 cap. Combines
+ * request-valid types OBSERVED in the capped sample (ranked by frequency) with a
+ * few activity-specific HINT types that are always tried even if missing from the
+ * truncated sample — so operators whose type never appeared in the visible 60 are
+ * still recoverable. Response-only types are dropped (searchText rejects them).
+ */
+function typeSlicesFor(places, q) {
+  const counts = new Map();
+  for (const p of places) {
+    const candidates = [p.primaryType, ...(p.types || [])];
+    for (const t of candidates) {
+      if (!t || GENERIC_TYPES.has(t) || !INCLUDED_TYPE_ALLOWLIST.has(t)) continue;
+      counts.set(t, (counts.get(t) || 0) + 1);
+    }
+  }
+  // Seed activity hints at frequency 0 so observed types sort ahead of them.
+  const hints = (q && ACTIVITY_TYPE_HINTS[q.activity]) || DEFAULT_TYPE_HINTS;
+  for (const t of hints) {
+    if (INCLUDED_TYPE_ALLOWLIST.has(t) && !counts.has(t)) counts.set(t, 0);
+  }
+  return [...counts.entries()]
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, MAX_TYPE_SLICES)
+    .map(([t]) => t);
+}
+
 // ---------------------------------------------------------------------------
 const apiKey = loadApiKey();
 if (!apiKey && !DRY_RUN) {
@@ -212,21 +427,24 @@ if (SMOKE) {
     `Smoke test: tile ${tile.id} (${tileKm(tile).toFixed(1)}km) × "${term}" ` +
       `[restriction=rectangle, rank=${SEARCH_CONFIG.rankPreference}]…\n`,
   );
-  const places = await fetchPair(apiKey, tile, term);
+  const places = await fetchPair(apiKey, tile, term, false);
   console.log(`Results: ${places.length}${places.length >= GRID_CONFIG.capThreshold ? " (AT CAP — would subdivide)" : ""}`);
   const s = places[0];
   if (s) {
     console.log("\nSample[0] — confirms field mask:");
     console.log("  id:          ", s.id);
     console.log("  name:        ", s.displayName?.text);
-    console.log("  website:     ", s.websiteUri ?? "(none)");
     console.log("  source_url:  ", s.googleMapsUri ?? "(none)");
     console.log("  primaryType: ", s.primaryTypeDisplayName?.text ?? s.primaryType);
-    console.log("  rating:      ", s.rating, "| reviews:", s.userRatingCount);
-    console.log("  phone:       ", s.nationalPhoneNumber ?? "(none)");
+    console.log("  serviceArea: ", s.pureServiceAreaBusiness ?? false);
     console.log("  status:      ", s.businessStatus);
     console.log("  location:    ", s.location?.latitude, s.location?.longitude);
     console.log("  address:     ", s.formattedAddress);
+    const detail = await fetchPlaceDetails(apiKey, s.id);
+    console.log("\nEnrichment sample — fetched once per unique place in full runs:");
+    console.log("  website:     ", detail.websiteUri ?? "(none)");
+    console.log("  rating:      ", detail.rating, "| reviews:", detail.userRatingCount);
+    console.log("  phone:       ", detail.nationalPhoneNumber ?? "(none)");
   }
   console.log("\nAll names:", places.map((p) => p.displayName?.text).join(" | "));
   console.log("\nSmoke OK — no files written. Run without --smoke for the full sweep.");
@@ -235,13 +453,29 @@ if (SMOKE) {
 
 // Seed the work queue with one (seedTile, query) item per pair. The queue GROWS
 // as dense tiles subdivide into quadrants (the quadtree).
+// One seed pair per (tile, query). For SERVICE_AREA_TERMS the single seed pair
+// runs with includePureServiceAreaBusinesses=true — that response is a SUPERSET of
+// the standard one (same storefronts + pure service-area businesses), so a second
+// standard pass would be pure waste. On a cap hit the storefront half is recovered
+// by geographic subdivision (children drop the flag); the SAB half is recovered by
+// includedType slicing (see worker). The storefront/SAB split is read back from
+// each result's pureServiceAreaBusiness field, not from running two queries.
 const seeds = seedTiles();
 const queue = [];
-for (const tile of seeds) for (const q of QUERIES) queue.push({ tile, q });
+for (const tile of seeds) {
+  for (const q of QUERIES) {
+    queue.push({ tile, q, includeServiceArea: SERVICE_AREA_TERMS.has(q.term) });
+  }
+}
+const serviceAreaTermCount = QUERIES.filter((q) => SERVICE_AREA_TERMS.has(q.term)).length;
 
 console.log(
   `Sweep plan: ${seeds.length} seed tiles (${GRID_CONFIG.seedCellKm}km, quadtree floor ${GRID_CONFIG.minCellKm}km) ` +
     `× ${QUERIES.length} queries = ${seeds.length * QUERIES.length} seed pairs over ${AOI_RECTS.length} AOI corridors.`,
+);
+console.log(
+  `Of these, ${serviceAreaTermCount} terms run the MERGED service-area pass (includePureServiceAreaBusinesses) ` +
+    `at the seed level; storefront subdivision drops the flag, SAB recall is recovered via includedType slicing.`,
 );
 console.log(
   `Per pair: rectangle restriction + ${SEARCH_CONFIG.rankPreference} ranking, up to ${SEARCH_CONFIG.maxPages} pages ` +
@@ -253,79 +487,144 @@ if (DRY_RUN) {
     `Baseline ≈ ${(seeds.length * QUERIES.length).toLocaleString()} query-series before subdivision ` +
       `(each is 1–3 Text Search calls). Dense tiles add ~+4 series per cap hit, deepening only where supply is real.`,
   );
+  console.log(`Search cache version: ${SEARCH_CACHE_VERSION}; details cache version: ${DETAILS_CACHE_VERSION}.`);
   console.log("Dry run — no API calls made.");
   process.exit(0);
 }
 
-// Resume cache: { "<tileId>::<term>": [ rawPlace, ... ] }. Keys from a prior run
-// with different geometry simply won't be hit (those pairs re-fetch); aggregation
-// only reads the tiles actually visited this run, so stale keys can't pollute it.
-let cache = {};
+// Resume cache: { searchPairs, placeDetails }. Keys include version hashes for
+// request shape, field masks, terms, and service-area mode. Old keys simply
+// won't be hit after a config change.
+let cache = { searchPairs: {}, placeDetails: {} };
 if (!REFRESH && existsSync(cachePath)) {
   try {
-    cache = JSON.parse(readFileSync(cachePath, "utf8")).pairs || {};
+    const parsed = JSON.parse(readFileSync(cachePath, "utf8"));
+    cache = {
+      searchPairs: parsed.searchPairs || parsed.pairs || {},
+      placeDetails: parsed.placeDetails || {},
+    };
   } catch {
-    cache = {};
+    cache = { searchPairs: {}, placeDetails: {} };
   }
 }
 
 let done = 0;
-let billedCalls = 0;
+let searchBillableCalls = 0;
+let detailBillableCalls = 0;
 let fromCache = 0;
+let detailsFromCache = 0;
 let tilesSplit = 0;
+let typeSlicedTiles = 0;        // floor tiles that triggered includedType slicing
+let typeSlices = 0;             // total typed slice sub-queries enqueued
+let closedPermanentlyDropped = 0;
+let closedTemporarilySkipped = 0;
+const closedRecords = [];
 const errors = [];
+const detailErrors = [];
 const saturatedAtMin = [];
+const saturatedServiceArea = []; // service-area pairs at cap (NOT subdivided — see worker)
 const claimed = new Set();        // keys dequeued (dedupe), set synchronously
-const visited = new Map();        // key -> { tile, q } for successful pairs (drives aggregation)
+const visited = new Map();        // key -> { tile, q, includeServiceArea } for successful pairs (drives aggregation)
 
 function flushCache() {
-  writeFileSync(cachePath, JSON.stringify({ updatedAt: new Date().toISOString(), pairs: cache }, null, 2));
+  writeFileSync(
+    cachePath,
+    JSON.stringify(
+      {
+        updatedAt: new Date().toISOString(),
+        versions: {
+          search: SEARCH_CACHE_VERSION,
+          details: DETAILS_CACHE_VERSION,
+        },
+        searchPairs: cache.searchPairs,
+        placeDetails: cache.placeDetails,
+      },
+      null,
+      2,
+    ),
+  );
 }
 
-const worker = async ({ tile, q, attempt = 1 }) => {
-  const key = `${tile.id}::${q.term}`;
+// Enqueue an includedType slice per candidate type for a saturated cell, preserving
+// the service-area flag. Returns true if any slice was enqueued. Used both at the
+// floor (no geographic lever left) and at the seed level for the service-area pass
+// (pure SABs don't survive flag-off geographic children, so they're sliced here).
+function enqueueTypeSlices(tile, q, includeServiceArea, places) {
+  const slices = typeSlicesFor(places, q);
+  if (!slices.length) return false;
+  typeSlicedTiles++;
+  for (const t of slices) {
+    queue.push({ tile, q, includeServiceArea, includedType: t });
+    typeSlices++;
+  }
+  return true;
+}
+
+const recordSaturation = (tile, q, includeServiceArea, includedType) => {
+  const entry = { term: q.term, tile: tile.id };
+  if (includedType) entry.includedType = includedType;
+  if (includeServiceArea) saturatedServiceArea.push(entry);
+  else saturatedAtMin.push({ ...entry, mode: "standard" });
+};
+
+const worker = async ({ tile, q, includeServiceArea = false, includedType = null, attempt = 1 }) => {
+  const key = searchKey(tile, q, includeServiceArea, includedType);
   if (claimed.has(key)) return; // an equivalent tile was already enqueued
   claimed.add(key);
 
   let places;
-  if (!REFRESH && Array.isArray(cache[key])) {
-    places = cache[key];
+  if (!REFRESH && Array.isArray(cache.searchPairs[key])) {
+    places = cache.searchPairs[key];
     fromCache++;
   } else {
     try {
-      places = await fetchPair(apiKey, tile, q.term);
-      cache[key] = places;
-      billedCalls += Math.max(1, Math.ceil(places.length / SEARCH_CONFIG.pageSize));
+      places = await fetchPair(apiKey, tile, q.term, includeServiceArea, includedType);
+      cache.searchPairs[key] = places;
+      searchBillableCalls += Math.max(1, Math.ceil(places.length / SEARCH_CONFIG.pageSize));
     } catch (e) {
       claimed.delete(key); // unclaim so the re-enqueue below can run it again
       if (attempt < MAX_PAIR_ATTEMPTS) {
-        queue.push({ tile, q, attempt: attempt + 1 }); // bounded in-run retry
+        queue.push({ tile, q, includeServiceArea, includedType, attempt: attempt + 1 }); // bounded in-run retry
       } else {
-        errors.push({ key, error: e.message, attempts: attempt }); // gave up — left uncached so a later rerun can retry
+        errors.push({ key: displaySearchKey(tile, q, includeServiceArea, includedType), error: e.message, attempts: attempt }); // left uncached so a later rerun can retry
       }
       return;
     }
   }
-  visited.set(key, { tile, q });
+  visited.set(key, { tile, q, includeServiceArea, includedType });
   done++;
 
-  // Cap hit => there is more here than 60. Subdivide unless we've hit the floor.
-  // The parent's 60 are kept (already cached/visited); children re-cover the same
-  // ground and WILL re-return some of them — that overlap is intentional and made
-  // harmless by the place_id dedup in aggregation. Don't try to "subtract" the
-  // parent: the cap means we can't know which 60 of N it returned.
+  // Cap hit => there is more here than 60. How we open it up depends on the lever
+  // still available, in precedence order:
+  //
+  //  - Already a typed slice (includedType set): that's the finest lever we have,
+  //    so a cap here is genuine residual truncation — just record it.
+  //  - Above the floor: subdivide into 4 quadrants (the quadtree). Children DROP the
+  //    service-area flag — storefronts partition by location, pure SABs don't. The
+  //    parent's 60 are kept; children re-cover the same ground and re-return some of
+  //    them, harmless under place_id dedup. We can't "subtract" the parent because
+  //    the cap hides which 60 of N it returned. For the service-area pass the pure
+  //    SABs won't survive the flag-off children, so we ALSO slice this cell by
+  //    includedType (flag on) to recover them without a geographic partition.
+  //  - At the floor: no geography left, so slice by includedType (preserving the
+  //    flag) to lift the per-call ceiling one more way.
   if (places.length >= GRID_CONFIG.capThreshold) {
-    if (tileKm(tile) > GRID_CONFIG.minCellKm) {
+    if (includedType) {
+      recordSaturation(tile, q, includeServiceArea, includedType);
+    } else if (tileKm(tile) > GRID_CONFIG.minCellKm) {
       tilesSplit++;
-      for (const child of splitTile(tile)) queue.push({ tile: child, q });
-    } else {
-      saturatedAtMin.push({ term: q.term, tile: tile.id });
+      for (const child of splitTile(tile)) queue.push({ tile: child, q, includeServiceArea: false });
+      if (includeServiceArea && !enqueueTypeSlices(tile, q, true, places)) {
+        saturatedServiceArea.push({ term: q.term, tile: tile.id });
+      }
+    } else if (!enqueueTypeSlices(tile, q, includeServiceArea, places)) {
+      recordSaturation(tile, q, includeServiceArea, null);
     }
   }
 
-  if (done % 25 === 0) {
+  if (done % CACHE_FLUSH_EVERY === 0) {
     process.stdout.write(
-      `\r  processed ${done} pairs (split ${tilesSplit}, billed ${billedCalls}, cache ${fromCache}, queued ${queue.length})…`,
+      `\r  processed ${done} pairs (split ${tilesSplit}, search calls ${searchBillableCalls}, cache ${fromCache}, queued ${queue.length})…`,
     );
     flushCache();
   }
@@ -341,63 +640,179 @@ const RENTAL_SIGNAL_TIERS = new Set(["core", "gap"]); // tiers that signal likel
 const qByTerm = new Map(QUERIES.map((q) => [q.term, q]));
 const lastVerified = new Date().toISOString().slice(0, 10);
 
+function finalizeRecord(r) {
+  const { matched_tiles, ...rest } = r;
+  return {
+    ...rest,
+    matched_activities: [...r.matched_activities].sort(),
+    matched_terms: [...r.matched_terms].sort(),
+    matched_tile_count: matched_tiles.size,
+    matched_tiers: [...r.matched_tiers].sort(),
+    matched_modes: [...r.matched_modes].sort(),
+    rental_signal: [...r.matched_tiers].some((t) => RENTAL_SIGNAL_TIERS.has(t)),
+    types: r.types,
+  };
+}
+
+function applyPlaceFields(rec, p) {
+  rec.name = rec.name ?? p.displayName?.text ?? null;
+  rec.website = rec.website ?? p.websiteUri ?? null;
+  rec.source_url = rec.source_url ?? p.googleMapsUri ?? `https://www.google.com/maps/place/?q=place_id:${rec.place_id}`;
+  rec.primary_type = rec.primary_type ?? p.primaryTypeDisplayName?.text ?? p.primaryType ?? null;
+  if ((!rec.types || rec.types.length === 0) && Array.isArray(p.types)) rec.types = p.types;
+  rec.business_status = rec.business_status ?? p.businessStatus ?? null;
+  rec.rating = rec.rating ?? p.rating ?? null;
+  rec.user_rating_count = Math.max(rec.user_rating_count ?? 0, p.userRatingCount ?? 0);
+  rec.phone = rec.phone ?? p.nationalPhoneNumber ?? null;
+  rec.lat = rec.lat ?? p.location?.latitude ?? null;
+  rec.lng = rec.lng ?? p.location?.longitude ?? null;
+  rec.address = rec.address ?? p.formattedAddress ?? null;
+  rec.pure_service_area_business = rec.pure_service_area_business || Boolean(p.pureServiceAreaBusiness);
+}
+
 const ops = new Map(); // place_id -> record
-for (const { tile, q } of visited.values()) {
-  const places = cache[`${tile.id}::${q.term}`] || [];
+for (const { tile, q, includeServiceArea, includedType } of visited.values()) {
+  const places = cache.searchPairs[searchKey(tile, q, includeServiceArea, includedType)] || [];
   for (const p of places) {
     if (!p.id) continue;
     let rec = ops.get(p.id);
     if (!rec) {
       rec = {
         place_id: p.id,
-        name: p.displayName?.text ?? null,
-        website: p.websiteUri ?? null,
-        source_url: p.googleMapsUri ?? `https://www.google.com/maps/place/?q=place_id:${p.id}`,
-        primary_type: p.primaryTypeDisplayName?.text ?? p.primaryType ?? null,
-        types: p.types ?? [],
-        business_status: p.businessStatus ?? null,
-        rating: p.rating ?? null,
-        user_rating_count: p.userRatingCount ?? 0,
-        phone: p.nationalPhoneNumber ?? null,
-        lat: p.location?.latitude ?? null,
-        lng: p.location?.longitude ?? null,
-        address: p.formattedAddress ?? null,
+        name: null,
+        website: null,
+        source_url: null,
+        primary_type: null,
+        types: [],
+        business_status: null,
+        rating: null,
+        user_rating_count: 0,
+        phone: null,
+        lat: null,
+        lng: null,
+        address: null,
+        pure_service_area_business: false,
         matched_activities: new Set(),
         matched_terms: new Set(),
         matched_tiles: new Set(),
         matched_tiers: new Set(),
+        matched_modes: new Set(),
         match_pairs: 0,
         last_verified: lastVerified,
       };
       ops.set(p.id, rec);
     }
+    applyPlaceFields(rec, p);
     const meta = qByTerm.get(q.term);
     rec.matched_activities.add(meta.activity);
     rec.matched_terms.add(q.term);
     rec.matched_tiles.add(tile.id);
     rec.matched_tiers.add(meta.tier);
+    // Flag-based, not pass-based: the merged service-area pass returns storefronts
+    // too, so only a place Google marks pureServiceAreaBusiness is "service-area".
+    rec.matched_modes.add(p.pureServiceAreaBusiness ? "service-area" : "standard");
     rec.match_pairs++;
-    // keep the richest values seen across duplicates
-    rec.rating = rec.rating ?? p.rating ?? null;
-    rec.user_rating_count = Math.max(rec.user_rating_count, p.userRatingCount ?? 0);
-    rec.website = rec.website ?? p.websiteUri ?? null;
+  }
+}
+
+// Closed-business handling (business_status comes from the discovery field mask,
+// so it's known before we spend on enrichment):
+//   - CLOSED_PERMANENTLY: drop outright — a dead operator is not a Pass A lead,
+//     and enriching it wastes a Place Details call.
+//   - CLOSED_TEMPORARILY: keep (it may reopen) but skip enrichment; the row still
+//     carries its discovery fields and the business_status flag for triage.
+for (const [id, rec] of ops) {
+  if (rec.business_status === "CLOSED_PERMANENTLY") {
+    closedRecords.push(finalizeRecord(rec));
+    ops.delete(id);
+    closedPermanentlyDropped++;
+  }
+}
+const detailQueue = [...ops.keys()].filter((id) => {
+  if (ops.get(id).business_status === "CLOSED_TEMPORARILY") {
+    closedTemporarilySkipped++;
+    return false;
+  }
+  return true;
+});
+let detailDone = 0;
+await drainQueue(
+  detailQueue,
+  async (placeId) => {
+    const key = detailsKey(placeId);
+    let detail;
+    if (!REFRESH && cache.placeDetails[key]) {
+      detail = cache.placeDetails[key];
+      detailsFromCache++;
+    } else {
+      try {
+        detail = await fetchPlaceDetails(apiKey, placeId);
+        cache.placeDetails[key] = detail;
+        detailBillableCalls++;
+      } catch (e) {
+        detailErrors.push({ place_id: placeId, error: e.message });
+        return;
+      }
+    }
+    const rec = ops.get(placeId);
+    if (rec) applyPlaceFields(rec, detail);
+    detailDone++;
+    if (detailDone % 50 === 0) {
+      process.stdout.write(
+        `\r  enriched ${detailDone}/${ops.size} places (detail calls ${detailBillableCalls}, cache ${detailsFromCache})…`,
+      );
+      flushCache();
+    }
+  },
+  CONCURRENCY,
+);
+flushCache();
+if (ops.size) console.log("");
+
+const termStats = new Map(QUERIES.map((q) => [
+  q.term,
+  {
+    term: q.term,
+    activity: q.activity,
+    season: q.season,
+    tier: q.tier,
+    unique_place_ids: new Set(),
+    standard_place_ids: new Set(),
+    service_area_place_ids: new Set(),
+    service_area_net_new_ids: new Set(),
+    appearances: 0,
+    standard_pairs: 0,
+    service_area_pairs: 0,
+  },
+]));
+for (const { tile, q, includeServiceArea, includedType } of visited.values()) {
+  const stat = termStats.get(q.term);
+  if (!stat) continue;
+  if (includeServiceArea) stat.service_area_pairs++;
+  else stat.standard_pairs++;
+  const places = cache.searchPairs[searchKey(tile, q, includeServiceArea, includedType)] || [];
+  for (const p of places) {
+    if (!p.id) continue;
+    stat.appearances++;
+    stat.unique_place_ids.add(p.id);
+    // Cohort by the place's own pureServiceAreaBusiness flag, not by which pass
+    // returned it: the merged service-area pass returns both storefronts and SABs,
+    // so the flag is the only reliable storefront-vs-mobile split.
+    if (p.pureServiceAreaBusiness) stat.service_area_place_ids.add(p.id);
+    else stat.standard_place_ids.add(p.id);
+  }
+}
+for (const stat of termStats.values()) {
+  // standard/service-area cohorts are now disjoint (flag-based), so every SAB is
+  // net-new vs storefronts — kept for output-shape stability.
+  for (const id of stat.service_area_place_ids) {
+    if (!stat.standard_place_ids.has(id)) stat.service_area_net_new_ids.add(id);
   }
 }
 
 // Finalize: sets -> sorted arrays, add triage-priority signal, sort by prominence.
 const records = [...ops.values()]
-  .map((r) => {
-    const { matched_tiles, ...rest } = r;
-    return {
-      ...rest,
-      matched_activities: [...r.matched_activities].sort(),
-      matched_terms: [...r.matched_terms].sort(),
-      matched_tile_count: matched_tiles.size, // how many tiles surfaced this operator
-      matched_tiers: [...r.matched_tiers].sort(),
-      rental_signal: [...r.matched_tiers].some((t) => RENTAL_SIGNAL_TIERS.has(t)),
-      types: r.types,
-    };
-  })
+  .map(finalizeRecord)
   .sort(
     (a, b) =>
       Number(b.rental_signal) - Number(a.rental_signal) ||
@@ -415,13 +830,46 @@ writeFileSync(
       seed_cell_km: GRID_CONFIG.seedCellKm,
       min_cell_km: GRID_CONFIG.minCellKm,
       queries: QUERIES.length,
+      service_area_terms: SERVICE_AREA_TERMS.size,
+      cache_versions: {
+        search: SEARCH_CACHE_VERSION,
+        details: DETAILS_CACHE_VERSION,
+      },
+      field_masks: {
+        text_search_discovery: DISCOVERY_FIELD_MASK,
+        place_details_enrichment: DETAILS_FIELD_MASK,
+      },
       tiles_visited: visited.size,
       tiles_split: tilesSplit,
-      saturated_at_min_cell: saturatedAtMin, // (term,tile) still at 60 at the floor — residual truncation, if any
-      billable_calls_this_run: billedCalls,
-      pairs_from_cache: fromCache,
+      type_sliced_tiles: typeSlicedTiles,       // floor tiles re-queried per includedType
+      type_slices: typeSlices,                  // total typed slice sub-queries
+      saturated_at_min_cell: saturatedAtMin,    // (term,tile[,includedType]) still at 60 at the floor — residual truncation, if any
+      saturated_service_area: saturatedServiceArea, // service-area (term,tile) at cap — NOT subdivided (mobile operators have no point to partition)
+      closed_permanently_dropped: closedPermanentlyDropped,
+      closed_temporarily_skipped: closedTemporarilySkipped,
+      closed_records: closedRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
+      text_search_calls_this_run: searchBillableCalls,
+      place_details_calls_this_run: detailBillableCalls,
+      search_pairs_from_cache: fromCache,
+      place_details_from_cache: detailsFromCache,
       errors,
+      detail_errors: detailErrors,
       operator_count: records.length,
+      term_contribution: [...termStats.values()]
+        .map((s) => ({
+          term: s.term,
+          activity: s.activity,
+          season: s.season,
+          tier: s.tier,
+          search_pairs: s.standard_pairs + s.service_area_pairs,
+          standard_pairs: s.standard_pairs,
+          service_area_pairs: s.service_area_pairs,
+          appearances: s.appearances,
+          unique_places: s.unique_place_ids.size,
+          service_area_unique_places: s.service_area_place_ids.size,
+          service_area_net_new_places: s.service_area_net_new_ids.size,
+        }))
+        .sort((a, b) => b.unique_places - a.unique_places || b.service_area_net_new_places - a.service_area_net_new_places),
       operators: records,
     },
     null,
@@ -432,8 +880,8 @@ writeFileSync(
 const cols = [
   "place_id", "name", "rental_signal", "matched_tiers", "matched_activities",
   "match_pairs", "rating", "user_rating_count", "business_status", "primary_type",
-  "website", "source_url", "phone", "address", "lat", "lng",
-  "matched_tile_count", "matched_terms", "last_verified",
+  "website", "source_url", "phone", "address", "lat", "lng", "pure_service_area_business",
+  "matched_tile_count", "matched_terms", "matched_modes", "last_verified",
 ];
 const lines = [cols.join(",")];
 for (const r of records) {
@@ -452,12 +900,23 @@ writeFileSync(csvPath, lines.join("\n") + "\n");
 // ---------------------------------------------------------------------------
 const withSignal = records.filter((r) => r.rental_signal).length;
 const withWebsite = records.filter((r) => r.website).length;
+const pureServiceArea = records.filter((r) => r.pure_service_area_business).length;
 console.log(`Done. ${records.length} unique operators discovered.`);
-console.log(`  ${visited.size} tiles visited (${tilesSplit} split on a cap hit), ${billedCalls} billable calls.`);
+console.log(`  ${visited.size} search pairs visited (${tilesSplit} split on a cap hit, ${typeSlicedTiles} cells type-sliced into ${typeSlices} sub-queries).`);
+console.log(`  Text Search calls this run: ${searchBillableCalls} (${fromCache} pairs from cache).`);
+console.log(`  Place Details calls this run: ${detailBillableCalls} (${detailsFromCache} details from cache).`);
+if (closedPermanentlyDropped || closedTemporarilySkipped) {
+  console.log(`  Dropped ${closedPermanentlyDropped} permanently-closed; skipped enrichment on ${closedTemporarilySkipped} temporarily-closed.`);
+}
 console.log(`  ${withSignal} with a rental-type signal (core/gap) — Pass A triage priority.`);
 console.log(`  ${withWebsite} have a website (needed for Pass B).`);
+console.log(`  ${pureServiceArea} marked pure service-area by Google (mobile/delivery operators, no storefront).`);
+if (saturatedServiceArea.length) {
+  console.log(`  ${saturatedServiceArea.length} service-area (term,tile) at the 60 cap — not subdivided (mobile operators have no point to partition); see JSON.saturated_service_area.`);
+}
 if (saturatedAtMin.length) {
-  console.log(`  ${saturatedAtMin.length} (term,tile) still at the 60 cap at the ${GRID_CONFIG.minCellKm}km floor — residual truncation (see JSON.saturated_at_min_cell; lower minCellKm or add includedType slicing).`);
+  console.log(`  ${saturatedAtMin.length} (term,tile) still at the 60 cap after type-slicing at the ${GRID_CONFIG.minCellKm}km floor — residual truncation (see JSON.saturated_at_min_cell; lower minCellKm for these cells).`);
 }
 if (errors.length) console.log(`  ${errors.length} pair(s) errored — rerun to retry, see JSON.errors.`);
+if (detailErrors.length) console.log(`  ${detailErrors.length} detail enrichment error(s) — rerun to retry, see JSON.detail_errors.`);
 console.log(`\nJSON: ${jsonPath}\nCSV:  ${csvPath}\nCache: ${cachePath}`);

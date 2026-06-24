@@ -7,6 +7,7 @@
 // Principle (§4.1): keep the blocklist CONSERVATIVE — reject only on strong signals; when in doubt, pass down.
 
 import fs from "node:fs";
+import { QUERIES } from "./quadtree_sweep_queries.mjs";
 
 const SEED = new URL(".", import.meta.url).pathname;
 const read = (f) => JSON.parse(fs.readFileSync(SEED + f, "utf8"));
@@ -128,28 +129,42 @@ const dedupMatch = (o) => {
 const out = [];
 const tally = {};
 const bump = (s) => (tally[s] = (tally[s] || 0) + 1);
+const termMeta = new Map(QUERIES.map((q) => [q.term, q]));
 
 for (const o of sweep) {
   const rec = { place_id: o.place_id, name: o.name, website: o.website || null,
                 primary_type: o.primary_type, lat: o.lat, lng: o.lng,
                 rating: o.rating, user_rating_count: o.user_rating_count,
-                rental_signal: o.rental_signal, matched_activities: o.matched_activities };
+                rental_signal: o.rental_signal, matched_activities: o.matched_activities,
+                matched_terms: o.matched_terms || [], matched_tiers: o.matched_tiers || [],
+                pure_service_area_business: Boolean(o.pure_service_area_business),
+                matched_modes: o.matched_modes || [] };
   let status = null, reason = null, note = null;
 
   // Gate 0 — Locality. Per EC: maximize recall — add a 50km buffer to every anchor edge and keep
   // everything inside it as a plausible operator. Only drop truly other-region rows (Vegas, Utah,
   // Bay Area, Sacramento). geo_zone records where each kept row sits so the AOI can be tightened later.
   const GEO_BUFFER_M = 50000, GEO_FRINGE_M = 65000;
-  const na = nearestAnchor(o.lat, o.lng);
-  rec.nearest_anchor = na.id; rec.anchor_slack_m = Math.round(na.slack);
-  rec.geo_zone = na.slack <= 0 ? "in_circle" : (na.slack <= GEO_BUFFER_M ? "buffer_50km" : (na.slack <= GEO_FRINGE_M ? "fringe" : "far"));
-  if (na.slack > GEO_FRINGE_M) {
-    status = "out_of_region"; reason = "gate0:beyond_buffer"; note = `${Math.round(na.dist/1000)}km to nearest ${na.id} (other region)`;
-  } else if (na.slack > GEO_BUFFER_M && o.rental_signal) {
-    // 50–65km fringe with a rental signal → review, not a silent drop (honors "only drop true other-regions")
-    status = "needs_review"; reason = "gate0:fringe_rental_signal"; note = `${Math.round(na.slack/1000)}km past ${na.id} edge`;
-  } else if (na.slack > GEO_BUFFER_M) {
-    status = "out_of_region"; reason = "gate0:beyond_50km_buffer"; note = `${Math.round(na.dist/1000)}km to nearest ${na.id}`;
+  if (!Number.isFinite(o.lat) || !Number.isFinite(o.lng)) {
+    rec.nearest_anchor = null; rec.anchor_slack_m = null;
+    rec.geo_zone = o.pure_service_area_business || rec.matched_modes.includes("service-area")
+      ? "service_area_unknown_location"
+      : "unknown_location";
+    if (!o.pure_service_area_business && !rec.matched_modes.includes("service-area")) {
+      status = "needs_review"; reason = "gate0:no_location";
+    }
+  } else {
+    const na = nearestAnchor(o.lat, o.lng);
+    rec.nearest_anchor = na.id; rec.anchor_slack_m = Math.round(na.slack);
+    rec.geo_zone = na.slack <= 0 ? "in_circle" : (na.slack <= GEO_BUFFER_M ? "buffer_50km" : (na.slack <= GEO_FRINGE_M ? "fringe" : "far"));
+    if (na.slack > GEO_FRINGE_M) {
+      status = "out_of_region"; reason = "gate0:beyond_buffer"; note = `${Math.round(na.dist/1000)}km to nearest ${na.id} (other region)`;
+    } else if (na.slack > GEO_BUFFER_M && o.rental_signal) {
+      // 50-65km fringe with a rental signal routes to review, not a silent drop.
+      status = "needs_review"; reason = "gate0:fringe_rental_signal"; note = `${Math.round(na.slack/1000)}km past ${na.id} edge`;
+    } else if (na.slack > GEO_BUFFER_M) {
+      status = "out_of_region"; reason = "gate0:beyond_50km_buffer"; note = `${Math.round(na.dist/1000)}km to nearest ${na.id}`;
+    }
   }
 
   // Gate 1 — Domain relevance (test name + primary_type only; types[] is too noisy)
@@ -205,11 +220,58 @@ for (const o of sweep) {
 const survivors = out.filter((r) => r.status === "survivor")
   .sort((a, b) => (Number(b.rental_signal) - Number(a.rental_signal)) || ((b.user_rating_count||0) - (a.user_rating_count||0)));
 
+const termStats = new Map();
+for (const r of out) {
+  for (const term of r.matched_terms || []) {
+    const meta = termMeta.get(term) || {};
+    let stat = termStats.get(term);
+    if (!stat) {
+      stat = {
+        term,
+        activity: meta.activity || null,
+        season: meta.season || null,
+        tier: meta.tier || null,
+        input_ids: new Set(),
+        survivor_ids: new Set(),
+        needs_review_ids: new Set(),
+        pass_a_candidate_ids: new Set(),
+        status_ids: new Map(),
+      };
+      termStats.set(term, stat);
+    }
+    stat.input_ids.add(r.place_id);
+    if (!stat.status_ids.has(r.status)) stat.status_ids.set(r.status, new Set());
+    stat.status_ids.get(r.status).add(r.place_id);
+    if (r.status === "survivor") stat.survivor_ids.add(r.place_id);
+    if (r.status === "needs_review") stat.needs_review_ids.add(r.place_id);
+    if (r.status === "survivor" || r.status === "needs_review") stat.pass_a_candidate_ids.add(r.place_id);
+  }
+}
+const term_contribution_after_gates = [...termStats.values()]
+  .map((s) => ({
+    term: s.term,
+    activity: s.activity,
+    season: s.season,
+    tier: s.tier,
+    input_count: s.input_ids.size,
+    survivor_count: s.survivor_ids.size,
+    needs_review_count: s.needs_review_ids.size,
+    pass_a_candidate_count: s.pass_a_candidate_ids.size,
+    statuses: Object.fromEntries([...s.status_ids.entries()].map(([status, ids]) => [status, ids.size])),
+  }))
+  .sort(
+    (a, b) =>
+      b.pass_a_candidate_count - a.pass_a_candidate_count ||
+      b.survivor_count - a.survivor_count ||
+      b.input_count - a.input_count,
+  );
+
 fs.writeFileSync(SEED + "sweep_gate_results.json", JSON.stringify({
   ranAt: new Date().toISOString(),
   input_count: sweep.length,
   tally,
   survivor_count: survivors.length,
+  term_contribution_after_gates,
   results: out,
   survivor_queue: survivors.map((r,i)=>({ rank:i+1, ...r })),
 }, null, 2));
