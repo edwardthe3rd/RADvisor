@@ -111,7 +111,6 @@ export const QUERIES = [
 
   // ---- SUMMER · MOTORIZED / OFF-ROAD --------------------------------------
   { term: "atv rental",                     activity: "atv",         season: "summer", tier: "core" },
-  { term: "atv tours",                      activity: "atv",         season: "summer", tier: "experience" },
   { term: "quad rental",                    activity: "atv",         season: "summer", tier: "core" },
   { term: "utv rental",                     activity: "utv",         season: "summer", tier: "core" },
   { term: "side by side rental",            activity: "utv",         season: "summer", tier: "core" },
