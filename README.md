@@ -23,6 +23,20 @@ npm run dev
 
 Keep `npm run dev` running in that terminal, then open [http://localhost:3000](http://localhost:3000). No other services required — data comes from Supabase.
 
+## Troubleshooting
+
+### Git index lock file
+
+If Git reports that `.git/index.lock` already exists, first make sure no Git command is currently running and close any editor Git panels that may be refreshing the repo in the background.
+
+Then run this from the repo root, `~/RADvisor`:
+
+```bash
+rm -f .git/index.lock
+```
+
+After that, retry the original Git command. If the lock file comes back repeatedly, quit Cursor or any other app that may be checking Git status in the background, then remove the lock file again.
+
 ## Operator data pipeline
 
 Operator discovery runs entirely from `supabase/seed/` against **Google Places API (New)** — no server required.
@@ -81,4 +95,3 @@ git commit -m "Update specs: <what changed>"
 After committing, `git status` should say **"nothing to commit, working tree clean."** That clean message is the proof it saved — if files still show in red/green, it didn't go through.
 
 **Branch:** the docs repo stays on `main` — commit straight to it. There's no `Testing` branch here and you don't need one; docs don't deploy, so there's nothing to test before promoting. The `Testing` → `main` flow is **only** for *this* code repo (see [SYNC.md](SYNC.md)), because that's what protects the live site.
-

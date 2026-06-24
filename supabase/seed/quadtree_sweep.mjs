@@ -64,6 +64,7 @@ const PAGE_DELAY_MS = 2200;     // Google needs ~2s before a nextPageToken is va
 const MAX_RETRIES = 4;          // network retries inside one fetchPair call
 const MAX_PAIR_ATTEMPTS = 3;    // whole-pair re-enqueues after fetchPair gives up (bounded, can't spin)
 const CACHE_FLUSH_EVERY = 25;   // persist cache every N completed pairs
+const FETCH_TIMEOUT_MS = 15000; // fail stuck HTTP requests instead of hanging smoke/full runs
 
 const DISCOVERY_FIELD_MASK = [
   "places.id",
@@ -98,17 +99,18 @@ const DETAILS_FIELD_MASK = [
 
 // includedType only accepts request-supported Place types. Use this conservative
 // set to avoid turning a floor-tile rescue query into invalid-request noise.
+// Verified against Google's Table A (place-types doc): only types valid as a
+// searchText `includedType` request param belong here. Response-only types
+// (e.g. boat_rental, diving_center, archery_range, recreation_center) are NOT
+// valid request types and would 400 the slice — keep them out.
 const INCLUDED_TYPE_ALLOWLIST = new Set([
   "adventure_sports_center",
   "amusement_center",
   "amusement_park",
-  "archery_range",
   "athletic_field",
   "bicycle_store",
-  "boat_rental",
   "campground",
   "community_center",
-  "diving_center",
   "event_venue",
   "fishing_charter",
   "golf_course",
@@ -116,9 +118,9 @@ const INCLUDED_TYPE_ALLOWLIST = new Set([
   "ice_skating_rink",
   "marina",
   "national_park",
+  "off_roading_area",
   "park",
   "playground",
-  "recreation_center",
   "resort_hotel",
   "rv_park",
   "ski_resort",
@@ -169,6 +171,16 @@ function loadApiKey() {
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
+async function fetchWithTimeout(url, options, timeoutMs = FETCH_TIMEOUT_MS) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 /** One Text Search page. Returns { places, nextPageToken } or throws after retries. */
 async function searchPage(apiKey, tile, term, includeServiceArea, pageToken, includedType) {
   const body = {
@@ -197,7 +209,7 @@ async function searchPage(apiKey, tile, term, includeServiceArea, pageToken, inc
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     let res;
     try {
-      res = await fetch("https://places.googleapis.com/v1/places:searchText", {
+      res = await fetchWithTimeout("https://places.googleapis.com/v1/places:searchText", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -246,7 +258,7 @@ async function fetchPlaceDetails(apiKey, placeId) {
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     let res;
     try {
-      res = await fetch(`https://places.googleapis.com/v1/places/${placeId}`, {
+      res = await fetchWithTimeout(`https://places.googleapis.com/v1/places/${placeId}`, {
         headers: {
           "Content-Type": "application/json",
           "X-Goog-Api-Key": apiKey,
@@ -302,6 +314,32 @@ function csvCell(v) {
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 }
 
+// Near-duplicate detection helpers. Google sometimes carries one operator under
+// two place_ids (relisted/moved/double-listed), which place_id dedup alone can't
+// collapse. We FLAG (never merge) so Pass A triage can review.
+const normName = (s) =>
+  (s || "").toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, " ").trim();
+
+function hostOf(url) {
+  if (!url) return "";
+  try {
+    return new URL(url).hostname.toLowerCase().replace(/^www\./, "");
+  } catch {
+    return "";
+  }
+}
+
+function distanceKm(aLat, aLng, bLat, bLng) {
+  if (aLat == null || aLng == null || bLat == null || bLng == null) return Infinity;
+  const R = 6371;
+  const dLat = ((bLat - aLat) * Math.PI) / 180;
+  const dLng = ((bLng - aLng) * Math.PI) / 180;
+  const la1 = (aLat * Math.PI) / 180;
+  const la2 = (bLat * Math.PI) / 180;
+  const x = Math.sin(dLat / 2) ** 2 + Math.cos(la1) * Math.cos(la2) * Math.sin(dLng / 2) ** 2;
+  return 2 * R * Math.asin(Math.sqrt(x));
+}
+
 function searchKey(tile, q, includeServiceArea, includedType) {
   const mode = includeServiceArea ? "service-area" : "standard";
   const typeSeg = includedType ? `::type:${includedType}` : "";
@@ -325,6 +363,28 @@ const GENERIC_TYPES = new Set([
   "food",
 ]);
 
+// Lodging PRIMARY types that surface on gear queries because the listing copy
+// mentions kayaks/skis, but the place is a home/room/hotel — not a rental operator.
+// Matched on PRIMARY type only (lowest false-positive). Deliberately EXCLUDES
+// resort_hotel, campground, camping_cabin, and rv_park: those can be legitimate
+// operators (ski resorts, campgrounds) and stay in the universe.
+const LODGING_NOISE_TYPES = new Set([
+  "bed_and_breakfast",
+  "budget_japanese_inn",
+  "cottage",
+  "extended_stay_hotel",
+  "farmstay",
+  "guest_house",
+  "hostel",
+  "hotel",
+  "inn",
+  "japanese_inn",
+  "lodging",
+  "mobile_home_park",
+  "motel",
+  "private_guest_room",
+]);
+
 // activity -> a few request-valid includedType axes to ALWAYS try when a cell
 // saturates, even if absent from the truncated 60-result sample (so operators
 // whose type never appeared in the visible sample still get a slice). Every value
@@ -332,27 +392,27 @@ const GENERIC_TYPES = new Set([
 const ACTIVITY_TYPE_HINTS = {
   "gear-shop": ["sporting_goods_store"],
   outfitter: ["tour_agency", "sporting_goods_store"],
-  kayak: ["boat_rental", "marina"],
-  sup: ["boat_rental", "marina"],
-  canoe: ["boat_rental", "marina"],
-  powerboat: ["boat_rental", "marina"],
-  pontoon: ["boat_rental", "marina"],
-  pwc: ["boat_rental", "marina"],
-  watersports: ["boat_rental", "marina"],
-  sailing: ["boat_rental", "marina"],
-  windsurf: ["boat_rental", "marina"],
-  kiteboard: ["boat_rental", "marina"],
-  wakeboard: ["boat_rental", "marina"],
-  efoil: ["boat_rental", "marina"],
-  "foil-surf": ["boat_rental", "marina"],
-  "river-tube": ["boat_rental", "tour_agency"],
-  rafting: ["tour_agency", "boat_rental"],
-  scuba: ["diving_center", "boat_rental"],
+  kayak: ["marina", "tour_agency"],
+  sup: ["marina", "tour_agency"],
+  canoe: ["marina", "tour_agency"],
+  powerboat: ["marina", "tour_agency"],
+  pontoon: ["marina", "tour_agency"],
+  pwc: ["marina", "tour_agency"],
+  watersports: ["marina", "tour_agency"],
+  sailing: ["marina", "tour_agency"],
+  windsurf: ["marina", "tour_agency"],
+  kiteboard: ["marina", "tour_agency"],
+  wakeboard: ["marina", "tour_agency"],
+  efoil: ["marina", "tour_agency"],
+  "foil-surf": ["marina", "tour_agency"],
+  "river-tube": ["tour_agency", "marina"],
+  rafting: ["tour_agency", "marina"],
+  scuba: ["marina", "tour_agency"],
   "fishing-charter": ["fishing_charter", "marina"],
   "fly-fishing": ["tour_agency", "sporting_goods_store"],
   "fishing-gear": ["sporting_goods_store"],
   hunting: ["tour_agency", "sporting_goods_store"],
-  archery: ["archery_range", "sporting_goods_store"],
+  archery: ["sporting_goods_store"],
   mtb: ["bicycle_store"],
   cycling: ["bicycle_store"],
   ebike: ["bicycle_store"],
@@ -361,10 +421,10 @@ const ACTIVITY_TYPE_HINTS = {
   camping: ["campground", "sporting_goods_store", "rv_park"],
   backpacking: ["sporting_goods_store", "campground"],
   "disc-golf": ["park"],
-  atv: ["tour_agency", "sports_activity_location"],
-  utv: ["tour_agency", "sports_activity_location"],
-  "offroad-4x4": ["tour_agency", "sports_activity_location"],
-  dirtbike: ["tour_agency", "sports_activity_location"],
+  atv: ["off_roading_area", "tour_agency"],
+  utv: ["off_roading_area", "tour_agency"],
+  "offroad-4x4": ["off_roading_area", "tour_agency"],
+  dirtbike: ["off_roading_area", "tour_agency"],
   "alpine-ski": ["ski_resort", "sporting_goods_store"],
   snowboard: ["ski_resort", "sporting_goods_store"],
   "nordic-ski": ["ski_resort", "sporting_goods_store"],
@@ -379,22 +439,22 @@ const ACTIVITY_TYPE_HINTS = {
 const DEFAULT_TYPE_HINTS = ["sporting_goods_store"];
 
 /**
- * Candidate includedType slices for a tile that is still at the 60 cap. Combines
- * request-valid types OBSERVED in the capped sample (ranked by frequency) with a
- * few activity-specific HINT types that are always tried even if missing from the
- * truncated sample — so operators whose type never appeared in the visible 60 are
- * still recoverable. Response-only types are dropped (searchText rejects them).
+ * Candidate includedType slices for a tile that is still at the 60 cap. Slices run
+ * with strictTypeFiltering, which matches on a place's PRIMARY type — so the axes
+ * are the request-valid PRIMARY types observed in the capped sample (ranked by
+ * frequency), plus a few activity-specific HINT types always tried even if missing
+ * from the truncated sample. Secondary types are NOT used as axes: under strict
+ * filtering a secondary-only slice returns nothing — a wasted call and a wasted
+ * slice-budget slot. Response-only types are dropped (searchText rejects them).
  */
 function typeSlicesFor(places, q) {
   const counts = new Map();
   for (const p of places) {
-    const candidates = [p.primaryType, ...(p.types || [])];
-    for (const t of candidates) {
-      if (!t || GENERIC_TYPES.has(t) || !INCLUDED_TYPE_ALLOWLIST.has(t)) continue;
-      counts.set(t, (counts.get(t) || 0) + 1);
-    }
+    const t = p.primaryType;
+    if (!t || GENERIC_TYPES.has(t) || !INCLUDED_TYPE_ALLOWLIST.has(t)) continue;
+    counts.set(t, (counts.get(t) || 0) + 1);
   }
-  // Seed activity hints at frequency 0 so observed types sort ahead of them.
+  // Seed activity hints at frequency 0 so observed primary types sort ahead of them.
   const hints = (q && ACTIVITY_TYPE_HINTS[q.activity]) || DEFAULT_TYPE_HINTS;
   for (const t of hints) {
     if (INCLUDED_TYPE_ALLOWLIST.has(t) && !counts.has(t)) counts.set(t, 0);
@@ -447,6 +507,21 @@ if (SMOKE) {
     console.log("  phone:       ", detail.nationalPhoneNumber ?? "(none)");
   }
   console.log("\nAll names:", places.map((p) => p.displayName?.text).join(" | "));
+
+  // Probe the SAB-rescue slice path: includePureServiceAreaBusinesses + includedType
+  // + strictTypeFiltering on ONE request. This is the combination the full run leans
+  // on but the basic smoke above never exercises — confirm it composes (no HTTP 400).
+  const sliceType = (ACTIVITY_TYPE_HINTS.kayak || [])[0] ?? "boat_rental";
+  console.log(`\nProbe: service-area + includedType="${sliceType}" + strictTypeFiltering …`);
+  try {
+    const sliced = await fetchPair(apiKey, tile, term, true, sliceType);
+    const sab = sliced.filter((p) => p.pureServiceAreaBusiness).length;
+    console.log(`  OK — ${sliced.length} results (${sab} pure service-area). Combination composes.`);
+  } catch (e) {
+    console.log(`  FAILED — ${e.message}`);
+    console.log("  (If HTTP 400, the SAB-rescue slice body is rejected — revisit before a full run.)");
+  }
+
   console.log("\nSmoke OK — no files written. Run without --smoke for the full sweep.");
   process.exit(0);
 }
@@ -518,7 +593,9 @@ let typeSlicedTiles = 0;        // floor tiles that triggered includedType slici
 let typeSlices = 0;             // total typed slice sub-queries enqueued
 let closedPermanentlyDropped = 0;
 let closedTemporarilySkipped = 0;
+let lodgingExcluded = 0;
 const closedRecords = [];
+const lodgingRecords = [];
 const errors = [];
 const detailErrors = [];
 const saturatedAtMin = [];
@@ -583,7 +660,11 @@ const worker = async ({ tile, q, includeServiceArea = false, includedType = null
       searchBillableCalls += Math.max(1, Math.ceil(places.length / SEARCH_CONFIG.pageSize));
     } catch (e) {
       claimed.delete(key); // unclaim so the re-enqueue below can run it again
-      if (attempt < MAX_PAIR_ATTEMPTS) {
+      // 4xx are deterministic (bad request / invalid includedType) — re-issuing the
+      // identical request just burns calls, so don't re-enqueue those. Network and
+      // 5xx/429-exhausted errors are worth a bounded retry.
+      const retryable = !/HTTP 4\d\d/.test(e.message);
+      if (retryable && attempt < MAX_PAIR_ATTEMPTS) {
         queue.push({ tile, q, includeServiceArea, includedType, attempt: attempt + 1 }); // bounded in-run retry
       } else {
         errors.push({ key: displaySearchKey(tile, q, includeServiceArea, includedType), error: e.message, attempts: attempt }); // left uncached so a later rerun can retry
@@ -659,6 +740,7 @@ function applyPlaceFields(rec, p) {
   rec.website = rec.website ?? p.websiteUri ?? null;
   rec.source_url = rec.source_url ?? p.googleMapsUri ?? `https://www.google.com/maps/place/?q=place_id:${rec.place_id}`;
   rec.primary_type = rec.primary_type ?? p.primaryTypeDisplayName?.text ?? p.primaryType ?? null;
+  rec.primary_type_raw = rec.primary_type_raw ?? p.primaryType ?? null;
   if ((!rec.types || rec.types.length === 0) && Array.isArray(p.types)) rec.types = p.types;
   rec.business_status = rec.business_status ?? p.businessStatus ?? null;
   rec.rating = rec.rating ?? p.rating ?? null;
@@ -683,6 +765,7 @@ for (const { tile, q, includeServiceArea, includedType } of visited.values()) {
         website: null,
         source_url: null,
         primary_type: null,
+        primary_type_raw: null,
         types: [],
         business_status: null,
         rating: null,
@@ -721,11 +804,19 @@ for (const { tile, q, includeServiceArea, includedType } of visited.values()) {
 //     and enriching it wastes a Place Details call.
 //   - CLOSED_TEMPORARILY: keep (it may reopen) but skip enrichment; the row still
 //     carries its discovery fields and the business_status flag for triage.
+// Lodging-noise exclusion (also pre-enrichment): a place whose PRIMARY type is a
+// home/room/hotel lodging type is a vacation rental / hotel that surfaced on a gear
+// query, not a rental operator. Drop from the operator universe (retained in
+// lodging_excluded_records for review) and skip its Place Details call.
 for (const [id, rec] of ops) {
   if (rec.business_status === "CLOSED_PERMANENTLY") {
     closedRecords.push(finalizeRecord(rec));
     ops.delete(id);
     closedPermanentlyDropped++;
+  } else if (rec.primary_type_raw && LODGING_NOISE_TYPES.has(rec.primary_type_raw)) {
+    lodgingRecords.push(finalizeRecord(rec));
+    ops.delete(id);
+    lodgingExcluded++;
   }
 }
 const detailQueue = [...ops.keys()].filter((id) => {
@@ -820,6 +911,39 @@ const records = [...ops.values()]
       (b.rating ?? 0) - (a.rating ?? 0),
   );
 
+// Flag near-duplicates (NOT merge). Walk in prominence order so the most-prominent
+// listing becomes the primary and later listings point back to it. A record is a
+// possible dup of a prior primary when they share a website host AND (same name OR
+// within ~75m), or share a normalized name AND are within ~75m — corroboration on
+// two axes keeps franchises (same host, different branch/name/location) from being
+// flagged against each other.
+const DUP_DISTANCE_KM = 0.075; // ~75m
+let possibleDuplicates = 0;
+const primariesByHost = new Map();  // host -> [primary]
+const primariesByName = new Map();  // normName -> [primary]
+for (const r of records) {
+  r.possible_duplicate_of = null;
+  const host = hostOf(r.website);
+  const name = normName(r.name);
+  const candidates = new Set([...(primariesByHost.get(host) || []), ...(primariesByName.get(name) || [])]);
+  for (const c of candidates) {
+    const sameHost = host && c.host === host;
+    const sameName = name && c.name === name;
+    const near = distanceKm(r.lat, r.lng, c.lat, c.lng) <= DUP_DISTANCE_KM;
+    if ((sameHost && (sameName || near)) || (sameName && near)) {
+      r.possible_duplicate_of = c.place_id;
+      break;
+    }
+  }
+  if (r.possible_duplicate_of) {
+    possibleDuplicates++;
+    continue; // a flagged dup is not itself a primary target
+  }
+  const primary = { place_id: r.place_id, host, name, lat: r.lat, lng: r.lng };
+  if (host) (primariesByHost.get(host) || primariesByHost.set(host, []).get(host)).push(primary);
+  if (name) (primariesByName.get(name) || primariesByName.set(name, []).get(name)).push(primary);
+}
+
 writeFileSync(
   jsonPath,
   JSON.stringify(
@@ -848,6 +972,8 @@ writeFileSync(
       closed_permanently_dropped: closedPermanentlyDropped,
       closed_temporarily_skipped: closedTemporarilySkipped,
       closed_records: closedRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
+      lodging_excluded: lodgingExcluded, // vacation-rental/hotel noise dropped pre-enrichment (primary-type match)
+      lodging_excluded_records: lodgingRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
       text_search_calls_this_run: searchBillableCalls,
       place_details_calls_this_run: detailBillableCalls,
       search_pairs_from_cache: fromCache,
@@ -855,6 +981,8 @@ writeFileSync(
       errors,
       detail_errors: detailErrors,
       operator_count: records.length,
+      possible_duplicates: possibleDuplicates, // flagged via possible_duplicate_of, not merged
+      unique_operator_estimate: records.length - possibleDuplicates,
       term_contribution: [...termStats.values()]
         .map((s) => ({
           term: s.term,
@@ -870,6 +998,14 @@ writeFileSync(
           service_area_net_new_places: s.service_area_net_new_ids.size,
         }))
         .sort((a, b) => b.unique_places - a.unique_places || b.service_area_net_new_places - a.service_area_net_new_places),
+      // Explicit handoff for run_gate_ladder.mjs. The visible operator list is
+      // intentionally pre-cleaned for enrichment cost, but the ladder should be
+      // able to audit every row the sweep classified or set aside.
+      gate_ladder_input_records: [
+        ...records.map((r) => ({ ...r, sweep_cohort: "operators" })),
+        ...closedRecords.map((r) => ({ ...r, sweep_cohort: "closed_records" })),
+        ...lodgingRecords.map((r) => ({ ...r, sweep_cohort: "lodging_excluded_records" })),
+      ],
       operators: records,
     },
     null,
@@ -882,6 +1018,7 @@ const cols = [
   "match_pairs", "rating", "user_rating_count", "business_status", "primary_type",
   "website", "source_url", "phone", "address", "lat", "lng", "pure_service_area_business",
   "matched_tile_count", "matched_terms", "matched_modes", "last_verified",
+  "possible_duplicate_of",
 ];
 const lines = [cols.join(",")];
 for (const r of records) {
@@ -901,12 +1038,15 @@ writeFileSync(csvPath, lines.join("\n") + "\n");
 const withSignal = records.filter((r) => r.rental_signal).length;
 const withWebsite = records.filter((r) => r.website).length;
 const pureServiceArea = records.filter((r) => r.pure_service_area_business).length;
-console.log(`Done. ${records.length} unique operators discovered.`);
+console.log(`Done. ${records.length} operators discovered (${possibleDuplicates} flagged as possible duplicates → ~${records.length - possibleDuplicates} unique).`);
 console.log(`  ${visited.size} search pairs visited (${tilesSplit} split on a cap hit, ${typeSlicedTiles} cells type-sliced into ${typeSlices} sub-queries).`);
 console.log(`  Text Search calls this run: ${searchBillableCalls} (${fromCache} pairs from cache).`);
 console.log(`  Place Details calls this run: ${detailBillableCalls} (${detailsFromCache} details from cache).`);
 if (closedPermanentlyDropped || closedTemporarilySkipped) {
   console.log(`  Dropped ${closedPermanentlyDropped} permanently-closed; skipped enrichment on ${closedTemporarilySkipped} temporarily-closed.`);
+}
+if (lodgingExcluded) {
+  console.log(`  Excluded ${lodgingExcluded} lodging/vacation-rental noise (primary-type match; see JSON.lodging_excluded_records).`);
 }
 console.log(`  ${withSignal} with a rental-type signal (core/gap) — Pass A triage priority.`);
 console.log(`  ${withWebsite} have a website (needed for Pass B).`);

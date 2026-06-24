@@ -3,8 +3,8 @@
  *
  * This file is DATA ONLY (no API calls, no cost). It defines:
  *   - SEARCH_CONFIG: pagination (full 60/query) + DISTANCE ranking.
- *   - SERVICE_AREA_TERMS: narrow query set that gets a second
- *     includePureServiceAreaBusinesses pass for mobile/delivery operators.
+ *   - SERVICE_AREA_TERMS: narrow query set that uses the merged
+ *     includePureServiceAreaBusinesses seed pass for mobile/delivery operators.
  *   - AOI_RECTS / GRID_CONFIG / seedTiles() / splitTile() / tileKm(): the v2
  *     coverage geometry — continuous rectangle corridors, one seed grid over
  *     their union, and the adaptive-quadtree split the runner uses on a cap hit.
