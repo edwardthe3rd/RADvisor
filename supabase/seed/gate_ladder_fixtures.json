@@ -1,0 +1,405 @@
+[
+  {
+    "id": "real-kayak-operator-not-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-real-kayak",
+      "name": "Fixture Tahoe Kayak Rentals",
+      "website": "https://example.com",
+      "primary_type": "Tour Agency",
+      "primary_type_raw": "tour_agency",
+      "business_status": "OPERATIONAL",
+      "lat": 38.94,
+      "lng": -119.98,
+      "rental_signal": true,
+      "matched_activities": ["kayak"],
+      "matched_terms": ["kayak rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "recreation-tool-ambiguity-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate1:construction_tool_rental_rec_query",
+    "row": {
+      "place_id": "fixture-rec-tool",
+      "name": "Fixture Outdoor Equipment Rental",
+      "website": "https://example.com",
+      "primary_type": "Services",
+      "primary_type_raw": "equipment_rental_agency",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["camping"],
+      "matched_terms": ["camping gear rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "booking-platform-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:booking_platform_domain",
+    "row": {
+      "place_id": "fixture-booking-platform",
+      "name": "Fixture Tahoe Rafting",
+      "website": "https://fareharbor.com/embeds/book/fixture/items/",
+      "primary_type": "Tour Agency",
+      "primary_type_raw": "tour_agency",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.18,
+      "rental_signal": true,
+      "matched_activities": ["rafting"],
+      "matched_terms": ["whitewater rafting"],
+      "matched_tiers": ["experience"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "sweep-duplicate-routes-to-duplicate-review",
+    "expect_status": "needs_review",
+    "expect_review_lane": "duplicate",
+    "reason_prefix": "gate4:sweep_possible_duplicate",
+    "row": {
+      "place_id": "fixture-possible-duplicate",
+      "name": "Fixture Tahoe Ski Rentals",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 38.94,
+      "lng": -119.98,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"],
+      "possible_duplicate_of": "fixture-primary"
+    }
+  },
+  {
+    "id": "lodging-no-website-vacation-rental-rejected",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:vacation_rental_listing",
+    "row": {
+      "place_id": "fixture-lodging",
+      "name": "Fixture Condo 2 Mi to Ski Resort With Hot Tub",
+      "website": null,
+      "primary_type": "Lodging",
+      "primary_type_raw": "lodging",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.18,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "lodging-with-website-routes-to-operator-review",
+    "expect_status": "needs_review",
+    "expect_review_lane": "operator",
+    "reason_prefix": "gate3:lodging_with_website",
+    "row": {
+      "place_id": "fixture-lodging-site",
+      "name": "Fixture Mountain Lodge & Resort",
+      "website": "https://example.com",
+      "primary_type": "Lodging",
+      "primary_type_raw": "lodging",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.18,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "soft-block-word-with-rec-category-not-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "reason_prefix": "gate1:soft_blocklist_rec_conflict",
+    "row": {
+      "place_id": "fixture-soft-block-rec",
+      "name": "Fixture Tahoe Catering & Kayak Rentals",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 38.94,
+      "lng": -119.98,
+      "rental_signal": true,
+      "matched_activities": ["kayak"],
+      "matched_terms": ["kayak rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "rv-overland-include-not-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-rv-overland",
+      "name": "Fixture Sportsmobile 4x4 Camper Van Rentals",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["camping_vehicles"],
+      "matched_terms": ["camper van rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "powersports-include-not-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-powersports",
+      "name": "Fixture Reno Powersports ATV & UTV Rentals",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["offroad-4x4"],
+      "matched_terms": ["atv rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "service-area-no-coords-with-site-can-survive",
+    "expect_status": "survivor",
+    "reason_prefix": "cleared_gates_0-4",
+    "row": {
+      "place_id": "fixture-service-area-site",
+      "name": "Fixture Mobile SUP Delivery",
+      "website": "https://example.com",
+      "primary_type": "Services",
+      "primary_type_raw": "service",
+      "business_status": "OPERATIONAL",
+      "lat": null,
+      "lng": null,
+      "rental_signal": true,
+      "pure_service_area_business": true,
+      "matched_activities": ["sup"],
+      "matched_terms": ["paddleboard rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["service-area"]
+    }
+  },
+  {
+    "id": "service-area-no-coords-no-site-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate5_pre:no_website_field",
+    "row": {
+      "place_id": "fixture-service-area-no-site",
+      "name": "Fixture Mobile SUP Delivery",
+      "website": null,
+      "primary_type": "Services",
+      "primary_type_raw": "service",
+      "business_status": "OPERATIONAL",
+      "lat": null,
+      "lng": null,
+      "rental_signal": true,
+      "pure_service_area_business": true,
+      "matched_activities": ["sup"],
+      "matched_terms": ["paddleboard rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["service-area"]
+    }
+  },
+  {
+    "id": "service-area-party-rental-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:party_event_rental",
+    "row": {
+      "place_id": "fixture-service-area-party",
+      "name": "Fixture Party Event Rentals",
+      "website": "https://example.com",
+      "primary_type": "Services",
+      "primary_type_raw": "service",
+      "business_status": "OPERATIONAL",
+      "lat": null,
+      "lng": null,
+      "rental_signal": true,
+      "pure_service_area_business": true,
+      "matched_activities": ["camping"],
+      "matched_terms": ["tent rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["service-area"]
+    }
+  },
+  {
+    "id": "firearm-business-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:firearm_business_review",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-firearm",
+      "name": "Fixture Wild Bills Guns & Hunting Outfitters",
+      "website": null,
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["hunting"],
+      "matched_terms": ["hunting gear rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "archery-business-not-firearm-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-archery",
+      "name": "Fixture House Of Arrows Archery",
+      "website": null,
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["archery"],
+      "matched_terms": ["archery pro shop"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "no-website-thrift-retail-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate3:no_website_retail_noise",
+    "row": {
+      "place_id": "fixture-thrift",
+      "name": "Fixture Lakeview Thrift Store",
+      "website": null,
+      "primary_type": "Thrift Store",
+      "primary_type_raw": "thrift_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.16,
+      "lng": -119.77,
+      "rental_signal": true,
+      "matched_activities": ["gear-shop"],
+      "matched_terms": ["sporting goods store"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "public-rec-site-with-rental-signal-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:public_recreation_site_rental_signal",
+    "forbidden_statuses": ["not_an_operator", "out_of_scope", "out_of_region"],
+    "row": {
+      "place_id": "fixture-bike-park",
+      "name": "Fixture Biggest Little Bike Park",
+      "website": null,
+      "primary_type": "Park",
+      "primary_type_raw": "park",
+      "business_status": "OPERATIONAL",
+      "lat": 39.16,
+      "lng": -119.77,
+      "rental_signal": true,
+      "matched_activities": ["mountain-bike"],
+      "matched_terms": ["bike park rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "public-disc-golf-course-no-rental-signal-not-operator",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:disc_golf_course_no_website",
+    "row": {
+      "place_id": "fixture-disc-golf-course",
+      "name": "Fixture Lizard Peak Disc Golf Course",
+      "website": null,
+      "primary_type": "Athletic Field",
+      "primary_type_raw": "athletic_field",
+      "business_status": "OPERATIONAL",
+      "lat": 39.16,
+      "lng": -119.77,
+      "rental_signal": false,
+      "matched_activities": ["disc-golf"],
+      "matched_terms": ["disc golf course"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "rec-named-retail-no-website-not-rejected",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-rec-retail",
+      "name": "Fixture Tahoe Surf & Board Shop",
+      "website": null,
+      "primary_type": "Clothing Store",
+      "primary_type_raw": "clothing_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.16,
+      "lng": -119.77,
+      "rental_signal": true,
+      "matched_activities": ["surf"],
+      "matched_terms": ["surfboard rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "passenger-car-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:passenger_car_rental",
+    "row": {
+      "place_id": "fixture-car-rental",
+      "name": "Fixture Airport Car Rental",
+      "website": "https://example.com",
+      "primary_type": "Car Rental Agency",
+      "primary_type_raw": "car_rental",
+      "business_status": "OPERATIONAL",
+      "lat": 39.5,
+      "lng": -119.78,
+      "rental_signal": false,
+      "matched_activities": [],
+      "matched_terms": [],
+      "matched_tiers": [],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "public-poi-no-website-not-operator",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:public_recreation_site_no_website",
+    "row": {
+      "place_id": "fixture-public-poi",
+      "name": "Fixture Echo Lake Sno-Park",
+      "website": null,
+      "primary_type": "Park",
+      "primary_type_raw": "park",
+      "business_status": "OPERATIONAL",
+      "lat": 38.83,
+      "lng": -120.04,
+      "rental_signal": false,
+      "matched_activities": [],
+      "matched_terms": [],
+      "matched_tiers": [],
+      "matched_modes": ["standard"]
+    }
+  }
+]

@@ -8,6 +8,8 @@
 //   - sweep_gate_results.json
 //   - sweep_gate_survivors.csv
 //   - sweep_gate_needs_review.csv
+//   - sweep_gate_lodging_review.csv
+//   - sweep_gate_duplicate_review.csv
 //   - sweep_gate_rejects.csv
 //
 // Recall policy: hard-reject only on strong evidence. Ambiguous rows are routed
@@ -28,12 +30,15 @@ const exists = (f) => fs.existsSync(SEED + f);
 
 const RUN_GATE5 = process.argv.includes("--gate5");
 const REFRESH_GATE5 = process.argv.includes("--refresh-gate5");
+const PREVIEW = process.argv.includes("--preview") || process.argv.includes("--dry-run");
+const TEST_FIXTURES = process.argv.includes("--test-fixtures");
 const EXPLAIN_PLACE_ID = valueAfter("--explain");
 
 const sweepJson = read("quadtree_sweep_operators.json");
 const oldOps = read("operators.json");
 const verified = read("operator_website_verified.json");
 const gate5CachePath = "sweep_gate5_cache.json";
+const fixturesPath = "gate_ladder_fixtures.json";
 const gate5Cache = !REFRESH_GATE5 && exists(gate5CachePath) ? read(gate5CachePath) : {};
 
 const AOI_EDGE_REVIEW_M = 2000;
@@ -76,6 +81,7 @@ const writeCsv = (file, rows) => {
     "review_lane",
     "dedup_note",
     "site_note",
+    "possible_duplicate_of",
     "place_id",
     "source_url",
   ];
@@ -161,15 +167,26 @@ function nearestAoi(lat, lng) {
 }
 
 function classifyAoi(o) {
-  const lat = Number(o.lat);
-  const lng = Number(o.lng);
+  // Guard against null/empty coords: Number(null) === 0 (a finite value), which would
+  // slip past the no-location check below and get measured against (0,0). Treat
+  // null/undefined/"" as missing so such rows correctly route to no-location review.
+  const lat = o.lat == null || o.lat === "" ? NaN : Number(o.lat);
+  const lng = o.lng == null || o.lng === "" ? NaN : Number(o.lng);
   const serviceArea = Boolean(o.pure_service_area_business) || (o.matched_modes || []).includes("service-area");
   if (!Number.isFinite(lat) || !Number.isFinite(lng)) {
+    if (serviceArea) {
+      return {
+        zone: "service_area_unknown_location",
+        distance_m: null,
+        reason: "gate0:service_area_no_storefront_location_allowed",
+        note: "Pure service-area business; no storefront coordinates are expected, so later gates decide.",
+      };
+    }
     return {
-      zone: serviceArea ? "service_area_unknown_location" : "unknown_location",
+      zone: "unknown_location",
       distance_m: null,
       status: "needs_review",
-      reason: serviceArea ? "gate0:service_area_no_storefront_location" : "gate0:no_location",
+      reason: "gate0:no_location",
       note: "No storefront coordinates in Places payload.",
     };
   }
@@ -180,23 +197,47 @@ function classifyAoi(o) {
   const nearest = nearestAoi(lat, lng);
   const distance_m = Math.round(nearest.distance_m);
 
-  if (tile) {
-    return {
-      zone: "covered_tile",
-      tile: tile.id,
-      nearest_aoi: nearest.id,
-      distance_m: 0,
-    };
-  }
-
   if (insideAoi) {
+    if (insideExcluded) {
+      return {
+        zone: "aoi_trimmed_margin",
+        tile: tile?.id || null,
+        nearest_aoi: nearest.id,
+        distance_m: 0,
+        status: "needs_review",
+        reason: "gate0:aoi_trimmed_margin",
+        note: "Inside AOI corridor but in a sparse-margin trim box.",
+      };
+    }
+
+    if (tile) {
+      return {
+        zone: "covered_tile",
+        tile: tile.id,
+        nearest_aoi: nearest.id,
+        distance_m: 0,
+      };
+    }
+
     return {
-      zone: insideExcluded ? "aoi_trimmed_margin" : "aoi_gap",
+      zone: "aoi_gap",
       nearest_aoi: nearest.id,
       distance_m: 0,
       status: "needs_review",
-      reason: insideExcluded ? "gate0:aoi_trimmed_margin" : "gate0:aoi_corridor_not_in_seed_tile",
+      reason: "gate0:aoi_corridor_not_in_seed_tile",
       note: "Inside AOI corridors but outside the billed seed-tile coverage.",
+    };
+  }
+
+  if (tile) {
+    return {
+      zone: "seed_tile_outside_aoi",
+      tile: tile.id,
+      nearest_aoi: nearest.id,
+      distance_m,
+      status: "needs_review",
+      reason: "gate0:seed_tile_outside_aoi",
+      note: "Inside a billed seed tile but outside the actual AOI corridor.",
     };
   }
 
@@ -232,7 +273,10 @@ function classifyAoi(o) {
   };
 }
 
-const STRONG_NAME_BLOCK = [
+// HARD blocklist: unambiguous out-of-domain brands / business identities. A name
+// match here is decisive on its own — the only thing that can override it is an
+// unambiguously recreational Places category (see isRecCategory + gate1Reject).
+const STRONG_NAME_BLOCK_HARD = [
   /u-?haul/i,
   /penske/i,
   /budget truck/i,
@@ -244,11 +288,6 @@ const STRONG_NAME_BLOCK = [
   /united rentals/i,
   /\bahern\b/i,
   /herc rentals/i,
-  /scaffold/i,
-  /\bbobcat\b/i,
-  /\bbackhoe\b/i,
-  /excavator/i,
-  /skid steer/i,
   /enterprise rent/i,
   /\bhertz\b/i,
   /\bavis\b/i,
@@ -258,18 +297,30 @@ const STRONG_NAME_BLOCK = [
   /\bdollar rent/i,
   /thrifty (car|rent)/i,
   /national car/i,
-  /bounce house/i,
-  /bouncing around/i,
-  /linen/i,
-  /photo booth/i,
+  /\bnumotion\b/i,
   /porta[-\s]?pott/i,
   /portable restroom/i,
+  /photo booth/i,
+  /bounce house/i,
+  /bouncing around/i,
+];
+
+// SOFT blocklist: generic words that usually mean out-of-domain but CAN co-occur in a
+// real recreation operator's name. A soft hit is downgraded to needs_review (not a hard
+// reject) whenever the row carries a positive rec signal — a recreational Places category
+// or a rec word in the name. This mirrors the tool/construction escape hatch below.
+const STRONG_NAME_BLOCK_SOFT = [
+  /scaffold/i,
+  /\bbobcat\b/i,
+  /\bbackhoe\b/i,
+  /excavator/i,
+  /skid steer/i,
+  /linen/i,
   /catering/i,
   /medical supply/i,
   // NOTE: do NOT block a bare /mobility/ — electric_transport (e-bikes/e-scooters,
   // "personal mobility") is in scope. Only block the medical-mobility sense.
   /medical mobility|mobility (aid|scooter|equipment|solutions|medical)/i,
-  /\bnumotion\b/i,
   /furniture rental/i,
   /appliance rental/i,
   /formalwear/i,
@@ -278,11 +329,50 @@ const STRONG_NAME_BLOCK = [
   /dumpster/i,
 ];
 
+// Unambiguously recreational Places categories. When Google itself classifies a row as
+// one of these, a name-regex guess must NEVER hard-delete it — at most flag for review.
+// Google's structured category is far less noisy than a name match. Keep this list to
+// categories that are recreation-specific; generic ones ("Services", "Store") are excluded.
+const REC_PRIMARY_RAW = new Set([
+  "sporting_goods_store",
+  "bicycle_store",
+  "bicycle_repair_shop",
+  "fishing_charter",
+  "ski_resort",
+  "marina",
+  "sports_activity_location",
+  "sports_school",
+  "sports_club",
+  "sports_complex",
+  "golf_course",
+  "ice_skating_rink",
+  "canoe_and_kayak_rental_service",
+  "boat_rental_service",
+  "ski_rental_shop",
+  "dive_shop",
+  "surf_shop",
+]);
+const REC_PRIMARY_DISPLAY = /^(sporting goods store|bicycle (shop|store)|fishing charter|ski resort|marina|sports (activity location|school|club|complex)|golf course|ice skating rink|canoe & kayak rental( service)?|boat rental( service)?|ski rental( shop)?|dive shop|surf shop)$/i;
+const isRecCategory = (o) =>
+  REC_PRIMARY_RAW.has(o.primary_type_raw) || REC_PRIMARY_DISPLAY.test(o.primary_type || "");
+
+// A genuine gear-rental SHOP name (not a vacation-home lease). Used as a recall safety
+// valve so a lodging-categorized row that actually reads like a rental shop is reviewed,
+// not auto-rejected.
+const RENT_SHOP_NAME = /(ski|bike|board|snowboard|kayak|paddle|sup|boat|gear|equipment|raft)\s+rental|\boutfitter\b|rental shop|\brentals\b\s*(shop|store|co\b)/i;
+
 const TOOL_CONSTRUCTION_RE = /\b(tool|construction|contractor|heavy|industrial|forklift|lift|generator|tractor|equipment)\b/i;
-const PARTY_EVENT_RE = /\b(party|event|wedding|chair|table|bounce|linen)\b/i;
+// Phrase-based (not bare single words) so it no longer trips on rec names that merely
+// contain "event" or "table" (e.g. "Pool Table Services"), while still catching every
+// real party/event-rental shop ("Party Rentals", "Event Rentals", "Tent Rental").
+const PARTY_EVENT_RE = /party rental|event rental|tent rental|party suppl|event suppl|\bwedding\b|bounce house|photo booth|\b(tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?)\b/i;
 const PASSENGER_CAR_RE = /\b(rent[-\s]?a[-\s]?car|car rental|passenger car|sedan|suv rental|airport rental)\b/i;
 const POWERSPORTS_RE = /powersport|atv|utv|jeep|motorcycle|dirt bike|snowmobile|rzr|side by side|4x4|4wd|off[-\s]?road|overland/i;
 const REC_NAME_SIGNAL = /boat|ski|snow|bike|kayak|paddle|watersport|marina|camp|outdoor|trail|climb|raft|atv|utv|jeep|snowmobile|surf|foil|dive|scuba|golf/i;
+const FIREARM_NAME = /\b(gun|guns|firearm|firearms|arms|ammo|ammunition)\b/i;
+const ARCHERY_NAME = /\b(archery|bows?|crossbows?|compound bow|recurve)\b/i;
+const PUBLIC_RECREATION_SITE_NAME = /\b(disc golf course|bike park|trail|trailhead|athletic field|sports field|boat ramp|sno-?park)\b/i;
+const DISC_GOLF_COURSE_NAME = /\bdisc golf course\b/i;
 
 const DOMAIN_AGG_BLOCK = [
   "outdoorsy.com",
@@ -298,6 +388,22 @@ const DOMAIN_AGG_BLOCK = [
   "booking.com",
   "redawning.com",
   "evolve.com",
+];
+
+const BOOKING_PLATFORM_DOMAINS = [
+  "fareharbor.com",
+  "peek.com",
+  "peekpro.com",
+  "rezdy.com",
+  "checkfront.com",
+  "xola.com",
+  "bookeo.com",
+  "bookwhen.com",
+  "exploreorigin.com",
+  "trytn.com",
+  "trekksoft.com",
+  "activitybridge.com",
+  "lightspeedvt.com",
 ];
 
 const AGG_NAME = /chamber of commerce|merchants association|visitor center|visitors bureau|riverwalk merchants/i;
@@ -330,6 +436,15 @@ const LODGING_NOISE_TYPES = new Set([
   "mobile_home_park",
   "motel",
   "private_guest_room",
+]);
+const NO_WEBSITE_RETAIL_NOISE_TYPES = new Set([
+  "asian_grocery_store",
+  "clothing_store",
+  "discount_store",
+  "gift_shop",
+  "ice_cream_shop",
+  "shoe_store",
+  "thrift_store",
 ]);
 
 const oldByDomain = new Map();
@@ -455,6 +570,7 @@ async function liveSiteCheck(rawUrl) {
       }
 
       const finalUrl = res.url || url;
+      const headStatus = res.status;
       if (!/^https:\/\//i.test(finalUrl)) {
         const result = {
           outcome: "needs_review",
@@ -468,7 +584,18 @@ async function liveSiteCheck(rawUrl) {
       }
 
       let body = "";
-      const contentType = res.headers.get("content-type") || "";
+      let contentType = res.headers.get("content-type") || "";
+      if (res.bodyUsed === false && (!contentType || contentType.includes("text/html"))) {
+        try {
+          const bodyRes = await fetchSite(finalUrl, "GET");
+          if (bodyRes.ok) {
+            res = bodyRes;
+            contentType = res.headers.get("content-type") || "";
+          }
+        } catch {
+          // HEAD liveness is still useful; body inspection is a best-effort refinement.
+        }
+      }
       if (res.bodyUsed === false && contentType.includes("text/html")) {
         try {
           body = (await res.text()).slice(0, 50000);
@@ -476,13 +603,13 @@ async function liveSiteCheck(rawUrl) {
           body = "";
         }
       }
-      if (/domain for sale|buy this domain|parkingcrew|hugedomains|sedo|afternic|this domain is parked/i.test(body)) {
+      if (/domain for sale|buy this domain|parkingcrew|hugedomains|sedo|afternic|this domain is parked|coming soon|website coming soon|under construction/i.test(body)) {
         const result = {
           outcome: "needs_review",
-          reason: "gate5:parked_domain",
-          note: "Site appears parked or for sale.",
+          reason: "gate5:placeholder_or_parked_site",
+          note: "Site appears parked, under construction, or placeholder-only.",
           final_url: finalUrl,
-          http_status: res.status,
+          http_status: res.status || headStatus,
         };
         gate5Cache[cacheKey] = result;
         return result;
@@ -491,9 +618,9 @@ async function liveSiteCheck(rawUrl) {
       const result = {
         outcome: "live",
         reason: "gate5:live_https",
-        note: `Live HTTPS site (${res.status}).`,
+        note: `Live HTTPS site (${res.status || headStatus}).`,
         final_url: finalUrl,
-        http_status: res.status,
+        http_status: res.status || headStatus,
       };
       gate5Cache[cacheKey] = result;
       return result;
@@ -552,6 +679,26 @@ function setDecision(rec, status, reason, note) {
   if (note) rec.note = note;
 }
 
+// Gate 1 recall guard. A name-regex match must never HARD-delete (out_of_scope) a row
+// whose Places category is unambiguously recreational; and for SOFT/generic words, it
+// must also not delete a row whose name carries a rec word. Those route to needs_review
+// instead, so a real operator is flagged for a human rather than silently removed.
+function gate1Reject(rec, o, hay, hardReason, { soft = false } = {}) {
+  const recCat = isRecCategory(o);
+  const recSig = REC_NAME_SIGNAL.test(hay);
+  if (recCat || (soft && recSig)) {
+    rec.review_lane = "operator";
+    setDecision(
+      rec,
+      "needs_review",
+      `${hardReason}_rec_conflict`,
+      "Out-of-domain name pattern, but the Places category / rec name signal disagrees; review before excluding.",
+    );
+  } else {
+    setDecision(rec, "out_of_scope", hardReason);
+  }
+}
+
 async function classify(o) {
   const rec = baseRecord(o);
   const trace = rec.decision_trace;
@@ -575,12 +722,24 @@ async function classify(o) {
     if (isLodgingHint) {
       // Let Gate 3 route lodging to needs_review. Vacation-rental titles often
       // contain words like ski, bike, table, or party without being operators.
-    } else if (STRONG_NAME_BLOCK.some((re) => re.test(hay))) {
-      setDecision(rec, "out_of_scope", "gate1:strong_blocklist");
-    } else if (TOOL_CONSTRUCTION_RE.test(hay) && !inRecActivity && /rent/i.test(hay)) {
-      setDecision(rec, "out_of_scope", "gate1:construction_tool_rental");
+    } else if (STRONG_NAME_BLOCK_HARD.some((re) => re.test(hay))) {
+      gate1Reject(rec, o, hay, "gate1:strong_blocklist", { soft: false });
+    } else if (STRONG_NAME_BLOCK_SOFT.some((re) => re.test(hay))) {
+      gate1Reject(rec, o, hay, "gate1:soft_blocklist", { soft: true });
+    } else if (TOOL_CONSTRUCTION_RE.test(hay) && /rent/i.test(hay)) {
+      if (inRecActivity || hasRecNameSignal || isRecCategory(o)) {
+        rec.review_lane = "operator";
+        setDecision(
+          rec,
+          "needs_review",
+          "gate1:construction_tool_rental_rec_query",
+          "Tool/construction rental signal appeared on a recreation query; review before excluding.",
+        );
+      } else {
+        setDecision(rec, "out_of_scope", "gate1:construction_tool_rental");
+      }
     } else if (PARTY_EVENT_RE.test(hay) && !hasRecNameSignal) {
-      setDecision(rec, "out_of_scope", "gate1:party_event_rental");
+      gate1Reject(rec, o, hay, "gate1:party_event_rental", { soft: false });
     } else if (/^car rental agency$/i.test(o.primary_type || "") && !POWERSPORTS_RE.test(hay)) {
       if (PASSENGER_CAR_RE.test(hay)) setDecision(rec, "out_of_scope", "gate1:passenger_car_rental");
       else setDecision(rec, "needs_review", "gate1:ambiguous_car_rental_agency", "Car-rental primary type without a strong passenger-car-only signal.");
@@ -601,30 +760,106 @@ async function classify(o) {
   if (!rec.status) {
     const host = normDomain(o.website);
     const agg = DOMAIN_AGG_BLOCK.find((d) => domainMatches(host, d));
+    const booking = BOOKING_PLATFORM_DOMAINS.find((d) => domainMatches(host, d));
     const isLodging = o.primary_type_raw && LODGING_NOISE_TYPES.has(o.primary_type_raw);
     const isPoi =
       POI_PRIMARY_RAW.has(o.primary_type_raw) ||
       POI_PRIMARY_DISPLAY.test(o.primary_type || "") ||
       POI_NAME.test(o.name || "");
-    if (agg) {
-      setDecision(rec, "needs_review", `gate3:aggregator_domain:${agg}`, "Marketplace/directory listing; review can recover the first-party operator.");
-    } else if (AGG_NAME.test(o.name || "")) {
-      setDecision(rec, o.rental_signal ? "needs_review" : "out_of_scope", "gate3:aggregator_name");
-    } else if (isLodging) {
-      // Recall-first: lodging is NEVER rejected (a lodge/resort can rent guest gear).
-      // But the sweep's lodging bucket is dominated by website-less vacation-rental
-      // listings ("2 Mi to Ski Resort", "Condo w/ Pool"). Lane those separately so they
-      // don't bury the real operator-review queue. Lodging WITH a website stays in the
-      // operator lane (a resort with a first-party site is a likelier real renter).
-      rec.review_lane = o.website ? "operator" : "lodging";
+    const noWebsite = !o.website;
+    if (booking) {
       setDecision(
         rec,
         "needs_review",
-        "gate3:lodging_primary_type",
-        rec.review_lane === "lodging"
-          ? "Lodging listing, no first-party website (vacation-rental pattern); parked in lodging review lane, not rejected."
-          : "Lodging primary type with a website can still hide guest gear rentals; review instead of reject.",
+        `gate3:booking_platform_domain:${booking}`,
+        "Booking-platform URL can represent a real operator, but should be reviewed for first-party evidence.",
       );
+    } else if (agg) {
+      setDecision(rec, "needs_review", `gate3:aggregator_domain:${agg}`, "Marketplace/directory listing; review can recover the first-party operator.");
+    } else if (FIREARM_NAME.test(o.name || "") && !ARCHERY_NAME.test(o.name || "")) {
+      // hunting.md §0.2: firearms are out of scope, BUT a firearm/"outfitter" business
+      // may also rent IN-scope hunting gear (optics, bows, blinds, packs). The spec
+      // routes firearm-only -> no_rentals and mixed/unsure -> needs_review, and that
+      // determination needs the website (Pass A). So do NOT hard-delete on the name —
+      // flag for review so a real hunting-gear renter is never silently excluded.
+      setDecision(
+        rec,
+        "needs_review",
+        "gate3:firearm_business_review",
+        "Firearm/ammo name. Firearms are out of scope, but a hunting outfitter may also rent in-scope optics/bows/blinds (hunting.md §0.2); review the site before excluding.",
+      );
+    } else if (
+      noWebsite &&
+      o.primary_type_raw &&
+      NO_WEBSITE_RETAIL_NOISE_TYPES.has(o.primary_type_raw) &&
+      !RENT_SHOP_NAME.test(o.name || "") &&
+      !REC_NAME_SIGNAL.test(o.name || "")
+    ) {
+      // Recall guard: a rec name word (ski/board/surf/bike/...) means this could be a real
+      // gear shop that Google miscategorized as clothing/shoe/etc — never auto-reject those.
+      setDecision(
+        rec,
+        "out_of_scope",
+        "gate3:no_website_retail_noise",
+        "Website-less general retail listing with no rental-shop or recreation name signal.",
+      );
+    } else if (noWebsite && ["athletic_field", "park"].includes(o.primary_type_raw || "") && DISC_GOLF_COURSE_NAME.test(o.name || "")) {
+      // Places often returns the course itself for "disc golf rental". A website-less
+      // public/private course listing is not a rental operator; a real pro shop/rental
+      // desk needs its own commercial listing or website evidence.
+      setDecision(
+        rec,
+        "not_an_operator",
+        "gate3:disc_golf_course_no_website",
+        "Website-less disc golf course listing surfaced by a rental query; not a rental operator.",
+      );
+    } else if (noWebsite && ["athletic_field", "park"].includes(o.primary_type_raw || "") && PUBLIC_RECREATION_SITE_NAME.test(o.name || "") && !RENT_SHOP_NAME.test(o.name || "")) {
+      // A public course/park/trail venue. But a bike park or course pro-shop CAN rent, so
+      // respect the rental signal exactly like the sibling public_poi branch below: only
+      // a no-rental-signal venue is auto-rejected; a rental signal routes to review.
+      setDecision(
+        rec,
+        o.rental_signal ? "needs_review" : "not_an_operator",
+        o.rental_signal ? "gate3:public_recreation_site_rental_signal" : "gate3:public_recreation_site_no_website",
+        o.rental_signal
+          ? "Public recreation site/course, but it carries a rental signal (a bike park or pro-shop may rent); review before excluding."
+          : "Website-less public recreation site/course with no rental signal; not a rental operator listing.",
+      );
+    } else if (AGG_NAME.test(o.name || "")) {
+      setDecision(rec, o.rental_signal ? "needs_review" : "out_of_scope", "gate3:aggregator_name");
+    } else if (isLodging) {
+      // The sweep already isolates these as lodging_excluded_records. The data shows the
+      // bucket is entirely website-less vacation-rental listings ("2 Mi to Ski Resort",
+      // "Condo w/ Pool", "Ski Lease"): 0 of 1061 carry a first-party website. A genuine
+      // gear-rental operator does not appear as a website-less lodging row. So:
+      //   - WITH a website        -> operator review (a resort site can hide guest gear).
+      //   - gear-rental-SHOP name -> review (recall safety valve; ~3 rows, all benign).
+      //   - otherwise             -> auto-reject as a vacation-rental listing (not an
+      //                              operator), keeping it out of the human review queue.
+      if (o.website) {
+        rec.review_lane = "operator";
+        setDecision(
+          rec,
+          "needs_review",
+          "gate3:lodging_with_website",
+          "Lodging primary type WITH a first-party website can still hide guest gear rentals; review instead of reject.",
+        );
+      } else if (RENT_SHOP_NAME.test(o.name || "")) {
+        rec.review_lane = "lodging";
+        setDecision(
+          rec,
+          "needs_review",
+          "gate3:lodging_possible_gear_shop",
+          "Lodging category but the name reads like a gear-rental shop; kept for review as a recall safeguard.",
+        );
+      } else {
+        setDecision(
+          rec,
+          "not_an_operator",
+          "gate3:vacation_rental_listing",
+          "Website-less lodging listing (sweep-excluded vacation rental); auto-rejected — not a rental operator.",
+        );
+      }
     } else if (!o.website && isPoi && !RENTAL_IN_NAME.test(o.name || "")) {
       setDecision(rec, o.rental_signal ? "needs_review" : "not_an_operator", "gate3:public_poi_no_website");
     }
@@ -632,13 +867,25 @@ async function classify(o) {
   }
 
   if (!rec.status) {
-    const dm = dedupMatch(o);
-    if (dm.level === "duplicate") {
-      setDecision(rec, "duplicate", `gate4:${dm.by}`);
-      rec.dedup_note = dm.by;
-    } else if (dm.level === "review") {
-      setDecision(rec, "needs_review", `gate4:${dm.by}`, dm.note);
-      rec.dedup_note = dm.note;
+    if (o.possible_duplicate_of) {
+      rec.review_lane = "duplicate";
+      setDecision(
+        rec,
+        "needs_review",
+        "gate4:sweep_possible_duplicate",
+        `Sweep flagged this as a possible duplicate of ${o.possible_duplicate_of}; review before skipping.`,
+      );
+      rec.dedup_note = `possible_duplicate_of:${o.possible_duplicate_of}`;
+    } else {
+      const dm = dedupMatch(o);
+      if (dm.level === "duplicate") {
+        setDecision(rec, "duplicate", `gate4:${dm.by}`);
+        rec.dedup_note = dm.by;
+      } else if (dm.level === "review") {
+        if (dm.by.startsWith("shared-domain:") || dm.by.startsWith("verified-slug:")) rec.review_lane = "duplicate";
+        setDecision(rec, "needs_review", `gate4:${dm.by}`, dm.note);
+        rec.dedup_note = dm.note;
+      }
     }
     trace.push({ gate: 4, result: rec.status || "pass", reason: rec.reason || "gate4:no_duplicate", note: rec.dedup_note });
   }
@@ -678,6 +925,49 @@ function priorityScore(r) {
   return tierScore + modeScore + rentalScore + reviewScore;
 }
 
+async function runFixtureTests() {
+  if (!exists(fixturesPath)) {
+    console.error(`${fixturesPath} not found.`);
+    return 1;
+  }
+  const fixtures = read(fixturesPath);
+  let failures = 0;
+  for (const fixture of fixtures) {
+    const rec = await classify(fixture.row || {});
+    const errors = [];
+    if (fixture.expect_status && rec.status !== fixture.expect_status) {
+      errors.push(`expected status ${fixture.expect_status}, got ${rec.status}`);
+    }
+    if (fixture.allowed_statuses && !fixture.allowed_statuses.includes(rec.status)) {
+      errors.push(`status ${rec.status} not in allowed set ${fixture.allowed_statuses.join(",")}`);
+    }
+    if (fixture.forbidden_statuses && fixture.forbidden_statuses.includes(rec.status)) {
+      errors.push(`status ${rec.status} is forbidden`);
+    }
+    if (fixture.expect_review_lane && rec.review_lane !== fixture.expect_review_lane) {
+      errors.push(`expected review_lane ${fixture.expect_review_lane}, got ${rec.review_lane}`);
+    }
+    if (fixture.reason_prefix && !String(rec.reason || "").startsWith(fixture.reason_prefix)) {
+      errors.push(`expected reason prefix ${fixture.reason_prefix}, got ${rec.reason}`);
+    }
+
+    if (errors.length) {
+      failures++;
+      console.log(`FAIL ${fixture.id || fixture.row?.name || "(unnamed)"}: ${errors.join("; ")}`);
+      console.log(`  actual: ${rec.status} | ${rec.reason} | lane=${rec.review_lane}`);
+    } else {
+      console.log(`PASS ${fixture.id || fixture.row?.name || "(unnamed)"}: ${rec.status} | ${rec.reason} | lane=${rec.review_lane}`);
+    }
+  }
+  console.log("--------------------------------------");
+  console.log(`${fixtures.length - failures}/${fixtures.length} fixtures passed`);
+  return failures ? 1 : 0;
+}
+
+if (TEST_FIXTURES) {
+  process.exit(await runFixtureTests());
+}
+
 const inputRows = loadInputRows();
 const results = [];
 for (const row of inputRows) {
@@ -708,13 +998,18 @@ const byPriority = (a, b) =>
 // lodging/vacation-rental listings get their own queue so they don't bury the real
 // operator candidates a human actually needs to triage.
 const allNeedsReview = allResults.filter((r) => r.status === "needs_review");
-const needsReview = allNeedsReview.filter((r) => r.review_lane !== "lodging").sort(byPriority);
+const needsReview = allNeedsReview.filter((r) => !["lodging", "duplicate"].includes(r.review_lane)).sort(byPriority);
 needsReview.forEach((r, i) => {
   r.rank = i + 1;
 });
 
 const lodgingReview = allNeedsReview.filter((r) => r.review_lane === "lodging").sort(byPriority);
 lodgingReview.forEach((r, i) => {
+  r.rank = i + 1;
+});
+
+const duplicateReview = allNeedsReview.filter((r) => r.review_lane === "duplicate").sort(byPriority);
+duplicateReview.forEach((r, i) => {
   r.rank = i + 1;
 });
 
@@ -772,57 +1067,57 @@ const term_contribution_after_gates = [...termStats.values()]
       b.input_count - a.input_count,
   );
 
-fs.writeFileSync(
-  SEED + "sweep_gate_results.json",
-  JSON.stringify(
-    {
-      ranAt: new Date().toISOString(),
-      mode: RUN_GATE5 ? "gates_0_5_live_site" : "gates_0_4_no_network",
-      recall_policy: "hard-reject only on strong evidence; ambiguous rows route to needs_review",
-      input_count: inputRows.length,
-      classified_count: allResults.length,
-      sweep_input_breakdown: {
-        operators: (sweepJson.operators || []).length,
-        closed_records: (sweepJson.closed_records || []).length,
-        lodging_excluded_records: (sweepJson.lodging_excluded_records || []).length,
-        gate_ladder_input_records: (sweepJson.gate_ladder_input_records || []).length,
-      },
-      aoi: {
-        corridors: AOI_RECTS.length,
-        excluded_margins: AOI_EXCLUDE.length,
-        seed_tiles: aoiTiles.length,
-        seed_cell_km: GRID_CONFIG.seedCellKm,
-        min_cell_km: GRID_CONFIG.minCellKm,
-        edge_review_m: AOI_EDGE_REVIEW_M,
-        far_reject_m: AOI_FAR_REJECT_M,
-      },
-      tally,
-      reason_counts: reasonCounts,
-      survivor_count: survivors.length,
-      needs_review_count: needsReview.length,
-      lodging_review_count: lodgingReview.length,
-      reject_count: rejects.length,
-      term_contribution_after_gates,
-      results: allResults,
-      survivor_queue: survivors,
-      needs_review_queue: needsReview,
-      lodging_review_queue: lodgingReview,
-      reject_queue: rejects,
-    },
-    null,
-    2,
-  ),
-);
+const output = {
+  ranAt: new Date().toISOString(),
+  mode: RUN_GATE5 ? "gates_0_5_live_site" : "gates_0_4_no_network",
+  recall_policy: "hard-reject only on strong evidence; ambiguous rows route to needs_review",
+  input_count: inputRows.length,
+  classified_count: allResults.length,
+  sweep_input_breakdown: {
+    operators: (sweepJson.operators || []).length,
+    closed_records: (sweepJson.closed_records || []).length,
+    lodging_excluded_records: (sweepJson.lodging_excluded_records || []).length,
+    gate_ladder_input_records: (sweepJson.gate_ladder_input_records || []).length,
+  },
+  aoi: {
+    corridors: AOI_RECTS.length,
+    excluded_margins: AOI_EXCLUDE.length,
+    seed_tiles: aoiTiles.length,
+    seed_cell_km: GRID_CONFIG.seedCellKm,
+    min_cell_km: GRID_CONFIG.minCellKm,
+    edge_review_m: AOI_EDGE_REVIEW_M,
+    far_reject_m: AOI_FAR_REJECT_M,
+  },
+  tally,
+  reason_counts: reasonCounts,
+  survivor_count: survivors.length,
+  needs_review_count: needsReview.length,
+  lodging_review_count: lodgingReview.length,
+  duplicate_review_count: duplicateReview.length,
+  reject_count: rejects.length,
+  term_contribution_after_gates,
+  results: allResults,
+  survivor_queue: survivors,
+  needs_review_queue: needsReview,
+  lodging_review_queue: lodgingReview,
+  duplicate_review_queue: duplicateReview,
+  reject_queue: rejects,
+};
 
-writeCsv("sweep_gate_survivors.csv", survivors);
-writeCsv("sweep_gate_needs_review.csv", needsReview);
-writeCsv("sweep_gate_lodging_review.csv", lodgingReview);
-writeCsv("sweep_gate_rejects.csv", rejects);
-if (RUN_GATE5) fs.writeFileSync(SEED + gate5CachePath, JSON.stringify(gate5Cache, null, 2));
+if (!PREVIEW) {
+  fs.writeFileSync(SEED + "sweep_gate_results.json", JSON.stringify(output, null, 2));
+  writeCsv("sweep_gate_survivors.csv", survivors);
+  writeCsv("sweep_gate_needs_review.csv", needsReview);
+  writeCsv("sweep_gate_lodging_review.csv", lodgingReview);
+  writeCsv("sweep_gate_duplicate_review.csv", duplicateReview);
+  writeCsv("sweep_gate_rejects.csv", rejects);
+  if (RUN_GATE5) fs.writeFileSync(SEED + gate5CachePath, JSON.stringify(gate5Cache, null, 2));
+}
 
 const order = ["out_of_region", "out_of_scope", "out_of_business", "not_an_operator", "duplicate", "needs_review", "survivor"];
 console.log("\n=== GATE LADDER FUNNEL ===");
 console.log("mode:", RUN_GATE5 ? "Gates 0-5 with live-site checks" : "Gates 0-4, no network");
+if (PREVIEW) console.log("preview: no output files written");
 console.log("input rows:", inputRows.length);
 for (const s of order) if (tally[s]) console.log(String(tally[s]).padStart(5), s);
 const other = Object.keys(tally).filter((k) => !order.includes(k));
@@ -831,5 +1126,14 @@ console.log("--------------------------------------");
 console.log("survivors -> Pass A triage:", survivors.length);
 console.log("needs_review (operator lane):", needsReview.length);
 console.log("needs_review (lodging lane):", lodgingReview.length);
+console.log("needs_review (duplicate lane):", duplicateReview.length);
 console.log("rejects/skips:", rejects.length);
-console.log("wrote sweep_gate_results.json + CSV queues");
+if (needsReview.length) {
+  const byReason = {};
+  for (const r of needsReview) byReason[r.reason] = (byReason[r.reason] || 0) + 1;
+  console.log("-- operator-lane review reasons --");
+  for (const [reason, n] of Object.entries(byReason).sort((a, b) => b[1] - a[1])) {
+    console.log(String(n).padStart(5), reason);
+  }
+}
+console.log(PREVIEW ? "no files written" : "wrote sweep_gate_results.json + CSV queues");
