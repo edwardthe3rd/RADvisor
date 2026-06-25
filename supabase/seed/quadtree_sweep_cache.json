@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-06-24T21:30:30.279Z",
+  "updatedAt": "2026-06-24T22:56:36.347Z",
   "versions": {
     "search": "3b75ca691288",
     "details": "b14603566b20"
@@ -159580,7 +159580,1168 @@
         },
         "primaryType": "sporting_goods_store"
       }
-    ]
+    ],
+    "3b75ca691288::service-area::38.9356_-120.0225_39.0441_-119.8833::alpine touring ski rental": [
+      {
+        "id": "ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "store",
+          "manufacturer",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "3430 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9454371,
+          "longitude": -119.9662772
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3684185122118438353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Sierra Ski & Cycle Works",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      }
+    ],
+    "3b75ca691288::service-area::38.9356_-120.0225_39.0441_-119.8833::snowmobile rental": [
+      {
+        "id": "ChIJ7dvAtqubmYARB5Qvm7DHvUE",
+        "types": [
+          "tourist_information_center",
+          "tour_agency",
+          "travel_agency",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "760 US-50, Zephyr Cove, NV 89448, USA",
+        "location": {
+          "latitude": 39.0056771,
+          "longitude": -119.9472566
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4737161944395387911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Zephyr Cove Snowmobiling Tours",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJfy2gDdKNmYARkg65MPDmlQ4",
+        "types": [
+          "tour_agency",
+          "travel_agency",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "760 US-50, Zephyr Cove, NV 89448, USA",
+        "location": {
+          "latitude": 39.0058836,
+          "longitude": -119.94721100000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1051000007344852626&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Lake Tahoe Adventures",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Tour Agency",
+          "languageCode": "en-US"
+        },
+        "primaryType": "tour_agency",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJDaVqy8ObmYARzHjV519rv7c",
+        "types": [
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "308 Dorla Ct, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.9826919,
+          "longitude": -119.94303819999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13240419489148139724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Tahoe Toys & Adventures LLC",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJV_LJMpCbmYARqs2mHwt-ZA4",
+        "types": [
+          "off_roading_area",
+          "tourist_attraction",
+          "adventure_sports_center",
+          "sporting_goods_store",
+          "tour_agency",
+          "travel_agency",
+          "sports_complex",
+          "sports_activity_location",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "475 Andria Dr, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.9940923,
+          "longitude": -119.89564840000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1037092400442822058&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Full Access Tahoe",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      }
+    ],
+    "3b75ca691288::standard::38.9356_-120.0225_39.0441_-119.8833::sled rental": [
+      {
+        "id": "ChIJLwHVPcePmYARl-yj-NLAYTY",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "3131 Harrison Ave, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9424572,
+          "longitude": -119.97766999999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3918625163136199831&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Tahoe Bike Company",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJz9w2VrePmYARDBJh0xkdUUc",
+        "types": [
+          "sporting_goods_store",
+          "bicycle_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "3535 Lake Tahoe Blvd #120, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9472036,
+          "longitude": -119.96301809999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5138920646564188684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Mountain West",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJOTO1DhKQmYARgTor_IoKrSY",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1098 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9455592,
+          "longitude": -119.9557682
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2786895336464661121&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Rock House Discount Ski & Snowboard Rentals",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJJZA09Q2QmYARPNHmaHVFSXU",
+        "types": [
+          "ski_resort",
+          "sporting_goods_store",
+          "sports_activity_location",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1093 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9459501,
+          "longitude": -119.95527039999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8451362546310893884&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "The Ski Renter",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJqbtmTxKQmYARYoi3TLVlolA",
+        "types": [
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1144 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9441938,
+          "longitude": -119.95478840000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5810318298611943522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Rip N Willies Ski & Snowboard Rental Shop",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJ7dvAtqubmYARB5Qvm7DHvUE",
+        "types": [
+          "tourist_information_center",
+          "tour_agency",
+          "travel_agency",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "760 US-50, Zephyr Cove, NV 89448, USA",
+        "location": {
+          "latitude": 39.0056771,
+          "longitude": -119.9472566
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=4737161944395387911&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Zephyr Cove Snowmobiling Tours",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJfy2gDdKNmYARkg65MPDmlQ4",
+        "types": [
+          "tour_agency",
+          "travel_agency",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "760 US-50, Zephyr Cove, NV 89448, USA",
+        "location": {
+          "latitude": 39.0058836,
+          "longitude": -119.94721100000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1051000007344852626&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Lake Tahoe Adventures",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Tour Agency",
+          "languageCode": "en-US"
+        },
+        "primaryType": "tour_agency"
+      },
+      {
+        "id": "ChIJDaVqy8ObmYARzHjV519rv7c",
+        "types": [
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "308 Dorla Ct, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.9826919,
+          "longitude": -119.94303819999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13240419489148139724&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Tahoe Toys & Adventures LLC",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJM967AtuRmYARFN3Q1kk8TMQ",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4000 Lake Tahoe Blvd Ste 22b, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9542448,
+          "longitude": -119.9449078
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14144746817498176788&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Sports Ltd. Rentals",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJNd1MfXaQmYARGUhCfr5Mou8",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4045 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9562465,
+          "longitude": -119.94432470000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17267448302337673241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Powder House Ski and Snowboard Main Store",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJqbAd6naQmYARzmDmLE2LviY",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1001 Heavenly Village Way #20, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9560962,
+          "longitude": -119.94372080000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2791821982598324430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Powder House Ski and Snowboard At The Gondola",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      },
+      {
+        "id": "ChIJb7h4oHaQmYAR3aCog1QfgtE",
+        "types": [
+          "sporting_goods_store",
+          "bicycle_store",
+          "shoe_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4000 Lake Tahoe Blvd Ste #7, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9535687,
+          "longitude": -119.9431122
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15096663348745904349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Tahoe Sports Ltd.",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJb-R5QcGRmYARL0o6_l4w_w8",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "4080 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9568261,
+          "longitude": -119.9427104
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1152693214180428335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Heavenly Sports - Gondola Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJy9ppqHeQmYARudCSM07YImA",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4100 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9565188,
+          "longitude": -119.94184290000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6927337007233552569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Gondola Ski + Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJPRErSHaQmYAR6GJasIPw_so",
+        "types": [
+          "ski_resort",
+          "sporting_goods_store",
+          "sports_activity_location",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "4111 Lake Tahoe Blvd #4, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.936464,
+          "longitude": -119.909967
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14627393088136045288&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Heavenly Sports - Tamarack Lodge",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store"
+      },
+      {
+        "id": "ChIJRwzm8KuQmYARyjfiJy1ABWs",
+        "types": [
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "237 Tramway Dr, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.970418599999995,
+          "longitude": -119.8864421
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7711640499628685258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "CV Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service"
+      }
+    ],
+    "3b75ca691288::service-area::38.9356_-120.0225_39.0441_-119.8833::snowshoe rental": [
+      {
+        "id": "ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "3430 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9454371,
+          "longitude": -119.9662772
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=3684185122118438353&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Sierra Ski & Cycle Works",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJ2YMdXQSQmYARX77l7FKok-A",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "3433 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.945923,
+          "longitude": -119.9660131
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=16182462960187588191&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Pyramid Peak Sports& Bike rentals",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJz9w2VrePmYARDBJh0xkdUUc",
+        "types": [
+          "sporting_goods_store",
+          "bicycle_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "3535 Lake Tahoe Blvd #120, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9472036,
+          "longitude": -119.96301809999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5138920646564188684&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Mountain West",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJWWOPcw-QmYARhEoevVFqLRs",
+        "types": [
+          "sporting_goods_store",
+          "clothing_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "3542 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.94671400000001,
+          "longitude": -119.9616477
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1958338312273808004&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "The Village Board Shop",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJOTO1DhKQmYARgTor_IoKrSY",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1098 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9455592,
+          "longitude": -119.9557682
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2786895336464661121&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Rock House Discount Ski & Snowboard Rentals",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJJZA09Q2QmYARPNHmaHVFSXU",
+        "types": [
+          "ski_resort",
+          "sporting_goods_store",
+          "sports_activity_location",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1093 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9459501,
+          "longitude": -119.95527039999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=8451362546310893884&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "The Ski Renter",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJqbtmTxKQmYARYoi3TLVlolA",
+        "types": [
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1144 Ski Run Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9441938,
+          "longitude": -119.95478840000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=5810318298611943522&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Rip N Willies Ski & Snowboard Rental Shop",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJjTEeMkCQmYAROcOVmckxT1s",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "3672 Verdon Ln, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.937663,
+          "longitude": -119.94840049999999
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6579532322546500409&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Winter Wonderland Ski Shop",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJM967AtuRmYARFN3Q1kk8TMQ",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4000 Lake Tahoe Blvd Ste 22b, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9542448,
+          "longitude": -119.9449078
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=14144746817498176788&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Sports Ltd. Rentals",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJNd1MfXaQmYARGUhCfr5Mou8",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4045 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9562465,
+          "longitude": -119.94432470000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17267448302337673241&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Powder House Ski and Snowboard Main Store",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJ03PeAneQmYARisbooJUWr4c",
+        "types": [
+          "sportswear_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1001 Heavenly Village Way, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.95599,
+          "longitude": -119.94375950000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=9777058147950184074&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Powder House Ski & Board: Pro Snow",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJqbAd6naQmYARzmDmLE2LviY",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "1001 Heavenly Village Way #20, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9560962,
+          "longitude": -119.94372080000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=2791821982598324430&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Powder House Ski and Snowboard At The Gondola",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJJ8NWXnaQmYARFeEzIbBrhr0",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.956497999999996,
+          "longitude": -119.94347
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=13656721324263072021&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Ski Demo Center",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJPRErSHaQmYARa7QpkWhOUO0",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4118 Lake Tahoe Blvd #8, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9577479,
+          "longitude": -119.94274270000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17100253996144768107&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Showcase - Heavenly",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJb7h4oHaQmYAR3aCog1QfgtE",
+        "types": [
+          "sporting_goods_store",
+          "bicycle_store",
+          "shoe_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4000 Lake Tahoe Blvd Ste #7, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9535687,
+          "longitude": -119.9431122
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=15096663348745904349&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Tahoe Sports Ltd.",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJb-R5QcGRmYARL0o6_l4w_w8",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "4080 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9568261,
+          "longitude": -119.9427104
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=1152693214180428335&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Heavenly Sports - Gondola Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJv-yKNHaQmYARw929njJWAu4",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4118 Lake Tahoe Blvd #2, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9580288,
+          "longitude": -119.9424248
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17150365106391866819&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Heavenly Sports - Cecil's Plaza",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJy9ppqHeQmYARudCSM07YImA",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "4100 Lake Tahoe Blvd, South Lake Tahoe, CA 96150, USA",
+        "location": {
+          "latitude": 38.9565188,
+          "longitude": -119.94184290000001
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=6927337007233552569&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Gondola Ski + Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Sporting Goods Store",
+          "languageCode": "en-US"
+        },
+        "primaryType": "sporting_goods_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJFZ9-H4eamYARz7y9J6SiK_k",
+        "types": [
+          "bicycle_store",
+          "sporting_goods_store",
+          "clothing_store",
+          "manufacturer",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "259 Kingsbury Grade Rd, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.9680454,
+          "longitude": -119.9300637
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=17954623165367696591&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Shoreline of Tahoe",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Bicycle Shop",
+          "languageCode": "en-US"
+        },
+        "primaryType": "bicycle_store",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJjU5vgAOQmYARZWhfi_FXn7A",
+        "types": [
+          "sporting_goods_store",
+          "store",
+          "point_of_interest",
+          "service",
+          "establishment"
+        ],
+        "formattedAddress": "276 NV-207 Ste 104, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.9689469,
+          "longitude": -119.9285505
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=12726987766909331557&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "Ski Butlers Heavenly/South Lake Tahoe",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      },
+      {
+        "id": "ChIJRwzm8KuQmYARyjfiJy1ABWs",
+        "types": [
+          "service",
+          "point_of_interest",
+          "establishment"
+        ],
+        "formattedAddress": "237 Tramway Dr, Stateline, NV 89449, USA",
+        "location": {
+          "latitude": 38.970418599999995,
+          "longitude": -119.8864421
+        },
+        "googleMapsUri": "https://maps.google.com/?cid=7711640499628685258&g_mp=Cidnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLlNlYXJjaFRleHQQAhgEIAA",
+        "businessStatus": "OPERATIONAL",
+        "displayName": {
+          "text": "CV Sports",
+          "languageCode": "en"
+        },
+        "primaryTypeDisplayName": {
+          "text": "Services",
+          "languageCode": "en-US"
+        },
+        "primaryType": "service",
+        "pureServiceAreaBusiness": false
+      }
+    ],
+    "3b75ca691288::service-area::39.2611_-119.8833_39.3697_-119.7441::canoe rental": [],
+    "3b75ca691288::service-area::39.2611_-119.8833_39.3697_-119.7441::pontoon rental": [],
+    "3b75ca691288::service-area::39.2611_-119.8833_39.3697_-119.7441::jet ski rental": []
   },
   "placeDetails": {
     "b14603566b20::ChIJH-UJeuTzmYARQDbWPlfSFvE": {
@@ -189186,6 +190347,340 @@
         "languageCode": "en-US"
       },
       "primaryType": "travel_agency",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJ7dvAtqubmYARB5Qvm7DHvUE": {
+      "id": "ChIJ7dvAtqubmYARB5Qvm7DHvUE",
+      "types": [
+        "tourist_information_center",
+        "tour_agency",
+        "travel_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(800) 238-2463",
+      "formattedAddress": "760 US-50, Zephyr Cove, NV 89448, USA",
+      "location": {
+        "latitude": 39.0056771,
+        "longitude": -119.9472566
+      },
+      "rating": 4,
+      "googleMapsUri": "https://maps.google.com/?cid=4737161944395387911&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "https://www.zephyrcove.com/snowmobiles/tahoe-snowmobiling-experience?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 51,
+      "displayName": {
+        "text": "Zephyr Cove Snowmobiling Tours",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Services",
+        "languageCode": "en-US"
+      },
+      "primaryType": "service",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJFwH6MwBvmYARHxIqiPAyYlI": {
+      "id": "ChIJFwH6MwBvmYARHxIqiPAyYlI",
+      "types": [
+        "park",
+        "point_of_interest",
+        "establishment"
+      ],
+      "formattedAddress": "New Washoe City, NV 89704, USA",
+      "location": {
+        "latitude": 39.3012382,
+        "longitude": -119.919415
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=5936363267485733407&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 1,
+      "displayName": {
+        "text": "Tyrolian Downhill Mountain Bike Trail",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Park",
+        "languageCode": "en-US"
+      },
+      "primaryType": "park",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJFZVNNyJsmYARqosfF4RISB4": {
+      "id": "ChIJFZVNNyJsmYARqosfF4RISB4",
+      "types": [
+        "ski_resort",
+        "tourist_attraction",
+        "sports_activity_location",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 323-5125",
+      "formattedAddress": "21130 Sky Tavern Rd, Reno, NV 89511, USA",
+      "location": {
+        "latitude": 39.336911,
+        "longitude": -119.872522
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=2182073751621831594&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "http://www.skytavern.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 260,
+      "displayName": {
+        "text": "Sky Tavern Ski Area",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Ski Resort",
+        "languageCode": "en-US"
+      },
+      "primaryType": "ski_resort",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJc5BUK1UOmYARfxaHFH3Jw-A": {
+      "id": "ChIJc5BUK1UOmYARfxaHFH3Jw-A",
+      "types": [
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 720-6314",
+      "formattedAddress": "145-D S C St, Virginia City, NV 89440, USA",
+      "location": {
+        "latitude": 39.308721999999996,
+        "longitude": -119.650112
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=16196010224006927999&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "http://buzzardcreekvc.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 21,
+      "displayName": {
+        "text": "Buzzard Creek",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Store",
+        "languageCode": "en-US"
+      },
+      "primaryType": "store",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJp9AGVYRrmYARHvdI49jldr4": {
+      "id": "ChIJp9AGVYRrmYARHvdI49jldr4",
+      "types": [
+        "convenience_store",
+        "sporting_goods_store",
+        "food_store",
+        "store",
+        "food",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 849-0111",
+      "formattedAddress": "16795 Mt Rose Hwy, Reno, NV 89511, USA",
+      "location": {
+        "latitude": 39.3735674,
+        "longitude": -119.8432586
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=13724409634147071774&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 66,
+      "displayName": {
+        "text": "Galena Sports",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Sporting Goods Store",
+        "languageCode": "en-US"
+      },
+      "primaryType": "sporting_goods_store",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJX19jQLs_mYAR1rSMr9FQlCg": {
+      "id": "ChIJX19jQLs_mYAR1rSMr9FQlCg",
+      "types": [
+        "sporting_goods_store",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 420-3427",
+      "formattedAddress": "6407 S Virginia St Ste 110, Reno, NV 89511, USA",
+      "location": {
+        "latitude": 39.4668073,
+        "longitude": -119.78521609999999
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=2924050919593915606&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "https://skipro.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 126,
+      "displayName": {
+        "text": "Ski Pro",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Sporting Goods Store",
+        "languageCode": "en-US"
+      },
+      "primaryType": "sporting_goods_store",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJO1eBm2AVmYAR5zBLIu_Vo64": {
+      "id": "ChIJO1eBm2AVmYAR5zBLIu_Vo64",
+      "types": [
+        "sporting_goods_store",
+        "manufacturer",
+        "store",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 852-9100",
+      "formattedAddress": "South Meadows, Reno, NV 89521, USA",
+      "location": {
+        "latitude": 39.4484491,
+        "longitude": -119.74912549999999
+      },
+      "rating": 4.7,
+      "googleMapsUri": "https://maps.google.com/?cid=12584137006852550887&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "http://www.lakeshoresup.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 12,
+      "displayName": {
+        "text": "Lakeshore Paddleboard Co.",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Sporting Goods Store",
+        "languageCode": "en-US"
+      },
+      "primaryType": "sporting_goods_store",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJv9UaMlUOmYAR5MobnpOqrdk": {
+      "id": "ChIJv9UaMlUOmYAR5MobnpOqrdk",
+      "types": [
+        "tour_agency",
+        "travel_agency",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 583-6009",
+      "formattedAddress": "A,, 160 S C St, Virginia City, NV 89440, USA",
+      "location": {
+        "latitude": 39.3087029,
+        "longitude": -119.65051249999999
+      },
+      "rating": 3.7,
+      "googleMapsUri": "https://maps.google.com/?cid=15685380628190841572&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "http://www.rockratadventures.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 6,
+      "displayName": {
+        "text": "Rock Rat Adventures",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Tour Agency",
+        "languageCode": "en-US"
+      },
+      "primaryType": "tour_agency",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJ3-J6Qz0VmYARHxOTx23jJUY": {
+      "id": "ChIJ3-J6Qz0VmYARHxOTx23jJUY",
+      "types": [
+        "manufacturer",
+        "supplier",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 284-1223",
+      "formattedAddress": "10450 S Virginia St, Reno, NV 89511, USA",
+      "location": {
+        "latitude": 39.4365984,
+        "longitude": -119.7667302
+      },
+      "rating": 4.6,
+      "googleMapsUri": "https://maps.google.com/?cid=5054696217432494879&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "https://www.rentalguys.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 148,
+      "displayName": {
+        "text": "Rental Guys",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Services",
+        "languageCode": "en-US"
+      },
+      "primaryType": "service",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJXeFVzDc_mYARuEWfdb99QAM": {
+      "id": "ChIJXeFVzDc_mYARuEWfdb99QAM",
+      "types": [
+        "supplier",
+        "point_of_interest",
+        "service",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 444-8080",
+      "formattedAddress": "5401 Longley Ln Bldg B, Suite 45, Reno, NV 89521, USA",
+      "location": {
+        "latitude": 39.4712698,
+        "longitude": -119.7674988
+      },
+      "rating": 5,
+      "googleMapsUri": "https://maps.google.com/?cid=234325441888863672&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "https://www.fiestarentalcentral.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 10,
+      "displayName": {
+        "text": "Fiesta Rental Central in Reno",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Services",
+        "languageCode": "en-US"
+      },
+      "primaryType": "service",
+      "pureServiceAreaBusiness": false
+    },
+    "b14603566b20::ChIJ9U9G4Ok_mYARdr67s7o-XJg": {
+      "id": "ChIJ9U9G4Ok_mYARdr67s7o-XJg",
+      "types": [
+        "store",
+        "service",
+        "point_of_interest",
+        "establishment"
+      ],
+      "nationalPhoneNumber": "(775) 827-6937",
+      "formattedAddress": "4995 Longley Ln, Reno, NV 89502, USA",
+      "location": {
+        "latitude": 39.477648699999996,
+        "longitude": -119.76593640000002
+      },
+      "rating": 4.3,
+      "googleMapsUri": "https://maps.google.com/?cid=10978718963222691446&g_mp=CiVnb29nbGUubWFwcy5wbGFjZXMudjEuUGxhY2VzLkdldFBsYWNlEAIYBCAA",
+      "websiteUri": "http://www.opreno.com/",
+      "businessStatus": "OPERATIONAL",
+      "userRatingCount": 94,
+      "displayName": {
+        "text": "Outdoor Power",
+        "languageCode": "en"
+      },
+      "primaryTypeDisplayName": {
+        "text": "Store",
+        "languageCode": "en-US"
+      },
+      "primaryType": "store",
       "pureServiceAreaBusiness": false
     }
   }

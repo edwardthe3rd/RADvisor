@@ -385,6 +385,31 @@ const LODGING_NOISE_TYPES = new Set([
   "private_guest_room",
 ]);
 
+// Big-box / unrelated-retail PRIMARY types that match broad terms ("sporting goods
+// store", "outdoor equipment rental") on review count but never rent outdoor gear.
+// HARD-EXCLUDE the unambiguous non-renters (Walmart, malls, groceries, restaurants,
+// car shops) — dropped pre-enrichment, retained in retail_excluded_records.
+const RETAIL_EXCLUDE_TYPES = new Set([
+  "grocery_store",
+  "supermarket",
+  "restaurant",
+  "cafe",
+  "car_repair",
+  "gas_station",
+  "department_store",
+  "shopping_mall",
+  "convenience_store",
+]);
+
+// Ambiguous retail PRIMARY types — a ski-apparel shop or specialty-vehicle outfit
+// could be legit, so FLAG (likely_irrelevant) for triage to deprioritize rather
+// than dropping. Kept in the operator list and enriched.
+const RETAIL_FLAG_TYPES = new Set([
+  "clothing_store",
+  "thrift_store",
+  "car_rental",
+]);
+
 // activity -> a few request-valid includedType axes to ALWAYS try when a cell
 // saturates, even if absent from the truncated 60-result sample (so operators
 // whose type never appeared in the visible sample still get a slice). Every value
@@ -594,8 +619,10 @@ let typeSlices = 0;             // total typed slice sub-queries enqueued
 let closedPermanentlyDropped = 0;
 let closedTemporarilySkipped = 0;
 let lodgingExcluded = 0;
+let retailExcluded = 0;
 const closedRecords = [];
 const lodgingRecords = [];
+const retailRecords = [];
 const errors = [];
 const detailErrors = [];
 const saturatedAtMin = [];
@@ -731,6 +758,7 @@ function finalizeRecord(r) {
     matched_tiers: [...r.matched_tiers].sort(),
     matched_modes: [...r.matched_modes].sort(),
     rental_signal: [...r.matched_tiers].some((t) => RENTAL_SIGNAL_TIERS.has(t)),
+    likely_irrelevant: RETAIL_FLAG_TYPES.has(r.primary_type_raw), // ambiguous retail — deprioritize in triage
     types: r.types,
   };
 }
@@ -817,6 +845,10 @@ for (const [id, rec] of ops) {
     lodgingRecords.push(finalizeRecord(rec));
     ops.delete(id);
     lodgingExcluded++;
+  } else if (rec.primary_type_raw && RETAIL_EXCLUDE_TYPES.has(rec.primary_type_raw)) {
+    retailRecords.push(finalizeRecord(rec));
+    ops.delete(id);
+    retailExcluded++;
   }
 }
 const detailQueue = [...ops.keys()].filter((id) => {
@@ -974,6 +1006,9 @@ writeFileSync(
       closed_records: closedRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
       lodging_excluded: lodgingExcluded, // vacation-rental/hotel noise dropped pre-enrichment (primary-type match)
       lodging_excluded_records: lodgingRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
+      retail_excluded: retailExcluded, // big-box/unrelated retail dropped pre-enrichment (primary-type match)
+      retail_excluded_records: retailRecords.sort((a, b) => (a.name || "").localeCompare(b.name || "")),
+      likely_irrelevant_flagged: records.filter((r) => r.likely_irrelevant).length, // ambiguous retail kept but flagged
       text_search_calls_this_run: searchBillableCalls,
       place_details_calls_this_run: detailBillableCalls,
       search_pairs_from_cache: fromCache,
@@ -1018,7 +1053,7 @@ const cols = [
   "match_pairs", "rating", "user_rating_count", "business_status", "primary_type",
   "website", "source_url", "phone", "address", "lat", "lng", "pure_service_area_business",
   "matched_tile_count", "matched_terms", "matched_modes", "last_verified",
-  "possible_duplicate_of",
+  "possible_duplicate_of", "likely_irrelevant",
 ];
 const lines = [cols.join(",")];
 for (const r of records) {
@@ -1047,6 +1082,13 @@ if (closedPermanentlyDropped || closedTemporarilySkipped) {
 }
 if (lodgingExcluded) {
   console.log(`  Excluded ${lodgingExcluded} lodging/vacation-rental noise (primary-type match; see JSON.lodging_excluded_records).`);
+}
+if (retailExcluded) {
+  console.log(`  Excluded ${retailExcluded} big-box/unrelated retail (primary-type match; see JSON.retail_excluded_records).`);
+}
+const flaggedIrrelevant = records.filter((r) => r.likely_irrelevant).length;
+if (flaggedIrrelevant) {
+  console.log(`  Flagged ${flaggedIrrelevant} likely-irrelevant (ambiguous retail kept for triage — see CSV.likely_irrelevant).`);
 }
 console.log(`  ${withSignal} with a rental-type signal (core/gap) — Pass A triage priority.`);
 console.log(`  ${withWebsite} have a website (needed for Pass B).`);
