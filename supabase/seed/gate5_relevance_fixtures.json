@@ -1,0 +1,172 @@
+[
+  {
+    "id": "unreadable-page-domain-matches-name-confirms",
+    "expect_confirmed": true,
+    "expect_by": "domain_matches_operator_name",
+    "net": {
+      "outcome": "live",
+      "text": "",
+      "meta": ""
+    },
+    "context": {
+      "name": "Tahoe Kayak Company",
+      "rawUrl": "https://tahoekayak.example",
+      "finalUrl": "https://tahoekayak.example",
+      "rentalSignal": true,
+      "matchedActivities": ["kayak"],
+      "matchedTerms": ["kayak rental"]
+    }
+  },
+  {
+    "id": "unreadable-page-no-corroboration-routes-to-review",
+    "expect_confirmed": false,
+    "expect_by": "no_readable_page_text",
+    "reason_prefix": "gate5:live_unreadable",
+    "forbidden_by": ["domain_matches_operator_name"],
+    "net": {
+      "outcome": "live",
+      "text": "",
+      "meta": ""
+    },
+    "context": {
+      "name": "Tahoe Kayak Company",
+      "rawUrl": "https://bookdirect.example",
+      "finalUrl": "https://bookdirect.example",
+      "rentalSignal": true,
+      "matchedActivities": ["kayak"],
+      "matchedTerms": ["kayak rental"]
+    }
+  },
+  {
+    "id": "generic-booking-language-alone-does-not-confirm",
+    "expect_confirmed": false,
+    "expect_by": "no_first_party_or_recreation_corroboration",
+    "reason_prefix": "gate5:live_unconfirmed",
+    "forbidden_by": ["recreation_site_terms"],
+    "net": {
+      "outcome": "live",
+      "text": "Book online today. Reserve your adventure with our helpful team and view our fleet.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Tahoe Kayak Rentals",
+      "rawUrl": "https://genericbooking.example",
+      "finalUrl": "https://genericbooking.example",
+      "rentalSignal": true,
+      "matchedActivities": [],
+      "matchedTerms": []
+    }
+  },
+  {
+    "id": "in-domain-recreation-term-confirms",
+    "expect_confirmed": true,
+    "expect_by": "recreation_site_terms_with_booking_cue",
+    "forbidden_by": ["operator_name_match", "domain_matches_operator_name", "domain_brand_match"],
+    "net": {
+      "outcome": "live",
+      "text": "Seasonal kayak and paddleboard rentals are available from our marina dock.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Summit Adventure Supply",
+      "rawUrl": "https://rentlocal.example",
+      "finalUrl": "https://rentlocal.example",
+      "rentalSignal": false,
+      "matchedActivities": [],
+      "matchedTerms": []
+    }
+  },
+  {
+    "id": "activity-term-alone-does-not-confirm",
+    "expect_confirmed": false,
+    "expect_by": "no_first_party_or_recreation_corroboration",
+    "reason_prefix": "gate5:live_unconfirmed",
+    "forbidden_by": ["recreation_site_terms_with_booking_cue", "matched_search_term_with_booking_cue"],
+    "net": {
+      "outcome": "live",
+      "text": "Daily ski conditions, mountain updates, snow reports, resort news, and winter weather notes.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Alpine Supply",
+      "rawUrl": "https://mountainupdates.example",
+      "finalUrl": "https://mountainupdates.example",
+      "rentalSignal": true,
+      "matchedActivities": ["alpine-ski"],
+      "matchedTerms": ["ski rental"]
+    }
+  },
+  {
+    "id": "matched-search-term-with-rental-cue-confirms",
+    "expect_confirmed": true,
+    "expect_by": "matched_search_term_with_booking_cue",
+    "net": {
+      "outcome": "live",
+      "text": "Our shop offers ski rental packages for adults and kids throughout the winter.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Alpine Supply",
+      "rawUrl": "https://wintergear.example",
+      "finalUrl": "https://wintergear.example",
+      "rentalSignal": true,
+      "matchedActivities": ["alpine-ski"],
+      "matchedTerms": ["ski rental"]
+    }
+  },
+  {
+    "id": "activity-plus-tour-cue-confirms",
+    "expect_confirmed": true,
+    "expect_by": "recreation_site_terms_with_booking_cue",
+    "net": {
+      "outcome": "live",
+      "text": "Guided kayak tours launch from the beach every morning in summer.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Water Supply",
+      "rawUrl": "https://summerwater.example",
+      "finalUrl": "https://summerwater.example",
+      "rentalSignal": true,
+      "matchedActivities": ["kayak"],
+      "matchedTerms": ["kayak rental"]
+    }
+  },
+  {
+    "id": "operator-name-confirms-without-activity-terms",
+    "expect_confirmed": true,
+    "expect_by": "operator_name_match",
+    "net": {
+      "outcome": "live",
+      "text": "Welcome to Clear Alpine Supply. Visit our South Lake Tahoe storefront this season.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Clear Alpine Supply",
+      "rawUrl": "https://clearalpine.example",
+      "finalUrl": "https://clearalpine.example",
+      "rentalSignal": false,
+      "matchedActivities": [],
+      "matchedTerms": []
+    }
+  },
+  {
+    "id": "out-of-domain-party-page-routes-to-review",
+    "expect_confirmed": false,
+    "expect_by": "out_of_domain_page_terms",
+    "reason_prefix": "gate5:out_of_domain_site",
+    "net": {
+      "outcome": "live",
+      "text": "Party rentals, wedding rentals, bounce house packages, and tables and chairs delivered daily.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Event Rentals",
+      "rawUrl": "https://fixtureevents.example",
+      "finalUrl": "https://fixtureevents.example",
+      "rentalSignal": true,
+      "matchedActivities": ["camping"],
+      "matchedTerms": ["tent rental"]
+    }
+  }
+]

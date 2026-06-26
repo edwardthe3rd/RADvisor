@@ -39,7 +39,14 @@ const oldOps = read("operators.json");
 const verified = read("operator_website_verified.json");
 const gate5CachePath = "sweep_gate5_cache.json";
 const fixturesPath = "gate_ladder_fixtures.json";
-const gate5Cache = !REFRESH_GATE5 && exists(gate5CachePath) ? read(gate5CachePath) : {};
+const gate5RelevanceFixturesPath = "gate5_relevance_fixtures.json";
+// Bump when Gate 5 probe/relevance logic changes so stale verdicts auto-invalidate
+// without requiring an explicit --refresh-gate5.
+const GATE5_CACHE_VERSION = 4;
+const gate5CacheRaw = !REFRESH_GATE5 && exists(gate5CachePath) ? read(gate5CachePath) : {};
+const gate5Cache =
+  gate5CacheRaw.__schema === GATE5_CACHE_VERSION ? gate5CacheRaw : { __schema: GATE5_CACHE_VERSION };
+gate5Cache.__schema = GATE5_CACHE_VERSION;
 
 const AOI_EDGE_REVIEW_M = 2000;
 const AOI_FAR_REJECT_M = 10000;
@@ -81,6 +88,7 @@ const writeCsv = (file, rows) => {
     "review_lane",
     "dedup_note",
     "site_note",
+    "site_relevance",
     "possible_duplicate_of",
     "place_id",
     "source_url",
@@ -547,7 +555,400 @@ async function fetchSite(url, method) {
   });
 }
 
-async function liveSiteCheck(rawUrl) {
+// --- Gate 5 tuning knobs -------------------------------------------------
+const FETCH_RETRIES = 2; // total attempts per request = 1 + FETCH_RETRIES
+const RETRY_BASE_MS = 500; // linear backoff: 500ms, 1000ms, ...
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+// Hosts that are social/aggregator pages, not an operator's own site. A
+// "website" pointing here cannot be auto-promoted to survivor; route to review.
+const SOCIAL_HOSTS = [
+  "facebook.com",
+  "fb.com",
+  "m.facebook.com",
+  "instagram.com",
+  "twitter.com",
+  "x.com",
+  "tiktok.com",
+  "youtube.com",
+  "youtu.be",
+  "linkedin.com",
+  "linktr.ee",
+  "linktree.com",
+  "yelp.com",
+  "tripadvisor.com",
+  "google.com",
+  "goo.gl",
+  "maps.app.goo.gl",
+  "business.google.com",
+];
+
+// Third-party marketplaces / booking listings. A "website" that is (or redirects
+// to) one of these is the operator's listing on a platform, not their own
+// first-party site, so it cannot be auto-promoted to survivor. Deliberately
+// excludes site builders (wixsite.com, business.site, square.site, etc.) and
+// embedded booking widgets, which DO represent an operator's own site.
+const AGGREGATOR_HOSTS = [
+  "getmyboat.com",
+  "outdoorsy.com",
+  "rvshare.com",
+  "hipcamp.com",
+  "campspot.com",
+  "airbnb.com",
+  "vrbo.com",
+  "booking.com",
+  "expedia.com",
+  "viator.com",
+  "getyourguide.com",
+  "peerspace.com",
+  "thumbtack.com",
+];
+
+// Parked / placeholder / default-host fingerprints. Curated to avoid matching
+// legitimate operator copy (e.g. "boats for sale" stays clear).
+const PARKED_RE = new RegExp(
+  [
+    "domain for sale",
+    "buy this domain",
+    "this domain is (?:for sale|parked)",
+    "domain is parked",
+    "domain may be for sale",
+    "parkingcrew",
+    "hugedomains",
+    "afternic",
+    "\\bsedo\\b",
+    "dan\\.com",
+    "porkbun",
+    "future home of",
+    "account suspended",
+    "default web page",
+    "web hosting provider",
+    "site not published",
+    "coming soon",
+    "website coming soon",
+    "under construction",
+  ].join("|"),
+  "i",
+);
+
+const IN_DOMAIN_ACTIVITY_SITE_RE =
+  /\b(ski|snowboard|bike|bicycle|kayak|canoe|paddleboard|sup|boat|pontoon|jet ski|waverunner|marina|wakeboard|fishing|fly fishing|camp(?:ing)?|backpack|snowshoe|sled|tube|climb|rafting|atv|utv|4x4|off[-\s]?road|overland|archery|disc golf|ice skat(?:e|ing))\b/i;
+
+const RENTAL_BOOKING_CUE_RE =
+  /\b(rent|rental|rentals|demo|demos|lease|hire|book(?:ing)?|reserve|reservation|tour|tours|guided|guide|outfitter|charter|lesson|lessons|excursion|trip|trips|fleet)\b/i;
+
+// Strong out-of-domain page fingerprints. These do not hard-delete a row from
+// Gate 5; they prevent auto-promotion so Pass A/manual review can make the
+// final call with the site in view.
+const OUT_OF_DOMAIN_SITE_RE =
+  /\b(party rentals?|event rentals?|wedding rentals?|bounce house|inflatable rentals?|photo booth|tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?|linen rentals?|portable restroom|porta[-\s]?pott|dumpster rentals?|self[-\s]?storage|moving truck|box truck|cargo van|passenger car rental|airport car rental|medical equipment|mobility scooter|costume rentals?|tuxedo rentals?|furniture rentals?|appliance rentals?)\b/i;
+
+// Name words too generic to confirm a domain belongs to a specific operator.
+const GENERIC_NAME_WORDS = new Set([
+  "rental", "rentals", "rent", "hire", "the", "and", "llc", "inc", "co",
+  "company", "adventure", "adventures", "outfitter", "outfitters", "tour",
+  "tours", "center", "centre", "shop", "store", "service", "services",
+  "sport", "sports", "outdoor", "outdoors", "guide", "guides", "equipment",
+  "gear", "boat", "boats", "bike", "bikes", "kayak", "ski", "snow",
+]);
+
+const pageTokenSet = (s) =>
+  new Set(
+    String(s || "")
+      .toLowerCase()
+      .normalize("NFKD")
+      .replace(/[^a-z0-9]+/g, " ")
+      .split(/\s+/)
+      .filter(Boolean),
+  );
+
+const meaningfulNameTokens = (s) =>
+  String(s || "")
+    .toLowerCase()
+    .normalize("NFKD")
+    .replace(/[^a-z0-9 ]+/g, " ")
+    .split(/\s+/)
+    .filter((w) => w.length >= 4 && !GENERIC_NAME_WORDS.has(w));
+
+// Common multi-label public suffixes so we extract the registrable brand label
+// rather than a subdomain (e.g. shop.acme.com -> "acme", book.acme.co.uk -> "acme").
+const MULTI_PART_TLDS = new Set([
+  "co.uk", "org.uk", "me.uk", "ac.uk", "gov.uk",
+  "com.au", "net.au", "org.au", "co.nz", "co.za",
+  "com.br", "com.mx", "co.in", "co.jp",
+]);
+
+const brandLabel = (host) => {
+  if (!host) return null;
+  const labels = host.split(".").filter(Boolean);
+  if (labels.length < 2) return labels[0] || null;
+  const lastTwo = labels.slice(-2).join(".");
+  const suffixLen = MULTI_PART_TLDS.has(lastTwo) ? 2 : 1;
+  const brandIdx = labels.length - suffixLen - 1;
+  return brandIdx >= 0 ? labels[brandIdx] : labels[0];
+};
+
+const meaningfulDomainTokens = (url) => {
+  const brand = brandLabel(normDomain(url));
+  if (!brand) return [];
+  return brand
+    .replace(/\d+/g, " ")
+    .split(/[^a-z]+/i)
+    .map((w) => w.toLowerCase())
+    .filter((w) => w.length >= 4 && !GENERIC_NAME_WORDS.has(w));
+};
+
+// Offline first-party check: does the registrable domain brand correspond to the
+// operator name without reading the page? This is what rescues a JS-rendered /
+// unreadable site whose domain itself is the operator brand. Conservative on
+// purpose: require whole-name containment or >=2 meaningful name tokens in the
+// brand, so a lone generic token (e.g. "mountain") cannot manufacture a match.
+const domainNameCorroborates = (rawUrl, finalUrl, name) => {
+  const nameC = normNameCompact(name);
+  if (nameC.length < 4) return false;
+  const nameToks = meaningfulNameTokens(name);
+  for (const u of [rawUrl, finalUrl]) {
+    const brand = brandLabel(normDomain(u));
+    if (!brand) continue;
+    const brandC = normNameCompact(brand);
+    if (brandC.length < 4) continue;
+    if (brandC.includes(nameC) || nameC.includes(brandC)) return true;
+    if (nameToks.filter((w) => brandC.includes(w)).length >= 2) return true;
+  }
+  return false;
+};
+
+const stripHtmlText = (html) =>
+  String(html || "")
+    .replace(/<script[\s\S]*?<\/script>/gi, " ")
+    .replace(/<style[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+// High-signal text that survives JS-rendered (SPA) pages: <title>, og:site_name,
+// meta description, and JSON-LD name/description/@type. This rescues first-party
+// confirmation for Wix/Squarespace/React sites whose visible body is script-built.
+const extractStructured = (html) => {
+  if (!html) return "";
+  const out = [];
+  const title = html.match(/<title[^>]*>([\s\S]*?)<\/title>/i);
+  if (title) out.push(stripHtmlText(title[1]));
+  const metaRe = /<meta[^>]+(?:property|name)=["'](?:og:site_name|og:title|description|application-name)["'][^>]*content=["']([^"']+)["']/gi;
+  for (const m of html.matchAll(metaRe)) out.push(m[1]);
+  for (const m of html.matchAll(/<script[^>]+application\/ld\+json[^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      const json = JSON.parse(m[1]);
+      const nodes = Array.isArray(json) ? json : json["@graph"] ? json["@graph"] : [json];
+      for (const node of nodes) {
+        for (const key of ["name", "legalName", "description", "@type", "telephone"]) {
+          const v = node?.[key];
+          if (typeof v === "string") out.push(v);
+        }
+        const addr = node?.address;
+        if (addr && typeof addr === "object") {
+          for (const key of ["streetAddress", "addressLocality", "postalCode"]) {
+            if (typeof addr[key] === "string") out.push(addr[key]);
+          }
+        }
+      }
+    } catch {
+      // best-effort; malformed JSON-LD is ignored
+    }
+  }
+  return out.join(" ").replace(/\s+/g, " ").trim();
+};
+
+const digitsOf = (s) => String(s || "").replace(/\D+/g, "");
+
+// Phone is a strong first-party signal: match the last 7 digits (subscriber
+// number) so country/area-code formatting differences do not block a match.
+const phoneOnPage = (phone, digitsHaystack) => {
+  const d = digitsOf(phone);
+  if (d.length < 7) return false;
+  return digitsHaystack.includes(d.slice(-7));
+};
+
+// Address corroboration: require the street number plus its first street word.
+const addressOnPage = (address, corpusLower, digitsHaystack) => {
+  const num = String(address || "").match(/\b(\d{1,6})\b/);
+  if (!num) return false;
+  if (!digitsHaystack.includes(num[1])) return false;
+  const street = String(address || "")
+    .replace(/^\s*\d{1,6}\s+/, "")
+    .toLowerCase()
+    .split(/[^a-z]+/)
+    .find((w) => w.length >= 4);
+  return Boolean(street) && corpusLower.includes(street);
+};
+
+const errCode = (e) => e?.cause?.code || e?.code || null;
+// Transient: worth a retry and never strong "dead" evidence.
+const isTransientError = (e) => {
+  if (e?.name === "AbortError") return true; // timeout
+  return [
+    "ECONNRESET", "ETIMEDOUT", "EAI_AGAIN", "ECONNABORTED",
+    "UND_ERR_CONNECT_TIMEOUT", "UND_ERR_SOCKET", "UND_ERR_HEADERS_TIMEOUT",
+  ].includes(errCode(e));
+};
+// Dead: strong evidence the host does not exist (DNS NXDOMAIN, refused).
+const isDeadHost = (e) => ["ENOTFOUND", "ECONNREFUSED"].includes(errCode(e));
+
+const hostInList = (host, list) => {
+  if (!host) return false;
+  const h = normalizeHost(host);
+  return list.some((s) => h === s || h.endsWith("." + s));
+};
+const isSocialHost = (host) => hostInList(host, SOCIAL_HOSTS);
+const isAggregatorHost = (host) => hostInList(host, AGGREGATOR_HOSTS);
+
+// Soft 404: HTTP 200 but the page content is a "not found" page. Anchored to
+// strong phrases (and checked only near the top of the page) so ordinary copy
+// that happens to contain "not found" does not trip it.
+const SOFT_404_RE =
+  /(page\s+not\s+found|error\s*404|404\s+error|404\s*[-–—:|]\s*not\s+found|not\s+found\s*[-–—:|]\s*404|page\s+(?:you\s+(?:requested|are\s+looking\s+for)\s+)?(?:was\s+|is\s+)?not\s+found|page\s+does\s*n.?t\s+exist|page\s+no\s+longer\s+(?:exists?|available)|this\s+page\s+(?:isn.?t|is\s+not)\s+available)/i;
+const looksSoft404 = (body, meta) => {
+  if (!body) return null;
+  const head = `${meta || ""} ${stripHtmlText(body).slice(0, 800)}`;
+  return SOFT_404_RE.test(head)
+    ? "Page returned HTTP 200 but its content is a 'not found' / 404 page."
+    : null;
+};
+
+// Treat blocked/transient server statuses as retryable; surface the rest.
+async function fetchSiteWithRetry(url, method) {
+  let lastError = null;
+  for (let attempt = 0; attempt <= FETCH_RETRIES; attempt++) {
+    try {
+      const res = await fetchSite(url, method);
+      if ([429, 502, 503, 504].includes(res.status) && attempt < FETCH_RETRIES) {
+        lastError = `HTTP ${res.status}`;
+        await sleep(RETRY_BASE_MS * (attempt + 1));
+        continue;
+      }
+      return { res };
+    } catch (e) {
+      lastError = e;
+      if (isTransientError(e) && attempt < FETCH_RETRIES) {
+        await sleep(RETRY_BASE_MS * (attempt + 1));
+        continue;
+      }
+      return { error: e };
+    }
+  }
+  return { error: lastError instanceof Error ? lastError : new Error(String(lastError)) };
+}
+
+const looksParked = (body) => {
+  if (!body) return null;
+  if (PARKED_RE.test(body)) return "Site appears parked, under construction, or placeholder-only.";
+  const meta = body.match(
+    /<meta[^>]+http-equiv=["']?refresh["']?[^>]*content=["'][^"']*url=([^"'>\s]+)/i,
+  );
+  if (meta) return `Page is a meta-refresh redirect to ${meta[1]}.`;
+  const text = stripHtmlText(body);
+  if (text.length < 48 && !/<img|<video|<iframe/i.test(body)) {
+    return "Page body is essentially empty (placeholder).";
+  }
+  return null;
+};
+
+// Decide whether a live site's text actually corroborates a first-party,
+// in-domain operator site. Ambiguous sites route to needs_review; they are not
+// hard-rejected.
+const relevanceVerdict = (net, context = {}) => {
+  // Combine visible body text with structured metadata (title/og/JSON-LD) so a
+  // JS-rendered page with an empty static body can still be corroborated.
+  const corpus = `${net.text || ""} ${net.meta || ""}`.replace(/\s+/g, " ").trim();
+  const t = corpus.toLowerCase();
+  const tokens = pageTokenSet(t);
+  const digitsHaystack = digitsOf(corpus);
+  const readable = t.length >= 24 || tokens.size >= 4;
+
+  const hasInDomainActivitySignal = IN_DOMAIN_ACTIVITY_SITE_RE.test(t);
+  // Out-of-domain page text blocks auto-promotion even with a prior sweep signal:
+  // the page itself is the strongest evidence of what the business actually does.
+  if (readable && OUT_OF_DOMAIN_SITE_RE.test(t) && !hasInDomainActivitySignal) {
+    return {
+      confirmed: false,
+      reason: "gate5:out_of_domain_site",
+      by: "out_of_domain_page_terms",
+      note: "page text looks like an out-of-domain rental business",
+    };
+  }
+
+  const nameTokens = meaningfulNameTokens(context.name);
+  if (nameTokens.some((w) => tokens.has(w))) {
+    return { confirmed: true, by: "operator_name_match", note: "operator name appears on the page" };
+  }
+
+  const domainTokens = [
+    ...meaningfulDomainTokens(context.rawUrl),
+    ...meaningfulDomainTokens(context.finalUrl),
+  ];
+  if (domainTokens.some((w) => tokens.has(w))) {
+    return { confirmed: true, by: "domain_brand_match", note: "domain brand appears on the page" };
+  }
+
+  // Offline domain<->name corroboration. Works even when the page is unreadable,
+  // so a JS-rendered site whose domain is the operator brand is not sent to review.
+  if (domainNameCorroborates(context.rawUrl, context.finalUrl, context.name)) {
+    return {
+      confirmed: true,
+      by: "domain_matches_operator_name",
+      note: "the registrable domain corresponds to the operator name",
+    };
+  }
+
+  if (phoneOnPage(context.phone, digitsHaystack)) {
+    return { confirmed: true, by: "phone_match", note: "operator phone number appears on the page" };
+  }
+  if (addressOnPage(context.address, t, digitsHaystack)) {
+    return { confirmed: true, by: "address_match", note: "operator street address appears on the page" };
+  }
+
+  const matchedTerms = (context.matchedTerms || [])
+    .map((s) => String(s).toLowerCase())
+    .filter((s) => s.length >= 4);
+  const matchedTerm = matchedTerms.find((term) => t.includes(term));
+  if (matchedTerm) {
+    if (RENTAL_BOOKING_CUE_RE.test(matchedTerm) || RENTAL_BOOKING_CUE_RE.test(t)) {
+      return {
+        confirmed: true,
+        by: "matched_search_term_with_booking_cue",
+        note: "matched search term appears on the page with rental/booking language",
+      };
+    }
+  }
+  if (readable && hasInDomainActivitySignal && RENTAL_BOOKING_CUE_RE.test(t)) {
+    return {
+      confirmed: true,
+      by: "recreation_site_terms_with_booking_cue",
+      note: "page includes in-domain activity language plus a rental/booking cue",
+    };
+  }
+
+  // No page-level corroboration. Unreadable pages are reviewable, not promoted:
+  // Gate 5 is where we verify first-party liveness/relevance before Pass A.
+  if (!readable) {
+    return {
+      confirmed: false,
+      reason: "gate5:live_unreadable",
+      by: "no_readable_page_text",
+      note: "the automated check could not read page text or metadata",
+    };
+  }
+  return {
+    confirmed: false,
+    reason: "gate5:live_unconfirmed",
+    by: "no_first_party_or_recreation_corroboration",
+    note: "page text did not corroborate the operator name, domain brand, phone/address, or in-domain activity plus rental/booking terms",
+  };
+};
+
+// Network-level probe. Result is domain-keyed and cacheable; relevance (which
+// is row-specific) is layered on top later by liveSiteCheck.
+async function networkProbe(rawUrl) {
   const firstUrl = withUrlScheme(rawUrl, "https");
   if (!firstUrl) {
     return { outcome: "missing", reason: "gate5:no_website_field", note: "No website field." };
@@ -555,87 +956,170 @@ async function liveSiteCheck(rawUrl) {
   const cacheKey = normDomain(firstUrl) || firstUrl;
   if (!REFRESH_GATE5 && gate5Cache[cacheKey]) return gate5Cache[cacheKey];
 
+  const store = (result) => {
+    gate5Cache[cacheKey] = result;
+    return result;
+  };
+
+  if (isSocialHost(normDomain(firstUrl))) {
+    return store({
+      outcome: "social",
+      reason: "gate5:social_only_site",
+      note: `Website is a social/aggregator page (${normDomain(firstUrl)}); needs the operator's own site.`,
+    });
+  }
+  if (isAggregatorHost(normDomain(firstUrl))) {
+    return store({
+      outcome: "aggregator",
+      reason: "gate5:third_party_listing",
+      note: `Website is a third-party marketplace/booking listing (${normDomain(firstUrl)}), not the operator's own site.`,
+    });
+  }
+
   const attempts = [firstUrl];
   if (!/^https:\/\//i.test(firstUrl)) attempts.unshift(withUrlScheme(rawUrl, "https"));
   if (!attempts.some((u) => /^http:\/\//i.test(u))) attempts.push(withUrlScheme(rawUrl, "http"));
 
   let lastError = null;
+  let blockStatus = null;
+  let deadEvidence = false;
+
   for (const url of [...new Set(attempts.filter(Boolean))]) {
-    try {
-      let res = await fetchSite(url, "HEAD");
-      if ([405, 403].includes(res.status)) res = await fetchSite(url, "GET");
-      if (res.status >= 400) {
-        lastError = `HTTP ${res.status}`;
-        continue;
+    const probe = await fetchSiteWithRetry(url, "HEAD");
+    if (probe.error) {
+      lastError = probe.error.message;
+      if (isDeadHost(probe.error)) deadEvidence = true;
+      continue;
+    }
+    let res = probe.res;
+    if ([405, 403].includes(res.status)) {
+      const getProbe = await fetchSiteWithRetry(url, "GET");
+      if (getProbe.res) res = getProbe.res;
+      else {
+        lastError = getProbe.error?.message || lastError;
+        if (getProbe.error && isDeadHost(getProbe.error)) deadEvidence = true;
       }
+    }
+    if (res.status >= 400) {
+      if ([401, 403, 429, 451, 503].includes(res.status)) blockStatus = res.status;
+      lastError = `HTTP ${res.status}`;
+      continue;
+    }
 
-      const finalUrl = res.url || url;
-      const headStatus = res.status;
-      if (!/^https:\/\//i.test(finalUrl)) {
-        const result = {
-          outcome: "needs_review",
-          reason: "gate5:unsecured_site",
-          note: `Resolved without HTTPS: ${finalUrl}`,
-          final_url: finalUrl,
-          http_status: res.status,
-        };
-        gate5Cache[cacheKey] = result;
-        return result;
-      }
+    const finalUrl = res.url || url;
+    const headStatus = res.status;
+    if (isSocialHost(normDomain(finalUrl))) {
+      return store({
+        outcome: "social",
+        reason: "gate5:social_only_site",
+        note: `Redirects to a social/aggregator page (${normDomain(finalUrl)}).`,
+        final_url: finalUrl,
+        http_status: headStatus,
+      });
+    }
+    if (isAggregatorHost(normDomain(finalUrl))) {
+      return store({
+        outcome: "aggregator",
+        reason: "gate5:third_party_listing",
+        note: `Redirects to a third-party marketplace/booking listing (${normDomain(finalUrl)}), not the operator's own site.`,
+        final_url: finalUrl,
+        http_status: headStatus,
+      });
+    }
+    if (!/^https:\/\//i.test(finalUrl)) {
+      return store({
+        outcome: "unsecured",
+        reason: "gate5:unsecured_site",
+        note: `Resolved without HTTPS: ${finalUrl}`,
+        final_url: finalUrl,
+        http_status: headStatus,
+      });
+    }
 
-      let body = "";
-      let contentType = res.headers.get("content-type") || "";
-      if (res.bodyUsed === false && (!contentType || contentType.includes("text/html"))) {
-        try {
-          const bodyRes = await fetchSite(finalUrl, "GET");
-          if (bodyRes.ok) {
-            res = bodyRes;
-            contentType = res.headers.get("content-type") || "";
-          }
-        } catch {
-          // HEAD liveness is still useful; body inspection is a best-effort refinement.
-        }
+    let body = "";
+    let contentType = res.headers.get("content-type") || "";
+    if (res.bodyUsed === false && (!contentType || contentType.includes("text/html"))) {
+      const bodyProbe = await fetchSiteWithRetry(finalUrl, "GET");
+      if (bodyProbe.res && bodyProbe.res.ok) {
+        res = bodyProbe.res;
+        contentType = res.headers.get("content-type") || "";
       }
-      if (res.bodyUsed === false && contentType.includes("text/html")) {
-        try {
-          body = (await res.text()).slice(0, 50000);
-        } catch {
-          body = "";
-        }
+    }
+    if (res.bodyUsed === false && contentType.includes("text/html")) {
+      try {
+        body = (await res.text()).slice(0, 50000);
+      } catch {
+        body = "";
       }
-      if (/domain for sale|buy this domain|parkingcrew|hugedomains|sedo|afternic|this domain is parked|coming soon|website coming soon|under construction/i.test(body)) {
-        const result = {
-          outcome: "needs_review",
-          reason: "gate5:placeholder_or_parked_site",
-          note: "Site appears parked, under construction, or placeholder-only.",
-          final_url: finalUrl,
-          http_status: res.status || headStatus,
-        };
-        gate5Cache[cacheKey] = result;
-        return result;
-      }
+    }
 
-      const result = {
-        outcome: "live",
-        reason: "gate5:live_https",
-        note: `Live HTTPS site (${res.status || headStatus}).`,
+    const parked = looksParked(body);
+    if (parked) {
+      return store({
+        outcome: "parked",
+        reason: "gate5:placeholder_or_parked_site",
+        note: parked,
         final_url: finalUrl,
         http_status: res.status || headStatus,
-      };
-      gate5Cache[cacheKey] = result;
-      return result;
-    } catch (e) {
-      lastError = e.message;
+      });
     }
+
+    const meta = extractStructured(body);
+    const soft404 = looksSoft404(body, meta);
+    if (soft404) {
+      return store({
+        outcome: "soft_404",
+        reason: "gate5:soft_404",
+        note: soft404,
+        final_url: finalUrl,
+        http_status: res.status || headStatus,
+      });
+    }
+
+    return store({
+      outcome: "live",
+      reason: "gate5:live_https",
+      note: `Live HTTPS site (${res.status || headStatus}).`,
+      final_url: finalUrl,
+      http_status: res.status || headStatus,
+      text: stripHtmlText(body).slice(0, 4000),
+      meta: meta.slice(0, 2000),
+    });
   }
 
-  const result = {
-    outcome: "needs_review",
+  if (blockStatus) {
+    return store({
+      outcome: "blocked",
+      reason: "gate5:site_blocked",
+      note: `Server reachable but blocked the automated check (HTTP ${blockStatus}); verify manually.`,
+      http_status: blockStatus,
+    });
+  }
+  return store({
+    outcome: deadEvidence ? "dead" : "unreachable",
     reason: "gate5:no_live_site",
-    note: lastError || "Site did not resolve.",
+    note: lastError || (deadEvidence ? "Domain did not resolve (DNS)." : "Site did not resolve."),
+  });
+}
+
+async function liveSiteCheck(rawUrl, context = {}) {
+  const net = await networkProbe(rawUrl);
+  if (net.outcome !== "live") return net;
+  const rel = relevanceVerdict(net, { ...context, rawUrl, finalUrl: net.final_url });
+  if (rel.confirmed) {
+    return {
+      ...net,
+      site_relevance: rel.by,
+      note: `${net.note} First-party check: ${rel.note}.`,
+    };
+  }
+  return {
+    ...net,
+    outcome: "live_unconfirmed",
+    reason: rel.reason || "gate5:live_unconfirmed",
+    site_relevance: rel.by,
+    note: `Live HTTPS site, but ${rel.note} (${net.final_url || rawUrl}). Confirm this is the operator's own site before triage.`,
   };
-  gate5Cache[cacheKey] = result;
-  return result;
 }
 
 function baseRecord(o) {
@@ -668,6 +1152,7 @@ function baseRecord(o) {
     matched_tile: null,
     dedup_note: null,
     site_note: null,
+    site_relevance: null,
     review_lane: "operator",
     decision_trace: [],
   };
@@ -892,8 +1377,14 @@ async function classify(o) {
 
   if (!rec.status) {
     if (RUN_GATE5) {
-      const site = await liveSiteCheck(o.website);
+      const site = await liveSiteCheck(o.website, {
+        name: o.name,
+        phone: o.phone,
+        address: o.address,
+        matchedTerms: o.matched_terms || [],
+      });
       rec.site_note = site.note || null;
+      rec.site_relevance = site.site_relevance || null;
       rec.final_url = site.final_url || null;
       rec.http_status = site.http_status || null;
       if (site.outcome === "live") setDecision(rec, "survivor", "cleared_gates_0-5", site.note);
@@ -961,7 +1452,64 @@ async function runFixtureTests() {
   }
   console.log("--------------------------------------");
   console.log(`${fixtures.length - failures}/${fixtures.length} fixtures passed`);
-  return failures ? 1 : 0;
+
+  if (!exists(gate5RelevanceFixturesPath)) {
+    console.error(`${gate5RelevanceFixturesPath} not found.`);
+    return 1;
+  }
+  const gate5Fixtures = read(gate5RelevanceFixturesPath);
+  let gate5Failures = 0;
+  for (const fixture of gate5Fixtures) {
+    const verdict = relevanceVerdict(fixture.net || {}, fixture.context || {});
+    const errors = [];
+    if (typeof fixture.expect_confirmed === "boolean" && verdict.confirmed !== fixture.expect_confirmed) {
+      errors.push(`expected confirmed ${fixture.expect_confirmed}, got ${verdict.confirmed}`);
+    }
+    if (fixture.expect_by && verdict.by !== fixture.expect_by) {
+      errors.push(`expected by ${fixture.expect_by}, got ${verdict.by}`);
+    }
+    if (fixture.reason_prefix && !String(verdict.reason || "").startsWith(fixture.reason_prefix)) {
+      errors.push(`expected reason prefix ${fixture.reason_prefix}, got ${verdict.reason}`);
+    }
+    if (fixture.forbidden_by && fixture.forbidden_by.includes(verdict.by)) {
+      errors.push(`by ${verdict.by} is forbidden`);
+    }
+
+    if (errors.length) {
+      gate5Failures++;
+      console.log(`FAIL ${fixture.id || "(gate5 unnamed)"}: ${errors.join("; ")}`);
+      console.log(`  actual: confirmed=${verdict.confirmed} | by=${verdict.by} | reason=${verdict.reason || ""}`);
+    } else {
+      console.log(`PASS ${fixture.id || "(gate5 unnamed)"}: confirmed=${verdict.confirmed} | by=${verdict.by}`);
+    }
+  }
+  console.log("--------------------------------------");
+  console.log(`${gate5Fixtures.length - gate5Failures}/${gate5Fixtures.length} Gate 5 relevance fixtures passed`);
+
+  // Network-level probe detectors (third-party listings + soft 404). These run
+  // inside networkProbe, so cover them as pure-function assertions (no network).
+  const detectorChecks = [
+    ["aggregator-host-getmyboat", isAggregatorHost("www.getmyboat.com") === true],
+    ["aggregator-host-outdoorsy-sub", isAggregatorHost("listings.outdoorsy.com") === true],
+    ["aggregator-host-site-builder-not-flagged", isAggregatorHost("acme-kayaks.wixsite.com") === false],
+    ["aggregator-host-own-domain-not-flagged", isAggregatorHost("tahoekayak.com") === false],
+    ["soft404-page-not-found", Boolean(looksSoft404("<title>Page Not Found</title><body>oops</body>", "Page Not Found"))],
+    ["soft404-error-404", Boolean(looksSoft404("<body>Error 404 - this page doesn't exist</body>", ""))],
+    ["soft404-clean-page-not-flagged", looksSoft404("<body>Welcome to our kayak rental shop on the lake.</body>", "Tahoe Kayak") === null],
+  ];
+  let detectorFailures = 0;
+  for (const [id, ok] of detectorChecks) {
+    if (ok) {
+      console.log(`PASS ${id}`);
+    } else {
+      detectorFailures++;
+      console.log(`FAIL ${id}`);
+    }
+  }
+  console.log("--------------------------------------");
+  console.log(`${detectorChecks.length - detectorFailures}/${detectorChecks.length} Gate 5 detector checks passed`);
+
+  return failures || gate5Failures || detectorFailures ? 1 : 0;
 }
 
 if (TEST_FIXTURES) {
