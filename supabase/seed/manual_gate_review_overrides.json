@@ -1,0 +1,1177 @@
+{
+  "source": "/Users/echalicki/Documents/sweep_gate_needs_review excel.xlsx",
+  "reviewed_at": "2026-06-26",
+  "note": "Quick human review of Gate 5 operator-lane needs_review rows, finalized from the Excel export after the PDF extraction missed some labels. Values marked yes or demo_only should move to survivors for Pass A triage; values marked no should move to rejects; duplicate/blank rows remain out of survivor/reject overrides.",
+  "overrides": [
+    {
+      "place_id": "ChIJ6TmJWcA_mYARP3teDQ58QOQ",
+      "name": "Cash My Guns",
+      "label": "no",
+      "pdf_rank": 1
+    },
+    {
+      "place_id": "ChIJYUVMarlAmYARb0lDS3pQVdQ",
+      "name": "Junkee Clothing Exchange & Antique Store",
+      "label": "no",
+      "pdf_rank": 2
+    },
+    {
+      "place_id": "ChIJD3avUso4mYAR2QXhujRxf6E",
+      "name": "Yim's Market",
+      "label": "no",
+      "pdf_rank": 3
+    },
+    {
+      "place_id": "ChIJVQaY73VAmYARn0kEp4dptlI",
+      "name": "Big 5 Sporting Goods",
+      "label": "no",
+      "pdf_rank": 4
+    },
+    {
+      "place_id": "ChIJS8TtqYdAmYARD5obmP5i4Eg",
+      "name": "168 Asian Market",
+      "label": "no",
+      "pdf_rank": 5
+    },
+    {
+      "place_id": "ChIJ58U5ky45mYARhpveVjdZzrQ",
+      "name": "Big R Sparks",
+      "label": "no",
+      "pdf_rank": 6
+    },
+    {
+      "place_id": "ChIJYSNv7aU4mYARz2iT6DLWU6U",
+      "name": "Goodwill Industries Sacramento Valley & Northern Nevada",
+      "label": "no",
+      "pdf_rank": 7
+    },
+    {
+      "place_id": "ChIJEx2nu2A_mYARgbwxIv--PN8",
+      "name": "Reno Guns & Range",
+      "label": "no",
+      "pdf_rank": 8
+    },
+    {
+      "place_id": "ChIJvxpWPuoKmYAR1zvHnsC7c2I",
+      "name": "Classy Seconds Thrift Shop",
+      "label": "no",
+      "pdf_rank": 9
+    },
+    {
+      "place_id": "ChIJB3B2EWg_mYARI9BBbwzlLjI",
+      "name": "RAC Guns & Ammo",
+      "label": "no",
+      "pdf_rank": 10
+    },
+    {
+      "place_id": "ChIJ2VIUhUsjkSURmXmxNTg5nlE",
+      "name": "Janie Miller Events",
+      "label": "no",
+      "pdf_rank": 11
+    },
+    {
+      "place_id": "ChIJIxqpMOs-mYARI02wa7Xy1fE",
+      "name": "adidas OUTLET STORE",
+      "label": "no",
+      "pdf_rank": 12
+    },
+    {
+      "place_id": "ChIJqyMGGrA4mYARwyzGSvxyrPM",
+      "name": "Manila Hong Kong Store & Kitchen",
+      "label": "no",
+      "pdf_rank": 13
+    },
+    {
+      "place_id": "ChIJVVVVVSU-mYARjosZjhZhwqY",
+      "name": "St Vincent's Thrift Store",
+      "label": "no",
+      "pdf_rank": 14
+    },
+    {
+      "place_id": "ChIJOUiVhlJHmYARM_Bf0AcXNyw",
+      "name": "D Bar M Western Store",
+      "label": "no",
+      "pdf_rank": 15
+    },
+    {
+      "place_id": "ChIJXa-Jk0w_mYARENcAHg6TRPA",
+      "name": "Asia Market",
+      "label": "no",
+      "pdf_rank": 16
+    },
+    {
+      "place_id": "ChIJdyuLmx8_mYARJ3GHkUkHrTI",
+      "name": "Juggernaut Arms",
+      "label": "no",
+      "pdf_rank": 17
+    },
+    {
+      "place_id": "ChIJD9EK9L0KmYARXzLg_JvXuwk",
+      "name": "FISH Thrift Store - Carson City",
+      "label": "no",
+      "pdf_rank": 19
+    },
+    {
+      "place_id": "ChIJfWSXXwU_mYARbi4dhesjCa4",
+      "name": "Moto Source",
+      "label": "no",
+      "pdf_rank": 20
+    },
+    {
+      "place_id": "ChIJCR1fZF4_mYARLDJkpqw45Rs",
+      "name": "Road Rider of Reno Ltd",
+      "label": "no",
+      "pdf_rank": 21
+    },
+    {
+      "place_id": "ChIJo8DetYtAmYAR4l0ifYIrIUo",
+      "name": "Home Team Sports Collectibles",
+      "label": "no",
+      "pdf_rank": 22
+    },
+    {
+      "place_id": "ChIJWUMQ4Te5G2wRwZWD1zkhze8",
+      "name": "Battle Born Bouncers Nevada LLC",
+      "label": "no",
+      "pdf_rank": 24
+    },
+    {
+      "place_id": "ChIJ9WHEhrdAmYARjmH30nNtNeA",
+      "name": "Classic Skate Shop",
+      "label": "no",
+      "pdf_rank": 25
+    },
+    {
+      "place_id": "ChIJKb9R3HdAmYARAS4Qy-DIhD0",
+      "name": "Ball Hogs Sports Cards, Collectibles & More",
+      "label": "no",
+      "pdf_rank": 26
+    },
+    {
+      "place_id": "ChIJOeyRBRvgm4ARNbELv-Coabk",
+      "name": "Off Road Tahoe Tours",
+      "label": "no",
+      "pdf_rank": 27
+    },
+    {
+      "place_id": "ChIJXR7C1DPem4AR7cE519Weul4",
+      "name": "Tahoe Forest Hospice Gift & Thrift",
+      "label": "no",
+      "pdf_rank": 28
+    },
+    {
+      "place_id": "ChIJi2iIy78KmYARSuIOwZTNaJU",
+      "name": "Wild Bill's Guns Too",
+      "label": "no",
+      "pdf_rank": 29
+    },
+    {
+      "place_id": "ChIJr1XoLzkVmYARCcVd2sPgPHk",
+      "name": "Willey Brothers Firearms",
+      "label": "no",
+      "pdf_rank": 30
+    },
+    {
+      "place_id": "ChIJQbD3TpBAmYARtqedhTR54Ac",
+      "name": "Hi-cap firearms jewelry and more",
+      "label": "no",
+      "pdf_rank": 32
+    },
+    {
+      "place_id": "ChIJPRErSHaQmYAR-3WJQn9Xt6k",
+      "name": "The North Face",
+      "label": "no",
+      "pdf_rank": 33
+    },
+    {
+      "place_id": "ChIJ9U9G4Ok_mYARdr67s7o-XJg",
+      "name": "Outdoor Power",
+      "label": "no",
+      "pdf_rank": 35
+    },
+    {
+      "place_id": "ChIJAfzNHYS-mYARMKVpPPix1Zk",
+      "name": "Guns N Ammo",
+      "label": "no",
+      "pdf_rank": 36
+    },
+    {
+      "place_id": "ChIJH4LWWHR9mYARcsCkDbE8oUA",
+      "name": "Tahoe Sailing Charters",
+      "label": "no",
+      "pdf_rank": 37
+    },
+    {
+      "place_id": "ChIJjXQMjKU4mYARRknghp8fkSI",
+      "name": "Bizarre Guns",
+      "label": "no",
+      "pdf_rank": 38
+    },
+    {
+      "place_id": "ChIJCVzk_MkUPgMRT8xv4Emnt1Y",
+      "name": "Boat Rental Lake Tahoe",
+      "label": "no",
+      "pdf_rank": 40
+    },
+    {
+      "place_id": "ChIJJ76TR3Z9mYARaOK4wl139gg",
+      "name": "Pass It On Thrift",
+      "label": "no",
+      "pdf_rank": 42
+    },
+    {
+      "place_id": "ChIJO3hKsSt7mYARlKDHlA0MW7E",
+      "name": "Lady Luck Skate & Smoke Shop",
+      "label": "no",
+      "pdf_rank": 43
+    },
+    {
+      "place_id": "ChIJ45jPawR9mYARVSFNLBdAFbE",
+      "name": "Lake Forest Boat Ramp",
+      "label": "no",
+      "pdf_rank": 44
+    },
+    {
+      "place_id": "ChIJU9TywWagmYARe8LCLhXehxE",
+      "name": "The Thrifty Equine",
+      "label": "no",
+      "pdf_rank": 46
+    },
+    {
+      "place_id": "ChIJczI7McV9mYARz31hv3h7u3Q",
+      "name": "Lady Luck Skate and Smoke Shop",
+      "label": "no",
+      "pdf_rank": 47
+    },
+    {
+      "place_id": "ChIJdbLVD7U_mYARyZhjF9taoco",
+      "name": "Reno Bulk Ammo",
+      "label": "no",
+      "pdf_rank": 48
+    },
+    {
+      "place_id": "ChIJwwCPp1s_mYARTYCBk9c1iq8",
+      "name": "Alpine Event Services",
+      "label": "no",
+      "pdf_rank": 49
+    },
+    {
+      "place_id": "ChIJZQCC5b8KmYARNusj23xm9GQ",
+      "name": "sierra nevada sports collectibles",
+      "label": "no",
+      "pdf_rank": 50
+    },
+    {
+      "place_id": "ChIJ4VlaHh0KmYARw4o5IhkXiGA",
+      "name": "Super Sport Motors LLC",
+      "label": "no",
+      "pdf_rank": 51
+    },
+    {
+      "place_id": "ChIJ11kk0kg_mYARLCJtcRJt2BY",
+      "name": "Illumined Arms",
+      "label": "no",
+      "pdf_rank": 52
+    },
+    {
+      "place_id": "ChIJq0RntF6PmYARjW0JBP6obyQ",
+      "name": "Tahoe Emerald Bliss Boat Tour",
+      "label": "no",
+      "pdf_rank": 54
+    },
+    {
+      "place_id": "ChIJiSVjS5RoeSURx8Ir0aDNkEY",
+      "name": "Biggest Little Bouncers",
+      "label": "no",
+      "pdf_rank": 56
+    },
+    {
+      "place_id": "ChIJ_1tItoJxmYARveWs9_5FjoM",
+      "name": "Lady Luck Skate and Smoke Shop",
+      "label": "no",
+      "pdf_rank": 57
+    },
+    {
+      "place_id": "ChIJ5xUS1MgJmYAR2mg-JQXeYgo",
+      "name": "Carson Ridge Disc Golf Park & Interpretive Trails",
+      "label": "no",
+      "pdf_rank": 58
+    },
+    {
+      "place_id": "ChIJFV9YYBI4mYARh7eVDmvZSjY",
+      "name": "Little City Guns",
+      "label": "no",
+      "pdf_rank": 59
+    },
+    {
+      "place_id": "ChIJRwgfDQ-QmYARJY-eSWao8iM",
+      "name": "Tahoe Hemp Co",
+      "label": "no",
+      "pdf_rank": 60
+    },
+    {
+      "place_id": "ChIJ93TcKiO6UQ4Ri4t20_kRd3M",
+      "name": "Deep Blue Yacht Cruises",
+      "label": "no",
+      "pdf_rank": 61
+    },
+    {
+      "place_id": "ChIJGyAIrCTem4ARSHXoD3Glbig",
+      "name": "Truckee Powersports Supply",
+      "label": "no",
+      "pdf_rank": 64
+    },
+    {
+      "place_id": "ChIJg8GBjOdBmYARo-ZoH4j-CYM",
+      "name": "Rightful Liberty Arms",
+      "label": "no",
+      "pdf_rank": 67
+    },
+    {
+      "place_id": "ChIJc11BR83gm4ARTePaD-tgusI",
+      "name": "Lake Tahoe Jetovator",
+      "label": "no",
+      "pdf_rank": 69
+    },
+    {
+      "place_id": "ChIJsTthxSPA3KARUXSSOqCsm8A",
+      "name": "Puro Pinche Party Reno",
+      "label": "no",
+      "pdf_rank": 70
+    },
+    {
+      "place_id": "ChIJE-EVtvU3mYAR5Fb5u4pQ3Ss",
+      "name": "Reno Tahoe Vintage Rentals",
+      "label": "no",
+      "pdf_rank": 71
+    },
+    {
+      "place_id": "ChIJCXttlL0KmYARYuDYUruR2B4",
+      "name": "Bicycle Authority",
+      "label": "no",
+      "pdf_rank": 73
+    },
+    {
+      "place_id": "ChIJe7OtZ8o4mYARk5kHXSj2LTE",
+      "name": "House Of Arrows Archery",
+      "label": "no",
+      "pdf_rank": 74
+    },
+    {
+      "place_id": "ChIJfSZPZo_3mYARk2BMe8-JyF8",
+      "name": "Silver Lake boat ramp",
+      "label": "no",
+      "pdf_rank": 75
+    },
+    {
+      "place_id": "ChIJZV6NRQAVmYARwRilGYrPDgU",
+      "name": "Biggest Little Booth",
+      "label": "no",
+      "pdf_rank": 77
+    },
+    {
+      "place_id": "ChIJBfSNl42PmYAROOFC1bLjLTg",
+      "name": "Walker Marine Inc",
+      "label": "no",
+      "pdf_rank": 78
+    },
+    {
+      "place_id": "ChIJsapa4IShmYARLM_eFb0_jdg",
+      "name": "Blissed Out Skate Shop",
+      "label": "no",
+      "pdf_rank": 79
+    },
+    {
+      "place_id": "ChIJMybmtDy9mYARVy47T7Saxs4",
+      "name": "Tahoe Charters",
+      "label": "no",
+      "pdf_rank": 80
+    },
+    {
+      "place_id": "ChIJVcU0C_l7mYARQ6mVDxp-b7g",
+      "name": "Blue Water Charter",
+      "label": "no",
+      "pdf_rank": 81
+    },
+    {
+      "place_id": "ChIJe9JOgrM3mYARCPOpQPGsx7c",
+      "name": "Biggest Little Bike Park",
+      "label": "no",
+      "pdf_rank": 83
+    },
+    {
+      "place_id": "ChIJW-ltlyGbmYARiz-gTw6o1hE",
+      "name": "Inclusive Excursions",
+      "label": "no",
+      "pdf_rank": 84
+    },
+    {
+      "place_id": "ChIJMwihuow_mYAR-a9XQKs3g6M",
+      "name": "Custom Racquet",
+      "label": "no",
+      "pdf_rank": 85
+    },
+    {
+      "place_id": "ChIJL83lmDWPmYARMYI1LGrsaJg",
+      "name": "Tahoe Luxury Charters",
+      "label": "no",
+      "pdf_rank": 86
+    },
+    {
+      "place_id": "ChIJr5zA0Kk_mYARLQMKNULVZOs",
+      "name": "Tahoe-Pyramid Bikeway",
+      "label": "no",
+      "pdf_rank": 87
+    },
+    {
+      "place_id": "ChIJQRxN-dqimYARBJcnuPARAN4",
+      "name": "Sunrise Pass Arms Co",
+      "label": "no",
+      "pdf_rank": 88
+    },
+    {
+      "place_id": "ChIJt_L3ZgMKmYARNYr60Gefwmc",
+      "name": "Carson Tahoe Marine Inc",
+      "label": "no",
+      "pdf_rank": 89
+    },
+    {
+      "place_id": "ChIJIXaPqFCHwoART-UxC5Iq0Ag",
+      "name": "Leatt USA",
+      "label": "no",
+      "pdf_rank": 90
+    },
+    {
+      "place_id": "ChIJr-7qm6mPmYARmJYhaIYHFa4",
+      "name": "Tahoe Boat Tours",
+      "label": "no",
+      "pdf_rank": 91
+    },
+    {
+      "place_id": "ChIJu16hqyI_mYARQ8iPpauNDUc",
+      "name": "Gianola's Boat Canvas",
+      "label": "no",
+      "pdf_rank": 92
+    },
+    {
+      "place_id": "ChIJ5XChC66PmYARGYPDyVK_DUg",
+      "name": "South Tahoe Bikeway Trailheads",
+      "label": "no",
+      "pdf_rank": 94
+    },
+    {
+      "place_id": "ChIJH4LWWHR9mYARzGkBcHGIW7E",
+      "name": "Reel Deal Sportfishing",
+      "label": "no",
+      "pdf_rank": 95
+    },
+    {
+      "place_id": "ChIJg0A1VQFJmYARY_YXzZERZRw",
+      "name": "F&S Powersports",
+      "label": "no",
+      "pdf_rank": 96
+    },
+    {
+      "place_id": "ChIJffjgxCuPmYARu_8tdozjXHE",
+      "name": "Tahoe Tessie Trading Post",
+      "label": "no",
+      "pdf_rank": 97
+    },
+    {
+      "place_id": "ChIJx0Y-vBM_mYARFu44Zse9xSY",
+      "name": "Sierra Propeller & fabrication",
+      "label": "no",
+      "pdf_rank": 98
+    },
+    {
+      "place_id": "ChIJz14CvMzuBwQRWYE4-hbzw-k",
+      "name": "Alpine Gathering Co.",
+      "label": "no",
+      "pdf_rank": 100
+    },
+    {
+      "place_id": "ChIJHxCy_8QsN6AR9hSqNab2zAY",
+      "name": "Blue Wave Boat Rentals",
+      "label": "no",
+      "pdf_rank": 103
+    },
+    {
+      "place_id": "ChIJ3ztTfQMIhW8RRWhLPCnGmB0",
+      "name": "Rent a Boat",
+      "label": "no",
+      "pdf_rank": 104
+    },
+    {
+      "place_id": "ChIJfVKq_BBlmYARKqM1VWRX0RU",
+      "name": "BOATS ON TAHOE",
+      "label": "no",
+      "pdf_rank": 105
+    },
+    {
+      "place_id": "ChIJ617JfZAdySgRI2UxT7SHX1I",
+      "name": "Mountain Style Celebrations",
+      "label": "no",
+      "pdf_rank": 106
+    },
+    {
+      "place_id": "ChIJF_Kpv1lfmYARzh104zRWypM",
+      "name": "Reno Watersports",
+      "label": "no",
+      "pdf_rank": 107
+    },
+    {
+      "place_id": "ChIJncGhGCNsmYAR9Uylobv9DHE",
+      "name": "Mountain Top Sports is moving to a new location",
+      "label": "no",
+      "pdf_rank": 108
+    },
+    {
+      "place_id": "ChIJL8_A2_tgn2IRl6iJmX0Rxcg",
+      "name": "Big Fun Recreation",
+      "label": "no",
+      "pdf_rank": 109
+    },
+    {
+      "place_id": "ChIJMT6Ai3plfA8R3SOt9V-w9h0",
+      "name": "Big Fun Recreation",
+      "label": "no",
+      "pdf_rank": 110
+    },
+    {
+      "place_id": "ChIJ99E3Q0v1jg0RPxI-26_eWww",
+      "name": "Victoriaspartyrentals10",
+      "label": "no",
+      "pdf_rank": 112
+    },
+    {
+      "place_id": "ChIJw7SG6ms7mYARFjZoQJxxpYs",
+      "name": "Sierra Nevada Water Sports",
+      "label": "no",
+      "pdf_rank": 113
+    },
+    {
+      "place_id": "ChIJof15zDsLmYARzX1_Gbkqtxw",
+      "name": "BNL Enterprises Guns and Ammo",
+      "label": "no",
+      "pdf_rank": 114
+    },
+    {
+      "place_id": "ChIJK2R0Y2AKmYAR96a3U46S_d4",
+      "name": "Rocys Choppers",
+      "label": "no",
+      "pdf_rank": 115
+    },
+    {
+      "place_id": "ChIJJ8NWXnaQmYARFeEzIbBrhr0",
+      "name": "Ski Demo Center",
+      "label": "no",
+      "pdf_rank": 116
+    },
+    {
+      "place_id": "ChIJK5Q_ITFimYAReguvjAbFR4k",
+      "name": "Oakley",
+      "label": "no",
+      "pdf_rank": 117
+    },
+    {
+      "place_id": "ChIJR0KXpF2hmYAR0cqHyu5p4Sw",
+      "name": "Silver State Bounce LLC",
+      "label": "no",
+      "pdf_rank": 118
+    },
+    {
+      "place_id": "ChIJayhFRykVmYARUOf8v6UMRqw",
+      "name": "Bar Down Hockey Shop NV",
+      "label": "no",
+      "pdf_rank": 120
+    },
+    {
+      "place_id": "ChIJ0Q-yb7ffm4ARF2CWo3kx36U",
+      "name": "Crux Events",
+      "label": "no",
+      "pdf_rank": 121
+    },
+    {
+      "place_id": "ChIJUQBkplFumYARkzb4mqPpFfo",
+      "name": "Crystal Bay Marine",
+      "label": "no",
+      "pdf_rank": 122
+    },
+    {
+      "place_id": "ChIJr0X6r8teCGQRMrFtgMnCg8A",
+      "name": "J. Switzer & Co. LTD",
+      "label": "no",
+      "pdf_rank": 123
+    },
+    {
+      "place_id": "ChIJp2kX1F_hm4ARoU8DkrUewZQ",
+      "name": "skipunk ski worx",
+      "label": "no",
+      "pdf_rank": 124
+    },
+    {
+      "place_id": "ChIJM_rDCS7nm4ARGhhMIndBh8Q",
+      "name": "Tahoe Donner Ski Bowl Condo",
+      "label": "no",
+      "pdf_rank": 125
+    },
+    {
+      "place_id": "ChIJMX_EDaI-mYAR9mbgiuxBOtA",
+      "name": "Hawley USA",
+      "label": "no",
+      "pdf_rank": 126
+    },
+    {
+      "place_id": "ChIJ5dSPgA6QmYARCvyyoQe95yo",
+      "name": "Ski Rentals",
+      "label": "no",
+      "pdf_rank": 127
+    },
+    {
+      "place_id": "ChIJj6qbguP3mYARriHWL6zG9zU",
+      "name": "Kirkwood Ski/Snowboard Rentals",
+      "label": "no",
+      "pdf_rank": 129
+    },
+    {
+      "place_id": "ChIJU-SeGV1HmYARpjGnT4KXoqw",
+      "name": "Deportes Colima",
+      "label": "no",
+      "pdf_rank": 131
+    },
+    {
+      "place_id": "ChIJuT98TACRmYAR9XSGLcKVoNM",
+      "name": "Tahoe jet ski",
+      "label": "no",
+      "pdf_rank": 132
+    },
+    {
+      "place_id": "ChIJrcGsyxaPmYARpMYAd8EzCLE",
+      "name": "Pirate Lake Tahoe",
+      "label": "no",
+      "pdf_rank": 133
+    },
+    {
+      "place_id": "ChIJb5RQoyWPmYARgKwCx0kOVew",
+      "name": "SOS Skate Shop",
+      "label": "no",
+      "pdf_rank": 134
+    },
+    {
+      "place_id": "ChIJ6VpEBJgJmYAR9ci2EucUSyc",
+      "name": "Pearson Parts & Services LLC",
+      "label": "no",
+      "pdf_rank": 137
+    },
+    {
+      "place_id": "ChIJPaKvNe_nm4ARq7rgsr-wfas",
+      "name": "Peninsula Ski Club",
+      "label": "no",
+      "pdf_rank": 138
+    },
+    {
+      "place_id": "ChIJPUvX1Oc_mYARbJl1Bi1xDLg",
+      "name": "Celadon Events",
+      "label": "no",
+      "pdf_rank": 139
+    },
+    {
+      "place_id": "ChIJwxpPNT4_mYARqttz0T0-vyQ",
+      "name": "D H Racing Products",
+      "label": "no",
+      "pdf_rank": 140
+    },
+    {
+      "place_id": "ChIJ53fok_s-mYARl0cdLu5sn_4",
+      "name": "Trek Inc",
+      "label": "no",
+      "pdf_rank": 141
+    },
+    {
+      "place_id": "ChIJ6TZkzC7hm4ARajzo4wLtHzY",
+      "name": "Samurai Butter | Ski & Bike Works",
+      "label": "no",
+      "pdf_rank": 142
+    },
+    {
+      "place_id": "ChIJCwgV2yznm4ARE8cvyYNmN8Y",
+      "name": "Bike & Ski E.R.",
+      "label": "no",
+      "pdf_rank": 143
+    },
+    {
+      "place_id": "ChIJX_hnacwTmYARecgqeyq38UE",
+      "name": "Nevada Guide Service",
+      "label": "no",
+      "pdf_rank": 144
+    },
+    {
+      "place_id": "ChIJmwgLyX5AmYARLDJ8jWUGTlo",
+      "name": "RiderPlanet, LLC",
+      "label": "no",
+      "pdf_rank": 145
+    },
+    {
+      "place_id": "ChIJe1mJweF_mYARZQb-FbqnGX4",
+      "name": "Rubicon Trail Jeep Tours",
+      "label": "no",
+      "pdf_rank": 146
+    },
+    {
+      "place_id": "ChIJkxPrPu_nm4ARa-ZwiqhahAY",
+      "name": "Minus 7",
+      "label": "no",
+      "pdf_rank": 147
+    },
+    {
+      "place_id": "ChIJ18S2xD3gm4AR51gEoNrMs8Q",
+      "name": "Brown Chicken Log Works",
+      "label": "no",
+      "pdf_rank": 148
+    },
+    {
+      "place_id": "ChIJFwH6MwBvmYARHxIqiPAyYlI",
+      "name": "Tyrolian Downhill Mountain Bike Trail",
+      "label": "no",
+      "pdf_rank": 149
+    },
+    {
+      "place_id": "ChIJa0YAwPk_mYARlCZKYkApuyU",
+      "name": "ACS Fitness Equipment",
+      "label": "no",
+      "pdf_rank": 150
+    },
+    {
+      "place_id": "ChIJSZeyEoVAmYAR4R3w-L7T59o",
+      "name": "S.c.u.b.a",
+      "label": "no",
+      "pdf_rank": 151
+    },
+    {
+      "place_id": "ChIJp2AAvRM_mYAR9tEkDpcdxlI",
+      "name": "Giraffe Inc",
+      "label": "no",
+      "pdf_rank": 152
+    },
+    {
+      "place_id": "ChIJ0YBAkdM4mYARuldoHr2FJU8",
+      "name": "Forever 2 Wheels",
+      "label": "no",
+      "pdf_rank": 153
+    },
+    {
+      "place_id": "ChIJeV5k8sDgm4ARz3YsILeBn8U",
+      "name": "Truckee Mountain Vacation",
+      "label": "no",
+      "pdf_rank": 154
+    },
+    {
+      "place_id": "ChIJocK5OjdHmYAR0asgOwoaOJY",
+      "name": "Pyramid bikeways",
+      "label": "no",
+      "pdf_rank": 155
+    },
+    {
+      "place_id": "ChIJVVVVVSU-mYARfdKseUEol_c",
+      "name": "Bouncin Bins",
+      "label": "no",
+      "pdf_rank": 156
+    },
+    {
+      "place_id": "ChIJTwnC2fWPmYARFS3CSQq2DRM",
+      "name": "Push push industries",
+      "label": "no",
+      "pdf_rank": 158
+    },
+    {
+      "place_id": "ChIJl2lCpqmbmYARyyFQrXx1_Z8",
+      "name": "Jet Surf Magic",
+      "label": "no",
+      "pdf_rank": 160
+    },
+    {
+      "place_id": "ChIJmXzPd5iPmYARo7sA-SvSRLg",
+      "name": "Dental Clinic",
+      "label": "no",
+      "pdf_rank": 161
+    },
+    {
+      "place_id": "ChIJ-4ZDrbSRmYARyrqUYX9pWPc",
+      "name": "Haus Quiver South Lake Tahoe",
+      "label": "no",
+      "pdf_rank": 163
+    },
+    {
+      "place_id": "ChIJoSX_-pK9mYARB6vDtlzh5_I",
+      "name": "Cycle Chic",
+      "label": "no",
+      "pdf_rank": 165
+    },
+    {
+      "place_id": "ChIJx3A6Gjh9mYARcesckIY6EMk",
+      "name": "The boat",
+      "label": "no",
+      "pdf_rank": 166
+    },
+    {
+      "place_id": "ChIJ9Q0VprGhmYARhRduYXsT1I4",
+      "name": "Powersports Plus",
+      "label": "no",
+      "pdf_rank": 168
+    },
+    {
+      "place_id": "ChIJadXPdQDbm4ARPK1PY02ecKE",
+      "name": "Tee #1",
+      "label": "no",
+      "pdf_rank": 169
+    },
+    {
+      "place_id": "ChIJD_1JO_hBgGoRRkmWgbM7WTg",
+      "name": "Tahoe Blue Charters",
+      "label": "no",
+      "pdf_rank": 172
+    },
+    {
+      "place_id": "ChIJ4-NkXVALmYARF3hu9TofJ1M",
+      "name": "Mi Fiesta Y Mas",
+      "label": "no",
+      "pdf_rank": 173
+    },
+    {
+      "place_id": "ChIJsXW_-erfm4ARpA3QmEjdsS0",
+      "name": "no",
+      "label": "no",
+      "pdf_rank": 174
+    },
+    {
+      "place_id": "ChIJDfCwLsrfm4ARqqDPsWqEfzk",
+      "name": "Tahoe SUP",
+      "label": "no",
+      "pdf_rank": 175
+    },
+    {
+      "place_id": "ChIJX1O3MfHfm4ARPuMOaxZzNQY",
+      "name": "Aero Sailing Charters",
+      "label": "no",
+      "pdf_rank": 176
+    },
+    {
+      "place_id": "ChIJF4h1Io0NmYARw8HH5tbZfRY",
+      "name": "GF Armory",
+      "label": "no",
+      "pdf_rank": 178
+    },
+    {
+      "place_id": "ChIJPcKqORUVmYAR38UJytj34jQ",
+      "name": "Blush Camper Co.",
+      "label": "no",
+      "pdf_rank": 180
+    },
+    {
+      "place_id": "ChIJTad85cRFmYARbHFLmts1N7Y",
+      "name": "Alpine Collective",
+      "label": "no",
+      "pdf_rank": 181
+    },
+    {
+      "place_id": "ChIJNdxHtvBHmYARdkIHLcFPewo",
+      "name": "Bearitage Boats Rental Lake Tahoe - Luxury Boat & Yacht Charters",
+      "label": "no",
+      "pdf_rank": 183
+    },
+    {
+      "place_id": "ChIJC-i_1wBHmYARxFbic0rcKP8",
+      "name": "Reno Bikes Mobile",
+      "label": "no",
+      "pdf_rank": 184
+    },
+    {
+      "place_id": "ChIJ_RmLwnxgmYARMlkzev99OW8",
+      "name": "San Francisco Fly Casting Club",
+      "label": "no",
+      "pdf_rank": 185
+    },
+    {
+      "place_id": "ChIJodtW1-5gmYARPEmSufGP0l0",
+      "name": "Maher's Guide Service",
+      "label": "no",
+      "pdf_rank": 186
+    },
+    {
+      "place_id": "ChIJ9ffh5MZlmYARKO6I6VZHIGY",
+      "name": "HSH Fishing",
+      "label": "no",
+      "pdf_rank": 187
+    },
+    {
+      "place_id": "ChIJ6Ru8uh13mYAR_KdiJSwQYio",
+      "name": "CalNeva Charters",
+      "label": "no",
+      "pdf_rank": 188
+    },
+    {
+      "place_id": "ChIJHcUaKbg-mYAR8zvyur6tBB4",
+      "name": "JL Custom Rods",
+      "label": "no",
+      "pdf_rank": 189
+    },
+    {
+      "place_id": "ChIJC9mYCoGbmYARo3Q0PdvCBkI",
+      "name": "Battle Born Lake Tahoe Tours",
+      "label": "no",
+      "pdf_rank": 191
+    },
+    {
+      "place_id": "ChIJC3F7attqmYARhmlWDBa7I8Y",
+      "name": "Stillwater Guide Service-Fly Fishing",
+      "label": "no",
+      "pdf_rank": 192
+    },
+    {
+      "place_id": "ChIJw2_VX8Lhm4ARuDJdFhrFCv4",
+      "name": "Snowplay",
+      "label": "no",
+      "pdf_rank": 196
+    },
+    {
+      "place_id": "ChIJQyqVfYmbmYARRq9JoIFNTlo",
+      "name": "Blue Sun Boat Rentals",
+      "label": "yes",
+      "pdf_rank": 23
+    },
+    {
+      "place_id": "ChIJgdUHyKIKmYARaBDugkoQAKg",
+      "name": "The Bike Smith",
+      "label": "yes",
+      "pdf_rank": 31
+    },
+    {
+      "place_id": "ChIJh_0E4E99mYAR0zBdX3N682c",
+      "name": "Tahoe Jeep Rentals, Inc",
+      "label": "yes",
+      "pdf_rank": 34
+    },
+    {
+      "place_id": "ChIJ-0E9UJrhm4AReRY7fH4VbfE",
+      "name": "Donner Lake E Bikes",
+      "label": "yes",
+      "pdf_rank": 41
+    },
+    {
+      "place_id": "ChIJ786_B8l3tIkRHNv3pBik6y4",
+      "name": "Tahoe Pontoon Charters",
+      "label": "yes",
+      "pdf_rank": 55
+    },
+    {
+      "place_id": "ChIJrZ0a2NKOmYAR1Uv4br5voss",
+      "name": "Fallen Leaf Lake Association",
+      "label": "yes",
+      "pdf_rank": 66
+    },
+    {
+      "place_id": "ChIJscf4VsePmYARJHNiY-Oq0EM",
+      "name": "Tahoe Blue Adventures",
+      "label": "yes",
+      "pdf_rank": 68
+    },
+    {
+      "place_id": "ChIJ8X4WX_jsmYARZDHIUyU4Gjk",
+      "name": "Hope Valley Outdoors",
+      "label": "yes",
+      "pdf_rank": 72
+    },
+    {
+      "place_id": "ChIJTd9mm5rdi6kR6PV01YzawMA",
+      "name": "Playa E-bike Rentals",
+      "label": "yes",
+      "pdf_rank": 82
+    },
+    {
+      "place_id": "ChIJL_C-oIQn9kwRP5wJRQQWLek",
+      "name": "Rubicon Surf Company",
+      "label": "yes",
+      "pdf_rank": 101
+    },
+    {
+      "place_id": "ChIJawj8cqZzG6gRPhrCJDxWM7c",
+      "name": "West Shore Lake Tahoe eBike Rentals",
+      "label": "yes",
+      "pdf_rank": 111
+    },
+    {
+      "place_id": "ChIJvTXOCrjXm4ARCjpfzIBOhIQ",
+      "name": "Slant Skis",
+      "label": "demo_only",
+      "pdf_rank": 119
+    },
+    {
+      "place_id": "ChIJv5Tn-32amYARYlwbLEgICZE",
+      "name": "Wanna Ride Tahoe Trail Shuttle Service",
+      "label": "yes",
+      "pdf_rank": 128
+    },
+    {
+      "place_id": "ChIJUXRv_b2PmYARhMFCa2UdWX4",
+      "name": "Boat Rental",
+      "label": "yes",
+      "pdf_rank": 135
+    },
+    {
+      "place_id": "ChIJc26yN8pkmYAR7vaH0jeNpww",
+      "name": "Tahoe Vista Sports",
+      "label": "yes",
+      "pdf_rank": 136
+    },
+    {
+      "place_id": "ChIJvenb9gL0mYARx8Sp-1RFiv0",
+      "name": "Kirkwood Mountain Sports - Timber Creek",
+      "label": "yes",
+      "pdf_rank": 157
+    },
+    {
+      "place_id": "ChIJPy-vnMaRmYARMiIj40_5Bzw",
+      "name": "Tallac Boat Rentals",
+      "label": "yes",
+      "pdf_rank": 159
+    },
+    {
+      "place_id": "ChIJ9bDI1HCbmYARCvQMY0dLL-0",
+      "name": "tahoe skibikes",
+      "label": "yes",
+      "pdf_rank": 162
+    },
+    {
+      "place_id": "ChIJK_GyTQCRmYARnDpDY9yRCVc",
+      "name": "Stagecoach lodge ski rental",
+      "label": "yes",
+      "pdf_rank": 164
+    },
+    {
+      "place_id": "ChIJDU7OIwB9mYARaW4RYO0akVc",
+      "name": "Sunnyside Marina and Fuel Dock",
+      "label": "yes",
+      "pdf_rank": 167
+    },
+    {
+      "place_id": "ChIJE4N00Md9mYAROuhns7O5F4g",
+      "name": "JBL WATERSPORTS",
+      "label": "yes",
+      "pdf_rank": 170
+    },
+    {
+      "place_id": "ChIJI8tiOud8mYAR0P9zvjO9rDY",
+      "name": "Tahoe XC",
+      "label": "yes",
+      "pdf_rank": 171
+    },
+    {
+      "place_id": "ChIJl9xKe8plmYARaBNWk8Lbshw",
+      "name": "Sierramobilebikes",
+      "label": "yes",
+      "pdf_rank": 177
+    },
+    {
+      "place_id": "ChIJX2yvUZxumYARnXMY9Q1xFhw",
+      "name": "Mt. Rose - Ski Tahoe",
+      "label": "yes",
+      "pdf_rank": 179
+    },
+    {
+      "place_id": "ChIJFRNBoymRmYARIcwV65Nz0Z0",
+      "name": "Lake & Wake Adventures",
+      "label": "yes",
+      "pdf_rank": 190
+    },
+    {
+      "place_id": "ChIJXdsqRPeMmYARPFveJrnfz5g",
+      "name": "Adventure Mountain Lake Tahoe",
+      "label": "yes",
+      "pdf_rank": 194
+    },
+    {
+      "place_id": "ChIJJ663GMtxmYARl7Jf3ui-cHQ",
+      "name": "Diamond Peak Ski Resort",
+      "label": "yes",
+      "pdf_rank": 195
+    },
+    {
+      "place_id": "ChIJxXW9W8-hmYARdqbQg-0ja_8",
+      "name": "Famous Footwear",
+      "label": "no",
+      "pdf_rank": 18
+    },
+    {
+      "place_id": "ChIJj78cC81AmYARXrge9vHyxRo",
+      "name": "lululemon",
+      "label": "no",
+      "pdf_rank": 39
+    },
+    {
+      "place_id": "ChIJr_vLWwFHmYARZfCAoV4VfdI",
+      "name": "The Ranch Disc Golf Course at Rancho San Rafael",
+      "label": "no",
+      "pdf_rank": 45
+    },
+    {
+      "place_id": "ChIJv5Tn-32amYARy09fERwNttU",
+      "name": "Black Tie Ski & Bike Rental Delivery of South Tahoe",
+      "label": "yes",
+      "pdf_rank": 53
+    },
+    {
+      "place_id": "ChIJ1YG3NXaQmYARh1HPVAwE_5w",
+      "name": "Helly Hansen",
+      "label": "no",
+      "pdf_rank": 62
+    },
+    {
+      "place_id": "ChIJpVyybrw_mYARqy0ZcVhj8Fk",
+      "name": "4 Ever Sports",
+      "label": "no",
+      "pdf_rank": 63
+    },
+    {
+      "place_id": "ChIJGZdOriY_mYAR0oBBbGMuJoc",
+      "name": "JD Sports",
+      "label": "no",
+      "pdf_rank": 65
+    },
+    {
+      "place_id": "ChIJTb3VLfI_mYARvjX3Oc0PeVE",
+      "name": "Tillys",
+      "label": "no",
+      "pdf_rank": 76
+    },
+    {
+      "place_id": "ChIJN8tf2vwJmYARmoi1an3P_G0",
+      "name": "Pony Express Disc Golf Trail",
+      "label": "no",
+      "pdf_rank": 93
+    },
+    {
+      "place_id": "ChIJc7BEfezZm4AR0MDluFCGDAw",
+      "name": "THE NORTH FACE at PALISADES TAHOE",
+      "label": "no",
+      "pdf_rank": 99
+    },
+    {
+      "place_id": "ChIJi48B4MXZm4ARGixpfWViKDs",
+      "name": "Everline Sports",
+      "label": "yes",
+      "pdf_rank": 130
+    },
+    {
+      "place_id": "ChIJydURVyVBmYARUqN5xRdZCoM",
+      "name": "Outdoor Cover Warehouse",
+      "label": "no",
+      "pdf_rank": 182
+    },
+    {
+      "place_id": "ChIJ2y-JMEOdmYARsCLeHjWgEVY",
+      "name": "Spooner Summit Snow Play Area",
+      "label": "no",
+      "pdf_rank": 193
+    }
+  ]
+}

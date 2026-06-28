@@ -40,6 +40,7 @@ const verified = read("operator_website_verified.json");
 const gate5CachePath = "sweep_gate5_cache.json";
 const fixturesPath = "gate_ladder_fixtures.json";
 const gate5RelevanceFixturesPath = "gate5_relevance_fixtures.json";
+const manualReviewOverridesPath = "manual_gate_review_overrides.json";
 // Bump when Gate 5 probe/relevance logic changes so stale verdicts auto-invalidate
 // without requiring an explicit --refresh-gate5.
 const GATE5_CACHE_VERSION = 4;
@@ -54,6 +55,12 @@ const SITE_TIMEOUT_MS = 10000;
 
 const termMeta = new Map(QUERIES.map((q) => [q.term, q]));
 const aoiTiles = seedTiles();
+const manualReviewData = exists(manualReviewOverridesPath)
+  ? read(manualReviewOverridesPath)
+  : { overrides: [] };
+const manualReviewByPlaceId = new Map(
+  (manualReviewData.overrides || []).map((o) => [o.place_id, o]),
+);
 
 function valueAfter(flag) {
   const idx = process.argv.indexOf(flag);
@@ -71,6 +78,8 @@ const writeCsv = (file, rows) => {
     "rank",
     "status",
     "reason",
+    "manual_review_label",
+    "pre_manual_review_reason",
     "name",
     "website",
     "primary_type",
@@ -1153,6 +1162,9 @@ function baseRecord(o) {
     dedup_note: null,
     site_note: null,
     site_relevance: null,
+    manual_review_label: null,
+    pre_manual_review_reason: null,
+    pre_manual_review_status: null,
     review_lane: "operator",
     decision_trace: [],
   };
@@ -1397,6 +1409,36 @@ async function classify(o) {
       setDecision(rec, "survivor", "cleared_gates_0-4", "Gate 5 not run; use --gate5 for live-site check.");
       trace.push({ gate: 5, result: "not_run", reason: "gate5:not_requested" });
     }
+  }
+
+  const manualReview = manualReviewByPlaceId.get(rec.place_id);
+  if (manualReview && rec.status === "needs_review") {
+    rec.pre_manual_review_status = rec.status;
+    rec.pre_manual_review_reason = rec.reason || null;
+    rec.manual_review_label = manualReview.label || null;
+    rec.review_lane = "operator";
+    const isNo = manualReview.label === "no";
+    const isDemoOnly = manualReview.label === "demo_only";
+    const reason = isNo
+      ? "manual_review:not_in_scope_or_no_gear_rental"
+      : isDemoOnly
+      ? "manual_review:demo_only_for_pass_a"
+      : "manual_review:in_scope_rents_gear_for_pass_a";
+    const note = isNo
+      ? "Quick human review marked this row as not in-scope and renting gear; reject instead of keeping it in review."
+      : isDemoOnly
+      ? "Quick human review marked this row as demo only; route to Pass A for deeper confirmation before seeding."
+      : "Quick human review marked this row as possibly in-scope and renting gear; route to Pass A for deeper confirmation before seeding.";
+    setDecision(rec, isNo ? "out_of_scope" : "survivor", reason, note);
+    trace.push({
+      gate: "manual_review",
+      result: rec.status,
+      reason,
+      note,
+      previous_status: rec.pre_manual_review_status,
+      previous_reason: rec.pre_manual_review_reason,
+      source: manualReviewData.source || manualReviewOverridesPath,
+    });
   }
 
   return rec;
