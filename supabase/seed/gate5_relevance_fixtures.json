@@ -133,6 +133,25 @@
     }
   },
   {
+    "id": "rental-software-vendor-routes-to-review",
+    "expect_confirmed": false,
+    "expect_by": "rental_software_or_marketplace_terms",
+    "reason_prefix": "gate5:rental_software_or_marketplace",
+    "net": {
+      "outcome": "live",
+      "text": "The all-in-one rental management software for your kayak and bike rental business. Grow your rental business with online booking.",
+      "meta": ""
+    },
+    "context": {
+      "name": "Fixture Rentle",
+      "rawUrl": "https://rentalsoftware.example",
+      "finalUrl": "https://rentalsoftware.example",
+      "rentalSignal": true,
+      "matchedActivities": ["kayak"],
+      "matchedTerms": ["kayak rental"]
+    }
+  },
+  {
     "id": "operator-name-confirms-without-activity-terms",
     "expect_confirmed": true,
     "expect_by": "operator_name_match",

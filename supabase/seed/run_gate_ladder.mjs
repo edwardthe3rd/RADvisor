@@ -32,6 +32,7 @@ const RUN_GATE5 = process.argv.includes("--gate5");
 const REFRESH_GATE5 = process.argv.includes("--refresh-gate5");
 const PREVIEW = process.argv.includes("--preview") || process.argv.includes("--dry-run");
 const TEST_FIXTURES = process.argv.includes("--test-fixtures");
+const AUDIT_OVERRIDES = process.argv.includes("--audit-overrides");
 const EXPLAIN_PLACE_ID = valueAfter("--explain");
 
 const sweepJson = read("quadtree_sweep_operators.json");
@@ -43,7 +44,7 @@ const gate5RelevanceFixturesPath = "gate5_relevance_fixtures.json";
 const manualReviewOverridesPath = "manual_gate_review_overrides.json";
 // Bump when Gate 5 probe/relevance logic changes so stale verdicts auto-invalidate
 // without requiring an explicit --refresh-gate5.
-const GATE5_CACHE_VERSION = 4;
+const GATE5_CACHE_VERSION = 5;
 const gate5CacheRaw = !REFRESH_GATE5 && exists(gate5CachePath) ? read(gate5CachePath) : {};
 const gate5Cache =
   gate5CacheRaw.__schema === GATE5_CACHE_VERSION ? gate5CacheRaw : { __schema: GATE5_CACHE_VERSION };
@@ -376,20 +377,63 @@ const isRecCategory = (o) =>
 // A genuine gear-rental SHOP name (not a vacation-home lease). Used as a recall safety
 // valve so a lodging-categorized row that actually reads like a rental shop is reviewed,
 // not auto-rejected.
-const RENT_SHOP_NAME = /(ski|bike|board|snowboard|kayak|paddle|sup|boat|gear|equipment|raft)\s+rental|\boutfitter\b|rental shop|\brentals\b\s*(shop|store|co\b)/i;
+const RENT_SHOP_NAME = /(ski|bike|board|snowboard|kayak|paddle|sup|boat|gear|equipment|raft)\s+rental|\boutfitters?\b|rental shop|\brentals\b\s*(shop|store|co\b)/i;
 
 const TOOL_CONSTRUCTION_RE = /\b(tool|construction|contractor|heavy|industrial|forklift|lift|generator|tractor|equipment)\b/i;
 // Phrase-based (not bare single words) so it no longer trips on rec names that merely
 // contain "event" or "table" (e.g. "Pool Table Services"), while still catching every
 // real party/event-rental shop ("Party Rentals", "Event Rentals", "Tent Rental").
-const PARTY_EVENT_RE = /party rental|event rental|tent rental|party suppl|event suppl|\bwedding\b|bounce house|photo booth|\b(tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?)\b/i;
+const PARTY_EVENT_RE = /party rental|event rental|tent rental|party suppl|event suppl|\bwedding\b|bounce house|\bbouncers?\b|bouncin|\bbounce\b|photo booth|\bevents?\b|celebrations?|\bfiesta\b|\b(tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?)\b/i;
 const PASSENGER_CAR_RE = /\b(rent[-\s]?a[-\s]?car|car rental|passenger car|sedan|suv rental|airport rental)\b/i;
 const POWERSPORTS_RE = /powersport|atv|utv|jeep|motorcycle|dirt bike|snowmobile|rzr|side by side|4x4|4wd|off[-\s]?road|overland/i;
 const REC_NAME_SIGNAL = /boat|ski|snow|bike|kayak|paddle|watersport|marina|camp|outdoor|trail|climb|raft|atv|utv|jeep|snowmobile|surf|foil|dive|scuba|golf/i;
-const FIREARM_NAME = /\b(gun|guns|firearm|firearms|arms|ammo|ammunition)\b/i;
+const FIREARM_NAME = /\b(gun|guns|firearm|firearms|arms|ammo|ammunition|armory|gunsmith)\b/i;
 const ARCHERY_NAME = /\b(archery|bows?|crossbows?|compound bow|recurve)\b/i;
+// In-scope hunting gear a firearm/outfitter business might also rent (hunting.md §0.2):
+// keep these out of the hard firearm reject and route to review instead.
+const HUNTING_GEAR_NAME = /\b(optics?|scopes?|binoculars?|rangefinders?|blinds?|tree ?stands?|outfitters?|pack station)\b/i;
 const PUBLIC_RECREATION_SITE_NAME = /\b(disc golf course|bike park|trail|trailhead|athletic field|sports field|boat ramp|sno-?park)\b/i;
 const DISC_GOLF_COURSE_NAME = /\bdisc golf course\b/i;
+// Public/venue facilities that are never a rental operator listing (a venue, not a
+// shop). Unlike "bike park"/"disc golf course" (which can host a renting pro-shop),
+// these are pure infrastructure. Respect rental_signal -> review as a safety valve.
+const FACILITY_ONLY_NAME = /\b(boat ramp|boat launch|bike ?way|snow ?play|snowplay|bikeway|trailhead)\b/i;
+
+// Tier-1 out-of-scope businesses (validated against 195 human review labels, zero
+// collisions with confirmed operators). These bypass the rec-category recall guard
+// because a North Face store / gun shop / thrift store carries a "recreational" Places
+// category yet never rents adventure gear. Only an explicit gear-rental NAME cue
+// (RENT_SHOP_NAME) escapes the reject -> review.
+const OUT_OF_SCOPE_BUSINESS = [
+  { re: /\b(thrift|consignment|antiques?|goodwill|salvation army|second[\s-]?hand|\bseconds\b)\b/i, reason: "thrift_used_goods" },
+  { re: /\b(supermarket|grocery|asian market|\bmarket\b|\bdeli\b|butcher)\b/i, reason: "grocery_market" },
+  { re: /\b(smoke shop|vape|vapor room|\bhemp\b|cannabis|dispensary|\bcbd\b)\b/i, reason: "smoke_vape_cannabis" },
+  { re: /\b(collectibles?|sports cards?|trading cards?|trading post|memorabilia)\b/i, reason: "collectibles" },
+  { re: /\b(dental|dentist|orthodont|medical clinic|\bhospital\b|hospice|pharmacy|chiropract)\b/i, reason: "medical_dental" },
+  { re: /\b(propeller|fabrication|machine shop|racing products?|custom rods?|boat canvas|upholstery|log works|cover warehouse|manufacturing)\b/i, reason: "manufacturer_parts" },
+  { re: /\b(outlet store|\bapparel\b|footwear|shoe store|clothing exchange|screen printing|embroidery|\buniforms?\b|formalwear|tuxedo|jewelry)\b/i, reason: "apparel_footwear_retail" },
+  { re: /\b(pawn|\bvape\b|computers?\b)\b/i, reason: "non_recreational_retail" },
+];
+
+// Narrow false-positive shapes observed in the final survivor queue. These are
+// type/name combinations, not broad category-family rejects, and they keep the
+// RENT_SHOP_NAME escape hatch below.
+const OBVIOUS_NON_RENTAL_PRIMARY_RAW = new Set([
+  "clothing_store",
+  "shoe_store",
+  "coffee_shop",
+  "dog_cafe",
+]);
+const OBVIOUS_NON_RENTAL_NAME =
+  /\b(coffee|coffeebar|starbucks|apparel|clothing|shirt|sweatsedo|uniforms?|screen printing|embroidery|pawn|jewelry|vape|vapory)\b/i;
+const VACATION_RENTAL_TRAVEL_NAME =
+  /\b(vacation rentals?|ski[-\s]?in\/ski[-\s]?out|condos?|cabins?|cottages?|retreats?|property management|brockway springs rentals|donner summit rentals)\b/i;
+
+// Known national retail / brand chains that are never a local rental operator. Curated
+// (not generic) so a real dealer that also rents is not caught. "trek inc" matches the
+// manufacturer, not a "Trek Bicycle Store" dealer.
+const RETAIL_BRAND_NAMES =
+  /\b(the north face|north face|adidas|under armour|lululemon|oakley|helly hansen|famous footwear|jd sports|\btillys\b|columbia sportswear|big 5|big r\b|sportsman'?s warehouse|dick'?s sporting|trek inc|\bleatt\b|hawley usa|salomon store|cabela'?s|bass pro|cycle gear|\bburlington\b|nike (factory )?store)\b/i;
 
 const DOMAIN_AGG_BLOCK = [
   "outdoorsy.com",
@@ -611,6 +655,12 @@ const AGGREGATOR_HOSTS = [
   "getyourguide.com",
   "peerspace.com",
   "thumbtack.com",
+  "boatsetter.com",
+  "babyquip.com",
+  "spinlister.com",
+  "getaround.com",
+  "turo.com",
+  "fareharbor.com",
 ];
 
 // Parked / placeholder / default-host fingerprints. Curated to avoid matching
@@ -650,7 +700,13 @@ const RENTAL_BOOKING_CUE_RE =
 // Gate 5; they prevent auto-promotion so Pass A/manual review can make the
 // final call with the site in view.
 const OUT_OF_DOMAIN_SITE_RE =
-  /\b(party rentals?|event rentals?|wedding rentals?|bounce house|inflatable rentals?|photo booth|tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?|linen rentals?|portable restroom|porta[-\s]?pott|dumpster rentals?|self[-\s]?storage|moving truck|box truck|cargo van|passenger car rental|airport car rental|medical equipment|mobility scooter|costume rentals?|tuxedo rentals?|furniture rentals?|appliance rentals?)\b/i;
+  /\b(party rentals?|event rentals?|wedding rentals?|bounce house|inflatable rentals?|photo booth|tables?\s*(and|&|\/)\s*chairs?|chairs?\s*(and|&|\/)\s*tables?|linen rentals?|table linens?|portable restroom|porta[-\s]?pott|dumpster rentals?|storage container|self[-\s]?storage|moving truck|box truck|cargo van|scissor lifts?|forklifts?|passenger car rental|airport car rental|medical equipment|mobility scooter|costume rentals?|tuxedo rentals?|formalwear|furniture rentals?|appliance rentals?)\b/i;
+
+// SaaS vendors that SELL rental-management software to operators (not operators
+// themselves) and peer-to-peer marketplace copy. A first-party operator site does
+// not pitch "rental software" or call the reader a "rental shop owner".
+const RENTAL_SOFTWARE_SITE_RE =
+  /\b(rental (software|management software|booking software|management system|platform for)|software for (your )?rental|rental shop owner|grow your rental business|list your (boat|rv|gear|equipment) (for rent|and earn)|peer[-\s]?to[-\s]?peer rental)\b/i;
 
 // Name words too generic to confirm a domain belongs to a specific operator.
 const GENERIC_NAME_WORDS = new Set([
@@ -875,6 +931,16 @@ const relevanceVerdict = (net, context = {}) => {
   const readable = t.length >= 24 || tokens.size >= 4;
 
   const hasInDomainActivitySignal = IN_DOMAIN_ACTIVITY_SITE_RE.test(t);
+  // A rental-software vendor or P2P marketplace is not a first-party operator,
+  // regardless of any rec activity it lists as an example. Block promotion.
+  if (readable && RENTAL_SOFTWARE_SITE_RE.test(t)) {
+    return {
+      confirmed: false,
+      reason: "gate5:rental_software_or_marketplace",
+      by: "rental_software_or_marketplace_terms",
+      note: "page text reads like a rental-software vendor or peer-to-peer marketplace, not a first-party operator",
+    };
+  }
   // Out-of-domain page text blocks auto-promotion even with a prior sweep signal:
   // the page itself is the strongest evidence of what the business actually does.
   if (readable && OUT_OF_DOMAIN_SITE_RE.test(t) && !hasInDomainActivitySignal) {
@@ -1212,6 +1278,13 @@ async function classify(o) {
     const hay = `${o.name || ""} ${o.primary_type || ""} ${o.primary_type_raw || ""}`;
     const matchedActivities = new Set(o.matched_activities || []);
     const inRecActivity = matchedActivities.size > 0;
+    // A SPECIFIC in-domain activity (ski/kayak/climbing/…) — as opposed to the
+    // generic "gear-shop" catch-all — is strong evidence the sweep found a real
+    // gear operator, even if Google miscategorized it (e.g. a SUP-rental cafe
+    // tagged coffee_shop, a ski shop tagged clothing_store). Such rows must not be
+    // hard-rejected on Places category alone; let them fall through to Gate 5.
+    const GENERIC_ACTIVITY_SLUGS = new Set(["gear-shop", "sporting-goods", "sporting_goods"]);
+    const hasSpecificRecActivity = [...matchedActivities].some((a) => !GENERIC_ACTIVITY_SLUGS.has(a));
     const isLodgingHint =
       (o.primary_type_raw && LODGING_NOISE_TYPES.has(o.primary_type_raw)) ||
       /^lodging$/i.test(o.primary_type || "");
@@ -1223,6 +1296,32 @@ async function classify(o) {
       gate1Reject(rec, o, hay, "gate1:strong_blocklist", { soft: false });
     } else if (STRONG_NAME_BLOCK_SOFT.some((re) => re.test(hay))) {
       gate1Reject(rec, o, hay, "gate1:soft_blocklist", { soft: true });
+    } else if (
+      (OUT_OF_SCOPE_BUSINESS.some((b) => b.re.test(hay)) || RETAIL_BRAND_NAMES.test(hay)) &&
+      !RENT_SHOP_NAME.test(o.name || "")
+    ) {
+      // Tier-1 out-of-scope business. Categorically not an adventure-rental operator,
+      // so reject regardless of Places category. Escape hatch: an explicit gear-rental
+      // shop name (handled by the guard above) keeps it in the pipeline for review.
+      const match = OUT_OF_SCOPE_BUSINESS.find((b) => b.re.test(hay));
+      setDecision(rec, "out_of_scope", `gate1:${match ? match.reason : "retail_brand"}`);
+    } else if (
+      !RENT_SHOP_NAME.test(o.name || "") &&
+      !hasSpecificRecActivity &&
+      o.website &&
+      (OBVIOUS_NON_RENTAL_PRIMARY_RAW.has(o.primary_type_raw) ||
+        OBVIOUS_NON_RENTAL_NAME.test(hay))
+    ) {
+      // Recall guard (hasSpecificRecActivity above): a clothing_store/coffee_shop
+      // the sweep matched on a specific rec activity is likely a miscategorized
+      // gear operator — don't hard-reject; it falls through to Gate 5.
+      setDecision(rec, "out_of_scope", "gate1:obvious_non_rental_retail_or_cafe");
+    } else if (
+      !RENT_SHOP_NAME.test(o.name || "") &&
+      (o.primary_type_raw === "travel_agency" || LODGING_NOISE_TYPES.has(o.primary_type_raw)) &&
+      VACATION_RENTAL_TRAVEL_NAME.test(hay)
+    ) {
+      setDecision(rec, "not_an_operator", "gate3:vacation_rental_listing");
     } else if (TOOL_CONSTRUCTION_RE.test(hay) && /rent/i.test(hay)) {
       if (inRecActivity || hasRecNameSignal || isRecCategory(o)) {
         rec.review_lane = "operator";
@@ -1274,16 +1373,35 @@ async function classify(o) {
     } else if (agg) {
       setDecision(rec, "needs_review", `gate3:aggregator_domain:${agg}`, "Marketplace/directory listing; review can recover the first-party operator.");
     } else if (FIREARM_NAME.test(o.name || "") && !ARCHERY_NAME.test(o.name || "")) {
-      // hunting.md §0.2: firearms are out of scope, BUT a firearm/"outfitter" business
-      // may also rent IN-scope hunting gear (optics, bows, blinds, packs). The spec
-      // routes firearm-only -> no_rentals and mixed/unsure -> needs_review, and that
-      // determination needs the website (Pass A). So do NOT hard-delete on the name —
-      // flag for review so a real hunting-gear renter is never silently excluded.
+      // hunting.md §0.2: firearms are out of scope. A firearm/"outfitter" business CAN
+      // also rent in-scope hunting gear (optics, bows, blinds, packs) or be a gear-rental
+      // shop, so an explicit hunting-gear/rental NAME cue routes to review; a plain
+      // gun/ammo business is out of scope (these dominate the review queue otherwise).
+      if (HUNTING_GEAR_NAME.test(o.name || "") || RENT_SHOP_NAME.test(o.name || "")) {
+        setDecision(
+          rec,
+          "needs_review",
+          "gate3:firearm_business_review",
+          "Firearm/ammo name but with an in-scope hunting-gear or rental cue (optics/bows/blinds/outfitter); review the site before excluding (hunting.md §0.2).",
+        );
+      } else {
+        setDecision(
+          rec,
+          "out_of_scope",
+          "gate3:firearm_business",
+          "Firearm/ammo business with no in-scope hunting-gear or rental name cue; out of scope (hunting.md §0.2).",
+        );
+      }
+    } else if (FACILITY_ONLY_NAME.test(o.name || "") && !RENT_SHOP_NAME.test(o.name || "")) {
+      // Pure infrastructure/venue (boat ramp, bikeway, snow play area) — not a shop.
+      // A rental signal still routes to review in case a concession operates there.
       setDecision(
         rec,
-        "needs_review",
-        "gate3:firearm_business_review",
-        "Firearm/ammo name. Firearms are out of scope, but a hunting outfitter may also rent in-scope optics/bows/blinds (hunting.md §0.2); review the site before excluding.",
+        o.rental_signal ? "needs_review" : "not_an_operator",
+        o.rental_signal ? "gate3:facility_only_rental_signal" : "gate3:facility_only_site",
+        o.rental_signal
+          ? "Facility/venue name (boat ramp/bikeway/snow play) carrying a rental signal; review before excluding."
+          : "Facility/venue listing (boat ramp/bikeway/snow play); not a rental operator.",
       );
     } else if (
       noWebsite &&
@@ -1399,8 +1517,19 @@ async function classify(o) {
       rec.site_relevance = site.site_relevance || null;
       rec.final_url = site.final_url || null;
       rec.http_status = site.http_status || null;
-      if (site.outcome === "live") setDecision(rec, "survivor", "cleared_gates_0-5", site.note);
-      else setDecision(rec, "needs_review", site.reason, site.note);
+      // Reasons that mean "live first-party site, relevance just not auto-confirmed."
+      // Pass A is cheap and a better judge than a human glance, so these enter Pass A
+      // as survivors rather than the human review queue. Clear non-first-party signals
+      // (out-of-domain, rental-software/marketplace) and all non-live outcomes stay in
+      // review.
+      const PASS_A_INCONCLUSIVE = new Set(["gate5:live_unconfirmed", "gate5:live_unreadable"]);
+      if (site.outcome === "live") {
+        setDecision(rec, "survivor", "cleared_gates_0-5", site.note);
+      } else if (PASS_A_INCONCLUSIVE.has(site.reason)) {
+        setDecision(rec, "survivor", "cleared_gates_0-5_unconfirmed", site.note);
+      } else {
+        setDecision(rec, "needs_review", site.reason, site.note);
+      }
       trace.push({ gate: 5, result: rec.status, reason: rec.reason, note: rec.site_note });
     } else if (!o.website) {
       setDecision(rec, "needs_review", "gate5_pre:no_website_field", "No website field; web fallback or manual review needed.");
@@ -1412,7 +1541,10 @@ async function classify(o) {
   }
 
   const manualReview = manualReviewByPlaceId.get(rec.place_id);
-  if (manualReview && rec.status === "needs_review") {
+  // Apply the human verdict to any non-rejected outcome (needs_review OR survivor): a
+  // human "no" must win even when the gates passed the row to survivor, or it leaks
+  // into Pass A.
+  if (manualReview && (rec.status === "needs_review" || rec.status === "survivor")) {
     rec.pre_manual_review_status = rec.status;
     rec.pre_manual_review_reason = rec.reason || null;
     rec.manual_review_label = manualReview.label || null;
@@ -1533,6 +1665,8 @@ async function runFixtureTests() {
   const detectorChecks = [
     ["aggregator-host-getmyboat", isAggregatorHost("www.getmyboat.com") === true],
     ["aggregator-host-outdoorsy-sub", isAggregatorHost("listings.outdoorsy.com") === true],
+    ["aggregator-host-boatsetter", isAggregatorHost("boatsetter.com") === true],
+    ["aggregator-host-babyquip", isAggregatorHost("www.babyquip.com") === true],
     ["aggregator-host-site-builder-not-flagged", isAggregatorHost("acme-kayaks.wixsite.com") === false],
     ["aggregator-host-own-domain-not-flagged", isAggregatorHost("tahoekayak.com") === false],
     ["soft404-page-not-found", Boolean(looksSoft404("<title>Page Not Found</title><body>oops</body>", "Page Not Found"))],
@@ -1556,6 +1690,80 @@ async function runFixtureTests() {
 
 if (TEST_FIXTURES) {
   process.exit(await runFixtureTests());
+}
+
+// Regression audit against human review labels. Re-classifies every labeled row with
+// the CURRENT gate logic and checks: (1) no confirmed operator ("yes") is rejected,
+// (2) how many rejected non-operators ("no") are now filtered upstream vs still review.
+async function runOverrideAudit() {
+  const overridesPath = "manual_gate_review_overrides.json";
+  if (!exists(overridesPath)) {
+    console.error(`${overridesPath} not found.`);
+    return 1;
+  }
+  const overrides = read(overridesPath).overrides || [];
+  if (!exists("sweep_gate_results.json")) {
+    console.error("sweep_gate_results.json not found — run the gate ladder first.");
+    return 1;
+  }
+  const byId = new Map((read("sweep_gate_results.json").results || []).map((r) => [r.place_id, r]));
+  const REJECT = new Set(["out_of_scope", "out_of_business", "not_an_operator", "duplicate"]);
+
+  const yesRejected = [];
+  const noRemaining = [];
+  const noByReason = {};
+  let noRejected = 0;
+  let missing = 0;
+
+  for (const ov of overrides) {
+    const rec0 = byId.get(ov.place_id);
+    if (!rec0) {
+      missing++;
+      continue;
+    }
+    const rec = await classify(rec0);
+    const rejected = REJECT.has(rec.status);
+    if (ov.label === "yes" || ov.label === "demo_only") {
+      if (rejected) yesRejected.push(`${ov.name} -> ${rec.status} | ${rec.reason}`);
+    } else if (ov.label === "no") {
+      if (rejected) {
+        noRejected++;
+        noByReason[rec.reason] = (noByReason[rec.reason] || 0) + 1;
+      } else {
+        noRemaining.push(`${ov.name} -> ${rec.status} | ${rec.reason || "(survivor)"}`);
+      }
+    }
+  }
+
+  const noTotal = overrides.filter((o) => o.label === "no").length;
+  const yesTotal = overrides.filter((o) => o.label === "yes" || o.label === "demo_only").length;
+
+  console.log("\n=== OVERRIDE REGRESSION AUDIT ===");
+  console.log(`labeled rows: ${overrides.length} (missing from results: ${missing})`);
+  console.log(`confirmed operators ("yes"/"demo_only"): ${yesTotal} — wrongly rejected: ${yesRejected.length}`);
+  for (const line of yesRejected) console.log(`  FAIL keep-rejected: ${line}`);
+  console.log(
+    `non-operators ("no"): ${noTotal} — now filtered upstream: ${noRejected} (${noTotal ? Math.round((noRejected / noTotal) * 100) : 0}%), still in review/survivor: ${noRemaining.length}`,
+  );
+  console.log("-- filtered-by-reason --");
+  for (const [reason, n] of Object.entries(noByReason).sort((a, b) => b[1] - a[1])) {
+    console.log(`  ${String(n).padStart(3)} ${reason}`);
+  }
+  if (process.argv.includes("--verbose")) {
+    console.log("-- still in review/survivor (ambiguous, expected) --");
+    for (const line of noRemaining) console.log(`  ${line}`);
+  }
+  console.log("--------------------------------------");
+  if (yesRejected.length) {
+    console.log(`RESULT: FAIL — ${yesRejected.length} confirmed operator(s) would be rejected.`);
+    return 1;
+  }
+  console.log("RESULT: PASS — no confirmed operator is rejected by the current gates.");
+  return 0;
+}
+
+if (AUDIT_OVERRIDES) {
+  process.exit(await runOverrideAudit());
 }
 
 const inputRows = loadInputRows();

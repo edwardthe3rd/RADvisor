@@ -285,7 +285,7 @@
   {
     "id": "no-website-thrift-retail-rejects",
     "expect_status": "out_of_scope",
-    "reason_prefix": "gate3:no_website_retail_noise",
+    "reason_prefix": "gate1:thrift_used_goods",
     "row": {
       "place_id": "fixture-thrift",
       "name": "Fixture Lakeview Thrift Store",
@@ -399,6 +399,226 @@
       "matched_activities": [],
       "matched_terms": [],
       "matched_tiers": [],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-firearm-only-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate3:firearm_business",
+    "forbidden_statuses": ["survivor"],
+    "row": {
+      "place_id": "fixture-guns-only",
+      "name": "Fixture Reno Guns & Ammo",
+      "website": "https://example.com",
+      "primary_type": "Gun Shop",
+      "primary_type_raw": "gun_shop",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["hunting"],
+      "matched_terms": ["hunting gear rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-thrift-with-website-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:thrift_used_goods",
+    "row": {
+      "place_id": "fixture-thrift-web",
+      "name": "Fixture Classy Seconds Thrift Shop",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["gear-shop"],
+      "matched_terms": ["sporting goods store"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-retail-brand-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:retail_brand",
+    "row": {
+      "place_id": "fixture-brand",
+      "name": "The North Face at Palisades Tahoe",
+      "website": "https://example.com",
+      "primary_type": "Clothing Store",
+      "primary_type_raw": "clothing_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.19,
+      "lng": -120.24,
+      "rental_signal": false,
+      "matched_activities": [],
+      "matched_terms": ["sporting goods store"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-rental-cue-escapes-out-of-scope-reject",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-market-rental",
+      "name": "Tahoe Market & Ski Rental Shop",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-firearm-with-outfitter-cue-reviews",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:firearm_business_review",
+    "forbidden_statuses": ["out_of_scope"],
+    "row": {
+      "place_id": "fixture-guns-outfitter",
+      "name": "Fixture Sierra Guns & Hunting Outfitters",
+      "website": "https://example.com",
+      "primary_type": "Sporting Goods Store",
+      "primary_type_raw": "sporting_goods_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["hunting"],
+      "matched_terms": ["hunting gear rental"],
+      "matched_tiers": ["gap"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-facility-boat-ramp-not-operator",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:facility_only_site",
+    "row": {
+      "place_id": "fixture-boat-ramp",
+      "name": "Lake Forest Boat Ramp",
+      "website": null,
+      "primary_type": "Park",
+      "primary_type_raw": "park",
+      "business_status": "OPERATIONAL",
+      "lat": 39.17,
+      "lng": -120.13,
+      "rental_signal": false,
+      "matched_activities": [],
+      "matched_terms": ["boat rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "tier1-party-bouncer-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:party_event_rental",
+    "row": {
+      "place_id": "fixture-bouncer",
+      "name": "Battle Born Bouncers Nevada LLC",
+      "website": "https://example.com",
+      "primary_type": "Store",
+      "primary_type_raw": "store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": [],
+      "matched_terms": ["party rental"],
+      "matched_tiers": ["experience"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "survivor-noise-coffee-shop-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:obvious_non_rental_retail_or_cafe",
+    "row": {
+      "place_id": "fixture-coffee-shop",
+      "name": "Fixture Coffee Company",
+      "website": "https://example.com",
+      "primary_type": "Coffee Shop",
+      "primary_type_raw": "coffee_shop",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["gear-shop"],
+      "matched_terms": ["ski shop"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "survivor-noise-clothing-store-rejects",
+    "expect_status": "out_of_scope",
+    "reason_prefix": "gate1:obvious_non_rental_retail_or_cafe",
+    "row": {
+      "place_id": "fixture-clothing-store",
+      "name": "Fixture Fashion Co",
+      "website": "https://example.com",
+      "primary_type": "Clothing Store",
+      "primary_type_raw": "clothing_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["gear-shop"],
+      "matched_terms": ["sporting goods store"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "survivor-noise-vacation-rental-travel-rejects",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:vacation_rental_listing",
+    "row": {
+      "place_id": "fixture-vacation-travel",
+      "name": "Fixture North Tahoe Vacation Rentals",
+      "website": "https://example.com",
+      "primary_type": "Travel Agency",
+      "primary_type_raw": "travel_agency",
+      "business_status": "OPERATIONAL",
+      "lat": 39.17,
+      "lng": -120.14,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
+      "matched_modes": ["standard"]
+    }
+  },
+  {
+    "id": "survivor-noise-rental-shop-escape-hatch",
+    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "row": {
+      "place_id": "fixture-clothing-rental-shop",
+      "name": "Fixture Tahoe Ski Rental Shop",
+      "website": "https://example.com",
+      "primary_type": "Clothing Store",
+      "primary_type_raw": "clothing_store",
+      "business_status": "OPERATIONAL",
+      "lat": 39.53,
+      "lng": -119.81,
+      "rental_signal": true,
+      "matched_activities": ["alpine-ski"],
+      "matched_terms": ["ski rental"],
+      "matched_tiers": ["core"],
       "matched_modes": ["standard"]
     }
   }

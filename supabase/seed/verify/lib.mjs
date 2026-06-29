@@ -102,9 +102,17 @@ const CANDIDATE_PATHS = [
   "lease",
   "season-lease",
   "seasonal",
+  "pricing",
+  "rates",
   "shop",
   "products",
   "services",
+];
+
+const LINK_PRIORITY_PATTERNS = [
+  /\b(rentals?|rent|demos?|lease|leasing|hire)\b/i,
+  /\b(season|pricing|rates?|reservations?|booking|book now|reserve)\b/i,
+  /\b(shop|products?|services?)\b/i,
 ];
 
 export function htmlToText(html) {
@@ -144,9 +152,9 @@ async function fetchUrlText(url, timeoutMs = 9000) {
   }
 }
 
-/** Same-host links from homepage HTML whose path/anchor mentions rent/demo/lease/season/shop. */
+/** Same-host links from homepage HTML, ranked so explicit rental/demo/lease links win the page budget. */
 function relevantLinks(homeHtml, baseUrl) {
-  const out = new Set();
+  const links = new Map();
   let origin;
   try {
     origin = new URL(baseUrl).origin;
@@ -155,21 +163,25 @@ function relevantLinks(homeHtml, baseUrl) {
   }
   const re = /<a\b[^>]*href=["']([^"']+)["'][^>]*>([\s\S]*?)<\/a>/gi;
   let m;
-  while ((m = re.exec(homeHtml)) && out.size < 8) {
+  while ((m = re.exec(homeHtml))) {
     const href = m[1];
     const anchor = htmlToText(m[2]).toLowerCase();
     const hay = `${href.toLowerCase()} ${anchor}`;
-    if (!/(rent|demo|lease|season|hire|shop|product|service)/.test(hay)) continue;
+    const priority = LINK_PRIORITY_PATTERNS.findIndex((pattern) => pattern.test(hay));
+    if (priority < 0) continue;
     try {
       const abs = new URL(href, baseUrl);
       if (abs.origin !== origin) continue;
       if (/\.(pdf|jpg|jpeg|png|gif|svg|zip|mp4)$/i.test(abs.pathname)) continue;
-      out.add(abs.href.split("#")[0]);
+      const url = abs.href.split("#")[0];
+      if (!links.has(url)) links.set(url, { url, priority });
     } catch {
       /* ignore */
     }
   }
-  return [...out];
+  return [...links.values()]
+    .sort((a, b) => a.priority - b.priority)
+    .map((link) => link.url);
 }
 
 /**
@@ -191,7 +203,7 @@ export async function fetchWebsiteEvidence(website, maxPages = 6) {
   let combined = "";
   if (home.ok) {
     const text = htmlToText(home.html);
-    pages.push({ url: home.finalUrl || home.url, chars: text.length });
+    pages.push({ url: home.finalUrl || home.url, chars: text.length, text });
     combined += " " + text;
   }
 
@@ -208,7 +220,7 @@ export async function fetchWebsiteEvidence(website, maxPages = 6) {
     if (r.ok) {
       const text = htmlToText(r.html);
       if (text.length > 200) {
-        pages.push({ url: r.finalUrl || r.url, chars: text.length });
+        pages.push({ url: r.finalUrl || r.url, chars: text.length, text });
         combined += " " + text;
       }
     }
@@ -231,10 +243,16 @@ const RENTAL_RE =
   /\b(rentals?|renting|rent out|rent-a-|rent a |gear rental|equipment rental|for rent|to rent|rent skis?|rent snowboards?|rent bikes?|rent kayaks?|rent a kayak|rental shop|rental fleet|reserve your rental|book a rental|daily rental|weekly rental|hourly rental)\b/i;
 
 // Demo as a *service* (try-the-gear), not retail "demo gear sale" / "ex-demo".
+// Broadened beyond ski-only phrasing to catch general gear demos ("demo bike program",
+// "demo bikes", "demo our enduro", "test ride"); retail demo-liquidation is excluded by
+// NO_DEMO_RE below.
 const DEMO_RE =
-  /\b(demo (programs?|fleets?|days?|nights?|centers?|centres?|events?|tours?|packages?|skis? available|rentals?)|demos? available|on[\s-]?snow demos?|try before you buy|book a demo|schedule a demo|free demos?|demo (and|&|\/) rental|rental (and|&|\/) demo|test (the latest|skis?|boards?|gear)|tryouts?)\b/i;
+  /\b(demo (programs?|fleets?|days?|nights?|centers?|centres?|events?|tours?|packages?|bikes?|e[\s-]?bikes?|mtbs?|skis?|snowboards?|boards?|kayaks?|sups?|paddleboards?|gear|equipment)|demo (the|our|a|your) [a-z]|demos? available|on[\s-]?snow demos?|try before you buy|book a demo|schedule a demo|free demos?|demo (and|&|\/) rental|rental (and|&|\/) demo|test (the latest|skis?|boards?|bikes?|gear)|test[\s-]?rides?|tryouts?)\b/i;
 
-const NO_DEMO_RE = /\b(no demos?|demos? not (available|offered)|don't (offer|do) demos?)\b/i;
+// Negatives: explicit "no demos" AND retail demo-liquidation ("ex-demo", "demo bikes
+// for sale") which is a sale, not a try-the-gear service.
+const NO_DEMO_RE =
+  /\b(no demos?|demos? not (available|offered)|don'?t (offer|do) demos?|ex[\s-]?demos?|used demos?|demo (bikes?|e[\s-]?bikes?|skis?|snowboards?|boards?|gear|models?|units?) (for|on) sale|demo sale)\b/i;
 
 const LEASE_RE =
   /\b(season(al)? (ski|snowboard|board|gear|equipment) (lease|leasing|program)|(ski|snowboard|board|junior|youth|kids'?|seasonal|season) lease(s| program)?|lease (your )?(skis?|snowboard|board|gear|equipment) for the season|full[\s-]?season (lease|program)|season lease|seasonal lease|lease packages?)\b/i;
