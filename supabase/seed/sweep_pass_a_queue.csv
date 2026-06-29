@@ -2,3 +2,281 @@ rank,name,website,reachable,pages_fetched,place_id
 1,Worldwide Cyclery,https://www.worldwidecyclery.com/,true,6,ChIJwSwnjo03mYARYgUbPLXhQS0
 2,Tahoe Sport Fishing,http://tahoesportfishing.com/,true,1,ChIJ97RGLQmQmYARjIJ3oik8M94
 3,Tahoe Bliss Boat Charters,https://tahoeblissboatcharters.com/,true,6,ChIJAUbDPrZ9mYARboTc4ZxoE8o
+4,Roller Kingdom,https://www.rollerkingdom.org/,true,1,ChIJCcts2khHmYARV1RFZyD6QGY
+5,Donner Ski Ranch,http://www.donnerskiranch.com/,true,6,ChIJm8gDU2jom4AReI3ERfRBTQ8
+6,Homewood Mountain Resort,http://www.skihomewood.com/,true,6,ChIJXwBiR9p_mYARjQbBoGrEsHM
+7,The Tahoe Experience,http://thetahoeexperience.com/,true,1,ChIJG1pSOoE7WaIR4hsZXbN-jQY
+8,"All Around Tahoe - Paddleboards, Kayaks, Bikes rental & more!",http://allaroundtahoe.com/,true,1,ChIJvdVfnIBxmYARVBhRpbkSIXU
+9,C-A-L Ranch Stores,https://www.calranch.com/about/store-locations/carson-city,true,6,ChIJTzn0DcAKmYARxoee15mGbs0
+10,Round Hill Pines Beach Resort,http://roundhillpinesresort.com/,true,2,ChIJFXdv_-CamYARFr_F-9yo_ZY
+11,Lake Tahoe Bleu Wave,http://www.tahoebleuwave.com/,true,1,ChIJzyEEtN-amYARRRhbkQCJ28k
+12,Michael's Reno Powersports,https://www.michaelsreno.com/?utm_source=google&utm_medium=organic&utm_campaign=GMB-service,true,6,ChIJQ9CNBxgVmYARWYRFC6jt0AI
+13,Red Hawk Golf and Resort,http://www.redhawkgolfandresort.com/,true,3,ChIJeSCA0iI6mYARdGkgQxgKutM
+14,Rent A Boat Lake Tahoe,https://www.rentaboattahoe.com/,true,6,ChIJ_-5TXat6mYARCYfaxvb_aVg
+15,North Tahoe Wakesurf and Charter,http://wakesurfnorthtahoe.com/,true,4,ChIJ49lVJYGecw0RKKXgkSl03yI
+16,The Spa and Sauna Co. - S Reno,https://spaandsauna.com/locations-south-virginia-st-reno/?utm_source=organic&utm_medium=GMB&utm_campaign=GMB%20Spa%20and%20Billiard&utm_content=GMB%20Virginia%20St,true,6,ChIJB5oFDj8VmYAR9PxnV3JuLiI
+17,Tahoe Keys Marina,https://tahoekeysmarina.com/,true,3,ChIJ0_Pg0Y2PmYARH5uyZfJE8Bo
+18,Lake Tahoe Casino Party,http://www.laketahoecasinoparty.com/,true,3,ChIJeUDaKo0VmYARYOXHK-9TNj4
+19,Tahoe Cruises /Spirit of Tahoe / Safari Rose,http://www.tahoecruises.com/,true,4,ChIJwdKiDN6amYARmHcUTF73q5k
+20,Super Simple Photography,https://www.supersimpleco.com/,true,3,ChIJmUKkOV2FfoIRnXIQCTxI5RU
+21,Sail Tahoe Blue | Sailing Cruises,http://www.sailtahoeblue.com/,true,1,ChIJs20KKZiRmYARH90vw83AWkU
+22,Greenhouse Garden Center and Gift Shop,http://www.greenhousegardencenter.com/,true,3,ChIJ4xKSCRSgmYAR2-u3F9IfKCM
+23,Tahoe Surf Company,http://www.tahoesurfcompany.com/,true,2,ChIJVVJQEh9gmYARhP2i4lexGrY
+24,PlumpJack Inn,https://www.plumpjackinn.com/?utm_medium=organic&utm_source=google&utm_campaign=business-listing,true,2,ChIJZ5DAu_TXJIgR7irwk2GeSMo
+25,Truckee Watersports,https://www.truckeewatersports.com/,true,1,ChIJ67e0W4xhmYAR7ek85J3KG0c
+26,Tahoe Wakebusters,http://www.tahoewakebusters.com/,true,3,ChIJC-M6c2mDmYARooZiRflQOuc
+27,Starbucks Coffee Company,https://www.starbucks.com/store-locator/store/1020531,true,1,ChIJh3Vq9Erem4ARp7DlEopmp64
+28,MetroPawn,https://ezpawn.com/stores/nv/sparks/255-e-glendale-ave,true,5,ChIJmf-M8-A-mYARc6_PtX-mJWY
+29,EuroCycle Reno,https://rideeurocycle.com/,true,2,ChIJt_DfxUAVmYAR4rshiiKBf5k
+30,Tahoe Paradise Park,http://www.tahoeparadisepark.com/,true,3,ChIJcaR1JCqMmYARM3vcgiLxcpM
+31,Drink Coffee Do Stuff,https://drinkcoffeedostuff.com/,true,6,ChIJR0FCx26RmYARC1DXrYKAuMU
+32,Coffeebar,https://www.coffeebar.com/,true,6,ChIJGdQ_nOvZm4ARCVcV08a8cic
+33,The Water Traveler,https://www.thewatertraveler.com/,true,6,ChIJuwLh4faLfgURUsImlalbIaw
+34,Float Reno,http://www.floatreno.com/,true,2,ChIJ4XP3hnRmFUQRwCjwaFfHQaY
+35,Tahoe Lake Tours,https://tahoeboattours.com/,true,2,ChIJT720oDKPmYARl61Bj0YsY04
+36,Tahoe City Marina,https://tahoecitymarina.com/,true,6,ChIJH4LWWHR9mYARypcqpL18ETo
+37,Reno Running Company,http://www.renorunningcompany.com/?utm_source=GBP&utm_medium=organic&utm_campaign=office,true,2,ChIJe7KVfY4UmYAR3qXoQM1Ay4Y
+38,Tahoe Paddleboard,http://tahoepaddleboards.com/,true,2,ChIJ61OIM8JdvisRals0bp9N-Kw
+39,Wildcreek Golf Course,http://wildcreekgolf.org/,true,1,ChIJ4S8bg5Q4mYARXFLK0q7-JzY
+40,Ridezilla Carson City,https://www.ridezillacarsoncity.com/?utm_source=GBP&utm_medium=organic&utm_campaign=Google+Business+Profile,true,6,ChIJKxjishWgmYARWBVz_LczFyE
+41,Custom Truck Accessories,http://www.customtruckaccessories.com/,true,6,ChIJ68T-F6hAmYAREF_0sCPEfNg
+42,Big Valley Honda,https://www.bigvalleyhonda.com/,true,3,ChIJV-HhD14_mYAR-b3DwgBOgkM
+43,395 Motorsports,https://395motorsports.com/,true,6,ChIJVQxMsMKhmYAR_PyQ-fh0wow
+44,Boat Tahoe,http://www.boat-tahoe.com/,true,6,ChIJEdu51jmPmYARTJ23sNf4XRo
+45,Soaring Ranch,https://www.soaringranch.com/,true,2,ChIJZUB46UNhmYARbSvWYOfMMQA
+46,North Tahoe Cruises - Tahoe Gal,http://www.tahoegal.com/,true,2,ChIJc6q_mnR9mYARpe52BYgwqMY
+47,Sky Tavern Ski Area,http://www.skytavern.com/,true,6,ChIJFZVNNyJsmYARqosfF4RISB4
+48,Reno Ice - The Jennifer M. O'Neal Community Ice Arena,http://renoice.com/,true,4,ChIJb4kBX-c_mYARuEEVusInJmM
+49,Flip's Boats,http://flipsboats.com/,true,1,ChIJsx-cX9vjmiERQCS6KfXmm5k
+50,Sierra Motorcycle Supply,http://www.shopbetamotorcycle.com/,true,6,ChIJE4diopI-mYARakKyMkQMXxk
+51,Caples Lake Resort,http://www.capleslakeresort.com/,true,1,ChIJH-UJeuTzmYARQDbWPlfSFvE
+52,Kj's Watersports Lake Tahoe,http://www.kjswatersports.com/,true,4,ChIJN5Y-66KPmYARbTv4tFWci-o
+53,FishAndSave,http://www.fishandsave.com/,true,6,ChIJr6aBxJ4_mYARktvKixiXrNU
+54,South Lake Tahoe Ice Arena,https://tahoeicearena.com/,true,1,ChIJE68KpgKQmYARnZ7aMZUmW88
+55,Tennis Nation Racquet Sports,https://www.tennisnation.com/reno-tennis-center/,true,5,ChIJgfqFQ-1AmYARdxg_shZp8lY
+56,Dirty Wheel Tahoe,https://www.dirtywheeltahoe.com/,true,2,ChIJXcDVAiuAfIkR3b282FAnaj0
+57,Jet Ski Rental Lake Tahoe,https://www.jetskirentallaketahoe.com/,true,4,ChIJw_C0jV9K3ioRUXC7gO5M2a8
+58,Bio Bio Expeditions Worldwide,https://bbxrafting.com/,true,3,ChIJm9fPXcLfm4ARuHHBmQ3lAd4
+59,Blue Granite Climbing Gym,http://bluegraniteclimbing.com/,true,5,ChIJy44L9ZOPmYARNWA0jJ9Jadc
+60,Discover Tahoe Chartered Cruises,https://discovertahoecruises.com/,true,6,ChIJiyTp4yC_mYARByWcGt0Oz1s
+61,Tahoe Fly Fishing Outfitters,http://www.tahoeflyfishing.com/,true,4,ChIJR4kbYuePmYARjPe9igJbTiM
+62,Captain Jack's Tahoe,http://www.captainjackstahoe.com/,true,1,ChIJ15wO24rfm4ARg1gatAOrBV8
+63,Riverview Sports Park,http://www.tdrpd.org/riverview-sports-park,true,1,ChIJn9PrISdgmYARWfGaRaZBLE0
+64,Mountain Hardware and Sports Incline,http://www.acehardware.com/store-details/18283?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=18283,true,6,ChIJ6-009xdwmYARDWXIb985UoI
+65,Blue Sun Boat Rentals,,false,0,ChIJQyqVfYmbmYARRq9JoIFNTlo
+66,Club Champion,https://clubchampion.com/locations/reno?utm_source=gbp&utm_medium=local&utm_campaign=gbp&utm_term=gbp_Reno,true,6,ChIJZcLw1uYVmYAR1eVzoOZwDs0
+67,Northstar Village Ice Skating Rink,http://m.northstarcalifornia.com/things-to-do.html?page=viewall,true,6,ChIJZwsxJDFimYAR8mINJEAbvv4
+68,Cruz Entertainment,https://cruzentnv.com/,true,6,ChIJ-78KP60wmYARA0J4mS2n0u4
+69,Tahoe Swell Seekers,https://www.tahoeswellseekers.com/,true,1,ChIJ3TnKH9ajV2gRZyxjDGMuk50
+70,Reno Fly Shop,http://renoflyshop.com/,true,6,ChIJN23nv8tAmYARvgNORU9WE2Y
+71,Olympic Bootworks,http://olympicbootworks.com/,true,3,ChIJm5ZXkerZm4ARnAq7qThpZok
+72,Eastern Sierra Feed,http://www.easternsierrafeed.com/,true,6,ChIJ06O-A3y-mYARAPpXEQC8kUY
+73,TheTahoeVapory,http://www.thetahoevapory.com/,true,6,ChIJNZPS_Q6QmYARBPfAmxo8EXg
+74,Action Water Sports of Incline Village,https://www.awsincline.com/,true,1,ChIJoUWvFkFwmYARbrdYlmZOTEY
+75,The WheelHouse,http://www.wheelhousecc.com/,true,1,ChIJPbiUCRSgmYARvIz9v6Kkf8g
+76,Zumiez,https://www.zumiez.com/stores/us222?utm_source=google+my+business&utm_medium=organic&utm_campaign=store+locations,true,1,ChIJTb3VLfI_mYARC8xCjsfWDzE
+77,Mile High Fishing Charters,http://www.fishtahoe.com/,true,4,ChIJI6gkh42PmYARD1_fHU6UOSg
+78,Gilligans Guide Service,http://www.gilligansguideservice.com/,true,6,ChIJZwdxF7BgmYARjbKNFXlQJdc
+79,Hoop Northern Nevada,https://www.hoopnorthernnevada.com/,true,6,ChIJfQ2xKDjZbmsRP7dHMFOo8Po
+80,Trek Bicycle Reno,https://www.trekbikes.com/us/en_US/retail/reno/?y_source=1_MTAzMjk3NDY1MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,true,6,ChIJ6VGItV8_mYAR_2RlEpHcutA
+81,The Bike Smith,https://www.facebook.com/thebikesmithcc/,false,0,ChIJgdUHyKIKmYARaBDugkoQAKg
+82,Camp Richardson Beachside Inn,https://www.camprichardson.com/beachside-inn/,true,6,ChIJb6h9TYyFmYARfxDquuV848I
+83,Testa Motorsports,https://testamotorsports.com/,true,5,ChIJp-VGuMC9mYARy9bsu8VKvsc
+84,Heavenly Village Ice Rink,https://theshopsatheavenly.com/ice-rink/,true,3,ChIJRyf15HaQmYARyGmCpy5p1Vk
+85,Birkholm's Water Ski Wakeboard School in Lake Tahoe,https://birkholmswatersports.com/,true,6,ChIJl3QypgyOmYAR73tph_OvNyg
+86,Double Down Guide Service,http://doubledowntahoe.com/,true,3,ChIJUfEcgi6PmYARLAfWEqrTzvU
+87,Wingfield Ace Hardware,http://www.acehardware.com/store-details/18349?utm_source=google&utm_medium=local&utm_campaign=localmaps&utm_content=18349,true,6,ChIJl8WM-uE7mYARud8__I7uYnw
+88,Matt Heron Fly Fishing,http://mattheronflyfishing.com/,true,2,ChIJf_jpwMXZm4ARr6Nv9K2fSw8
+89,Carson City Bike Shop Concept E-Bikes,https://carsoncitybikeshop.com/,true,6,ChIJO3GWY9-hmYAR6reGUxom-7k
+90,Tahoe Boat co,https://tahoeboatco.com/,true,3,ChIJJ3ab3DcqFUERO5RPuK1cVVk
+91,"Tahoe Jeep Rentals, Inc",http://www.tahoejeeprental.com/,true,4,ChIJh_0E4E99mYAR0zBdX3N682c
+92,Bijou Municipal Golf Course,https://cityofslt.us/267/Golf-Course,true,4,ChIJ_5V_Qx2QmYARrhM3tg-HJxs
+93,Surefoot,https://www.surefoot.com/locations/palisades-tahoe,true,6,ChIJ-Xt0guvZm4ARovxMnGTSl5I
+94,Trout Creek Outfitters,https://troutcreekoutfitters.com/,true,6,ChIJDSEciMvfm4ARrtIEaXBeUV4
+95,Reel-Lentless Fishing Charters,http://reellentless.com/,true,3,ChIJqXdfB01jmYARp9BUB8pw0H0
+96,Rack 2 Roam,https://www.rack2roam.com/,true,3,ChIJtc1b56MVmYARnnQ_PQXZJG4
+97,The Spa and Sauna Co. - Carson City,https://spaandsauna.com/locations-s-carson-st-carson-city/,true,6,ChIJaWIl1NihmYARHdUPD0i6Qh4
+98,The Ice Rink at Grand Sierra Resort,https://www.grandsierraresort.com/activities/the-ice-rink/,true,3,ChIJbSnEiuQ_mYARc73G5CC_bHk
+99,Marine Specialties Boat Sales and Service,http://www.marine-specialties.com/,true,6,ChIJv41asuE-mYAR6TD34kRwZkU
+100,High Sierra Power Sports,https://highsierrapowersports.com/,true,1,ChIJOVc3YABHmYAREI58Kk_-iqE
+101,Truckee Rents,http://www.truckeerents.com/,true,4,ChIJVdd41bnfm4ARPek0pGcBuHw
+102,On Tahoe Time,http://ontahoetime.com/,true,6,ChIJWRQo6XaQmYARVvIfFDUp3LY
+103,Donner Lake E Bikes,,false,0,ChIJ-0E9UJrhm4AReRY7fH4VbfE
+104,Sierra Wake Surf,http://sierrawakesurf.com/,true,3,ChIJGYSqOG6_ra4RftVNJXeN1tg
+105,Golf NV,http://www.golfnvreno.com/?y_source=1_NjQyMTg0MzEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D,true,4,ChIJM-sCatkVmYARt85WX0sffoQ
+106,Sun Valley Regional Park,https://www.washoecounty.gov/parks/parks/park_directory_pages/north_region/sun_valley_regional_park.php,true,1,ChIJG3AoBAE4mYAR80aPNjK7UUM
+107,Legacy Sports International,https://www.legacysports.com/,true,6,ChIJj-ULs7g_mYARcO8ZS2EJWq4
+108,Soccer City,https://soccercityteam.com/,true,3,ChIJK4xcp5BAmYAREBaU9zUWJZs
+109,Satori Dancewear,http://www.satoridancewear.com/,true,3,ChIJI1BVgLdAmYARw_8Ybrs2rqw
+110,Bike Habitat,http://bikehabitat.com/,true,6,ChIJieyd0sShmYARg1nVtxz28_c
+111,Alpenthrow,http://alpenthrow.com/,true,1,ChIJj_bJFLEYzQ4RibgHgB0sDms
+112,SuperPawn,https://www.firstcash.com/,true,2,ChIJuQx3sGNHmYARHGu8qqYIWEA
+113,Tahoe Gear Exchange,http://tahoegearexchange.com/?utm_source=google&utm_medium=wix_google_business_profile&utm_campaign=10809489412462484824,true,6,ChIJ50KOrF-PmYARNY2CwzLFuOU
+114,Early 90's Coffee,https://early90scoffee.com/,true,1,ChIJgfZGl0mRmYARkjSFLyB9uqo
+115,Shirt Off My Back,http://shirtoffmyback.com/,true,5,ChIJw3Ij6XaQmYARGv97ABLy2wY
+116,High Desert Camping Co,http://www.highdesertcampingco.com/,true,1,ChIJ1dbOXoPtIwkREbHp3ePV79I
+117,"Tahoe Powersports, Inc.",http://www.tahoepowersports.com/,true,5,ChIJo2vZT3R5mYARR7Z5_Zdcwms
+118,The Wedge at South Valleys Disc Golf Course,https://udisc.com/courses/the-wedge-80bC,true,2,ChIJoYYfU5cUmYAR2OrJNgktkYo
+119,Custom Boat & Marine,http://www.customboat.com/,true,3,ChIJtSJwIEcVmYAR0Ai9tyOvjuk
+120,Sierra Boat Company,https://sierraboat.com/,true,6,ChIJK6qqqk1jmYARl6SlxzB9nSM
+121,Black Tie Ski & Bike Rental Delivery of South Tahoe,https://www.blacktiebikes.com/south-tahoe/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_term=black-tie-ski-rental-south-tahoe&utm_content=south-tahoe,false,0,ChIJv5Tn-32amYARy09fERwNttU
+122,Nor-Cal Charters,http://www.fishingintahoe.com/,true,2,ChIJg2OclY2PmYAR5NI116CXf8k
+123,Victory Bowling Services LLC,https://victorybowlingservices.com/,true,3,ChIJoSCfNYk_mYARf9Q6PFUHmVM
+124,Huntnhouse Archery Center,http://www.huntnhouse.com/,true,6,ChIJ7afDCtE_mYARa43wgDEc1EA
+125,Talents Athletic Center,http://talentsathleticcenter.com/,true,5,ChIJk1C7K8IKmYAR8LizZU5aSmE
+126,Shade Shifters,http://theshadeshifters.com/,true,3,ChIJ--_x6_eRmYARuqjmhGwCQp0
+127,Tahoe Pontoon Charters,http://tahoepontooncharters.com/,true,1,ChIJ786_B8l3tIkRHNv3pBik6y4
+128,Primetime Fishing and Charters,https://primetimelaketahoe.com/,true,2,ChIJa3VCc7MaGQ4R4PhgbpKIDOI
+129,"11 Eleven Tactical USA, LLC",https://shop.11eleventacticalusa.com/,true,6,ChIJoT09E7Q5mYARlJTJcnE5-DY
+130,Homewood High & Dry Marina,https://www.homewoodmarina.net/,true,6,ChIJHVBEJX7Vm4ARgxnBF0Loy9I
+131,Dragon Spring,http://www.dragonspringreno.com/,true,1,ChIJ9Z_krJdAmYARAiI7L6yFAf0
+132,L.A.G. Tactical Inc,http://www.lagtactical.com/,true,6,ChIJpyMc-NRGmYARcJjhQAJrL-I
+133,North Tahoe Marina,http://www.northtahoemarina.com/,true,4,ChIJC4WqdspkmYARjmkilsXLjts
+134,Current Fly Fishing,https://www.currentflyfishing.com/,true,6,ChIJIQPZm4ZHmYAR1cpCgw_mjW0
+135,Nevada Spas & Billiards,https://nvspas.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp,true,6,ChIJzQaIBT8VmYARN38F8ZrErmA
+136,Kirkwood General Store,https://www.kirkwood.com/explore-the-resort/during-your-stay/general-store.aspx,true,2,ChIJmc7yP03xmYARjfw0zAijR7g
+137,GBrakes,http://www.gbrakes.com/,true,6,ChIJ5-ebE6ZO6IARlahxThFkjrA
+138,Kirkwood Ski Summer Resort,https://www.kirkwood.com/,true,3,ChIJ3cwzCAb0mYARwLrhHkeigtQ
+139,Silver and Blue Outfitters,http://www.silverandblueoutfitters.com/,true,6,ChIJp8qpqvY_mYARR05jFE_BOGY
+140,Snap Set Studios,https://www.snapsetstudios.com/,true,2,ChIJz3HajlqvCkQRjX-Qwm_52Ao
+141,Hope Valley Sno-Park,https://ohv.parks.ca.gov/?page_id=23053,true,1,ChIJMUL3Lg7tmYARJzN9pwJCink
+142,Lee Joseph Inc. Swim Pool & Spa Supply,http://www.leejosephpools.com/,true,6,ChIJ3b0hArtAmYAROuFhYcUjIJg
+143,Scotty's Sportfishing,https://scottyssportfishingllc.com/,true,1,ChIJ2bzs4B9LymoR99arC6jqe2s
+144,Fallen Leaf Lake Association,,false,0,ChIJrZ0a2NKOmYAR1Uv4br5voss
+145,Lake Tahoe Fishing Trips and Pyramid Lake Fishing Trips,https://www.laketahoefishingtrips.com/,true,1,ChIJD0ev0i9lmYARGPj28bfNzw8
+146,Long Ride Shields,https://longrideshields.com/,true,6,ChIJ2TBGYxY_mYARcF9WLyI9jhQ
+147,Alpine Power Equipment,https://alpinepowerequip.com/,true,1,ChIJTVSD7gJ9mYARDENg9bm9QZ0
+148,Captain Chris' Fishing Charters,http://www.tahoefishingcharters.com/,true,1,ChIJg0OaHHV9mYARB86oFpI-82Y
+149,Nevada Home Fitness,http://nevadahomefitness.com/,true,5,ChIJa0YAwPk_mYARqgM5APMeVvo
+150,Bikes Etc,http://misfitsports.com/,true,1,ChIJJarksiY_mYARCe1jFh-igpU
+151,Ridgeline Park,https://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/parks-fields,true,6,ChIJy_vGuj5wmYAREIrw_EyQqEw
+152,Tahoe Blue Adventures,,false,0,ChIJscf4VsePmYARJHNiY-Oq0EM
+153,ODM Defense,http://www.odmdefense.com/,true,3,ChIJa3e6BNiimYARtDa_YjDTw84
+154,Cabin Fever,https://tahoe.com/south-lake-tahoe/cabin-fever,true,2,ChIJ97RGLQmQmYARsf9k5-VcRds
+155,Tahoe Yacht Club,http://www.tahoeyc.com/,true,3,ChIJH4LWWHR9mYAR8-gd1xMqkHs
+156,Incline Bike Park,http://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/community-bike-park,true,1,ChIJDY3LujhwmYARB3QpchaRpYo
+157,Hope Valley Outdoors,,false,0,ChIJ8X4WX_jsmYARZDHIUyU4Gjk
+158,Blue Warrior Cruises Lake Tahoe,https://laketahoe.cruises/,true,1,ChIJu5iA_mKPmYAR1kyrpj_9aSU
+159,Truckee Ice Rink,https://www.tdrpd.org/rink,true,1,ChIJW8FpkpTfm4ARUoLiK3L3pa8
+160,North Tahoe Lions Club Disc Golf Course,https://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/disc-golf-course,true,6,ChIJBxY2qUdwmYARsWk3B5VqXTI
+161,"Win's Wheels, Inc.",https://winswheels.com/,true,4,ChIJ3wYiRlOhmYAR6gsldj8em18
+162,Disc Giant,https://discgiant.com/,true,3,ChIJa8tIsCc_mYAR34cz1JmSao8
+163,Denver’s Choppers,https://denverschoppers.com/,true,5,ChIJx68svkAVmYARK85DK2S18jA
+164,Cross Country Center,https://www.kirkwood.com/explore-the-resort/activities-and-events/cross-country.aspx,true,1,ChIJQSqWAgb0mYARj5rac5qWfRY
+165,Free Lap Collective,https://freelap.cc/,true,6,ChIJyVdCASNbmYARRh59jM_gZAA
+166,Buzzard Creek,http://buzzardcreekvc.com/,true,6,ChIJc5BUK1UOmYARfxaHFH3Jw-A
+167,Alpenglow Boat Co.,http://www.alpenglowboat.com/,true,1,ChIJnZwMRViPmYAR81YU5xC_3wI
+168,Auto Bike Sales,http://www.autobikesales.com/,true,1,ChIJIYz5124_mYARRchEA8-Ha4c
+169,Playa E-bike Rentals,,false,0,ChIJTd9mm5rdi6kR6PV01YzawMA
+170,South Shore Boats & Powersports,http://www.sshoreboats.com/,true,1,ChIJ6RoWGbmPmYARkCigY0BBPlQ
+171,Cruise Tahoe,https://www.cruisetahoe.com/,true,1,ChIJqQ_uWj6PmYARwRNk218KGRI
+172,Bearry Sweet,https://bearrysweet.com/,true,1,ChIJT3AtiYuRmYAR7mv9uZ9N700
+173,Truckee River Bike trail,https://biketahoe.org/bike-trails/historic-truckee-river-bike-path/,true,6,ChIJd_neN5HXm4ARGFrU46r4VLo
+174,Concept Electric Bikes,https://conceptebikes.com/,true,3,ChIJcRjOh3oLmYAR1m744YPDVGI
+175,Mountain Cat,http://www.mountaincatshop.com/,true,1,ChIJbcjDZ4wLmYAR2mVre3nV9CU
+176,Orucase,http://www.orucase.com/,true,6,ChIJfbqzSWQB3IARKnzOXWEAbY4
+177,Electronic Shooters Protection (ESP),https://www.espamerica.com/,true,6,ChIJ3QrEBjigKQ4RM2Iv18oYRiw
+178,Spearhead Tactical,https://spearheadtactical.us/,true,2,ChIJcR0S28ZHmYARZh-UJ4_MEpw
+179,Tahoe Star Charters,http://tahoestar.com/,true,2,ChIJATguosatFikRDeuaSAe-XfU
+180,MX Trophies,https://mx-trophies.com/,true,6,ChIJ0a_a06oPmYARQJw30EcMg_8
+181,Shaun's Guide Service Donner lake,http://shaunsguideservice.net/,true,1,ChIJE6syEhp3m4ARUMhGPMndkhc
+182,Lake Tahoe Boat Company,http://laketahoeboatco.com/,true,3,ChIJZ7lyYOePmYARxMLs_LA_idk
+183,Imaginecharterstahoe,https://imaginecharterstahoe.com/,true,1,ChIJ1ZaQUzKPmYAR57-3OAiU3i4
+184,Tahoe Yacht Cruises,http://www.tahoeyachtcruises.com/,true,2,ChIJBVFIjxCPmYARx7hTuDwYGzM
+185,DDC Racing (Delaney Drive Components),http://www.ddcracing.net/,true,6,ChIJcYv34f2imYARTFNk7shoRdw
+186,"Sports Attack, LLC",http://sportsattack.com/,true,6,ChIJAQAAAFBamYARDU3sBOHlO4M
+187,Dynareno Motorcycles,http://dynarenomotorcycles.com/,true,3,ChIJheKSfkxHmYARUyoYKNs2qK4
+188,Rubicon Surf Company,https://www.rubiconsurfcompany.com/,false,0,ChIJL_C-oIQn9kwRP5wJRQQWLek
+189,Midtown Carriage Society,https://midtowncarriagesociety.com/,false,0,ChIJzTN-Hi91zScRtaC4eW2gyEs
+190,West Shore Lake Tahoe eBike Rentals,,false,0,ChIJawj8cqZzG6gRPhrCJDxWM7c
+191,Sparks Snowmobile Rental,https://sparkssnowmobilerental.com/,true,1,ChIJpU2WxDGobg4RIBq7eF_mONA
+192,TahoeTrophyTrout,http://tahoetrophytrout.com/,true,2,ChIJ41zCOjuPmYARpdNalS_jld8
+193,Lake Tahoe Sailing,https://www.laketahoesail.com/,true,2,ChIJZdaw6wl9mYARfdsKpDupMtI
+194,Lake Tahoe Motorcycle,https://laketahoemotorcycle.com/,true,1,ChIJPaASz4ePmYARTV345IBCFXk
+195,Prinoth LLC,https://www.prinoth-snowgroomers.com/en-us,true,6,ChIJWZ_9qaw4mYARXW6zI6flqI4
+196,Slant Skis,http://www.slantskis.com/,false,0,ChIJvTXOCrjXm4ARCjpfzIBOhIQ
+197,Boca Motorsports,https://bocamotorsports.com/,true,1,ChIJwz6I0D8_mYARZ1-BD7rmItI
+198,Donut Shoppe,https://donutshoppeculture.com/,true,6,ChIJq9YL7OLfm4ARatMOunSqVuw
+199,PGA TOUR,https://www.pgatour.com/,true,2,ChIJF0m8rXA_mYARfWDBXUgXhH4
+200,tahoetopliners sportfishing,http://tahoetopliners.com/,true,1,ChIJc0n7n9qPmYARvXTD6OXbT8c
+201,LifeCycle,https://www.lifecycle-nv.com/contact/,true,1,ChIJVVVFRuoKmYARAGw72JoLHuk
+202,ahhNatural - The Most Trusted Natural Hot Tub Chemical Alternative,http://www.ahhnatural.com/,true,4,ChIJNRIvOxHgm4ARz9WoxrO4mHU
+203,Bijou Bike Park,https://tamba.org/projects/bijou-bike-park/,true,1,ChIJvd6wZwCRmYARCxZeVJnQF7w
+204,Kirkwood Village Plaza,https://www.kirkwood.com/explore-the-resort/during-your-stay/kirkwood-mountain-sports/kms-village-plaza.aspx,true,2,ChIJnQ-d1bL2mYARv-3g_OnQr3Q
+205,Premium Disc Golf,http://www.premiumdiscgolf.com/,true,6,ChIJpYAADx2PmYARSjlq1BZt3Is
+206,2a Transfers & Accessories,https://2atransfers.com/,true,3,ChIJ26XeW6a5mYAR6xtFOZGCTWU
+207,Tahoe LED Dance Floors,https://tahoeleddancefloors.com/,true,1,ChIJNdEeoIrfm4ARYNp6lc4W8O8
+208,CHAOS Deals & Steals,https://chaosreno.com/,true,1,ChIJA408gn1BmYARR_aQDoBiMsg
+209,Expedition Kirkwood,https://www.kirkwood.com/plan-your-trip/ski-and-ride-lessons/category/expedition-kirkwood.aspx,true,1,ChIJ3fIU9533mYAR2djzZKZq6j8
+210,Mountain Area Rentals,https://mountainarearentals.com/,true,2,ChIJW6kImnuXmYARUnNyzKWfEGU
+211,Wanna Ride Tahoe Trail Shuttle Service,http://www.wannaridetahoe.com/,true,3,ChIJv5Tn-32amYARYlwbLEgICZE
+212,Paradise Pro Shop at Coconut Bowl,https://wildisland.com/paradise-pro-shop/,true,4,ChIJo8K10CE_mYAR7zQq2n41Fq4
+213,Everline Sports,https://www.hyatt.com/en-US/hotel/california/everline-resort-and-spa/rnodh,false,0,ChIJi48B4MXZm4ARGixpfWViKDs
+214,"Dirt Tricks, Inc.",http://www.dirttricks.com/,true,6,ChIJJ630DtqimYARtvvAVzRrRgA
+215,Sports Legends and More,https://www.sportslegendsandmore.com/,true,1,ChIJz2PMEB4_mYAR9DYVfYneOVM
+216,Boat Rental,https://www.tahoedkboats.com/,true,1,ChIJUXRv_b2PmYARhMFCa2UdWX4
+217,Ski Lease Tahoe,http://skileasetahoe.com/,true,6,ChIJU8gfxXyRmYAR6Z3qA4LsQE8
+218,Tahoe Vista Sports,https://www.tahoevistasports.com/,true,1,ChIJc26yN8pkmYAR7vaH0jeNpww
+219,Tahoe Boat Repair and Storage LLC,https://www.tahoeboatstorage.com/,true,6,ChIJbZ72iO8FgoIRnCxKMk2pcC0
+220,Viking Ski Club,https://sfvikingskiclub.org/,true,1,ChIJpwVmHu_nm4ARKAzWNISxA9M
+221,Fish Tight Lines Guide Service,https://fishtightlines.com/,true,1,ChIJlwcU9KVfmYARN1PXTMZYTvA
+222,Molten USA,http://www.moltenusa.com/,true,6,ChIJRyJ1NgsVmYARCpL3Xe7faWA
+223,Sunglass Outfitters By Sunglass Hut,https://stores.sunglasshut.com/us/nv/verdi/8650-boomtown-garson-rd?cid=YEXT_C167&y_source=1_OTgxMDkwMS03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D,true,1,ChIJcSIMKNJEmYAReCnaLfX2QUI
+224,Captain's Corner Tahoe,https://www.captainscornertahoe.com/,true,1,ChIJLVqWILuPmYARLPiziJK_fgQ
+225,Aćcent,https://www.grandsierraresort.com/shopping,true,3,ChIJFRR99YI_mYARQBdoI5lSUjs
+226,UCS Spirit,http://www.ucsspirit.com/,true,6,ChIJ4ZGlj2agmYAR8tYKb76FZYw
+227,Surf n' Foil Tahoe,https://www.surfnfoiltahoe.com/,true,2,ChIJIS8f4SJAwGQRY_STjnFxYgY
+228,Babes on a Boat: Tahoe Bachelorette Experience,https://babesonaboat.com/,true,3,ChIJdQRWLpCPmYARi2pd5ssRbAI
+229,Tahoe Gal Tickets,https://tahoegal.com/schedule-rates/,true,1,ChIJTwDwRXN9mYAR8ISj4ey8Yws
+230,eBike Tahoe,https://ebiketahoe.com/,true,2,ChIJ_2OXu-h9mYARdnrks1KAA6c
+231,Wild About Discs,https://www.wildaboutdiscs.com/,true,1,ChIJl1Nj3KQLmYAREDt3t0KGanI
+232,Triple Cue Billiards | Pool Table Services & Repairs,http://www.triplecuebilliards.com/,true,6,ChIJw_Tjd8Lfm4ARRSBYTM-AadM
+233,Legendary Bowling Services,https://legendarybowling.com/,true,1,ChIJH6yP8PVHmYARVHTJTm11xnM
+234,Golf Lessons in Reno,http://www.golflessonsreno.org/,true,1,ChIJ6QMF9AZBmYARE4uk6Y42qjg
+235,Three R's Ranch,http://www.threersranch.com/,true,4,ChIJnc1n4aFNmYARh8706QcuRRY
+236,Donner Ski Ranch Lift #1,https://www.donnerskiranch.com/,true,5,ChIJEfgCWFjnm4ARjTG54UF-8FA
+237,take aim targets,https://takeaimtargets.com/,true,6,ChIJpRrUHRY_mYARaqbt06BNxJ8
+238,Tahoe Yacht Charters,https://www.tahoeyachtcharters.com/,true,6,ChIJJ0YDNgBxmYARvZIvIzMKrRw
+239,Kirkwood Mountain Sports - Timber Creek,,false,0,ChIJvenb9gL0mYARx8Sp-1RFiv0
+240,Sierra Mountain Sports,https://sierraattahoe.com/sierra-mountain-sports/,true,6,ChIJ534AdwCLmYAR-D0xyc4Ujvg
+241,Tallac Boat Rentals,,false,0,ChIJPy-vnMaRmYARMiIj40_5Bzw
+242,"Stateline Shack ""The Shack""",https://theshack.pro/,true,1,ChIJDZAoWzObmYARkCVmslf1eEM
+243,tahoe skibikes,,false,0,ChIJ9bDI1HCbmYARCvQMY0dLL-0
+244,Stagecoach lodge ski rental,,false,0,ChIJK_GyTQCRmYARnDpDY9yRCVc
+245,Ice Rink @ Edgewood,https://edgewoodtahoe.com/resort-activities/edgewood-on-ice/,true,3,ChIJAQAQJ5iamYARA_M_iHBhegg
+246,Sunnyside Marina and Fuel Dock,,false,0,ChIJDU7OIwB9mYARaW4RYO0akVc
+247,Tahoe Surf Boat,https://www.tahoesurfboat.com/,true,2,ChIJh3I2gyN9mYARmUWUbzCeYOM
+248,JBL WATERSPORTS,https://jblwatersports.com/,false,0,ChIJE4N00Md9mYAROuhns7O5F4g
+249,Tahoe XC,,false,0,ChIJI8tiOud8mYAR0P9zvjO9rDY
+250,Precision Approach,https://precisionapproachsports.com/,true,1,ChIJI5NJtGNxmYARonqzQWaQwl0
+251,CHECKtheFeed Snowboarding,https://shop.checkthefeed.com/,true,6,ChIJUS64gHtxmYARSVIRt9r3FN0
+252,Babes On A Boat,http://babesonaboat.com/,true,3,ChIJf2xo-w9wmYARo43ikkBuNK0
+253,Reno-Tahoe Restroom Trailers,https://www.renotahoerestroomtrailers.com/,true,1,ChIJkyLgdRHGEWQRmNUpfpeRbnw
+254,Donner Ski Ranch Magic Carpet,https://www.donnerskiranch.com/skischool,true,2,ChIJnRLZM5Pnm4ARUTuNyimoq8o
+255,stoke the goat,http://www.stokethegoat.com/,true,2,ChIJ-5tMxWXnm4AR720yeV88Ors
+256,Linchpin Bikes,http://linchpinbikes.com/,true,1,ChIJlzE1GbDfm4AR0jeeZvmDNNg
+257,Blue Action Sports,http://blueactionsports.com/,true,2,ChIJZ6o4QotgmYAR5e2NvXtLGdI
+258,Sierramobilebikes,,false,0,ChIJl9xKe8plmYARaBNWk8Lbshw
+259,Mt. Rose - Ski Tahoe,,false,0,ChIJX2yvUZxumYARnXMY9Q1xFhw
+260,DYNACCESS LTD,https://dynaccessltd.com/,true,6,ChIJO2g7IT8VmYARCoQApdMCR3k
+261,3D Bike Fit,http://www.3dbikefit.com/,true,1,ChIJLQT53VUVmYARH7gses0_CnY
+262,Elvy Suspension,http://www.elvysuspension.com/,true,4,ChIJ911bY-JBmYARexTcJ01KWQc
+263,Drift Adventures,https://www.drift-adventures.com/,true,3,ChIJ22Ir-vc_mYARtB_ASEF6qao
+264,High Desert Archery Reno,http://www.highdesertarcherynv.com/,true,3,ChIJn4NRm2c_mYARA1hSIv9WIfo
+265,Carson City Centennial Park Archery Range,http://www.clearcreekbowmen.com/,true,1,ChIJYxHckB8KmYARtyYl0qc4ZRU
+266,Hunter's Bigger Fish,http://huntersbiggerfish.com/,true,3,ChIJCcDsdZjfm4AR9IZtywC9KAw
+267,Sawmill Lake Private Water Fly Fishing,http://www.tahoeflyfishing.com/,true,4,ChIJ342p8srfm4ARij5KU6LiwFE
+268,Tahoe Marine Mart,http://tahoemarinemart.com/,true,3,ChIJcxlFXeePmYARjD7EUP01zlg
+269,Jansen Inshore Tackle Inc,http://www.fishandsave.com/,true,6,ChIJR-E1TqIKmYARpC1kqChygQk
+270,Kane Klassics Rod Co,http://kaneklassics.com/,true,1,ChIJm4AUfVVJmYARN34Z7MjwpNk
+271,Lake & Wake Adventures,,false,0,ChIJFRNBoymRmYARIcwV65Nz0Z0
+272,Five Dot Ranch Fly Fishing,http://fivedotflyfishing.com/?page_id=246,true,3,ChIJlyLTgC1BmYARQR1IEeAMWTA
+273,Ground Zero Outfitters,http://groundzeroutfitters.com/,true,1,ChIJTWUmTNM2mYARJIFpETB64s4
+274,Donner Summit SNO-Park,http://ohv.parks.ca.gov/?page_id=23055,true,1,ChIJCbjInirmm4AR4qHf5fDwlgY
+275,Kahle Park,https://communityservices.douglascountynv.gov/cms/one.aspx?portalid=12493164&pageid=12634748,true,6,ChIJJ-L6EYaamYAR1sa8Jhwp7BI
+276,Woodward Tahoe,http://www.woodwardtahoe.com/,true,1,ChIJEzt8Qofom4ARyIQcftdni-o
+277,Blackwood Canyon SNO-PARK,http://ohv.parks.ca.gov/?page_id=23061,true,1,ChIJOUn9gx1-mYAR98WK7QvzBOY
+278,Echo Summit Tahoe Rim Trail,https://tahoerimtrail.org/,true,1,ChIJbx9PJfeMmYARHfwYOXbGQ14
+279,Sled Hill,https://ntpud.org/recreation-parks/parks-facilities/north-tahoe-regional-park/,true,6,ChIJJ8XjE71kmYARbDr74fFkPJ0
+280,Adventure Mountain Lake Tahoe,,false,0,ChIJXdsqRPeMmYARPFveJrnfz5g
+281,Diamond Peak Ski Resort,,false,0,ChIJJ663GMtxmYARl7Jf3ui-cHQ

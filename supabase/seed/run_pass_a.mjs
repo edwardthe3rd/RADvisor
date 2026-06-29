@@ -20,6 +20,9 @@ import fs from "node:fs";
 import { join } from "node:path";
 import { seedDir, loadApiKey, fetchPlace, collectGoogleText, fetchWebsiteEvidence, pool } from "./verify/lib.mjs";
 
+// run_pass_a.mjs --with-originals prepends the prioritized originals from pass_a_originals.json
+// (built by build_pass_a_originals.mjs) ahead of the sweep survivors, re-ranking originals first.
+
 const args = process.argv.slice(2);
 const hasFlag = (f) => args.includes(f);
 const valueAfter = (f) => {
@@ -29,6 +32,7 @@ const valueAfter = (f) => {
 const LIMIT = Number(valueAfter("--limit") || Infinity);
 const REFRESH = hasFlag("--refresh");
 const USE_GOOGLE = !hasFlag("--no-google");
+const WITH_ORIGINALS = hasFlag("--with-originals");
 const CACHE_VERSION = 3; // bumped: output is now a claim-free evidence bundle
 const MAX_PAGE_CHARS = 8000;
 
@@ -48,7 +52,7 @@ const csvCell = (v) => {
   const s = Array.isArray(v) ? v.join("; ") : String(v);
   return /[",\n]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
 };
-const CSV_COLS = ["rank", "name", "website", "reachable", "pages_fetched", "place_id"];
+const CSV_COLS = ["rank", "source", "name", "website", "reachable", "pages_fetched", "place_id"];
 const writeCsv = (file, rows) => {
   const lines = [CSV_COLS.join(",")];
   for (const r of rows) lines.push(CSV_COLS.map((c) => csvCell(r[c])).join(","));
@@ -60,6 +64,24 @@ let survivors = gate.survivor_queue || (gate.results || []).filter((r) => r.stat
 survivors = survivors
   .slice()
   .sort((a, b) => (a.rank ?? Infinity) - (b.rank ?? Infinity))
+  .map((r) => ({ ...r, source: r.source || "sweep" }));
+
+// --with-originals: prepend the prioritized originals (pass_a_originals.json) ahead of the
+// sweep survivors so they are gathered/triaged first, then re-rank the combined list 1..N.
+if (WITH_ORIGINALS) {
+  if (!exists(P("pass_a_originals.json"))) {
+    console.error("error: --with-originals set but pass_a_originals.json missing. Run build_pass_a_originals.mjs first.");
+    process.exit(1);
+  }
+  const originals = read(P("pass_a_originals.json")).rows || [];
+  const have = new Set(survivors.map((s) => s.place_id).filter(Boolean));
+  const newOriginals = originals.filter((o) => !o.place_id || !have.has(o.place_id));
+  survivors = [...newOriginals, ...survivors];
+  console.log(`--with-originals: prepended ${newOriginals.length} originals (of ${originals.length}) ahead of ${survivors.length - newOriginals.length} sweep survivors.`);
+}
+
+survivors = survivors
+  .map((r, i) => ({ ...r, rank: i + 1 }))
   .slice(0, LIMIT);
 
 const gate5Cache = exists(P("sweep_gate5_cache.json")) ? read(P("sweep_gate5_cache.json")) : {};
@@ -75,7 +97,11 @@ const flush = () => fs.writeFileSync(P("pass_a_evidence_cache.json"), JSON.strin
 
 async function gather(row) {
   const placeId = row.place_id;
-  if (!REFRESH && placeId && cache[placeId]) return cache[placeId];
+  // Cache holds the gathered evidence (keyed by place_id), but rank/source are per-run
+  // (re-ranking with --with-originals shifts them), so overlay the current row's values.
+  if (!REFRESH && placeId && cache[placeId]) {
+    return { ...cache[placeId], rank: row.rank ?? null, source: row.source || "sweep" };
+  }
 
   let web = row.website
     ? await fetchWebsiteEvidence(row.website)
@@ -108,6 +134,7 @@ async function gather(row) {
 
   const out = {
     rank: row.rank ?? null,
+    source: row.source || "sweep",
     place_id: placeId,
     name: row.name,
     website: row.website || null,

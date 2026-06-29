@@ -1,0 +1,63 @@
+{
+  "ranAt": "2026-06-29T00:00:00.000Z",
+  "stage": "2 - LLM triage judgment from Stage 1 evidence plus live website review",
+  "source": "supabase/seed/sweep_pass_a_evidence.json",
+  "count": 3,
+  "results": [
+    {
+      "rank": 1,
+      "place_id": "ChIJwSwnjo03mYARYgUbPLXhQS0",
+      "name": "Worldwide Cyclery",
+      "website": "https://www.worldwidecyclery.com/",
+      "rents_gear": true,
+      "categories": [
+        "mountain_biking"
+      ],
+      "rental_page_urls": [
+        "https://worldwidecyclery.com/pages/demo-bike-program"
+      ],
+      "checked_urls": [
+        "https://www.worldwidecyclery.com/",
+        "https://worldwidecyclery.com/pages/demo-bike-program"
+      ],
+      "evidence_snippet": "The footer links to Demo Bike Program. That page says the Reno, NV location has boutique bikes available to demo, lists demo rates, and lists bikes currently available for demo in NV.",
+      "status": "triaged",
+      "confidence": "high",
+      "note": "Confirmed paid mountain-bike demo program, not just retail sales. Demo qualifies as positive acquisition evidence under Pass A. Treat as mountain_biking; do not create a demo category."
+    },
+    {
+      "rank": 2,
+      "place_id": "ChIJ97RGLQmQmYARjIJ3oik8M94",
+      "name": "Tahoe Sport Fishing",
+      "website": "http://tahoesportfishing.com/",
+      "rents_gear": false,
+      "categories": [],
+      "rental_page_urls": [],
+      "checked_urls": [
+        "https://tahoesportfishing.com/",
+        "https://tahoesportfishing.com/fishing-charters/"
+      ],
+      "evidence_snippet": "The site presents Lake Tahoe fishing charters. The fishing-charters page says the trip includes rods, tackle, bait, life jackets, coffee, water, and cleaned fish.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "This is a guided fishing charter business. Supplying gear during a guided trip is not customer gear rental under Pass A."
+    },
+    {
+      "rank": 3,
+      "place_id": "ChIJAUbDPrZ9mYARboTc4ZxoE8o",
+      "name": "Tahoe Bliss Boat Charters",
+      "website": "https://tahoeblissboatcharters.com/",
+      "rents_gear": false,
+      "categories": [],
+      "rental_page_urls": [],
+      "checked_urls": [
+        "https://tahoeblissboatcharters.com/",
+        "https://tahoeblissboatcharters.com/pricing/"
+      ],
+      "evidence_snippet": "The site uses boat-rental language and posts boat pricing, but says all boats are driven by USCG captains and that the company does not provide rentals without a captain.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "Classified as a captained charter/guided service rather than a RADvisor gear-rental operator. Tube and wake-surf equipment appear tied to the captained charter, not standalone rentals."
+    }
+  ]
+}

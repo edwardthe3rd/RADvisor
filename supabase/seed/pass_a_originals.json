@@ -1,0 +1,1647 @@
+{
+  "generatedAt": "2026-06-29T04:29:03.998Z",
+  "source": "operators.json (is_active) matched against quadtree_sweep_operators.json + NAMED list",
+  "count": 233,
+  "matched": 228,
+  "named": 5,
+  "named_list": [
+    "Tahoe XC",
+    "UTV Addiction",
+    "The Biggest Little ATV/UTV Shop",
+    "Tahoe Paradise Boat Rentals",
+    "Tahoe Outdoor Adventures and Rentals"
+  ],
+  "rows": [
+    {
+      "place_id": "ChIJ0a5rnMvfm4ARp1ExdGMo2YQ",
+      "name": "ASC Training Center (formerly Auburn Ski Club)",
+      "website": "http://asctrainingcenter.org/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJz27tiZ-amYARUgJHvRMubbg",
+      "name": "Action Watersports at Lakeside Marina",
+      "website": "http://www.action-watersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJQc7aFQSQmYAR-OvmOAaFzzk",
+      "name": "Action Watersports at Timber Cove Marina",
+      "website": "http://www.action-watersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJFZUMgCx7mYARHHrlmZXu1t0",
+      "name": "Adrift Tahoe",
+      "website": "http://www.standuppaddletahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJI4L6yJGRmYARfBLy5H-ZHGY",
+      "name": "Adventure Lake Tahoe",
+      "website": "http://adventureslaketahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ7zT543dAmYAROJg-2K9kqGA",
+      "name": "Adventure Scuba Center",
+      "website": "http://www.renoscuba.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1RqB2urZm4AR4qcaOJAfq7M",
+      "name": "Alpenglow Expeditions",
+      "website": "https://alpenglowexpeditions.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJfwaAbXZ9mYARDUP7ClnaRuk",
+      "name": "Alpenglow Sports",
+      "website": "http://www.alpenglowsports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "name": "Anderson's Bicycle Rental",
+      "website": "http://www.andersonsbicyclerental.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ87o1B6NFmYARWznGWV_cHh8",
+      "name": "Another Bike Shop Reno",
+      "website": "https://www.anotherbikeshop.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJNXFuBOCFmYARtl4ApM3dPTI",
+      "name": "Baldwin Beach Kayak Tahoe",
+      "website": "http://kayaktahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJsXRiAIV9mYAREG8b5Eb_UG4",
+      "name": "Battle Born Boat Rentals",
+      "website": "https://boattahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJx0JixluZmYARnFheZMbToY4",
+      "name": "Battle Born Powersports",
+      "website": "http://www.battlebornpowersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJTXYPIfxHmYARV7PRV5mpUq8",
+      "name": "Bicycle Service Center",
+      "website": "http://bicycleservicecenter.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJjap9hHRxmYARaDQX4il7rik",
+      "name": "Big Blue Bike Rentals and Tours",
+      "website": "http://bigbluebikerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ6dq1GMS9mYAR6bc--rU3SVk",
+      "name": "Big Daddy's Bike & Brew",
+      "website": "https://www.bigdaddysbikeandbrew.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJIetiKMDfm4ARMau5JRoa_EU",
+      "name": "Bike Truckee",
+      "website": "https://www.truckeebikerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJLfhCPFg_mYARYH9oMiSQ3_M",
+      "name": "Pedego Electric Bikes Reno",
+      "website": "http://www.pedegoreno.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJMaQNh15ImYARe7EyWm5l1_w",
+      "name": "Black Rock Bicycles",
+      "website": "http://www.blackrockbicycles.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJ1bqK9BhmYAR0mLvJWN5JUo",
+      "name": "Black Tie Bike Rentals North Tahoe",
+      "website": "https://www.blacktiesummer.com/north-tahoe/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJB2hw9tJhmYARAOxZjb7NGRU",
+      "name": "Black Tie Ski Rentals of North Lake Tahoe",
+      "website": "https://www.blacktieskis.com/north-tahoe/?utm_source=google&utm_medium=organic&utm_campaign=gmb&utm_term=black-tie-ski-rental-of-north-tahoe&utm_content=north-tahoe",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJdWSt3M-hmYARaK4ho-Iv6rQ",
+      "name": "BlueZone Sports - Carson City",
+      "website": "http://www.bluezonesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJD8M1RrqPmYARqqE-H3snqWg",
+      "name": "BlueZone Sports - South Lake Tahoe",
+      "website": "http://www.bluezonesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJPVNwMnt9mYARjCm76sJdqbE",
+      "name": "BlueZone Sports - Tahoe City",
+      "website": "https://www.bluezonesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqyv1rH9AmYARtgff-7iWsyQ",
+      "name": "Bobo's Ski & Patio",
+      "website": "http://www.bobos.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJRwzm8KuQmYARyjfiJy1ABWs",
+      "name": "CV Sports",
+      "website": "https://cvsports.biz/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ87kKrIuFmYARPZsnLzFwDFs",
+      "name": "Camp Richardson Marina",
+      "website": "https://action-watersports.com/camp-richardson-marina/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ87kKrIuFmYARe1NNd8uMRh8",
+      "name": "Camp Richardson Mountain Sports Center",
+      "website": "https://camprichardsonresort.com/rentals/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJPTg0tSKbmYARgDzXqwNGgqo",
+      "name": "Clearly Tahoe",
+      "website": "http://www.clearlytahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJY9svMahxmYARM1p7-_L3-TA",
+      "name": "Clearly Tahoe",
+      "website": "https://clearlytahoe.com/incline-village/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJlfkixIebmYARzsYK3x_HyfI",
+      "name": "Clearly Tahoe",
+      "website": "https://bikelaketahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJT2-7fvtxmYARWSzaVmVTCq4",
+      "name": "Clearly Tahoe Kayak Rentals at Sand Harbor",
+      "website": "http://www.clearlytahoerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ_ZaKcwOPmYAR-d2lx9V-6vQ",
+      "name": "Clearly Tahoe Keys Marina",
+      "website": "https://clearlytahoe.com/south-lake-tahoe/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJlesyeO9NNSIR4-yHkkq9kkU",
+      "name": "Cloud of Goods Reno",
+      "website": "https://www.cloudofgoods.com/reno-nv?utm_source=GMB-RNO&utm_medium=organic",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqXFkczDem4AR7b6Aqfody8M",
+      "name": "Coldstream Adventures",
+      "website": "https://www.coldstreamadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ9UsF5i7fm4ARAGHBIGAM_Hc",
+      "name": "Cook EFoiling",
+      "website": "https://www.cookefoiling.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJKx4AZMvfm4ARYXTbCQnZlWk",
+      "name": "CyclePaths BikeShop",
+      "website": "http://www.cyclepaths.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJf7buvpGamYARP8xoDRlvlWI",
+      "name": "Day Go Adventures",
+      "website": "http://daygoadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJxPM4N-bmYARIJTP7vf24oQ",
+      "name": "Deep Abliss Diveshop",
+      "website": "https://www.scubatahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJYXYrLonfm4AR9xfL-eRx0VU",
+      "name": "Dirt Gypsy Adventures",
+      "website": "http://www.dirtgypsyadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1f9UqyK_mYAR0cLcOEFKV2A",
+      "name": "Doing It Big Rentals",
+      "website": "https://doingitbigrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJFenZxXrnm4ARkt-aIgGLAqY",
+      "name": "Donner Lake Marina",
+      "website": "http://donnerlakemarina.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJc1phmRnem4ARgqGhLxI1jtM",
+      "name": "Donner Lake Water Sports",
+      "website": "http://donnerlakewatersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJlcG4XATem4ARzXynGIqukgk",
+      "name": "Donner Memorial State Park Watersport Rental",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqcC_TFfom4ARrt8jKoleVz0",
+      "name": "Donner Ski Shop",
+      "website": "https://donnerskishop.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJFXp61JZBmYARLPCUVD4_9J0",
+      "name": "E-Bike Hub",
+      "website": "http://e-bikehub.bike/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJm_OOpPdxmYAR1VliycpjzoA",
+      "name": "Tahoe Multisport — East Shore",
+      "website": "https://tahoemultisport.com/home-2/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJgbTQoZkNmYARqAZOEzPZ2qc",
+      "name": "Eastlake Ebike Rentals",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJtSGtrj5xmYARX_nBebLphFw",
+      "name": "Efoil Tahoe",
+      "website": "https://efoiltahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJbzu7vXSPmYAROH1u0aSqiBg",
+      "name": "Emerald Bay Bikes",
+      "website": "https://www.emeraldbaybikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ8atHbUdlmYART4wRbng-hVc",
+      "name": "Endless Wave Charters",
+      "website": "https://www.endlesswavecharters.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJrZ0a2NKOmYARplzx7FF4nrQ",
+      "name": "Fallen Leaf Lake Store, Cafe and Marina",
+      "website": "http://www.fallenleaflodge.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJXzlju-Pnm4ARLtrc5m-supY",
+      "name": "Floater with a Motor",
+      "website": "http://www.floaterwithamotor.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ4-IvaAZxmYARtBPCc8shjVI",
+      "name": "Flume Trail Bikes",
+      "website": "http://www.flumetrailtahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJV_LJMpCbmYARqs2mHwt-ZA4",
+      "name": "Full Access Tahoe",
+      "website": "https://fullaccesstahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJP0bKrdJkmYARfFNNkdWSgZ4",
+      "name": "Full Throttle Tahoe",
+      "website": "https://www.fullthrottletahoeboats.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJp9AGVYRrmYARHvdI49jldr4",
+      "name": "Galena Sports",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJmVK1sDPem4AROEdsc6xHzUo",
+      "name": "Granite Chief Powered by BlueZone Sports",
+      "website": "https://bluezonesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJiZahgDrfm4ARG93950wDe4I",
+      "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
+      "website": "http://gravityhaus.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJv-yKNHaQmYARw929njJWAu4",
+      "name": "Heavenly Sports - Cecil's Plaza",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJx83JvkSQmYAR37b1G_O0P5E",
+      "name": "Heavenly Sports - Marriott",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJPRErSHaQmYAR6GJasIPw_so",
+      "name": "Heavenly Sports - Tamarack Lodge",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJr81lwVkUmYARghRuPDYLA60",
+      "name": "High Sierra Cycling",
+      "website": "http://highsierracycling.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1WuLO_N9mYARa9axpI-c0e8",
+      "name": "High Sierra Water Ski School",
+      "website": "https://www.highsierrawaterskiing.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJv5W-J0WPmYARf-omMX4-5Cs",
+      "name": "Just So Scuba",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJZSQyrBqbmYARCOrt-c8l9Yc",
+      "name": "Katoma Boat Rentals",
+      "website": "http://boatrentalslaketahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJcwZv5SiFmYARPiMfMm6tk_c",
+      "name": "Kayak Tahoe- Pope Beach",
+      "website": "http://www.kayaktahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJpcL9nNfnm4ARJwMQXYtfUbI",
+      "name": "LS Boat Rentals - Donner Lake",
+      "website": "https://lsboatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqSpsKJFxmYARcscdz11UktE",
+      "name": "LS Boat Rentals - Tahoe",
+      "website": "https://lsboatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ8b6JVa6HDG8R4ciI6hKk4yg",
+      "name": "Lake Level Surf Charters",
+      "website": "https://www.lakelevelsurf.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJoTZS5hhvmYARbh-OUipfjiQ",
+      "name": "Lake Shore Boats Tahoe",
+      "website": "http://www.lakeshoreboatstahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJSdktC4ejmYARTXMmqopyWjU",
+      "name": "Lake Tahoe Adventure OHV Tours",
+      "website": "https://www.laketahoeadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJfy2gDdKNmYARkg65MPDmlQ4",
+      "name": "Lake Tahoe Adventures",
+      "website": "https://www.laketahoeadventures.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJWRQo6XaQmYARPFU-QgLAS9Y",
+      "name": "Powder House — Lake Tahoe Bike Rentals",
+      "website": "http://tahoepowderhouse.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ2QgACRZwmYARMOCQpl2hsXQ",
+      "name": "Tahoe Adventure Rentals",
+      "website": "http://tahoeadventurerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJVWZBYYOPmYAR_xt0WYQON0k",
+      "name": "Lake Tahoe Boat Rides",
+      "website": "https://www.tahoeboatrides.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJjfXtAQrrX2AR9WWeV3ST9hg",
+      "name": "Lake Tahoe Floats",
+      "website": "http://www.laketahoefloats.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJXVHrZwSQmYAR1rciIWM8e6k",
+      "name": "Lake Tahoe LSP Boat Rentals",
+      "website": "http://www.laketahoe-boatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+      "name": "Lake Tahoe Luxury Boat Rentals",
+      "website": "http://laketahoeluxuryboatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJHWLlJEyRmYARmnqvJTlgRBo",
+      "name": "Lake Tahoe Pontoons",
+      "website": "http://laketahoepontoon.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJpbhRufabmYAR70RxWUMaBPA",
+      "name": "Lake Tahoe Slingshots",
+      "website": "http://laketahoeslingshotrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJLUbndgCbmYARXvDGdiF1IDg",
+      "name": "Lake Tahoe Tours And Rentals",
+      "website": "http://laketahoetoursandrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Love Your Life BackCountry",
+      "website": "https://loveyourlifebackcountry.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJfbp-qiI_mYARD0_70XarbPM",
+      "name": "Moment Skis",
+      "website": "https://www.momentskis.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJTxHhMNbrm4AR1Jg0TJZWyLA",
+      "name": "Moto Tahoe",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJEX5qpzPem4AR2kiYG4noB9Q",
+      "name": "Mountain Hardware & Sports",
+      "website": "http://www.mountainhardwareandsports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Mountain Mikes / Snowshoe Thompson's",
+      "website": "http://www.mtnmikeslaketahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Mountain West",
+      "website": "http://mountainwestonline.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJT1VlrfNEmYARl0q7P6hBVgk",
+      "name": "Nevada Adventure Rentals",
+      "website": "http://nevadaadventurerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJBxU-wIxgmYARsSke3Ez3MXo",
+      "name": "North Lake Tahoe Boat Rental",
+      "website": "https://northlaketahoeboatrental.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ8_oCjqZkmYARLdFYqALP_u8",
+      "name": "North Tahoe Paddle",
+      "website": "https://www.northtahoepaddle.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJfzHSBHV9mYARIT8np-2e_4A",
+      "name": "North Tahoe Watersports",
+      "website": "https://northtahoewatersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJSTGEgyx7mYARpkagCc9TK8A",
+      "name": "North Tahoe Watersports",
+      "website": "https://www.northtahoewatersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1S2uDXV9mYARl_oxHYjBsPA",
+      "name": "North Tahoe Watersports Tahoe City Boat Rentals",
+      "website": "https://www.northtahoewatersports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJnz1Y90VimYARP7esc7rMHhk",
+      "name": "Northstar Cross-Country, Telemark, and Snowshoe Center",
+      "website": "http://northstarcalifornia.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJw-qPGNZ_mYAR_mMlUj4Km5s",
+      "name": "Obexer's Boat Company",
+      "website": "https://www.obexersboat.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJSVwePtZ_mYARHh8lr4sJEcU",
+      "name": "Obexer's Water Sports",
+      "website": "https://www.obexersboat.com/water-sports.html",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ07CIU3R9mYARTEdAY-tT9Tg",
+      "name": "Olympic Bike Shop",
+      "website": "http://www.olympicbikeshop.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJu5xhn0HZm4ARO3ETVqLq1ec",
+      "name": "Olympic Valley Ski & Bike",
+      "website": "https://olympicvalleyskiandbike.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJmx4eaMdZoKcRy2nZmnvjmj4",
+      "name": "Paddle To You",
+      "website": "http://www.paddletoyoutahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJQTneuczfm4ARQ_PaEk5Escs",
+      "name": "Pacos Truckee",
+      "website": "http://www.pacostruckee.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJN83rWezZm4ARtHEgfKt-QPs",
+      "name": "Palisades Tahoe Ski & Snowboard Rental",
+      "website": "https://www.palisadestahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJzUBQ9uzZm4ARv8ZP7EJ-tgE",
+      "name": "Parallel Mountain Sports",
+      "website": "https://www.palisadestahoe.com/events-and-activities/shopping/parallel",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ-W1pdhM5mYARUpkAEEWpK_U",
+      "name": "Pedal Sports Reno-Sparks",
+      "website": "https://www.pedalsportsrenosparks.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJEYfb0JkVmYAR9btp1bOWetQ",
+      "name": "Pedego Electric Bikes Reno",
+      "website": "https://pedegoelectricbikes.com/dealers/reno/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJOTMlK0mPmYARuUiisyT708U",
+      "name": "Pine Nut Ebike Rentals South Lake Tahoe",
+      "website": "https://www.pinenutebikerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Play It Again Sports",
+      "website": "http://www.playitagainsportscarsoncity.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ03PeAneQmYARisbooJUWr4c",
+      "name": "Powder House Ski & Board: Pro Snow",
+      "website": "http://www.tahoepowderhouse.com/powder-house-boot-demo-center",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqbAd6naQmYARzmDmLE2LviY",
+      "name": "Powder House Ski and Snowboard At The Gondola",
+      "website": "http://www.tahoepowderhouse.com/powder-house-at-the-gondola",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJNd1MfXaQmYARGUhCfr5Mou8",
+      "name": "Powder House Ski and Snowboard Main Store",
+      "website": "http://www.tahoepowderhouse.com/powder-house-main-shop",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJuYGQMXaQmYARCO9oO_RTRQQ",
+      "name": "Powder House Stateline at Zalanta",
+      "website": "http://tahoepowderhouse.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Powder House Express",
+      "website": "http://www.tahoepowderhouse.com/powder-house-express",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ__-P0xBwmYARBwqqmQYJZvQ",
+      "name": "Praxis Skis",
+      "website": "https://www.praxisskis.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ2YMdXQSQmYARX77l7FKok-A",
+      "name": "Pyramid Peak Ski and Snowboard Rentals",
+      "website": "http://www.pyramidpeak.ski/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJn62LLHMVmYARbArYbQtB6N4",
+      "name": "Quiver Sports",
+      "website": "http://www.quiversports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJyTEMtn0_mYARwkrufB2t4Fc",
+      "name": "REI",
+      "website": "https://www.rei.com/stores/reno?y_source=1_MTQ1MzQxOC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJd4Jcuaw_mYAR7m4Neb2imh0",
+      "name": "REI Bike Shop",
+      "website": "https://www.rei.com/stores/reno/bike-shop",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJN6x_Hdvfm4ARs2OsVqqpEyw",
+      "name": "RMU Truckee Ski Shop",
+      "website": "https://mtnculture.com/pages/rmu-truckee",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJwyQK8npHmYARefawNQnK1vM",
+      "name": "Reno Brew Bike",
+      "website": "http://www.renobrewbike.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1RQns2A_mYARdvNiaevNSrc",
+      "name": "Reno Harley Davidson",
+      "website": "https://www.renohd.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJT8gOyzRHmYAR_pIFikqKxJE",
+      "name": "Reno Hexayurt",
+      "website": "http://www.renohexayurt.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJUwKFTX6RmYARqvQmPZ0vfAA",
+      "name": "Rentools",
+      "website": "https://rentools.pro/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJi--nu62NmYARJiuXEQuXRIk",
+      "name": "Watta Bike / Ride Tahoe",
+      "website": "https://www.ridetahoerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJqbtmTxKQmYARYoi3TLVlolA",
+      "name": "Rip N Willies Ski & Snowboard Rental Shop",
+      "website": "http://www.ripnwillies.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJOTO1DhKQmYARgTor_IoKrSY",
+      "name": "Rock House Discount Ski & Snowboard Rentals",
+      "website": "http://tahoediscountskis.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJxVubU7qPmYARw4wCdUiXjLg",
+      "name": "SUP South Lake Tahoe",
+      "website": "http://www.supsouthlaketahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ2ytQ03_Vm4AReD4NW1wne_4",
+      "name": "SWA Watersports - Lake Tahoe Boat Rentals",
+      "website": "http://www.swawatersports.com/homewood/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJUf-fYiqcmYARR_qq5LMc4tE",
+      "name": "Sand Harbor State Park",
+      "website": "http://parks.nv.gov/parks/lake-tahoe-nevada-state-park",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJFZ9-H4eamYARz7y9J6SiK_k",
+      "name": "Shoreline of Tahoe",
+      "website": "http://www.shorelineoftahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJPRErSHaQmYARa7QpkWhOUO0",
+      "name": "Showcase - Heavenly",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJHy3S4TBimYAR8wZL0zU3DRk",
+      "name": "Showcase - Northstar",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJkYDDOMtAmYAR3MpEhhvlzMo",
+      "name": "Sierra Adventures",
+      "website": "https://m.wildsierra.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJxf5jrKM_mYARnVfpd7z3YCg",
+      "name": "Sierra Bicycle Supply",
+      "website": "https://shopbikesupply.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ9WJuI_w_mYAR23aOhUAK3sA",
+      "name": "Sierra Cyclesmith Bicycle Shop",
+      "website": "https://www.sierracyclesmith.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJN5P-aoVAmYARBqPI792sXls",
+      "name": "Sierra Diving Center",
+      "website": "https://www.sierradive.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJlZtzS5VxmYARr41aqf9Kn-s",
+      "name": "Sierra Mountain Surf",
+      "website": "http://www.sierramountainsurf.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+      "name": "Sierra Ski & Cycle Works",
+      "website": "https://sierraskiandcycleworks.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJVbCLr9ttmA8RTDCg_LwdzV0",
+      "name": "Sierra Surf House",
+      "website": "http://www.sierrasurfhouse.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJjU5vgAOQmYARZWhfi_FXn7A",
+      "name": "Ski Butlers Heavenly/South Lake Tahoe",
+      "website": "https://www.skibutlers.com/locations/heavenly-south-lake-tahoe",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJA2VHWIbfm4ARyNqBs2-GAEU",
+      "name": "Ski Butlers Northstar/Palisades Tahoe",
+      "website": "https://www.skibutlers.com/locations/north-lake-tahoe",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJX19jQLs_mYAR1rSMr9FQlCg",
+      "name": "Ski Pro",
+      "website": "https://skipro.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ97RGLQmQmYARoMZiCJbBYBs",
+      "name": "Ski Run Marina",
+      "website": "http://skirunmarina.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJxQ-MO-rZm4ARu5s3wrvkG-g",
+      "name": "SnoVentures Activity Zone",
+      "website": null,
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJYRj0wmPZm4ARnFQfBfRclvg",
+      "name": "Snowshoe Tahoe",
+      "website": "https://www.snowshoetahoe.net/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJudG9snaPmYARa7fYKkuik4s",
+      "name": "South Lake E-bikes",
+      "website": "http://southlakeebikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJcSPRLpBgmYAREYSvBo1hns8",
+      "name": "South Passage Outfitters",
+      "website": "https://www.southpassageoutfittersllc.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ693RXLqPmYARmhjcHSJaFis",
+      "name": "South Shore Bikes",
+      "website": "http://www.southshorebikestahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJG0Si6IBJ06MR7bsVTLyVQaI",
+      "name": "South Tahoe Ebike Rentals - Margaritaville",
+      "website": "http://southtahoeebikerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJB2pWdNaPmYARsJbG6fsk5Ms",
+      "name": "South Tahoe Kayak and Paddleboard",
+      "website": "https://southtahoekayak.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ-SmG4to5mYARSyK09zKl24c",
+      "name": "Sparks Marina Paddle",
+      "website": "http://www.sparksmarinapaddle.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJM967AtuRmYARFN3Q1kk8TMQ",
+      "name": "Sports Ltd. Rentals",
+      "website": "http://www.sportsltdrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJtW7Egsvfm4ARpLAHoUHGvuI",
+      "name": "Start Haus Ski & Bike",
+      "website": "https://www.starthaus.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJvy_6Wobfm4AR0Ly51UvuIAM",
+      "name": "Stealth Tahoe",
+      "website": "http://stealthtahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJIQrNtvjnm4ARnGa4pfILydA",
+      "name": "Sugar Bowl Rental Shop",
+      "website": "http://www.sugarbowl.com/rentals",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJO7BF1vZ9mYARZxfHHeZiCXs",
+      "name": "Sunnyside Marina & Watersport Rentals",
+      "website": "https://marinasunnyside.com/?utm_source=gmb&utm_medium=gmb&utm_campaign=gmb",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJkf2Q10u9mYAR5lhJ7iEIZwE",
+      "name": "Synergy Wetsuits",
+      "website": "https://synergywetsuits.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJr8KGILqFmYAR9Io5VfHLwyg",
+      "name": "Tahoe Reel, Power & Paddle",
+      "website": "https://adventuretahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJHdwDUcDfm4AReKIJrkARduU",
+      "name": "Totally Board",
+      "website": "http://www.totallyboardtahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJX18lP8pkmYARUAWMlFu8qbI",
+      "name": "Tahoe Adventure Company",
+      "website": "http://www.tahoeadventurecompany.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJKR1iarZlmYARNAKF-L4g-ro",
+      "name": "Tahoe Adventure Rentals",
+      "website": "https://tahoeadventurerentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJL7wHjix7mYARRPWyDUf7lI0",
+      "name": "Tahoe Aquatic Center",
+      "website": "https://tahoeaquaticcenter.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ29aIoVN7mYARNwACnbaZVTY",
+      "name": "Tahoe Beach Company",
+      "website": "https://www.tahoebeachco.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJLwHVPcePmYARl-yj-NLAYTY",
+      "name": "Tahoe Bike Company",
+      "website": "https://www.tahoebikeco.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJlbrt8Q9wmYARYruixzJunF0",
+      "name": "Tahoe Blue Boat Rentals",
+      "website": "https://tahoeblueboatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJzyZuiZl9mYARNyV5iLZ93n4",
+      "name": "Tahoe City Kayak & Paddleboard Beach Rental",
+      "website": "https://tahoecitykayak.com/rentals/kayak-rentals/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJi0eh0nV9mYARmCTlc5MfYik",
+      "name": "Tahoe City Kayak and Paddleboard Shop",
+      "website": "http://tahoecitykayak.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJc-6tR-yOmYARNxSXTGmhdsQ",
+      "name": "Tahoe Dave's Boardshop",
+      "website": "http://www.tahoedaves.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJq7hAzxvfm4AR1KpsAkJLSNk",
+      "name": "Tahoe Dave's Skis & Boards",
+      "website": "https://www.tahoedaves.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJQ3A0TXR9mYARj3o0wJE-6_M",
+      "name": "Tahoe Dave's Skis & Boards",
+      "website": "http://www.tahoedaves.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJYbJ4aiXem4ARgHw0k0IyyiU",
+      "name": "Tahoe Dirt Bikes",
+      "website": "http://tahoedirtbikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJF11O4DebmYARdLerJ-Le_s8",
+      "name": "Tahoe Dive Center",
+      "website": "https://tahoedive.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJWyo7Xhvem4AR9Udo4zpnGtQ",
+      "name": "Tahoe Donner Beach Club Marina",
+      "website": "https://www.tahoedonner.com/amenities/amenities/beach-club-marina/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJZ37pmCrnm4ARZSL7KmoQYw8",
+      "name": "Tahoe Donner Bikeworks",
+      "website": "https://www.tahoedonner.com/amenities/amenities/bikeworks/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ_0j1GpdlmYARXQTkQJyQp44",
+      "name": "Tahoe Ebikes",
+      "website": "https://tahoeebikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJYztGswQ_mYAR-1DoiY39h3s",
+      "name": "Tahoe Electric Bike Rental",
+      "website": "http://www.tahoeelectricbikerental.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJZRK_PHNlmYARCC9Jif-vstA",
+      "name": "Tahoe Family Adventures",
+      "website": "http://tahoefamilyadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJCdoQFwBfmYARXNSvg1ibWZ4",
+      "name": "Tahoe Family Adventures",
+      "website": "http://tahoefamilyadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJXXG-t3R9mYARhlQxfLkRAss",
+      "name": "Tahoe Jet Boats",
+      "website": "https://tahoejetboats.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJg2bLLoQLmYAR4zouuu4xk_8",
+      "name": "Tahoe Luxury",
+      "website": "http://www.tahoeluxury.net/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJH4LWWHR9mYARuTdZVvZ9k_c",
+      "name": "Tahoe Marine Supply",
+      "website": "https://tahoemarinesupply.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJKZmdmSt7mYARgLmE0wQXf9c",
+      "name": "Tahoe Mountain Sports",
+      "website": "http://www.tahoemountainsports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "Tahoe XC",
+      "website": "https://tahoexc.org/",
+      "source": "original",
+      "match_type": "named"
+    },
+    {
+      "place_id": "ChIJbYhgbxtwmYAR_mdxFLQOQZE",
+      "name": "Tahoe Multisport",
+      "website": "http://tahoemultisport.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJvwYAcgCPmYARLz32N5pYwvg",
+      "name": "Tahoe Outdoor Adventures and Rentals",
+      "website": null,
+      "source": "original",
+      "match_type": "named"
+    },
+    {
+      "place_id": "ChIJG6LalSx7mYARRoeW-38NlmA",
+      "name": "Tahoe Paddle & Oar",
+      "website": "http://www.tahoepaddle.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJLy5Db-t7mYARsxOK-nAhXm0",
+      "name": "Tahoe Paddle & Oar: Rentals",
+      "website": "http://www.tahoepaddle.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJySseGz9xmYARtuM4OmGK1G4",
+      "name": "Tahoe Paddle Sports — Sand Harbor",
+      "website": "https://tahoepaddlesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJcZ34aSbmYARL8AlRsXZDuU",
+      "name": "Tahoe Paddle Sports",
+      "website": "https://tahoepaddlesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJb-b8_CxxmYAR8pbPESGXLFM",
+      "name": "Tahoe Paradise Boat Rentals",
+      "website": "http://tahoeparadiseboatrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ1YNUPVyhmYARFTF88U7uXd0",
+      "name": "Tahoe Sled School",
+      "website": "https://www.tahoesledschool.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJ0Wml7nnm4ARQzYJGGA5H-Y",
+      "name": "Tahoe Snowbike Rental",
+      "website": "http://www.tahoesnowbikerental.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJA5zRfb_fm4ARX7uJFFYj08w",
+      "name": "Tahoe Sports Hub",
+      "website": "http://www.tahoesportshub.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJb7h4oHaQmYAR3aCog1QfgtE",
+      "name": "Tahoe Sports Ltd.",
+      "website": "http://www.tahoesportsltd.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ96DFVwORmYARXV1Vb5U0MyM",
+      "name": "Tahoe Sports Ltd. Kayak & Fish",
+      "website": "https://www.tahoesportsltd.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ97RGLQmQmYAR4yblqbMOXbI",
+      "name": "Tahoe Sports Ski Run Boat Company",
+      "website": "http://tahoesports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ0_Pg0Y2PmYARaruB5PP2M5Q",
+      "name": "Tahoe Sports Tahoe Keys Boat Rental",
+      "website": "https://tahoesports.com/tahoe-keys-powerboat-rentals/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJDaVqy8ObmYARzHjV519rv7c",
+      "name": "Tahoe Toys & Adventures",
+      "website": "http://tahoetoysadventures.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJl8-H1OGPmYARrRJCYDUCkE4",
+      "name": "Lake Tahoe Luxury Waketubing",
+      "website": "https://www.tahoewaketubing.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJpWVWCE1jmYARGULCKQg4sJ0",
+      "name": "Tahoe Waterman's Landing",
+      "website": "http://www.tahoewaterman.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ16lWevLhm4ARS1iyzJGWud4",
+      "name": "Tahoe Waves Boat Rental",
+      "website": "http://www.tahoewaves.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJc7xrQz1wmYARNoqosr-SE3U",
+      "name": "Tahoe Jet Boats",
+      "website": "http://www.tahoejetboats.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJl8-H1OGPmYARSzMIQpKESLM",
+      "name": "Tahoe Jet Boats",
+      "website": "https://www.tahoejetboats.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJcWCd2jPem4ARMrf4Ao6HBUw",
+      "name": "The BackCountry",
+      "website": "http://www.thebackcountry.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJObtsOwQ_mYARHt237sJUrG4",
+      "name": "The Biggest Little ATV/UTV Shop",
+      "website": "https://www.thebiggestlittleatvshop.com/",
+      "source": "original",
+      "match_type": "named"
+    },
+    {
+      "place_id": "ChIJ4VTFvZ44mYARShou2cYdePI",
+      "name": "The Home Depot",
+      "website": "https://www.homedepot.com/l/N-Reno/NV/Reno/89512/3304?emt=MSGoogleMaps",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJZA09Q2QmYARPNHmaHVFSXU",
+      "name": "The Ski Renter",
+      "website": "http://skirenter.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJWWOPcw-QmYARhEoevVFqLRs",
+      "name": "The Village Board Shop",
+      "website": "http://www.thevillageboardshop.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJOz_KFSdgmYARMCWq9Twp_qo",
+      "name": "Truckee Bike Park",
+      "website": "https://www.truckeebikepark.org/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJxStHgjHem4ARA7sY1gYJeQ4",
+      "name": "Truckee Boardhouse",
+      "website": "http://www.truckeeboardhouse.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJG08rYgJ9mYARK7QUK0ob7SE",
+      "name": "Truckee River Bikes",
+      "website": "https://truckeeriverbikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJNxrjaZ19mYARcNS3tWQt3xs",
+      "name": "Truckee River Raft Co.",
+      "website": "http://www.truckeeriverraft.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJjU1hg4XXm4AR1icF995eImA",
+      "name": "Truckee River Raft Co.",
+      "website": "http://www.truckeeriverraft.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJgQ14cp19mYARmx8aB0KetHA",
+      "name": "Truckee River Rafting",
+      "website": "https://www.truckeeriverrafting.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJRba-n9pBmYARi1LS3KoTYOg",
+      "name": "Truckee River Whitewater Park",
+      "website": "https://www.reno.gov/government/departments/parks-recreation-community-services/parks-trails/whitewater-park",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJy_eG4DBimYARKG5IS_ziWW4",
+      "name": "TrueNorth - Northstar Village",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJfTRnuRxjmYARfCI5ES3Jhes",
+      "name": "TrueNorth - Ritz Carlton",
+      "website": "https://www.epicmountainrentals.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJwY4uJahAmYAR20WhysQC8GM",
+      "name": "UTV Addiction",
+      "website": "http://www.utvaddiction.com/",
+      "source": "original",
+      "match_type": "named"
+    },
+    {
+      "place_id": "ChIJKWiUL7BlmYARCMYFwnzatRY",
+      "name": "Uplyft Tahoe Jet Ski Rentals",
+      "website": "https://www.uplyfttahoe.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJaY2NIBtwmYARTpUYiTNrn8w",
+      "name": "Village Ski Loft",
+      "website": "http://www.villageskiloft.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJJxblwNxvmYARwEeMhNlwCmg",
+      "name": "Vista Trail Bikes",
+      "website": "https://vistatrailbikes.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJq5Q9LNZ_mYAR_7YexyN5loc",
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJQzRtOC2AmYARJIZqMz5Wvbk",
+      "name": "West Shore Sports",
+      "website": "http://westshoresports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": null,
+      "name": "West Shore Sports",
+      "website": "http://www.westshoresports.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJMVZD8je9mYARn7oz3NB9fps",
+      "name": "Wetsuit Outlet",
+      "website": "https://wetsuitoutlet.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJgTYWEC17mYARj2AvyfF7434",
+      "name": "Wild Society Adventures",
+      "website": "https://www.wildsocietylt.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJjTEeMkCQmYAROcOVmckxT1s",
+      "name": "Winter Wonderland Ski Shop",
+      "website": "https://winterwonderlandskishop.com/",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJq6qqnhebmYARgppW84gBCww",
+      "name": "Zephyr Cove Marina",
+      "website": "https://www.zephyrcove.com/zephyr-cove-marina/zephyr-cove-marina-experience?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJ7dvAtqubmYARB5Qvm7DHvUE",
+      "name": "Zephyr Cove Snowmobile Tours",
+      "website": "https://www.zephyrcove.com/snowmobiles/tahoe-snowmobiling-experience?utm_source=google&utm_medium=organic&utm_campaign=gbp_listing",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJea4sRnh9mYARc91N6W9sWDk",
+      "name": "evo Tahoe City",
+      "website": "https://www.evo.com/pages/locations-tahoe-city?utm_source=GMBlisting&utm_medium=organic",
+      "source": "original",
+      "match_type": "quadtree-dedup"
+    },
+    {
+      "place_id": "ChIJgRu3rMQ_mYARkVW9PH_qKV4",
+      "name": "Tahoe Paradise Boat Rentals",
+      "website": null,
+      "source": "original",
+      "match_type": "named"
+    }
+  ]
+}
