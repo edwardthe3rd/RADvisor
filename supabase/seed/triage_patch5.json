@@ -1,0 +1,204 @@
+[
+  {
+    "place_id": "ChIJ-SmG4to5mYARSyK09zKl24c",
+    "name": "Sparks Marina Paddle",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "http://www.sparksmarinapaddle.com/",
+      "https://www.yelp.com/biz/sparks-marina-paddle-sparks-2"
+    ],
+    "checked_urls": [
+      "http://www.sparksmarinapaddle.com/",
+      "https://www.yelp.com/biz/sparks-marina-paddle-sparks-2"
+    ],
+    "evidence_snippet": "Sparks Marina Paddle rents stand-up paddleboards, kayaks, and pedal boats ($25/hr) at Sparks Marina (Yelp listing + marinafun.com describe rental equipment for human-powered adventures).",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJKR1iarZlmYARNAKF-L4g-ro",
+    "name": "Tahoe Adventure Rentals",
+    "rents_gear": true,
+    "categories": [
+      "water_sports",
+      "off_road"
+    ],
+    "review_categories": [
+      "snow_sports"
+    ],
+    "rental_page_urls": [
+      "https://tahoeadventurerentals.com/"
+    ],
+    "checked_urls": [
+      "https://tahoeadventurerentals.com/"
+    ],
+    "evidence_snippet": "Site lists self-guided rentals: floating waterpark ($1,500 half day) and UTV side-by-side ($450/machine, 2hr); boat cruises offer an optional captain at separate cost.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJCdoQFwBfmYARXNSvg1ibWZ4",
+    "name": "Tahoe Family Adventures",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [
+      "snow_sports"
+    ],
+    "rental_page_urls": [
+      "https://tahoe.com/business/tahoefamilyadventures"
+    ],
+    "checked_urls": [
+      "https://tahoe.com/business/tahoefamilyadventures"
+    ],
+    "evidence_snippet": "Tahoe Family Adventures rents power boats, jet skis, floating water parks and water toys (captain optional). Duplicate listing of the already-triaged rank-179 row.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Confirmed renter via live search; duplicate of triaged Tahoe Family Adventures (rank 179)."
+  },
+  {
+    "place_id": "ChIJDaVqy8ObmYARzHjV519rv7c",
+    "name": "Tahoe Toys & Adventures",
+    "rents_gear": true,
+    "categories": [
+      "water_sports",
+      "snow_sports",
+      "off_road"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://tahoetoysadventures.com/"
+    ],
+    "checked_urls": [
+      "https://tahoetoysadventures.com/"
+    ],
+    "evidence_snippet": "Site/booking title: 'Tahoe Toys Adventures - BOAT, JETSKI, SNOWMOBILE, SIDE BY SIDE RENTALS'; jet-ski rentals to Emerald Bay, book online.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJWWOPcw-QmYARhEoevVFqLRs",
+    "name": "The Village Board Shop",
+    "rents_gear": true,
+    "categories": [
+      "snow_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.thevillageboardshop.com/rentals-1"
+    ],
+    "checked_urls": [
+      "https://www.thevillageboardshop.com/rentals-1"
+    ],
+    "evidence_snippet": "Rentals page lists daily ski & snowboard packages (basic $40, demo/performance $60, youth $25) plus a-la-carte boards/boots/poles.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJL_C-oIQn9kwRP5wJRQQWLek",
+    "name": "Rubicon Surf Company",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.rubiconsurfcompany.com/"
+    ],
+    "checked_urls": [
+      "https://www.rubiconsurfcompany.com/"
+    ],
+    "evidence_snippet": "Rubicon Surf Co offers Lake Tahoe boat rentals (wakesurf/wakeboard boats) alongside charters.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJE4N00Md9mYAROuhns7O5F4g",
+    "name": "JBL WATERSPORTS",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://jblwatersports.com/"
+    ],
+    "checked_urls": [
+      "https://jblwatersports.com/"
+    ],
+    "evidence_snippet": "Rents a Glastron MX175 bowrider ($120/hr, 4hr $450, full day $700) including wakeboard/tube/water skis; self-operated (captain optional $80/hr; hydrofoil board on request).",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJcSPRLpBgmYAREYSvBo1hns8",
+    "name": "South Passage Outfitters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.southpassageoutfittersllc.com/"
+    ],
+    "evidence_snippet": "South Passage Outfitters is an all-inclusive guided fishing lodge ($3,000 / 5 nights); kayaks, boat and fishing gear are amenities included in the guided package, not standalone rentals.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: confirmed non-renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJxStHgjHem4ARA7sY1gYJeQ4",
+    "name": "Truckee Boardhouse",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.truckeeboardhouse.com/"
+    ],
+    "evidence_snippet": "Truckee Boardhouse is a retail snowboard/skate shop with tuning/repair; the site states it does not offer rentals (sales only).",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: confirmed non-renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJc26yN8pkmYAR7vaH0jeNpww",
+    "name": "Tahoe Vista Sports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.tahoevistasports.com/"
+    ],
+    "evidence_snippet": "Tahoe Vista Sports is a powerboat DEALER (sells new Formula & Chris-Craft, full-service ownership) - sales, not rentals. The nearby 'North Lake Tahoe Boat Rental' is a separate business.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: confirmed non-renter via live fetch/search."
+  },
+  {
+    "place_id": "ChIJTWUmTNM2mYARJIFpETB64s4",
+    "name": "Ground Zero Outfitters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://groundzeroutfitters.com/"
+    ],
+    "evidence_snippet": "Ground Zero Outfitters is a hunting guide/expedition service, not a gear-rental operator.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: confirmed non-renter via live fetch/search."
+  }
+]

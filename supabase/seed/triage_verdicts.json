@@ -1,0 +1,21 @@
+[
+  {
+    "place_id": null,
+    "name": "Tahoe XC",
+    "rents_gear": true,
+    "categories": ["snow_sports", "mountain_biking"],
+    "review_categories": [],
+    "rental_page_urls": ["https://tahoexc.org/rentals-services/", "https://tahoexc.org/season-passes/"],
+    "checked_urls": [
+      "https://tahoexc.org/",
+      "https://tahoexc.org/rentals-services/",
+      "https://tahoexc.org/season-passes/",
+      "https://tahoexc.org/product-category/tickets-passes/",
+      "https://tahoexc.org/retail-shop/"
+    ],
+    "evidence_snippet": "The Rentals & Services page says customers can rent mountain bikes, cross-country ski gear, and snowshoes directly at the Tahoe XC trailhead.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Original no-place_id evidence row; duplicate named sweep row also exists separately."
+  }
+]

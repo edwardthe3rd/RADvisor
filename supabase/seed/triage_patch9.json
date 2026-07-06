@@ -1,0 +1,179 @@
+[
+  {
+    "place_id": "ChIJ0a5rnMvfm4ARp1ExdGMo2YQ", "name": "ASC Training Center (formerly Auburn Ski Club)",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://asctrainingcenter.org/"],
+    "evidence_snippet": "Nordic training center on Donner Summit; rents XC ski gear to visitors who also pay the facility/trail fee (operator-confirmed). Site is under maintenance, so the rental page is not currently linked.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents if you also pay for their facility. Rule: rental alongside a day-use venue/trail fee still counts as a rental."
+  },
+  {
+    "place_id": "ChIJfwaAbXZ9mYARDUP7ClnaRuk", "name": "Alpenglow Sports",
+    "rents_gear": true, "categories": ["snow_sports", "camping"], "review_categories": ["mountaineering"],
+    "rental_page_urls": ["https://alpenglow-sports.booqable.store/collections"],
+    "checked_urls": ["http://www.alpenglowsports.com/", "https://alpenglow-sports.booqable.store/collections"],
+    "evidence_snippet": "Demo program booked via Booqable: winter demos of backcountry skis/boots, telemark, splitboards, avalanche safety gear, and snowshoes; year-round demos of bear vaults, multiday backpacks, tents, and sleeping pads.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: demo only — paid demos count as rentals. Year-round backpacking demos add camping; mountaineering gear signal unconfirmed."
+  },
+  {
+    "place_id": "ChIJlcG4XATem4ARzXynGIqukgk", "name": "Donner Memorial State Park Watersport Rental",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": ["fishing"],
+    "rental_page_urls": [], "checked_urls": ["https://www.yelp.com/biz/donner-lake-water-sports-truckee", "https://www.parks.ca.gov/DonnerMemorial"],
+    "evidence_snippet": "State-park watersport concession on Donner Lake (operated as Donner Lake Water Sports): rents kayaks, SUPs, canoes, pedal boats, jet skis, and fishing boats.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear. One listing says the concession was closed for the 2025 season — Pass B should confirm current operation and the operating entity."
+  },
+  {
+    "place_id": "ChIJv5W-J0WPmYARf-omMX4-5Cs", "name": "Just So Scuba",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.justsoscuba.com/", "https://californiadiver.com/scuba-diving-south-lake-tahoe-0714/"],
+    "evidence_snippet": "PADI dive-boat operation on Lake Tahoe; regulators, BCDs, and other equipment are available as rental gear, and tanks are provided for divers aboard.",
+    "status": "triaged", "confidence": "medium",
+    "note": "Not covered by EC's 2026-07-05 review groups. Dive-gear rental is offered in the context of their boat charters — borderline vs. captained-charter rule; sent to Pass B per the when-in-doubt-forward bias. Verify standalone gear rental."
+  },
+  {
+    "place_id": "ChIJjfXtAQrrX2AR9WWeV3ST9hg", "name": "Lake Tahoe Floats",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://laketahoefloats.com/reserve-your-setup"], "checked_urls": ["https://laketahoefloats.com/"],
+    "evidence_snippet": "Rents floating docks/swim platforms on Lake Tahoe (Tahoe Float 10x10 dock, Heavenly Float, Mini Tahoe inflatable swim platform, Tallac Float); float/beach setups start at $950.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear. Delivered/set-up floats — Pass B should model these as water_sports inventory."
+  },
+  {
+    "place_id": "ChIJTxHhMNbrm4AR1Jg0TJZWyLA", "name": "Moto Tahoe",
+    "rents_gear": true, "categories": ["motorcycles"], "review_categories": ["off_road"],
+    "rental_page_urls": [], "checked_urls": ["https://www.yelp.com/biz/moto-tahoe-soda-springs-2", "https://mototahoe.com/"],
+    "evidence_snippet": "Motorcycle rental in Soda Springs (51164 Donner Pass Rd); Yelp reviews confirm they provide bikes, trailers, and full gear with basic instruction.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear according to Yelp reviews. Pass B: confirm street vs. dirt bikes (off_road) split."
+  },
+  {
+    "place_id": "ChIJn62LLHMVmYARbArYbQtB6N4", "name": "Quiver Sports",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://skiquiver.com/"], "checked_urls": ["https://skiquiver.com/", "https://blog.palisadestahoe.com/general/ski-like-a-pro-at-palisades-tahoe-ride-next-years-best-skis-with-quiver/"],
+    "evidence_snippet": "Slopeside premium ski rental membership at Palisades Tahoe (and other resorts): curated, tuned skis waiting slopeside; $79 membership + $39/day or $599 unlimited season.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: actual site is skiquiver.com (was quiversports.com). Membership-model ski rental open to the public."
+  },
+  {
+    "place_id": "ChIJN6x_Hdvfm4ARs2OsVqqpEyw", "name": "RMU Truckee Ski Shop",
+    "rents_gear": true, "categories": ["snow_sports", "mountain_biking"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://rmumtnculture.com/pages/rmu-truckee"],
+    "evidence_snippet": "RMU brand flagship shop in Truckee with a demo program for RMU skis and bikes (site lists Demo Locations; operator-confirmed demo-only for ski and bike).",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: demo only for ski and bike — paid demos count as rentals. Website corrected to rmumtnculture.com (301 from mtnculture.com)."
+  },
+  {
+    "place_id": "ChIJHdwDUcDfm4AReKIJrkARduU", "name": "Totally Board",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.totallyboardtahoe.com/rentals-and-repairs"], "checked_urls": ["http://www.totallyboardtahoe.com/", "https://www.totallyboardtahoe.com/rentals-and-repairs"],
+    "evidence_snippet": "Downtown Truckee snowboard shop since 1994 with a 'Rentals & Repairs' page offering snowboard rentals and demos.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: has rentals and demos."
+  },
+  {
+    "place_id": "ChIJNxrjaZ19mYARcNS3tWQt3xs", "name": "Truckee River Raft Co.",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["http://www.truckeeriverraft.com/"], "checked_urls": ["http://www.truckeeriverraft.com/"],
+    "evidence_snippet": "The Original Lake Tahoe Rafting Outfitter: rents rafts for self-guided floats down the Truckee River from Tahoe City (no guide on board), with shuttle return.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear for use without guide. Duplicate row (rank 215, same website) removed; Gate 4 same-domain dedup gap."
+  },
+  {
+    "place_id": "ChIJ67e0W4xhmYAR7ek85J3KG0c", "name": "Truckee Watersports",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.truckeewatersports.com/"],
+    "evidence_snippet": "Boat operation on Donner/Truckee with three wake boats listed at $200-350/hr for wakeboarding, wakesurfing, and waterskiing.",
+    "status": "triaged", "confidence": "low",
+    "note": "EC review 2026-07-05: rents boats. CONFLICT: the current site presents all boats as captain/instructor-operated ('Watersports Academy') with no bareboat wording. Sent to Pass B per EC; verify a true bareboat option exists, else demote per captained-charter rule."
+  },
+  {
+    "place_id": "ChIJ8X4WX_jsmYARZDHIUyU4Gjk", "name": "Hope Valley Outdoors",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.outdoorproject.com/united-states/california/hope-valley-outdoors-outfitters", "https://www.tripadvisor.com/Attraction_Review-g528907-d6415766-Reviews-Hope_Valley_Outdoors-Hope_Valley_California.html"],
+    "evidence_snippet": "Yurt-based outfitter at Pickett's Junction (Hwy 88/89): rents cross-country ski and snowshoe gear, with lessons and 60+ miles of marked trails; open ~November-April, cash only.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents xc skis and snowshoes out of a yurt per TripAdvisor/Yelp. No first-party website — third-party evidence rule."
+  },
+  {
+    "place_id": "ChIJQSqWAgb0mYARj5rac5qWfRY", "name": "Cross Country Center",
+    "rents_gear": true, "categories": ["snow_sports", "mountain_biking"], "review_categories": [],
+    "rental_page_urls": ["https://www.kirkwood.com/explore-the-resort/activities-and-events/cross-country.aspx"], "checked_urls": ["https://www.kirkwood.com/explore-the-resort/activities-and-events/cross-country.aspx"],
+    "evidence_snippet": "Kirkwood Cross Country & Snowshoe Center: rents XC ski (classic, skate, backcountry), snowshoe, and fat-tire bike gear for its 60km groomed trail network; fat bikes require advance reservation.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents snow gear including fat bikes. Day trail pass alongside rental still counts as rental."
+  },
+  {
+    "place_id": "ChIJTd9mm5rdi6kR6PV01YzawMA", "name": "Playa E-bike Rentals",
+    "rents_gear": true, "categories": ["electric_transport"], "review_categories": ["burning_man_bikes"],
+    "rental_page_urls": [], "checked_urls": ["https://www.google.com/maps/place/?q=place_id:ChIJTd9mm5rdi6kR6PV01YzawMA"],
+    "evidence_snippet": "E-bike rental operator in the Gerlach/Empire (Black Rock playa) corridor serving Burning Man riders; operator-confirmed to rent bikes, though no first-party site was located.",
+    "status": "triaged", "confidence": "medium",
+    "note": "EC review 2026-07-05: rents bikes. Identity/website unconfirmed among several Gerlach BM bike renters — Pass B to pin down the exact operator and fleet."
+  },
+  {
+    "place_id": "ChIJbcjDZ4wLmYAR2mVre3nV9CU", "name": "Mountain Cat",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.mountaincatshop.com/"],
+    "evidence_snippet": "Snowboard shop (boards, boots, bindings, outerwear) offering winter seasonal rentals (operator-confirmed; rental page not linked from the thin homepage).",
+    "status": "triaged", "confidence": "medium",
+    "note": "EC review 2026-07-05: offers winter seasonal rentals. Pass B: locate the seasonal-lease terms."
+  },
+  {
+    "place_id": "ChIJvTXOCrjXm4ARCjpfzIBOhIQ", "name": "Slant Skis",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoe.com/listings/slant-skis", "https://www.tahoemagazine.com/lake-tahoe-and-truckee-is-home-to-many-ski-and-snowboard-companies/"],
+    "evidence_snippet": "Tahoe City ski maker (1730 River Road, shared with Tahoe Snow Lab); Slant skis are available to demo in the shop.",
+    "status": "triaged", "confidence": "medium",
+    "note": "EC review 2026-07-05: demo only — paid demos count as rentals. slantskis.com currently unreachable; third-party evidence used."
+  },
+  {
+    "place_id": "ChIJi48B4MXZm4ARGixpfWViKDs", "name": "Everline Sports",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": ["mountain_biking"],
+    "rental_page_urls": [], "checked_urls": ["https://www.everlineresort.com/"],
+    "evidence_snippet": "Sports desk at Everline Resort & Spa (Olympic Valley); the resort offers nordic trails, biking, ice skating, and ski amenities, with gear rental through the sports shop (operator-confirmed).",
+    "status": "triaged", "confidence": "medium",
+    "note": "EC review 2026-07-05: wrong website was on file (Hyatt page); corrected to everlineresort.com. Pass B: enumerate winter vs. summer rental fleet."
+  },
+  {
+    "place_id": "ChIJ9bDI1HCbmYARCvQMY0dLL-0", "name": "tahoe skibikes",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://tahoeskibikes.com/"], "checked_urls": ["https://tahoeskibikes.com/"],
+    "evidence_snippet": "Rents SkiByk SB100/SB200 ski bikes with lessons and delivery to Kirkwood, Heavenly, Northstar, and Sierra-at-Tahoe.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear; category of its own. Filed under snow_sports; a dedicated sledding/skibike category slug is proposed via the section 11 process — do not invent it here."
+  },
+  {
+    "place_id": "ChIJK_GyTQCRmYARnDpDY9yRCVc", "name": "Stagecoach lodge ski rental",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.skiheavenly.com/explore-the-resort/experience-heavenly/rentals.aspx"], "checked_urls": ["https://www.yelp.com/biz/heavenly-sports-stagecoach-lodge-stateline-2", "https://www.skiheavenly.com/explore-the-resort/experience-heavenly/rentals.aspx"],
+    "evidence_snippet": "This is Heavenly Sports - Stagecoach Lodge (375 Quaking Aspen Rd, Stateline) at the base of the Stagecoach Express lift: rents ski and snowboard packages or individual items, full-day and multi-day.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: actually Heavenly Sports at Stagecoach Lodge. Possible near-duplicate of other Heavenly Sports locations — keep distinct (different storefront), but Pass B should attribute to Heavenly Sports."
+  },
+  {
+    "place_id": "ChIJX2yvUZxumYARnXMY9Q1xFhw", "name": "Mt. Rose - Ski Tahoe",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://skirose.com/rental-equipment/"], "checked_urls": ["https://skirose.com/rental-equipment/"],
+    "evidence_snippet": "Resort rental shop: ski packages (skis/boots/poles) and snowboard packages, adult $59/day ($54 online), child $29/day, plus performance packages, helmets, and poles.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: website is skirose.com/rental-equipment/. Ski-resort prior: resorts nearly always rent."
+  },
+  {
+    "place_id": "ChIJFRNBoymRmYARIcwV65Nz0Z0", "name": "Lake & Wake Adventures",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.lakeandwaketahoe.com/"], "checked_urls": ["https://www.lakeandwaketahoe.com/", "https://www.tripadvisor.com/Attraction_Review-g1798615-d24185848-Reviews-Lake_Wake_Adventures-South_Lake_Tahoe_Lake_Tahoe_California_California.html"],
+    "evidence_snippet": "First fully electric watercraft rental fleet on Lake Tahoe: rents E-Foils, jet body boards, and electric mini boats, with lessons available.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear per TripAdvisor."
+  },
+  {
+    "place_id": "ChIJJ663GMtxmYARl7Jf3ui-cHQ", "name": "Diamond Peak Ski Resort",
+    "rents_gear": true, "categories": ["snow_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.diamondpeak.com/tickets-passes-rentals/rental-equipment/"], "checked_urls": ["https://www.diamondpeak.com/tickets-passes-rentals/rental-equipment/"],
+    "evidence_snippet": "Resort rental shop: ski/snowboard packages with boots and helmet (adult $65-80, child $55-70) plus Salomon/Rossignol/Atomic/Volkl demo packages ($80-105).",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05: rents gear; website is diamondpeak.com rental page. Ski-resort prior: resorts nearly always rent."
+  }
+]

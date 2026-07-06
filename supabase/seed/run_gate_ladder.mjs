@@ -377,7 +377,7 @@ const isRecCategory = (o) =>
 // A genuine gear-rental SHOP name (not a vacation-home lease). Used as a recall safety
 // valve so a lodging-categorized row that actually reads like a rental shop is reviewed,
 // not auto-rejected.
-const RENT_SHOP_NAME = /(ski|bike|board|snowboard|kayak|paddle|sup|boat|gear|equipment|raft)\s+rental|\boutfitters?\b|rental shop|\brentals\b\s*(shop|store|co\b)/i;
+const RENT_SHOP_NAME = /(ski|bike|board|snowboard|kayak|canoe|paddle|sup|boat|watersports?|jet\s?ski|snowmobile|gear|equipment|raft)\s+rental|\boutfitters?\b|rental shop|\brentals\b\s*(shop|store|co\b)/i;
 
 const TOOL_CONSTRUCTION_RE = /\b(tool|construction|contractor|heavy|industrial|forklift|lift|generator|tractor|equipment)\b/i;
 // Phrase-based (not bare single words) so it no longer trips on rec names that merely
@@ -398,6 +398,17 @@ const DISC_GOLF_COURSE_NAME = /\bdisc golf course\b/i;
 // shop). Unlike "bike park"/"disc golf course" (which can host a renting pro-shop),
 // these are pure infrastructure. Respect rental_signal -> review as a safety valve.
 const FACILITY_ONLY_NAME = /\b(boat ramp|boat launch|bike ?way|snow ?play|snowplay|bikeway|trailhead)\b/i;
+// Venue/club operations that are not rental operators even WITH a live website:
+// member ski clubs, ice rinks (skates never leave the rink), archery/shooting ranges,
+// ticketed activity zones / sledding hills, and state SNO-Parks (websites live on
+// ohv.parks.ca.gov). 2026-07-05 review: Donner Summit & Blackwood SNO-Parks, Viking
+// Ski Club, Carson City archery range, Northstar ice rink, SnoVentures Activity Zone
+// all reached Pass A triage. A rental signal or rental-shop name still routes to
+// review (a venue CAN host a real rental concession — e.g. a state-park watersport
+// concession).
+const VENUE_CLUB_NAME =
+  /\b(sno-?parks?|ski club|ice (?:skating )?rink|skating rink|archery range|shooting range|gun club|activity zone|sledding hill)\b/i;
+const GOV_PARKS_HOST_RE = /(^|\.)(parks\.ca\.gov|nps\.gov|fs\.usda\.gov|blm\.gov)$/i;
 
 // Tier-1 out-of-scope businesses (validated against 195 human review labels, zero
 // collisions with confirmed operators). These bypass the rec-category recall guard
@@ -449,6 +460,14 @@ const DOMAIN_AGG_BLOCK = [
   "booking.com",
   "redawning.com",
   "evolve.com",
+  // Regional visitor directories: a Places "website" pointing at a destination-guide
+  // listing is not the operator's own site (2026-07-05 review: Cabin Fever surfaced
+  // via a tahoe.com listing page). When porting to a new region, add that region's
+  // visitor-guide domains here.
+  "tahoe.com",
+  "visitlaketahoe.com",
+  "visitrenotahoe.com",
+  "gotahoenorth.com",
 ];
 
 const BOOKING_PLATFORM_DOMAINS = [
@@ -525,6 +544,23 @@ for (const old of oldOps) {
   if (old.lat && old.lng) oldByNameLoc.push(entry);
 }
 const verifiedSlugs = new Set(Object.keys(verified));
+
+// Intra-batch dedup (Gate 4): the old-DB checks below cannot see two rows of the SAME
+// sweep batch that are one operator under two place_ids. 2026-07-05 review: Truckee
+// River Raft Co. (2x), Tahoe Jet Boats (3x), North Tahoe Watersports (2x) all reached
+// triage as same-domain+same-name duplicates. Key = normalized domain + compact name,
+// so multi-location brands with distinct storefront names (Powder House Main Store vs
+// Express) are NOT collapsed.
+const intraBatchSeen = new Map();
+function intraBatchDuplicate(o) {
+  const host = normDomain(o.website);
+  const nn = normNameCompact(o.name);
+  if (!host || !nn || nn.length < 6) return null;
+  const key = `${host}|${nn}`;
+  if (intraBatchSeen.has(key)) return { key, first: intraBatchSeen.get(key) };
+  intraBatchSeen.set(key, o.place_id || o.name);
+  return null;
+}
 
 function dedupMatch(o) {
   const host = normDomain(o.website);
@@ -1392,6 +1428,20 @@ async function classify(o) {
           "Firearm/ammo business with no in-scope hunting-gear or rental name cue; out of scope (hunting.md §0.2).",
         );
       }
+    } else if (
+      (VENUE_CLUB_NAME.test(o.name || "") || GOV_PARKS_HOST_RE.test(host || "")) &&
+      !RENT_SHOP_NAME.test(o.name || "")
+    ) {
+      // Venue/club/SNO-Park — not a rental operator even with a live website. A rental
+      // signal still routes to review in case a concession operates at the venue.
+      setDecision(
+        rec,
+        o.rental_signal ? "needs_review" : "not_an_operator",
+        o.rental_signal ? "gate3:venue_club_rental_signal" : "gate3:venue_club_site",
+        o.rental_signal
+          ? "Venue/club/SNO-Park name carrying a rental signal; review before excluding (a concession may rent here)."
+          : "Venue/club/SNO-Park listing (ski club, rink, range, activity zone, SNO-Park); not a rental operator.",
+      );
     } else if (FACILITY_ONLY_NAME.test(o.name || "") && !RENT_SHOP_NAME.test(o.name || "")) {
       // Pure infrastructure/venue (boat ramp, bikeway, snow play area) — not a shop.
       // A rental signal still routes to review in case a concession operates there.
@@ -1492,7 +1542,12 @@ async function classify(o) {
       );
       rec.dedup_note = `possible_duplicate_of:${o.possible_duplicate_of}`;
     } else {
-      const dm = dedupMatch(o);
+      const ib = intraBatchDuplicate(o);
+      if (ib) {
+        setDecision(rec, "duplicate", `gate4:intra_batch_domain_name:${ib.key}`, `Same website domain + normalized name as ${ib.first} earlier in this batch.`);
+        rec.dedup_note = `intra_batch_duplicate_of:${ib.first}`;
+      }
+      const dm = rec.status ? { level: "none" } : dedupMatch(o);
       if (dm.level === "duplicate") {
         setDecision(rec, "duplicate", `gate4:${dm.by}`);
         rec.dedup_note = dm.by;

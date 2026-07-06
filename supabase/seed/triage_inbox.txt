@@ -1,0 +1,11 @@
+# PASS A / STAGE 2 — TRIAGE BATCH OF 0 OPERATORS
+# Progress: 514 triaged, 0 remaining, 514 total.
+# Read TRIAGE_RUNBOOK.md for the rubric, category slugs, output schema, and examples.
+# For each operator below, emit ONE verdict object. Browse the website live for any
+# ambiguous or unreachable case before deciding.
+# CATEGORY RECALL IS CRITICAL: list EVERY activity the operator rents in categories[],
+#   not just the obvious one (watch for seasonal/second activities). A category you omit
+#   is never extracted by Pass B. If unsure about a second activity, add it to
+#   review_categories[] — never silently drop it.
+# Output a JSON array of verdicts, then apply with:
+#   node supabase/seed/triage_apply.mjs <your-verdicts.json>

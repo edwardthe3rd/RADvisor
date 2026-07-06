@@ -1,0 +1,114 @@
+[
+  {
+    "place_id": "ChIJ8b6JVa6HDG8R4ciI6hKk4yg", "name": "Lake Level Surf Charters",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.lakelevelsurf.com/"],
+    "evidence_snippet": "Every charter includes a USCG-licensed local captain ('No boating experience required — we handle navigation, safety, and conditions'); no self-operated option. 'Multi-day rentals' refers to multi-day captained bookings.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule; categories snow_sports/water_sports were keyword-hallucinated."
+  },
+  {
+    "place_id": "ChIJXXG-t3R9mYARhlQxfLkRAss", "name": "Tahoe Jet Boats",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoejetboats.com/"],
+    "evidence_snippet": "'Luxury Lake Tahoe Captained Boat Charters ... no propellers, trusted captains'; watersports gear (tubes, wakeboards, SUPs) is provided aboard captained charters only.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule. Listed 3x (ranks 181/204/205, same website) — Gate 4 same-domain dedup gap."
+  },
+  {
+    "place_id": "ChIJc7xrQz1wmYARNoqosr-SE3U", "name": "Tahoe Jet Boats",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoejetboats.com/"],
+    "evidence_snippet": "'Luxury Lake Tahoe Captained Boat Charters ... no propellers, trusted captains'; watersports gear (tubes, wakeboards, SUPs) is provided aboard captained charters only.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule. Duplicate listing (see rank 181)."
+  },
+  {
+    "place_id": "ChIJl8-H1OGPmYARSzMIQpKESLM", "name": "Tahoe Jet Boats",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.tahoejetboats.com/"],
+    "evidence_snippet": "'Luxury Lake Tahoe Captained Boat Charters ... no propellers, trusted captains'; watersports gear (tubes, wakeboards, SUPs) is provided aboard captained charters only.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule. Duplicate listing (see rank 181)."
+  },
+  {
+    "place_id": "ChIJ49lVJYGecw0RKKXgkSl03yI", "name": "North Tahoe Wakesurf and Charter",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://wakesurfnorthtahoe.com/"],
+    "evidence_snippet": "'A watersports school for all' — captain-led lessons and chartered tours only; all pricing includes the captain, no self-operated boat rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule."
+  },
+  {
+    "place_id": "ChIJuwLh4faLfgURUsImlalbIaw", "name": "The Water Traveler",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.thewatertraveler.com/"],
+    "evidence_snippet": "'Every charter is private, captained, and fully all-inclusive' (USCG-licensed captains, crew, catering); no self-guided rental anywhere on the site.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule; categories incl. fishing were keyword-hallucinated."
+  },
+  {
+    "place_id": "ChIJT720oDKPmYARl61Bj0YsY04", "name": "Tahoe Lake Tours",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoeboattours.com/"],
+    "evidence_snippet": "'We offer private boat tours on a 26 ft Formula 260 open bow with a Coast Guard Licensed Captain-Guide'; no bareboat option.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule."
+  },
+  {
+    "place_id": "ChIJiyTp4yC_mYARByWcGt0Oz1s", "name": "Discover Tahoe Chartered Cruises",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://discovertahoecruises.com/"],
+    "evidence_snippet": "'Our fully captained charters are tailored to create a fun, relaxing, and memorable experience' — captained cruises only, no self-operated rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-05: demoted from auto-triaged. Captained-charter rule; categories incl. snow_sports/fishing were keyword-hallucinated."
+  },
+  {
+    "place_id": "ChIJn4NRm2c_mYARA1hSIv9WIfo", "name": "High Desert Archery Reno",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.highdesertarcherynv.com/"],
+    "evidence_snippet": "Indoor archery range/pro shop; the only 'gear rentals' wording is gear included in semester-based homeschool classes — no take-away equipment rental.",
+    "status": "no_rentals", "confidence": "medium",
+    "note": "Audit 2026-07-05: demoted from auto-triaged (category snow_sports was hallucinated). On-premises/lesson gear is not a rental. Call 775-432-4041 if worth re-checking."
+  },
+  {
+    "place_id": "ChIJgQ14cp19mYARmx8aB0KetHA", "name": "Truckee River Rafting",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.truckeeriverrafting.com/prices"], "checked_urls": ["https://www.truckeeriverrafting.com/"],
+    "evidence_snippet": "'We offer self-guided rafting trips down the beautiful Truckee River, with commercial-grade rafts available for groups of all sizes' — self-guided raft rental with pricing page.",
+    "status": "triaged", "confidence": "high",
+    "note": "Audit 2026-07-05: rescued from no_rentals ('retail/service evidence' verdict missed the self-guided rental). Same model as Truckee River Raft Co."
+  },
+  {
+    "place_id": "ChIJ8atHbUdlmYART4wRbng-hVc", "name": "Endless Wave Charters",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.endlesswavecharters.com/"], "checked_urls": ["https://www.endlesswavecharters.com/"],
+    "evidence_snippet": "Offers captained surf charters AND non-captained (bareboat) boat rentals at $300-500/hr, 2-hour minimum, renters 18+ with photo ID.",
+    "status": "triaged", "confidence": "high",
+    "note": "Audit 2026-07-05: kept triaged (bareboat option confirmed); categories corrected to water_sports (snow_sports/fishing were keyword-hallucinated)."
+  },
+  {
+    "place_id": "ChIJP0bKrdJkmYARfFNNkdWSgZ4", "name": "Full Throttle Tahoe",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.fullthrottletahoeboats.com/"], "checked_urls": ["https://www.fullthrottletahoeboats.com/"],
+    "evidence_snippet": "Waverunner rental $220/hr booked directly, plus first-come paddleboard and kayak rentals, alongside captained boat charters.",
+    "status": "triaged", "confidence": "high",
+    "note": "Audit 2026-07-05: kept triaged (self-serve jet ski/SUP/kayak rentals confirmed); categories corrected to water_sports (snow_sports was keyword-hallucinated)."
+  },
+  {
+    "place_id": "ChIJEdu51jmPmYARTJ23sNf4XRo", "name": "Boat Tahoe",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.boat-tahoe.com/"], "checked_urls": ["https://www.boat-tahoe.com/"],
+    "evidence_snippet": "Primarily captain-included private charters, but the site has a dedicated 'Bareboat Charters' page indicating a self-operated option.",
+    "status": "triaged", "confidence": "medium",
+    "note": "Audit 2026-07-05: kept triaged on the bareboat page; categories corrected to water_sports (snow_sports/off_road/road_cycling were keyword-hallucinated). Pass B: verify the bareboat offering is real."
+  },
+  {
+    "place_id": "ChIJb-b8_CxxmYAR8pbPESGXLFM", "name": "Tahoe Paradise Boat Rentals",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["http://tahoeparadiseboatrentals.com/"], "checked_urls": ["http://tahoeparadiseboatrentals.com/"],
+    "evidence_snippet": "Boat rental packages (4-8 hours, $1,099-1,899) including tubes and wakeboards on Lake Tahoe.",
+    "status": "triaged", "confidence": "medium",
+    "note": "Audit 2026-07-05: kept triaged; categories corrected to water_sports (snow_sports was keyword-hallucinated). Distinct from the same-named captained 82ft-yacht operation at rank 233 (no_rentals). Pass B: confirm bareboat vs captained."
+  }
+]

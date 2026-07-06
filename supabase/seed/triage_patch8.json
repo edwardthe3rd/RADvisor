@@ -1,0 +1,202 @@
+[
+  {
+    "place_id": "ChIJ1RqB2urZm4AR4qcaOJAfq7M", "name": "Alpenglow Expeditions",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://alpenglowexpeditions.com/"],
+    "evidence_snippet": "Guided mountaineering/backcountry expedition service; gear is provided on guided trips only, not rented for independent use.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear for independent expeditions. Rule: guide-required gear is not a rental."
+  },
+  {
+    "place_id": "ChIJTXYPIfxHmYARV7PRV5mpUq8", "name": "Bicycle Service Center",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://bicycleservicecenter.com/"],
+    "evidence_snippet": "Bicycle repair shop; service only, no rental program.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: repair only."
+  },
+  {
+    "place_id": "ChIJgbTQoZkNmYARqAZOEzPZ2qc", "name": "Eastlake Ebike Rentals",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.eastlakeebikes.com/"],
+    "evidence_snippet": "Former e-bike rental in Washoe Valley (eastlakeebikes.com); the domain no longer resolves and no active listings/reviews were found — business appears defunct.",
+    "status": "no_rentals", "confidence": "medium",
+    "note": "EC review 2026-07-05: does not appear to be an actual business. Verified 2026-07-05: site dead, likely out of business. Re-check if it resurfaces."
+  },
+  {
+    "place_id": "ChIJPRErSHaQmYAR6GJasIPw_so", "name": "Heavenly Sports - Tamarack Lodge",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": [],
+    "evidence_snippet": "On-mountain Heavenly Sports retail outpost at Tamarack Lodge; no rental counter at this location.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear (this location)."
+  },
+  {
+    "place_id": "ChIJxQ-MO-rZm4ARu5s3wrvkG-g", "name": "SnoVentures Activity Zone",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": [],
+    "evidence_snippet": "Ticketed snow-play/tubing activity zone; sleds/tubes are bundled into the admission ticket, not rented for independent use.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires a ticket to sled. Rule: admission-bundled gear is an experience, not a rental."
+  },
+  {
+    "place_id": "ChIJvwYAcgCPmYARLz32N5pYwvg", "name": "Tahoe Outdoor Adventures and Rentals",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": [],
+    "evidence_snippet": "Despite the name, gear is only available as part of guided outings; a guide is required to get gear.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires a guide to get gear. Rule: guide-required gear is not a rental."
+  },
+  {
+    "place_id": "ChIJ4VTFvZ44mYARShou2cYdePI", "name": "The Home Depot",
+    "rents_gear": true, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.homedepot.com/l/N-Reno/NV/Reno/89512/3304?emt=MSGoogleMaps"],
+    "evidence_snippet": "Big-box home-improvement chain; its rental desk is tools/trucks/construction equipment, none of it outdoor adventure gear.",
+    "status": "out_of_scope", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent outdoor adventure gear. Should have been blocked at Gate 1 (originals bypassed the gate ladder)."
+  },
+  {
+    "place_id": "ChIJAUbDPrZ9mYARboTc4ZxoE8o", "name": "Tahoe Bliss Boat Charters",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoeblissboatcharters.com/"],
+    "evidence_snippet": "Boat charters that include a captain with every rental; no bareboat/drive-it-yourself option.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires a captain with rental. Rule: captained charter = experience, not rental."
+  },
+  {
+    "place_id": "ChIJG1pSOoE7WaIR4hsZXbN-jQY", "name": "The Tahoe Experience",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://thetahoeexperience.com/"],
+    "evidence_snippet": "Boat outings that include a captain with every rental; no bareboat/drive-it-yourself option.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires a captain with rental. Rule: captained charter = experience, not rental."
+  },
+  {
+    "place_id": "ChIJFZVNNyJsmYARqosfF4RISB4", "name": "Sky Tavern Ski Area",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.skytavern.com/"],
+    "evidence_snippet": "Nonprofit ski co-op; gear demos are available only to season-pass holders, not to the public.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires season pass for their demos. Rule: membership/pass-gated demos are not public rentals."
+  },
+  {
+    "place_id": "ChIJZwsxJDFimYAR8mINJEAbvv4", "name": "Northstar Village Ice Skating Rink",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://m.northstarcalifornia.com/things-to-do.html?page=viewall"],
+    "evidence_snippet": "Village ice rink; skates are issued for use on the rink only and cannot leave the venue.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: skates cannot be taken outside the rink. Rule: on-premises-only gear is not a rental (take-away rule)."
+  },
+  {
+    "place_id": "ChIJgdUHyKIKmYARaBDugkoQAKg", "name": "The Bike Smith",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.facebook.com/thebikesmithcc/"],
+    "evidence_snippet": "Carson City bike shop offering sales and repair; no rental program.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear."
+  },
+  {
+    "place_id": "ChIJ1dbOXoPtIwkREbHp3ePV79I", "name": "High Desert Camping Co",
+    "rents_gear": true, "categories": [], "review_categories": [],
+    "rental_page_urls": ["https://www.highdesertcampingco.com"], "checked_urls": ["https://www.highdesertcampingco.com"],
+    "evidence_snippet": "Mobile glamping outfit: delivers and sets up curated bell-tent/glamping packages for weddings and events. Customers rent a service/venue setup, not take-away camping gear.",
+    "status": "out_of_scope", "confidence": "high",
+    "note": "EC review 2026-07-05: out of scope. Event glamping setups, not independent-use adventure gear."
+  },
+  {
+    "place_id": "ChIJ97RGLQmQmYARsf9k5-VcRds", "name": "Cabin Fever",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tahoe.com/south-lake-tahoe/cabin-fever", "https://www.yelp.com/biz/cabin-fever-south-lake-tahoe-3"],
+    "evidence_snippet": "Gift/souvenir shopping emporium at Ski Run Marina (4 shops in 1: gifts, sports apparel, celebrations, plush). Retail only; rents nothing.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: out of scope (gift shop; rents nothing, so recorded as no_rentals). Website on file is a tahoe.com directory page — Gate 3 aggregator candidate."
+  },
+  {
+    "place_id": "ChIJ6RoWGbmPmYARkCigY0BBPlQ", "name": "South Shore Boats & Powersports",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.sshoreboats.com/"],
+    "evidence_snippet": "Boat/powersports sales and service dealer; no rental fleet.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear."
+  },
+  {
+    "place_id": "ChIJT3AtiYuRmYAR7mv9uZ9N700", "name": "Bearry Sweet",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://bearrysweet.com/"],
+    "evidence_snippet": "Dessert restaurant (crepes, waffles, marquesitas) at Ski Run Marina; a food business, not a gear operator.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: out of scope (restaurant; rents nothing, so recorded as no_rentals). Should have been blocked at Gate 1/3."
+  },
+  {
+    "place_id": "ChIJBVFIjxCPmYARx7hTuDwYGzM", "name": "Tahoe Yacht Cruises",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.tahoeyachtcruises.com/"],
+    "evidence_snippet": "Crewed yacht cruise outings; no self-operated boat rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: captained charter = experience, not rental."
+  },
+  {
+    "place_id": "ChIJvd6wZwCRmYARCxZeVJnQF7w", "name": "Bijou Bike Park",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://tamba.org/projects/bijou-bike-park/"],
+    "evidence_snippet": "Free public bike park maintained by TAMBA; a venue, not a rental business.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: public venue/park = not_an_operator (Gate 3 candidate)."
+  },
+  {
+    "place_id": "ChIJpwVmHu_nm4ARKAzWNISxA9M", "name": "Viking Ski Club",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://sfvikingskiclub.org/"],
+    "evidence_snippet": "Member ski club (SF Viking Ski Club) with a lodge; a club, not a rental business.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: clubs = not_an_operator (Gate 3 candidate)."
+  },
+  {
+    "place_id": "ChIJJ0YDNgBxmYARvZIvIzMKrRw", "name": "Tahoe Yacht Charters",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.tahoeyachtcharters.com/"],
+    "evidence_snippet": "Private crewed yacht charters; a private trip must be booked — no self-operated rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: requires a private trip to be booked. Rule: captained charter = experience, not rental."
+  },
+  {
+    "place_id": "ChIJYxHckB8KmYARtyYl0qc4ZRU", "name": "Carson City Centennial Park Archery Range",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.clearcreekbowmen.com/"],
+    "evidence_snippet": "Public archery range run by the Clear Creek Bowmen club; bring-your-own equipment, no gear rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: ranges/venues/clubs = not_an_operator (Gate 3 candidate)."
+  },
+  {
+    "place_id": "ChIJlyLTgC1BmYARQR1IEeAMWTA", "name": "Five Dot Ranch Fly Fishing",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://fivedotflyfishing.com/?page_id=246"],
+    "evidence_snippet": "Private-ranch guided fly-fishing access/experience; they do not rent fishing gear.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: belongs under experiences, not rentals."
+  },
+  {
+    "place_id": "ChIJCbjInirmm4AR4qHf5fDwlgY", "name": "Donner Summit SNO-Park",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://ohv.parks.ca.gov/?page_id=23055"],
+    "evidence_snippet": "State-run SNO-Park (permit parking for winter recreation); public land access point, no rental operation.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: SNO-Parks/public venues = not_an_operator (Gate 3 candidate)."
+  },
+  {
+    "place_id": "ChIJOUn9gx1-mYAR98WK7QvzBOY", "name": "Blackwood Canyon SNO-PARK",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://ohv.parks.ca.gov/?page_id=23061"],
+    "evidence_snippet": "State-run SNO-Park (permit parking for winter recreation); public land access point, no rental operation.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: does not rent gear. Rule: SNO-Parks/public venues = not_an_operator (Gate 3 candidate)."
+  },
+  {
+    "place_id": "ChIJXdsqRPeMmYARPFveJrnfz5g", "name": "Adventure Mountain Lake Tahoe",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": [],
+    "evidence_snippet": "Snow-play/sledding park on Echo Summit; admission-based experience where sleds are part of the visit, not an independent gear rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-05: an experience, not a rental company. Rule: admission-bundled gear = experience."
+  }
+]

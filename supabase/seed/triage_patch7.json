@@ -1,0 +1,15 @@
+[
+  {
+    "place_id": "ChIJbzu7vXSPmYAROH1u0aSqiBg",
+    "name": "Emerald Bay Bikes",
+    "rents_gear": true,
+    "categories": ["road_cycling", "mountain_biking"],
+    "review_categories": ["electric_transport"],
+    "rental_page_urls": [],
+    "checked_urls": ["https://www.emeraldbaybikes.com/"],
+    "evidence_snippet": "Operator-confirmed bike rental shop on Emerald Bay Rd, South Lake Tahoe (along the paved bike path). Google reviews and third-party sites reference bike rentals; the online booking page was not located, so the specific fleet (cruiser/comfort, mountain, e-bikes) is unconfirmed. Its own site emphasizes a bike-parts store.",
+    "status": "triaged",
+    "confidence": "medium",
+    "note": "Patch: promoted per operator confirmation that they rent bikes (reviews + other sites mention rentals). Categories are the typical Tahoe bike-path fleet; Pass B to verify actual rental inventory and whether e-bikes are offered."
+  }
+]

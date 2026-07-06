@@ -1,0 +1,716 @@
+[
+  {
+    "place_id": "ChIJ87o1B6NFmYARWznGWV_cHh8",
+    "name": "Another Bike Shop Reno",
+    "rents_gear": true,
+    "categories": [
+      "mountain_biking",
+      "electric_transport"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.anotherbikeshop.com/articles/rentals-pg148.htm"
+    ],
+    "checked_urls": [
+      "https://www.anotherbikeshop.com/articles/rentals-pg148.htm"
+    ],
+    "evidence_snippet": "Rentals page + homepage 'RENTALS AND ROUTES — Open now in both locations, make your reservations online' and 'well-maintained E-MTB's ready for you to rent.'",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: recovered from full cache; original run under-read available rental page(s)."
+  },
+  {
+    "place_id": "ChIJ6dq1GMS9mYAR6bc--rU3SVk",
+    "name": "Big Daddy's Bike & Brew",
+    "rents_gear": true,
+    "categories": [
+      "snow_sports"
+    ],
+    "review_categories": [
+      "mountain_biking",
+      "road_cycling"
+    ],
+    "rental_page_urls": [
+      "https://www.bigdaddysbikeandbrew.com/"
+    ],
+    "checked_urls": [
+      "https://www.bigdaddysbikeandbrew.com/"
+    ],
+    "evidence_snippet": "Homepage: 'Big Daddy's offers season as well as daily ski and snowboard rentals and demos! Skis, boards, boots, poles...the works.' Bike rental not confirmed (bike shop) → review.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: recovered from full cache; original run under-read available rental page(s)."
+  },
+  {
+    "place_id": "ChIJ9UsF5i7fm4ARAGHBIGAM_Hc",
+    "name": "Cook EFoiling",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.cookefoiling.com/"
+    ],
+    "checked_urls": [
+      "https://www.cookefoiling.com/"
+    ],
+    "evidence_snippet": "Homepage headline: 'Electric Hydrofoil Lessons and Rentals on Lake Tahoe and Donner Lake'; advanced users given freedom to ride. Lift eFoil provider.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: recovered from full cache; original run under-read available rental page(s)."
+  },
+  {
+    "place_id": "ChIJKx4AZMvfm4ARYXTbCQnZlWk",
+    "name": "CyclePaths BikeShop",
+    "rents_gear": true,
+    "categories": [
+      "mountain_biking",
+      "electric_transport"
+    ],
+    "review_categories": [
+      "road_cycling"
+    ],
+    "rental_page_urls": [
+      "https://cyclepaths.com/bike-rentals/",
+      "https://cyclepaths.com/rental-bikes/"
+    ],
+    "checked_urls": [
+      "https://cyclepaths.com/bike-rentals/",
+      "https://cyclepaths.com/rental-bikes/"
+    ],
+    "evidence_snippet": "Dedicated Bike Rentals / Rent-a-Bike pages: 'Daily rentals from Truckee's bike shop' — MTB, eMTB, town e-bikes; Segway e-bikes 'available for test-rides and rental.'",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: recovered from full cache; original run under-read available rental page(s)."
+  },
+  {
+    "place_id": "ChIJJxPM4N-bmYARIJTP7vf24oQ",
+    "name": "Deep Abliss Diveshop",
+    "rents_gear": true,
+    "categories": [
+      "water_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://scubatahoe.com/gear-rentals"
+    ],
+    "checked_urls": [
+      "https://scubatahoe.com/gear-rentals"
+    ],
+    "evidence_snippet": "Gear Rentals page: 'Rental Equipment $99/day Complete Scuba kit (Tank, BCD, Wetsuit, Weights, Regulator...)'. Mobile dive shop.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: recovered from full cache; original run under-read available rental page(s)."
+  },
+  {
+    "place_id": "ChIJNdEeoIrfm4ARYNp6lc4W8O8",
+    "name": "Tahoe LED Dance Floors",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://tahoeleddancefloors.com/"
+    ],
+    "evidence_snippet": "'Transform your next event with our LED dance floor rentals.' Party equipment rental — not a RADvisor recreational category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Rents LED dance floors (event equipment); out of domain."
+  },
+  {
+    "place_id": "ChIJW6kImnuXmYARUnNyzKWfEGU",
+    "name": "Mountain Area Rentals",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://mountainarearentals.com/"
+    ],
+    "evidence_snippet": "'Table and Chair Rentals — easy, prompt delivery' (VINTAGE by V). Party/event equipment rental — not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Rents tables/chairs (event equipment); out of domain."
+  },
+  {
+    "place_id": "ChIJ0a5rnMvfm4ARp1ExdGMo2YQ",
+    "name": "ASC Training Center (formerly Auburn Ski Club)",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://asctrainingcenter.org/"
+    ],
+    "evidence_snippet": "Site under maintenance; only program registration shown. Formerly Auburn Ski Club, a Nordic center that historically rents XC ski gear — browse live to confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ1RqB2urZm4AR4qcaOJAfq7M",
+    "name": "Alpenglow Expeditions",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://alpenglowexpeditions.com/"
+    ],
+    "evidence_snippet": "Cache captured only the homepage nav (guide/expedition tours). User reports a gear demo program; no shop/demo page fetched — browse live.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJTXYPIfxHmYARV7PRV5mpUq8",
+    "name": "Bicycle Service Center",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://bicycleservicecenter.com/"
+    ],
+    "evidence_snippet": "Site is a 'Coming Soon' placeholder; bike shop/repair — cannot confirm or rule out rentals.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJPRErSHaQmYAR6GJasIPw_so",
+    "name": "Heavenly Sports - Tamarack Lodge",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No page fetched; part of the Heavenly Sports ski-rental chain (sibling locations rent ski/snowboard). Confirm this location's rentals.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJv5W-J0WPmYARf-omMX4-5Cs",
+    "name": "Just So Scuba",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; scuba operator that plausibly rents dive gear vs. guide/instruct only.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJjfXtAQrrX2AR9WWeV3ST9hg",
+    "name": "Lake Tahoe Floats",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.laketahoefloats.com/"
+    ],
+    "evidence_snippet": "Site unreachable; name implies raft/float rentals — confirm self-guided rental vs. tour.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": null,
+    "name": "Love Your Life BackCountry",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://loveyourlifebackcountry.com/"
+    ],
+    "evidence_snippet": "Site 'under construction'; backcountry name implies possible ski/gear rental.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJTxHhMNbrm4AR1Jg0TJZWyLA",
+    "name": "Moto Tahoe",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; 'Moto' implies motorcycle/off-road rental or tours — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJmx4eaMdZoKcRy2nZmnvjmj4",
+    "name": "Paddle To You",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.paddletoyoutahoe.com/"
+    ],
+    "evidence_snippet": "Fetched page had no text; name implies mobile SUP/kayak rental delivery — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJn62LLHMVmYARbArYbQtB6N4",
+    "name": "Quiver Sports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.quiversports.com/"
+    ],
+    "evidence_snippet": "No page fetched; ski/board 'quiver' shop that plausibly rents — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJcSPRLpBgmYAREYSvBo1hns8",
+    "name": "South Passage Outfitters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.southpassageoutfittersllc.com/"
+    ],
+    "evidence_snippet": "Site unreachable; 'Outfitters' could rent gear or guide — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ-SmG4to5mYARSyK09zKl24c",
+    "name": "Sparks Marina Paddle",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.sparksmarinapaddle.com/"
+    ],
+    "evidence_snippet": "Site unreachable; name implies SUP/kayak rental at Sparks Marina — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJHdwDUcDfm4AReKIJrkARduU",
+    "name": "Totally Board",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.totallyboardtahoe.com/"
+    ],
+    "evidence_snippet": "Only page title fetched: 'Truckee's Premier Snowboard & Skate Shop.' Snowboard shops commonly rent — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJZRK_PHNlmYARCC9Jif-vstA",
+    "name": "Tahoe Family Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://tahoefamilyadventures.com/"
+    ],
+    "evidence_snippet": "Site under maintenance; adventure operator that plausibly rents bikes/watercraft — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJDaVqy8ObmYARzHjV519rv7c",
+    "name": "Tahoe Toys & Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://tahoetoysadventures.com/"
+    ],
+    "evidence_snippet": "Site unreachable; 'Toys' implies watercraft/powersports rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJWWOPcw-QmYARhEoevVFqLRs",
+    "name": "The Village Board Shop",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.thevillageboardshop.com/"
+    ],
+    "evidence_snippet": "Site unreachable; ski/snowboard board shop that plausibly rents — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJxStHgjHem4ARA7sY1gYJeQ4",
+    "name": "Truckee Boardhouse",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.truckeeboardhouse.com/"
+    ],
+    "evidence_snippet": "Only store blurb fetched (snowboard/skate shop). Confirm whether they rent.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJNxrjaZ19mYARcNS3tWQt3xs",
+    "name": "Truckee River Raft Co.",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.truckeeriverraft.com/"
+    ],
+    "evidence_snippet": "Homepage advertises Truckee River rafting ('The Original Lake Tahoe Rafting Outfitter, Book Now'). Likely a self-guided raft rental with shuttle — confirm rental vs. guided trip.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJgdUHyKIKmYARaBDugkoQAKg",
+    "name": "The Bike Smith",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.facebook.com/thebikesmithcc/"
+    ],
+    "evidence_snippet": "Facebook-only, unreachable; bike shop + repair that plausibly rents — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ-0E9UJrhm4AReRY7fH4VbfE",
+    "name": "Donner Lake E Bikes",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; name implies e-bike rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJscf4VsePmYARJHNiY-Oq0EM",
+    "name": "Tahoe Blue Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; adventure operator that plausibly rents — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ6RoWGbmPmYARkCigY0BBPlQ",
+    "name": "South Shore Boats & Powersports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.sshoreboats.com/"
+    ],
+    "evidence_snippet": "Only 'Boat Repair' title fetched; boat/powersports dealer that may also rent — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJbcjDZ4wLmYAR2mVre3nV9CU",
+    "name": "Mountain Cat",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.mountaincatshop.com/"
+    ],
+    "evidence_snippet": "Only title fetched ('Snowboards, Boots, Bindings, Outerwear'); snowboard shop that plausibly rents — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJL_C-oIQn9kwRP5wJRQQWLek",
+    "name": "Rubicon Surf Company",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.rubiconsurfcompany.com/"
+    ],
+    "evidence_snippet": "Site unreachable; 'Surf Company' implies SUP/surf rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJi48B4MXZm4ARGixpfWViKDs",
+    "name": "Everline Sports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.hyatt.com/en-US/hotel/california/everline-resort-and-spa/rnodh"
+    ],
+    "evidence_snippet": "Hyatt/Everline resort sports desk (unreachable); resort activity desks commonly rent bikes/skis — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJc26yN8pkmYAR7vaH0jeNpww",
+    "name": "Tahoe Vista Sports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.tahoevistasports.com/"
+    ],
+    "evidence_snippet": "Only footer fetched ('2026 Boats', 'Site By Boats Group'); appears to be a boat/powersports dealer that may rent — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJvenb9gL0mYARx8Sp-1RFiv0",
+    "name": "Kirkwood Mountain Sports - Timber Creek",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No page fetched, but Google overview states 'Ski shop providing rentals and lessons' — confirm and triage as snow_sports.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ9bDI1HCbmYARCvQMY0dLL-0",
+    "name": "tahoe skibikes",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; 'ski bikes' implies snow-bike rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJE4N00Md9mYAROuhns7O5F4g",
+    "name": "JBL WATERSPORTS",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://jblwatersports.com/"
+    ],
+    "evidence_snippet": "Site unreachable; watersports name implies rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJX2yvUZxumYARnXMY9Q1xFhw",
+    "name": "Mt. Rose - Ski Tahoe",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No page fetched; ski resort — confirm whether the resort rental shop should be captured.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJFRNBoymRmYARIcwV65Nz0Z0",
+    "name": "Lake & Wake Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No website fetched; wake/water adventures name implies rental — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJTWUmTNM2mYARJIFpETB64s4",
+    "name": "Ground Zero Outfitters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://groundzeroutfitters.com/"
+    ],
+    "evidence_snippet": "Minimal page fetched; 'Outfitters' could rent gear or guide — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJJ663GMtxmYARl7Jf3ui-cHQ",
+    "name": "Diamond Peak Ski Resort",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "No page fetched; ski resort — confirm whether the resort rental shop should be captured.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJAUbDPrZ9mYARboTc4ZxoE8o",
+    "name": "Tahoe Bliss Boat Charters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://tahoeblissboatcharters.com/"
+    ],
+    "evidence_snippet": "Named 'Boat Charters' (captained) but site is branded 'Lake Tahoe Boat Rentals' with heavy rental content — confirm bareboat rental vs. captained charter.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJN6x_Hdvfm4ARs2OsVqqpEyw",
+    "name": "RMU Truckee Ski Shop",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://mtnculture.com/pages/rmu-truckee"
+    ],
+    "evidence_snippet": "Ski-brand flagship store with a 'Demo RMU Skis' locator; unclear if a paid ski demo/rental program runs at the Truckee shop — confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJ67e0W4xhmYAR7ek85J3KG0c",
+    "name": "Truckee Watersports",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.truckeewatersports.com/"
+    ],
+    "evidence_snippet": "Boats priced per hour ($200-250/hr, 'Boats/Gears') under a 'Watersports Academy' — confirm bareboat rental vs. captained lessons.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJBVFIjxCPmYARx7hTuDwYGzM",
+    "name": "Tahoe Yacht Cruises",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.tahoeyachtcruises.com/"
+    ],
+    "evidence_snippet": "Reservations page offers '$550/hr — Bareboat Charter, does not include Captain's Fees' — bareboat implies rental; confirm.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJJ0YDNgBxmYARvZIvIzMKrRw",
+    "name": "Tahoe Yacht Charters",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.tahoeyachtcharters.com/"
+    ],
+    "evidence_snippet": "Self-describes as 'Premier Yacht Charter rental business' with /rentals, /rental, /rent pages — confirm bareboat rental vs. captained charter.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJG1pSOoE7WaIR4hsZXbN-jQY",
+    "name": "The Tahoe Experience",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://thetahoeexperience.com/"
+    ],
+    "evidence_snippet": "Nav includes 'Bareboat Charter' though marketed as captained pontoon tours — confirm bareboat rental option.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  },
+  {
+    "place_id": "ChIJQSqWAgb0mYARj5rac5qWfRY",
+    "name": "Cross Country Center",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.kirkwood.com/explore-the-resort/activities-and-events/cross-country.aspx"
+    ],
+    "evidence_snippet": "Kirkwood cross-country center; fetch returned only a queue-redirect page. XC centers commonly rent nordic gear — browse live.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: original run made a confident no_rentals on a thin/partial fetch; flip to needs_review (browse live)."
+  }
+]

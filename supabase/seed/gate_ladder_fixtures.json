@@ -1,7 +1,11 @@
 [
   {
     "id": "real-kayak-operator-not-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-real-kayak",
       "name": "Fixture Tahoe Kayak Rentals",
@@ -12,10 +16,18 @@
       "lat": 38.94,
       "lng": -119.98,
       "rental_signal": true,
-      "matched_activities": ["kayak"],
-      "matched_terms": ["kayak rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "kayak"
+      ],
+      "matched_terms": [
+        "kayak rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -32,10 +44,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["camping"],
-      "matched_terms": ["camping gear rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "camping"
+      ],
+      "matched_terms": [
+        "camping gear rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -52,10 +72,18 @@
       "lat": 39.32,
       "lng": -120.18,
       "rental_signal": true,
-      "matched_activities": ["rafting"],
-      "matched_terms": ["whitewater rafting"],
-      "matched_tiers": ["experience"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "rafting"
+      ],
+      "matched_terms": [
+        "whitewater rafting"
+      ],
+      "matched_tiers": [
+        "experience"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -73,10 +101,18 @@
       "lat": 38.94,
       "lng": -119.98,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"],
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ],
       "possible_duplicate_of": "fixture-primary"
     }
   },
@@ -94,10 +130,18 @@
       "lat": 39.32,
       "lng": -120.18,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -115,15 +159,27 @@
       "lat": 39.32,
       "lng": -120.18,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "soft-block-word-with-rec-category-not-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "reason_prefix": "gate1:soft_blocklist_rec_conflict",
     "row": {
       "place_id": "fixture-soft-block-rec",
@@ -135,15 +191,27 @@
       "lat": 38.94,
       "lng": -119.98,
       "rental_signal": true,
-      "matched_activities": ["kayak"],
-      "matched_terms": ["kayak rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "kayak"
+      ],
+      "matched_terms": [
+        "kayak rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "rv-overland-include-not-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-rv-overland",
       "name": "Fixture Sportsmobile 4x4 Camper Van Rentals",
@@ -154,15 +222,27 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["camping_vehicles"],
-      "matched_terms": ["camper van rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "camping_vehicles"
+      ],
+      "matched_terms": [
+        "camper van rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "powersports-include-not-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-powersports",
       "name": "Fixture Reno Powersports ATV & UTV Rentals",
@@ -173,10 +253,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["offroad-4x4"],
-      "matched_terms": ["atv rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "offroad-4x4"
+      ],
+      "matched_terms": [
+        "atv rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -194,10 +282,18 @@
       "lng": null,
       "rental_signal": true,
       "pure_service_area_business": true,
-      "matched_activities": ["sup"],
-      "matched_terms": ["paddleboard rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["service-area"]
+      "matched_activities": [
+        "sup"
+      ],
+      "matched_terms": [
+        "paddleboard rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "service-area"
+      ]
     }
   },
   {
@@ -215,10 +311,18 @@
       "lng": null,
       "rental_signal": true,
       "pure_service_area_business": true,
-      "matched_activities": ["sup"],
-      "matched_terms": ["paddleboard rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["service-area"]
+      "matched_activities": [
+        "sup"
+      ],
+      "matched_terms": [
+        "paddleboard rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "service-area"
+      ]
     }
   },
   {
@@ -236,17 +340,29 @@
       "lng": null,
       "rental_signal": true,
       "pure_service_area_business": true,
-      "matched_activities": ["camping"],
-      "matched_terms": ["tent rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["service-area"]
+      "matched_activities": [
+        "camping"
+      ],
+      "matched_terms": [
+        "tent rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "service-area"
+      ]
     }
   },
   {
     "id": "firearm-business-routes-to-review",
     "expect_status": "needs_review",
     "reason_prefix": "gate3:firearm_business_review",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-firearm",
       "name": "Fixture Wild Bills Guns & Hunting Outfitters",
@@ -257,15 +373,27 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["hunting"],
-      "matched_terms": ["hunting gear rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "hunting"
+      ],
+      "matched_terms": [
+        "hunting gear rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "archery-business-not-firearm-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-archery",
       "name": "Fixture House Of Arrows Archery",
@@ -276,10 +404,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["archery"],
-      "matched_terms": ["archery pro shop"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "archery"
+      ],
+      "matched_terms": [
+        "archery pro shop"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -296,17 +432,29 @@
       "lat": 39.16,
       "lng": -119.77,
       "rental_signal": true,
-      "matched_activities": ["gear-shop"],
-      "matched_terms": ["sporting goods store"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "gear-shop"
+      ],
+      "matched_terms": [
+        "sporting goods store"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "public-rec-site-with-rental-signal-routes-to-review",
     "expect_status": "needs_review",
     "reason_prefix": "gate3:public_recreation_site_rental_signal",
-    "forbidden_statuses": ["not_an_operator", "out_of_scope", "out_of_region"],
+    "forbidden_statuses": [
+      "not_an_operator",
+      "out_of_scope",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-bike-park",
       "name": "Fixture Biggest Little Bike Park",
@@ -317,10 +465,18 @@
       "lat": 39.16,
       "lng": -119.77,
       "rental_signal": true,
-      "matched_activities": ["mountain-bike"],
-      "matched_terms": ["bike park rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "mountain-bike"
+      ],
+      "matched_terms": [
+        "bike park rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -337,15 +493,27 @@
       "lat": 39.16,
       "lng": -119.77,
       "rental_signal": false,
-      "matched_activities": ["disc-golf"],
-      "matched_terms": ["disc golf course"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "disc-golf"
+      ],
+      "matched_terms": [
+        "disc golf course"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "rec-named-retail-no-website-not-rejected",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-rec-retail",
       "name": "Fixture Tahoe Surf & Board Shop",
@@ -356,10 +524,18 @@
       "lat": 39.16,
       "lng": -119.77,
       "rental_signal": true,
-      "matched_activities": ["surf"],
-      "matched_terms": ["surfboard rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "surf"
+      ],
+      "matched_terms": [
+        "surfboard rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -379,13 +555,15 @@
       "matched_activities": [],
       "matched_terms": [],
       "matched_tiers": [],
-      "matched_modes": ["standard"]
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "public-poi-no-website-not-operator",
     "expect_status": "not_an_operator",
-    "reason_prefix": "gate3:public_recreation_site_no_website",
+    "reason_prefix": "gate3:venue_club_site",
     "row": {
       "place_id": "fixture-public-poi",
       "name": "Fixture Echo Lake Sno-Park",
@@ -399,14 +577,18 @@
       "matched_activities": [],
       "matched_terms": [],
       "matched_tiers": [],
-      "matched_modes": ["standard"]
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "tier1-firearm-only-rejects",
     "expect_status": "out_of_scope",
     "reason_prefix": "gate3:firearm_business",
-    "forbidden_statuses": ["survivor"],
+    "forbidden_statuses": [
+      "survivor"
+    ],
     "row": {
       "place_id": "fixture-guns-only",
       "name": "Fixture Reno Guns & Ammo",
@@ -417,10 +599,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["hunting"],
-      "matched_terms": ["hunting gear rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "hunting"
+      ],
+      "matched_terms": [
+        "hunting gear rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -437,10 +627,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["gear-shop"],
-      "matched_terms": ["sporting goods store"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "gear-shop"
+      ],
+      "matched_terms": [
+        "sporting goods store"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -458,14 +656,24 @@
       "lng": -120.24,
       "rental_signal": false,
       "matched_activities": [],
-      "matched_terms": ["sporting goods store"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_terms": [
+        "sporting goods store"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "tier1-rental-cue-escapes-out-of-scope-reject",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-market-rental",
       "name": "Tahoe Market & Ski Rental Shop",
@@ -476,17 +684,27 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "tier1-firearm-with-outfitter-cue-reviews",
     "expect_status": "needs_review",
     "reason_prefix": "gate3:firearm_business_review",
-    "forbidden_statuses": ["out_of_scope"],
+    "forbidden_statuses": [
+      "out_of_scope"
+    ],
     "row": {
       "place_id": "fixture-guns-outfitter",
       "name": "Fixture Sierra Guns & Hunting Outfitters",
@@ -497,10 +715,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["hunting"],
-      "matched_terms": ["hunting gear rental"],
-      "matched_tiers": ["gap"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "hunting"
+      ],
+      "matched_terms": [
+        "hunting gear rental"
+      ],
+      "matched_tiers": [
+        "gap"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -518,9 +744,15 @@
       "lng": -120.13,
       "rental_signal": false,
       "matched_activities": [],
-      "matched_terms": ["boat rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_terms": [
+        "boat rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -538,9 +770,15 @@
       "lng": -119.81,
       "rental_signal": true,
       "matched_activities": [],
-      "matched_terms": ["party rental"],
-      "matched_tiers": ["experience"],
-      "matched_modes": ["standard"]
+      "matched_terms": [
+        "party rental"
+      ],
+      "matched_tiers": [
+        "experience"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -557,10 +795,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["gear-shop"],
-      "matched_terms": ["ski shop"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "gear-shop"
+      ],
+      "matched_terms": [
+        "ski shop"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -577,10 +823,18 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["gear-shop"],
-      "matched_terms": ["sporting goods store"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "gear-shop"
+      ],
+      "matched_terms": [
+        "sporting goods store"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
@@ -597,15 +851,27 @@
       "lat": 39.17,
       "lng": -120.14,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   },
   {
     "id": "survivor-noise-rental-shop-escape-hatch",
-    "forbidden_statuses": ["out_of_scope", "not_an_operator", "out_of_region"],
+    "forbidden_statuses": [
+      "out_of_scope",
+      "not_an_operator",
+      "out_of_region"
+    ],
     "row": {
       "place_id": "fixture-clothing-rental-shop",
       "name": "Fixture Tahoe Ski Rental Shop",
@@ -616,10 +882,188 @@
       "lat": 39.53,
       "lng": -119.81,
       "rental_signal": true,
-      "matched_activities": ["alpine-ski"],
-      "matched_terms": ["ski rental"],
-      "matched_tiers": ["core"],
-      "matched_modes": ["standard"]
+      "matched_activities": [
+        "alpine-ski"
+      ],
+      "matched_terms": [
+        "ski rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
+    }
+  },
+  {
+    "id": "venue-sno-park-gov-site-rejected",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:venue_club_site",
+    "row": {
+      "place_id": "fixture-sno-park",
+      "name": "Fixture Summit SNO-Park",
+      "website": "https://ohv.parks.ca.gov/?page_id=99999",
+      "primary_type": "Parking lot",
+      "primary_type_raw": "parking_lot",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.33,
+      "rental_signal": false
+    }
+  },
+  {
+    "id": "venue-ski-club-rejected",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:venue_club_site",
+    "row": {
+      "place_id": "fixture-ski-club",
+      "name": "Fixture Valley Ski Club",
+      "website": "https://fixtureskiclub.example.org/",
+      "primary_type": "Sports Club",
+      "primary_type_raw": "sports_club",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.2,
+      "rental_signal": false
+    }
+  },
+  {
+    "id": "venue-ice-rink-rejected",
+    "expect_status": "not_an_operator",
+    "reason_prefix": "gate3:venue_club_site",
+    "row": {
+      "place_id": "fixture-ice-rink",
+      "name": "Fixture Village Ice Skating Rink",
+      "website": "https://fixture-resort.example.com/rink",
+      "primary_type": "Ice Skating Rink",
+      "primary_type_raw": "ice_skating_rink",
+      "business_status": "OPERATIONAL",
+      "lat": 39.27,
+      "lng": -120.12,
+      "rental_signal": false
+    }
+  },
+  {
+    "id": "venue-with-rental-signal-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:venue_club_rental_signal",
+    "row": {
+      "place_id": "fixture-rink-rental-signal",
+      "name": "Fixture Lakeside Skating Rink",
+      "website": "https://fixture-lakeside.example.com/",
+      "primary_type": "Ice Skating Rink",
+      "primary_type_raw": "ice_skating_rink",
+      "business_status": "OPERATIONAL",
+      "lat": 39.27,
+      "lng": -120.12,
+      "rental_signal": true
+    }
+  },
+  {
+    "id": "park-concession-rental-shop-name-not-rejected",
+    "forbidden_statuses": [
+      "not_an_operator",
+      "out_of_scope",
+      "out_of_region"
+    ],
+    "row": {
+      "place_id": "fixture-park-watersport",
+      "name": "Fixture State Park Watersport Rental",
+      "website": null,
+      "primary_type": "Services",
+      "primary_type_raw": "service",
+      "business_status": "OPERATIONAL",
+      "lat": 39.32,
+      "lng": -120.25,
+      "rental_signal": true,
+      "matched_activities": [
+        "kayak"
+      ],
+      "matched_terms": [
+        "kayak rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
+    }
+  },
+  {
+    "id": "visitor-directory-tahoe-com-routes-to-review",
+    "expect_status": "needs_review",
+    "reason_prefix": "gate3:aggregator_domain:tahoe.com",
+    "row": {
+      "place_id": "fixture-directory-listing",
+      "name": "Fixture Gift Emporium",
+      "website": "https://tahoe.com/south-lake-tahoe/fixture-gift-emporium",
+      "primary_type": "Gift Shop",
+      "primary_type_raw": "gift_shop",
+      "business_status": "OPERATIONAL",
+      "lat": 38.94,
+      "lng": -119.98,
+      "rental_signal": false
+    }
+  },
+  {
+    "id": "intra-batch-dup-first-row-passes",
+    "forbidden_statuses": [
+      "duplicate",
+      "out_of_scope",
+      "not_an_operator"
+    ],
+    "row": {
+      "place_id": "fixture-dup-a",
+      "name": "Fixture Dup Boat Rentals",
+      "website": "https://fixture-dup.example.net/",
+      "primary_type": "Boat Rental Service",
+      "primary_type_raw": "boat_rental_service",
+      "business_status": "OPERATIONAL",
+      "lat": 39.17,
+      "lng": -120.14,
+      "rental_signal": true,
+      "matched_activities": [
+        "boat"
+      ],
+      "matched_terms": [
+        "boat rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
+    }
+  },
+  {
+    "id": "intra-batch-dup-second-row-collapsed",
+    "expect_status": "duplicate",
+    "reason_prefix": "gate4:intra_batch_domain_name",
+    "row": {
+      "place_id": "fixture-dup-b",
+      "name": "Fixture Dup Boat Rentals",
+      "website": "https://www.fixture-dup.example.net/",
+      "primary_type": "Boat Rental Service",
+      "primary_type_raw": "boat_rental_service",
+      "business_status": "OPERATIONAL",
+      "lat": 39.171,
+      "lng": -120.141,
+      "rental_signal": true,
+      "matched_activities": [
+        "boat"
+      ],
+      "matched_terms": [
+        "boat rental"
+      ],
+      "matched_tiers": [
+        "core"
+      ],
+      "matched_modes": [
+        "standard"
+      ]
     }
   }
 ]

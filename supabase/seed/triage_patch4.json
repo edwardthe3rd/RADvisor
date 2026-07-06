@@ -1,0 +1,47 @@
+[
+  {
+    "place_id": "ChIJmUKkOV2FfoIRnXIQCTxI5RU",
+    "name": "Super Simple Photography",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.supersimpleco.com/"
+    ],
+    "evidence_snippet": "Event photo-booth rental company ('Reno's Best Photobooth Rental'); rents photo booths for events — not a RADvisor recreational category. Was hallucinated as snow_sports.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: auto-triaged on 'rental'; rents event equipment (photo booths), out of domain."
+  },
+  {
+    "place_id": "ChIJ22Ir-vc_mYARtB_ASEF6qao",
+    "name": "Drift Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.drift-adventures.com/"
+    ],
+    "evidence_snippet": "Guided Rogue River fishing and rafting trips with lodges ('Book a Trip'); a guided-trip outfitter, not a gear-rental operator. Was hallucinated as water_sports+snow_sports+fishing.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: auto-triaged on a keyword; guided river trips, not rentals."
+  },
+  {
+    "place_id": "ChIJ1dbOXoPtIwkREbHp3ePV79I",
+    "name": "High Desert Camping Co",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.highdesertcampingco.com/"
+    ],
+    "evidence_snippet": "'Glamping Tent Rentals / pop-up accommodations' for weddings, festivals and private events — a set-up lodging/event service, not take-away camping gear. Confirm whether this counts as camping.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: auto-triaged as camping; glamping/event tent setup is borderline — browse live / product call."
+  }
+]

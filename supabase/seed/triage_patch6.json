@@ -1,0 +1,127 @@
+[
+  {
+    "place_id": "ChIJp9AGVYRrmYARHvdI49jldr4",
+    "name": "Galena Sports",
+    "rents_gear": true,
+    "categories": [
+      "snow_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.yelp.com/biz/galena-sports-reno-2",
+      "http://www.skisite.com/shopsDetail.cfm?id=50206"
+    ],
+    "checked_urls": [
+      "https://www.yelp.com/biz/galena-sports-reno-2",
+      "http://www.skisite.com/shopsDetail.cfm?id=50206"
+    ],
+    "evidence_snippet": "Galena Sports (Mt Rose Hwy, Reno) rents ski & snowboard packages from ~$16/day and snowshoes from ~$13; daily and season rental packages (Yelp/skisite).",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live web search (site was down in original crawl)."
+  },
+  {
+    "place_id": "ChIJ-0E9UJrhm4AReRY7fH4VbfE",
+    "name": "Donner Lake E Bikes",
+    "rents_gear": true,
+    "categories": [
+      "electric_transport"
+    ],
+    "review_categories": [
+      "mountain_biking"
+    ],
+    "rental_page_urls": [
+      "https://donnerlakeebikes.com/",
+      "https://www.yelp.com/biz/donner-lake-e-bikes-truckee"
+    ],
+    "checked_urls": [
+      "https://donnerlakeebikes.com/",
+      "https://www.yelp.com/biz/donner-lake-e-bikes-truckee"
+    ],
+    "evidence_snippet": "Donner Lake E Bikes rents Rad Rover fat-tire e-bikes (24hr rentals + delivery to North Tahoe/Truckee); on- and off-road capable.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live web search (site was down in original crawl)."
+  },
+  {
+    "place_id": "ChIJawj8cqZzG6gRPhrCJDxWM7c",
+    "name": "West Shore Lake Tahoe eBike Rentals",
+    "rents_gear": true,
+    "categories": [
+      "electric_transport",
+      "road_cycling",
+      "mountain_biking"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://westshoresports.com/home-summer/bicycle/",
+      "https://tahoe.com/business/west-shore-sports"
+    ],
+    "checked_urls": [
+      "https://westshoresports.com/home-summer/bicycle/",
+      "https://tahoe.com/business/west-shore-sports"
+    ],
+    "evidence_snippet": "West Shore (Sports), Homewood, rents e-bikes plus cruiser, mountain and road bikes with half/full-day rates at its West Shore locations.",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live web search (site was down in original crawl)."
+  },
+  {
+    "place_id": "ChIJvenb9gL0mYARx8Sp-1RFiv0",
+    "name": "Kirkwood Mountain Sports - Timber Creek",
+    "rents_gear": true,
+    "categories": [
+      "snow_sports"
+    ],
+    "review_categories": [],
+    "rental_page_urls": [
+      "https://www.kirkwood.com/explore-the-resort/during-your-stay/kirkwood-mountain-sports/kms-timber-creek.aspx"
+    ],
+    "checked_urls": [
+      "https://www.kirkwood.com/explore-the-resort/during-your-stay/kirkwood-mountain-sports/kms-timber-creek.aspx"
+    ],
+    "evidence_snippet": "Kirkwood Mountain Sports - Timber Creek is a rental/retail ski shop at the Timber Creek lift base; rents skis and snowboards (book online, ski-or-snowboard-only options).",
+    "status": "triaged",
+    "confidence": "high",
+    "note": "Patch: confirmed renter via live web search (site was down in original crawl)."
+  },
+  {
+    "place_id": "ChIJgRu3rMQ_mYARkVW9PH_qKV4",
+    "name": "Tahoe Paradise Boat Rentals",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "Tahoe Paradise Boat Rental/Charters runs captained private charters and events aboard an 82ft luxury yacht (and the M.S. Dixie II) with event planning - a captained charter operation, not bareboat rental.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: resolved via live web search (charter or closed)."
+  },
+  {
+    "place_id": "ChIJQyqVfYmbmYARRq9JoIFNTlo",
+    "name": "Blue Sun Boat Rentals",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "Blue Sun Boat Rentals (Incline Village) was an open-bow/pontoon boat rental, but is now listed CLOSED (Yelp, June 2026).",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: resolved via live web search (charter or closed)."
+  },
+  {
+    "place_id": "ChIJl9xKe8plmYARaBNWk8Lbshw",
+    "name": "Sierramobilebikes",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [],
+    "evidence_snippet": "Sierramobilebikes offered delivered e-bike rentals in Incline Village but is now listed as closed.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: resolved via live web search (charter or closed)."
+  }
+]

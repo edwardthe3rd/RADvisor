@@ -1,0 +1,362 @@
+[
+  {
+    "place_id": "ChIJCcts2khHmYARV1RFZyD6QGY",
+    "name": "Roller Kingdom",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.rollerkingdom.org/"
+    ],
+    "evidence_snippet": "Roller-skating rink; rents roller skates (rink page: 'featuring rentals'). Skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJeUDaKo0VmYARYOXHK-9TNj4",
+    "name": "Lake Tahoe Casino Party",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.laketahoecasinoparty.com/"
+    ],
+    "evidence_snippet": "Mobile casino-party company; rents casino tables/equipment for events. Not a RADvisor recreational category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJb4kBX-c_mYARuEEVusInJmM",
+    "name": "Reno Ice - The Jennifer M. O'Neal Community Ice Arena",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://renoice.com/"
+    ],
+    "evidence_snippet": "Community ice arena; rents ice skates ('Skate rentals: $5.00'). Ice skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJE68KpgKQmYARnZ7aMZUmW88",
+    "name": "South Lake Tahoe Ice Arena",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://tahoeicearena.com/"
+    ],
+    "evidence_snippet": "Ice-skating rink 'with rental skates and hockey clubs.' Ice skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJRyf15HaQmYARyGmCpy5p1Vk",
+    "name": "Heavenly Village Ice Rink",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://theshopsatheavenly.com/ice-rink/"
+    ],
+    "evidence_snippet": "Ice rink; admission '$25 (Skate rentals included).' Ice skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJbSnEiuQ_mYARc73G5CC_bHk",
+    "name": "The Ice Rink at Grand Sierra Resort",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.grandsierraresort.com/activities/the-ice-rink/"
+    ],
+    "evidence_snippet": "Resort ice rink; '$45 includes skate session for two, skate rental.' Ice skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJ--_x6_eRmYARuqjmhGwCQp0",
+    "name": "Shade Shifters",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://theshadeshifters.com/"
+    ],
+    "evidence_snippet": "Event company: 'California Wedding and Event Tent Rentals.' Event tents are not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJW8FpkpTfm4ARUoLiK3L3pa8",
+    "name": "Truckee Ice Rink",
+    "rents_gear": true,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.tdrpd.org/rink"
+    ],
+    "evidence_snippet": "Municipal ice rink (TDRPD); skate/facility rentals. Ice skating is not a RADvisor category.",
+    "status": "out_of_scope",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword; rents non-domain gear (skates/event equipment)."
+  },
+  {
+    "place_id": "ChIJOz_KFSdgmYARMCWq9Twp_qo",
+    "name": "Truckee Bike Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.truckeebikepark.org/"
+    ],
+    "evidence_snippet": "BMX/pump-track bike park (Riverview Bike Park); public park, no gear rental — bring your own bike.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJRba-n9pBmYARi1LS3KoTYOg",
+    "name": "Truckee River Whitewater Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.reno.gov/government/departments/parks-recreation-community-services/parks-trails/whitewater-park"
+    ],
+    "evidence_snippet": "Whitewater kayak feature park on the Truckee River; a park, not a gear-rental operator (BYO).",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJZUB46UNhmYARbSvWYOfMMQA",
+    "name": "Soaring Ranch",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.soaringranch.com/"
+    ],
+    "evidence_snippet": "Modern shopping venue (grocery, hardware, brewery, spa); not a gear-rental operator. Category was keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJn9PrISdgmYARWfGaRaZBLE0",
+    "name": "Riverview Sports Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.tdrpd.org/riverview-sports-park"
+    ],
+    "evidence_snippet": "Green-space sports park (playground, BMX track, bocce); a park, not a gear renter.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJfQ2xKDjZbmsRP7dHMFOo8Po",
+    "name": "Hoop Northern Nevada",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.hoopnorthernnevada.com/"
+    ],
+    "evidence_snippet": "Basketball/sports facility; not a RADvisor gear-rental operator. Category was keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJ_5V_Qx2QmYARrhM3tg-HJxs",
+    "name": "Bijou Municipal Golf Course",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://cityofslt.us/267/Golf-Course"
+    ],
+    "evidence_snippet": "Municipal 9-hole golf course; golf is not a RADvisor category and category was keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJM-sCatkVmYARt85WX0sffoQ",
+    "name": "Golf NV",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.golfnvreno.com/?y_source=1_NjQyMTg0MzEtNzE1LWxvY2F0aW9uLndlYnNpdGU%3D"
+    ],
+    "evidence_snippet": "Golf shop/simulators (clubs, balls, shoes); golf is not a RADvisor category. Category was keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJk1C7K8IKmYAR8LizZU5aSmE",
+    "name": "Talents Athletic Center",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://talentsathleticcenter.com/"
+    ],
+    "evidence_snippet": "Indoor athletic center (soccer, flag football); not a gear-rental operator. Category was keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJy_vGuj5wmYAREIrw_EyQqEw",
+    "name": "Ridgeline Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/parks-fields"
+    ],
+    "evidence_snippet": "Municipal park; not a gear renter. The four categories were keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJDY3LujhwmYARB3QpchaRpYo",
+    "name": "Incline Bike Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/community-bike-park"
+    ],
+    "evidence_snippet": "Public bike park at a rec center; no gear rental (bring your own bike). Categories were keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJBxY2qUdwmYARsWk3B5VqXTI",
+    "name": "North Tahoe Lions Club Disc Golf Course",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://www.yourtahoeplace.com/parks-recreation/outdoor-recreation/disc-golf-course"
+    ],
+    "evidence_snippet": "Disc golf course; players bring/buy their own discs — the course does not rent gear.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJNRIvOxHgm4ARz9WoxrO4mHU",
+    "name": "ahhNatural - The Most Trusted Natural Hot Tub Chemical Alternative",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://www.ahhnatural.com/"
+    ],
+    "evidence_snippet": "Retailer of a hot-tub water-treatment product; not a recreational gear renter. Categories were keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJJ-L6EYaamYAR1sa8Jhwp7BI",
+    "name": "Kahle Park",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://communityservices.douglascountynv.gov/cms/one.aspx?portalid=12493164&pageid=12634748"
+    ],
+    "evidence_snippet": "Scenic green-space park (playgrounds, ball fields); a park, not a gear renter. Categories were keyword-hallucinated.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJJ8XjE71kmYARbDr74fFkPJ0",
+    "name": "Sled Hill",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://ntpud.org/recreation-parks/parks-facilities/north-tahoe-regional-park/"
+    ],
+    "evidence_snippet": "North Tahoe Regional Park sledding hill; bring-your-own-sled, no gear rental (operator-confirmed). Page 'Outdoor Rental Space' refers to event-space, not gear.",
+    "status": "no_rentals",
+    "confidence": "high",
+    "note": "Patch: mechanically auto-triaged on a keyword false-positive (venue/park/product); no gear rental."
+  },
+  {
+    "place_id": "ChIJZwsxJDFimYAR8mINJEAbvv4",
+    "name": "Northstar Village Ice Skating Rink",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "http://m.northstarcalifornia.com/things-to-do.html?page=viewall"
+    ],
+    "evidence_snippet": "Ice-skating rink at Northstar; fetched page conflates the rink (skate rental) with Northstar resort's ski/snowboard/bike rental shop — confirm which rentals belong to this listing.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: mechanically auto-triaged; evidence ambiguous — browse live."
+  },
+  {
+    "place_id": "ChIJ97RGLQmQmYARsf9k5-VcRds",
+    "name": "Cabin Fever",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": [
+      "https://tahoe.com/south-lake-tahoe/cabin-fever"
+    ],
+    "evidence_snippet": "A tahoe.com directory listing ('Cabin Fever') with no real page content; the four categories came from the directory nav — confirm what this business is.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: mechanically auto-triaged; evidence ambiguous — browse live."
+  }
+]

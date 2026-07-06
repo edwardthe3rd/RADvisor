@@ -1,0 +1,42 @@
+[
+  {
+    "place_id": "ChIJscf4VsePmYARJHNiY-Oq0EM", "name": "Tahoe Blue Adventures",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.yelp.com/biz/tahoe-blue-adventures-south-lake-tahoe", "https://www.facebook.com/tahoeblueadventures/"],
+    "evidence_snippet": "Locally owned South Lake Tahoe rental outfit (est. 2015, 2241 James Ave): jet ski, boat, pontoon, paddleboard, and kayak rentals with beach setups and free delivery; multi-day discounts.",
+    "status": "triaged", "confidence": "high",
+    "note": "EC review 2026-07-05 call list — resolved without a call: Yelp listing confirms a self-serve watercraft rental fleet. Phone (530) 494-9725; no first-party website."
+  },
+  {
+    "place_id": "ChIJ1f9UqyK_mYAR0cLcOEFKV2A", "name": "Doing It Big Rentals",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://doingitbigrentals.com/"],
+    "evidence_snippet": "Rental business near Gardnerville NV (1165 Sweetwater Ct); site fails SSL handshake and web search finds no listings describing what it rents.",
+    "status": "needs_review", "confidence": "low",
+    "note": "ACTION: call (408) 780-6320 — ask what they rent (adventure gear vs. party/event equipment) and whether customers take gear for independent use. Also listed under a second place_id (ChIJXa0M2O6-2a8RmpGcRKDxZYk) in the raw sweep."
+  },
+  {
+    "place_id": "ChIJDcmw20Lfm4AR-s610pn0oOE", "name": "Love Your Life BackCountry",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://loveyourlifebackcountry.com/"],
+    "evidence_snippet": "Truckee business (12810 Boca St) whose site shows only an under-construction page; name implies backcountry ski/gear services but no rental evidence is findable online.",
+    "status": "needs_review", "confidence": "low",
+    "note": "ACTION: call (530) 412-0833 — ask whether they rent backcountry ski/splitboard gear for independent use or only guide/instruct."
+  },
+  {
+    "place_id": "ChIJmx4eaMdZoKcRy2nZmnvjmj4", "name": "PADDLE TO YOU",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://www.paddletoyoutahoe.com/"],
+    "evidence_snippet": "Tahoe Vista business (Hwy 28 at 267); the name suggests delivered SUP/kayak rentals but paddletoyoutahoe.com serves an empty page and no third-party rental listing was found.",
+    "status": "needs_review", "confidence": "low",
+    "note": "ACTION: call (530) 280-7099 — confirm they rent/deliver SUPs or kayaks and are still operating."
+  },
+  {
+    "place_id": "ChIJPy-vnMaRmYARMiIj40_5Bzw", "name": "Tallac Boat Rentals",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": [],
+    "evidence_snippet": "South Lake Tahoe listing (4151 Cedar Ave) with no website, no reviews, and no third-party rental listings found; name implies boat rental.",
+    "status": "needs_review", "confidence": "low",
+    "note": "ACTION: call (530) 290-1998 — confirm the business exists and rents boats directly (bareboat, no captain)."
+  }
+]

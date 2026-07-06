@@ -1,0 +1,41 @@
+[
+  {
+    "place_id": "ChIJZRK_PHNlmYARCC9Jif-vstA",
+    "name": "Tahoe Family Adventures",
+    "rents_gear": true,
+    "categories": ["water_sports", "snow_sports"],
+    "review_categories": [],
+    "rental_page_urls": ["https://tahoefamilyadventures.com/"],
+    "checked_urls": ["https://tahoefamilyadventures.com/"],
+    "evidence_snippet": "Google reviews reference this operator's snowmobile rental and boat rentals (snowmobile = snow_sports, boat = water_sports).",
+    "status": "triaged",
+    "confidence": "medium",
+    "note": "Restored after a duplicate-name collision during the patch; original triaged verdict reinstated."
+  },
+  {
+    "place_id": "ChIJCdoQFwBfmYARXNSvg1ibWZ4",
+    "name": "Tahoe Family Adventures",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": ["https://tahoefamilyadventures.com/"],
+    "evidence_snippet": "Site under maintenance; this is a duplicate listing of the same operator as the triaged row (same website). Reconcile in dedupe.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: thin fetch; duplicate of the triaged Tahoe Family Adventures row (rank 179)."
+  },
+  {
+    "place_id": "ChIJjU1hg4XXm4AR1icF995eImA",
+    "name": "Truckee River Raft Co.",
+    "rents_gear": false,
+    "categories": [],
+    "review_categories": [],
+    "rental_page_urls": [],
+    "checked_urls": ["http://www.truckeeriverraft.com/"],
+    "evidence_snippet": "Truckee River rafting outfitter; likely a self-guided raft rental with shuttle — confirm rental vs. guided trip. Duplicate listing.",
+    "status": "needs_review",
+    "confidence": "low",
+    "note": "Patch: consistency with the other Truckee River Raft Co. row; browse live."
+  }
+]

@@ -39,3 +39,8 @@ pgdata/
 instructions/
 CLAUDE.md
 CLAUDE.local.md
+
+# Pass A scrape cache — large, regenerable, and captures third-party website text
+# (a leaked Mapbox token from an operator's site once landed here and blocked a push).
+# Keep it on disk for Pass B, but never version it.
+supabase/seed/pass_a_evidence_cache.json
