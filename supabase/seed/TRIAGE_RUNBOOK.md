@@ -116,7 +116,7 @@ in this step. So:
 
 `snow_sports` · `mountain_biking` · `road_cycling` · `burning_man_bikes` · `water_sports` ·
 `camping` · `camping_vehicles` · `off_road` · `motorcycles` · `rock_climbing` · `mountaineering` ·
-`hunting` · `fishing` · `disc_golf` · `electric_transport` · `uncategorized`
+`hunting` · `fishing` · `disc_golf` · `electric_transport`
 
 Notes: snowmobiles/snow bikes = `snow_sports`; ATV/UTV/dirt-quad = `off_road`; street motorcycles =
 `motorcycles`; jet skis/boats/kayaks/SUP = `water_sports`; e-bikes/e-scooters = `electric_transport`

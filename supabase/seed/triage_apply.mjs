@@ -25,7 +25,7 @@ if (!file) { console.error("usage: node triage_apply.mjs <verdicts.json> [--dry-
 const VALID_CATEGORIES = new Set([
   "snow_sports", "mountain_biking", "road_cycling", "burning_man_bikes", "water_sports",
   "camping", "camping_vehicles", "off_road", "motorcycles", "rock_climbing", "mountaineering",
-  "hunting", "fishing", "disc_golf", "electric_transport", "uncategorized",
+  "hunting", "fishing", "disc_golf", "electric_transport",
 ]);
 const VALID_STATUS = new Set(["triaged", "no_rentals", "out_of_scope", "needs_review"]);
 

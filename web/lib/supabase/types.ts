@@ -118,6 +118,7 @@ export type Database = {
       operators: {
         Row: {
           address: string | null
+          activities: string[] | null
           booking_url: string | null
           categories: string[] | null
           city: string | null
@@ -155,6 +156,7 @@ export type Database = {
         }
         Insert: {
           address?: string | null
+          activities?: string[] | null
           booking_url?: string | null
           categories?: string[] | null
           city?: string | null
@@ -192,6 +194,7 @@ export type Database = {
         }
         Update: {
           address?: string | null
+          activities?: string[] | null
           booking_url?: string | null
           categories?: string[] | null
           city?: string | null
