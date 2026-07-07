@@ -48,7 +48,9 @@ node supabase/seed/pass_b_apply.mjs supabase/seed/pass_b_results_batch.json
 1. **Step 0 — verify before extracting.** No trace of the category's rental gear in ANY season
    → `outcome: "category_not_found"` with the live `checked_url`. ~200 queue rows were
    auto-triaged from keywords (the batch flags them ⚠); a boat marina tagged snow_sports
-   usually has nothing to extract. Never force-extract; never invent.
+   usually has nothing to extract. Never force-extract; never invent. Gear supplied only on
+   guided outings is NOT inventory (snowmobile TOURS ≠ snowmobile rentals — extract only
+   unaccompanied rentals).
 2. **Off-season ≠ not found.** "Closed for the season" pages and last-winter price tables are
    still inventory: extract the most recent **published** seasonal pricing and note the
    season/year in `description`.
@@ -141,6 +143,14 @@ Mt. Rose (resort price table) · Diamond Peak (off-season page) · Powder House 
 (multi-location) · Tahoe Dave's Skis & Boards (shop + demo) · Alpenglow Sports (Booqable demo
 storefront) · Black Tie Ski Rentals of North Lake Tahoe (delivery-only) · Cross Country Center
 / Kirkwood XC (nordic + fat bike) · Sparks Snowmobile Rental (motorized, cc sizing).
+
+The diff is mechanical — after applying the calibration batch, run the QA report and read the
+histograms against the category file's §2 vocabulary (and re-run it between waves to spot
+drift, all-null-price operators, and unresolved needs_review):
+
+```
+node supabase/seed/pass_b_report.mjs --category snow_sports
+```
 
 ## Picking a model
 

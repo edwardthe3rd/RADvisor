@@ -78,6 +78,10 @@ that makes `rents_gear = true`.
    (without reading the business model) produced 200+ rows with hallucinated categories
    (charter boats tagged `snow_sports`/`off_road`). Every `triaged` verdict must come from
    reading the site — this is the rule the 2026-07 audit spent the most effort undoing.
+   Canonical example: "Donut Shoppe" (a Reno skate/snow *retail* boutique) was auto-triaged
+   `snow_sports` because its merch collection URL `/collections/pay-the-rent` contains "rent"
+   and its pages list snowboard brands. The token "rent" in a URL or page is NOT evidence — the
+   business model (retail, no rental program) is the only thing that decides.
 
 **Positive-evidence rule (most important):** `triaged` REQUIRES a citable rentals page, a
 "rent / demo / hire / lease" CTA, or rental pricing on the operator's own site (or a credible

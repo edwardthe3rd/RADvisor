@@ -1,5 +1,5 @@
 {
-  "ranAt": "2026-07-05T22:04:29.908Z",
+  "ranAt": "2026-07-07T15:57:26.461Z",
   "stage": "2 - LLM triage judgment from Stage 1 evidence plus live website review",
   "source": "supabase/seed/sweep_pass_a_evidence.json",
   "count": 513,
@@ -7137,25 +7137,22 @@
       "website": "https://rideeurocycle.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road",
-        "motorcycles",
-        "road_cycling"
+        "motorcycles"
       ],
-      "review_categories": [],
+      "review_categories": [
+        "off_road"
+      ],
       "rental_page_urls": [
-        "https://rideeurocycle.com/",
-        "https://rideeurocycle.com/shop-by-payment/"
+        "https://rideeurocycle.com/"
       ],
       "checked_urls": [
-        "https://rideeurocycle.com/",
-        "https://rideeurocycle.com/shop-by-payment/"
+        "https://rideeurocycle.com/"
       ],
-      "evidence_snippet": "auto_parts_store car_repair store point_of_interest service establishment https://rideeurocycle.com/ Home - Ride EuroCycle Skip to content Search Locations: LAS VEGAS RENO About Inventory Rentals Shipping E-Ticket Contact Employment About Inventory Rentals Shipping E-Ticket Contact Employment About Inventory Rentals Shipping E-Ticket Contact Employment About Inventory Rentals Shipping E-Ticket Contact Employment Get ",
+      "evidence_snippet": "Motorcycle dealer that also rents: 'Not Ready to Buy? Rent & Ride the World's Most Beautiful Bikes' — rents motorcycles at its Reno location (one of three US stores).",
       "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged (rental program verified live); categories corrected to motorcycles (snow_sports/road_cycling were keyword-hallucinated; off_road to review — confirm any ADV/dirt fleet in Pass B).",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 263,
@@ -8411,31 +8408,18 @@
       "website": "https://birkholmswatersports.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://birkholmswatersports.com/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/tahoe-boat-rental/",
-        "https://birkholmswatersports.com/rates-reservations/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/lake-tahoe-wakesurfing-learn-to-wakesurf/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/lake-tahoe-wakeboarding-expert-wakeboarding-lessons-tows/"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://birkholmswatersports.com/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/tahoe-boat-rental/",
-        "https://birkholmswatersports.com/rates-reservations/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/lake-tahoe-wakesurfing-learn-to-wakesurf/",
-        "https://birkholmswatersports.com/lake-tahoe-water-sport-services/lake-tahoe-wakeboarding-expert-wakeboarding-lessons-tows/"
+        "https://birkholmswatersports.com/"
       ],
-      "evidence_snippet": "Birkholm's Water Ski Wakeboard School in Lake Tahoe https://birkholmswatersports.com/ Birkholm's Water Ski Wakeboard School in Lake Tahoe Birkholm's Water Ski Wakeboard School in Lake Tahoe sports_coaching tour_agency travel_agency school educational_institution point_of_interest service establishment https://birkholmswatersports.com/ Lake Tahoe Water Sports | Wakesurfing Wakeboarding Water Skiing Skip to primary nav",
+      "evidence_snippet": "Primarily a water ski/wakeboard school and boat charter ('more than just a school — a general boat charter service'), but the site also offers boat rentals as an option.",
       "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "confidence": "low",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged on the boat-rental mention; categories corrected to water_sports (snow_sports was keyword-hallucinated). Pass B: verify the rental is bareboat, else demote per captained-charter rule.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 319,
@@ -10570,28 +10554,18 @@
       "place_id": "ChIJZ7lyYOePmYARxMLs_LA_idk",
       "name": "Lake Tahoe Boat Company",
       "website": "http://laketahoeboatco.com/",
-      "rents_gear": true,
-      "categories": [
-        "water_sports",
-        "snow_sports",
-        "fishing"
-      ],
+      "rents_gear": false,
+      "categories": [],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://laketahoeboatco.com/",
-        "https://laketahoeboatco.com/our-services/",
-        "https://laketahoeboatco.com/boat-repair-south-lake-tahoe-california/"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://laketahoeboatco.com/",
-        "https://laketahoeboatco.com/our-services/",
-        "https://laketahoeboatco.com/boat-repair-south-lake-tahoe-california/"
+        "http://laketahoeboatco.com/"
       ],
-      "evidence_snippet": "Parts & Accessories Boat Sales Outboard Motor Sales Winterizing & Storage General Service Oil Change & Out drive Service Repairs & Updgrades Our Partners Tahoe Sports Tahoe Sport Fishing Winter Wonderland Rentals Tahoe Snowmobiles Tahoe Powder House Rainbow Mountain The Party Boat TOP CATEGORIES Power Boats Pontoon Boats Yamaha Outboards Jet Skis About Us About Us Our Services Boat Repair &#038; Service Get in Touch ",
-      "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "evidence_snippet": "Full-service marine repair shop: sales, service, storage, winterizing, parts. No rental offering anywhere on the site.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged; sales/service/storage only. Same business as Tahoe Marine Mart (tahoemarinemart.com 301-redirects here) — same-domain dup, Gate 4 pattern.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 416,
@@ -10819,22 +10793,18 @@
       "website": "https://www.laketahoesail.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://www.laketahoesail.com/book-online"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://www.laketahoesail.com/",
-        "https://www.laketahoesail.com/book-online"
+        "https://www.laketahoesail.com/"
       ],
-      "evidence_snippet": "Lake Tahoe Sailing https://www.laketahoesail.com/ Lake Tahoe Sailing Lake Tahoe Sailing marina sports_school sports_activity_location sports_club point_of_interest association_or_organization service establishment https://www.laketahoesail.com/ Sailing Lessons, Racing, Private Group Charters and Bareboat Rentals on North Lake Tahoe | 1 Bristlecone st.",
+      "evidence_snippet": "Site header lists 'Sailing Lessons, Racing, Private Group Charters and Bareboat Rentals'; the detailed pages describe skippered charters and lessons.",
       "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "confidence": "low",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged on the header's Bareboat Rentals; categories corrected to water_sports (snow_sports was keyword-hallucinated). Pass B: confirm bareboat is really offered ((530) 412-1101), else demote.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 427,
@@ -10926,27 +10896,18 @@
       "place_id": "ChIJq9YL7OLfm4ARatMOunSqVuw",
       "name": "Donut Shoppe",
       "website": "https://donutshoppeculture.com/",
-      "rents_gear": true,
-      "categories": [
-        "snow_sports"
-      ],
+      "rents_gear": false,
+      "categories": [],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://donutshoppeculture.com/collections/pay-the-rent"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://donutshoppeculture.com/",
-        "https://donutshoppeculture.com/collections/pay-the-rent",
-        "https://donutshoppeculture.com/collections/all",
-        "https://donutshoppeculture.com/products/2026-camo-trucker",
-        "https://donutshoppeculture.com/products/2026-canvas-5-panel",
-        "https://donutshoppeculture.com/products/2026-cord-5-panel-mesh"
+        "https://donutshoppeculture.com/"
       ],
-      "evidence_snippet": "Donut Shoppe https://donutshoppeculture.com/ Donut Shoppe Donut Shoppe sporting_goods_store store point_of_interest establishment https://donutshoppeculture.com/ Donut Shoppe Donut Shoppe Store Skip to content Menu Close SHOP SHOP Go to SHOP Sale Donut Shoppe Gang Collection Donut Shoppe Made To Last Workwear Collection Capsule Release: When In Reno Brands SHOP Go to Brands AIRHOLE ANTI HERO SKATEBOARDS BAKER SKATEBO",
-      "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "evidence_snippet": "Reno skate/snowboard streetwear boutique (NOT a donut shop): retail-only, selling snowboards, skateboards, and apparel. 'Pay The Rent' is a merch brand/collection, not a rental service.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "EC review 2026-07-07: does not rent gear. Root cause: keyword auto-triage matched 'rent' in the /collections/pay-the-rent merch URL and snowboard brand names. Retail only; verified live.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 432,
@@ -11390,26 +11351,16 @@
       ],
       "review_categories": [],
       "rental_page_urls": [
-        "https://tahoeboatstorage.com/",
-        "https://tahoeboatstorage.com/tahoe-boat-storage-season-special/",
-        "https://tahoeboatstorage.com/secure-boat-storage-reservations-and-booking/",
-        "https://tahoeboatstorage.com/boat-storage-and-service/",
-        "https://tahoeboatstorage.com/boat-services-repair-and-tuning/",
-        "https://tahoeboatstorage.com/our-boat-storage-and-service-team/"
+        "https://www.tahoeboatstorage.com/"
       ],
       "checked_urls": [
-        "https://tahoeboatstorage.com/",
-        "https://tahoeboatstorage.com/tahoe-boat-storage-season-special/",
-        "https://tahoeboatstorage.com/secure-boat-storage-reservations-and-booking/",
-        "https://tahoeboatstorage.com/boat-storage-and-service/",
-        "https://tahoeboatstorage.com/boat-services-repair-and-tuning/",
-        "https://tahoeboatstorage.com/our-boat-storage-and-service-team/"
+        "https://www.tahoeboatstorage.com/"
       ],
-      "evidence_snippet": "We keep our own North Lake Tahoe Boat Rental fleet running strong all summer… so we know how to keep you and your family out on the water too.",
+      "evidence_snippet": "Boat repair/storage shop that also runs a rental operation: 'We keep our own North Lake Tahoe Boat Rental fleet running strong all summer.'",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): verified live — own rental fleet stated. Pass B: the fleet may be listed under the 'North Lake Tahoe Boat Rental' brand; check for a same-operator duplicate at import.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 453,
@@ -11587,27 +11538,18 @@
       "place_id": "ChIJdQRWLpCPmYARi2pd5ssRbAI",
       "name": "Babes on a Boat: Tahoe Bachelorette Experience",
       "website": "https://babesonaboat.com/",
-      "rents_gear": true,
-      "categories": [
-        "water_sports",
-        "snow_sports"
-      ],
+      "rents_gear": false,
+      "categories": [],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://babesonaboat.com/",
-        "https://babesonaboat.com/reserve/",
-        "https://babesonaboat.com/bachelorette-party-group/"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://babesonaboat.com/",
-        "https://babesonaboat.com/reserve/",
-        "https://babesonaboat.com/bachelorette-party-group/"
+        "http://babesonaboat.com/"
       ],
-      "evidence_snippet": "Learn More: TAHOEJETBOATS.COM/GROUP 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 or more Preferred Rental Date * ARE YOU REQUESTING ANY DAY IN JULY/AUGUST, HOLIDAY OR WEEKEND?",
-      "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "evidence_snippet": "Tahoe bachelorette party boats — 'Includes a Concierge Captain'; captained charter, no self-operated rental.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged. Captained-charter rule. Duplicate listing of rank 485 (same domain) — Gate 4 pattern.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 462,
@@ -11909,11 +11851,11 @@
       "checked_urls": [
         "https://theshack.pro/"
       ],
-      "evidence_snippet": "We are right in front of Doc&#8217;s Cottages (Clark Gable stayed here!) and across the street from Basecamp (Great Live Music & Beer!) We have Inflatables, Beach Gear, Beach Toys, Hats, Sunscreen, Towels, Umbrellas, Beach Rentals, Sunglasses, Lake Tahoe souvenirs & More!",
+      "evidence_snippet": "Beach supply shop that rents: 'We Rent Tommy Bahama Chairs & Umbrellas, Sun Lounge Chairs, Beach Wagons, & Corn Hole, for $10/Day! Inflatable 11 Ft. Paddle Boards for $35/Day!'",
       "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): verified live — SUP rentals confirmed (beach chairs/cornhole are out-of-domain extras; extract the paddleboards).",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 476,
@@ -12126,27 +12068,18 @@
       "place_id": "ChIJf2xo-w9wmYARo43ikkBuNK0",
       "name": "Babes On A Boat",
       "website": "http://babesonaboat.com/",
-      "rents_gear": true,
-      "categories": [
-        "water_sports",
-        "snow_sports"
-      ],
+      "rents_gear": false,
+      "categories": [],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://babesonaboat.com/",
-        "https://babesonaboat.com/reserve/",
-        "https://babesonaboat.com/bachelorette-party-group/"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://babesonaboat.com/",
-        "https://babesonaboat.com/reserve/",
-        "https://babesonaboat.com/bachelorette-party-group/"
+        "http://babesonaboat.com/"
       ],
-      "evidence_snippet": "Learn More: TAHOEJETBOATS.COM/GROUP 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 or more Preferred Rental Date * ARE YOU REQUESTING ANY DAY IN JULY/AUGUST, HOLIDAY OR WEEKEND?",
-      "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "evidence_snippet": "Tahoe bachelorette party boats — 'Includes a Concierge Captain' ('Carefree Concierge Captain Service'); customers never operate the boat. Cross-marketed with tahoejetboats.com (also captained-only).",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged. Captained-charter rule. Duplicate listing at rank 461 (same domain).",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 486,
@@ -12465,28 +12398,19 @@
       "place_id": "ChIJcxlFXeePmYARjD7EUP01zlg",
       "name": "Tahoe Marine Mart",
       "website": "http://tahoemarinemart.com/",
-      "rents_gear": true,
-      "categories": [
-        "water_sports",
-        "snow_sports",
-        "fishing"
-      ],
+      "rents_gear": false,
+      "categories": [],
       "review_categories": [],
-      "rental_page_urls": [
-        "https://laketahoeboatco.com/",
-        "https://laketahoeboatco.com/our-services/",
-        "https://laketahoeboatco.com/boat-repair-south-lake-tahoe-california/"
-      ],
+      "rental_page_urls": [],
       "checked_urls": [
-        "https://laketahoeboatco.com/",
-        "https://laketahoeboatco.com/our-services/",
-        "https://laketahoeboatco.com/boat-repair-south-lake-tahoe-california/"
+        "http://tahoemarinemart.com/",
+        "http://laketahoeboatco.com/"
       ],
-      "evidence_snippet": "Parts & Accessories Boat Sales Outboard Motor Sales Winterizing & Storage General Service Oil Change & Out drive Service Repairs & Updgrades Our Partners Tahoe Sports Tahoe Sport Fishing Winter Wonderland Rentals Tahoe Snowmobiles Tahoe Powder House Rainbow Mountain The Party Boat TOP CATEGORIES Power Boats Pontoon Boats Yamaha Outboards Jet Skis About Us About Us Our Services Boat Repair &#038; Service Get in Touch ",
-      "status": "triaged",
-      "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
-      "triaged_at": "2026-06-30"
+      "evidence_snippet": "tahoemarinemart.com 301-redirects to laketahoeboatco.com — the same full-service marine repair/sales/storage shop. No rental offering.",
+      "status": "no_rentals",
+      "confidence": "high",
+      "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged; duplicate listing of Lake Tahoe Boat Company (rank 415) under an old name/domain.",
+      "triaged_at": "2026-07-07"
     },
     {
       "rank": 502,

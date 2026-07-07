@@ -34,8 +34,8 @@ const CATEGORY_VOCAB = {
       "ski", "snowblade", "snowboard", "splitboard", "boots", "poles", "bindings", "helmet",
       "jacket", "pants", "goggles", "beacon", "shovel", "probe", "airbag_canister",
       "climbing_skins", "backpack", "airbag_backpack", "ice_axe", "crampons", "ski_crampons",
-      "snowshoes", "sled", "saucer", "snowskate", "snow_boots", "ice_skates", "snowmobile",
-      "timbersled",
+      "snowshoes", "sled", "saucer", "snowskate", "ski_bike", "snow_boots", "ice_skates",
+      "snowmobile", "timbersled",
     ],
     // key -> validator; only these keys may appear in attributes.
     attributes: {
@@ -80,6 +80,7 @@ const rowIdx = new Map(triage.results.map((r, i) => [keyOf(r), i]));
 const isUrl = (u) => typeof u === "string" && /^https?:\/\/\S+$/i.test(u);
 
 const errors = [];
+const warnings = []; // non-fatal QA flags, printed after validation — never block a write
 const clean = [];
 incoming.forEach((v, n) => {
   const where = `result #${n + 1} (${v.name || v.place_id || "?"})`;
@@ -98,6 +99,9 @@ incoming.forEach((v, n) => {
 
   if (!VALID_OUTCOMES.has(v.outcome)) { errors.push(`${where}: outcome "${v.outcome}" not in ${[...VALID_OUTCOMES].join("/")}`); return; }
   if (!v.note || String(v.note).trim().length < 8) { errors.push(`${where}: note must briefly say what was found (or why not)`); return; }
+  if (v.outcome === "needs_review" && !/action/i.test(v.note)) {
+    warnings.push(`${where}: needs_review note has no "ACTION: …" — every parked operator should state the one step that resolves it (00_general §5 rule 9)`);
+  }
 
   const requestedActivities = Array.isArray(v.activities) ? v.activities : [];
   const badActs = requestedActivities.filter((a) => !VALID_ACTIVITIES.has(a));
@@ -139,9 +143,15 @@ incoming.forEach((v, n) => {
     }
   }
 
+  // Equipment natural-key guard (00_general §9): two items with the same signature would
+  // upsert onto each other later — usually a package listed twice or a copy-paste slip.
+  const itemSigs = new Set();
   for (let i = 0; i < items.length; i++) {
     const it = items[i] || {};
     const iw = `${where} item #${i + 1} (${it.name || "?"})`;
+    const sig = [String(it.name || "").toLowerCase().replace(/\s+/g, " ").trim(), it.subcategory, it.brand || "", it.model || "", it.size || ""].join("|");
+    if (itemSigs.has(sig)) { errors.push(`${iw}: duplicate item signature (same name+subcategory+brand/model/size as an earlier item) — merge them or differentiate the rows`); continue; }
+    itemSigs.add(sig);
     if (!it.name || typeof it.name !== "string") { errors.push(`${iw}: name is required`); continue; }
     if (!vocab.subcategories.includes(it.subcategory)) { errors.push(`${iw}: subcategory "${it.subcategory}" not in ${category} vocabulary`); continue; }
     if (!isUrl(it.source_url)) { errors.push(`${iw}: source_url (the exact page seen) is required — provenance rule (00_general §8)`); continue; }
@@ -154,12 +164,17 @@ incoming.forEach((v, n) => {
       else if (Array.isArray(rule) && !rule.includes(val)) errors.push(`${iw}: attribute ${key}="${val}" not in [${rule.join(", ")}]`);
     }
     if (it.skill_level != null && !VALID_SKILL.has(it.skill_level)) { errors.push(`${iw}: skill_level "${it.skill_level}" invalid`); }
+    let anyPrice = false;
     for (const pf of PRICE_FIELDS) {
       const p = it[pf];
       if (p === undefined || p === null) continue;
       if (typeof p !== "number" || !isFinite(p) || p < 0) { errors.push(`${iw}: ${pf} must be a number or null`); continue; }
-      if (p === 0) errors.push(`${iw}: ${pf} is 0 — unknown pricing is null, never 0 (and free rental gear is not a thing; bundled items go in addons)`);
+      if (p === 0) { errors.push(`${iw}: ${pf} is 0 — unknown pricing is null, never 0 (and free rental gear is not a thing; bundled items go in addons)`); continue; }
+      anyPrice = true;
+      // Decimal-slip catcher ($8.50 vs 850): warn, never reject — luxury fleets exist.
+      if (pf !== "deposit" && (p < 5 || p > 2000)) warnings.push(`${iw}: ${pf}=$${p} is outside the typical $5–2000 range — double-check for a decimal/typo`);
     }
+    if (!anyPrice) warnings.push(`${iw}: no price on any tier ("call for pricing" is legitimate, but verify the price really isn't published)`);
     const addons = it.addons === undefined ? [] : it.addons;
     if (!Array.isArray(addons)) { errors.push(`${iw}: addons must be an array`); }
     else {
@@ -245,27 +260,29 @@ for (const [category, entries] of byCategory) {
     const row = c.row;
     const cats = new Set(row.categories || []);
     const revs = new Set(row.review_categories || []);
+    // Idempotent note appends: re-applying a corrected batch must not bloat the row note.
+    const addNote = (segment) => { if (!(row.note || "").includes(segment)) row.note = `${row.note || ""} ${segment}`.trim(); };
     if (c.v.outcome === "category_not_found") {
       cats.delete(category); revs.delete(category);
-      row.note = `${row.note || ""} Pass B ${today}: ${category} category_not_found (${c.v.checked_url}).`.trim();
+      addNote(`Pass B ${today}: ${category} category_not_found (${c.v.checked_url}).`);
       if (c.operatorStatus) {
         row.status = c.operatorStatus;
         if (c.operatorStatus === "no_rentals") row.rents_gear = false;
         if (c.operatorStatus === "out_of_scope") row.rents_gear = true;
-        row.note = `${row.note} Operator re-routed to ${c.operatorStatus}.`.trim();
+        addNote(`Operator re-routed to ${c.operatorStatus}.`);
       }
       notFound++;
     } else if (c.v.outcome === "extracted") {
       cats.add(category); revs.delete(category); // review slug that panned out -> confirmed
-      row.note = `${row.note || ""} Pass B ${today}: ${category} extracted (${c.items.length} item(s)).`.trim();
+      addNote(`Pass B ${today}: ${category} extracted (${c.items.length} item(s)).`);
       extracted++; itemCount += c.items.length;
     } else {
-      row.note = `${row.note || ""} Pass B ${today}: ${category} needs_review — ${String(c.v.note).trim()}`.trim();
+      addNote(`Pass B ${today}: ${category} needs_review — ${String(c.v.note).trim()}`);
       review++;
     }
     for (const heal of c.selfHeal) {
       if (!cats.has(heal.category)) revs.add(heal.category);
-      row.note = `${row.note || ""} Pass B ${today}: self-heal candidate ${heal.category} (${heal.source_url}) — ${heal.note}`.trim();
+      addNote(`Pass B ${today}: self-heal candidate ${heal.category} (${heal.source_url}) — ${heal.note}`);
     }
     row.categories = [...cats];
     row.review_categories = [...revs];
@@ -279,6 +296,10 @@ for (const [category, entries] of byCategory) {
   if (!DRY) fs.writeFileSync(P(resultsFile), JSON.stringify(results, null, 2) + "\n");
 }
 
+if (warnings.length) {
+  console.log(`⚠ ${warnings.length} warning(s) — applied anyway, but worth eyeballing:`);
+  for (const w of warnings) console.log("  - " + w);
+}
 const summary = `applied ${clean.length} result(s): ${extracted} extracted (${itemCount} items), ${notFound} category_not_found, ${review} needs_review.`;
 if (DRY) console.log("[dry-run] " + summary + " (nothing written)");
 else {

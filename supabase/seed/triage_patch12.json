@@ -1,0 +1,82 @@
+[
+  {
+    "place_id": "ChIJq9YL7OLfm4ARatMOunSqVuw", "name": "Donut Shoppe",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://donutshoppeculture.com/"],
+    "evidence_snippet": "Reno skate/snowboard streetwear boutique (NOT a donut shop): retail-only, selling snowboards, skateboards, and apparel. 'Pay The Rent' is a merch brand/collection, not a rental service.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "EC review 2026-07-07: does not rent gear. Root cause: keyword auto-triage matched 'rent' in the /collections/pay-the-rent merch URL and snowboard brand names. Retail only; verified live."
+  },
+  {
+    "place_id": "ChIJZ7lyYOePmYARxMLs_LA_idk", "name": "Lake Tahoe Boat Company",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://laketahoeboatco.com/"],
+    "evidence_snippet": "Full-service marine repair shop: sales, service, storage, winterizing, parts. No rental offering anywhere on the site.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged; sales/service/storage only. Same business as Tahoe Marine Mart (tahoemarinemart.com 301-redirects here) — same-domain dup, Gate 4 pattern."
+  },
+  {
+    "place_id": "ChIJcxlFXeePmYARjD7EUP01zlg", "name": "Tahoe Marine Mart",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://tahoemarinemart.com/", "http://laketahoeboatco.com/"],
+    "evidence_snippet": "tahoemarinemart.com 301-redirects to laketahoeboatco.com — the same full-service marine repair/sales/storage shop. No rental offering.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged; duplicate listing of Lake Tahoe Boat Company (rank 415) under an old name/domain."
+  },
+  {
+    "place_id": "ChIJf2xo-w9wmYARo43ikkBuNK0", "name": "Babes On A Boat",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://babesonaboat.com/"],
+    "evidence_snippet": "Tahoe bachelorette party boats — 'Includes a Concierge Captain' ('Carefree Concierge Captain Service'); customers never operate the boat. Cross-marketed with tahoejetboats.com (also captained-only).",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged. Captained-charter rule. Duplicate listing at rank 461 (same domain)."
+  },
+  {
+    "place_id": "ChIJdQRWLpCPmYARi2pd5ssRbAI", "name": "Babes on a Boat: Tahoe Bachelorette Experience",
+    "rents_gear": false, "categories": [], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["http://babesonaboat.com/"],
+    "evidence_snippet": "Tahoe bachelorette party boats — 'Includes a Concierge Captain'; captained charter, no self-operated rental.",
+    "status": "no_rentals", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): demoted from auto-triaged. Captained-charter rule. Duplicate listing of rank 485 (same domain) — Gate 4 pattern."
+  },
+  {
+    "place_id": "ChIJt_DfxUAVmYAR4rshiiKBf5k", "name": "EuroCycle Reno",
+    "rents_gear": true, "categories": ["motorcycles"], "review_categories": ["off_road"],
+    "rental_page_urls": ["https://rideeurocycle.com/"], "checked_urls": ["https://rideeurocycle.com/"],
+    "evidence_snippet": "Motorcycle dealer that also rents: 'Not Ready to Buy? Rent & Ride the World's Most Beautiful Bikes' — rents motorcycles at its Reno location (one of three US stores).",
+    "status": "triaged", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged (rental program verified live); categories corrected to motorcycles (snow_sports/road_cycling were keyword-hallucinated; off_road to review — confirm any ADV/dirt fleet in Pass B)."
+  },
+  {
+    "place_id": "ChIJl3QypgyOmYAR73tph_OvNyg", "name": "Birkholm's Water Ski Wakeboard School in Lake Tahoe",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://birkholmswatersports.com/"],
+    "evidence_snippet": "Primarily a water ski/wakeboard school and boat charter ('more than just a school — a general boat charter service'), but the site also offers boat rentals as an option.",
+    "status": "triaged", "confidence": "low",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged on the boat-rental mention; categories corrected to water_sports (snow_sports was keyword-hallucinated). Pass B: verify the rental is bareboat, else demote per captained-charter rule."
+  },
+  {
+    "place_id": "ChIJZdaw6wl9mYARfdsKpDupMtI", "name": "Lake Tahoe Sailing",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": [], "checked_urls": ["https://www.laketahoesail.com/"],
+    "evidence_snippet": "Site header lists 'Sailing Lessons, Racing, Private Group Charters and Bareboat Rentals'; the detailed pages describe skippered charters and lessons.",
+    "status": "triaged", "confidence": "low",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): kept triaged on the header's Bareboat Rentals; categories corrected to water_sports (snow_sports was keyword-hallucinated). Pass B: confirm bareboat is really offered ((530) 412-1101), else demote."
+  },
+  {
+    "place_id": "ChIJDZAoWzObmYARkCVmslf1eEM", "name": "Stateline Shack \"The Shack\"",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://theshack.pro/"], "checked_urls": ["https://theshack.pro/"],
+    "evidence_snippet": "Beach supply shop that rents: 'We Rent Tommy Bahama Chairs & Umbrellas, Sun Lounge Chairs, Beach Wagons, & Corn Hole, for $10/Day! Inflatable 11 Ft. Paddle Boards for $35/Day!'",
+    "status": "triaged", "confidence": "high",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): verified live — SUP rentals confirmed (beach chairs/cornhole are out-of-domain extras; extract the paddleboards)."
+  },
+  {
+    "place_id": "ChIJbZ72iO8FgoIRnCxKMk2pcC0", "name": "Tahoe Boat Repair and Storage LLC",
+    "rents_gear": true, "categories": ["water_sports"], "review_categories": [],
+    "rental_page_urls": ["https://www.tahoeboatstorage.com/"], "checked_urls": ["https://www.tahoeboatstorage.com/"],
+    "evidence_snippet": "Boat repair/storage shop that also runs a rental operation: 'We keep our own North Lake Tahoe Boat Rental fleet running strong all summer.'",
+    "status": "triaged", "confidence": "medium",
+    "note": "Audit 2026-07-07 (Donut Shoppe sweep): verified live — own rental fleet stated. Pass B: the fleet may be listed under the 'North Lake Tahoe Boat Rental' brand; check for a same-operator duplicate at import."
+  }
+]

@@ -83,6 +83,9 @@ for (const r of batch) {
   lines.push(`website: ${r.website || "(none)"}`);
   lines.push(`target_category: ${CATEGORY}   (${confirmed ? "CONFIRMED in categories[]" : "UNCONFIRMED — in review_categories[]; verify then extract or category_not_found"})`);
   lines.push(`all_categories: ${(r.categories || []).join(", ") || "(none)"}   review: ${(r.review_categories || []).join(", ") || "(none)"}`);
+  const others = new Set([...(r.categories || []), ...(r.review_categories || [])]);
+  others.delete(CATEGORY);
+  if (others.size === 0) lines.push(`⚠ LAST CATEGORY — if the verdict is category_not_found, you MUST include "operator_status" (no_rentals | out_of_scope | needs_review) to re-route the whole operator.`);
   lines.push(`triage_confidence: ${r.confidence}${isAuto(r) ? "   ⚠ AUTO-TRIAGED (categories were keyword-derived — verify first)" : ""}`);
   lines.push(`rental_page_urls: ${(r.rental_page_urls || []).join(" ") || "(none)"}`);
   if (r.evidence_snippet) lines.push(`triage_evidence: ${trunc(r.evidence_snippet, 500)}`);
