@@ -1,0 +1,77 @@
+{
+  "test_vocab": {
+    "water_sports": {
+      "subcategories": ["kayak"],
+      "gear_types": ["kayak"],
+      "attributes": {
+        "gear_type": null,
+        "is_kids": "boolean"
+      },
+      "activities": []
+    },
+    "mountain_biking": {
+      "subcategories": ["trail_bike", "fat_bike"],
+      "gear_types": ["bike"],
+      "attributes": {
+        "gear_type": null,
+        "is_kids": "boolean"
+      },
+      "activities": [
+        { "activity": "fat_bike", "subcategories": ["fat_bike"] }
+      ]
+    }
+  },
+  "triage": {
+    "stage": "Pass B isolated fixtures",
+    "results": [
+      {
+        "rank": 1,
+        "place_id": "fixture-water-only",
+        "name": "Fixture Water Only",
+        "website": "https://example.com/water",
+        "rents_gear": true,
+        "categories": ["water_sports"],
+        "review_categories": [],
+        "status": "triaged",
+        "confidence": "high",
+        "note": "Fixture operator tagged only for water sports."
+      },
+      {
+        "rank": 2,
+        "place_id": "fixture-snow-only",
+        "name": "Fixture Snow Only",
+        "website": "https://example.com/snow",
+        "rents_gear": true,
+        "categories": ["snow_sports"],
+        "review_categories": [],
+        "status": "triaged",
+        "confidence": "high",
+        "note": "Fixture operator tagged only for snow sports."
+      },
+      {
+        "rank": 4,
+        "place_id": "fixture-bike-only",
+        "name": "Fixture Bike Only",
+        "website": "https://example.com/bike",
+        "rents_gear": true,
+        "categories": ["mountain_biking"],
+        "review_categories": [],
+        "status": "triaged",
+        "confidence": "high",
+        "note": "Fixture operator tagged only for mountain biking."
+      },
+      {
+        "rank": 3,
+        "place_id": "fixture-two-categories",
+        "name": "Fixture Two Categories",
+        "website": "https://example.com/two",
+        "rents_gear": true,
+        "categories": ["snow_sports", "water_sports"],
+        "review_categories": [],
+        "status": "triaged",
+        "confidence": "high",
+        "note": "Fixture operator tagged for two categories."
+      }
+    ]
+  }
+}

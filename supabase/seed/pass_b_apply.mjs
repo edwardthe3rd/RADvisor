@@ -3,11 +3,10 @@
 //
 //   node supabase/seed/pass_b_apply.mjs <extraction.json> [--dry-run]
 //
-// Validates an LLM's Pass B extraction results against the category's bounded vocabulary
-// (instructions/extraction/<category>.md) and merges them into pass_b_<category>_results.json.
-// Also updates sweep_pass_a_triage.json: category_not_found removals, review->confirmed
-// promotions, evidenced self-heal category candidates, and operator-level activities /
-// offers_demo / offers_season_lease backfill (00_general §6 steps 6-7).
+// Validates an LLM's operator-at-once Pass B results against each category's bounded
+// vocabulary and merges them into pass_b_<category>_results.json. Pass A categories are
+// hints, not gates: a locked category discovered during the visit can be extracted now.
+// State transitions are validated across every result for an operator before any file writes.
 //
 // Malformed batches are rejected whole — a weaker model cannot silently corrupt the output.
 // Files-first, like Pass A: the Supabase equipment upsert is a separate later step.
@@ -15,59 +14,64 @@
 import fs from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import {
+  CATEGORY_ACTIVITIES,
+  CATEGORY_VOCAB,
+  PASS_B_CATEGORY_SET,
+  PRICE_FIELDS,
+  deriveActivities,
+} from "./pass_b_vocab.mjs";
 
 const seedDir = dirname(fileURLToPath(import.meta.url));
-const P = (f) => join(seedDir, f);
-const read = (f) => JSON.parse(fs.readFileSync(P(f), "utf8"));
-
-// ---------------------------------------------------------------------------
-// Per-category bounded vocabulary. Source of truth: instructions/extraction/<slug>.md.
-// Add a key per category as its file locks; the applier refuses categories not defined here.
-const CATEGORY_VOCAB = {
-  snow_sports: {
-    subcategories: [
-      "alpine_ski", "backcountry_ski", "telemark_ski", "cross_country_ski", "snowboard",
-      "splitboard", "snowshoe", "sled", "snowmobile", "timbersled", "apparel_snow",
-      "avalanche_safety", "ice_skates",
-    ],
-    gear_types: [
-      "ski", "snowblade", "snowboard", "splitboard", "boots", "poles", "bindings", "helmet",
-      "jacket", "pants", "goggles", "beacon", "shovel", "probe", "airbag_canister",
-      "climbing_skins", "backpack", "airbag_backpack", "ice_axe", "crampons", "ski_crampons",
-      "snowshoes", "sled", "saucer", "snowskate", "ski_bike", "snow_boots", "ice_skates",
-      "snowmobile", "timbersled",
-    ],
-    // key -> validator; only these keys may appear in attributes.
-    attributes: {
-      gear_type: null, // enum-checked separately (required)
-      quality_grade: ["basic", "standard", "performance"],
-      is_kids: "boolean",
-      rental_type: ["rental", "demo", "season_lease"],
-      adjustable: "boolean",
-      snowboard_binding_interface: ["step_on", "standard"],
-      crampon_binding: ["strap", "newmatic", "cramp_o_matic"],
-    },
-  },
-};
 
 const VALID_ACTIVITIES = new Set([
   "ski_snowboard", "snowshoe", "sled", "snowmobile", "fat_bike", "snow_camp", "ice_skate",
   "winter_mountaineering",
 ]);
-const VALID_CATEGORIES = new Set([
-  "snow_sports", "mountain_biking", "road_cycling", "burning_man_bikes", "water_sports",
-  "camping", "camping_vehicles", "off_road", "motorcycles", "rock_climbing", "mountaineering",
-  "hunting", "fishing", "disc_golf", "electric_transport",
-]);
 const VALID_OUTCOMES = new Set(["extracted", "category_not_found", "needs_review"]);
 const VALID_RETRIAGE_STATUSES = new Set(["no_rentals", "out_of_scope", "needs_review"]);
 const VALID_SKILL = new Set(["beginner", "intermediate", "advanced", "all"]);
-const PRICE_FIELDS = ["price_hourly", "price_half_day", "price_full_day", "price_multi_day", "price_weekly", "deposit"];
+// PRICE_FIELDS is imported from pass_b_vocab.mjs so the applier and pass_b_report.mjs cannot
+// drift apart. price_season was added after the 2026-08-01 pilot: 3 of 8 operators published a
+// real per-season figure ($159 Bobo's adult, $599 Quiver unlimited) that no other tier could
+// hold, which produced 5 of the 7 "no price on any tier" warnings in that batch.
 
 const args = process.argv.slice(2);
+const valueAfter = (flag) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
+if (args.includes("--test-fixtures")) {
+  const { runPassBFixtures } = await import("./pass_b_fixtures.mjs");
+  await runPassBFixtures();
+  process.exit(0);
+}
 const DRY = args.includes("--dry-run");
-const file = args.find((a) => !a.startsWith("--"));
-if (!file) { console.error("usage: node pass_b_apply.mjs <extraction.json> [--dry-run]"); process.exit(1); }
+// A calibration pilot runs before every vocabulary is locked, so its visit could not observe
+// categories that had no schema yet. Stamping visit_mode:"pilot" keeps these operators eligible
+// for a full re-visit later (pass_b_batch treats only "operator_at_once" as a completed visit).
+const PILOT = args.includes("--pilot");
+const dataDir = valueAfter("--data-dir") || seedDir;
+const P = (f) => join(dataDir, f);
+const read = (f) => JSON.parse(fs.readFileSync(P(f), "utf8"));
+const fixtureVocabFile = valueAfter("--fixture-vocab");
+if (fixtureVocabFile) {
+  if (process.env.PASS_B_FIXTURE_MODE !== "1" || dataDir === seedDir) {
+    console.error("--fixture-vocab is restricted to isolated --test-fixtures runs");
+    process.exit(1);
+  }
+  // A fixture category may carry an `activities` rule list alongside its vocabulary, so tests
+  // can exercise the cross-category activity axis without waiting on a real category to lock.
+  for (const [category, def] of Object.entries(JSON.parse(fs.readFileSync(fixtureVocabFile, "utf8")))) {
+    const { activities, ...vocab } = def;
+    CATEGORY_VOCAB[category] = vocab;
+    if (activities) CATEGORY_ACTIVITIES[category] = activities;
+  }
+}
+const file = args.find((a, i) =>
+  !a.startsWith("--") && !["--data-dir", "--fixture-vocab"].includes(args[i - 1]),
+);
+if (!file) {
+  console.error("usage: node pass_b_apply.mjs <extraction.json> [--dry-run] [--data-dir DIR]");
+  process.exit(1);
+}
 
 const raw = JSON.parse(fs.readFileSync(file, "utf8"));
 const incoming = Array.isArray(raw) ? raw : raw.results || [];
@@ -76,6 +80,19 @@ if (!incoming.length) { console.error("no results in input"); process.exit(1); }
 const triage = read("sweep_pass_a_triage.json");
 triage.results = triage.results || [];
 const rowIdx = new Map(triage.results.map((r, i) => [keyOf(r), i]));
+const priorOriginsByCategory = new Map();
+
+function priorCategoryOrigin(category, key) {
+  if (!priorOriginsByCategory.has(category)) {
+    const file = `pass_b_${category}_results.json`;
+    const rows = fs.existsSync(P(file)) ? (read(file).results || []) : [];
+    priorOriginsByCategory.set(
+      category,
+      new Map(rows.map((row) => [row.key || keyOf(row), row.category_origin || null])),
+    );
+  }
+  return priorOriginsByCategory.get(category).get(key) || null;
+}
 
 const isUrl = (u) => typeof u === "string" && /^https?:\/\/\S+$/i.test(u);
 
@@ -92,10 +109,16 @@ incoming.forEach((v, n) => {
 
   const category = v.category;
   const vocab = CATEGORY_VOCAB[category];
-  if (!vocab) { errors.push(`${where}: category "${category}" has no locked vocabulary in pass_b_apply.mjs (add it when its extraction file locks)`); return; }
+  if (!vocab) { errors.push(`${where}: category "${category}" has no locked vocabulary in pass_b_vocab.mjs (add its CATEGORY_VOCAB + CATEGORY_ACTIVITIES entries when its extraction file locks)`); return; }
   const inCats = (row.categories || []).includes(category);
   const inReview = (row.review_categories || []).includes(category);
-  if (!inCats && !inReview) { errors.push(`${where}: "${category}" is not in this operator's categories[] or review_categories[]`); return; }
+  const categoryOrigin = priorCategoryOrigin(category, keyOf(row)) || (
+    inCats
+      ? "pretagged_confirmed"
+      : inReview
+        ? "pretagged_review"
+        : "pass_b_discovered"
+  );
 
   if (!VALID_OUTCOMES.has(v.outcome)) { errors.push(`${where}: outcome "${v.outcome}" not in ${[...VALID_OUTCOMES].join("/")}`); return; }
   if (!v.note || String(v.note).trim().length < 8) { errors.push(`${where}: note must briefly say what was found (or why not)`); return; }
@@ -114,8 +137,12 @@ incoming.forEach((v, n) => {
       errors.push(`${where}: self_heal_categories entries must be objects { category, source_url, note }; strings are not enough evidence`);
       return;
     }
-    if (!VALID_CATEGORIES.has(entry.category) || entry.category === category) {
+    if (!PASS_B_CATEGORY_SET.has(entry.category) || entry.category === category) {
       errors.push(`${where}: invalid self_heal_categories category: ${entry.category}`);
+      return;
+    }
+    if (CATEGORY_VOCAB[entry.category]) {
+      errors.push(`${where}: self_heal_categories.${entry.category} has a locked vocabulary — submit it as its own same-visit category result instead`);
       return;
     }
     if (!isUrl(entry.source_url)) {
@@ -130,6 +157,7 @@ incoming.forEach((v, n) => {
       category: entry.category,
       source_url: entry.source_url,
       note: String(entry.note).trim(),
+      disposition: "deferred_unlocked_vocabulary",
     });
   }
 
@@ -194,23 +222,79 @@ incoming.forEach((v, n) => {
     return;
   }
 
-  let operatorStatus = null;
-  if (v.outcome === "category_not_found") {
-    const remainingCats = new Set(row.categories || []);
-    const remainingReview = new Set(row.review_categories || []);
-    remainingCats.delete(category);
-    remainingReview.delete(category);
-    if (remainingCats.size === 0 && remainingReview.size === 0) {
-      if (!VALID_RETRIAGE_STATUSES.has(v.operator_status)) {
-        errors.push(`${where}: category_not_found would leave this triaged operator with zero categories; include operator_status no_rentals/out_of_scope/needs_review to re-route the whole operator`);
-        return;
-      }
-      operatorStatus = v.operator_status;
-    }
+  if (v.operator_status != null && !VALID_RETRIAGE_STATUSES.has(v.operator_status)) {
+    errors.push(`${where}: operator_status must be no_rentals/out_of_scope/needs_review when supplied`);
+    return;
   }
 
-  clean.push({ idx, key: keyOf(row), row, v, category, activities: derivedActivities, selfHeal, items, operatorStatus });
+  clean.push({
+    idx,
+    key: keyOf(row),
+    row,
+    v,
+    category,
+    categoryOrigin,
+    activities: derivedActivities,
+    selfHeal,
+    items,
+  });
 });
+
+// Validate the combined final state for each operator. This is intentionally separate from
+// per-result validation: removing the old last category is valid when another result in the
+// same visit extracts a newly discovered category.
+const operatorStates = new Map();
+for (const c of clean) {
+  let state = operatorStates.get(c.key);
+  if (!state) {
+    state = {
+      row: c.row,
+      categories: new Set(c.row.categories || []),
+      reviewCategories: new Set(c.row.review_categories || []),
+      seenCategories: new Set(),
+      statuses: new Set(),
+      entries: [],
+    };
+    operatorStates.set(c.key, state);
+  }
+  if (state.seenCategories.has(c.category)) {
+    errors.push(`${c.row.name}: duplicate result for category "${c.category}" in the same batch`);
+    continue;
+  }
+  state.seenCategories.add(c.category);
+  state.entries.push(c);
+  if (c.v.operator_status != null) state.statuses.add(c.v.operator_status);
+
+  if (c.v.outcome === "extracted") {
+    state.categories.add(c.category);
+    state.reviewCategories.delete(c.category);
+  } else if (c.v.outcome === "category_not_found") {
+    state.categories.delete(c.category);
+    state.reviewCategories.delete(c.category);
+  } else if (!state.categories.has(c.category)) {
+    // A newly discovered but unresolved locked category must remain visible for follow-up.
+    state.reviewCategories.add(c.category);
+  }
+  for (const heal of c.selfHeal) {
+    if (!state.categories.has(heal.category)) state.reviewCategories.add(heal.category);
+  }
+}
+
+for (const [key, state] of operatorStates) {
+  if (state.statuses.size > 1) {
+    errors.push(`${state.row.name}: conflicting operator_status values across one operator batch: ${[...state.statuses].join(", ")}`);
+    continue;
+  }
+  const finalEmpty = state.categories.size === 0 && state.reviewCategories.size === 0;
+  const operatorStatus = [...state.statuses][0] || null;
+  if (finalEmpty && !operatorStatus) {
+    errors.push(`${state.row.name}: combined Pass B results leave this triaged operator with zero categories; include one operator_status no_rentals/out_of_scope/needs_review`);
+  } else if (!finalEmpty && operatorStatus) {
+    errors.push(`${state.row.name}: operator_status "${operatorStatus}" is invalid because the combined Pass B results still leave categories/review_categories`);
+  }
+  state.operatorStatus = operatorStatus;
+  operatorStates.set(key, state);
+}
 
 if (errors.length) {
   console.error(`REJECTED — ${errors.length} problem(s) (nothing written):`);
@@ -218,7 +302,8 @@ if (errors.length) {
   process.exit(1);
 }
 
-// Group by category to write one results file per category (a batch is normally one category).
+// Group by category so operator-at-once input still produces one auditable result log per
+// category. All mutations remain in memory until the complete batch has validated.
 const byCategory = new Map();
 for (const c of clean) {
   if (!byCategory.has(c.category)) byCategory.set(c.category, []);
@@ -242,6 +327,8 @@ for (const [category, entries] of byCategory) {
       name: c.row.name,
       website: c.row.website || null,
       category,
+      visit_mode: PILOT ? "pilot" : "operator_at_once",
+      category_origin: c.categoryOrigin,
       outcome: c.v.outcome,
       checked_url: c.v.checked_url || null,
       note: String(c.v.note).trim(),
@@ -249,43 +336,30 @@ for (const [category, entries] of byCategory) {
       offers_demo: c.v.offers_demo === true,
       offers_season_lease: c.v.offers_season_lease === true,
       self_heal_categories: c.selfHeal,
-      operator_status: c.operatorStatus,
+      operator_status: c.v.operator_status || null,
       items: c.items,
       extracted_at: today,
     };
     if (resIdx.has(c.key)) results.results[resIdx.get(c.key)] = rec;
     else { resIdx.set(c.key, results.results.length); results.results.push(rec); }
 
-    // ---- update the triage row (00_general §6 steps 0, 6, self-heal) ----
+    // ---- append audit notes + operator-level facts; category state is committed below ----
     const row = c.row;
-    const cats = new Set(row.categories || []);
-    const revs = new Set(row.review_categories || []);
     // Idempotent note appends: re-applying a corrected batch must not bloat the row note.
     const addNote = (segment) => { if (!(row.note || "").includes(segment)) row.note = `${row.note || ""} ${segment}`.trim(); };
     if (c.v.outcome === "category_not_found") {
-      cats.delete(category); revs.delete(category);
       addNote(`Pass B ${today}: ${category} category_not_found (${c.v.checked_url}).`);
-      if (c.operatorStatus) {
-        row.status = c.operatorStatus;
-        if (c.operatorStatus === "no_rentals") row.rents_gear = false;
-        if (c.operatorStatus === "out_of_scope") row.rents_gear = true;
-        addNote(`Operator re-routed to ${c.operatorStatus}.`);
-      }
       notFound++;
     } else if (c.v.outcome === "extracted") {
-      cats.add(category); revs.delete(category); // review slug that panned out -> confirmed
-      addNote(`Pass B ${today}: ${category} extracted (${c.items.length} item(s)).`);
+      addNote(`Pass B ${today}: ${category} extracted (${c.items.length} item(s); origin ${c.categoryOrigin}).`);
       extracted++; itemCount += c.items.length;
     } else {
-      addNote(`Pass B ${today}: ${category} needs_review — ${String(c.v.note).trim()}`);
+      addNote(`Pass B ${today}: ${category} needs_review (origin ${c.categoryOrigin}) — ${String(c.v.note).trim()}`);
       review++;
     }
     for (const heal of c.selfHeal) {
-      if (!cats.has(heal.category)) revs.add(heal.category);
-      addNote(`Pass B ${today}: self-heal candidate ${heal.category} (${heal.source_url}) — ${heal.note}`);
+      addNote(`Pass B ${today}: deferred self-heal ${heal.category} (${heal.disposition}; ${heal.source_url}) — ${heal.note}`);
     }
-    row.categories = [...cats];
-    row.review_categories = [...revs];
     if (c.activities.length) row.activities = [...new Set([...(row.activities || []), ...c.activities])];
     if (c.v.offers_demo === true) row.offers_demo = true;
     if (c.v.offers_season_lease === true) row.offers_season_lease = true;
@@ -296,11 +370,26 @@ for (const [category, entries] of byCategory) {
   if (!DRY) fs.writeFileSync(P(resultsFile), JSON.stringify(results, null, 2) + "\n");
 }
 
+// Commit the already-validated combined operator state only after every category result has
+// been processed. This is what makes the zero-category guard operator-wide.
+for (const state of operatorStates.values()) {
+  const row = state.row;
+  row.categories = [...state.categories];
+  row.review_categories = [...state.reviewCategories];
+  if (state.operatorStatus) {
+    row.status = state.operatorStatus;
+    if (state.operatorStatus === "no_rentals") row.rents_gear = false;
+    if (state.operatorStatus === "out_of_scope") row.rents_gear = true;
+    const segment = `Pass B ${today}: operator re-routed to ${state.operatorStatus}.`;
+    if (!(row.note || "").includes(segment)) row.note = `${row.note || ""} ${segment}`.trim();
+  }
+}
+
 if (warnings.length) {
   console.log(`⚠ ${warnings.length} warning(s) — applied anyway, but worth eyeballing:`);
   for (const w of warnings) console.log("  - " + w);
 }
-const summary = `applied ${clean.length} result(s): ${extracted} extracted (${itemCount} items), ${notFound} category_not_found, ${review} needs_review.`;
+const summary = `applied ${clean.length}${PILOT ? " PILOT" : ""} result(s): ${extracted} extracted (${itemCount} items), ${notFound} category_not_found, ${review} needs_review.${PILOT ? " Operators stay eligible for a full re-visit (visit_mode=pilot)." : ""}`;
 if (DRY) console.log("[dry-run] " + summary + " (nothing written)");
 else {
   fs.writeFileSync(P("sweep_pass_a_triage.json"), JSON.stringify(triage, null, 2) + "\n");
@@ -308,23 +397,3 @@ else {
 }
 
 function keyOf(r) { return r.place_id || `name:${r.name}`; }
-
-function deriveActivities(category, items) {
-  if (category !== "snow_sports") return [];
-  const out = new Set();
-  for (const item of items) {
-    const sub = item?.subcategory;
-    const gear = item?.attributes?.gear_type;
-    if (["alpine_ski", "backcountry_ski", "telemark_ski", "cross_country_ski", "snowboard", "splitboard"].includes(sub)) {
-      out.add("ski_snowboard");
-    }
-    if (sub === "snowshoe") out.add("snowshoe");
-    if (sub === "sled") out.add("sled");
-    if (sub === "snowmobile" || sub === "timbersled") out.add("snowmobile");
-    if (sub === "ice_skates") out.add("ice_skate");
-    if (sub === "backcountry_ski" && ["ice_axe", "crampons", "ski_crampons"].includes(gear)) {
-      out.add("winter_mountaineering");
-    }
-  }
-  return [...out];
-}

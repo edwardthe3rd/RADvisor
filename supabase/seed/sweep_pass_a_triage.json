@@ -43,7 +43,7 @@
       "evidence_snippet": "Nordic training center on Donner Summit; rents XC ski gear to visitors who also pay the facility/trail fee (operator-confirmed). Site is under maintenance, so the rental page is not currently linked.",
       "status": "triaged",
       "confidence": "high",
-      "note": "EC review 2026-07-05: rents if you also pay for their facility. Rule: rental alongside a day-use venue/trail fee still counts as a rental.",
+      "note": "EC review 2026-07-05: rents if you also pay for their facility. Rule: rental alongside a day-use venue/trail fee still counts as a rental. Pass B 2026-08-01: snow_sports needs_review (origin pretagged_confirmed) — ACTION: call (530) 426-3313 and ask whether ASC still rents XC ski gear to day visitors. The site was rebuilt since the Pass A crawl (no longer under maintenance) and the Nordic Center page now covers trails, hours, night skiing and season passes (Child $79 / Adult $260 / Senior $220 / ASC Parent $135) with NO gear-rental offering anywhere on the site; the FAQ answers waxing, sledding, dogs and race days but never rentals. This contradicts the EC review of 2026-07-05 (operator-confirmed rentals alongside the facility fee), so it is a human-verified fact vs current-site conflict, not a disproved hint. Recall rule: parked for review rather than removed.",
       "triaged_at": "2026-07-05"
     },
     {
@@ -684,8 +684,14 @@
       "evidence_snippet": "Bobo's lists ski and snowboard season lease packages and an on-site rental department for ski/board services.",
       "status": "triaged",
       "confidence": "high",
-      "note": "Patio furniture sales are out of scope; ski/snowboard rentals are in scope.",
-      "triaged_at": "2026-06-30"
+      "note": "Patio furniture sales are out of scope; ski/snowboard rentals are in scope. Pass B 2026-08-01: snow_sports extracted (9 item(s); origin pretagged_confirmed).",
+      "triaged_at": "2026-06-30",
+      "activities": [
+        "ski_snowboard",
+        "snowshoe"
+      ],
+      "offers_demo": true,
+      "offers_season_lease": true
     },
     {
       "rank": 26,
@@ -710,8 +716,12 @@
       "evidence_snippet": "CV Sports advertises ski, snowboard, snowshoe, clothing, and helmet rental packages and has an equipment reservation form.",
       "status": "triaged",
       "confidence": "high",
-      "note": "Winter rental shop.",
-      "triaged_at": "2026-06-30"
+      "note": "Winter rental shop. Pass B 2026-08-01: snow_sports extracted (19 item(s); origin pretagged_confirmed).",
+      "triaged_at": "2026-06-30",
+      "activities": [
+        "ski_snowboard",
+        "snowshoe"
+      ]
     },
     {
       "rank": 27,
@@ -1181,7 +1191,9 @@
       "categories": [
         "snow_sports"
       ],
-      "review_categories": [],
+      "review_categories": [
+        "water_sports"
+      ],
       "rental_page_urls": [
         "https://donnerskishop.com/"
       ],
@@ -1191,8 +1203,15 @@
       "evidence_snippet": "The site title and page text repeatedly identify ski rental services, and Google lists skis, boots, poles, helmets, pants, and gloves for rent.",
       "status": "triaged",
       "confidence": "high",
-      "note": "Confirmed snow-sports rental shop.",
-      "triaged_at": "2026-06-30"
+      "note": "Confirmed snow-sports rental shop. Pass B 2026-08-01: snow_sports extracted (19 item(s); origin pretagged_confirmed). Pass B 2026-08-01: deferred self-heal water_sports (deferred_unlocked_vocabulary; https://donnerskishop.com/) — Homepage section 'Paddleboard or Kayak Rentals': board or kayak with lifevest $45.00 per day, arranged by email, first come first served, restricted to Serene Lakes only. Real take-away rental inventory, deferred because water_sports has no locked vocabulary yet.",
+      "triaged_at": "2026-06-30",
+      "activities": [
+        "ski_snowboard",
+        "snowshoe",
+        "ice_skate"
+      ],
+      "offers_demo": true,
+      "offers_season_lease": true
     },
     {
       "rank": 46,
@@ -1401,7 +1420,6 @@
       "website": "http://www.flumetrailtahoe.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "mountain_biking",
         "road_cycling",
         "electric_transport"
@@ -1418,7 +1436,7 @@
       "evidence_snippet": "Flume Trail Bikes http://www.flumetrailtahoe.com/ Flume Trail Bikes Bike and e-bike rental shop catering to the Flume Trail and other Lake Tahoe-area trails.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1499,7 +1517,7 @@
       "evidence_snippet": "Galena Sports (Mt Rose Hwy, Reno) rents ski & snowboard packages from ~$16/day and snowshoes from ~$13; daily and season rental packages (Yelp/skisite).",
       "status": "triaged",
       "confidence": "high",
-      "note": "Patch: confirmed renter via live web search (site was down in original crawl).",
+      "note": "Patch: confirmed renter via live web search (site was down in original crawl). Pass B 2026-08-01: snow_sports needs_review (origin pretagged_confirmed) — ACTION: call Galena Sports for a current rate card, or confirm a first-party site exists. galenasports.com does not resolve and no first-party website is linked from any source; the only rental evidence is third-party (Yelp, skisite.com) quoting roughly $16/day ski and snowboard packages and $13 snowshoes. Third-party review pricing is not first-party inventory, so nothing is extractable without a site or a call. Rentals are not in doubt; only the inventory source is.",
       "triaged_at": "2026-07-04"
     },
     {
@@ -1611,7 +1629,6 @@
       "website": "http://gravityhaus.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
         "snow_sports"
       ],
       "review_categories": [],
@@ -1626,7 +1643,7 @@
       "evidence_snippet": "Gravity Haus Gear Rental — Haus Quiver Truckee http://gravityhaus.com/ Gravity Haus Gear Rental - Haus Quiver - Truckee Gravity Haus Gear Rental - Haus Quiver - Truckee point_of_interest service establishment https://gravityhaus.com/ Gravity Haus Hotels & Outdoor Club Destinations All alta crystal coming soon Big Sky Breckenridge Denver Jackson Hole missoula now open Moab Revelstoke Steamboat Truckee-Tahoe Vail westp",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed water_sports - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1726,7 +1743,6 @@
       "website": "http://highsierracycling.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "mountain_biking",
         "road_cycling",
         "electric_transport"
@@ -1744,7 +1760,7 @@
       "evidence_snippet": "High Sierra Cycling http://highsierracycling.com/ High Sierra Cycling Bike shop stocking activewear, and offering rentals, as well as repair and maintenance services.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1755,8 +1771,7 @@
       "website": "https://www.highsierrawaterskiing.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -1774,7 +1789,7 @@
       "evidence_snippet": "Rentals Jet Skis Paddleboards Kayaks Phone (530) 525-1214 Lessons, Sessions & Charters Our Captains Jetski Rentals Paddleboard & Kayak Rentals About Us FAQ&#x27;S Contact Us Book Online More Use tab to navigate through the menu items.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1807,8 +1822,7 @@
       "website": "http://boatrentalslaketahoe.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -1822,7 +1836,7 @@
       "evidence_snippet": "Katoma Boat Rentals http://boatrentalslaketahoe.com/ Katoma LLC boat rental Lake Tahoe Katoma LLC boat rental Lake Tahoe point_of_interest service establishment https://boatrentalslaketahoe.com/ Katoma LLC Boat Rentals &#8211; Lake Tahoe, 775-297-2970 | 775-901-6402 Skip to content Katoma LLC Boat Rentals Lake Tahoe, 775-297-2970 | 775-901-6402 Menu + expanded collapsed Our Boats About Contact Facebook Yelp Home Kato",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1856,8 +1870,7 @@
       "website": "https://lsboatrentals.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -1873,7 +1886,7 @@
       "evidence_snippet": "LS Boat Rentals - Donner Lake https://lsboatrentals.com/ LS Boat Rentals - Donner Lake LS Boat Rentals - Donner Lake point_of_interest service establishment https://lsboatrentals.com/ Lake Tahoe Boat Rental | Incline Village Boat Rentals | Half Day Full Day Multi-Day 0 Skip to Content Home Multi-Day Rentals FAQs Contact Us Reserve a Boat Open Menu Close Menu Home Multi-Day Rentals FAQs Contact Us Reserve a Boat Open ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1884,8 +1897,7 @@
       "website": "https://lsboatrentals.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -1901,7 +1913,7 @@
       "evidence_snippet": "LS Boat Rentals - Tahoe https://lsboatrentals.com/ LS Boat Rentals - Tahoe LS Boat Rentals - Tahoe point_of_interest service establishment https://lsboatrentals.com/ Lake Tahoe Boat Rental | Incline Village Boat Rentals | Half Day Full Day Multi-Day 0 Skip to Content Home Multi-Day Rentals FAQs Contact Us Reserve a Boat Open Menu Close Menu Home Multi-Day Rentals FAQs Contact Us Reserve a Boat Open Menu Close Menu Ho",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -1931,8 +1943,7 @@
       "website": "http://www.lakeshoreboatstahoe.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -1950,7 +1961,7 @@
       "evidence_snippet": "Lake Shore Boats Tahoe http://www.lakeshoreboatstahoe.com/ Lake Shore Boats Tahoe Lake Shore Boats Tahoe point_of_interest service establishment http://lakeshoreboatstahoe.com/ Lake Shore Boats Tahoe | Boat Rentals and Paddleboard on Lake Tahoe Lake Shore Boats Tahoe | Boat Rentals and Paddleboard on Lake Tahoe Home Rentals Reservations Boat Rental SUP Rentals Wake-Ski-Tube Pictures Contact Beaches Home Rentals Reser",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2069,8 +2080,7 @@
       "website": "https://www.tahoeboatrides.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -2084,7 +2094,7 @@
       "evidence_snippet": "Lake Tahoe Boat Rides https://www.tahoeboatrides.com/ Lake Tahoe Boat Rides Company providing boat rentals and tours of Lake Tahoe, including sightseeing, watersports, and swimming.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2142,7 +2152,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "electric_transport",
         "fishing"
       ],
@@ -2162,7 +2171,7 @@
       "evidence_snippet": "Lake Tahoe Luxury Boat Rentals http://laketahoeluxuryboatrentals.com/ Lake Tahoe Luxury Boat Rentals Lake Tahoe Luxury Boat Rentals People say this boat rental service offers well-maintained boats and exceptional service, making it easy to have a safe and fun day on the lake.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2173,8 +2182,7 @@
       "website": "http://laketahoepontoon.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -2188,7 +2196,7 @@
       "evidence_snippet": "Lake Tahoe Pontoons http://laketahoepontoon.com/ Lake Tahoe Pontoons Lake Tahoe specialist featuring clean, comfortable pontoon boats for rent, along with tours.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2454,8 +2462,7 @@
       "website": "https://northlaketahoeboatrental.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -2477,7 +2484,7 @@
       "evidence_snippet": "People say this boat rental service offers pontoon boats, jet skis, and tubing.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2488,8 +2495,7 @@
       "website": "https://www.northtahoepaddle.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -2508,7 +2514,7 @@
       "evidence_snippet": "North Tahoe Paddle https://www.northtahoepaddle.com/ North Tahoe Paddle Lake Tahoe-based paddle board and kayak rental service with delivery included.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2520,7 +2526,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -2543,7 +2548,7 @@
       "evidence_snippet": "North Tahoe Watersports https://northtahoewatersports.com/ North Tahoe Watersports North Tahoe Watersports tour_agency travel_agency point_of_interest service establishment https://northtahoewatersports.com/ Boat Rentals, Parasailing, North Tahoe Watersports, Tahoe City, CA Kings Beach: 530-546-WAKE (9253) Tahoe City Marina: 530-583-SAIL (7245) Tahoe City Boat Rentals: 530-583-(9253) Home About Us Locations Kings Bea",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2555,7 +2560,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -2578,7 +2582,7 @@
       "evidence_snippet": "North Tahoe Watersports https://www.northtahoewatersports.com/ North Tahoe Watersports Inc North Tahoe Watersports Inc People say this water sports equipment rental service offers pontoon boat rentals, with some mentioning the boats can have slides and are easy to drive.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2590,7 +2594,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -2613,7 +2616,7 @@
       "evidence_snippet": "tour_agency travel_agency sports_activity_location point_of_interest service establishment https://northtahoewatersports.com/ Boat Rentals, Parasailing, North Tahoe Watersports, Tahoe City, CA Kings Beach: 530-546-WAKE (9253) Tahoe City Marina: 530-583-SAIL (7245) Tahoe City Boat Rentals: 530-583-(9253) Home About Us Locations Kings Beach Tahoe City Boat Rentals Tahoe City Marina Waivers Service Areas Tahoe City, CA ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2672,8 +2675,7 @@
       "website": "https://www.obexersboat.com/water-sports.html",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -2689,7 +2691,7 @@
       "evidence_snippet": "sports_coaching school educational_institution point_of_interest service establishment https://www.obexersboat.com/water-sports.html Jet Ski Rentals - Wakeboard-Wakesurf Lessons - Boat Charters-Lake Tahoe-West Shore HOME LAUNCHING AND GAS DOCK PREPARE TO LAUNCH WATER SPORTS BOAT STORAGE Price List-Storage Wet Storage Dry Storage - No Use In & Out Valet Storage SERVICES Price List-Service Detailing Parts - Accessories",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2700,8 +2702,6 @@
       "website": "http://www.olympicbikeshop.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports",
         "mountain_biking",
         "road_cycling",
         "electric_transport"
@@ -2726,7 +2726,7 @@
       "evidence_snippet": "Olympic Bike Shop http://www.olympicbikeshop.com/ Olympic Bike Shop Bike shop offering rentals of mountain and road bikes.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports/water_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2905,7 +2905,6 @@
       "website": "https://pedegoelectricbikes.com/dealers/reno/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "off_road",
         "mountain_biking",
         "electric_transport"
@@ -2924,7 +2923,7 @@
       "evidence_snippet": "We are the region's foremost electric bike experts offering sales, rentals, accessories, and service.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -2936,7 +2935,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "off_road",
         "motorcycles",
         "mountain_biking",
@@ -2961,7 +2959,7 @@
       "evidence_snippet": "Visitors say this e-bike rental shop offers high-quality, well-maintained e-bikes that are perfect for exploring trails and scenic areas.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3240,8 +3238,12 @@
       "evidence_snippet": "Slopeside premium ski rental membership at Palisades Tahoe (and other resorts): curated, tuned skis waiting slopeside; $79 membership + $39/day or $599 unlimited season.",
       "status": "triaged",
       "confidence": "high",
-      "note": "EC review 2026-07-05: actual site is skiquiver.com (was quiversports.com). Membership-model ski rental open to the public.",
-      "triaged_at": "2026-07-05"
+      "note": "EC review 2026-07-05: actual site is skiquiver.com (was quiversports.com). Membership-model ski rental open to the public. Pass B 2026-08-01: snow_sports extracted (6 item(s); origin pretagged_confirmed).",
+      "triaged_at": "2026-07-05",
+      "activities": [
+        "ski_snowboard"
+      ],
+      "offers_season_lease": true
     },
     {
       "rank": 118,
@@ -3392,7 +3394,6 @@
       "website": "http://www.renohexayurt.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "road_cycling"
       ],
       "review_categories": [],
@@ -3414,7 +3415,7 @@
       "evidence_snippet": "Hexayurt Original Purchase Hexayurt Original Purchase Regular price $ 1,500.00 USD Regular price Sale price $ 1,500.00 USD Unit price / per OSS Hybrid Hexayurt (H10 Rental) OSS Hybrid Hexayurt (H10 Rental) Regular price $ 1,000.00 USD Regular price Sale price $ 1,000.00 USD Unit price / per OSS Original Hexayurt (H12 Rental) Sold out OSS Original Hexayurt (H12 Rental) Regular price $ 1,500.00 USD Regular price Sale p",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3603,7 +3604,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -3620,7 +3620,7 @@
       "evidence_snippet": "SWA Watersports - Lake Tahoe Boat Rentals http://www.swawatersports.com/homewood/ SWA Watersports - Lake Tahoe Boat Rentals SWA Watersports - Lake Tahoe Boat Rentals sports_coaching fishing_charter tour_agency travel_agency school educational_institution point_of_interest service establishment https://swawatersports.com/homewood/ Homewood | SWA Watersports Skip to content 1.775.400.6677 Home COVID Rentals Boat Rental",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3815,7 +3815,6 @@
       "website": "https://www.sierracyclesmith.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "mountain_biking",
         "road_cycling",
         "electric_transport"
@@ -3839,7 +3838,7 @@
       "evidence_snippet": "Sierra Cyclesmith Bicycle Shop https://www.sierracyclesmith.com/ Sierra Cyclesmith Bicycle Shop Reno bike shop featuring mountain bikes and e-bikes, plus rentals and repairs.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3850,8 +3849,7 @@
       "website": "https://www.sierradive.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -3866,7 +3864,7 @@
       "evidence_snippet": "Diving Equipment and Technical Equipment rentals Monthly Fun Dives Equipment Repairs Diving Travel and Lake Tahoe Diving Altitude Diving Nitrox and Trimix Diving Technical, Rebreather and Trimix Training, Instructor Training, Equipment & Service DSAT /PADI Gas Blender, Tec Deep Diver and Tec Trimix TDI Advanced Nitrox through Advanced Trimix KISS Rebreather Training Center Full CCR training in Lake Tahoe or at your l",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3877,8 +3875,7 @@
       "website": "http://www.sierramountainsurf.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -3891,7 +3888,7 @@
       "evidence_snippet": "Sierra Mountain Surf http://www.sierramountainsurf.com/ Sierra Mountain Surf Water-sports equipment rental service specializing in jet skis and jet boats for exploring Lake Tahoe.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3905,8 +3902,7 @@
         "snow_sports",
         "mountain_biking",
         "road_cycling",
-        "electric_transport",
-        "fishing"
+        "electric_transport"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -3926,7 +3922,7 @@
       "evidence_snippet": "Sierra Ski & Cycle Works https://sierraskiandcycleworks.com/ Sierra Ski & Cycle Works Ski and bicycle shop offering rentals, repairs, and retail sales, plus helpful staff.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed fishing - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3937,8 +3933,7 @@
       "website": "http://www.sierrasurfhouse.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -3951,7 +3946,7 @@
       "evidence_snippet": "SIERRA SURF HOUSE SOUTH LAKE TAHOE WAKESURF WAKE BOAT RENTALS TAHOE WATERSPORTS RENTALS LAKE TAHOE BOAT RENTALS TAHOE WAKE BOAT RENTALS TAHOE Location: 2435 Venice Dr E, South Lake Tahoe CA 96150 Contact sierrasurfhouse@gmail.com (757)-660-8198 https://www.sierrasurfhouse.com/boatspricing Team 1 Sierra Surf House 0 Skip to Content Sierra Surf House Boats/Pricing Local Reccomendations WHY WAKE-SURF?",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3962,9 +3957,7 @@
       "website": "https://www.skibutlers.com/locations/heavenly-south-lake-tahoe",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports",
-        "mountain_biking"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -3986,7 +3979,7 @@
       "evidence_snippet": "Ski Butlers Heavenly/South Lake Tahoe https://www.skibutlers.com/locations/heavenly-south-lake-tahoe Ski Butlers Heavenly/South Lake Tahoe Relaxed service for delivering rentals of ski and snowboard gear to hotels, as well as mountain slopes, slopeside or homes.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed water_sports/mountain_biking - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3997,9 +3990,7 @@
       "website": "https://www.skibutlers.com/locations/north-lake-tahoe",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports",
-        "mountain_biking"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4021,7 +4012,7 @@
       "evidence_snippet": "sporting_goods_store store point_of_interest service establishment https://www.skibutlers.com/snowboard-ski-rentals/north-lake-tahoe Snowboard & Ski Rentals | Northstar | Ski Butlers Skip to main content Go to homepage Close Our Locations North America Europe California Heavenly Palisades Tahoe Mammoth Limelight Mammoth Northstar/Truckee Canada Blue Mountain Tremblant Fairmont Tremblant Whistler Blackcomb Colorado As",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed water_sports/mountain_biking - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4067,7 +4058,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -4080,7 +4070,7 @@
       "evidence_snippet": "Ski Run Marina http://skirunmarina.com/ Ski Run Marina Ski Run Marina People say this marina offers a variety of restaurants, a beach, boat rides, parasailing, and jet ski rentals.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4239,8 +4229,7 @@
       "website": "https://southtahoekayak.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4256,7 +4245,7 @@
       "evidence_snippet": "South Tahoe Kayak and Paddleboard https://southtahoekayak.com/ South Tahoe Kayak and Paddleboard South Tahoe Kayak and Paddleboard point_of_interest service establishment https://southtahoekayak.com/ South Tahoe Kayak & Paddleboard rentals and tours | Book our [4th of July Fireworks Tour](/tours/4th-july-fireworks-tour/) Now Book our 4th of July Fireworks Tour Now South Tahoe Kayak & Paddleboard rentals and tours sou",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4421,7 +4410,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "road_cycling",
         "electric_transport"
       ],
@@ -4442,7 +4430,7 @@
       "evidence_snippet": "Sunnyside Marina & Watersport Rentals https://marinasunnyside.com/?utm_source=gmb&utm_medium=gmb&utm_campaign=gmb Sunnyside Marina & Watersport Rentals Longtime marina offering a variety of watercraft rentals, plus storage and repair services.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4453,8 +4441,7 @@
       "website": "https://synergywetsuits.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4475,7 +4462,7 @@
       "evidence_snippet": "New flagship wetsuit Designed to lead the line, the Vantage Pro is Synergy’s newest top-tier wetsu https://synergywetsuits.com/collections/womens-outlet-wetsuits-demos Women's Outlet Wetsuits Synergy Wetsuits Skip to content Free Shipping on orders over $199 (Continental US) Men Men Wetsuits Wetsuits Triathlon Full Sleeve Sleeveless Tops Bottoms Swimskins Swimskins Short Sleeve Sleeveless Shorts Apparel Apparel Trisu",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4487,7 +4474,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -4502,7 +4488,7 @@
       "evidence_snippet": "Tahoe Reel, Power & Paddle https://adventuretahoe.com/ TAHOE REEL, POWER, & PADDLE TAHOE REEL, POWER, & PADDLE People say this boat rental service offers well-maintained pontoon boats, jet skis, and kayaks, including glass-bottom options, with all necessary safety equipment provided.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4526,8 +4512,12 @@
       "evidence_snippet": "Downtown Truckee snowboard shop since 1994 with a 'Rentals & Repairs' page offering snowboard rentals and demos.",
       "status": "triaged",
       "confidence": "high",
-      "note": "EC review 2026-07-05: has rentals and demos.",
-      "triaged_at": "2026-07-05"
+      "note": "EC review 2026-07-05: has rentals and demos. Pass B 2026-08-01: snow_sports extracted (2 item(s); origin pretagged_confirmed).",
+      "triaged_at": "2026-07-05",
+      "activities": [
+        "ski_snowboard"
+      ],
+      "offers_demo": true
     },
     {
       "rank": 162,
@@ -4598,8 +4588,7 @@
       "website": "https://tahoeaquaticcenter.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4611,7 +4600,7 @@
       "evidence_snippet": "Tahoe Aquatic Center https://tahoeaquaticcenter.com/ Tahoe Aquatic Center Jet ski rental service providing speedy rides.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4622,8 +4611,7 @@
       "website": "https://www.tahoebeachco.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4644,7 +4632,7 @@
       "evidence_snippet": "toy_store clothing_store store point_of_interest service establishment https://www.tahoebeachco.com/ Tahoe Beach Company | Kings Beach Kayak Rentals & More Skip to primary navigation Skip to content Skip to footer Home Rentals Open Rentals Menu Floating Dock Hangout Water Hammock Hangout Sling Chair Float Stand Up Paddleboard Single Kayak Double Kayak Tandem Stand Up Paddleboard Kids Stand Up Paddleboard or Kayak 1 B",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4691,8 +4679,7 @@
       "website": "https://tahoeblueboatrentals.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4714,7 +4701,7 @@
       "evidence_snippet": "point_of_interest service establishment https://tahoeblueboatrentals.com/ Tahoe Blue Boat Rentals - Rent From Tahoe Blue, Support the local Home About us Boats FAQs Contact us Services Book now Skip to content Home About us Boats FAQs Contact us Services Book now Tahoe Blue Boat Rentals Book Online Now Tahoe Blue boat rentals is a family-owned company with 10+ years of experience, located on the north shore of Lake T",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4750,8 +4737,7 @@
       "website": "http://tahoecitykayak.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4769,7 +4755,7 @@
       "evidence_snippet": "Tahoe City Kayak and Paddleboard Shop http://tahoecitykayak.com/ Tahoe City Kayak and Paddleboard Shop Kayak and paddleboard rental shop featuring guided lake tours.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4780,8 +4766,7 @@
       "website": "http://www.tahoedaves.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4802,7 +4787,7 @@
       "evidence_snippet": "Tahoe Dave's Boardshop http://www.tahoedaves.com/ Tahoe Dave's Boardshop A wide selection of ski boards and other equipment, plus rentals and snow clothing.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed off_road - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4813,8 +4798,7 @@
       "website": "https://www.tahoedaves.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4835,7 +4819,7 @@
       "evidence_snippet": "People say this ski rental shop offers a wide selection of well-maintained gear and provides quick, efficient service.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed off_road - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4846,8 +4830,7 @@
       "website": "http://www.tahoedaves.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4868,7 +4851,7 @@
       "evidence_snippet": "sporting_goods_store store point_of_interest service establishment https://tahoedaves.com/ Tahoe Dave&#039;s &#8211; Skis & Boards Skip to content Tahoe Dave&#039;s Skis & Boards Rates Rentals &#038; Demos Daily ​Rentals Kids’ Seasonal Rentals Demo Ski Catalog Demo Snowboard Catalog Reserve Now Discounts Tuning &#038; Repairs Sales Ski Demo Sales Snowboard Demo Sales Snowshoe Sales Skateboard Sales Product Lines Loca",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed off_road - Snow-gear operator: no rental evidence for this category in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -4880,8 +4863,7 @@
       "rents_gear": true,
       "categories": [
         "snow_sports",
-        "off_road",
-        "road_cycling"
+        "off_road"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -4895,7 +4877,7 @@
       "evidence_snippet": "Tahoe Dirt Bikes http://tahoedirtbikes.com/ Tahoe Dirt Bikes Tahoe Dirt Bikes corporate_office point_of_interest establishment https://www.tahoedirtbikes.com/ Tahoe Dirt Bikes &#8211; Lake Tahoe&#039;s Best Adventure Rental Skip to content Tahoe Dirt Bikes Lake Tahoe&#039;s Best Adventure Rental Rental Options Photos and Testimonials Blog Contact Us FAQ Rental Options Photos and Testimonials Blog Contact Us FAQ Fill ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed road_cycling - Motorized dirt-bike operator: the road_cycling claim traces to the word 'bike'; no bicycle rental fleet.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5030,7 +5012,6 @@
       "website": "http://www.tahoeelectricbikerental.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "road_cycling",
         "electric_transport"
       ],
@@ -5046,7 +5027,7 @@
       "evidence_snippet": "Tahoe Electric Bike Rental http://www.tahoeelectricbikerental.com/ Tahoe Electric Bike Rental Tahoe Electric Bike Rental point_of_interest service establishment https://tahoeelectricbikerental.com/ Tahoe Electric Bike Rental | Lake Tahoe, Reno & Carson City Ebikes Skip to content Tahoe Electric Bike Rental Brought to you by Racer Menu Home About Burning Man Bike Rentals Electric Bike Styles FAQs Recommended Trails Co",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5126,7 +5107,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "camping_vehicles"
       ],
       "review_categories": [],
@@ -5139,7 +5119,7 @@
       "evidence_snippet": "Boats Set sail on the breathtaking waters of Lake Tahoe with our premium boat rental service!",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5150,8 +5130,7 @@
       "website": "https://tahoemarinesupply.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -5165,7 +5144,7 @@
       "evidence_snippet": "Return to shop (530) 583-0925 Home Boat Sales Used Premium Pre-Owned Boats For Sale Pro &#038; Rental Shop Tahoe City Marina Pro Shop Online Water Sports Pro Shop Private Captain Wake Surfing Buoy / Mooring Products Boater’s Guide Cart No products in the cart.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5339,7 +5318,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "road_cycling",
         "electric_transport"
       ],
@@ -5356,7 +5334,7 @@
       "evidence_snippet": "Tahoe Paddle Sports — Sand Harbor https://tahoepaddlesports.com/ Tahoe Paddle Sports - Sand Harbor Clear Kayaking Tahoe Paddle Sports - Sand Harbor Clear Kayaking adventure_sports_center tour_agency travel_agency sports_complex sports_activity_location point_of_interest service establishment https://tahoepaddlesports.com/ Tahoe Paddle Sports | Clear Kayak Tours on Lake Tahoe Skip to primary navigation Skip to content",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5368,7 +5346,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "road_cycling",
         "electric_transport"
       ],
@@ -5385,7 +5362,7 @@
       "evidence_snippet": "adventure_sports_center tour_agency travel_agency sports_complex sports_activity_location point_of_interest service establishment https://tahoepaddlesports.com/ Tahoe Paddle Sports | Clear Kayak Tours on Lake Tahoe Skip to primary navigation Skip to content Skip to footer Menu Home Submenu for Lake Tahoe Kayak Tours Sand Harbor Clear Kayak Tour Cave Rock Clear Kayak Tour View All Kayak Tours E Bike Rental Group Tours",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5419,8 +5396,7 @@
       "website": "https://www.tahoesledschool.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -5434,7 +5410,7 @@
       "evidence_snippet": "TAHOE SLED SCHOOL Lake Tahoe's Premier Snowmobile Rental & Guide Service Our Fleet 2023 Ski Doo G5 Summit X Expert Turbo 154 $550/Day 2022 Polaris RMK Khaos Matryx 155 $450/Day Book Now Book Now Tahoe Sled School info@tahoesledschool.com ©2022 by Tahoe Sled School.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed off_road - Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5445,9 +5421,7 @@
       "website": "http://www.tahoesnowbikerental.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "off_road",
-        "road_cycling"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -5465,7 +5439,7 @@
       "evidence_snippet": "Tahoe Snowbike Rental http://www.tahoesnowbikerental.com/ Tahoe Snowbike Rental Tahoe Snowbike Rental point_of_interest service establishment https://www.tahoesnowbikerental.com/ Timbersled Rental | Tahoe Snowbike Rental | Truckee top of page Home The Stable Pricing Terms and Conditions FAQ Calendar Gift Card Contact Apparel More Use tab to navigate through the menu items.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed off_road/road_cycling - Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5576,7 +5550,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "road_cycling"
       ],
       "review_categories": [],
@@ -5598,7 +5571,7 @@
       "evidence_snippet": "tour_agency travel_agency supplier store point_of_interest service establishment https://tahoesports.com/ Tahoe Sports | Boat & Jet Ski Rentals in Lake Tahoe Skip to primary navigation Skip to content Skip to footer Tahoe Sports is open for the 2026 Season.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5610,7 +5583,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "road_cycling"
       ],
       "review_categories": [],
@@ -5633,7 +5605,7 @@
       "evidence_snippet": "tour_agency travel_agency supplier store point_of_interest service establishment https://tahoesports.com/tahoekeysboatrentals/ Lake Tahoe Keys Powerboat Rentals | Tahoe Sports Skip to primary navigation Skip to content Skip to footer Tahoe Sports is open for the 2026 Season.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5669,8 +5641,7 @@
       "website": "https://www.tahoewaketubing.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -5684,7 +5655,7 @@
       "evidence_snippet": "Lake Tahoe Luxury Waketubing https://www.tahoewaketubing.com/ Tahoe Wake Tubing Boat Rentals Tahoe Wake Tubing Boat Rentals tourist_attraction tour_agency travel_agency sports_activity_location sports_club point_of_interest association_or_organization service establishment https://tahoewaketubing.com/ Lake Tahoe Boating Pictures 🏆 Five-Star Reviews 📅 Reserve Your Preferred Date ADA Accessibility Statement 🌊Luxury ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5695,8 +5666,7 @@
       "website": "http://www.tahoewaterman.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -5714,7 +5684,7 @@
       "evidence_snippet": "coffee_shop breakfast_restaurant cafe tour_agency travel_agency food_store store restaurant food point_of_interest service establishment https://www.tahoewaterman.com/ Tahoe Waterman Landing 0 Skip to Content COFFEE SHOP Paddle Rental & Experience Rentals Tours & Experience E-Foil Tahoe Youth Program Race Series Team Training & Classes Outrigger Practice SUP & Prone Workouts Fitness & Yoga Team Tahoe Waterman Plan yo",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5726,7 +5696,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -5745,7 +5714,7 @@
       "evidence_snippet": "Tahoe Waves Boat Rental http://www.tahoewaves.com/ Tahoe Waves Boat Rental Tahoe Waves Boat Rental point_of_interest service establishment https://tahoewaves.com/ Luxury Boat Rentals On Lake Tahoe - Tahoe Waves Boat Rental 530-429-2837 120 Grove Street, Tahoe City, CA 96145 View in Google Maps Home Rentals Multi-Day Lake Tahoe Boat Rentals Private & HOA Dock Delivery Hourly Boat Rentals in Tahoe City Hourly Jet Ski R",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -5914,8 +5883,12 @@
       "evidence_snippet": "Rentals page lists daily ski & snowboard packages (basic $40, demo/performance $60, youth $25) plus a-la-carte boards/boots/poles.",
       "status": "triaged",
       "confidence": "high",
-      "note": "Patch: confirmed renter via live fetch/search.",
-      "triaged_at": "2026-07-04"
+      "note": "Patch: confirmed renter via live fetch/search. Pass B 2026-08-01: snow_sports extracted (13 item(s); origin pretagged_confirmed).",
+      "triaged_at": "2026-07-04",
+      "activities": [
+        "ski_snowboard"
+      ],
+      "offers_demo": true
     },
     {
       "rank": 211,
@@ -5963,7 +5936,6 @@
       "website": "https://truckeeriverbikes.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "mountain_biking",
         "road_cycling",
         "electric_transport"
@@ -5984,7 +5956,7 @@
       "evidence_snippet": "Truckee River Bikes https://truckeeriverbikes.com/ Truckee River Bikes Bicycle shop offering rentals, especially electric models, for exploring nearby trails.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -6151,8 +6123,7 @@
       "website": "https://www.uplyfttahoe.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -6164,7 +6135,7 @@
       "evidence_snippet": "Uplyft Tahoe Jet Ski Rentals https://www.uplyfttahoe.com/ Uplyft Tahoe Jet Ski Rentals Uplyft Tahoe Jet Ski Rentals point_of_interest service establishment https://www.uplyfttahoe.com/ North Lake Tahoe Jet Ski Rentals | Uplyft Tahoe",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -6343,7 +6314,6 @@
       "website": "https://wetsuitoutlet.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "mountain_biking"
       ],
       "review_categories": [],
@@ -6364,7 +6334,7 @@
       "evidence_snippet": "Shop Wetsuits Under $199 Search Home Wetsuits Men&#x27;s Wetsuits Fullsleeve Sleeveless Two-Piece Under $199 Women&#x27;s Wetsuits Fullsleeve Sleeveless Two-Piece Under $199 Kid&#x27;s Wetsuits Fullsleeve Sleeveless Swimskins Men&#x27;s Swimskins Women&#x27;s Swimskins Wetsuit Demos Fullsleeve Sleeveless Apparel New Arrivals Men&#x27;s New Arrivals Women&#x27;s New Arrivals Men&#x27;s Apparel Jerseys Singlets Shorts ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -6375,8 +6345,7 @@
       "website": "https://www.wildsocietylt.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -6389,7 +6358,7 @@
       "evidence_snippet": "Wild Society Adventures https://www.wildsocietylt.com/ Wild Society Adventures Wild Society Adventures point_of_interest service establishment https://www.wildsocietylt.com/ Clear Kayak Rentals & Tours | Kings Beach, Lake Tahoe | Wild Society top of page Wild Society Log In Book Now Adventures All Adventures Adventure Add-Ons Adventure Style Quiz Waves of Kindness All Adventures Adventure Add-Ons Adventure Style Quiz",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -6803,8 +6772,7 @@
       "website": "https://www.rentaboattahoe.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -6822,7 +6790,7 @@
       "evidence_snippet": "Rent A Boat Lake Tahoe https://www.rentaboattahoe.com/ Rent A Boat Lake Tahoe Relaxed, respectful, professional, fun-loving staff at this rental service offering well-kept boats for excursions around Lake Tahoe.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -6877,7 +6845,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -6892,7 +6859,7 @@
       "evidence_snippet": "marina point_of_interest service establishment https://tahoekeysmarina.com/ Tahoe Keys Marina, South Lake Tahoe, California | Suntex Marinas Skip to main content facebook phone CUSTOMER PORTAL STRATEGIC PARTNERS BOOK A SLIP NOW BOAT RENTAL: (530) 544-8888 SUNTEX STORE PHONE: (530) 541-2155 Hit enter to search or ESC to close Search Close Search Menu BOATS + Wet Slips Dry Storage Book a Guest Slip Amenities Certified ",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7022,8 +6989,7 @@
       "website": "https://www.plumpjackinn.com/?utm_medium=organic&utm_source=google&utm_campaign=business-listing",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
-        "mountain_biking"
+        "snow_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -7036,7 +7002,7 @@
       "evidence_snippet": "resort_hotel ski_resort hotel sports_activity_location lodging point_of_interest establishment https://www.plumpjackinn.com/ PlumpJack Inn | North Lake Tahoe Hotel | Official Site Skip to content Menu Webcam Logo of PlumpJack Inn 6° / -1° Book Now Rooms & Suites PlumpJack Cafe View Menu The Tahoe Experience Things To Do events calendar Weddings Groups & Events Specials Gallery The Inn Shop Rentals About Us Careers FA",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed mountain_biking - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7068,8 +7034,7 @@
       "website": "http://www.tahoewakebusters.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -7084,7 +7049,7 @@
       "evidence_snippet": "Tahoe Wakebusters http://www.tahoewakebusters.com/ Tahoe Wakebusters Tahoe Wakebusters service establishment https://www.tahoewakebusters.com/ Lake Tahoe Boat Rentals | Tahoe WakeBusters Our Fleet Why Us Reviews About Contact Shop Book Now Our Fleet Why Us Reviews About Contact Shop Book Now Make Wakes.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7289,8 +7254,7 @@
       "website": "https://tahoecitymarina.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -7307,7 +7271,7 @@
       "evidence_snippet": "Tahoe City Marina https://tahoecitymarina.com/ Tahoe City Marina Tahoe City Marina marina point_of_interest service establishment https://www.tahoecitymarina.com/ Boat Rentals in Tahoe City | Tahoe City Marina Rentals Services About FAQs Contact Weather Web Cam Book Now Previous Next Your Lake Day Starts Here Boat Rentals in Tahoe City Book Now Why Rent from Tahoe City Marina?",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7338,8 +7302,7 @@
       "website": "http://tahoepaddleboards.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -7352,7 +7315,7 @@
       "evidence_snippet": "Tahoe Paddleboard http://tahoepaddleboards.com/ Tahoe Paddleboard Tahoe Paddleboard service establishment https://tahoepaddleboards.com/ Tahoe Paddleboards | Lake Tahoe - \"Delivered-to-Your-Door\" Paddle Board Rentals Lake Tahoe Skip to content Search for: Rentals About Blog FAQ Contact Search for: Rentals About Blog FAQ Contact Rentals About Blog FAQ Contact Home OnyxDm 2025-05-28T02:53:19+00:00 PARTY ON THE WATER!",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7701,7 +7664,6 @@
       "website": "https://www.tennisnation.com/reno-tennis-center/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "off_road"
       ],
       "review_categories": [],
@@ -7719,7 +7681,7 @@
       "evidence_snippet": "tennis_court sports_coaching sporting_goods_store athletic_field sports_activity_location store health school educational_institution sports_club point_of_interest association_or_organization establishment https://www.tennisnation.com/reno-tennis-center/ Reno Tennis Center: Courts & Facilities - Tennis Nation Skip to primary navigation Skip to main content Skip to footer Tennis Nation Be Relentless Pickleball Pickleb",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7730,7 +7692,6 @@
       "website": "https://www.dirtywheeltahoe.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "off_road",
         "road_cycling",
         "electric_transport"
@@ -7746,7 +7707,7 @@
       "evidence_snippet": "Dirty Wheel Tahoe https://www.dirtywheeltahoe.com/ Dirty Wheel Tahoe Dirty Wheel Tahoe service establishment https://www.dirtywheeltahoe.com/ Dirty Wheel Tahoe | E Dirt Bike Rentals | Truckee Tahoe top of page Dirty Wheel Tahoe Home Rentals Contact FAQ Gallery More Use tab to navigate through the menu items.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7758,7 +7719,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "off_road",
         "mountain_biking"
       ],
@@ -7778,7 +7738,7 @@
       "evidence_snippet": "Jet Ski Rental Lake Tahoe https://www.jetskirentallaketahoe.com/ Jet Ski Rental Lake Tahoe Jet Ski Rental Lake Tahoe service establishment https://www.jetskirentallaketahoe.com/ Jet Ski Rental Lake Tahoe | The Nicest & Fastest In The Lake Email: jetskirentallaketahoe@gmail.com Phone Number: (619) 538-8939 Home Rentals High-Speed Jet Ski Rentals Luxury High-Speed Jet Ski Rentals About Us Contact General Reservation Fo",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -7810,7 +7770,6 @@
       "website": "http://bluegraniteclimbing.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "rock_climbing"
       ],
       "review_categories": [],
@@ -7827,7 +7786,7 @@
       "evidence_snippet": "gym sports_activity_location health point_of_interest establishment https://bluegraniteclimbing.com/ Blue Granite Climbing Gym - Lake Tahoe Rock Climbing Gym Skip to main content Close Search Menu Waiver Home Crash Pad Rentals Day Use Punch Passes Membership Yoga &#038; Fitness Classes &#038; Private Lessons Youth Teams &#038; Clubs Homeschool Voucher FAQs Groups &#038; Parties Events &#038; Gatherings Community Clim",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8045,7 +8004,6 @@
       "website": "http://renoflyshop.com/",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -8063,7 +8021,7 @@
       "evidence_snippet": "People say this fly fishing shop offers a great selection of quality flies designed for local waters, along with rental kits and helpful advice on fishing spots.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8276,7 +8234,6 @@
       "website": "https://www.trekbikes.com/us/en_US/retail/reno/?y_source=1_MTAzMjk3NDY1MC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D",
       "rents_gear": true,
       "categories": [
-        "snow_sports",
         "off_road",
         "mountain_biking",
         "road_cycling",
@@ -8302,7 +8259,7 @@
       "evidence_snippet": "While your suspension is getting a refresh, we'll set you up with a complimentary two-day demo bike so you can keep riding while your bike is in the shop.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8333,7 +8290,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "motorcycles",
         "electric_transport"
       ],
@@ -8355,7 +8311,7 @@
       "evidence_snippet": "Home Watersport Activities Open Watersport Activities Menu Parasailing Boat Rentals Jet Ski Rentals Kaya, SUP Rental & More Water Taxi Sail Boat Charter Our Locations Open Our Locations Menu Timber Cove Marina Lakeside Marina Round Hill Pines Marina Camp Richardson Marina View All Locations FAQ More Open More Menu View All Locations Menu CAMP RICHARDSON MARINA RENTALS & ACTIVITIES BOAT RENTALS - JET SKI RENTALS - BEA",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8518,8 +8474,7 @@
       "website": "https://tahoeboatco.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -8535,7 +8490,7 @@
       "evidence_snippet": "Tahoe Boat co https://tahoeboatco.com/ Tahoe Boat co Tahoe Boat co service establishment https://www.tahoeboatco.com/ Home - Tahoe Boat Co - Lake Tahoe, Carson City, NV 0 Skip to Content Surf Lessons Boat Rental Book Now Open Menu Close Menu Surf Lessons Boat Rental Book Now Open Menu Close Menu Surf Lessons Boat Rental Book Now Lake Tahoe Boat Rental Tahoe Boat Co.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8619,8 +8574,6 @@
       "website": "https://troutcreekoutfitters.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -8639,7 +8592,7 @@
       "evidence_snippet": "gift_shop store point_of_interest establishment https://www.troutcreekoutfitters.com/ Trout Creek Outfitters Skip to content icon-X Close menu Shop Reports Trips Rentals Events Clearance Log in instagram Instagram Facebook YouTube Cart icon-X Close cart Order note Subtotal $0.00 Shipping, taxes, and discount codes calculated at checkout.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed water_sports/snow_sports - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -8735,7 +8688,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -8753,7 +8705,7 @@
       "evidence_snippet": "Marine Specialties Boat Sales and Service http://www.marine-specialties.com/ Marine Specialties Boat Sales and Service Watersports boat dealer for Nautique and Sanger models, plus equipment rentals.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -9135,8 +9087,7 @@
       "website": "http://www.tahoepowersports.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -9155,7 +9106,7 @@
       "evidence_snippet": "tour_agency travel_agency service establishment https://www.tahoepowersports.com/ 530-744-4207 Home Private Boat Charters Luxury Boat Rentals Capture the Fun Contact Reserve Now 530-744-4207 Home Private Boat Charters Luxury Boat Rentals Capture the Fun Contact Reserve Now We are open year around.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -9422,7 +9373,6 @@
       "rents_gear": true,
       "categories": [
         "water_sports",
-        "snow_sports",
         "fishing"
       ],
       "review_categories": [],
@@ -9441,7 +9391,7 @@
       "evidence_snippet": "Homewood High & Dry Marina https://www.homewoodmarina.net/ Homewood High & Dry Marina Homewood High & Dry Marina marina storage supplier store point_of_interest service establishment https://www.homewoodmarina.net/ Homewood High & Dry Marina, Lake Tahoe Boat Storage & Service Skip to main content email [email&#160;protected] Map 530.525.5966 Map Contact Marina Webcam $10.99/gal | camera Map Marina Webcam Book Boat St",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -10419,7 +10369,6 @@
         "snow_sports",
         "mountain_biking",
         "road_cycling",
-        "electric_transport",
         "fishing"
       ],
       "review_categories": [],
@@ -10438,7 +10387,7 @@
       "evidence_snippet": "Featured in Choose Your Travel Style Two different approaches to bike travel.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed electric_transport - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -11185,9 +11134,7 @@
       "website": "https://wildisland.com/paradise-pro-shop/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports",
-        "off_road"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -11203,7 +11150,7 @@
       "evidence_snippet": "Please view our online calendar for the most up to date operating hours.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports/off_road - Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -11515,8 +11462,7 @@
       "website": "https://www.surfnfoiltahoe.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -11529,7 +11475,7 @@
       "evidence_snippet": "Nathan  I spent a few different trips with friends trying to enjoy being behind ski boats, only to not really ever get to get good enough to enjoy it.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -11949,8 +11895,7 @@
       "website": "https://www.tahoesurfboat.com/",
       "rents_gear": true,
       "categories": [
-        "water_sports",
-        "snow_sports"
+        "water_sports"
       ],
       "review_categories": [],
       "rental_page_urls": [
@@ -11964,7 +11909,7 @@
       "evidence_snippet": "Tahoe Surf Boat https://www.tahoesurfboat.com/ Tahoe Surf Boat Tahoe Surf Boat point_of_interest service establishment https://www.tahoesurfboat.com/ Tahoe Surf Boat Rental top of page Home The Boats Pricing Terms and Conditions FAQ Location Availability Calendar Contact Us More Use tab to navigate through the menu items.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Category scrub: removed snow_sports - Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
       "triaged_at": "2026-06-30"
     },
     {
@@ -12676,5 +12621,698 @@
       "note": "EC review 2026-07-05: rents gear; website is diamondpeak.com rental page. Ski-resort prior: resorts nearly always rent.",
       "triaged_at": "2026-07-05"
     }
-  ]
+  ],
+  "categoryScrub": {
+    "applied": [
+      {
+        "key": "ChIJ4-IvaAZxmYARtBPCc8shjVI",
+        "name": "Flume Trail Bikes",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJiZahgDrfm4ARG93950wDe4I",
+        "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
+        "category": "water_sports",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJr81lwVkUmYARghRuPDYLA60",
+        "name": "High Sierra Cycling",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ1WuLO_N9mYARa9axpI-c0e8",
+        "name": "High Sierra Water Ski School",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJZSQyrBqbmYARCOrt-c8l9Yc",
+        "name": "Katoma Boat Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJpcL9nNfnm4ARJwMQXYtfUbI",
+        "name": "LS Boat Rentals - Donner Lake",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJqSpsKJFxmYARcscdz11UktE",
+        "name": "LS Boat Rentals - Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJoTZS5hhvmYARbh-OUipfjiQ",
+        "name": "Lake Shore Boats Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJVWZBYYOPmYAR_xt0WYQON0k",
+        "name": "Lake Tahoe Boat Rides",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+        "name": "Lake Tahoe Luxury Boat Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJHWLlJEyRmYARmnqvJTlgRBo",
+        "name": "Lake Tahoe Pontoons",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJBxU-wIxgmYARsSke3Ez3MXo",
+        "name": "North Lake Tahoe Boat Rental",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ8_oCjqZkmYARLdFYqALP_u8",
+        "name": "North Tahoe Paddle",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJfzHSBHV9mYARIT8np-2e_4A",
+        "name": "North Tahoe Watersports",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJSTGEgyx7mYARpkagCc9TK8A",
+        "name": "North Tahoe Watersports",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ1S2uDXV9mYARl_oxHYjBsPA",
+        "name": "North Tahoe Watersports Tahoe City Boat Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJSVwePtZ_mYARHh8lr4sJEcU",
+        "name": "Obexer's Water Sports",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ07CIU3R9mYARTEdAY-tT9Tg",
+        "name": "Olympic Bike Shop",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ07CIU3R9mYARTEdAY-tT9Tg",
+        "name": "Olympic Bike Shop",
+        "category": "water_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJEYfb0JkVmYAR9btp1bOWetQ",
+        "name": "Pedego Electric Bikes Reno",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJOTMlK0mPmYARuUiisyT708U",
+        "name": "Pine Nut Ebike Rentals South Lake Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJT8gOyzRHmYAR_pIFikqKxJE",
+        "name": "Reno Hexayurt",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ2ytQ03_Vm4AReD4NW1wne_4",
+        "name": "SWA Watersports - Lake Tahoe Boat Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ9WJuI_w_mYAR23aOhUAK3sA",
+        "name": "Sierra Cyclesmith Bicycle Shop",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJN5P-aoVAmYARBqPI792sXls",
+        "name": "Sierra Diving Center",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJlZtzS5VxmYARr41aqf9Kn-s",
+        "name": "Sierra Mountain Surf",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+        "name": "Sierra Ski & Cycle Works",
+        "category": "fishing",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJVbCLr9ttmA8RTDCg_LwdzV0",
+        "name": "Sierra Surf House",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJjU5vgAOQmYARZWhfi_FXn7A",
+        "name": "Ski Butlers Heavenly/South Lake Tahoe",
+        "category": "water_sports",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJjU5vgAOQmYARZWhfi_FXn7A",
+        "name": "Ski Butlers Heavenly/South Lake Tahoe",
+        "category": "mountain_biking",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJA2VHWIbfm4ARyNqBs2-GAEU",
+        "name": "Ski Butlers Northstar/Palisades Tahoe",
+        "category": "water_sports",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJA2VHWIbfm4ARyNqBs2-GAEU",
+        "name": "Ski Butlers Northstar/Palisades Tahoe",
+        "category": "mountain_biking",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ97RGLQmQmYARoMZiCJbBYBs",
+        "name": "Ski Run Marina",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJB2pWdNaPmYARsJbG6fsk5Ms",
+        "name": "South Tahoe Kayak and Paddleboard",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJO7BF1vZ9mYARZxfHHeZiCXs",
+        "name": "Sunnyside Marina & Watersport Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJkf2Q10u9mYAR5lhJ7iEIZwE",
+        "name": "Synergy Wetsuits",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJr8KGILqFmYAR9Io5VfHLwyg",
+        "name": "Tahoe Reel, Power & Paddle",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJL7wHjix7mYARRPWyDUf7lI0",
+        "name": "Tahoe Aquatic Center",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ29aIoVN7mYARNwACnbaZVTY",
+        "name": "Tahoe Beach Company",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJlbrt8Q9wmYARYruixzJunF0",
+        "name": "Tahoe Blue Boat Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJi0eh0nV9mYARmCTlc5MfYik",
+        "name": "Tahoe City Kayak and Paddleboard Shop",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJc-6tR-yOmYARNxSXTGmhdsQ",
+        "name": "Tahoe Dave's Boardshop",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJq7hAzxvfm4AR1KpsAkJLSNk",
+        "name": "Tahoe Dave's Skis & Boards",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJQ3A0TXR9mYARj3o0wJE-6_M",
+        "name": "Tahoe Dave's Skis & Boards",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Snow-gear operator: no rental evidence for this category in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJYbJ4aiXem4ARgHw0k0IyyiU",
+        "name": "Tahoe Dirt Bikes",
+        "category": "road_cycling",
+        "decision": "remove",
+        "note": "Motorized dirt-bike operator: the road_cycling claim traces to the word 'bike'; no bicycle rental fleet.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJYztGswQ_mYAR-1DoiY39h3s",
+        "name": "Tahoe Electric Bike Rental",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJg2bLLoQLmYAR4zouuu4xk_8",
+        "name": "Tahoe Luxury",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJH4LWWHR9mYARuTdZVvZ9k_c",
+        "name": "Tahoe Marine Supply",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJySseGz9xmYARtuM4OmGK1G4",
+        "name": "Tahoe Paddle Sports — Sand Harbor",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJJcZ34aSbmYARL8AlRsXZDuU",
+        "name": "Tahoe Paddle Sports",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ1YNUPVyhmYARFTF88U7uXd0",
+        "name": "Tahoe Sled School",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJJ0Wml7nnm4ARQzYJGGA5H-Y",
+        "name": "Tahoe Snowbike Rental",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJJ0Wml7nnm4ARQzYJGGA5H-Y",
+        "name": "Tahoe Snowbike Rental",
+        "category": "road_cycling",
+        "decision": "remove",
+        "note": "Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ97RGLQmQmYAR4yblqbMOXbI",
+        "name": "Tahoe Sports Ski Run Boat Company",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ0_Pg0Y2PmYARaruB5PP2M5Q",
+        "name": "Tahoe Sports Tahoe Keys Boat Rental",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJl8-H1OGPmYARrRJCYDUCkE4",
+        "name": "Lake Tahoe Luxury Waketubing",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJpWVWCE1jmYARGULCKQg4sJ0",
+        "name": "Tahoe Waterman's Landing",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ16lWevLhm4ARS1iyzJGWud4",
+        "name": "Tahoe Waves Boat Rental",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJG08rYgJ9mYARK7QUK0ob7SE",
+        "name": "Truckee River Bikes",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJKWiUL7BlmYARCMYFwnzatRY",
+        "name": "Uplyft Tahoe Jet Ski Rentals",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJMVZD8je9mYARn7oz3NB9fps",
+        "name": "Wetsuit Outlet",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJgTYWEC17mYARj2AvyfF7434",
+        "name": "Wild Society Adventures",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ_-5TXat6mYARCYfaxvb_aVg",
+        "name": "Rent A Boat Lake Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ0_Pg0Y2PmYARH5uyZfJE8Bo",
+        "name": "Tahoe Keys Marina",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJZ5DAu_TXJIgR7irwk2GeSMo",
+        "name": "PlumpJack Inn",
+        "category": "mountain_biking",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJC-M6c2mDmYARooZiRflQOuc",
+        "name": "Tahoe Wakebusters",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJH4LWWHR9mYARypcqpL18ETo",
+        "name": "Tahoe City Marina",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ61OIM8JdvisRals0bp9N-Kw",
+        "name": "Tahoe Paddleboard",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJgfqFQ-1AmYARdxg_shZp8lY",
+        "name": "Tennis Nation Racquet Sports",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJXcDVAiuAfIkR3b282FAnaj0",
+        "name": "Dirty Wheel Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJw_C0jV9K3ioRUXC7gO5M2a8",
+        "name": "Jet Ski Rental Lake Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJy44L9ZOPmYARNWA0jJ9Jadc",
+        "name": "Blue Granite Climbing Gym",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJN23nv8tAmYARvgNORU9WE2Y",
+        "name": "Reno Fly Shop",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJ6VGItV8_mYAR_2RlEpHcutA",
+        "name": "Trek Bicycle Reno",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJb6h9TYyFmYARfxDquuV848I",
+        "name": "Camp Richardson Beachside Inn",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJJ3ab3DcqFUERO5RPuK1cVVk",
+        "name": "Tahoe Boat co",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJDSEciMvfm4ARrtIEaXBeUV4",
+        "name": "Trout Creek Outfitters",
+        "category": "water_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJDSEciMvfm4ARrtIEaXBeUV4",
+        "name": "Trout Creek Outfitters",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJv41asuE-mYAR6TD34kRwZkU",
+        "name": "Marine Specialties Boat Sales and Service",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJo2vZT3R5mYARR7Z5_Zdcwms",
+        "name": "Tahoe Powersports, Inc.",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJHVBEJX7Vm4ARgxnBF0Loy9I",
+        "name": "Homewood High & Dry Marina",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJfbqzSWQB3IARKnzOXWEAbY4",
+        "name": "Orucase",
+        "category": "electric_transport",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJo8K10CE_mYAR7zQq2n41Fq4",
+        "name": "Paradise Pro Shop at Coconut Bowl",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJo8K10CE_mYAR7zQq2n41Fq4",
+        "name": "Paradise Pro Shop at Coconut Bowl",
+        "category": "off_road",
+        "decision": "remove",
+        "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJIS8f4SJAwGQRY_STjnFxYgY",
+        "name": "Surf n' Foil Tahoe",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      },
+      {
+        "key": "ChIJh3I2gyN9mYARmUWUbzCeYOM",
+        "name": "Tahoe Surf Boat",
+        "category": "snow_sports",
+        "decision": "remove",
+        "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere.",
+        "scrubbed_at": "2026-07-30"
+      }
+    ],
+    "updatedAt": "2026-07-30T17:31:41.186Z"
+  }
 }

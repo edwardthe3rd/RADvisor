@@ -1,0 +1,808 @@
+[
+  {
+    "place_id": "ChIJ4-IvaAZxmYARtBPCc8shjVI",
+    "name": "Flume Trail Bikes",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJiZahgDrfm4ARG93950wDe4I",
+    "name": "Gravity Haus Gear Rental — Haus Quiver Truckee",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "water_sports"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJr81lwVkUmYARghRuPDYLA60",
+    "name": "High Sierra Cycling",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJ1WuLO_N9mYARa9axpI-c0e8",
+    "name": "High Sierra Water Ski School",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJZSQyrBqbmYARCOrt-c8l9Yc",
+    "name": "Katoma Boat Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJpcL9nNfnm4ARJwMQXYtfUbI",
+    "name": "LS Boat Rentals - Donner Lake",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJqSpsKJFxmYARcscdz11UktE",
+    "name": "LS Boat Rentals - Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJoTZS5hhvmYARbh-OUipfjiQ",
+    "name": "Lake Shore Boats Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJVWZBYYOPmYAR_xt0WYQON0k",
+    "name": "Lake Tahoe Boat Rides",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+    "name": "Lake Tahoe Luxury Boat Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJHWLlJEyRmYARmnqvJTlgRBo",
+    "name": "Lake Tahoe Pontoons",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJBxU-wIxgmYARsSke3Ez3MXo",
+    "name": "North Lake Tahoe Boat Rental",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ8_oCjqZkmYARLdFYqALP_u8",
+    "name": "North Tahoe Paddle",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJfzHSBHV9mYARIT8np-2e_4A",
+    "name": "North Tahoe Watersports",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJSTGEgyx7mYARpkagCc9TK8A",
+    "name": "North Tahoe Watersports",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ1S2uDXV9mYARl_oxHYjBsPA",
+    "name": "North Tahoe Watersports Tahoe City Boat Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJSVwePtZ_mYARHh8lr4sJEcU",
+    "name": "Obexer's Water Sports",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ07CIU3R9mYARTEdAY-tT9Tg",
+    "name": "Olympic Bike Shop",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports",
+      "water_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJEYfb0JkVmYAR9btp1bOWetQ",
+    "name": "Pedego Electric Bikes Reno",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJOTMlK0mPmYARuUiisyT708U",
+    "name": "Pine Nut Ebike Rentals South Lake Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJT8gOyzRHmYAR_pIFikqKxJE",
+    "name": "Reno Hexayurt",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJ2ytQ03_Vm4AReD4NW1wne_4",
+    "name": "SWA Watersports - Lake Tahoe Boat Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ9WJuI_w_mYAR23aOhUAK3sA",
+    "name": "Sierra Cyclesmith Bicycle Shop",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJN5P-aoVAmYARBqPI792sXls",
+    "name": "Sierra Diving Center",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJlZtzS5VxmYARr41aqf9Kn-s",
+    "name": "Sierra Mountain Surf",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJrWqLVgSQmYAR0Q2mUtnaIDM",
+    "name": "Sierra Ski & Cycle Works",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "fishing"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJVbCLr9ttmA8RTDCg_LwdzV0",
+    "name": "Sierra Surf House",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJjU5vgAOQmYARZWhfi_FXn7A",
+    "name": "Ski Butlers Heavenly/South Lake Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "water_sports",
+      "mountain_biking"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJA2VHWIbfm4ARyNqBs2-GAEU",
+    "name": "Ski Butlers Northstar/Palisades Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "water_sports",
+      "mountain_biking"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJ97RGLQmQmYARoMZiCJbBYBs",
+    "name": "Ski Run Marina",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJB2pWdNaPmYARsJbG6fsk5Ms",
+    "name": "South Tahoe Kayak and Paddleboard",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJO7BF1vZ9mYARZxfHHeZiCXs",
+    "name": "Sunnyside Marina & Watersport Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJkf2Q10u9mYAR5lhJ7iEIZwE",
+    "name": "Synergy Wetsuits",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJr8KGILqFmYAR9Io5VfHLwyg",
+    "name": "Tahoe Reel, Power & Paddle",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJL7wHjix7mYARRPWyDUf7lI0",
+    "name": "Tahoe Aquatic Center",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ29aIoVN7mYARNwACnbaZVTY",
+    "name": "Tahoe Beach Company",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJlbrt8Q9wmYARYruixzJunF0",
+    "name": "Tahoe Blue Boat Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJi0eh0nV9mYARmCTlc5MfYik",
+    "name": "Tahoe City Kayak and Paddleboard Shop",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJc-6tR-yOmYARNxSXTGmhdsQ",
+    "name": "Tahoe Dave's Boardshop",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "off_road"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJq7hAzxvfm4AR1KpsAkJLSNk",
+    "name": "Tahoe Dave's Skis & Boards",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "off_road"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJQ3A0TXR9mYARj3o0wJE-6_M",
+    "name": "Tahoe Dave's Skis & Boards",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "off_road"
+    ],
+    "note": "Snow-gear operator: no rental evidence for this category in the cached pages."
+  },
+  {
+    "place_id": "ChIJYbJ4aiXem4ARgHw0k0IyyiU",
+    "name": "Tahoe Dirt Bikes",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "road_cycling"
+    ],
+    "note": "Motorized dirt-bike operator: the road_cycling claim traces to the word 'bike'; no bicycle rental fleet."
+  },
+  {
+    "place_id": "ChIJYztGswQ_mYAR-1DoiY39h3s",
+    "name": "Tahoe Electric Bike Rental",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJg2bLLoQLmYAR4zouuu4xk_8",
+    "name": "Tahoe Luxury",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJH4LWWHR9mYARuTdZVvZ9k_c",
+    "name": "Tahoe Marine Supply",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJySseGz9xmYARtuM4OmGK1G4",
+    "name": "Tahoe Paddle Sports — Sand Harbor",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJJcZ34aSbmYARL8AlRsXZDuU",
+    "name": "Tahoe Paddle Sports",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ1YNUPVyhmYARFTF88U7uXd0",
+    "name": "Tahoe Sled School",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "off_road"
+    ],
+    "note": "Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet."
+  },
+  {
+    "place_id": "ChIJJ0Wml7nnm4ARQzYJGGA5H-Y",
+    "name": "Tahoe Snowbike Rental",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "off_road",
+      "road_cycling"
+    ],
+    "note": "Motorized SNOW operator (snowmobile/Timbersled): the off_road/road_cycling claim traces to brand names and rider-experience wording, not to an ATV/UTV or bicycle rental fleet."
+  },
+  {
+    "place_id": "ChIJ97RGLQmQmYAR4yblqbMOXbI",
+    "name": "Tahoe Sports Ski Run Boat Company",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ0_Pg0Y2PmYARaruB5PP2M5Q",
+    "name": "Tahoe Sports Tahoe Keys Boat Rental",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJl8-H1OGPmYARrRJCYDUCkE4",
+    "name": "Lake Tahoe Luxury Waketubing",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJpWVWCE1jmYARGULCKQg4sJ0",
+    "name": "Tahoe Waterman's Landing",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ16lWevLhm4ARS1iyzJGWud4",
+    "name": "Tahoe Waves Boat Rental",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJG08rYgJ9mYARK7QUK0ob7SE",
+    "name": "Truckee River Bikes",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJKWiUL7BlmYARCMYFwnzatRY",
+    "name": "Uplyft Tahoe Jet Ski Rentals",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJMVZD8je9mYARn7oz3NB9fps",
+    "name": "Wetsuit Outlet",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJgTYWEC17mYARj2AvyfF7434",
+    "name": "Wild Society Adventures",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ_-5TXat6mYARCYfaxvb_aVg",
+    "name": "Rent A Boat Lake Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ0_Pg0Y2PmYARH5uyZfJE8Bo",
+    "name": "Tahoe Keys Marina",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJZ5DAu_TXJIgR7irwk2GeSMo",
+    "name": "PlumpJack Inn",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "mountain_biking"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJC-M6c2mDmYARooZiRflQOuc",
+    "name": "Tahoe Wakebusters",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJH4LWWHR9mYARypcqpL18ETo",
+    "name": "Tahoe City Marina",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJ61OIM8JdvisRals0bp9N-Kw",
+    "name": "Tahoe Paddleboard",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJgfqFQ-1AmYARdxg_shZp8lY",
+    "name": "Tennis Nation Racquet Sports",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJXcDVAiuAfIkR3b282FAnaj0",
+    "name": "Dirty Wheel Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJw_C0jV9K3ioRUXC7gO5M2a8",
+    "name": "Jet Ski Rental Lake Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJy44L9ZOPmYARNWA0jJ9Jadc",
+    "name": "Blue Granite Climbing Gym",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJN23nv8tAmYARvgNORU9WE2Y",
+    "name": "Reno Fly Shop",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJ6VGItV8_mYAR_2RlEpHcutA",
+    "name": "Trek Bicycle Reno",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Bicycle/e-bike operator: zero snow-gear signal (no ski/snowboard/snowshoe rental wording) in the cached pages."
+  },
+  {
+    "place_id": "ChIJb6h9TYyFmYARfxDquuV848I",
+    "name": "Camp Richardson Beachside Inn",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJJ3ab3DcqFUERO5RPuK1cVVk",
+    "name": "Tahoe Boat co",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJDSEciMvfm4ARrtIEaXBeUV4",
+    "name": "Trout Creek Outfitters",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "water_sports",
+      "snow_sports"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJv41asuE-mYAR6TD34kRwZkU",
+    "name": "Marine Specialties Boat Sales and Service",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJo2vZT3R5mYARR7Z5_Zdcwms",
+    "name": "Tahoe Powersports, Inc.",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJHVBEJX7Vm4ARgxnBF0Loy9I",
+    "name": "Homewood High & Dry Marina",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJfbqzSWQB3IARKnzOXWEAbY4",
+    "name": "Orucase",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "electric_transport"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJo8K10CE_mYAR7zQq2n41Fq4",
+    "name": "Paradise Pro Shop at Coconut Bowl",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports",
+      "off_road"
+    ],
+    "note": "Category unsupported by the business: no rental signal for this activity in the cached pages, and the business type does not plausibly offer it."
+  },
+  {
+    "place_id": "ChIJIS8f4SJAwGQRY_STjnFxYgY",
+    "name": "Surf n' Foil Tahoe",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  },
+  {
+    "place_id": "ChIJh3I2gyN9mYARmUWUbzCeYOM",
+    "name": "Tahoe Surf Boat",
+    "keep_categories": [],
+    "review_categories": [],
+    "remove_categories": [
+      "snow_sports"
+    ],
+    "note": "Water/boat operator: the snow_sports claim traces to 'jet ski'/'water ski' wording in the cached pages, not to any snow gear. No snowboard/snowshoe/snowmobile/nordic signal anywhere."
+  }
+]

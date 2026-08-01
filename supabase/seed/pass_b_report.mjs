@@ -12,6 +12,7 @@
 import fs from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { PRICE_FIELDS } from "./pass_b_vocab.mjs";
 
 const seedDir = dirname(fileURLToPath(import.meta.url));
 const P = (f) => join(seedDir, f);
@@ -43,7 +44,7 @@ const priceCover = new Map(); // tier -> count of items carrying it
 const itemsPerOp = [];
 const allNullPriceOps = [];
 const needsReviewOps = [];
-const PRICE_FIELDS = ["price_hourly", "price_half_day", "price_full_day", "price_multi_day", "price_weekly", "deposit"];
+// Shared with the applier via pass_b_vocab.mjs — do not re-declare a local copy here.
 
 let totalItems = 0, demoFlagged = 0, leaseFlagged = 0, addonCount = 0;
 for (const r of results) {
