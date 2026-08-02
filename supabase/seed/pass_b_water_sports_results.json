@@ -1,0 +1,444 @@
+{
+  "category": "water_sports",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+      "place_id": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+      "name": "Lake Tahoe Luxury Boat Rentals",
+      "website": "http://laketahoeluxuryboatrentals.com/",
+      "category": "water_sports",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "A division of SWA Watersports. Multi-day bareboat rentals delivered to lakefront vacation homes, plus a Hyatt Regency counter. The operator ALSO runs Thunder Cloud luxury charters and fishing charters — those are captained products and are deliberately not extracted (00_general §5 take-away rule, water_sports captained-charter rule). Rates are published as explicit per-day figures that step down with duration, which is exactly the shape price_multi_day is defined for. Minimum rental is 2 days, so price_full_day is null throughout.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "2023 24' Mastercraft NXT",
+          "subcategory": "boat",
+          "brand": "Mastercraft",
+          "model": "NXT",
+          "size": "24 ft",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "price_multi_day": 1950,
+          "attributes": {
+            "gear_type": "wakesurf_boat",
+            "capacity_people": 10,
+            "operation_mode": "bareboat",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/boats/2023-24-mastercraft-nxt",
+          "description": "400hp wake boat, capacity 10. Published daily rates step down by duration: 2-4 days $1,950/day, 5-6 days $1,850/day, 7+ days $1,750/day. The 2-4 day figure is recorded as the multi-day per-day rate; there is no single-day option. Delivered to lakefront vacation homes."
+        },
+        {
+          "name": "2012 27' Bennington RCL Sport",
+          "subcategory": "boat",
+          "brand": "Bennington",
+          "model": "RCL Sport",
+          "size": "27 ft",
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "price_multi_day": null,
+          "attributes": {
+            "gear_type": "pontoon",
+            "operation_mode": "bareboat",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/boats/2012-27-bennington-rcl-sport",
+          "description": "Luxury pontoon in the multi-day delivered fleet. Rate not published on the index page; the fleet uses the same duration-tiered daily-rate structure."
+        },
+        {
+          "name": "2016 24' Cobalt WSS",
+          "subcategory": "boat",
+          "brand": "Cobalt",
+          "model": "WSS",
+          "size": "24 ft",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "price_multi_day": null,
+          "attributes": {
+            "gear_type": "bowrider",
+            "operation_mode": "bareboat",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Open-bow cruiser in the multi-day delivered fleet."
+        },
+        {
+          "name": "2015 26' Cobalt SD",
+          "subcategory": "boat",
+          "brand": "Cobalt",
+          "model": "SD",
+          "size": "26 ft",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "bowrider",
+            "operation_mode": "bareboat",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Open-bow cruiser in the multi-day delivered fleet."
+        },
+        {
+          "name": "2015 25' Cobalt R5",
+          "subcategory": "boat",
+          "brand": "Cobalt",
+          "model": "R5",
+          "size": "25 ft",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "bowrider",
+            "operation_mode": "bareboat",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Open-bow cruiser in the multi-day delivered fleet."
+        },
+        {
+          "name": "2010 24' Cobalt 242",
+          "subcategory": "boat",
+          "brand": "Cobalt",
+          "model": "242",
+          "size": "24 ft",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "bowrider",
+            "operation_mode": "bareboat",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Open-bow cruiser in the multi-day delivered fleet."
+        },
+        {
+          "name": "2005 22' Cobalt 220",
+          "subcategory": "boat",
+          "brand": "Cobalt",
+          "model": "220",
+          "size": "22 ft",
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "bowrider",
+            "operation_mode": "bareboat",
+            "quality_grade": "basic",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Smallest and oldest boat in the multi-day delivered fleet."
+        },
+        {
+          "name": "2019 Sea-Doo GTI",
+          "subcategory": "jet_ski",
+          "brand": "Sea-Doo",
+          "model": "GTI",
+          "size": null,
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "jet_ski",
+            "operation_mode": "bareboat",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Listed by the operator under Water Toys; rented multi-day alongside the boat fleet."
+        },
+        {
+          "name": "Tarpon 120 Kayak",
+          "subcategory": "kayak",
+          "brand": "Wilderness Systems",
+          "model": "Tarpon 120",
+          "size": "12 ft",
+          "skill_level": "all",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "kayak",
+            "capacity_people": 1,
+            "hull_type": "hard_shell",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/water-toys/tarpon-120-kayak",
+          "description": "Single sit-on-top kayak, delivered with the multi-day package."
+        },
+        {
+          "name": "Tarpon 135T Tandem Kayak",
+          "subcategory": "kayak",
+          "brand": "Wilderness Systems",
+          "model": "Tarpon 135T",
+          "size": "13.5 ft",
+          "skill_level": "all",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "kayak",
+            "capacity_people": 2,
+            "hull_type": "hard_shell",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/rentals",
+          "description": "Tandem sit-on-top kayak, delivered with the multi-day package."
+        },
+        {
+          "name": "Glide O2 Paddle Board",
+          "subcategory": "paddleboard",
+          "brand": "Glide",
+          "model": "O2",
+          "size": null,
+          "skill_level": "all",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "paddleboard",
+            "capacity_people": 1,
+            "hull_type": "inflatable",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.laketahoeluxuryboatrentals.com/water-toys/glide-o2-paddle-board",
+          "description": "Inflatable paddle board, delivered with the multi-day package."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "water_sports",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gearhutreno.com/",
+      "note": "Gear Hut is solely a CONSIGNMENT SHOP — it sells used gear on behalf of owners and states plainly that it does not buy outright. Boats appear only as consignment intake ('email for boat consignment quotes/drop off appointments'), which is inventory for sale, not rental. The only rental on the entire site is bear canisters.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJz27tiZ-amYARUgJHvRMubbg",
+      "place_id": "ChIJz27tiZ-amYARUgJHvRMubbg",
+      "name": "Action Watersports at Lakeside Marina",
+      "website": "http://www.action-watersports.com/",
+      "category": "water_sports",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "South Lake Tahoe marina counter — the archetypal Tahoe water operator and the shape the category was missing (the only prior water extraction was an atypical multi-day delivered luxury fleet). Everything is priced HOURLY. Launch is directly at the marina, so this is take-away rental, not a delivered fleet. All rentals include instruction and a life vest. Parasailing, public cruises, the Windsong sailing yacht tour, and the water taxi are guided/captained products and are deliberately NOT extracted (00_general §5 take-away rule). NOTE: rates genuinely differ by location here — Round Hill Pines is $5/hr cheaper across the board and does not carry the SUP bike or e-scooter — unlike CV Sports, whose four counters were byte-identical. The site states each location is independently owned and operated.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Single Kayak",
+          "subcategory": "kayak",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 35,
+          "attributes": {
+            "gear_type": "kayak",
+            "capacity_people": 1,
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Published as \"Starting at $35/hr\" at Lakeside Marina. Launches directly from the marina."
+        },
+        {
+          "name": "Double Kayak",
+          "subcategory": "kayak",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 45,
+          "attributes": {
+            "gear_type": "kayak",
+            "capacity_people": 2,
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Tandem kayak, \"Starting at $45/hr\" at Lakeside Marina."
+        },
+        {
+          "name": "Stand Up Paddle Board",
+          "subcategory": "paddleboard",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 40,
+          "attributes": {
+            "gear_type": "paddleboard",
+            "capacity_people": 1,
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "\"Starting at $40/hr\" at Lakeside Marina."
+        },
+        {
+          "name": "2-Person Pedal Boat",
+          "subcategory": "boat",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 45,
+          "attributes": {
+            "gear_type": "pedal_boat",
+            "capacity_people": 2,
+            "operation_mode": "bareboat",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Human-powered pedal boat, \"Starting at $45/hr\" at Lakeside Marina."
+        },
+        {
+          "name": "4-Person Pedal Boat",
+          "subcategory": "boat",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 60,
+          "attributes": {
+            "gear_type": "pedal_boat",
+            "capacity_people": 4,
+            "operation_mode": "bareboat",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Human-powered pedal boat, \"Starting at $60/hr\" at Lakeside Marina."
+        },
+        {
+          "name": "SUP Surf Bike",
+          "subcategory": "paddleboard",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 55,
+          "attributes": {
+            "gear_type": "sup_bike",
+            "capacity_people": 1,
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Pedal-driven bike mounted on a stand-up paddleboard hull, \"Starting at $55/hr\". Offered at Lakeside and Timber Cove but NOT at Round Hill Pines."
+        },
+        {
+          "name": "SUP Electric Surf Scooter",
+          "subcategory": "paddleboard",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 65,
+          "attributes": {
+            "gear_type": "sup_e_scooter",
+            "capacity_people": 1,
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Instruction and life vest",
+              "price": 0
+            }
+          ],
+          "source_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+          "description": "Motorised stand-up board, \"Starting at $65/hr\" — the priciest paddle-craft in the fleet. Offered at Lakeside and Timber Cove but NOT at Round Hill Pines."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJQc7aFQSQmYAR-OvmOAaFzzk",
+      "place_id": "ChIJQc7aFQSQmYAR-OvmOAaFzzk",
+      "name": "Action Watersports at Timber Cove Marina",
+      "website": "http://www.action-watersports.com/",
+      "category": "water_sports",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "needs_review",
+      "checked_url": "https://action-watersports.com/kayak-paddle-board-rentals/",
+      "note": "ACTION: confirm whether this location is permanently closed, and if so merge it into the Lakeside Marina row rather than leaving a live operator page for an address that cannot be rented from. The site carries a persistent site-wide banner — \"We are no longer operating out of Timber Cove. Please see our Lakeside Marina location for rentals.\" — yet the same pages still publish a complete Timber Cove rate card (single kayak $35/hr, double $45, SUP $40, pedal boats $45/$60, SUP bike $55, SUP e-scooter $65) and a working phone number. Stale rate content behind a closure banner is a genuine trap: extracting it would create a full inventory for a counter that no longer exists. Parked rather than extracted, and NOT demoted — the operator itself is unquestionably a renter, just not at this address.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T16:28:30.397Z",
+  "count": 4
+}

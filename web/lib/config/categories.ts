@@ -46,6 +46,7 @@ export const CATEGORIES = [
       { slug: "mountain_bike", label: "Mountain Bike" },
       { slug: "ebike_mtb", label: "E-MTB" },
       { slug: "fat_bike", label: "Fat Bike" }, // incl. fat-tire "snow bikes" (human/e-assist); winter `fat_bike` activity
+      { slug: "accessory", label: "Accessories" }, // cluster-wide — see road_cycling
       // Demos/leases are operator-level flags (offers_demo / offers_season_lease), not subcategories — see §3b.
     ],
   },
@@ -60,9 +61,16 @@ export const CATEGORIES = [
       { slug: "cruiser_bike", label: "Cruiser Bike" },
       { slug: "tandem_bike", label: "Tandem Bike" },
       { slug: "kids_bike", label: "Kids Bike" },
+      // Added 2026-08-01 from live rate cards during Pass B calibration (road_cycling.md §6).
+      { slug: "surrey", label: "Surrey (Pedal Quadricycle)" }, // Tahoe Bike Co: 2-pedal & 4-pedal
+      { slug: "trike", label: "Adult Trike" }, // Anderson's: "ADULT TRIKES — 3-Wheel Bike"
       // Accessories — shown as chips but don't drive browse-category membership.
       { slug: "bike_trailer", label: "Bike Trailer" },
       { slug: "bike_rack", label: "Bike Rack" },
+      // `accessory` is cluster-wide (all four cycling categories) for small gear an operator
+      // prices as a STANDALONE rental rather than a bundled add-on — e.g. Tahoe Bike Co's
+      // "Child Seat $3/hr, $10/half, $12/day". Bundled extras stay in `addons`.
+      { slug: "accessory", label: "Accessories" },
       // Demos/leases are operator-level flags (offers_demo / offers_season_lease), not subcategories — see §3b.
     ],
   },
@@ -70,7 +78,10 @@ export const CATEGORIES = [
     slug: "burning_man_bikes",
     label: "Burning Man Bikes",
     icon: "bike",
-    subcategories: [{ slug: "playa_bike", label: "Playa Bikes" }],
+    subcategories: [
+      { slug: "playa_bike", label: "Playa Bikes" },
+      { slug: "accessory", label: "Accessories" }, // cluster-wide — see road_cycling
+    ],
   },
   {
     slug: "water_sports",
@@ -132,11 +143,20 @@ export const CATEGORIES = [
   },
   {
     slug: "motorcycles",
-    label: "Motorcycles",
+    label: "Motorcycles & Road Rentals",
     icon: "bike",
+    // Street-legal, road-going rentals. RESOLVED 2026-08-01 (Pass B calibration): this category
+    // also owns licence-free road vehicles, which previously had no home anywhere in the taxonomy
+    // and were being dropped. The dividing line from off_road is street-legality, not engine or
+    // wheel count; the line from electric_transport is the power source.
     subcategories: [
       { slug: "street_moto", label: "Street Motorcycles" },
       { slug: "adventure_moto", label: "Adventure / Dual-Sport" },
+      // Rolling Freedom (Stateline NV) rents 3+ Polaris Slingshots and Honda Ruckus mopeds and
+      // advertises that neither needs a specialised licence — which is exactly what separates
+      // them from street_moto. Both are real, priced, take-away rentals.
+      { slug: "autocycle", label: "Autocycles (Slingshot, Spyder)" }, // 3-wheel road vehicles
+      { slug: "moped_scooter", label: "Mopeds & Scooters" }, // gas, sit-down, small-displacement
     ],
   },
   {
@@ -212,6 +232,7 @@ export const CATEGORIES = [
       { slug: "onewheel", label: "Onewheel" },
       { slug: "euc", label: "Electric Unicycle (EUC)" },
       { slug: "segway", label: "Segway" },
+      { slug: "accessory", label: "Accessories" }, // cluster-wide — see road_cycling
     ],
   },
   {

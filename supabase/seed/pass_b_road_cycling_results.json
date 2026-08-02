@@ -20,8 +20,241 @@
       "operator_status": null,
       "items": [],
       "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "place_id": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "name": "Anderson's Bicycle Rental",
+      "website": "http://www.andersonsbicyclerental.com/",
+      "category": "road_cycling",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "South Lake Tahoe rental-only shop at the head of the National Forest Bike Trail, fleet of 300+. Hourly and half-day are both first-class tiers here and both are published for every item, with pro-rating by the half hour after the first hour. Helmets, locks and maps are included free with every rental. Rates are stated to be unchanged in 20+ years.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Women's Sport Comfort Bike",
+          "subcategory": "cruiser_bike",
+          "brand": null,
+          "model": null,
+          "size": "S / M / L",
+          "skill_level": "beginner",
+          "price_hourly": 12,
+          "price_half_day": 36,
+          "attributes": {
+            "gear_type": "cruiser_bike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            },
+            {
+              "name": "Trail map",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Small, medium and large frames. Prorated after the first hour minimum; after the fourth hour all bikes prorate every 15 minutes at half the rental rate."
+        },
+        {
+          "name": "Adult Tandem",
+          "subcategory": "tandem_bike",
+          "brand": null,
+          "model": null,
+          "size": "S / L",
+          "skill_level": "intermediate",
+          "price_hourly": 18,
+          "price_half_day": 54,
+          "attributes": {
+            "gear_type": "tandem_bike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Two-rider bike, small and large frames."
+        },
+        {
+          "name": "Adult Trike (3-Wheel Bike)",
+          "subcategory": "trike",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 12,
+          "price_half_day": 36,
+          "attributes": {
+            "gear_type": "trike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Upright adult three-wheeler, rented for stability rather than sport. This SKU is why the `trike` subcategory was added on 2026-08-01."
+        },
+        {
+          "name": "Girls / Boys Kids Bike",
+          "subcategory": "kids_bike",
+          "brand": null,
+          "model": null,
+          "size": "16 in / 20 in / 24 in",
+          "skill_level": "beginner",
+          "price_hourly": 10,
+          "price_half_day": 30,
+          "attributes": {
+            "gear_type": "kids_bike",
+            "suspension": "rigid",
+            "wheel_size": "16",
+            "is_kids": true,
+            "quality_grade": "basic",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Kids bikes in 16-, 20- and 24-inch wheel sizes, usually for children under 10. The 16-inch option is why that value was added to the wheel_size vocabulary."
+        },
+        {
+          "name": "Trail-A-Bike Attachment",
+          "subcategory": "bike_trailer",
+          "brand": null,
+          "model": null,
+          "size": "S / L",
+          "skill_level": "beginner",
+          "price_hourly": 10,
+          "price_half_day": 30,
+          "attributes": {
+            "gear_type": "bike_trailer",
+            "is_kids": true,
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Attaches behind an adult comfort bike that is rented separately; usually for children between 4 and 6. Priced per attachment."
+        },
+        {
+          "name": "Child Trailer",
+          "subcategory": "bike_trailer",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 10,
+          "price_half_day": 30,
+          "attributes": {
+            "gear_type": "bike_trailer",
+            "is_kids": true,
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Towed trailer accommodating two small children under 100 lbs combined. Priced per attachment. The operator also rents pet trailers."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "place_id": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "road_cycling",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "One human-powered model in an otherwise electric summer fleet.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "7 Speed Comfort Bike",
+          "subcategory": "cruiser_bike",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": 45,
+          "attributes": {
+            "gear_type": "cruiser_bike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://gondolaskitahoe.com/bike-rentals/",
+          "description": "Step-through comfort frame for casual riding on the Tahoe paths."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "road_cycling",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gearhutreno.com/",
+      "note": "The shop explicitly refuses road bikes even for consignment ('No road/cycling bikes or gear'), so there is certainly no road rental.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
     }
   ],
-  "ranAt": "2026-08-02T06:49:29.080Z",
-  "count": 1
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 4
 }

@@ -35,7 +35,14 @@ export const PRICE_FIELDS = [
   "price_half_day",
   "price_full_day",
   "price_multi_day",
+  // price_weekend and price_monthly added 2026-08-01 after FOUR independent waves lost published
+  // prices to prose. Weekend: Carson City's gear library prints DAY/WEEKEND/WEEK columns — a
+  // weekend is the most common recreational rental window and had nowhere to go. Monthly: Gear Hut
+  // prices bear canisters $3/night, $15/week, $35/month. Both are directly evidenced, trivially
+  // comparable, and cheaper than continuing to bury real numbers in `description`.
+  "price_weekend",
   "price_weekly",
+  "price_monthly",
   "price_season",
   "deposit",
 ];
@@ -53,7 +60,8 @@ const RENTAL_TYPES = ["rental", "demo", "season_lease", "package"];
 
 const CYCLING_CORE_ATTRIBUTES = {
   gear_type: null,
-  wheel_size: ["20", "24", "26", "27.5", "29", "650b", "700c"],
+  // "16" added 2026-08-01 from a live rate card: Anderson's rents kids bikes in 16"/20"/24".
+  wheel_size: ["16", "20", "24", "26", "27.5", "29", "650b", "700c"],
   suspension: ["rigid", "hardtail", "full"],
   quality_grade: ["basic", "standard", "performance"],
   rental_type: ["rental", "demo", "season_lease"],
@@ -102,6 +110,10 @@ export const CATEGORY_VOCAB = {
       "wakeboard", "wakesurf_board", "water_skis", "kneeboard", "tow_rope",
       "foilboard", "foil_wing", "efoil",
       "pontoon", "bowrider", "wakesurf_boat", "ski_boat", "sailboat", "pedal_boat",
+      // Added 2026-08-01 from Action Watersports' live rate card: a pedal-driven bike on a SUP
+      // hull ($55/hr) and a motorised SUP ($65/hr). Both are real priced SKUs and neither is a
+      // paddleboard or an efoil. Filed under the `paddleboard` subcategory.
+      "sup_bike", "sup_e_scooter",
       "wetsuit", "drysuit", "pfd", "paddle", "dry_bag", "water_helmet",
       "scuba_bcd", "regulator", "dive_tank", "mask_fins_snorkel",
     ],
@@ -138,13 +150,14 @@ export const CATEGORY_VOCAB = {
   road_cycling: {
     subcategories: [
       "road_bike", "gravel_bike", "cruiser_bike", "tandem_bike", "kids_bike",
-      // `surrey` = pedal-powered multi-seat quadricycle (2-pedal / 4-pedal). A real, priced
-      // Tahoe rental product with no slug in categories.ts — see road_cycling.md §6.
-      "surrey",
+      // `surrey` = pedal-powered multi-seat quadricycle (2-pedal / 4-pedal); `trike` = upright
+      // adult three-wheeler. Both are real, separately-priced Tahoe rental products with no slug
+      // in categories.ts — see road_cycling.md §6.
+      "surrey", "trike",
       "bike_trailer", "bike_rack", "accessory",
     ],
     gear_types: [
-      "road_bike", "gravel_bike", "cruiser_bike", "tandem_bike", "kids_bike", "surrey",
+      "road_bike", "gravel_bike", "cruiser_bike", "tandem_bike", "kids_bike", "surrey", "trike",
       "helmet", "lock", "bike_rack", "bike_trailer", "child_seat", "repair_kit",
     ],
     attributes: { ...CYCLING_CORE_ATTRIBUTES },
@@ -188,14 +201,20 @@ export const CATEGORY_VOCAB = {
   },
 
   motorcycles: {
-    subcategories: ["street_moto", "adventure_moto"],
-    gear_types: ["street_moto", "adventure_moto", "helmet", "riding_gear", "luggage", "trailer"],
+    // autocycle + moped_scooter added 2026-08-01: licence-free road vehicles (Polaris Slingshot,
+    // Can-Am Spyder, Honda Ruckus) had no home in the taxonomy and were being dropped entirely.
+    // The dividing line from off_road is street-legality; from electric_transport, power source.
+    subcategories: ["street_moto", "adventure_moto", "autocycle", "moped_scooter"],
+    gear_types: [
+      "street_moto", "adventure_moto", "autocycle", "moped_scooter",
+      "helmet", "riding_gear", "luggage", "trailer",
+    ],
     attributes: {
       gear_type: null,
       quality_grade: ["basic", "standard", "performance"],
       rental_type: ["rental", "demo", "season_lease"],
-      // is_kids deliberately absent: both subcategories require a motorcycle licence, so it
-      // would be a guaranteed empty facet (motorcycles.md §3.1).
+      // is_kids deliberately absent: every subcategory is a licensed road vehicle with a minimum
+      // driving age — a guaranteed empty facet (motorcycles.md §3.1).
     },
   },
 

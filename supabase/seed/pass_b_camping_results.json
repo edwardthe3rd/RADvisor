@@ -1,0 +1,82 @@
+{
+  "category": "camping",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "camping",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Reno consignment gear shop whose ONLY rental product is bear canisters — precisely the case camping.md §6 anticipated ('do not skip an operator whose entire fleet is bear canisters'). Eight canisters across three models, rented nightly, weekly or monthly, first come first served with payment at reservation. Everything else on the site is used-gear consignment SALES.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "BearVault BV500 Bear Canister",
+          "subcategory": "cooking",
+          "brand": "BearVault",
+          "model": "BV500",
+          "size": null,
+          "skill_level": "all",
+          "price_full_day": 3,
+          "price_weekly": 15,
+          "attributes": {
+            "gear_type": "bear_canister",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.gearhutreno.com/rent",
+          "description": "Largest canister, 3 units in the fleet. Rates are $3/night, $15/week and $35/month; the monthly rate has no matching price tier and is recorded here. Most national parks and wilderness areas now require a canister for backcountry travel. Reservations book out in summer."
+        },
+        {
+          "name": "BearVault BV450 Bear Canister",
+          "subcategory": "cooking",
+          "brand": "BearVault",
+          "model": "BV450",
+          "size": null,
+          "skill_level": "all",
+          "price_full_day": 3,
+          "price_weekly": 15,
+          "attributes": {
+            "gear_type": "bear_canister",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.gearhutreno.com/rent",
+          "description": "Smaller weekend-size canister, 3 units in the fleet. $3/night, $15/week, $35/month."
+        },
+        {
+          "name": "Backpackers Cache Bear Canister",
+          "subcategory": "cooking",
+          "brand": "Backpackers Cache",
+          "model": "Backpackers Cache",
+          "size": null,
+          "skill_level": "all",
+          "price_full_day": 3,
+          "price_weekly": 15,
+          "attributes": {
+            "gear_type": "bear_canister",
+            "quality_grade": "basic",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://www.gearhutreno.com/rent",
+          "description": "Hard-sided canister, 2 units in the fleet. $3/night, $15/week, $35/month."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T13:17:53.554Z",
+  "count": 1
+}

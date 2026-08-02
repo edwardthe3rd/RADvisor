@@ -210,10 +210,18 @@ incoming.forEach((v, n) => {
       const p = it[pf];
       if (p === undefined || p === null) continue;
       if (typeof p !== "number" || !isFinite(p) || p < 0) { errors.push(`${iw}: ${pf} must be a number or null`); continue; }
-      if (p === 0) { errors.push(`${iw}: ${pf} is 0 — unknown pricing is null, never 0 (and free rental gear is not a thing; bundled items go in addons)`); continue; }
+      // 0 used to be a hard reject on the belief that "free rental gear is not a thing". That is
+      // empirically false: Carson City's municipal Outdoor Gear Library lends a Disc Golf Set at
+      // FREE/FREE/FREE alongside priced gear (2026-08-01). Free lending is real, and rejecting it
+      // silently loses the most user-valuable rows we have. 0 is now allowed and warned, so the
+      // original risk — recording *unknown* pricing as 0 — is still surfaced loudly.
+      if (p === 0) { warnings.push(`${iw}: ${pf} is 0 — this must mean the item is genuinely FREE (e.g. a municipal gear library). If the price is merely unpublished, use null instead.`); }
       anyPrice = true;
       // Decimal-slip catcher ($8.50 vs 850): warn, never reject — luxury fleets exist.
-      if (pf !== "deposit" && (p < 5 || p > 2000)) warnings.push(`${iw}: ${pf}=$${p} is outside the typical $5–2000 range — double-check for a decimal/typo`);
+      // 0 is skipped: it already got the explicit free-item warning above, and double-warning the
+      // same value is noise. The $5 floor also false-positives on genuinely cheap accessory
+      // rentals — Gear Hut lends bear canisters at $3/night — so it stays advisory only.
+      if (pf !== "deposit" && p !== 0 && (p < 5 || p > 2000)) warnings.push(`${iw}: ${pf}=$${p} is outside the typical $5–2000 range — double-check for a decimal/typo`);
     }
     if (!anyPrice) warnings.push(`${iw}: no price on any tier ("call for pricing" is legitimate, but verify the price really isn't published)`);
     const addons = it.addons === undefined ? [] : it.addons;
@@ -240,6 +248,44 @@ incoming.forEach((v, n) => {
     return;
   }
 
+  // `possible_items` is the ITEM-level recall net, and the counterpart to review_categories[] at
+  // the category level. Before it, anything an extractor suspected might be inventory but could
+  // not confirm — gear in a photo gallery with no rental page, an unpriced "we have paddleboards",
+  // a booking widget that would not load, a product that might be retail — simply vanished with
+  // no trace. These never enter live equipment data; they are recorded so real inventory is never
+  // silently dropped, and so a revisit knows exactly what to look for.
+  const possibleRaw = Array.isArray(v.possible_items) ? v.possible_items : [];
+  const possibleItems = [];
+  for (const [pi, cand] of possibleRaw.entries()) {
+    const pw = `${where} possible_item #${pi + 1}`;
+    if (!cand || typeof cand !== "object" || Array.isArray(cand)) {
+      errors.push(`${pw}: must be an object { name, source_url, why_uncertain, likely_subcategory? }`);
+      continue;
+    }
+    if (!cand.name || typeof cand.name !== "string") { errors.push(`${pw}: name is required`); continue; }
+    if (!isUrl(cand.source_url)) { errors.push(`${pw}: source_url (the exact page that raised the suspicion) is required`); continue; }
+    if (!cand.why_uncertain || String(cand.why_uncertain).trim().length < 12) {
+      errors.push(`${pw}: why_uncertain must say what is missing (no price? rent vs sell unclear? widget failed?) — a bare flag is not actionable on revisit`);
+      continue;
+    }
+    // Optional, but if a guess is offered it must be a real slug so the revisit can be targeted.
+    if (cand.likely_subcategory != null && !vocab.subcategories.includes(cand.likely_subcategory)) {
+      errors.push(`${pw}: likely_subcategory "${cand.likely_subcategory}" is not in the ${category} vocabulary (omit it if unsure)`);
+      continue;
+    }
+    possibleItems.push({ ...cand });
+  }
+
+  // The load-bearing guard: if you saw something that might be inventory, you may NOT also claim
+  // the category is absent. Recall-first — "not found" has to mean nothing was seen at all.
+  if (v.outcome === "category_not_found" && possibleItems.length) {
+    errors.push(
+      `${where}: outcome "category_not_found" is invalid alongside ${possibleItems.length} possible_item(s) — ` +
+      `if something might be inventory, the category is unresolved, not absent. Use "needs_review" with an ACTION.`,
+    );
+    return;
+  }
+
   clean.push({
     idx,
     key: keyOf(row),
@@ -250,6 +296,7 @@ incoming.forEach((v, n) => {
     activities: derivedActivities,
     selfHeal,
     items,
+    possibleItems,
   });
 });
 
@@ -309,9 +356,63 @@ for (const [key, state] of operatorStates) {
   operatorStates.set(key, state);
 }
 
+// A rejected batch used to print and vanish, which threw away the single most useful signal the
+// run produces: WHICH real, priced item had nowhere to go. That is the evidence a density
+// decision needs (00_general §11) and the reason `surrey`, `sup_bike`, `autocycle` et al. were
+// only caught by someone happening to notice. Vocabulary misses are now appended to a gap ledger.
+// The hard gate is unchanged — no operator data is written; only the gap record is.
+function recordVocabGaps(errs) {
+  const KINDS = [
+    [/subcategory "([^"]+)" not in (\w+) vocabulary/, "subcategory"],
+    [/attributes\.gear_type "([^"]+)" not in (\w+) vocabulary/, "gear_type"],
+    [/attribute key "([^"]+)" is not in the bounded (\w+) set/, "attribute_key"],
+    [/attribute (\w+)="([^"]+)" not in \[/, "attribute_value"],
+  ];
+  const found = [];
+  for (const e of errs) {
+    for (const [re, kind] of KINDS) {
+      const m = e.match(re);
+      if (!m) continue;
+      found.push({ kind, value: m[1], category: m[2] || null, error: e });
+      break;
+    }
+  }
+  if (!found.length) return 0;
+
+  const gapFile = P("pass_b_vocab_gaps.json");
+  const ledger = fs.existsSync(gapFile)
+    ? JSON.parse(fs.readFileSync(gapFile, "utf8"))
+    : { note: "Vocabulary gaps hit during Pass B. A repeat count is the density evidence 00_general §11 asks for before promoting anything to a facet. Additive slug gaps (a real item with no home) are safe to fix inline; attribute/facet decisions are not.", gaps: [] };
+
+  const today = new Date().toISOString().slice(0, 10);
+  for (const g of found) {
+    const existing = ledger.gaps.find(
+      (x) => x.kind === g.kind && x.value === g.value && x.category === g.category,
+    );
+    if (existing) {
+      existing.hits += 1;
+      existing.last_seen = today;
+    } else {
+      ledger.gaps.push({ ...g, hits: 1, first_seen: today, last_seen: today, resolved: false });
+    }
+  }
+  ledger.gaps.sort((a, b) => b.hits - a.hits);
+  if (!DRY) fs.writeFileSync(gapFile, JSON.stringify(ledger, null, 2) + "\n");
+  return found.length;
+}
+
 if (errors.length) {
   console.error(`REJECTED — ${errors.length} problem(s) (nothing written):`);
   for (const e of errors) console.error("  - " + e);
+  const gaps = recordVocabGaps(errors);
+  if (gaps) {
+    console.error(
+      `\n${gaps} vocabulary gap(s) ${DRY ? "would be" : ""} logged to pass_b_vocab_gaps.json. ` +
+      `If a real priced item simply has no home, adding the slug is ADDITIVE and safe to do now. ` +
+      `If it is a judgment about whether something deserves to be a filterable facet, leave it and ` +
+      `let the hit count accumulate — one operator cannot answer a density question (00_general §11).`,
+    );
+  }
   process.exit(1);
 }
 
@@ -351,6 +452,9 @@ for (const [category, entries] of byCategory) {
       self_heal_categories: c.selfHeal,
       operator_status: c.v.operator_status || null,
       items: c.items,
+      // Never live equipment data — the item-level recall net. Anything here is a candidate a
+      // revisit or phone call should resolve, not inventory we are asserting.
+      possible_items: c.possibleItems,
       extracted_at: today,
     };
     if (resIdx.has(c.key)) results.results[resIdx.get(c.key)] = rec;

@@ -120,8 +120,27 @@
         }
       ],
       "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "place_id": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "off_road",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gondolaskitahoe.com/",
+      "note": "No ATVs, UTVs or dirt bikes. The summer fleet is bicycles and e-bikes only.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
     }
   ],
-  "ranAt": "2026-08-02T06:49:29.079Z",
-  "count": 2
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 3
 }

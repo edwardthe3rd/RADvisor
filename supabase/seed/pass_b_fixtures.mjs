@@ -183,7 +183,9 @@ function runCase(name, results, { ok, message, inspect, reapply = false, applyAr
   }
   if (succeeded !== ok) throw new Error(`${name}: expected ok=${ok}, got ok=${succeeded}\n${output}`);
   if (message && !output.includes(message)) throw new Error(`${name}: missing expected message "${message}"\n${output}`);
-  if (succeeded && inspect) {
+  // inspect runs on rejections too: a rejected batch must leave the ledger untouched but still
+  // write its vocabulary-gap record, and that side effect needs asserting.
+  if (inspect) {
     const triage = JSON.parse(fs.readFileSync(join(dir, "sweep_pass_a_triage.json"), "utf8"));
     inspect({ dir, triage });
   }
@@ -316,10 +318,27 @@ export async function runPassBFixtures() {
   for (const [name, item, message] of [
     ["bad gear_type rejects", snowItem({ attributes: { gear_type: "surfboard" } }), "gear_type"],
     ["unknown attribute rejects", snowItem({ attributes: { gear_type: "ski", invented: true } }), "attribute key"],
-    ["zero price rejects", snowItem({ price_full_day: 0 }), "price_full_day is 0"],
   ]) {
     runCase(name, [extracted("fixture-snow-only", "snow_sports", [item])], { ok: false, message });
   }
+
+  // A price of 0 means FREE and must APPLY, not reject. Carson City's municipal Outdoor Gear
+  // Library lends a Disc Golf Set at FREE/FREE/FREE next to priced gear, which falsified the
+  // applier's old "free rental gear is not a thing" assumption (2026-08-01). The inverse risk —
+  // recording unknown pricing as 0 — is covered by a loud warning instead of a rejection.
+  runCase(
+    "zero price means FREE and applies",
+    [extracted("fixture-snow-only", "snow_sports", [snowItem({ price_full_day: 0 })])],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_snow_sports_results.json"), "utf8"));
+        if (log.results[0].items[0].price_full_day !== 0) {
+          throw new Error("free price was not persisted as 0");
+        }
+      },
+    },
+  );
 
   // --- water_sports, against the real locked vocabulary (see waterItem/boatItem note above) ---
 
@@ -381,9 +400,126 @@ export async function runPassBFixtures() {
   );
 
   runCase(
-    "zero price_season rejects like any other tier",
+    "zero price_season is free, not a rejection",
     [extracted("fixture-snow-only", "snow_sports", [seasonLeaseItem({ price_season: 0 })])],
-    { ok: false, message: "price_season is 0" },
+    { ok: true },
+  );
+
+  // price_weekend and price_monthly close the DAY/WEEKEND/WEEK and $/night-week-month shapes that
+  // four separate waves lost to prose. Both are whole-period TOTALS, unlike price_multi_day.
+  runCase(
+    "weekend and monthly tiers apply and persist",
+    [extracted("fixture-snow-only", "snow_sports", [snowItem({
+      price_full_day: 25, price_weekend: 40, price_weekly: 80, price_monthly: 200,
+    })])],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_snow_sports_results.json"), "utf8"));
+        const it = log.results[0].items[0];
+        if (it.price_weekend !== 40 || it.price_monthly !== 200) {
+          throw new Error(`weekend/monthly not persisted: ${JSON.stringify(it)}`);
+        }
+      },
+    },
+  );
+
+  // A rejected batch must still record WHICH item had no home — that hit count is the density
+  // evidence §11 asks for, and losing it is why earlier gaps were only caught by chance.
+  runCase(
+    "a vocabulary miss is logged to the gap ledger even though the batch rejects",
+    [extracted("fixture-snow-only", "snow_sports", [snowItem({ attributes: { gear_type: "surfboard" } })])],
+    {
+      ok: false,
+      message: "vocabulary gap(s)",
+      inspect: ({ dir }) => {
+        const f = join(dir, "pass_b_vocab_gaps.json");
+        if (!fs.existsSync(f)) throw new Error("gap ledger was not written");
+        const g = JSON.parse(fs.readFileSync(f, "utf8"));
+        const hit = g.gaps.find((x) => x.value === "surfboard" && x.kind === "gear_type");
+        if (!hit || hit.hits !== 1) throw new Error(`gap not recorded: ${JSON.stringify(g.gaps)}`);
+      },
+    },
+  );
+
+  // --- possible_items: the ITEM-level recall net ---
+  const candidate = (o = {}) => ({
+    name: "Paddleboards seen in the photo gallery",
+    likely_subcategory: "paddleboard",
+    source_url: "https://example.com/gallery",
+    why_uncertain: "Boards appear in the gallery and a review mentions renting one, but no rental page, price, or rent-vs-sell statement exists anywhere on the site.",
+    ...o,
+  });
+
+  runCase(
+    "possible_items are recorded alongside confirmed items",
+    [extracted("fixture-water-only", "water_sports", [waterItem()], { possible_items: [candidate()] })],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_water_sports_results.json"), "utf8"));
+        const p = log.results[0].possible_items;
+        if (!p || p.length !== 1) throw new Error("possible_items not persisted");
+        if (log.results[0].items.length !== 1) throw new Error("confirmed items were disturbed");
+      },
+    },
+  );
+
+  // The load-bearing guard: seeing something that might be inventory contradicts "not found".
+  runCase(
+    "category_not_found alongside a possible_item rejects",
+    [{
+      place_id: "fixture-water-only",
+      category: "water_sports",
+      outcome: "category_not_found",
+      checked_url: "https://example.com/checked",
+      note: "No rental pages found on the site.",
+      items: [],
+      possible_items: [candidate()],
+    }],
+    { ok: false, message: "is invalid alongside" },
+  );
+
+  runCase(
+    "a possible_item with no reason rejects",
+    [extracted("fixture-water-only", "water_sports", [waterItem()], {
+      possible_items: [candidate({ why_uncertain: "unsure" })],
+    })],
+    { ok: false, message: "why_uncertain" },
+  );
+
+  runCase(
+    "a possible_item guessing an invalid subcategory rejects",
+    [extracted("fixture-water-only", "water_sports", [waterItem()], {
+      possible_items: [candidate({ likely_subcategory: "hovercraft" })],
+    })],
+    { ok: false, message: "likely_subcategory" },
+  );
+
+  // needs_review + possible_items is the intended shape when a whole category is only suspected.
+  runCase(
+    "needs_review carries possible_items with zero confirmed items",
+    [{
+      place_id: "fixture-water-only",
+      category: "water_sports",
+      outcome: "needs_review",
+      note: "ACTION: call to confirm whether the paddleboards in the gallery are rentable.",
+      items: [],
+      possible_items: [candidate()],
+    }],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_water_sports_results.json"), "utf8"));
+        if ((log.results[0].possible_items || []).length !== 1) throw new Error("possible_items lost on needs_review");
+      },
+    },
+  );
+
+  runCase(
+    "negative price still rejects",
+    [extracted("fixture-snow-only", "snow_sports", [snowItem({ price_full_day: -5 })])],
+    { ok: false, message: "must be a number or null" },
   );
 
   runCase(

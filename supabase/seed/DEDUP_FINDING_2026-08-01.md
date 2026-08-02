@@ -27,6 +27,27 @@ concatenate notes. Tahoe Adventure Rentals matters most here: one row carries
 `water_sports+snow_sports+off_road` and the other only `water_sports+off_road`, so an intersection
 would silently drop `snow_sports`.
 
+## RESOLVED by EC, 2026-08-01
+
+- **Pedego Electric Bikes Reno — does not rent, and the two rows are the same business.**
+  EC verdict: it is a Pedego *dealer* (sales and service). The two rows are its own site
+  (`pedegoreno.com`) and the manufacturer's dealer-directory page
+  (`pedegoelectricbikes.com/dealers/reno/`) — different hosts, so the domain-keyed dedup could
+  never have matched them. Merged to one row and re-routed to `no_rentals`.
+- **`bikelaketahoe.com` is a sibling brand, not a duplicate.** Clearly Tahoe is its parent
+  company; the bike arm runs on its own domain. Kept as its own operator under the §9 domain
+  natural key, renamed off the Google label to **"Bike Lake Tahoe (Clearly Tahoe)"**.
+- **…and that site is not served over HTTPS.** `00_general §10` is unambiguous: do not enter, do
+  not extract, flag for review. Moved to `needs_review` with its five category claims parked in
+  `review_categories` and an ACTION note — either confirm TLS was since enabled, or extract that
+  fleet from the secure `clearlytahoe.com` parent site instead. **Being insecure says nothing
+  about whether they rent**, so it was not demoted to `no_rentals`.
+
+  > ⚠️ **The recorded URL was `https://bikelaketahoe.com/`.** A stored `https://` prefix is not
+  > evidence of working TLS, and **116 of 257 triaged operators carry a bare `http://` URL** —
+  > mostly harmless pre-redirect forms, but the §10 check can only be made at visit time, per
+  > operator. Treat the scheme in this ledger as untrustworthy metadata in both directions.
+
 ## Needs a judgment call
 
 - **Clearly Tahoe (3 rows).** `clearlytahoe.com` and `clearlytahoe.com/incline-village/` are

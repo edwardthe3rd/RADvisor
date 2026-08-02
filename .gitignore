@@ -40,7 +40,23 @@ instructions/
 CLAUDE.md
 CLAUDE.local.md
 
-# Pass A scrape cache — large, regenerable, and captures third-party website text
+# Scrape caches — large, regenerable, and full of third-party website text
 # (a leaked Mapbox token from an operator's site once landed here and blocked a push).
-# Keep it on disk for Pass B, but never version it.
+# Keep them on disk for Pass B, but never version them.
+#
+# 2026-08-01: the single rule below only ever matched `pass_a_evidence_cache.json`, which is NOT
+# the filename the sweep actually writes — so ~25 MB of scraped page text was tracked anyway.
+# These are the real ones. NOTE: adding them here does not untrack what is already committed;
+# see PASS_B_PREP_PLAN.md for the `git rm --cached` command.
 supabase/seed/pass_a_evidence_cache.json
+supabase/seed/sweep_pass_a_evidence.json
+supabase/seed/quadtree_sweep_cache.json
+supabase/seed/sweep_gate5_cache.json
+supabase/seed/sweep_gate_results.json
+supabase/seed/pass_b_inbox.txt
+
+# Versioned on purpose (do NOT add these): sweep_pass_a_triage.json is the ledger, and
+# pass_b_<category>_results.json are the extracted structured output.
+
+# Pass B vocabulary-gap ledger — regenerable working state, not versioned output.
+supabase/seed/pass_b_vocab_gaps.json

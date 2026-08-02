@@ -1681,8 +1681,27 @@
         }
       ],
       "extracted_at": "2026-08-01"
+    },
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "snow_sports",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gearhutreno.com/",
+      "note": "Winter gear is consignment sales only, and winter consignment is currently closed with winter gear accepted as donation only. No snow rental of any kind.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
     }
   ],
-  "ranAt": "2026-08-01T22:45:23.281Z",
-  "count": 8
+  "ranAt": "2026-08-02T13:17:53.554Z",
+  "count": 9
 }

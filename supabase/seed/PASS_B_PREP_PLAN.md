@@ -24,16 +24,42 @@ Only `snow_sports` is locked in `CATEGORY_VOCAB`, so the gate remains closed unt
       the global vocabulary gate is **OPEN**.
 - [x] Operator-major retool done (global gate + inclusive tags + cross-result guard) with
       isolated fixtures green.
-- [~] Calibration wave **partially done 2026-08-01** — see
-      `PHASE3_CALIBRATION_REPORT_2026-08-01.md`. 8 operators selected (new `--select` flag), 2
-      extracted in depth (`off_road`, `motorcycles` — the newest vocabularies). Produced one design
-      fix (`fat_ebike` means winter-capable, not fat-tyred) and one taxonomy proposal
-      (Slingshot / moped / autocycle have no home — `00_general §11`).
-      **Outstanding: 6 selected operators still unvisited**, so `camping`, `camping_vehicles`,
-      `rock_climbing` and the cycling cluster are calibrated only on paper, never against a live
-      site. Run them as the first Phase 4 wave — the report carries the exact `--select` command.
+- [x] **Calibration wave done 2026-08-01** — `PHASE3_CALIBRATION_REPORT_2026-08-01.md`.
+      6 operators, 41 items, 9 `category_not_found`; live coverage **8 of 15 categories**.
+      The attribute-usage diff (previously never run) is complete: `seat_count` 75%,
+      `operation_mode` 73%, `suspension` 71–100% all validated; nothing pruned, because every
+      "unused" attribute sits on a 2–11 item or structurally biased sample.
+      Produced two vocabulary additions (`trike`, `wheel_size: 16`), one design fix
+      (`fat_ebike` = winter-capable, not fat-tyred), and one taxonomy proposal
+      (Slingshot / moped / autocycle — `00_general §11`).
+
+- **Phase 3 ceiling is 13/15, not 15/15.** `hunting` and `disc_golf` have **zero** operators in
+  this queue (confirmed or review), so they cannot be calibrated from Tahoe/Reno at all and stay
+  paper-only until a region that has them. `burning_man_bikes` and `mountaineering` each have a
+  single review-only row. Treat 13/15 as "full" for this region.
+
+- [ ] Remaining calibration targets (highest value first): **Alpenglow Sports** (would resolve
+      `mountaineering` and settle whether snow's three unused technical attributes are dead or
+      merely unsampled) · a 4-season-tent renter (the `snow_camp` activity has still never fired
+      from live data) · `camping_vehicles` and `rock_climbing`, both still zero live items.
 - [x] PASS_B_RUNBOOK rewritten for operator-major flow.
 - [ ] EC commits the app repo and `instructions/` repo separately at each phase end.
+- [ ] **Untrack the scrape caches (one-off, EC runs it).** `.gitignore` only ever named
+      `pass_a_evidence_cache.json`, which is not the filename the sweep writes — so ~25 MB of
+      third-party scraped page text has been tracked all along, including the file that once
+      carried the Mapbox token. The ignore rules are now correct, but ignoring does not untrack:
+
+      ```
+      git rm --cached supabase/seed/sweep_pass_a_evidence.json \
+        supabase/seed/quadtree_sweep_cache.json \
+        supabase/seed/sweep_gate5_cache.json \
+        supabase/seed/sweep_gate_results.json \
+        supabase/seed/pass_b_inbox.txt
+      ```
+
+      Files stay on disk and Pass B keeps working; they simply stop being versioned. Do **not**
+      untrack `sweep_pass_a_triage.json` (the ledger) or `pass_b_<category>_results.json` (the
+      extracted output). All four caches are currently token-clean — verified 2026-08-01.
 
 ---
 
@@ -146,6 +172,26 @@ without `--pilot`. `snow_sports` · `water_sports` · the cycling cluster (`moun
 EC decision 2026-08-01: e-bikes route by **power source** to `electric_transport` (with browse
 aliasing), enforced mechanically by the bounded vocabularies.
 
+### Blockers — ALL FOUR CLEARED 2026-08-01 (EC approved)
+
+1. **Dedup done.** `dedup_operators.mjs` (new, dry-run by default) merged 6 groups, **513 → 505
+   rows**, 276 → 270 triaged. Merge key is normalised host **+ path**, which is what keeps
+   Clearly Tahoe's Incline Village row separate under the §9 multi-location rule. Categories are
+   unioned, never intersected — that recovered `snow_sports` on Tahoe Adventure Rentals, which an
+   intersection would have dropped. Refuses to merge across differing triage statuses. Verified
+   idempotent. Still needing a human: Pedego (two domains), Clearly Tahoe vs bikelaketahoe.com,
+   Tahoe XC (one row has no website), Tahoe Paradise (mixed status).
+2. **`categories.ts` reconciled.** Added `surrey`, `trike`, and a cluster-wide `accessory` to the
+   four cycling categories. Project typecheck passes.
+3. **`price_weekend` + `price_monthly` added.** Four waves had been losing published prices to
+   prose (DAY/WEEKEND/WEEK columns; `$3/night, $15/week, $35/month`). Both are whole-period
+   totals, unlike the per-day `price_multi_day`. Documented in §7, fixtured.
+4. **Autocycle taxonomy resolved.** `motorcycles` gains `autocycle` and `moped_scooter`, and its
+   label widens to **"Motorcycles & Road Rentals"**. The category now owns street-legal
+   licence-free vehicles (Polaris Slingshot, Can-Am Spyder, Honda Ruckus) that previously had no
+   home and were being dropped. Dividing line from `off_road` is street-legality; from
+   `electric_transport`, power source.
+
 ### Open items carried into Phase 4
 
 1. **`categories.ts` divergence.** `surrey` and `accessory` (cycling) were added to the extraction
@@ -158,8 +204,18 @@ aliasing), enforced mechanically by the bounded vocabularies.
    `http`/`https`/`www` normalisation failures; ~9 wasted Phase 4 visits if not merged first.
 4. **4 needs_review call-list operators** await EC's phone calls (independent of this plan), plus
    ASC Training Center and Galena Sports from the pilot.
-5. **`price_block` / `block_hours`** — two independent waves have now hit operators publishing
-   duration blocks the six price tiers can't model. Consider on a third occurrence.
+5. **Duration tiers the schema cannot hold — now four independent shapes.** Multi-day *rules*
+   (pilot, 4 variants) · 2-and-4-hour blocks (Battle Born) · `$35/month` (Gear Hut) ·
+   **DAY/WEEKEND/WEEK** (Carson City). Recommend `price_weekend` first, then `price_monthly`;
+   a generic `price_block`/`block_hours` only if hour-blocks recur. Schema decision — EC's call.
+6. **Gear libraries are invisible to Pass A** — `GEAR_LIBRARY_FINDING_2026-08-01.md`. Carson City's
+   municipal Outdoor Gear Library rents 4 categories with published rates and is **not in the
+   ledger**; it was never found, not rejected. Municipal/university/nonprofit lending programs are
+   a systematic recall gap in every region, which bears directly on the portability goal. Fix
+   belongs in `quadtree_sweep_queries.mjs`, not Pass B.
+7. **`disc_golf` has exactly one known operator anywhere — Carson City, and it lends FREE.**
+   Adding it would take live calibration coverage to 9/15 and is the only path to calibrating
+   `disc_golf` from this region at all.
 
 **Per-file lock checklist** (a category is not "locked" until all four are done):
 1. Dry-write 2–3 paper extractions from real cached evidence and check every item lands in the

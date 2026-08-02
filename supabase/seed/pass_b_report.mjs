@@ -44,12 +44,16 @@ const priceCover = new Map(); // tier -> count of items carrying it
 const itemsPerOp = [];
 const allNullPriceOps = [];
 const needsReviewOps = [];
+// Item-level recall net: things that MIGHT be inventory but lacked the evidence to be asserted.
+// These are the rows most likely to represent real gear we are currently missing.
+const possible = [];
 // Shared with the applier via pass_b_vocab.mjs — do not re-declare a local copy here.
 
 let totalItems = 0, demoFlagged = 0, leaseFlagged = 0, addonCount = 0;
 for (const r of results) {
   bump(outcomes, r.outcome);
   if (r.outcome === "needs_review") needsReviewOps.push(`${r.name} — ${r.note}`);
+  for (const c of r.possible_items || []) possible.push({ op: r.name, cat: r.category, ...c });
   for (const a of r.activities || []) bump(activities, a);
   if (r.offers_demo) demoFlagged++;
   if (r.offers_season_lease) leaseFlagged++;
@@ -90,6 +94,15 @@ console.log(`\nOperator flags: offers_demo ${demoFlagged}, offers_season_lease $
 if (allNullPriceOps.length) {
   console.log(`\n⚠ Extracted operators with NO price on any item (${allNullPriceOps.length}) — verify prices truly aren't published:`);
   for (const n of allNullPriceOps) console.log("  - " + n);
+}
+if (possible.length) {
+  console.log(`\n⚠ POSSIBLE INVENTORY not asserted (${possible.length}) — the likeliest real gear we are currently missing.`);
+  console.log(`  Each needs a revisit or a call to confirm or dismiss; none of it is in live equipment data.`);
+  for (const c of possible) {
+    console.log(`  - [${c.cat}] ${c.op}: ${c.name}${c.likely_subcategory ? ` (likely ${c.likely_subcategory})` : ""}`);
+    console.log(`      why unresolved: ${c.why_uncertain}`);
+    console.log(`      ${c.source_url}`);
+  }
 }
 if (needsReviewOps.length) {
   console.log(`\n⚠ Unresolved needs_review (${needsReviewOps.length}):`);

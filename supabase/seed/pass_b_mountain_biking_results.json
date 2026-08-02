@@ -1,0 +1,104 @@
+{
+  "category": "mountain_biking",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "place_id": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "name": "Anderson's Bicycle Rental",
+      "website": "http://www.andersonsbicyclerental.com/",
+      "category": "mountain_biking",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Hardtail mountain bikes in adult and kids sizes, published with explicit suspension type.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Hard Tail Mountain Bike",
+          "subcategory": "mountain_bike",
+          "brand": null,
+          "model": null,
+          "size": "M / L",
+          "skill_level": "intermediate",
+          "price_hourly": 12,
+          "price_half_day": 36,
+          "attributes": {
+            "gear_type": "mountain_bike",
+            "suspension": "hardtail",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Medium and large frames. The operator states the suspension type directly, which is unusual and welcome."
+        },
+        {
+          "name": "Kid's Hard Tail Mountain Bike",
+          "subcategory": "mountain_bike",
+          "brand": null,
+          "model": null,
+          "size": "S / M / L / XL",
+          "skill_level": "beginner",
+          "price_hourly": 10,
+          "price_half_day": 30,
+          "attributes": {
+            "gear_type": "mountain_bike",
+            "suspension": "hardtail",
+            "is_kids": true,
+            "quality_grade": "basic",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Youth hardtail in four frame sizes."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "mountain_biking",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gearhutreno.com/",
+      "note": "Mountain and gravel bikes are accepted for CONSIGNMENT INTAKE ('We accept Mountain and Gravel bikes ONLY'), meaning the shop sells them for their owners. No rental fleet.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 2
+}

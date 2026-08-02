@@ -59,8 +59,139 @@
         }
       ],
       "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "place_id": "ChIJD5DUGp-PmYARqD8tvPx1aHE",
+      "name": "Anderson's Bicycle Rental",
+      "website": "http://www.andersonsbicyclerental.com/",
+      "category": "electric_transport",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "E-bikes are rented hourly only — no half-day rate is published for them, unlike every human-powered bike in the fleet.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Electric Bike",
+          "subcategory": "ebike",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_hourly": 20,
+          "price_half_day": null,
+          "attributes": {
+            "gear_type": "ebike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Helmet (required)",
+              "price": 0
+            },
+            {
+              "name": "Lock",
+              "price": 0
+            }
+          ],
+          "source_url": "https://www.andersonsbicyclerental.com/bicycles-rates/",
+          "description": "Available to riders 18 and older; helmets required for all e-bike riders. Prorated after the first hour. Assist mode is not stated on the rate card."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "place_id": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "electric_transport",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Heavenly Village shop, summer e-bike fleet. Pay-as-you-go structure: reserve and pay the first day only, keep the bike as long as needed, settle on return — so there is no discounted multi-day rate to record.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Comfort E-Bike",
+          "subcategory": "ebike",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": 70,
+          "attributes": {
+            "gear_type": "ebike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Bike lock",
+              "price": 0
+            },
+            {
+              "name": "Helmet",
+              "price": 0
+            }
+          ],
+          "source_url": "https://gondolaskitahoe.com/bike-rentals/",
+          "description": "8-speed comfort e-bike for the South Lake paved bike paths. Free lock and helmet included."
+        },
+        {
+          "name": "Family E-Bike (Xpedition Lectric)",
+          "subcategory": "ebike",
+          "brand": "Lectric",
+          "model": "Xpedition",
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": 100,
+          "attributes": {
+            "gear_type": "ebike",
+            "suspension": "rigid",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://gondolaskitahoe.com/bike-rentals/",
+          "description": "Rear passenger seat carrying up to two children aged 4-10; supports up to 450 lbs total load. NOTE: the operator's product description for this bike contains stray ski-boot copy (Salomon/K2/Nordica), which is a content error on their site and not part of this rental."
+        },
+        {
+          "name": "Folding Lectric XP4",
+          "subcategory": "ebike",
+          "brand": "Lectric",
+          "model": "XP4",
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": 70,
+          "attributes": {
+            "gear_type": "ebike",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://gondolaskitahoe.com/bike-rentals/",
+          "description": "Step-through folding e-bike."
+        }
+      ],
+      "extracted_at": "2026-08-02"
     }
   ],
-  "ranAt": "2026-08-02T06:49:29.080Z",
-  "count": 1
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 3
 }

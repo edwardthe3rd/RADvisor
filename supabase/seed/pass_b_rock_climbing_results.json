@@ -1,0 +1,27 @@
+{
+  "category": "rock_climbing",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "place_id": "ChIJy9ppqHeQmYARudCSM07YImA",
+      "name": "Gondola Ski + Sports",
+      "website": "http://www.gondolaskitahoe.com/",
+      "category": "rock_climbing",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gondolaskitahoe.com/",
+      "note": "No climbing gear of any kind on the site. The shop rents skis and snowboards in winter and bikes in summer, and sells beanies, gloves, goggles, jackets and pants. The Pass A rock_climbing hint appears to be keyword noise from generic mountain-sports wording.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 1
+}

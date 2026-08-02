@@ -1,0 +1,46 @@
+{
+  "category": "fishing",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+      "place_id": "ChIJHUtqcWFxmYAR1Wfw0__0ydc",
+      "name": "Lake Tahoe Luxury Boat Rentals",
+      "website": "http://laketahoeluxuryboatrentals.com/",
+      "category": "fishing",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://www.laketahoeluxuryboatrentals.com/hyatt-fishing-charters",
+      "note": "The only fishing product is a captained Hyatt fishing charter — a seat on a guided trip with the boat and tackle operated by the crew. Under the captained-charter rule added to fishing.md on 2026-08-01, a charter is not rental inventory and there is no standalone rod, combo, or tackle rental anywhere on the site. The Pass A fishing hint came from charter wording.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "place_id": "ChIJOZet7oxBmYARFkEseucIW5Q",
+      "name": "Gear Hut",
+      "website": "http://www.gearhutreno.com/",
+      "category": "fishing",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://gearhutreno.com/",
+      "note": "No fishing rental. Any fishing gear on site is consignment stock for sale.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T13:17:53.553Z",
+  "count": 2
+}
