@@ -360,7 +360,7 @@
       "evidence_snippet": "Google/fetched evidence describes an ATV rental shop offering Polaris RZRs for customers to explore open land and trails.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "ATV/Polaris RZR rentals map to off_road.",
+      "note": "ATV/Polaris RZR rentals map to off_road. Pass B 2026-08-02: off_road extracted (3 item(s); origin pretagged_confirmed).",
       "triaged_at": "2026-06-30"
     },
     {
@@ -3543,7 +3543,6 @@
       "categories": [
         "off_road",
         "motorcycles",
-        "road_cycling",
         "electric_transport"
       ],
       "review_categories": [],
@@ -3564,7 +3563,7 @@
       "evidence_snippet": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots http://www.rolltahoe.com/ Rolling Freedom Motorcycles & Lake Tahoe Slingshots - Motorcycles, Moped Scooters, E-Bike Rentals & EagleRider Tours Motorcycle shop providing rentals to explore Lake Tahoe, plus suggested scenic stops.",
       "status": "triaged",
       "confidence": "medium",
-      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters.",
+      "note": "Auto-triaged from positive rental evidence and category terms; review if location-specific inventory matters. Pass B 2026-08-02: off_road extracted (1 item(s); origin pretagged_confirmed). Pass B 2026-08-02: motorcycles extracted (8 item(s); origin pretagged_confirmed). Pass B 2026-08-02: electric_transport extracted (2 item(s); origin pretagged_confirmed). Pass B 2026-08-02: road_cycling category_not_found (https://rolltahoe.com/rentals/).",
       "triaged_at": "2026-06-30"
     },
     {

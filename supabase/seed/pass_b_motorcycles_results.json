@@ -1,0 +1,204 @@
+{
+  "category": "motorcycles",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "place_id": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "motorcycles",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Stateline NV shop renting Harley-Davidson, Indian, Triumph, Honda and KTM motorcycles through a first-party booking storefront at rentals.rolltahoe.com (Ski Rental Systems platform — first-party inventory per the storefront rule). Rates sit behind the booking widget and are not published as static text, so items carry null prices. Confirmed booking conditions: motorcycle 'M' endorsement required, daily rentals include 400 miles, 3+ day rentals are unlimited mileage, and insurance is required at $35.00/day. NOTE: the operator also rents Polaris Slingshots, Can-Am Spyders and Honda Ruckus mopeds — see the taxonomy proposal logged in 00_general §11; only the Spyder is filed here.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Harley-Davidson Street Glide",
+          "subcategory": "street_moto",
+          "brand": "Harley-Davidson",
+          "model": "Street Glide",
+          "size": "Street Glide",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycle-rentals/harley-davidson-street-glide",
+          "description": "Touring bagger. Requires a motorcycle M endorsement. Daily rentals include 400 miles; 3-or-more-day rentals are unlimited mileage. Rate is only shown inside the booking widget."
+        },
+        {
+          "name": "Harley-Davidson Road Glide",
+          "subcategory": "street_moto",
+          "brand": "Harley-Davidson",
+          "model": "Road Glide",
+          "size": "Road Glide",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycle-rentals/harley-davidson-road-glide",
+          "description": "Touring bagger. M endorsement required; 400 miles included daily, unlimited at 3+ days."
+        },
+        {
+          "name": "Harley-Davidson Heritage Softail",
+          "subcategory": "street_moto",
+          "brand": "Harley-Davidson",
+          "model": "Heritage Softail",
+          "size": "Heritage Softail",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycles-dirt-bikes/harley-heritage-softail",
+          "description": "Cruiser. M endorsement required; 400 miles included daily, unlimited at 3+ days."
+        },
+        {
+          "name": "Indian Scout Sixty",
+          "subcategory": "street_moto",
+          "brand": "Indian",
+          "model": "Scout Sixty",
+          "size": "Scout Sixty",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/rolling-freedom-motorcycle-rentals/indian-scout-sixty",
+          "description": "Mid-size cruiser, an approachable option in the fleet. M endorsement required."
+        },
+        {
+          "name": "Triumph Tiger",
+          "subcategory": "adventure_moto",
+          "brand": "Triumph",
+          "model": "Tiger",
+          "size": "Tiger",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "adventure_moto",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycle-rentals/triumph-tiger",
+          "description": "Street-plated adventure/touring bike. M endorsement required."
+        },
+        {
+          "name": "KTM 890 Adventure R",
+          "subcategory": "adventure_moto",
+          "brand": "KTM",
+          "model": "890 Adventure R",
+          "size": "890 Adventure R",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "adventure_moto",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycles-dirt-bikes/ktm-890-adventure-r",
+          "description": "Street-plated dual-sport. Filed as adventure_moto rather than off_road because it is plated — the dividing line is plates, not terrain."
+        },
+        {
+          "name": "Honda Rebel 500 ABS",
+          "subcategory": "street_moto",
+          "brand": "Honda",
+          "model": "Rebel 500 ABS",
+          "size": "Rebel 500 ABS",
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "basic",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycle-rentals/2022-honda-rebel-500-abs",
+          "description": "Entry-level cruiser, the most beginner-friendly bike in the fleet. M endorsement still required."
+        },
+        {
+          "name": "Can-Am Spyder 900",
+          "subcategory": "street_moto",
+          "brand": "Can-Am",
+          "model": "Spyder 900",
+          "size": "Spyder 900",
+          "skill_level": "intermediate",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "street_moto",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycle-rentals/2021-can-am-spyder-900",
+          "description": "Three-wheeled roadster listed by the operator under motorcycle rentals. Filed as street_moto because it is a plated on-road motorcycle, but the form factor is not a two-wheeler — see the autocycle taxonomy proposal in 00_general §11."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T06:49:29.079Z",
+  "count": 1
+}

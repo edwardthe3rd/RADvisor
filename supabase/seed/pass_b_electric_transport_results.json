@@ -1,0 +1,66 @@
+{
+  "category": "electric_transport",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "place_id": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "electric_transport",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Moto-style fat-tire electric bikes, explicitly marketed as requiring no special licence. Deliberately filed with gear_type ebike rather than fat_ebike: these are summer cruising e-bikes, not winter snow bikes, and fat_ebike drives the winter fat_bike activity.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "Juiced Scorpion Electric Bike",
+          "subcategory": "ebike",
+          "brand": "Juiced",
+          "model": "Scorpion",
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "ebike",
+            "assist_mode": "both",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://rolltahoe.com/product-category/e-bikes/",
+          "description": "Moto-style fat-tire electric bike. The operator states no specialised licence is required, which distinguishes it from the motorcycle fleet. Fat tyres here are a styling and comfort choice for summer cruising, not winter capability."
+        },
+        {
+          "name": "Juiced Scrambler Electric Bike",
+          "subcategory": "ebike",
+          "brand": "Juiced",
+          "model": "Scrambler",
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "ebike",
+            "assist_mode": "both",
+            "suspension": "rigid",
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://rolltahoe.com/product-category/e-bikes/",
+          "description": "Moto-style fat-tire electric bike, no specialised licence required."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T06:49:29.080Z",
+  "count": 1
+}

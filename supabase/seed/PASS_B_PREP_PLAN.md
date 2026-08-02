@@ -19,12 +19,19 @@ Only `snow_sports` is locked in `CATEGORY_VOCAB`, so the gate remains closed unt
 - [x] Pilot calibration wave run 2026-08-01 (8 operators, 68 items) — see
       `PILOT_CALIBRATION_REPORT_2026-08-01.md`. Produced one schema change (`price_season`) and
       six contract rules, all landed before category authoring began.
-- [ ] All 15 in-scope category files locked; their enums in `CATEGORY_VOCAB`; applier
-      fixtures green.
+- [x] **All 15 in-scope category files locked 2026-08-01**; enums in `CATEGORY_VOCAB`;
+      `CATEGORY_ACTIVITIES` complete; 40 applier fixtures green. `isPassBReady()` returns true and
+      the global vocabulary gate is **OPEN**.
 - [x] Operator-major retool done (global gate + inclusive tags + cross-result guard) with
       isolated fixtures green.
-- [ ] Calibration wave (8–10 multi-category operators) extracted; `pass_b_report` reviewed;
-      vocabularies adjusted and re-locked.
+- [~] Calibration wave **partially done 2026-08-01** — see
+      `PHASE3_CALIBRATION_REPORT_2026-08-01.md`. 8 operators selected (new `--select` flag), 2
+      extracted in depth (`off_road`, `motorcycles` — the newest vocabularies). Produced one design
+      fix (`fat_ebike` means winter-capable, not fat-tyred) and one taxonomy proposal
+      (Slingshot / moped / autocycle have no home — `00_general §11`).
+      **Outstanding: 6 selected operators still unvisited**, so `camping`, `camping_vehicles`,
+      `rock_climbing` and the cycling cluster are calibrated only on paper, never against a live
+      site. Run them as the first Phase 4 wave — the report carries the exact `--select` command.
 - [x] PASS_B_RUNBOOK rewritten for operator-major flow.
 - [ ] EC commits the app repo and `instructions/` repo separately at each phase end.
 
@@ -128,6 +135,31 @@ attribute set FROM the cached evidence of that category's real queue operators (
 actually rent and how they describe it), then generalize — an attribute no queue operator
 would populate is an empty facet that costs calibration churn (the `00_general §11` density
 bar, applied at authoring time).
+
+**ALL 15 LOCKED (2026-08-01). The global vocabulary gate is OPEN** — `pass_b_batch.mjs` emits
+without `--pilot`. `snow_sports` · `water_sports` · the cycling cluster (`mountain_biking`,
+`road_cycling`, `electric_transport`, `burning_man_bikes`, sharing `cycling_core.md` and a
+`CYCLING_CORE_ATTRIBUTES` const) · `off_road` · `motorcycles` · `camping` · `camping_vehicles` ·
+`rock_climbing` · and the four pre-existing compact files (`mountaineering`, `hunting`, `fishing`,
+`disc_golf`) locked from their own documented vocabularies.
+
+EC decision 2026-08-01: e-bikes route by **power source** to `electric_transport` (with browse
+aliasing), enforced mechanically by the bounded vocabularies.
+
+### Open items carried into Phase 4
+
+1. **`categories.ts` divergence.** `surrey` and `accessory` (cycling) were added to the extraction
+   vocabulary from real priced SKUs. `web/lib/config/categories.ts` needs matching entries before
+   they can surface as browse chips — `road_cycling.md §6`.
+2. **Taxonomy proposal: licence-free road vehicles.** Polaris Slingshots, mopeds/scooters, and
+   arguably the Can-Am Spyder have no home in the taxonomy — `00_general §11`. Real priced rentals
+   are being dropped. Decide before a full Tahoe run.
+3. **8 duplicate operator groups in the queue** — `DEDUP_FINDING_2026-08-01.md`. Mostly
+   `http`/`https`/`www` normalisation failures; ~9 wasted Phase 4 visits if not merged first.
+4. **4 needs_review call-list operators** await EC's phone calls (independent of this plan), plus
+   ASC Training Center and Galena Sports from the pilot.
+5. **`price_block` / `block_hours`** — two independent waves have now hit operators publishing
+   duration blocks the six price tiers can't model. Consider on a third occurrence.
 
 **Per-file lock checklist** (a category is not "locked" until all four are done):
 1. Dry-write 2–3 paper extractions from real cached evidence and check every item lands in the

@@ -1,0 +1,27 @@
+{
+  "category": "road_cycling",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "place_id": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "road_cycling",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "category_not_found",
+      "checked_url": "https://rolltahoe.com/rentals/",
+      "note": "No human-powered bicycles anywhere in the fleet. Every two-wheeler on the site is either a licensed motorcycle or an electric bike, and the electric bikes are recorded under electric_transport per the power-source routing rule. The Pass A road_cycling hint came from generic bike wording.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T06:49:29.080Z",
+  "count": 1
+}

@@ -60,6 +60,15 @@ if (fixtureVocabFile) {
   // A fixture category may carry an `activities` rule list alongside its vocabulary, so tests
   // can exercise the cross-category activity axis without waiting on a real category to lock.
   for (const [category, def] of Object.entries(JSON.parse(fs.readFileSync(fixtureVocabFile, "utf8")))) {
+    // `null` UNLOCKS a category for the duration of the fixture run. The self-heal deferral path
+    // only exists for a known-but-unlocked vocabulary, so once all 15 categories lock there is no
+    // naturally-unlocked slug left to test it with — without this the deferral tests would have
+    // to be deleted exactly when the gate finally closes.
+    if (def === null) {
+      delete CATEGORY_VOCAB[category];
+      delete CATEGORY_ACTIVITIES[category];
+      continue;
+    }
     const { activities, ...vocab } = def;
     CATEGORY_VOCAB[category] = vocab;
     if (activities) CATEGORY_ACTIVITIES[category] = activities;
@@ -189,6 +198,10 @@ incoming.forEach((v, n) => {
       if (!(key in vocab.attributes)) { errors.push(`${iw}: attribute key "${key}" is not in the bounded ${category} set — put it in description or propose via 00_general §11`); continue; }
       const rule = vocab.attributes[key];
       if (rule === "boolean" && typeof val !== "boolean") errors.push(`${iw}: attribute ${key} must be boolean`);
+      // water_sports (2026-08-01) introduced the first "number" attributes (capacity_people,
+      // wetsuit_thickness_mm). Until then no vocabulary used the rule, so a string slipped
+      // through unvalidated — "eight" would have been stored as a capacity.
+      else if (rule === "number" && (typeof val !== "number" || !isFinite(val))) errors.push(`${iw}: attribute ${key} must be a number, got ${JSON.stringify(val)}`);
       else if (Array.isArray(rule) && !rule.includes(val)) errors.push(`${iw}: attribute ${key}="${val}" not in [${rule.join(", ")}]`);
     }
     if (it.skill_level != null && !VALID_SKILL.has(it.skill_level)) { errors.push(`${iw}: skill_level "${it.skill_level}" invalid`); }

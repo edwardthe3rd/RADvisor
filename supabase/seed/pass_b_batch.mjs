@@ -27,7 +27,7 @@ const seedDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(seedDir, "../..");
 const args = process.argv.slice(2);
 const valueAfter = (flag) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
-const consumed = new Set([valueAfter("--out"), valueAfter("--data-dir")].filter(Boolean));
+const consumed = new Set([valueAfter("--out"), valueAfter("--data-dir"), valueAfter("--select"), valueAfter("--category")].filter(Boolean));
 const N = Number(args.find((a) => /^\d+$/.test(a) && !consumed.has(a)) || 10);
 const OUT = valueAfter("--out");
 const dataDir = valueAfter("--data-dir") || seedDir;
@@ -37,6 +37,9 @@ const read = (f) => JSON.parse(fs.readFileSync(P(f), "utf8"));
 const PILOT = args.includes("--pilot");
 const REPAIR = args.includes("--repair");
 const repairCategory = valueAfter("--category");
+// --select <place_id,place_id,...> emits exactly these operators, for a deliberately chosen
+// calibration wave rather than whatever rank order happens to surface.
+const SELECT = (valueAfter("--select") || "").split(",").map((s) => s.trim()).filter(Boolean);
 
 if (args.includes("--category") && !REPAIR) {
   console.error("Pass B is operator-major; --category only applies to a repair pass. Use --repair --category <slug> to re-extract one category for operators already visited.");
@@ -140,6 +143,18 @@ if (REPAIR) {
   // Only operators already logged for the target category — a repair re-extracts, it does not
   // discover. Ignore visitComplete: a completed visit is exactly what we are repairing.
   eligible = withProgress.filter((entry) => entry.prior.has(repairCategory));
+}
+if (SELECT.length) {
+  // Phase 3 calibration requires a DELIBERATELY diverse wave (a marina, a bike shop, a
+  // powersports outfit, a resort, an off-season site, ...), because rank order is dominated by
+  // whatever happens to sort first and would exercise only a couple of vocabularies. Selecting
+  // by place_id also makes the wave reproducible and re-runnable.
+  const wanted = new Set(SELECT);
+  eligible = eligible.filter((entry) => wanted.has(entry.row.place_id));
+  const missing = SELECT.filter((id) => !eligible.some((e) => e.row.place_id === id));
+  if (missing.length) {
+    console.error(`--select: ${missing.length} place_id(s) not eligible (already visited, or not triaged): ${missing.join(", ")}`);
+  }
 }
 const isAuto = (r) => /auto-triaged/i.test(r.note || "");
 const tier = (r) => (isAuto(r) ? 2 : r.confidence === "high" ? 0 : 1);

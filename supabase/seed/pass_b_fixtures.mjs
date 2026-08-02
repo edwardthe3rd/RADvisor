@@ -24,6 +24,9 @@ const snowItem = (overrides = {}) => ({
   ...overrides,
 });
 
+// water_sports is exercised against the REAL locked vocabulary (pass_b_vocab.mjs), not a
+// synthetic stand-in — the fixture file deliberately no longer overrides it, so these cases
+// break if the shipped water_sports enums regress.
 const waterItem = (overrides = {}) => ({
   name: "Fixture Kayak",
   subcategory: "kayak",
@@ -39,15 +42,38 @@ const waterItem = (overrides = {}) => ({
   ...overrides,
 });
 
+const boatItem = (overrides = {}) => ({
+  name: "Fixture Pontoon",
+  subcategory: "boat",
+  brand: null,
+  model: null,
+  size: "25 ft",
+  skill_level: "all",
+  price_half_day: 599,
+  price_full_day: 999,
+  attributes: {
+    gear_type: "pontoon",
+    capacity_people: 12,
+    operation_mode: "bareboat",
+    quality_grade: "standard",
+  },
+  addons: [{ name: "Captain (per hour)", price: 50 }],
+  source_url: "https://example.com/boat-rentals",
+  description: "Fixture item. Fuel not included.",
+  ...overrides,
+});
+
+// Cycling fixtures run against the REAL locked vocabularies (pass_b_vocab.mjs) — the fixture
+// file no longer overrides mountain_biking, so these break if the shipped enums regress.
 const fatBikeItem = (overrides = {}) => ({
   name: "Fixture Fat Bike",
   subcategory: "fat_bike",
   brand: null,
   model: null,
-  size: null,
+  size: "L",
   skill_level: "all",
   price_full_day: 65,
-  attributes: { gear_type: "bike" },
+  attributes: { gear_type: "fat_bike", suspension: "hardtail", wheel_size: "27.5" },
   addons: [],
   source_url: "https://example.com/bike-rentals",
   description: "Fixture item.",
@@ -65,6 +91,39 @@ const seasonLeaseItem = (overrides = {}) => ({
   attributes: { gear_type: "ski", rental_type: "season_lease" },
   addons: [],
   source_url: "https://example.com/season-lease",
+  description: "Fixture item.",
+  ...overrides,
+});
+
+const cruiserItem = (overrides = {}) => ({
+  name: "Fixture Comfort Cruiser",
+  subcategory: "cruiser_bike",
+  brand: null,
+  model: null,
+  size: "M",
+  skill_level: "beginner",
+  price_hourly: 18,
+  price_half_day: 33,
+  price_full_day: 44,
+  attributes: { gear_type: "cruiser_bike", suspension: "rigid", wheel_size: "26", quality_grade: "basic" },
+  addons: [{ name: "Helmet", price: 0 }],
+  source_url: "https://example.com/bike-rentals",
+  description: "Fixture item.",
+  ...overrides,
+});
+
+const eBikeItem = (overrides = {}) => ({
+  name: "Fixture Comfort E-Bike",
+  subcategory: "ebike",
+  brand: null,
+  model: null,
+  size: "L",
+  skill_level: "all",
+  price_hourly: 29,
+  price_full_day: 64,
+  attributes: { gear_type: "ebike", assist_mode: "pedal_assist", suspension: "rigid" },
+  addons: [],
+  source_url: "https://example.com/ebike-rentals",
   description: "Fixture item.",
   ...overrides,
 });
@@ -89,13 +148,19 @@ const notFound = (place_id, category, extra = {}) => ({
   ...extra,
 });
 
-function runCase(name, results, { ok, message, inspect, reapply = false, applyArgs = [] }) {
+// `unlock` forces a category to behave as though its vocabulary were never locked, for the one
+// case that has to exercise the deferral path. It is PER-CASE because once all 15 categories are
+// locked there is no naturally-unlocked category left to test with — a global `null` override in
+// pass_b_fixtures.json would instead break every real test of that category.
+function runCase(name, results, { ok, message, inspect, reapply = false, applyArgs = [], unlock = [] }) {
   const dir = fs.mkdtempSync(join(os.tmpdir(), "radvisor-pass-b-fixture-"));
   const input = join(dir, "input.json");
   const vocab = join(dir, "fixture-vocab.json");
+  const testVocab = { ...fixture.test_vocab };
+  for (const category of unlock) testVocab[category] = null;
   fs.writeFileSync(join(dir, "sweep_pass_a_triage.json"), JSON.stringify(fixture.triage, null, 2));
   fs.writeFileSync(input, JSON.stringify(results, null, 2));
-  fs.writeFileSync(vocab, JSON.stringify(fixture.test_vocab, null, 2));
+  fs.writeFileSync(vocab, JSON.stringify(testVocab, null, 2));
   const argv = [applyScript, input, "--data-dir", dir, "--fixture-vocab", vocab, ...applyArgs];
   let output = "";
   let succeeded = true;
@@ -186,6 +251,7 @@ export async function runPassBFixtures() {
     })],
     {
       ok: true,
+      unlock: ["camping"],
       inspect: ({ dir, triage }) => {
         if (!row(triage, "fixture-snow-only").review_categories.includes("camping")) {
           throw new Error("unlocked self-heal was not deferred");
@@ -201,7 +267,7 @@ export async function runPassBFixtures() {
   runCase(
     "direct result without locked vocabulary rejects",
     [extracted("fixture-snow-only", "camping", [waterItem()])],
-    { ok: false, message: "has no locked vocabulary" },
+    { ok: false, message: "has no locked vocabulary", unlock: ["camping"] },
   );
 
   runCase(
@@ -254,6 +320,49 @@ export async function runPassBFixtures() {
   ]) {
     runCase(name, [extracted("fixture-snow-only", "snow_sports", [item])], { ok: false, message });
   }
+
+  // --- water_sports, against the real locked vocabulary (see waterItem/boatItem note above) ---
+
+  runCase(
+    "water_sports boat with capacity/operation_mode applies",
+    [extracted("fixture-water-only", "water_sports", [boatItem()])],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_water_sports_results.json"), "utf8"));
+        const a = log.results[0].items[0].attributes;
+        if (a.capacity_people !== 12 || a.operation_mode !== "bareboat") {
+          throw new Error(`water_sports attributes not persisted: ${JSON.stringify(a)}`);
+        }
+      },
+    },
+  );
+
+  // Guards the "number" rule branch, which had NO validation until water_sports introduced the
+  // first numeric attributes — a string capacity used to be stored verbatim.
+  runCase(
+    "non-numeric capacity_people rejects",
+    [extracted("fixture-water-only", "water_sports", [boatItem({
+      attributes: { gear_type: "pontoon", capacity_people: "eight", operation_mode: "bareboat" },
+    })])],
+    { ok: false, message: "must be a number" },
+  );
+
+  runCase(
+    "out-of-vocabulary operation_mode rejects",
+    [extracted("fixture-water-only", "water_sports", [boatItem({
+      attributes: { gear_type: "pontoon", capacity_people: 8, operation_mode: "skippered" },
+    })])],
+    { ok: false, message: "operation_mode" },
+  );
+
+  // A snow gear_type must not be accepted on a water item just because both vocabularies are
+  // locked — the jet ski / water ski substring family is the reason this guard exists.
+  runCase(
+    "snow gear_type on a water_sports item rejects",
+    [extracted("fixture-water-only", "water_sports", [waterItem({ attributes: { gear_type: "ski" } })])],
+    { ok: false, message: "not in water_sports vocabulary" },
+  );
 
   // price_season was added after the 2026-08-01 pilot, where season leases and memberships had
   // no tier to land in and were filed with every price null. Guards both halves: the field is
@@ -308,8 +417,262 @@ export async function runPassBFixtures() {
 
   runCase(
     "non-snow activity unsupported by the extracted items still rejects",
-    [extracted("fixture-bike-only", "mountain_biking", [fatBikeItem({ subcategory: "trail_bike" })], { activities: ["fat_bike"] })],
+    [extracted("fixture-bike-only", "mountain_biking", [fatBikeItem({ subcategory: "mountain_bike", attributes: { gear_type: "mountain_bike" } })], { activities: ["fat_bike"] })],
     { ok: false, message: "activities not supported" },
+  );
+
+  // --- cycling cluster routing (cycling_core.md §1), against the real locked vocabularies ---
+  // The bounded vocabulary IS the enforcement mechanism for the power-source routing decision,
+  // so these two rejections are the rule working rather than incidental validation.
+  runCase(
+    "e-bike mis-routed to road_cycling rejects",
+    [extracted("fixture-bike-only", "road_cycling", [eBikeItem()])],
+    { ok: false, message: "not in road_cycling vocabulary" },
+  );
+
+  runCase(
+    "e-MTB mis-routed to mountain_biking rejects",
+    [extracted("fixture-bike-only", "mountain_biking", [eBikeItem({ subcategory: "ebike_mtb", attributes: { gear_type: "ebike_mtb" } })])],
+    { ok: false, message: "not in mountain_biking vocabulary" },
+  );
+
+  runCase(
+    "human-powered cruiser applies to road_cycling with hourly pricing",
+    [extracted("fixture-bike-only", "road_cycling", [cruiserItem()])],
+    {
+      ok: true,
+      inspect: ({ dir }) => {
+        const log = JSON.parse(fs.readFileSync(join(dir, "pass_b_road_cycling_results.json"), "utf8"));
+        const it = log.results[0].items[0];
+        if (it.price_hourly !== 18 || it.attributes.suspension !== "rigid") {
+          throw new Error(`cruiser not persisted correctly: ${JSON.stringify(it)}`);
+        }
+      },
+    },
+  );
+
+  // An e-fat-bike lives in electric_transport by power source, so the winter fat_bike activity
+  // has to fire from THERE — and it matches on gear_type, not subcategory.
+  runCase(
+    "e-fat-bike derives the fat_bike activity from electric_transport",
+    [extracted("fixture-bike-only", "electric_transport", [eBikeItem({
+      name: "Fixture E-Fat Bike",
+      subcategory: "ebike_mtb",
+      attributes: { gear_type: "fat_ebike", assist_mode: "both" },
+    })], { activities: ["fat_bike"] })],
+    {
+      ok: true,
+      inspect: ({ triage }) => {
+        const op = row(triage, "fixture-bike-only");
+        if (!(op.activities || []).includes("fat_bike")) {
+          throw new Error("fat_bike activity did not derive from electric_transport");
+        }
+      },
+    },
+  );
+
+  runCase(
+    "plain e-MTB does NOT derive the fat_bike activity",
+    [extracted("fixture-bike-only", "electric_transport", [eBikeItem({
+      subcategory: "ebike_mtb", attributes: { gear_type: "ebike_mtb", assist_mode: "pedal_assist" },
+    })], { activities: ["fat_bike"] })],
+    { ok: false, message: "activities not supported" },
+  );
+
+  // --- powersports: the tracked-UTV split (off_road.md §4) ---
+  // The category rule (snow_sports.md §9) and the browse rule pull in opposite directions here,
+  // and they are resolved on different axes. Both directions are asserted.
+  runCase(
+    "tracked UTV stays off_road and derives the snowmobile activity",
+    [extracted("fixture-bike-only", "off_road", [{
+      name: "Fixture Tracked RZR",
+      subcategory: "utv",
+      brand: null, model: null, size: "RZR XP 4 1000", skill_level: "intermediate",
+      price_full_day: 450,
+      attributes: { gear_type: "tracked_utv", seat_count: 4 },
+      addons: [{ name: "Damage waiver", price: 45 }],
+      source_url: "https://example.com/utv-rentals",
+      description: "Fixture item.",
+    }], { activities: ["snowmobile"] })],
+    {
+      ok: true,
+      inspect: ({ triage }) => {
+        const op = row(triage, "fixture-bike-only");
+        if (!(op.activities || []).includes("snowmobile")) {
+          throw new Error("tracked UTV did not derive the snowmobile activity");
+        }
+        if ((op.categories || []).includes("snow_sports")) {
+          throw new Error("tracked UTV wrongly landed in snow_sports");
+        }
+      },
+    },
+  );
+
+  runCase(
+    "untracked UTV does NOT derive the snowmobile activity",
+    [extracted("fixture-bike-only", "off_road", [{
+      name: "Fixture Ranger 570",
+      subcategory: "utv",
+      brand: null, model: null, size: "Ranger 570", skill_level: "beginner",
+      price_full_day: 350,
+      attributes: { gear_type: "utv", seat_count: 2 },
+      addons: [],
+      source_url: "https://example.com/utv-rentals",
+      description: "Fixture item.",
+    }], { activities: ["snowmobile"] })],
+    { ok: false, message: "activities not supported" },
+  );
+
+  runCase(
+    "non-numeric seat_count rejects",
+    [extracted("fixture-bike-only", "off_road", [{
+      name: "Fixture Four Seater",
+      subcategory: "utv",
+      brand: null, model: null, size: null, skill_level: "all",
+      price_full_day: 400,
+      attributes: { gear_type: "utv", seat_count: "four" },
+      addons: [],
+      source_url: "https://example.com/utv-rentals",
+      description: "Fixture item.",
+    }])],
+    { ok: false, message: "seat_count must be a number" },
+  );
+
+  // is_kids is deliberately absent from the motorcycles vocabulary (motorcycles.md §3.1) —
+  // this asserts the omission is enforced rather than merely documented.
+  runCase(
+    "is_kids on a motorcycles item rejects",
+    [extracted("fixture-bike-only", "motorcycles", [{
+      name: "Fixture Adventure Bike",
+      subcategory: "adventure_moto",
+      brand: null, model: null, size: "R 1250 GS", skill_level: "advanced",
+      price_full_day: 225,
+      attributes: { gear_type: "adventure_moto", is_kids: false },
+      addons: [{ name: "Panniers", price: 0 }],
+      source_url: "https://example.com/moto-rentals",
+      description: "Fixture item.",
+    }])],
+    { ok: false, message: "attribute key \"is_kids\"" },
+  );
+
+  // --- camping: the only attribute-keyed activity rule (camping.md §4) ---
+  // Guards the derivation change that made `attributes` a matcher. Before it, a rule with no
+  // recognised matcher fired on EVERY item in the category, so snow_camp would have been claimed
+  // for a 3-season tent.
+  const campItem = (overrides = {}) => ({
+    name: "Fixture 4-Season Tent",
+    subcategory: "tent",
+    brand: null, model: null, size: "2P", skill_level: "all",
+    price_full_day: 45,
+    attributes: { gear_type: "tent", capacity_people: 2, season_rating: "4_season" },
+    addons: [],
+    source_url: "https://example.com/camp-rentals",
+    description: "Fixture item.",
+    ...overrides,
+  });
+
+  runCase(
+    "4-season gear derives the snow_camp activity",
+    [extracted("fixture-bike-only", "camping", [campItem()], { activities: ["snow_camp"] })],
+    {
+      ok: true,
+      inspect: ({ triage }) => {
+        const op = row(triage, "fixture-bike-only");
+        if (!(op.activities || []).includes("snow_camp")) {
+          throw new Error("snow_camp did not derive from season_rating");
+        }
+      },
+    },
+  );
+
+  runCase(
+    "3-season gear does NOT derive snow_camp",
+    [extracted("fixture-bike-only", "camping", [campItem({
+      name: "Fixture 3-Season Tent",
+      attributes: { gear_type: "tent", capacity_people: 2, season_rating: "3_season" },
+    })], { activities: ["snow_camp"] })],
+    { ok: false, message: "activities not supported" },
+  );
+
+  // --- the four pre-existing compact files, locked from their own documented vocabularies ---
+  // `package` came from those files; `demo` came from the Phase 1 standard. RENTAL_TYPES is the
+  // union, so both must be accepted on the same category or the widening silently failed.
+  runCase(
+    "compact-file rental_type accepts both `package` and `demo`",
+    [extracted("fixture-bike-only", "mountaineering", [
+      {
+        name: "Fixture Glacier Kit",
+        subcategory: "full_kit",
+        brand: null, model: null, size: null, skill_level: "advanced",
+        price_full_day: 95,
+        attributes: { gear_type: "glacier_kit", rental_type: "package" },
+        addons: [], source_url: "https://example.com/mtn", description: "Fixture item.",
+      },
+      {
+        name: "Fixture Demo Ice Tools",
+        subcategory: "ice_axe",
+        brand: null, model: null, size: null, skill_level: "advanced",
+        price_full_day: 40,
+        attributes: { gear_type: "ice_axe_technical", rental_type: "demo" },
+        addons: [], source_url: "https://example.com/mtn", description: "Fixture item.",
+      },
+    ], { activities: ["winter_mountaineering"] })],
+    {
+      ok: true,
+      inspect: ({ triage }) => {
+        const op = row(triage, "fixture-bike-only");
+        if (!(op.activities || []).includes("winter_mountaineering")) {
+          throw new Error("winter_mountaineering did not derive from alpine gear");
+        }
+      },
+    },
+  );
+
+  runCase(
+    "free-text attribute (line_weight) accepts a string",
+    [extracted("fixture-bike-only", "fishing", [{
+      name: "Fixture 5wt Fly Combo",
+      subcategory: "fly_fishing",
+      brand: null, model: null, size: "9ft", skill_level: "all",
+      price_full_day: 35,
+      attributes: { gear_type: "fly_combo", line_weight: "5wt", water_type: "freshwater" },
+      addons: [], source_url: "https://example.com/fly", description: "Fixture item.",
+    }])],
+    { ok: true },
+  );
+
+  runCase(
+    "rock_climbing discipline enum is enforced",
+    [extracted("fixture-bike-only", "rock_climbing", [{
+      name: "Fixture Crash Pad",
+      subcategory: "crash_pad",
+      brand: null, model: null, size: null, skill_level: "all",
+      price_full_day: 20,
+      attributes: { gear_type: "crash_pad", discipline: "aid" },
+      addons: [], source_url: "https://example.com/climb", description: "Fixture item.",
+    }])],
+    { ok: false, message: "discipline" },
+  );
+
+  // Crampons belong to mountaineering, never rock_climbing (rock_climbing.md §2 / the
+  // mountaineering.md §1 shared-gear rule). The bounded vocabulary is what enforces that.
+  runCase(
+    "crampons on a rock_climbing item rejects (shared-gear split)",
+    [extracted("fixture-bike-only", "rock_climbing", [{
+      name: "Fixture Crampons",
+      subcategory: "rope_hardware",
+      brand: null, model: null, size: null, skill_level: "advanced",
+      price_full_day: 25,
+      attributes: { gear_type: "crampons_technical" },
+      addons: [], source_url: "https://example.com/climb", description: "Fixture item.",
+    }])],
+    { ok: false, message: "not in rock_climbing vocabulary" },
+  );
+
+  runCase(
+    "out-of-vocabulary assist_mode rejects",
+    [extracted("fixture-bike-only", "electric_transport", [eBikeItem({ attributes: { gear_type: "ebike", assist_mode: "turbo" } })])],
+    { ok: false, message: "assist_mode" },
   );
 
   // A pilot runs before every vocabulary is locked, so its visit could not observe categories

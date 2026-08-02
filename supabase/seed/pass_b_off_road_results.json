@@ -1,0 +1,127 @@
+{
+  "category": "off_road",
+  "source": "supabase/seed/sweep_pass_a_triage.json",
+  "results": [
+    {
+      "key": "ChIJx0JixluZmYARnFheZMbToY4",
+      "place_id": "ChIJx0JixluZmYARnFheZMbToY4",
+      "name": "Battle Born Powersports",
+      "website": "http://www.battlebornpowersports.com/",
+      "category": "off_road",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "Self-guided UTV rental at the Johnson Lane OHV area, Minden NV. The FAQ settles the scope question explicitly: 'We are currently offering a self guided experience' — so despite the site using the word 'Tours' in page taglines, the customer takes the machine independently and this is real inventory. Fleet is organised entirely by seat count (2/4/6), which is exactly what the seat_count attribute exists for. Rentals are sold in roughly 2-hour and 4-hour blocks; only a 'STARTING AT $299' figure is published and the site does not say which machine or block it applies to, so no price tier is asserted. Damage deposit is $3,000 per machine.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "2-Seater UTV Rental",
+          "subcategory": "utv",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "deposit": 3000,
+          "attributes": {
+            "gear_type": "utv",
+            "seat_count": 2,
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://battlebornpowersports.com/utv-2-seater-rentals",
+          "description": "Self-guided trail rental sold in approximately 2-hour and 4-hour blocks. The site publishes only a fleet-wide 'starting at $299' figure without stating which machine or duration it covers, so no rate is recorded. $3,000 damage deposit per machine, held on a card at checkout; cash not accepted."
+        },
+        {
+          "name": "4-Seater UTV Rental",
+          "subcategory": "utv",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "deposit": 3000,
+          "attributes": {
+            "gear_type": "utv",
+            "seat_count": 4,
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://battlebornpowersports.com/utv-4-seater-rentals",
+          "description": "Full-door 4-seat trail machine, described by the operator as its most balanced trail vehicle. Self-guided, 2-hour and 4-hour blocks. $3,000 damage deposit per machine."
+        },
+        {
+          "name": "6-Seater UTV Rental",
+          "subcategory": "utv",
+          "brand": null,
+          "model": null,
+          "size": null,
+          "skill_level": "beginner",
+          "price_full_day": null,
+          "deposit": 3000,
+          "attributes": {
+            "gear_type": "utv",
+            "seat_count": 6,
+            "quality_grade": "standard",
+            "rental_type": "rental"
+          },
+          "addons": [],
+          "source_url": "https://battlebornpowersports.com/utv-6-seater-rentals",
+          "description": "Largest machine in the fleet, for groups. Self-guided, 2-hour and 4-hour blocks. $3,000 damage deposit per machine."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    },
+    {
+      "key": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "place_id": "ChIJ59MHV2WbmYARHl_0nG6nCDI",
+      "name": "Rolling Freedom Motorcycles & Lake Tahoe Slingshots",
+      "website": "http://www.rolltahoe.com/",
+      "category": "off_road",
+      "visit_mode": "operator_at_once",
+      "category_origin": "pretagged_confirmed",
+      "outcome": "extracted",
+      "checked_url": null,
+      "note": "One unplated competition dirt bike in an otherwise street-focused fleet.",
+      "activities": [],
+      "offers_demo": false,
+      "offers_season_lease": false,
+      "self_heal_categories": [],
+      "operator_status": null,
+      "items": [
+        {
+          "name": "KTM 500 EXC-F",
+          "subcategory": "dirt_bike",
+          "brand": "KTM",
+          "model": "500 EXC-F",
+          "size": "500 EXC-F",
+          "skill_level": "advanced",
+          "price_full_day": null,
+          "attributes": {
+            "gear_type": "dirt_bike",
+            "quality_grade": "performance",
+            "rental_type": "rental"
+          },
+          "addons": [
+            {
+              "name": "Required rental insurance (per day)",
+              "price": 35
+            }
+          ],
+          "source_url": "https://rentals.rolltahoe.com/rent/motorcycles-dirt-bikes/ktm-500-exc-f",
+          "description": "High-performance enduro. Listed by the operator alongside its motorcycles; filed as off_road/dirt_bike. If the shop plates this unit as a dual-sport it would move to motorcycles/adventure_moto — the storefront does not say, so the more conservative off-road placement is used."
+        }
+      ],
+      "extracted_at": "2026-08-02"
+    }
+  ],
+  "ranAt": "2026-08-02T06:49:29.079Z",
+  "count": 2
+}
