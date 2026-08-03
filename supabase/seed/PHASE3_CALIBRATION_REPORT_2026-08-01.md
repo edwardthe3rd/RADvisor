@@ -85,10 +85,17 @@ Its one real rental is **bear canisters**, which is precisely what `camping.md �
 *"do not skip an operator whose entire fleet is bear canisters."* That rule was written from a 27%
 density signal and landed exactly on a real operator.
 
-Gondola Ski + Sports independently lost both `rock_climbing` and `off_road` to keyword noise. Of
-15 results in this wave, **9 were `category_not_found`** — the disprove-bad-hints path is doing at
-least as much work as extraction, and the cross-result guard correctly kept both operators
-`triaged` rather than emptying them.
+Gondola Ski + Sports independently lost both `rock_climbing` and `off_road` to keyword noise.
+
+**Read the counting carefully — a "result" is one (operator, category) PAIR**, not an operator and
+not a category. The 6 operators in this wave carried **15 category claims** between them, and
+**9 of those claims were disproved**. No operator was lost and no category went unmatched; what
+was removed were 9 false-positive claims that would otherwise have reached the database.
+
+The disprove-bad-hints path is therefore doing at least as much work as extraction, and the
+cross-result guard correctly kept both Gear Hut and Gondola `triaged` rather than emptying them.
+**179 of the 259 operators still to visit came from the same auto-triaged, keyword-matched bucket
+these two did**, so expect a large share of the run to be disproof rather than extraction.
 
 ## Finding 3 — `price_multi_day` semantics confirmed correct
 

@@ -27,7 +27,7 @@ const seedDir = dirname(fileURLToPath(import.meta.url));
 const repoRoot = join(seedDir, "../..");
 const args = process.argv.slice(2);
 const valueAfter = (flag) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
-const consumed = new Set([valueAfter("--out"), valueAfter("--data-dir"), valueAfter("--select"), valueAfter("--category")].filter(Boolean));
+const consumed = new Set([valueAfter("--out"), valueAfter("--data-dir"), valueAfter("--select"), valueAfter("--category"), valueAfter("--season"), valueAfter("--evidence")].filter(Boolean));
 const N = Number(args.find((a) => /^\d+$/.test(a) && !consumed.has(a)) || 10);
 const OUT = valueAfter("--out");
 const dataDir = valueAfter("--data-dir") || seedDir;
@@ -40,6 +40,21 @@ const repairCategory = valueAfter("--category");
 // --select <place_id,place_id,...> emits exactly these operators, for a deliberately chosen
 // calibration wave rather than whatever rank order happens to surface.
 const SELECT = (valueAfter("--select") || "").split(",").map((s) => s.trim()).filter(Boolean);
+// The two axes PASS_B_RUN_PLAN.md sequences the run on. Encoded here so a run session issues a
+// short command instead of pasting 129 place_ids, which is fragile and unreadable.
+//   --season   summer | mixed | snow   (§1 wave order — in-season fleets first, snow last)
+//   --evidence auto | verified         (§7 effort split — auto-triaged is the xhigh bucket)
+const SEASON = valueAfter("--season");
+const EVIDENCE = valueAfter("--evidence");
+const SNOW_CATS = ["snow_sports"];
+if (SEASON && !["summer", "mixed", "snow"].includes(SEASON)) {
+  console.error(`--season must be summer|mixed|snow (got "${SEASON}")`);
+  process.exit(1);
+}
+if (EVIDENCE && !["auto", "verified"].includes(EVIDENCE)) {
+  console.error(`--evidence must be auto|verified (got "${EVIDENCE}")`);
+  process.exit(1);
+}
 
 if (args.includes("--category") && !REPAIR) {
   console.error("Pass B is operator-major; --category only applies to a repair pass. Use --repair --category <slug> to re-extract one category for operators already visited.");
@@ -143,6 +158,24 @@ if (REPAIR) {
   // Only operators already logged for the target category — a repair re-extracts, it does not
   // discover. Ignore visitComplete: a completed visit is exactly what we are repairing.
   eligible = withProgress.filter((entry) => entry.prior.has(repairCategory));
+}
+if (SEASON) {
+  // Hints include review_categories: a snow claim parked for review still makes the operator
+  // off-season-sensitive, so it must not land in the summer wave.
+  const isSnow = (e) => e.hints.some((c) => SNOW_CATS.includes(c));
+  const isSummer = (e) => e.hints.some((c) => !SNOW_CATS.includes(c));
+  const want = {
+    summer: (e) => !isSnow(e) && isSummer(e),
+    mixed: (e) => isSnow(e) && isSummer(e),
+    snow: (e) => isSnow(e) && !isSummer(e),
+  }[SEASON];
+  eligible = eligible.filter(want);
+}
+if (EVIDENCE) {
+  // "auto" = Pass A assigned categories by keyword match without reading the site. This is the
+  // xhigh bucket (PASS_B_RUN_PLAN.md §7) — every disproved claim so far came from it.
+  const isAuto = (e) => /auto-triaged/i.test(e.row.note || "");
+  eligible = eligible.filter((e) => (EVIDENCE === "auto" ? isAuto(e) : !isAuto(e)));
 }
 if (SELECT.length) {
   // Phase 3 calibration requires a DELIBERATELY diverse wave (a marina, a bike shop, a
